@@ -13,18 +13,17 @@
  */
 
 import { fetchWithRetry } from './lib/fetcher.js';
-import { extractEurLexArticles, normalizeText, stripHtml } from './lib/parser.js';
-import { writeFileSync, mkdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { extractEurLexArticles, normalizeText as _normalizeText, stripHtml as _stripHtml } from './lib/parser.js';
+import { writeFileSync as _writeFileSync, mkdirSync as _mkdirSync } from 'node:fs';
+import { join as _join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const SEED_DIR = join(__dirname, '..', 'data', 'seed');
+const _SEED_DIR = _join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'seed');
 
 const GDPR_URL = 'https://eur-lex.europa.eu/eli/reg/2016/679/oj';
 
-// Contract-relevant GDPR articles
-const TARGET_ARTICLES = [
+// Contract-relevant GDPR articles (used by TODO parser implementation)
+const _TARGET_ARTICLES = [
   { article: 'Article 28', topic: 'Processor requirements' },
   { article: 'Article 32', topic: 'Security of processing' },
   { article: 'Article 33', topic: 'Notification of personal data breach' },

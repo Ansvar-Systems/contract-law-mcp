@@ -260,10 +260,10 @@ describe('Golden contract tests', () => {
     db = new Database(TEST_DB, { readonly: true });
   });
 
-  afterAll(() => {
+  afterAll(async () => {
     if (db) db.close();
     try {
-      const { unlinkSync, existsSync } = require('node:fs');
+      const { unlinkSync, existsSync } = await import('node:fs');
       if (existsSync(TEST_DB)) unlinkSync(TEST_DB);
     } catch { /* ignore cleanup errors */ }
   });

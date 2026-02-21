@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url';
 const NIST_URL = 'https://csrc.nist.gov/pubs/sp/800/161/r1/final';
 
 // Contract-relevant NIST sections
-const TARGET_SECTIONS = [
+const _TARGET_SECTIONS = [
   'Section 3',    // C-SCRM Controls
   'Appendix A',   // C-SCRM control mapping
   'Appendix C',   // Supplier agreement templates

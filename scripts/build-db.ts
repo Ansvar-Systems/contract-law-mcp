@@ -459,7 +459,8 @@ export function buildDatabase(dbPath?: string): void {
             const rows = data[def.seedKey];
             if (!Array.isArray(rows)) continue;
 
-            const stmt = stmtMap.get(def.seedKey)!;
+            const stmt = stmtMap.get(def.seedKey);
+            if (!stmt) continue;
             for (const row of rows) {
               stmt.run(prepareRow(row, def.columns));
             }

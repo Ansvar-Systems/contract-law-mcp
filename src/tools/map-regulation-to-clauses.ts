@@ -10,7 +10,7 @@ import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
 import { type ClauseType, parseClauseRow } from './get-clause-type.js';
-import { type ComplianceRequirement, parseComplianceRow } from './get-contract-requirements.js';
+import { parseComplianceRow } from './get-contract-requirements.js';
 
 export interface RegulationMapping {
   requirement_id: string;

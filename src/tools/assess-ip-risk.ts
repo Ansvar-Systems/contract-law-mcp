@@ -9,7 +9,7 @@
 import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
-import { type IpProvision, parseIpProvisionRow } from './get-ip-provision.js';
+import { parseIpProvisionRow } from './get-ip-provision.js';
 
 export interface IpRisk {
   provision_id: string;

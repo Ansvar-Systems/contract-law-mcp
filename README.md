@@ -51,15 +51,15 @@ Health check: `https://contract-law-mcp.vercel.app/health`
 
 | Table | Entries | Content |
 |-------|---------|---------|
-| `clause_types` | ~200-300 | Clause structural knowledge: categories, drafting guidance, variations, compliance refs |
-| `contract_types` | ~30-40 | Agreement taxonomy: MSA, DPA, NDA, SLA, SaaS subscription, employment, IP assignment |
-| `clause_interactions` | ~80-120 | How clauses affect each other: limits, conflicts, requires, supplements, carves-out |
-| `risk_patterns` | ~150-200 | Contract risk intelligence: triggers, severity, impact, detection, remediation |
-| `compliance_requirements` | ~200-300 | Regulation-to-contract mappings: GDPR, NIS2, DORA, PCI DSS, HIPAA, SOC 2, ISO 27036 |
-| `ip_provisions` | ~80-120 | IP patterns: assignment, licensing, work-for-hire, open-source, background/foreground IP |
-| `negotiation_intelligence` | ~100-150 | Positional analysis: red/amber/green flags, market standards, suggested responses |
-| `contract_threat_patterns` | ~40-60 | Business process threats: integrity, repudiation, availability, confidentiality risks |
-| `standard_frameworks` | ~30-40 | Reference standards: EU SCCs, ICC model contracts, UNCITRAL, NIST 800-161, ISO 27036 |
+| `clause_types` | 148 | Clause structural knowledge: categories, drafting guidance, variations, compliance refs |
+| `contract_types` | 35 | Agreement taxonomy: MSA, DPA, NDA, SLA, SaaS subscription, employment, IP assignment |
+| `clause_interactions` | 99 | How clauses affect each other: limits, conflicts, requires, supplements, carves-out |
+| `risk_patterns` | 173 | Contract risk intelligence: triggers, severity, impact, detection, remediation |
+| `compliance_requirements` | 193 | Regulation-to-contract mappings: GDPR, NIS2, DORA, PCI DSS, HIPAA, SOC 2, ISO 27036 |
+| `ip_provisions` | 98 | IP patterns: assignment, licensing, work-for-hire, open-source, background/foreground IP |
+| `negotiation_intelligence` | 125 | Positional analysis: red/amber/green flags, market standards, suggested responses |
+| `contract_threat_patterns` | 50 | Business process threats: integrity, repudiation, availability, confidentiality risks |
+| `standard_frameworks` | 35 | Reference standards: EU SCCs, ICC model contracts, UNCITRAL, NIST 800-161, ISO 27036 |
 
 ---
 
@@ -133,7 +133,7 @@ Health check: `https://contract-law-mcp.vercel.app/health`
 
 ## Data Sources
 
-All data is curated from authoritative public sources. ISO and SOC 2 content is Ansvar-authored summaries referencing control numbers (original standards are paywalled).
+**Current state:** Seed data (v1.0) is AI-curated from the authoritative sources listed below. Clause IDs, article references, and enforcement examples are based on real regulatory text, but have not yet been machine-ingested from upstream APIs. Ingestion scripts exist as scaffolds and will progressively replace AI-curated entries with source-verified data. ISO and SOC 2 content is Ansvar-authored summaries referencing control numbers (original standards are paywalled).
 
 | Source | Type | Licence | Update Frequency |
 |--------|------|---------|-----------------|

@@ -3,8 +3,7 @@ import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import Database from '@ansvar/mcp-sqlite';
 import { join } from 'path';
-import { existsSync, copyFileSync, rmSync, readFileSync, statSync } from 'fs';
-import { createHash } from 'crypto';
+import { existsSync, copyFileSync, rmSync, readFileSync } from 'fs';
 
 import { SERVER_NAME, SERVER_VERSION } from '../src/constants.js';
 import { registerTools } from '../src/tools/registry.js';

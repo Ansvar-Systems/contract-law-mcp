@@ -43,20 +43,12 @@ export function getRequiredClauses(
   }
 
   // Parse the JSON arrays of clause IDs
-  let requiredIds: string[] = [];
-  let recommendedIds: string[] = [];
-
-  try {
-    requiredIds = JSON.parse(contractType.required_clauses as string);
-  } catch {
-    requiredIds = [];
-  }
-
-  try {
-    recommendedIds = JSON.parse(contractType.recommended_clauses as string);
-  } catch {
-    recommendedIds = [];
-  }
+  const requiredIds: string[] = (() => {
+    try { return JSON.parse(contractType.required_clauses as string); } catch { return []; }
+  })();
+  const recommendedIds: string[] = (() => {
+    try { return JSON.parse(contractType.recommended_clauses as string); } catch { return []; }
+  })();
 
   const required = fetchClausesByIds(db, requiredIds);
   const recommended = fetchClausesByIds(db, recommendedIds);

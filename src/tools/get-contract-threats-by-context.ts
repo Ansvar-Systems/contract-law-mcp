@@ -46,7 +46,7 @@ export function getContractThreatsByContext(
     return wrapResponse([], builtAt);
   }
 
-  let clauseIds: string[] = [];
+  let clauseIds: string[];
   try {
     clauseIds = [
       ...JSON.parse(contractRow.required_clauses),

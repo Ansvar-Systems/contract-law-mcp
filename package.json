@@ -32,7 +32,7 @@
     "ingest:nist": "node --import tsx scripts/ingest-nist.ts",
     "drift:detect": "node --import tsx scripts/drift-detect.ts",
     "validate": "npm run lint && npm test && npm run test:contract",
-    "lint": "tsc --noEmit",
+    "lint": "tsc --noEmit && eslint src/ api/ scripts/ __tests__/ tests/",
     "prepublishOnly": "npm run build",
     "postinstall": "test -d dist || npm run build || true"
   },
@@ -41,12 +41,15 @@
     "@modelcontextprotocol/sdk": "^1.25.3"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^22.15.29",
     "@vercel/node": "^5.6.4",
     "better-sqlite3": "^12.6.2",
+    "eslint": "^10.0.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.0",
     "vitest": "^3.0.0"
   },
   "engines": {
@@ -57,7 +60,6 @@
   },
   "overrides": {
     "path-to-regexp": "^8.0.0",
-    "undici": "^7.0.0",
-    "ajv": "^8.18.0"
+    "undici": "^7.0.0"
   }
 }

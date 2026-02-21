@@ -43,7 +43,7 @@ function getClauseTypesForContract(db: Database.Database, contractType: string):
 
   if (!row) return [];
 
-  let clauseIds: string[] = [];
+  let clauseIds: string[];
   try {
     clauseIds = [...JSON.parse(row.required_clauses), ...JSON.parse(row.recommended_clauses)];
   } catch {

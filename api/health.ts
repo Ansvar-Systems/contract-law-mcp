@@ -19,7 +19,7 @@ const SOURCE_DB =
 const TMP_DB = '/tmp/database.db';
 const TMP_DB_LOCK = '/tmp/database.db.lock';
 
-const FRESHNESS_MAX_DAYS = 30;
+const _FRESHNESS_MAX_DAYS = 30;
 
 const TABLE_NAMES = [
   'clause_types',

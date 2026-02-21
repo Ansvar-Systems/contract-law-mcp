@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 const DORA_URL = 'https://eur-lex.europa.eu/eli/reg/2022/2554/oj';
 
 // Contract-relevant DORA articles
-const TARGET_ARTICLES = [
+const _TARGET_ARTICLES = [
   { article: 'Article 28', topic: 'General principles for ICT third-party arrangements' },
   { article: 'Article 29', topic: 'Preliminary assessment of ICT concentration risk' },
   { article: 'Article 30', topic: 'Key contractual provisions' },

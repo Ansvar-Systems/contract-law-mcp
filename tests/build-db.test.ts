@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import Database from 'better-sqlite3';
 import { existsSync, unlinkSync, mkdirSync } from 'node:fs';
@@ -28,23 +29,14 @@ function tableNames(): string[] {
   return db
     .prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name")
     .all()
-    .map((r: any) => r.name);
+    .map((r) => (r as { name: string }).name);
 }
 
 function columnNames(table: string): string[] {
   return db
     .prepare(`PRAGMA table_info('${table}')`)
     .all()
-    .map((r: any) => r.name);
-}
-
-function virtualTableNames(): string[] {
-  return db
-    .prepare(
-      "SELECT name FROM sqlite_master WHERE type='table' AND sql LIKE '%virtual%' OR (type='table' AND name LIKE '%_fts') ORDER BY name",
-    )
-    .all()
-    .map((r: any) => r.name);
+    .map((r) => (r as { name: string }).name);
 }
 
 /* ------------------------------------------------------------------ */
@@ -243,7 +235,7 @@ describe('FTS5 virtual tables', () => {
     const allNames = db
       .prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name")
       .all()
-      .map((r: any) => r.name);
+      .map((r) => (r as { name: string }).name);
 
     for (const fts of expectedFts) {
       expect(allNames).toContain(fts);

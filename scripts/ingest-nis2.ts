@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 const NIS2_URL = 'https://eur-lex.europa.eu/eli/dir/2022/2555/oj';
 
 // Contract-relevant NIS2 articles
-const TARGET_ARTICLES = [
+const _TARGET_ARTICLES = [
   { article: 'Article 21', topic: 'Cybersecurity risk-management measures' },
   { article: 'Article 23', topic: 'Reporting obligations' },
   { article: 'Article 24', topic: 'Use of certification schemes' },

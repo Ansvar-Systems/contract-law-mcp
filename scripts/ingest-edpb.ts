@@ -13,7 +13,7 @@
  */
 
 import { fetchWithRetry } from './lib/fetcher.js';
-import { extractAll, stripHtml } from './lib/parser.js';
+import { extractAll, stripHtml as _stripHtml } from './lib/parser.js';
 import { fileURLToPath } from 'node:url';
 
 const EDPB_URL =

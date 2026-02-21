@@ -78,24 +78,18 @@ export function assessContractRisk(
   }
 
   // Parse clause ID lists
-  let requiredIds: string[] = [];
-  try {
-    requiredIds = JSON.parse(contractRow.required_clauses as string);
-  } catch {
-    requiredIds = [];
-  }
+  const requiredIds: string[] = (() => {
+    try { return JSON.parse(contractRow.required_clauses as string); } catch { return []; }
+  })();
 
   const findings: RiskFinding[] = [];
   const recommendations: string[] = [];
 
   // --- Gather clause categories for this contract type ---
   const allClauseIds = [...requiredIds];
-  let recommendedIds: string[] = [];
-  try {
-    recommendedIds = JSON.parse(contractRow.recommended_clauses as string);
-  } catch {
-    recommendedIds = [];
-  }
+  const recommendedIds: string[] = (() => {
+    try { return JSON.parse(contractRow.recommended_clauses as string); } catch { return []; }
+  })();
   allClauseIds.push(...recommendedIds);
 
   // Get distinct clause categories

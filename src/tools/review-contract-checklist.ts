@@ -107,18 +107,12 @@ export function reviewContractChecklist(
   }
 
   // Parse clause ID lists
-  let requiredIds: string[] = [];
-  let recommendedIds: string[] = [];
-  try {
-    requiredIds = JSON.parse(contractRow.required_clauses as string);
-  } catch {
-    requiredIds = [];
-  }
-  try {
-    recommendedIds = JSON.parse(contractRow.recommended_clauses as string);
-  } catch {
-    recommendedIds = [];
-  }
+  const requiredIds: string[] = (() => {
+    try { return JSON.parse(contractRow.required_clauses as string); } catch { return []; }
+  })();
+  const recommendedIds: string[] = (() => {
+    try { return JSON.parse(contractRow.recommended_clauses as string); } catch { return []; }
+  })();
 
   // Fetch clause details
   const requiredClauses = fetchClausesByIds(db, requiredIds);
