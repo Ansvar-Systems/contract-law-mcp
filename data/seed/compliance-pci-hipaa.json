@@ -5,8 +5,15 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 12.8.1",
       "requirement_summary": "A list of all third-party service providers (TPSPs) with which account data is shared or that could affect the security of the cardholder data environment (CDE) is maintained, including a description for each of the services provided.",
-      "required_clauses": [],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -17,8 +24,16 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 12.8.2",
       "requirement_summary": "Written agreements/contracts are maintained with all TPSPs with which account data is shared or that could affect the security of the CDE, including acknowledgement by TPSPs that they are responsible for the security of account data the TPSPs possess or otherwise store, process, or transmit on behalf of the entity, or to the extent that they could impact the security of the entity's CDE.",
-      "required_clauses": ["warranty-compliance-laws", "representations-compliance-laws"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "representations-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -29,8 +44,14 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 12.8.3",
       "requirement_summary": "An established process is implemented for engaging TPSPs, including proper due diligence prior to engagement. Due diligence must assess the TPSP's capability to meet PCI DSS requirements relevant to the services they will provide.",
-      "required_clauses": ["audit-rights-security"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -41,8 +62,16 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 12.8.4",
       "requirement_summary": "A program is implemented to monitor TPSPs' PCI DSS compliance status at least once every 12 months. The entity must maintain information about which PCI DSS requirements are managed by each TPSP, which are managed by the entity, and any shared responsibilities.",
-      "required_clauses": ["audit-rights-security", "audit-rights-regulatory"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "audit-rights-security",
+        "audit-rights-regulatory"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -53,8 +82,15 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 12.8.5",
       "requirement_summary": "Information is maintained about which PCI DSS requirements are managed by each TPSP, which are managed by the entity, and any that are shared between the TPSP and the entity. A responsibility matrix must be documented and included in or referenced by the contract.",
-      "required_clauses": [],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -65,8 +101,16 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 12.9.1",
       "requirement_summary": "TPSPs provide written acknowledgement to customers that they will maintain all applicable PCI DSS requirements to the extent the TPSP handles, has access to, or otherwise stores, processes, or transmits the customer's account data, or manages the customer's CDE.",
-      "required_clauses": ["warranty-compliance-laws", "representations-compliance-laws"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "representations-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -77,8 +121,14 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 12.9.2",
       "requirement_summary": "TPSPs support their customers' requests for information to meet Requirements 12.8.4 and 12.8.5, providing upon request information about the PCI DSS requirements that are the responsibility of the TPSP and those shared between the TPSP and the customer. This is a best practice until 31 March 2025, after which it becomes mandatory.",
-      "required_clauses": ["audit-rights-security"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2025-03-31",
       "enforcement_examples": null,
@@ -89,8 +139,15 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 3.1",
       "requirement_summary": "Processes and mechanisms for protecting stored account data are defined and understood. Contracts with TPSPs must specify data retention requirements, disposal methods, and ensure that account data storage is kept to a minimum consistent with business, legal, and regulatory requirements.",
-      "required_clauses": ["dpa-deletion-return", "confidentiality-mutual"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-deletion-return",
+        "confidentiality-mutual"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -101,8 +158,14 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 6.3",
       "requirement_summary": "Security vulnerabilities are identified and addressed. Contracts with TPSPs that develop or maintain software must require vulnerability identification, risk ranking, and timely patching. Critical and high-security patches must be installed within one month of release.",
-      "required_clauses": ["nis2-patching-obligations"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-patching-obligations"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -113,8 +176,13 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 9.4",
       "requirement_summary": "Media with cardholder data is securely stored, accessed, distributed, and destroyed. Contracts must address physical media handling, secure storage, tracked distribution, and documented destruction procedures when media containing account data is transferred to or handled by TPSPs.",
-      "required_clauses": ["confidentiality-mutual"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "confidentiality-mutual"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -125,8 +193,15 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 10.1",
       "requirement_summary": "Processes and mechanisms for logging and monitoring all access to system components and cardholder data are defined and documented. Contracts with TPSPs must include requirements for log generation, protection, review, and timely alerting. TPSPs must make logs available for forensic investigation.",
-      "required_clauses": ["audit-rights-security"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -137,8 +212,15 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 11.3",
       "requirement_summary": "External and internal vulnerabilities are regularly identified, prioritised, and addressed. Contracts with TPSPs must include requirements for vulnerability scanning (internal quarterly, external quarterly by ASV, and after significant changes) and annual penetration testing.",
-      "required_clauses": ["audit-rights-security", "nis2-patching-obligations"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "audit-rights-security",
+        "nis2-patching-obligations"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -149,8 +231,15 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 12.10.1",
       "requirement_summary": "An incident response plan is established and maintained to be activated in the event of a suspected or confirmed security incident. Contracts must require TPSPs to maintain incident response plans, participate in the entity's incident response process, and provide timely notification of security incidents.",
-      "required_clauses": ["data-protection-breach-notification"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -161,8 +250,14 @@
       "regulation": "PCI DSS v4.0",
       "article": "Requirement 2.2",
       "requirement_summary": "System components are configured and managed securely. Contracts with TPSPs providing system components must require secure configuration standards, removal of unnecessary functionality, and documentation of all enabled services, protocols, and ports with business justification.",
-      "required_clauses": ["nis2-security-requirements"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2024-03-31",
       "enforcement_examples": null,
@@ -173,8 +268,15 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.502(e)(1)",
       "requirement_summary": "A covered entity may disclose protected health information (PHI) to a business associate and may allow a business associate to create, receive, maintain, or transmit PHI on the covered entity's behalf only if the covered entity obtains satisfactory assurances that the business associate will appropriately safeguard the information through a written business associate agreement (BAA).",
-      "required_clauses": ["hipaa-permitted-uses", "hipaa-safeguards"],
-      "contract_types_affected": ["hipaa-baa", "msa", "saas-subscription"],
+      "required_clauses": [
+        "hipaa-permitted-uses",
+        "hipaa-safeguards"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa",
+        "msa",
+        "saas-subscription"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": "OCR fined Presence Health $475,000 for failure to have a BAA with a business associate (2017).",
@@ -185,8 +287,12 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(i)",
       "requirement_summary": "A business associate agreement must establish the permitted and required uses and disclosures of PHI by the business associate. The contract may not authorize the business associate to use or further disclose the information in a manner that would violate the HIPAA Privacy Rule if done by the covered entity.",
-      "required_clauses": ["hipaa-permitted-uses"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-permitted-uses"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -197,8 +303,15 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(ii)",
       "requirement_summary": "A business associate agreement must provide that the business associate will: (A) not use or further disclose PHI other than as permitted or required by the contract or as required by law; (B) use appropriate safeguards; (C) report to the covered entity any use or disclosure not provided for by the contract; (D) ensure agents/subcontractors agree to the same restrictions; (E) make PHI available to individuals; (F) make PHI available for amendment; (G) make information available for an accounting of disclosures; (H) make internal practices available to HHS; and (I) return or destroy PHI on termination.",
-      "required_clauses": ["hipaa-permitted-uses", "hipaa-safeguards", "hipaa-breach-notification", "hipaa-termination-provisions"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-permitted-uses",
+        "hipaa-safeguards",
+        "hipaa-breach-notification",
+        "hipaa-termination-provisions"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -209,8 +322,13 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(ii)(B)",
       "requirement_summary": "The business associate agreement must require the business associate to use appropriate safeguards, and comply with the Security Rule with respect to electronic PHI, to prevent use or disclosure of PHI other than as provided for by the contract.",
-      "required_clauses": ["hipaa-safeguards", "dpa-security-measures"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-safeguards",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": "OCR fined Advocate Medical Group $5.55 million for inadequate safeguards protecting ePHI (2016).",
@@ -221,8 +339,13 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.410",
       "requirement_summary": "A business associate shall, following the discovery of a breach of unsecured PHI, notify the covered entity of such breach without unreasonable delay and in no case later than 60 calendar days after discovery. The notification shall include: identification of each individual affected, a description of the types of information involved, a description of what the business associate has done to investigate, mitigate, and prevent future breaches.",
-      "required_clauses": ["hipaa-breach-notification", "data-protection-breach-notification"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-breach-notification",
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": "Premera Blue Cross fined $6.85 million for breach affecting 10.4 million individuals with delayed notification (2020).",
@@ -233,8 +356,14 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.502(e)(1)(ii)",
       "requirement_summary": "A business associate may disclose PHI to a subcontractor that creates, receives, maintains, or transmits PHI on behalf of the business associate only if the business associate obtains satisfactory assurances, through a written BAA, that the subcontractor will appropriately safeguard the PHI. Flow-down obligations apply to all levels of subcontracting.",
-      "required_clauses": ["hipaa-safeguards", "hipaa-permitted-uses", "dpa-sub-processor"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-safeguards",
+        "hipaa-permitted-uses",
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -245,8 +374,13 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(iii)",
       "requirement_summary": "A business associate agreement must provide that the covered entity may terminate the contract if the covered entity determines that the business associate has violated a material term of the contract. Upon termination, if feasible, the business associate shall return or destroy all PHI received from, or created or received by the business associate on behalf of, the covered entity.",
-      "required_clauses": ["hipaa-termination-provisions", "termination-cause"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-termination-provisions",
+        "termination-cause"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -257,8 +391,13 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(ii)(J)",
       "requirement_summary": "Upon termination of the contract, if feasible, the business associate shall return or destroy all PHI received from, or created or received by the business associate on behalf of, the covered entity. If return or destruction is not feasible, the protections of the agreement extend to such information and limit further uses and disclosures to those purposes that make return or destruction infeasible.",
-      "required_clauses": ["hipaa-termination-provisions", "dpa-deletion-return"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-termination-provisions",
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -269,8 +408,12 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(ii)(E)",
       "requirement_summary": "The business associate agreement must require the business associate to make available PHI in a designated record set to the individual or the covered entity as necessary to satisfy the covered entity's obligations regarding individual access to PHI under 45 CFR 164.524.",
-      "required_clauses": ["hipaa-permitted-uses"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-permitted-uses"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -281,8 +424,12 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(ii)(F)",
       "requirement_summary": "The business associate agreement must require the business associate to make available PHI for amendment and incorporate any amendments to PHI in a designated record set as necessary to satisfy the covered entity's obligations under 45 CFR 164.526.",
-      "required_clauses": ["hipaa-permitted-uses"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-permitted-uses"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -293,8 +440,13 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(ii)(G)",
       "requirement_summary": "The business associate agreement must require the business associate to make available the information required to provide an accounting of disclosures in accordance with 45 CFR 164.528.",
-      "required_clauses": ["hipaa-permitted-uses", "audit-rights-regulatory"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-permitted-uses",
+        "audit-rights-regulatory"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -305,8 +457,12 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.504(e)(2)(ii)(H)",
       "requirement_summary": "The business associate agreement must require the business associate to make its internal practices, books, and records relating to the use and disclosure of PHI available to the Secretary of HHS for purposes of determining the covered entity's compliance with the HIPAA Rules.",
-      "required_clauses": ["audit-rights-regulatory"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "audit-rights-regulatory"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -317,8 +473,14 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.314(a)(1)",
       "requirement_summary": "A covered entity is not in compliance with the Security Rule if the covered entity knew of a pattern of activity or practice of the business associate that constituted a material breach or violation of the business associate's obligation under the contract, unless the covered entity took reasonable steps to cure the breach or ended the violation and, if such steps were unsuccessful, terminated the contract.",
-      "required_clauses": ["hipaa-termination-provisions", "termination-cause", "audit-rights-security"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-termination-provisions",
+        "termination-cause",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -329,8 +491,12 @@
       "regulation": "HIPAA",
       "article": "45 CFR 164.502(b)",
       "requirement_summary": "When using or disclosing PHI or when requesting PHI from another covered entity or business associate, a covered entity or business associate must make reasonable efforts to limit PHI to the minimum necessary to accomplish the intended purpose. BAAs must define the minimum necessary PHI for each service.",
-      "required_clauses": ["hipaa-permitted-uses"],
-      "contract_types_affected": ["hipaa-baa"],
+      "required_clauses": [
+        "hipaa-permitted-uses"
+      ],
+      "contract_types_affected": [
+        "hipaa-baa"
+      ],
       "jurisdiction": "US",
       "effective_date": "2013-03-26",
       "enforcement_examples": null,
@@ -341,8 +507,15 @@
       "regulation": "SOX",
       "article": "Section 404",
       "requirement_summary": "Management must assess the effectiveness of the issuer's internal control over financial reporting (ICFR). Where financial processes are outsourced to third parties, contracts must ensure the vendor maintains adequate internal controls, provides SOC 1/SOC 2 reports, and cooperates with the entity's external auditors in evaluating control effectiveness.",
-      "required_clauses": ["audit-rights-financial", "audit-rights-operational"],
-      "contract_types_affected": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "required_clauses": [
+        "audit-rights-financial",
+        "audit-rights-operational"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
       "jurisdiction": "US",
       "effective_date": "2002-07-30",
       "enforcement_examples": null,
@@ -353,8 +526,13 @@
       "regulation": "SOX",
       "article": "Section 802",
       "requirement_summary": "Criminal penalties for the destruction, alteration, or falsification of records in federal investigations and bankruptcy. Outsourcing contracts involving financial record-keeping must require the vendor to maintain audit trails, prevent record destruction, and retain records for the applicable retention period (minimum 7 years for audit working papers).",
-      "required_clauses": ["audit-rights-financial"],
-      "contract_types_affected": ["outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "audit-rights-financial"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2002-07-30",
       "enforcement_examples": null,
@@ -366,7 +544,10 @@
       "article": "Section 806",
       "requirement_summary": "Protection for employees of publicly traded companies who provide evidence of fraud. Outsourcing contracts should not include provisions that would prevent or discourage the vendor's employees from reporting potential fraud or violations to regulatory authorities.",
       "required_clauses": [],
-      "contract_types_affected": ["outsourcing-agreement", "managed-services"],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2002-07-30",
       "enforcement_examples": null,
@@ -377,8 +558,15 @@
       "regulation": "SOX",
       "article": "Section 302",
       "requirement_summary": "Corporate officers must certify the accuracy of financial statements and the effectiveness of internal controls. Where outsourced services affect financial reporting, contracts must ensure the vendor provides sufficient information and access for the officers to make these certifications, including SSAE 18 (SOC 1 Type II) reports.",
-      "required_clauses": ["audit-rights-financial", "audit-rights-operational"],
-      "contract_types_affected": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "required_clauses": [
+        "audit-rights-financial",
+        "audit-rights-operational"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
       "jurisdiction": "US",
       "effective_date": "2002-07-30",
       "enforcement_examples": null,
@@ -389,8 +577,15 @@
       "regulation": "SOX",
       "article": "PCAOB AS 2201",
       "requirement_summary": "IT general controls (ITGCs) that are relevant to the entity's internal control over financial reporting must be assessed. Outsourced IT services affecting financial systems must contractually require maintenance of ITGCs covering logical access, change management, computer operations, and program development, with evidence available for the entity's SOX compliance testing.",
-      "required_clauses": ["audit-rights-security", "audit-rights-financial"],
-      "contract_types_affected": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "required_clauses": [
+        "audit-rights-security",
+        "audit-rights-financial"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
       "jurisdiction": "US",
       "effective_date": "2007-06-12",
       "enforcement_examples": null,

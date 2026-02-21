@@ -5,8 +5,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(1)",
       "requirement_summary": "Where processing is to be carried out on behalf of a controller, the controller shall use only processors providing sufficient guarantees to implement appropriate technical and organisational measures to ensure processing meets UK GDPR requirements and protects data subject rights. Under UK GDPR, this obligation is enforced by the ICO rather than EU supervisory authorities, and processors must demonstrate compliance with UK-specific standards.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": "ICO reprimand to a local authority for engaging a processor without adequate due diligence on security guarantees (2022).",
@@ -17,8 +21,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(2)",
       "requirement_summary": "The processor shall not engage another processor (sub-processor) without prior specific or general written authorisation of the controller. In the case of general written authorisation, the processor shall inform the controller of any intended changes concerning the addition or replacement of sub-processors, giving the controller the opportunity to object. This mirrors EU GDPR Art 28(2) but applies under UK jurisdiction with ICO oversight.",
-      "required_clauses": ["dpa-sub-processor"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -29,8 +37,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(3)(a)",
       "requirement_summary": "The processor shall process personal data only on documented instructions from the controller, including with regard to transfers of personal data to a third country or an international organisation, unless required to do so by UK law to which the processor is subject. The UK-specific variant replaces references to 'Union or Member State law' with 'domestic law', reflecting the post-Brexit legal framework.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -41,8 +53,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(3)(b)",
       "requirement_summary": "The processor shall ensure that persons authorised to process personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality. This applies identically to the EU GDPR equivalent but falls under UK jurisdiction and ICO enforcement.",
-      "required_clauses": ["dpa-confidentiality-personnel"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-confidentiality-personnel"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -53,8 +69,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(3)(c)",
       "requirement_summary": "The processor shall take all measures required pursuant to Article 32 of the UK GDPR, implementing appropriate technical and organisational measures to ensure a level of security appropriate to the risk. Security measures must be assessed against UK-specific threat landscapes and ICO guidance on security outcomes.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -65,8 +85,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(3)(d)",
       "requirement_summary": "The processor shall respect the conditions for engaging another processor as referred to in paragraphs 2 and 4, including prior authorisation and imposing the same data protection obligations on the sub-processor by way of a contract or other legal act under UK law. The sub-processor contract must provide sufficient guarantees to implement appropriate technical and organisational measures.",
-      "required_clauses": ["dpa-sub-processor"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -77,8 +101,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(3)(e)",
       "requirement_summary": "Taking into account the nature of the processing, the processor shall assist the controller by appropriate technical and organisational measures, insofar as possible, for the fulfilment of the controller's obligation to respond to requests for exercising the data subject's rights laid down in Chapter III of the UK GDPR. This includes UK-specific rights such as those supplemented by the DPA 2018.",
-      "required_clauses": ["dpa-data-subject-rights"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-data-subject-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -89,8 +117,13 @@
       "regulation": "UK GDPR",
       "article": "Article 28(3)(f)",
       "requirement_summary": "The processor shall assist the controller in ensuring compliance with the obligations pursuant to Articles 32 to 36 of the UK GDPR, taking into account the nature of processing and the information available to the processor. This includes assistance with security measures, breach notification to the ICO, and data protection impact assessments.",
-      "required_clauses": ["dpa-security-measures", "dpa-dpia-cooperation"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "dpa-dpia-cooperation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -101,8 +134,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(3)(g)",
       "requirement_summary": "At the choice of the controller, the processor shall delete or return all personal data to the controller after the end of the provision of services relating to processing, and delete existing copies unless UK law requires storage of the personal data. The reference to 'UK law' replaces the EU GDPR reference to 'Union or Member State law'.",
-      "required_clauses": ["dpa-deletion-return"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -113,8 +150,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(3)(h)",
       "requirement_summary": "The processor shall make available to the controller all information necessary to demonstrate compliance with the obligations laid down in Article 28 and allow for and contribute to audits, including inspections, conducted by the controller or another auditor mandated by the controller. The processor shall immediately inform the controller if an instruction infringes the UK GDPR or other UK data protection provisions.",
-      "required_clauses": ["dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -125,8 +166,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(9)",
       "requirement_summary": "The contract or other legal act between controller and processor referred to in paragraphs 3 and 4 shall be in writing, including in electronic form. The ICO has emphasised this requirement in enforcement actions and recommends documenting the full scope of processing in a written data processing agreement.",
-      "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": "ICO enforcement notice to a recruitment agency for failure to have a written processing agreement with its IT service provider (2021).",
@@ -137,8 +182,12 @@
       "regulation": "UK GDPR",
       "article": "Article 28(10)",
       "requirement_summary": "If a processor infringes the UK GDPR by determining the purposes and means of processing, the processor shall be considered to be a controller in respect of that processing. This re-characterisation carries significant consequences including direct liability for UK GDPR obligations, potential ICO enforcement action, and exposure to data subject claims.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -149,8 +198,12 @@
       "regulation": "UK GDPR",
       "article": "Article 44",
       "requirement_summary": "Any transfer of personal data which are undergoing processing or are intended for processing after transfer to a third country or to an international organisation shall take place only if the conditions laid down in Chapter V of the UK GDPR are complied with by the controller and processor. Post-Brexit, the UK operates its own independent international transfer regime supervised by the ICO and the Secretary of State.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -161,8 +214,12 @@
       "regulation": "UK GDPR",
       "article": "Article 45",
       "requirement_summary": "The Secretary of State may determine that a third country or international organisation ensures an adequate level of data protection (UK adequacy regulations). The UK has granted adequacy status to the EEA, and to countries including those previously recognised by the EU. UK adequacy decisions are independent from EU adequacy decisions and are reviewed periodically by the Secretary of State.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -173,8 +230,12 @@
       "regulation": "UK GDPR",
       "article": "Article 46(1)",
       "requirement_summary": "In the absence of a UK adequacy decision, a controller or processor may transfer personal data to a third country only if the controller or processor has provided appropriate safeguards, and on condition that enforceable data subject rights and effective legal remedies for data subjects are available. Appropriate safeguards under UK law include the UK International Data Transfer Agreement (IDTA) and the UK Addendum to the EU SCCs.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -185,8 +246,12 @@
       "regulation": "UK GDPR",
       "article": "Article 46(2)(c) / IDTA",
       "requirement_summary": "The UK International Data Transfer Agreement (IDTA), issued by the ICO under s119A of the DPA 2018, is the primary UK mechanism for contractual safeguards for international transfers. The IDTA replaces the old EU SCCs for UK transfers and must be used for all new restricted transfers from the UK that rely on contractual safeguards. It comprises a mandatory template with tables covering transfer details, security requirements, and a Transfer Risk Assessment.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2022-03-21",
       "enforcement_examples": null,
@@ -197,8 +262,12 @@
       "regulation": "UK GDPR",
       "article": "Article 46(2)(c) / UK Addendum",
       "requirement_summary": "The UK Addendum to the EU Standard Contractual Clauses allows organisations already using the EU SCCs (2021/914) to extend their coverage to UK transfers by appending the UK Addendum. This is an alternative to the standalone IDTA and is particularly useful for organisations conducting both EU and UK transfers under a single contractual framework.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2022-03-21",
       "enforcement_examples": null,
@@ -209,8 +278,12 @@
       "regulation": "UK GDPR",
       "article": "Article 46 / ICO TRA Guidance",
       "requirement_summary": "The ICO requires a Transfer Risk Assessment (TRA) for all restricted transfers relying on the IDTA or UK Addendum. The TRA must assess whether the destination country's laws and practices provide adequate protection for data subjects, considering the specific circumstances of the transfer. The ICO's TRA tool provides a structured methodology distinct from the EDPB's Transfer Impact Assessment approach used in the EU.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2022-03-21",
       "enforcement_examples": null,
@@ -221,8 +294,12 @@
       "regulation": "UK GDPR",
       "article": "Article 47",
       "requirement_summary": "Binding corporate rules (BCRs) may be approved by the ICO as appropriate safeguards for international transfers within a corporate group. Post-Brexit, the ICO operates its own BCR approval process independently of EU supervisory authorities. Existing BCRs approved under the EU GDPR before 1 January 2021 were recognised under transitional provisions, but organisations may need to seek separate ICO approval for new or substantially modified BCRs.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -233,8 +310,12 @@
       "regulation": "UK GDPR",
       "article": "Article 49(1)(a)",
       "requirement_summary": "In the absence of an adequacy decision or appropriate safeguards, a transfer may take place if the data subject has explicitly consented to the proposed transfer, after being informed of the possible risks. The ICO guidance emphasises that consent-based derogations should be used sparingly and cannot form the basis for systematic, large-scale, or repetitive transfers.",
-      "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -245,8 +326,12 @@
       "regulation": "UK GDPR",
       "article": "Article 49(1)(b)",
       "requirement_summary": "A restricted transfer may take place where it is necessary for the performance of a contract between the data subject and the controller or the implementation of pre-contractual measures taken at the data subject's request. The ICO interprets 'necessary' strictly: convenience or cost reduction is insufficient. The transfer must be objectively necessary for the specific contractual performance.",
-      "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -257,8 +342,12 @@
       "regulation": "UK GDPR",
       "article": "Article 49(1) second paragraph",
       "requirement_summary": "Where a transfer cannot be based on adequacy, appropriate safeguards, or the specific derogations in Article 49(1)(a)-(g), a transfer may take place if it is not repetitive, concerns only a limited number of data subjects, is necessary for the purposes of compelling legitimate interests pursued by the controller which are not overridden by the interests or rights of the data subject, and the controller has assessed all the circumstances and provided suitable safeguards. The ICO must be informed of such transfers.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -269,8 +358,12 @@
       "regulation": "UK GDPR",
       "article": "Article 35(1)",
       "requirement_summary": "Where a type of processing, in particular using new technologies, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall carry out a Data Protection Impact Assessment (DPIA) prior to the processing. The ICO has published its own list of processing operations requiring a DPIA, which supplements the UK GDPR criteria and includes processing involving innovative technology, denial of service, and large-scale profiling.",
-      "required_clauses": ["dpa-dpia-cooperation"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-dpia-cooperation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": "ICO reprimand to the Home Office for failure to conduct a DPIA before deploying facial recognition technology at King's Cross (referenced in ICO opinion, 2021).",
@@ -281,8 +374,12 @@
       "regulation": "UK GDPR",
       "article": "Article 35(7)",
       "requirement_summary": "The DPIA shall contain at minimum: a systematic description of the envisaged processing operations and the purposes including legitimate interest; an assessment of the necessity and proportionality of the processing operations; an assessment of the risks to the rights and freedoms of data subjects; and the measures envisaged to address the risks. Processors must provide information necessary for the controller to complete the DPIA.",
-      "required_clauses": ["dpa-dpia-cooperation"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-dpia-cooperation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -293,8 +390,12 @@
       "regulation": "UK GDPR",
       "article": "Article 35(4) / ICO DPIA List",
       "requirement_summary": "The ICO has published a list of processing operations that require a DPIA under UK GDPR Article 35(4). This includes: innovative technology processing, decisions about denial of service, large-scale profiling, biometric data processing, genetic data processing, data matching or combining datasets, invisible processing, tracking individuals' location or behaviour, targeting of children or other vulnerable individuals, and processing involving risk of physical harm. Contracts must address processor obligations to support DPIAs for these processing types.",
-      "required_clauses": ["dpa-dpia-cooperation"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-dpia-cooperation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -305,8 +406,12 @@
       "regulation": "UK GDPR",
       "article": "Article 25(1)",
       "requirement_summary": "Taking into account the state of the art, cost of implementation, and the nature, scope, context and purposes of processing, the controller shall implement appropriate technical and organisational measures designed to implement data-protection principles effectively, such as data minimisation, both at the time of determination of the means for processing and at the time of the processing itself. The ICO has issued specific guidance on data protection by design and default, emphasising that this is not merely aspirational but a legally enforceable obligation.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -317,8 +422,12 @@
       "regulation": "UK GDPR",
       "article": "Article 25(2)",
       "requirement_summary": "The controller shall implement appropriate technical and organisational measures for ensuring that, by default, only personal data which are necessary for each specific purpose of the processing are processed. This obligation applies to the amount of personal data collected, the extent of processing, the period of storage, and accessibility. Contracts should require processors to support data minimisation by default configurations.",
-      "required_clauses": ["dpa-data-minimisation"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-data-minimisation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -329,8 +438,12 @@
       "regulation": "UK GDPR",
       "article": "Article 25(3)",
       "requirement_summary": "An approved certification mechanism pursuant to Article 42 may be used as an element by which to demonstrate compliance with data protection by design and by default requirements. The ICO has developed a UK certification framework that is independent of the EU certification schemes, and processors may use UK-approved certifications to evidence compliance in contractual arrangements.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -341,8 +454,12 @@
       "regulation": "UK GDPR",
       "article": "Article 32(1)",
       "requirement_summary": "Taking into account the state of the art, costs of implementation, nature, scope, context and purposes of processing, as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, the controller and processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk. The ICO has published detailed guidance on security outcomes including encryption, access controls, resilience, and regular testing.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": "ICO fined British Airways GBP 20 million for inadequate security measures that enabled a web-skimming attack compromising 429,612 customer records (2020).",
@@ -353,8 +470,13 @@
       "regulation": "UK GDPR",
       "article": "Article 32(1)(d)",
       "requirement_summary": "Controllers and processors must implement a process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing. The ICO expects organisations to conduct regular penetration testing, vulnerability assessments, and security audits, and has cited the absence of regular testing as an aggravating factor in enforcement actions.",
-      "required_clauses": ["dpa-security-measures", "dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": "ICO fined Marriott International Ltd GBP 18.4 million, noting the failure to implement adequate monitoring and regular security testing of acquired IT systems (2020).",
@@ -365,8 +487,13 @@
       "regulation": "UK GDPR",
       "article": "Article 32(4)",
       "requirement_summary": "The controller and processor shall take steps to ensure that any natural person acting under their authority who has access to personal data does not process them except on instructions from the controller, unless required to do so by UK law. This requires contractual provisions on staff training, access controls, and disciplinary measures for unauthorised processing.",
-      "required_clauses": ["dpa-confidentiality-personnel", "dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-confidentiality-personnel",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -377,8 +504,13 @@
       "regulation": "DPA 2018",
       "article": "Section 6 / Schedule 1",
       "requirement_summary": "The DPA 2018 Section 6 and Schedule 1 set out conditions for processing special categories of personal data and criminal offence data that supplement UK GDPR Article 9 and Article 10. Schedule 1 provides UK-specific lawful bases including substantial public interest conditions (Part 2), requiring an 'appropriate policy document' to be in place. Contracts involving processing of special category data must identify the specific Schedule 1 condition relied upon.",
-      "required_clauses": ["dpa-scope-purpose", "dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-scope-purpose",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -389,8 +521,12 @@
       "regulation": "DPA 2018",
       "article": "Section 7",
       "requirement_summary": "The DPA 2018 Section 7 disapplies the legitimate interests lawful basis (UK GDPR Article 6(1)(f)) for processing carried out by public authorities in the performance of their tasks. This has significant contractual implications: public sector contracts must identify an alternative lawful basis such as public task (Article 6(1)(e)) and cannot rely on legitimate interests for core processing activities.",
-      "required_clauses": ["dpa-scope-purpose"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-scope-purpose"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -401,8 +537,12 @@
       "regulation": "DPA 2018",
       "article": "Section 9",
       "requirement_summary": "The DPA 2018 sets the age of consent for information society services at 13 years in the UK, lower than the GDPR default of 16. Where processing relies on consent under UK GDPR Article 6(1)(a) in relation to an information society service offered directly to a child, the processing is lawful if the child is at least 13 years old. Contracts for services directed at or accessible to children must address age verification and parental consent mechanisms.",
-      "required_clauses": ["dpa-scope-purpose"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-scope-purpose"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2018-05-25",
       "enforcement_examples": "ICO issued a GBP 12.7 million fine to TikTok for processing children's data without appropriate consent mechanisms, including children under 13 (2023).",
@@ -413,8 +553,12 @@
       "regulation": "DPA 2018",
       "article": "Section 119A",
       "requirement_summary": "Section 119A of the DPA 2018 (inserted by the Data Protection, Privacy and Electronic Communications (Amendments etc) (EU Exit) Regulations 2019) empowers the ICO to issue standard data protection clauses for international transfers. This is the legal basis for the UK IDTA and UK Addendum to EU SCCs. Contracts relying on the IDTA or UK Addendum derive their legal authority from this section.",
-      "required_clauses": ["dpa-international-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-international-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -426,7 +570,9 @@
       "article": "Section 155",
       "requirement_summary": "The ICO may issue penalty notices of up to the higher maximum amount (GBP 17.5 million or 4% of annual worldwide turnover, whichever is greater) for infringements of the basic principles of processing, data subject rights, and international transfer rules under the UK GDPR. The lower maximum (GBP 8.7 million or 2% of turnover) applies to administrative and procedural infringements. Contracts should address allocation of liability for regulatory fines between controller and processor.",
       "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2018-05-25",
       "enforcement_examples": "ICO fined Clearview AI Inc GBP 7.5 million for unlawful processing of UK residents' biometric data and failure to have a lawful basis for processing (2022).",
@@ -437,8 +583,12 @@
       "regulation": "UK GDPR",
       "article": "Article 33(2)",
       "requirement_summary": "The processor shall notify the controller without undue delay after becoming aware of a personal data breach. The ICO guidance clarifies that 'without undue delay' means the processor should notify as soon as possible and ideally within 24 hours to allow the controller sufficient time to meet the 72-hour notification deadline to the ICO under Article 33(1). Contracts should specify maximum notification timeframes.",
-      "required_clauses": ["dpa-breach-notification"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-breach-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": "ICO fined Tuckers Solicitors LLP GBP 98,000 for security failures leading to a ransomware attack, noting delayed breach awareness and notification as aggravating factors (2022).",
@@ -449,8 +599,12 @@
       "regulation": "UK GDPR",
       "article": "Article 33(1)",
       "requirement_summary": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the ICO, unless the breach is unlikely to result in a risk to the rights and freedoms of natural persons. Where the notification is not made within 72 hours, it shall be accompanied by reasons for the delay. Processor contracts must ensure sufficient information is provided within timeframes enabling the controller to meet this deadline.",
-      "required_clauses": ["dpa-breach-notification"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-breach-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -461,8 +615,12 @@
       "regulation": "UK GDPR",
       "article": "Article 30(2)",
       "requirement_summary": "Each processor shall maintain a record of all categories of processing activities carried out on behalf of a controller, containing: the name and contact details of the processor(s) and controller(s), the categories of processing, transfers to third countries, and a general description of technical and organisational security measures. The ICO may request these records during investigations and audits.",
-      "required_clauses": ["dpa-record-of-processing"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-record-of-processing"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2021-01-01",
       "enforcement_examples": null,
@@ -473,8 +631,12 @@
       "regulation": "UK GDPR",
       "article": "Articles 5(1)(f), 32",
       "requirement_summary": "The ICO fined British Airways GBP 20 million (reduced from initial GBP 183 million) for failing to implement appropriate security measures, leading to a web-skimming attack that compromised the personal and financial data of approximately 429,612 customers. Key findings: inadequate monitoring of access to applications, failure to limit access to systems on a need-to-know basis, insufficient testing of security measures, and absence of multi-factor authentication. This enforcement action establishes ICO expectations for contractual security standards.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2020-10-16",
       "enforcement_examples": "ICO Monetary Penalty Notice: British Airways, GBP 20,000,000 (16 October 2020). Original intention was GBP 183,390,000, reduced considering COVID-19 economic impact and representations.",
@@ -485,8 +647,13 @@
       "regulation": "UK GDPR",
       "article": "Articles 5(1)(f), 32",
       "requirement_summary": "The ICO fined Marriott International Ltd GBP 18.4 million (reduced from initial GBP 99 million) for failing to implement appropriate technical and organisational measures to protect personal data in the Starwood guest reservation system, which had been compromised since 2014 and was not discovered until 2018. Key findings: failure to conduct adequate due diligence during acquisition, inadequate monitoring of privileged accounts, failure to encrypt payment card numbers, and insufficient regular testing. This case is critical for contracts involving corporate acquisitions and IT system migrations.",
-      "required_clauses": ["dpa-security-measures", "dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2020-10-30",
       "enforcement_examples": "ICO Monetary Penalty Notice: Marriott International Inc, GBP 18,400,000 (30 October 2020). Highlighted the duty to assess and secure acquired IT systems.",
@@ -497,8 +664,13 @@
       "regulation": "UK GDPR",
       "article": "Articles 5, 6, 9, 14, 15, 27",
       "requirement_summary": "The ICO fined Clearview AI Inc GBP 7.5 million and issued an enforcement notice requiring the company to stop obtaining and using the personal data of UK residents and to delete UK residents' data. Key findings: collection and use of facial images scraped from the internet without consent or other lawful basis, failure to provide adequate privacy information, failure to have a UK representative, and processing of biometric data without meeting Schedule 1 conditions. This case establishes ICO jurisdiction over non-UK processors processing UK residents' data.",
-      "required_clauses": ["dpa-scope-purpose", "dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-scope-purpose",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2022-05-23",
       "enforcement_examples": "ICO Monetary Penalty Notice and Enforcement Notice: Clearview AI Inc, GBP 7,552,800 (23 May 2022). Demonstrates ICO enforcement against non-UK entities under UK GDPR extraterritorial scope.",
@@ -509,8 +681,12 @@
       "regulation": "UK GDPR",
       "article": "Articles 5(1)(a), 6, 8 / DPA 2018 s9",
       "requirement_summary": "The ICO fined TikTok Information Technologies UK Limited GBP 12.7 million for processing the data of children under 13 without appropriate parental consent between May 2018 and July 2020. Key findings: TikTok allowed up to 1.4 million UK children under 13 to use the platform without parental consent, failed to conduct adequate age verification, and processed children's data without a lawful basis. This case is significant for contracts involving services accessible to children and establishes ICO expectations for age-gating and children's data protection measures.",
-      "required_clauses": ["dpa-scope-purpose"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-scope-purpose"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "UK",
       "effective_date": "2023-04-04",
       "enforcement_examples": "ICO Monetary Penalty Notice: TikTok Information Technologies UK Limited, GBP 12,700,000 (4 April 2023). Largest ICO fine for children's data violations.",

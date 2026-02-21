@@ -10,9 +10,16 @@
         "strict": "Processing only per explicit written instructions; any deviation requires prior approval",
         "flexible": "Instructions include the agreement terms and reasonable inferences from the service scope"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "depends_on": [],
-      "compliance_refs": ["GDPR Art 28(3)(a)", "GDPR Art 29"]
+      "compliance_refs": [
+        "GDPR Art 28(3)(a)",
+        "GDPR Art 29"
+      ]
     },
     {
       "id": "dpa-confidentiality-personnel",
@@ -24,9 +31,17 @@
         "contractual": "Confidentiality through contractual agreements with all personnel",
         "statutory": "Reliance on statutory professional confidentiality obligations (e.g., legal or medical professionals)"
       },
-      "contract_types": ["dpa-gdpr", "outsourcing-agreement", "managed-services"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 28(3)(b)"]
+      "contract_types": [
+        "dpa-gdpr",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(b)"
+      ]
     },
     {
       "id": "dpa-security-measures",
@@ -39,9 +54,19 @@
         "certification-referenced": "Processor maintains ISO 27001/SOC 2 and provides evidence",
         "risk-proportionate": "Measures proportionate to the sensitivity and volume of data"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 28(3)(c)", "GDPR Art 32"]
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(c)",
+        "GDPR Art 32"
+      ]
     },
     {
       "id": "dpa-sub-processor",
@@ -54,9 +79,20 @@
         "general-authorisation": "General authorisation with notification and objection right",
         "list-based": "Pre-approved list in schedule with update notification mechanism"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 28(2)", "GDPR Art 28(3)(d)", "GDPR Art 28(4)"]
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(2)",
+        "GDPR Art 28(3)(d)",
+        "GDPR Art 28(4)"
+      ]
     },
     {
       "id": "dpa-data-subject-rights",
@@ -69,9 +105,18 @@
         "standard-plus-complex": "Standard requests included; complex or bulk requests at additional cost",
         "technical-measures": "Focus on implementing technical capabilities for self-service"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 28(3)(e)", "GDPR Art 15-22"]
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(e)",
+        "GDPR Art 15-22"
+      ]
     },
     {
       "id": "dpa-deletion-return",
@@ -84,9 +129,18 @@
         "return-then-delete": "Return data first, then delete after confirmation",
         "phased": "Immediate deletion of production data; backup deletion per rotation schedule"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 28(3)(g)"]
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(g)"
+      ]
     },
     {
       "id": "dpa-audit-rights",
@@ -99,9 +153,18 @@
         "report-based": "Processor provides SOC 2/ISO certification with supplemental questionnaires",
         "hybrid": "Annual report-based review with on-site audit right on cause"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 28(3)(h)"]
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(h)"
+      ]
     },
     {
       "id": "dpa-controller-notification",
@@ -114,9 +177,18 @@
         "breach-focused": "Primary focus on breach notification with general notification for other events",
         "tiered-timeline": "Different timelines based on severity and urgency"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 28(3)(a)", "GDPR Art 33"]
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(a)",
+        "GDPR Art 33"
+      ]
     },
     {
       "id": "dpa-dpia-assistance",
@@ -129,9 +201,19 @@
         "information-provision": "Processor provides requested information but controller leads the DPIA",
         "with-cost-allocation": "Standard assistance included; additional assessments at agreed rates"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 28(3)(f)", "GDPR Art 35", "GDPR Art 36"]
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(f)",
+        "GDPR Art 35",
+        "GDPR Art 36"
+      ]
     },
     {
       "id": "dpa-records-of-processing",
@@ -144,9 +226,17 @@
         "integrated": "Records integrated into the processor's RPA system and shared with controller",
         "on-request": "Records maintained internally and provided to controller upon request"
       },
-      "contract_types": ["dpa-gdpr", "outsourcing-agreement", "managed-services"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 30(2)"]
+      "contract_types": [
+        "dpa-gdpr",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 30(2)"
+      ]
     },
     {
       "id": "scc-module-1-c2c",
@@ -158,9 +248,15 @@
         "standard": "Unmodified EU Commission standard text",
         "with-supplementary-measures": "SCCs plus additional technical and contractual safeguards"
       },
-      "contract_types": ["scc-module-1-c2c", "data-sharing-agreement"],
+      "contract_types": [
+        "scc-module-1-c2c",
+        "data-sharing-agreement"
+      ],
       "depends_on": [],
-      "compliance_refs": ["GDPR Art 46(2)(c)", "EU Decision 2021/914"]
+      "compliance_refs": [
+        "GDPR Art 46(2)(c)",
+        "EU Decision 2021/914"
+      ]
     },
     {
       "id": "scc-module-2-c2p",
@@ -173,9 +269,18 @@
         "specific-authorisation": "Prior specific authorisation required for each sub-processor",
         "with-tia": "Includes documented Transfer Impact Assessment"
       },
-      "contract_types": ["scc-module-2-c2p", "dpa-gdpr", "saas-subscription"],
-      "depends_on": ["dpa-processing-instructions"],
-      "compliance_refs": ["GDPR Art 46(2)(c)", "EU Decision 2021/914"]
+      "contract_types": [
+        "scc-module-2-c2p",
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 46(2)(c)",
+        "EU Decision 2021/914"
+      ]
     },
     {
       "id": "scc-module-3-p2p",
@@ -187,9 +292,17 @@
         "standard": "Unmodified standard text with completed annexes",
         "with-controller-approval": "Includes mechanism for controller approval of sub-processor"
       },
-      "contract_types": ["scc-module-3-p2p", "dpa-gdpr"],
-      "depends_on": ["dpa-sub-processor"],
-      "compliance_refs": ["GDPR Art 46(2)(c)", "EU Decision 2021/914"]
+      "contract_types": [
+        "scc-module-3-p2p",
+        "dpa-gdpr"
+      ],
+      "depends_on": [
+        "dpa-sub-processor"
+      ],
+      "compliance_refs": [
+        "GDPR Art 46(2)(c)",
+        "EU Decision 2021/914"
+      ]
     },
     {
       "id": "scc-module-4-p2c",
@@ -201,9 +314,15 @@
         "standard": "Unmodified standard text",
         "with-gdpr-principles": "Enhanced contractual commitment to GDPR principles by the data importer"
       },
-      "contract_types": ["scc-module-4-p2c", "dpa-gdpr"],
+      "contract_types": [
+        "scc-module-4-p2c",
+        "dpa-gdpr"
+      ],
       "depends_on": [],
-      "compliance_refs": ["GDPR Art 46(2)(c)", "EU Decision 2021/914"]
+      "compliance_refs": [
+        "GDPR Art 46(2)(c)",
+        "EU Decision 2021/914"
+      ]
     },
     {
       "id": "scc-toms-annex",
@@ -216,9 +335,17 @@
         "summary": "High-level description with reference to certifications and detailed security documentation",
         "risk-based": "Measures structured according to the risk assessment for the specific data transfer"
       },
-      "contract_types": ["scc-module-1-c2c", "scc-module-2-c2p", "scc-module-3-p2p", "scc-module-4-p2c", "dpa-gdpr"],
+      "contract_types": [
+        "scc-module-1-c2c",
+        "scc-module-2-c2p",
+        "scc-module-3-p2p",
+        "scc-module-4-p2c",
+        "dpa-gdpr"
+      ],
       "depends_on": [],
-      "compliance_refs": ["EU Decision 2021/914 Annex II"]
+      "compliance_refs": [
+        "EU Decision 2021/914 Annex II"
+      ]
     },
     {
       "id": "scc-sub-processor-annex",
@@ -231,9 +358,17 @@
         "web-referenced": "Annex references a URL where the current sub-processor list is maintained",
         "tiered": "Critical sub-processors listed in the annex; non-critical on the web list"
       },
-      "contract_types": ["scc-module-2-c2p", "scc-module-3-p2p", "dpa-gdpr"],
-      "depends_on": ["dpa-sub-processor"],
-      "compliance_refs": ["EU Decision 2021/914 Annex III"]
+      "contract_types": [
+        "scc-module-2-c2p",
+        "scc-module-3-p2p",
+        "dpa-gdpr"
+      ],
+      "depends_on": [
+        "dpa-sub-processor"
+      ],
+      "compliance_refs": [
+        "EU Decision 2021/914 Annex III"
+      ]
     },
     {
       "id": "scc-transfer-impact-assessment",
@@ -246,9 +381,18 @@
         "risk-based": "Focused assessment based on the specific data types and processing activities",
         "templated": "Standardised template assessment with jurisdiction-specific modules"
       },
-      "contract_types": ["scc-module-1-c2c", "scc-module-2-c2p", "scc-module-3-p2p", "dpa-gdpr"],
+      "contract_types": [
+        "scc-module-1-c2c",
+        "scc-module-2-c2p",
+        "scc-module-3-p2p",
+        "dpa-gdpr"
+      ],
       "depends_on": [],
-      "compliance_refs": ["CJEU Schrems II (C-311/18)", "EDPB Recommendations 01/2020", "EU Decision 2021/914 Clause 14"]
+      "compliance_refs": [
+        "CJEU Schrems II (C-311/18)",
+        "EDPB Recommendations 01/2020",
+        "EU Decision 2021/914 Clause 14"
+      ]
     },
     {
       "id": "scc-supplementary-measures",
@@ -261,9 +405,19 @@
         "contractual-focus": "Primarily contractual commitments (transparency, challenge obligations)",
         "comprehensive": "Combination of technical, contractual, and organisational measures"
       },
-      "contract_types": ["scc-module-1-c2c", "scc-module-2-c2p", "scc-module-3-p2p", "dpa-gdpr"],
-      "depends_on": ["scc-transfer-impact-assessment"],
-      "compliance_refs": ["EDPB Recommendations 01/2020", "CJEU Schrems II (C-311/18)"]
+      "contract_types": [
+        "scc-module-1-c2c",
+        "scc-module-2-c2p",
+        "scc-module-3-p2p",
+        "dpa-gdpr"
+      ],
+      "depends_on": [
+        "scc-transfer-impact-assessment"
+      ],
+      "compliance_refs": [
+        "EDPB Recommendations 01/2020",
+        "CJEU Schrems II (C-311/18)"
+      ]
     },
     {
       "id": "nis2-security-requirements",
@@ -276,9 +430,17 @@
         "important-entity": "Proportionate NIS2 requirements for important entities",
         "critical-supplier": "Enhanced requirements for suppliers providing critical ICT services"
       },
-      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription"],
+      "contract_types": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
       "depends_on": [],
-      "compliance_refs": ["NIS2 Art 21", "NIS2 Art 22"]
+      "compliance_refs": [
+        "NIS2 Art 21",
+        "NIS2 Art 22"
+      ]
     },
     {
       "id": "nis2-incident-notification",
@@ -291,9 +453,18 @@
         "enhanced": "Shorter initial notification period (e.g., 12 hours) with detailed follow-up",
         "sector-specific": "Adapted for specific sector requirements (financial services, healthcare)"
       },
-      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["nis2-security-requirements"],
-      "compliance_refs": ["NIS2 Art 23"]
+      "contract_types": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "nis2-security-requirements"
+      ],
+      "compliance_refs": [
+        "NIS2 Art 23"
+      ]
     },
     {
       "id": "nis2-access-control",
@@ -306,9 +477,17 @@
         "enhanced": "PAM, session recording, real-time monitoring, zero-trust architecture",
         "tiered": "Different requirements based on data sensitivity and access level"
       },
-      "contract_types": ["msa", "outsourcing-agreement", "managed-services"],
-      "depends_on": ["nis2-security-requirements"],
-      "compliance_refs": ["NIS2 Art 21(2)(i)"]
+      "contract_types": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "nis2-security-requirements"
+      ],
+      "compliance_refs": [
+        "NIS2 Art 21(2)(i)"
+      ]
     },
     {
       "id": "nis2-patching-obligations",
@@ -321,9 +500,18 @@
         "enhanced": "Continuous vulnerability monitoring with automated remediation",
         "regulated": "Aligned with specific regulatory requirements (PCI DSS, DORA)"
       },
-      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["nis2-security-requirements"],
-      "compliance_refs": ["NIS2 Art 21(2)(e)"]
+      "contract_types": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "nis2-security-requirements"
+      ],
+      "compliance_refs": [
+        "NIS2 Art 21(2)(e)"
+      ]
     },
     {
       "id": "nis2-supply-chain-transparency",
@@ -336,9 +524,18 @@
         "critical-only": "Disclosure limited to critical sub-suppliers",
         "risk-based": "Transparency requirements proportionate to the risk assessment"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "msa"],
-      "depends_on": ["nis2-security-requirements"],
-      "compliance_refs": ["NIS2 Art 21(2)(d)", "NIS2 Art 22"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "msa"
+      ],
+      "depends_on": [
+        "nis2-security-requirements"
+      ],
+      "compliance_refs": [
+        "NIS2 Art 21(2)(d)",
+        "NIS2 Art 22"
+      ]
     },
     {
       "id": "nis2-security-certification",
@@ -351,9 +548,18 @@
         "preferred": "Certifications preferred but not mandatory (with alternative audit rights)",
         "phased": "Certifications required within a specified period after contract commencement"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["nis2-security-requirements"],
-      "compliance_refs": ["NIS2 Art 24", "NIS2 Art 25"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "nis2-security-requirements"
+      ],
+      "compliance_refs": [
+        "NIS2 Art 24",
+        "NIS2 Art 25"
+      ]
     },
     {
       "id": "dora-service-description",
@@ -366,9 +572,15 @@
         "framework": "High-level description with detailed SOWs for each service component",
         "critical-function": "Enhanced requirements for services supporting critical or important functions"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
       "depends_on": [],
-      "compliance_refs": ["DORA Art 30(2)(a)"]
+      "compliance_refs": [
+        "DORA Art 30(2)(a)"
+      ]
     },
     {
       "id": "dora-data-location",
@@ -381,9 +593,17 @@
         "approved-locations": "Processing in pre-approved locations with change notification",
         "with-sovereignty": "Data sovereignty requirements with local storage and processing"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["dora-service-description"],
-      "compliance_refs": ["DORA Art 30(2)(b)"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "dora-service-description"
+      ],
+      "compliance_refs": [
+        "DORA Art 30(2)(b)"
+      ]
     },
     {
       "id": "dora-audit-rights",
@@ -396,9 +616,18 @@
         "with-pooled-audits": "Includes provision for pooled audits by multiple financial entities",
         "regulator-inclusive": "Explicit provision for competent authority and ESA access"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["dora-service-description"],
-      "compliance_refs": ["DORA Art 30(3)", "DORA Art 28(6)"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "dora-service-description"
+      ],
+      "compliance_refs": [
+        "DORA Art 30(3)",
+        "DORA Art 28(6)"
+      ]
     },
     {
       "id": "dora-subcontracting",
@@ -411,9 +640,16 @@
         "notification-based": "Notification with objection right for new sub-contractors",
         "prohibited-for-critical": "Sub-contracting prohibited for critical functions"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services"],
-      "depends_on": ["dora-service-description"],
-      "compliance_refs": ["DORA Art 30(2)(a)"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dora-service-description"
+      ],
+      "compliance_refs": [
+        "DORA Art 30(2)(a)"
+      ]
     },
     {
       "id": "dora-exit-strategy",
@@ -426,9 +662,18 @@
         "framework": "Exit strategy framework developed within first 6 months",
         "critical-function": "Enhanced exit provisions for critical or important functions"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["dora-service-description"],
-      "compliance_refs": ["DORA Art 28(8)", "EBA Guidelines on outsourcing arrangements"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "dora-service-description"
+      ],
+      "compliance_refs": [
+        "DORA Art 28(8)",
+        "EBA Guidelines on outsourcing arrangements"
+      ]
     },
     {
       "id": "dora-continuity-arrangements",
@@ -441,9 +686,18 @@
         "enhanced": "Semi-annual testing with financial entity participation",
         "resilience-focused": "Aligned with DORA operational resilience testing framework"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["dora-service-description"],
-      "compliance_refs": ["DORA Art 11", "DORA Art 30(2)(d)"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "dora-service-description"
+      ],
+      "compliance_refs": [
+        "DORA Art 11",
+        "DORA Art 30(2)(d)"
+      ]
     },
     {
       "id": "dora-incident-reporting",
@@ -456,9 +710,20 @@
         "enhanced": "Shorter initial notification period with detailed ongoing updates",
         "tiered": "Different reporting requirements based on incident severity classification"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["dora-service-description"],
-      "compliance_refs": ["DORA Art 17", "DORA Art 18", "DORA Art 19", "DORA Art 30(2)(e)"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "dora-service-description"
+      ],
+      "compliance_refs": [
+        "DORA Art 17",
+        "DORA Art 18",
+        "DORA Art 19",
+        "DORA Art 30(2)(e)"
+      ]
     },
     {
       "id": "dora-security-testing",
@@ -471,9 +736,20 @@
         "tlpt-inclusive": "Includes participation in TLPT per DORA Art 26",
         "self-testing": "Provider conducts its own testing with results shared with financial entity"
       },
-      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
-      "depends_on": ["dora-service-description"],
-      "compliance_refs": ["DORA Art 24", "DORA Art 25", "DORA Art 26", "DORA Art 27"]
+      "contract_types": [
+        "outsourcing-agreement",
+        "managed-services",
+        "saas-subscription"
+      ],
+      "depends_on": [
+        "dora-service-description"
+      ],
+      "compliance_refs": [
+        "DORA Art 24",
+        "DORA Art 25",
+        "DORA Art 26",
+        "DORA Art 27"
+      ]
     },
     {
       "id": "hipaa-permitted-uses",
@@ -486,9 +762,14 @@
         "with-management": "Includes business associate's proper management and administration",
         "restricted": "Narrowly defined permitted uses with explicit prohibitions"
       },
-      "contract_types": ["hipaa-baa"],
+      "contract_types": [
+        "hipaa-baa"
+      ],
       "depends_on": [],
-      "compliance_refs": ["45 CFR 164.504(e)(2)(i)", "45 CFR 164.502(a)"]
+      "compliance_refs": [
+        "45 CFR 164.504(e)(2)(i)",
+        "45 CFR 164.502(a)"
+      ]
     },
     {
       "id": "hipaa-safeguards",
@@ -501,9 +782,16 @@
         "enhanced": "Additional safeguards beyond HIPAA minimum (NIST CSF, HITRUST)",
         "certified": "HITRUST CSF certification required as evidence of safeguards"
       },
-      "contract_types": ["hipaa-baa"],
-      "depends_on": ["hipaa-permitted-uses"],
-      "compliance_refs": ["45 CFR 164.314(a)(2)(i)(B)", "45 CFR Part 164 Subpart C"]
+      "contract_types": [
+        "hipaa-baa"
+      ],
+      "depends_on": [
+        "hipaa-permitted-uses"
+      ],
+      "compliance_refs": [
+        "45 CFR 164.314(a)(2)(i)(B)",
+        "45 CFR Part 164 Subpart C"
+      ]
     },
     {
       "id": "hipaa-breach-notification",
@@ -516,9 +804,16 @@
         "expedited": "Notification within 5-10 business days of discovery",
         "with-cost-allocation": "Specifies allocation of notification and mitigation costs"
       },
-      "contract_types": ["hipaa-baa"],
-      "depends_on": ["hipaa-permitted-uses"],
-      "compliance_refs": ["45 CFR 164.410", "45 CFR 164.314(a)(2)(i)(C)"]
+      "contract_types": [
+        "hipaa-baa"
+      ],
+      "depends_on": [
+        "hipaa-permitted-uses"
+      ],
+      "compliance_refs": [
+        "45 CFR 164.410",
+        "45 CFR 164.314(a)(2)(i)(C)"
+      ]
     },
     {
       "id": "hipaa-termination-provisions",
@@ -531,9 +826,16 @@
         "cure-period": "Opportunity to cure within 30 days before termination",
         "with-transition": "Transition period for migration of PHI to alternative provider"
       },
-      "contract_types": ["hipaa-baa"],
-      "depends_on": ["hipaa-permitted-uses"],
-      "compliance_refs": ["45 CFR 164.504(e)(2)(iii)", "45 CFR 164.504(e)(2)(ii)(J)"]
+      "contract_types": [
+        "hipaa-baa"
+      ],
+      "depends_on": [
+        "hipaa-permitted-uses"
+      ],
+      "compliance_refs": [
+        "45 CFR 164.504(e)(2)(iii)",
+        "45 CFR 164.504(e)(2)(ii)(J)"
+      ]
     },
     {
       "id": "dp-data-localisation",
@@ -546,9 +848,16 @@
         "storage-only": "Data at rest within specified geography; processing may occur elsewhere",
         "with-exceptions": "Localisation with defined exceptions (DR, support access)"
       },
-      "contract_types": ["dpa-gdpr", "outsourcing-agreement", "saas-subscription", "managed-services"],
+      "contract_types": [
+        "dpa-gdpr",
+        "outsourcing-agreement",
+        "saas-subscription",
+        "managed-services"
+      ],
       "depends_on": [],
-      "compliance_refs": ["GDPR Art 44-49"]
+      "compliance_refs": [
+        "GDPR Art 44-49"
+      ]
     },
     {
       "id": "dp-cross-border-transfers",
@@ -561,9 +870,16 @@
         "adequacy-based": "Transfers to countries with adequacy decisions only",
         "multi-mechanism": "Different mechanisms for different transfers based on destination"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "depends_on": [],
-      "compliance_refs": ["GDPR Art 44-49", "CJEU Schrems II (C-311/18)"]
+      "compliance_refs": [
+        "GDPR Art 44-49",
+        "CJEU Schrems II (C-311/18)"
+      ]
     },
     {
       "id": "dp-breach-notification-general",
@@ -576,7 +892,13 @@
         "48-hour": "Notification within 48 hours of awareness",
         "72-hour": "Notification within 72 hours (aligned with GDPR Art 33)"
       },
-      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services", "consulting-agreement"],
+      "contract_types": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services",
+        "consulting-agreement"
+      ],
       "depends_on": [],
       "compliance_refs": []
     },
@@ -591,9 +913,172 @@
         "information-provision": "Provider provides requested information; customer leads the assessment",
         "pre-service": "PIA/DPIA required before commencement of processing"
       },
-      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "depends_on": [],
-      "compliance_refs": ["GDPR Art 35", "GDPR Art 36"]
+      "compliance_refs": [
+        "GDPR Art 35",
+        "GDPR Art 36"
+      ]
+    },
+    {
+      "id": "dpa-breach-notification",
+      "clause_category": "data-protection",
+      "name": "Processor Breach Notification to Controller",
+      "description": "Requires the data processor to notify the controller without undue delay upon becoming aware of a personal data breach, providing sufficient information for the controller to assess the breach, determine whether supervisory authority and data subject notification is required, and comply with the 72-hour notification window under GDPR Article 33. This clause implements the contractual obligation required by GDPR Article 28(3)(f) and equivalent provisions in UK GDPR, LGPD, and PIPL.",
+      "drafting_guidance": "Specify the notification timeline (without undue delay, and where feasible within 24-48 hours to give the controller time to assess within the 72-hour window). Define what constitutes a personal data breach (any breach of security leading to accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data). Specify the minimum information to be provided in the initial notification: nature of the breach, categories and approximate number of data subjects, categories and approximate number of personal data records, likely consequences, measures taken or proposed. Require supplementary information as it becomes available. Specify cooperation obligations for incident response.",
+      "variations": {
+        "strict-24h": "Notification within 24 hours with detailed initial report",
+        "standard-48h": "Notification within 48 hours with basic initial report and detailed follow-up within 72 hours",
+        "tiered": "Immediate notification for critical breaches (e.g., involving special category data), 48-hour notification for other breaches"
+      },
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dpa-security-measures"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(f)",
+        "GDPR Art 33",
+        "UK GDPR Art 33"
+      ]
+    },
+    {
+      "id": "dpa-data-minimisation",
+      "clause_category": "data-protection",
+      "name": "Data Minimisation and Purpose Limitation",
+      "description": "Requires the processor to process only the minimum personal data necessary for the specified purposes and to refrain from processing personal data beyond the scope authorised by the controller. Implements the data minimisation principle under GDPR Article 5(1)(c) and the purpose limitation principle under Article 5(1)(b). Particularly important in service provider agreements where the provider may be tempted to use personal data for its own analytics, advertising, or product improvement purposes.",
+      "drafting_guidance": "Define the specific purposes for which personal data may be processed (by reference to the DPA annex or schedule of processing). Prohibit the processor from processing personal data for any purpose other than performing the services under the agreement. Explicitly prohibit the processor from combining personal data received from the controller with personal data from other sources (especially important for CCPA/CPRA compliance). Prohibit the processor from selling or sharing personal data. Require the processor to implement technical measures to enforce data minimisation (e.g., pseudonymisation, access controls, data masking). Address the retention of personal data and require deletion or return upon termination.",
+      "variations": {
+        "strict": "Absolute prohibition on any processing beyond documented controller instructions",
+        "analytics-carveout": "Limited carveout for aggregated and anonymised analytics that cannot identify individuals",
+        "ccpa-aligned": "Specific prohibitions aligned with CCPA/CPRA service provider requirements"
+      },
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services",
+        "data-sharing-agreement"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 5(1)(b)-(c)",
+        "CCPA Cal. Civ. Code 1798.140(ag)",
+        "CPRA Cal. Civ. Code 1798.100(c)"
+      ]
+    },
+    {
+      "id": "dpa-dpia-cooperation",
+      "clause_category": "data-protection",
+      "name": "DPIA Cooperation and Assistance",
+      "description": "Requires the processor to provide reasonable assistance to the controller in conducting Data Protection Impact Assessments (DPIAs) as required by GDPR Article 35. The processor must provide information about its processing operations, technical and organisational measures, and any other information reasonably necessary for the controller to assess the risks to data subjects and determine whether processing may proceed.",
+      "drafting_guidance": "Specify the types of information the processor must provide: processing operations descriptions, technical and organisational measures, data flows, access controls, sub-processor details. Define the timeline for providing DPIA assistance (typically within 10-15 business days). Address the cost allocation for DPIA assistance (typically at the processor cost for initial DPIA; subsequent DPIAs may be charged at agreed rates). Require the processor to notify the controller of any changes to its processing that would require a revised DPIA. Address prior consultation with the supervisory authority under Article 36 and the processor obligation to cooperate.",
+      "variations": {
+        "standard": "Reasonable assistance with DPIA at processor cost",
+        "enhanced": "Proactive DPIA support including risk assessment and mitigation recommendations",
+        "charged": "DPIA assistance provided at agreed professional rates beyond initial assessment"
+      },
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions",
+        "dpa-security-measures"
+      ],
+      "compliance_refs": [
+        "GDPR Art 28(3)(f)",
+        "GDPR Art 35",
+        "GDPR Art 36"
+      ]
+    },
+    {
+      "id": "dpa-international-transfers",
+      "clause_category": "data-protection",
+      "name": "International Data Transfer Provisions",
+      "description": "Establishes the legal framework and safeguards for transferring personal data outside the European Economic Area, the United Kingdom, or other jurisdictions with data transfer restrictions. Must specify the transfer mechanism (adequacy decision, Standard Contractual Clauses, Binding Corporate Rules, or derogations), require a Transfer Impact Assessment, and address supplementary measures required by the Schrems II decision.",
+      "drafting_guidance": "Specify the countries or territories to which personal data may be transferred. Identify the applicable transfer mechanism for each destination: EU adequacy decision (Art 45), EU SCCs (Art 46(2)(c)), BCRs (Art 47), or derogations (Art 49). For UK transfers: IDTA or UK Addendum to EU SCCs. Require a Transfer Impact Assessment (TIA) before commencing transfers to countries without an adequacy decision. Address supplementary technical measures (encryption in transit and at rest, pseudonymisation), organisational measures (access restrictions, policies), and contractual measures. Address government access requests and the processor obligation to challenge disproportionate requests. Require notification to the controller of any legally binding request for disclosure by a public authority.",
+      "variations": {
+        "scc-based": "Transfers pursuant to EU Standard Contractual Clauses with mandatory TIA",
+        "idta-based": "UK transfers pursuant to the International Data Transfer Agreement (IDTA)",
+        "adequacy-only": "Transfers restricted to countries with EU or UK adequacy decisions"
+      },
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "data-sharing-agreement"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions",
+        "dpa-security-measures"
+      ],
+      "compliance_refs": [
+        "GDPR Art 44-49",
+        "UK GDPR Art 44-49",
+        "CJEU Schrems II (C-311/18)",
+        "EDPB Recommendations 01/2020"
+      ]
+    },
+    {
+      "id": "dpa-record-of-processing",
+      "clause_category": "data-protection",
+      "name": "Record of Processing Activities",
+      "description": "Requires the processor to maintain a record of all categories of processing activities carried out on behalf of the controller, as mandated by GDPR Article 30(2). The record must include the name and contact details of the processor and controller, the categories of processing, international transfers, and a general description of technical and organisational security measures.",
+      "drafting_guidance": "Specify the required contents of the record: name and contact details of the processor(s) and controller(s), categories of processing carried out on behalf of each controller, transfers to third countries (including identification of the country and the transfer mechanism), and a general description of technical and organisational security measures. Require the record to be maintained in writing (including electronic form). Specify that the record must be made available to the supervisory authority on request. Define the update frequency (at minimum annually, and upon any material change to processing operations). Address the controller right to audit the records.",
+      "variations": {
+        "standard": "Processor maintains records as required by GDPR Art 30(2)",
+        "enhanced": "Extended record-keeping including processing purposes, data categories, and retention periods",
+        "shared-register": "Joint record maintained in a shared platform accessible to both controller and processor"
+      },
+      "contract_types": [
+        "dpa-gdpr",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "depends_on": [
+        "dpa-processing-instructions"
+      ],
+      "compliance_refs": [
+        "GDPR Art 30(2)",
+        "UK GDPR Art 30(2)"
+      ]
+    },
+    {
+      "id": "dpa-scope-purpose",
+      "clause_category": "data-protection",
+      "name": "Processing Scope and Purpose Definition",
+      "description": "Defines the subject matter, duration, nature, and purpose of the processing, the types of personal data, and the categories of data subjects. This clause implements the mandatory content requirements of GDPR Article 28(3), which requires that processing by a processor be governed by a contract that sets out the subject matter and duration of the processing, the nature and purpose of the processing, the type of personal data, and the categories of data subjects.",
+      "drafting_guidance": "Structure as a schedule or annex to the DPA. Specify: subject matter of processing (e.g., provision of cloud hosting services for customer relationship management), duration of processing (term of the agreement plus any post-termination retention period), nature of processing (collection, recording, organisation, structuring, storage, adaptation, retrieval, consultation, use, disclosure, erasure, destruction), purpose of processing (specific purposes linked to the services), type of personal data (identity data, contact data, financial data, health data, etc.), and categories of data subjects (employees, customers, suppliers, etc.). Address special category data explicitly: whether any special category data under Article 9 will be processed and the additional safeguards applicable.",
+      "variations": {
+        "detailed-schedule": "Comprehensive processing schedule as a separate annex with per-service breakdown",
+        "high-level": "Summary description in the DPA body with reference to the service agreement for detail",
+        "dynamic": "Framework clause allowing the processing scope to be updated via change control without amending the DPA"
+      },
+      "contract_types": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services",
+        "data-sharing-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "GDPR Art 28(3)",
+        "UK GDPR Art 28(3)",
+        "EDPB Guidelines 07/2020"
+      ]
     }
   ]
 }

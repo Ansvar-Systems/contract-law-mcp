@@ -5,8 +5,12 @@
       "regulation": "GDPR",
       "article": "Article 28(1)",
       "requirement_summary": "Where processing is to be carried out on behalf of a controller, the controller shall use only processors providing sufficient guarantees to implement appropriate technical and organisational measures to ensure processing meets GDPR requirements and protects data subject rights.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "Italian DPA fined a controller EUR 40,000 for engaging a processor without adequate guarantees (2020).",
@@ -17,8 +21,12 @@
       "regulation": "GDPR",
       "article": "Article 28(2)",
       "requirement_summary": "The processor shall not engage another processor without prior specific or general written authorisation of the controller. In the case of general written authorisation, the processor shall inform the controller of any intended changes concerning the addition or replacement of other processors, thereby giving the controller the opportunity to object.",
-      "required_clauses": ["dpa-sub-processor"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "CNIL fined Dedalus Biologie EUR 1.5 million partly for inadequate sub-processor oversight (2022).",
@@ -29,8 +37,12 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(a)",
       "requirement_summary": "The processor shall process personal data only on documented instructions from the controller, including with regard to transfers of personal data to a third country or an international organisation, unless required to do so by Union or Member State law.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -41,8 +53,12 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(b)",
       "requirement_summary": "The processor shall ensure that persons authorised to process personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality.",
-      "required_clauses": ["dpa-confidentiality-personnel"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-confidentiality-personnel"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -53,8 +69,12 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(c)",
       "requirement_summary": "The processor shall take all measures required pursuant to Article 32, implementing appropriate technical and organisational measures to ensure a level of security appropriate to the risk.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -65,8 +85,12 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(d)",
       "requirement_summary": "The processor shall respect the conditions for engaging another processor, including prior specific or general written authorisation, and impose the same data protection obligations as set out in the contract between controller and processor by way of a contract or other legal act.",
-      "required_clauses": ["dpa-sub-processor"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -77,8 +101,12 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(e)",
       "requirement_summary": "Taking into account the nature of the processing, the processor shall assist the controller by appropriate technical and organisational measures, insofar as possible, for the fulfilment of the controller's obligation to respond to requests for exercising the data subject's rights laid down in Chapter III.",
-      "required_clauses": ["dpa-data-subject-rights"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-data-subject-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -89,8 +117,13 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(f)",
       "requirement_summary": "The processor shall assist the controller in ensuring compliance with the obligations pursuant to Articles 32 to 36, taking into account the nature of processing and the information available to the processor.",
-      "required_clauses": ["dpa-security-measures", "dpa-dpia-assistance"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "dpa-dpia-assistance"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -101,8 +134,12 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(g)",
       "requirement_summary": "At the choice of the controller, the processor shall delete or return all personal data to the controller after the end of the provision of services relating to processing, and delete existing copies unless Union or Member State law requires storage.",
-      "required_clauses": ["dpa-deletion-return"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -113,8 +150,12 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(h)",
       "requirement_summary": "The processor shall make available to the controller all information necessary to demonstrate compliance with the obligations laid down in Article 28 and allow for and contribute to audits, including inspections, conducted by the controller or another auditor mandated by the controller.",
-      "required_clauses": ["dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -125,8 +166,12 @@
       "regulation": "GDPR",
       "article": "Article 28(3)(h) second sentence",
       "requirement_summary": "The processor shall immediately inform the controller if, in its opinion, an instruction infringes the GDPR or other Union or Member State data protection provisions.",
-      "required_clauses": ["dpa-controller-notification"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-controller-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -137,8 +182,12 @@
       "regulation": "GDPR",
       "article": "Article 28(4)",
       "requirement_summary": "Where a processor engages another processor for carrying out specific processing activities on behalf of the controller, the same data protection obligations as set out in the contract between the controller and processor shall be imposed on that other processor by way of a contract, in particular providing sufficient guarantees.",
-      "required_clauses": ["dpa-sub-processor"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -149,8 +198,12 @@
       "regulation": "GDPR",
       "article": "Article 28(9)",
       "requirement_summary": "The contract or other legal act between controller and processor shall be in writing, including in electronic form.",
-      "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "Belgian DPA fined a controller EUR 50,000 for lack of written processing agreement (2020).",
@@ -161,8 +214,12 @@
       "regulation": "GDPR",
       "article": "Article 28(10)",
       "requirement_summary": "If a processor infringes this Regulation by determining the purposes and means of processing, the processor shall be considered to be a controller in respect of that processing.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "CJEU C-683/21 (Nacionalinis) confirmed that processors acting beyond instructions become controllers.",
@@ -173,8 +230,16 @@
       "regulation": "GDPR",
       "article": "Article 32(1)",
       "requirement_summary": "Taking into account the state of the art, costs of implementation, nature, scope, context and purposes of processing, as well as the risk of varying likelihood and severity for rights and freedoms, the controller and processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including pseudonymisation, encryption, confidentiality, integrity, availability, resilience, and regular testing.",
-      "required_clauses": ["dpa-security-measures", "data-protection-security-measures"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "data-protection-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "British Airways fined GBP 20 million by ICO for inadequate security measures under Art 32 (2020).",
@@ -185,8 +250,12 @@
       "regulation": "GDPR",
       "article": "Article 32(1)(a)",
       "requirement_summary": "Appropriate technical and organisational measures shall include the pseudonymisation and encryption of personal data where appropriate.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -197,8 +266,15 @@
       "regulation": "GDPR",
       "article": "Article 32(1)(d)",
       "requirement_summary": "A process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing.",
-      "required_clauses": ["dpa-security-measures", "audit-rights-security"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "managed-services"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -209,8 +285,12 @@
       "regulation": "GDPR",
       "article": "Article 32(2)",
       "requirement_summary": "In assessing the appropriate level of security, account shall be taken in particular of the risks presented by processing, in particular from accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data transmitted, stored or otherwise processed.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -221,8 +301,13 @@
       "regulation": "GDPR",
       "article": "Article 32(4)",
       "requirement_summary": "The controller and processor shall take steps to ensure that any natural person acting under the authority of the controller or the processor who has access to personal data does not process them except on instructions from the controller.",
-      "required_clauses": ["dpa-confidentiality-personnel", "dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-confidentiality-personnel",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -233,8 +318,15 @@
       "regulation": "GDPR",
       "article": "Article 33(2)",
       "requirement_summary": "The processor shall notify the controller without undue delay after becoming aware of a personal data breach.",
-      "required_clauses": ["data-protection-breach-notification", "dpa-controller-notification"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "dpa-controller-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "Booking.com fined EUR 475,000 by Dutch DPA for delayed breach notification to the DPA (2021).",
@@ -245,8 +337,12 @@
       "regulation": "GDPR",
       "article": "Article 33(3)",
       "requirement_summary": "The notification to the supervisory authority shall at a minimum describe the nature of the breach, contact details of the DPO, likely consequences, and measures taken or proposed to mitigate. The processor must provide information to enable the controller to fulfil this notification within 72 hours.",
-      "required_clauses": ["data-protection-breach-notification"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -257,8 +353,13 @@
       "regulation": "GDPR",
       "article": "Article 34(1)",
       "requirement_summary": "When the personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the breach to the data subject without undue delay. Processors must assist controllers in fulfilling this obligation.",
-      "required_clauses": ["data-protection-breach-notification", "dpa-data-subject-rights"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "dpa-data-subject-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -269,8 +370,12 @@
       "regulation": "GDPR",
       "article": "Article 34(2)",
       "requirement_summary": "The communication to the data subject shall describe in clear and plain language the nature of the personal data breach and recommendations for the natural person to mitigate potential adverse effects.",
-      "required_clauses": ["data-protection-breach-notification"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -281,8 +386,12 @@
       "regulation": "GDPR",
       "article": "Article 34(3)",
       "requirement_summary": "Communication to the data subject is not required where the controller has implemented appropriate technical and organisational protection measures (e.g., encryption), has taken subsequent measures ensuring the high risk is no longer likely, or it would involve disproportionate effort (in which case a public communication is required).",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -293,8 +402,14 @@
       "regulation": "GDPR",
       "article": "Article 44",
       "requirement_summary": "Any transfer of personal data which are undergoing processing or are intended for processing after transfer to a third country or to an international organisation shall take place only if the conditions laid down in Chapter V are complied with by the controller and processor.",
-      "required_clauses": ["dp-cross-border-transfers"],
-      "contract_types_affected": ["dpa-gdpr", "scc-module-2-c2p", "scc-module-1-c2c"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p",
+        "scc-module-1-c2c"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "Meta fined EUR 1.2 billion by Irish DPC for unlawful transfers to the US under Art 46(1) (2023).",
@@ -305,8 +420,12 @@
       "regulation": "GDPR",
       "article": "Article 45",
       "requirement_summary": "A transfer of personal data to a third country may take place where the Commission has decided that the third country ensures an adequate level of protection (adequacy decision). The EU-US Data Privacy Framework was adopted as an adequacy decision in July 2023.",
-      "required_clauses": ["dp-cross-border-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -317,8 +436,15 @@
       "regulation": "GDPR",
       "article": "Article 46(1)",
       "requirement_summary": "In the absence of an adequacy decision, a controller or processor may transfer personal data to a third country only if the controller or processor has provided appropriate safeguards, and on condition that enforceable data subject rights and effective legal remedies for data subjects are available.",
-      "required_clauses": ["dp-cross-border-transfers", "scc-supplementary-measures"],
-      "contract_types_affected": ["dpa-gdpr", "scc-module-2-c2p", "scc-module-1-c2c"],
+      "required_clauses": [
+        "dp-cross-border-transfers",
+        "scc-supplementary-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p",
+        "scc-module-1-c2c"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -329,8 +455,16 @@
       "regulation": "GDPR",
       "article": "Article 46(2)(c)",
       "requirement_summary": "Standard contractual clauses (SCCs) adopted by the Commission constitute appropriate safeguards for international transfers. The current SCCs were adopted by Commission Implementing Decision (EU) 2021/914.",
-      "required_clauses": ["scc-module-2-c2p", "scc-toms-annex", "scc-sub-processor-annex"],
-      "contract_types_affected": ["scc-module-2-c2p", "scc-module-1-c2c", "dpa-gdpr"],
+      "required_clauses": [
+        "scc-module-2-c2p",
+        "scc-toms-annex",
+        "scc-sub-processor-annex"
+      ],
+      "contract_types_affected": [
+        "scc-module-2-c2p",
+        "scc-module-1-c2c",
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-06-27",
       "enforcement_examples": null,
@@ -341,8 +475,12 @@
       "regulation": "GDPR",
       "article": "Article 46(2)(d)",
       "requirement_summary": "Standard data protection clauses adopted by a supervisory authority and approved by the Commission pursuant to the examination procedure may also serve as appropriate safeguards.",
-      "required_clauses": ["dp-cross-border-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -353,8 +491,12 @@
       "regulation": "GDPR",
       "article": "Article 47",
       "requirement_summary": "Binding corporate rules (BCRs) shall be approved by the competent supervisory authority and shall specify the legally binding nature within and upon members of the group, the structure and contact details, data transfers, application of general data protection principles, rights of data subjects, and mechanisms for ensuring compliance.",
-      "required_clauses": ["dp-cross-border-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -365,8 +507,12 @@
       "regulation": "GDPR",
       "article": "Article 49(1)(a)",
       "requirement_summary": "In the absence of an adequacy decision or appropriate safeguards, a transfer may take place if the data subject has explicitly consented to the proposed transfer, after having been informed of the possible risks.",
-      "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -377,8 +523,12 @@
       "regulation": "GDPR",
       "article": "Article 49(1)(b)",
       "requirement_summary": "A transfer may take place where it is necessary for the performance of a contract between the data subject and the controller or the implementation of pre-contractual measures taken at the data subject's request.",
-      "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -389,8 +539,12 @@
       "regulation": "GDPR",
       "article": "Article 49(1)(c)",
       "requirement_summary": "A transfer may take place where it is necessary for the conclusion or performance of a contract concluded in the interest of the data subject between the controller and another natural or legal person.",
-      "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -401,8 +555,14 @@
       "regulation": "GDPR",
       "article": "Clause 14 SCCs (2021/914)",
       "requirement_summary": "The parties warrant that they have no reason to believe that the laws and practices in the third country of destination applicable to the processing by the data importer prevent it from fulfilling its obligations under the SCCs. A Transfer Impact Assessment (TIA) must be conducted and documented.",
-      "required_clauses": ["scc-transfer-impact-assessment", "scc-supplementary-measures"],
-      "contract_types_affected": ["scc-module-2-c2p", "scc-module-1-c2c"],
+      "required_clauses": [
+        "scc-transfer-impact-assessment",
+        "scc-supplementary-measures"
+      ],
+      "contract_types_affected": [
+        "scc-module-2-c2p",
+        "scc-module-1-c2c"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-06-27",
       "enforcement_examples": null,
@@ -413,8 +573,15 @@
       "regulation": "GDPR",
       "article": "EDPB Recommendations 01/2020",
       "requirement_summary": "Where the outcome of a transfer impact assessment indicates that the laws of the third country do not ensure an essentially equivalent level of protection, supplementary measures must be identified and implemented. These may include technical (encryption, pseudonymisation), organisational (policies, transparency reports), or contractual measures.",
-      "required_clauses": ["scc-supplementary-measures", "scc-transfer-impact-assessment"],
-      "contract_types_affected": ["scc-module-2-c2p", "scc-module-1-c2c", "dpa-gdpr"],
+      "required_clauses": [
+        "scc-supplementary-measures",
+        "scc-transfer-impact-assessment"
+      ],
+      "contract_types_affected": [
+        "scc-module-2-c2p",
+        "scc-module-1-c2c",
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-06-18",
       "enforcement_examples": "CJEU Schrems II (C-311/18) invalidated Privacy Shield and required case-by-case assessment of supplementary measures.",
@@ -425,8 +592,15 @@
       "regulation": "GDPR",
       "article": "Article 82(1)",
       "requirement_summary": "Any person who has suffered material or non-material damage as a result of an infringement of the GDPR shall have the right to receive compensation from the controller or processor for the damage suffered.",
-      "required_clauses": ["indemnification-data-breach", "liability-supercap-data"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "indemnification-data-breach",
+        "liability-supercap-data"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "CJEU C-300/21 (Osterreichische Post) confirmed that mere infringement of GDPR is not sufficient; actual damage must be demonstrated, but there is no de minimis threshold.",
@@ -437,8 +611,13 @@
       "regulation": "GDPR",
       "article": "Article 82(2)",
       "requirement_summary": "Any controller involved in processing shall be liable for the damage caused by processing that infringes the GDPR. A processor shall be liable only where it has not complied with obligations specifically directed to processors or has acted outside or contrary to lawful instructions of the controller.",
-      "required_clauses": ["liability-supercap-data", "liability-unlimited-carveouts"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "liability-supercap-data",
+        "liability-unlimited-carveouts"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -449,8 +628,12 @@
       "regulation": "GDPR",
       "article": "Article 82(4)",
       "requirement_summary": "Where more than one controller or processor is involved in the same processing and is responsible for damage caused, each controller or processor shall be held liable for the entire damage in order to ensure effective compensation. A controller or processor which has paid full compensation may subsequently bring recourse proceedings against other controllers or processors involved in the same processing.",
-      "required_clauses": ["indemnification-data-breach"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "indemnification-data-breach"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -461,8 +644,14 @@
       "regulation": "GDPR",
       "article": "Article 26(1)",
       "requirement_summary": "Where two or more controllers jointly determine the purposes and means of processing, they shall be joint controllers. They shall in a transparent manner determine their respective responsibilities for compliance with the GDPR obligations, in particular regarding the exercising of the rights of the data subject and their respective duties to provide information referred to in Articles 13 and 14, by means of an arrangement between them.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-data-subject-rights"],
-      "contract_types_affected": ["dpa-gdpr", "data-sharing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-data-subject-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "data-sharing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": "CJEU C-210/16 (Wirtschaftsakademie) held that a Facebook fan page administrator was joint controller with Facebook.",
@@ -473,8 +662,13 @@
       "regulation": "GDPR",
       "article": "Article 26(2)",
       "requirement_summary": "The arrangement between joint controllers shall duly reflect the respective roles and relationships of the joint controllers vis-a-vis data subjects. The essence of the arrangement shall be made available to the data subject.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "data-sharing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "data-sharing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -485,8 +679,14 @@
       "regulation": "GDPR",
       "article": "Article 26(3)",
       "requirement_summary": "Irrespective of the terms of the joint controller arrangement, the data subject may exercise his or her rights under the GDPR in respect of and against each of the controllers.",
-      "required_clauses": ["dpa-data-subject-rights", "indemnification-data-breach"],
-      "contract_types_affected": ["dpa-gdpr", "data-sharing-agreement"],
+      "required_clauses": [
+        "dpa-data-subject-rights",
+        "indemnification-data-breach"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "data-sharing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -497,8 +697,14 @@
       "regulation": "GDPR",
       "article": "EDPB Guidelines 07/2020",
       "requirement_summary": "EDPB Guidelines 07/2020 on the concepts of controller and processor clarify the distinction between controllers and processors, the criteria for determining controllership, the obligations arising from each role, and practical consequences for contract drafting. Key guidance: the determination is factual, not contractual; a contract labelling a party as 'processor' does not make it so if it factually determines purposes.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-07-07",
       "enforcement_examples": null,
@@ -509,8 +715,13 @@
       "regulation": "GDPR",
       "article": "EDPB Guidelines 9/2022",
       "requirement_summary": "EDPB Guidelines on personal data breach notification provide practical guidance on assessing breach severity, determining whether notification to supervisory authority and data subjects is required, and time limits. Key points for contracts: processors must contractually commit to notifying controllers without undue delay, providing sufficient information for the controller to assess the breach and meet the 72-hour notification window.",
-      "required_clauses": ["data-protection-breach-notification", "dpa-controller-notification"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "dpa-controller-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-03-28",
       "enforcement_examples": null,
@@ -521,8 +732,13 @@
       "regulation": "GDPR",
       "article": "EDPB Guidelines 05/2021",
       "requirement_summary": "EDPB Guidelines on interplay between Art 3 (territorial scope) and Chapter V (international transfers) clarify when a disclosure of personal data constitutes a 'transfer' requiring Chapter V safeguards. A transfer exists when: (1) the exporter is subject to GDPR, (2) the exporter discloses or makes data available to the importer, and (3) the importer is in a third country.",
-      "required_clauses": ["dp-cross-border-transfers"],
-      "contract_types_affected": ["dpa-gdpr", "scc-module-2-c2p"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-11-18",
       "enforcement_examples": null,
@@ -533,8 +749,12 @@
       "regulation": "GDPR",
       "article": "EDPB Guidelines 2/2018",
       "requirement_summary": "EDPB Guidelines 2/2018 on derogations under Article 49 clarify that derogations for international transfers must be interpreted restrictively. Explicit consent must be specific and informed about risks, contractual necessity must be strictly necessary, and important reasons of public interest must be recognised in Union or Member State law.",
-      "required_clauses": ["dp-cross-border-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -546,7 +766,9 @@
       "article": "EDPB Guidelines on DPOs (WP243 rev.01)",
       "requirement_summary": "Where a DPO is designated, contracts with processors should specify the DPO contact details, the DPO's role in supervising processing operations under the contract, and the DPO's involvement in data breach response. The DPO must be involved properly and in a timely manner in all issues relating to the protection of personal data.",
       "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -557,8 +779,12 @@
       "regulation": "GDPR",
       "article": "EDPB Guidelines 04/2021",
       "requirement_summary": "EDPB Guidelines 04/2021 on codes of conduct as tools for transfers under Art 40. Adherence to an approved code of conduct with binding and enforceable commitments by the controller or processor in the third country can serve as an appropriate safeguard for international transfers. Contracts should reference applicable codes of conduct.",
-      "required_clauses": ["dp-cross-border-transfers"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-07-07",
       "enforcement_examples": null,
@@ -570,7 +796,9 @@
       "article": "EDPB Guidelines 07/2022",
       "requirement_summary": "EDPB Guidelines on certification as a tool for transfers under Art 42. Certification pursuant to Article 42 combined with binding and enforceable commitments by the controller or processor in the third country can serve as an appropriate safeguard. Contracts should address the implications of certification status changes.",
       "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-06-14",
       "enforcement_examples": null,
@@ -581,8 +809,12 @@
       "regulation": "GDPR",
       "article": "EDPB Guidelines 01/2022",
       "requirement_summary": "EDPB Guidelines on data subject rights, particularly the right of access (Art 15). Contracts with processors must ensure the processor can assist the controller in responding to access requests, including providing all necessary data within reasonable timeframes to enable the controller to comply with the one-month deadline.",
-      "required_clauses": ["dpa-data-subject-rights"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-data-subject-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-03-28",
       "enforcement_examples": null,
@@ -593,8 +825,14 @@
       "regulation": "GDPR",
       "article": "Article 35(1)",
       "requirement_summary": "Where a type of processing, in particular using new technologies, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall carry out an assessment of the impact of the envisaged processing operations on the protection of personal data (DPIA) prior to the processing.",
-      "required_clauses": ["dpa-dpia-assistance", "dp-privacy-impact-assessment"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-dpia-assistance",
+        "dp-privacy-impact-assessment"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -605,8 +843,12 @@
       "regulation": "GDPR",
       "article": "Article 35(7)",
       "requirement_summary": "The DPIA shall contain at least: a systematic description of the envisaged processing operations and the purposes; an assessment of the necessity and proportionality; an assessment of the risks to the rights and freedoms of data subjects; and the measures envisaged to address the risks. Processors must provide information necessary for the DPIA.",
-      "required_clauses": ["dpa-dpia-assistance"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-dpia-assistance"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -617,8 +859,12 @@
       "regulation": "GDPR",
       "article": "Article 36(1)",
       "requirement_summary": "The controller shall consult the supervisory authority prior to processing where a DPIA indicates that the processing would result in a high risk in the absence of measures taken by the controller to mitigate the risk. Processors must assist the controller in preparing for and responding to prior consultation.",
-      "required_clauses": ["dpa-dpia-assistance"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-dpia-assistance"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -629,8 +875,12 @@
       "regulation": "GDPR",
       "article": "Article 30(1)",
       "requirement_summary": "Each controller shall maintain a record of processing activities under its responsibility containing specified information including purposes, categories of data subjects and personal data, categories of recipients, third country transfers, time limits for erasure, and a general description of technical and organisational security measures.",
-      "required_clauses": ["dpa-records-of-processing"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-records-of-processing"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -641,8 +891,12 @@
       "regulation": "GDPR",
       "article": "Article 30(2)",
       "requirement_summary": "Each processor shall maintain a record of all categories of processing activities carried out on behalf of a controller, containing: the name and contact details of the processor(s) and controller(s), the categories of processing, transfers to third countries, and a general description of technical and organisational security measures.",
-      "required_clauses": ["dpa-records-of-processing"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-records-of-processing"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -654,7 +908,9 @@
       "article": "Article 37(1)",
       "requirement_summary": "The controller and the processor shall designate a data protection officer where: (a) the processing is carried out by a public authority or body; (b) the core activities consist of processing operations which require regular and systematic monitoring of data subjects on a large scale; or (c) the core activities consist of processing on a large scale of special categories of data or data relating to criminal convictions.",
       "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr"],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -666,7 +922,11 @@
       "article": "Article 37(6)",
       "requirement_summary": "The data protection officer may be a staff member of the controller or processor, or fulfil the tasks on the basis of a service contract. Contracts for external DPO services must address independence, expertise requirements, resource provision, and avoidance of conflicts of interest.",
       "required_clauses": [],
-      "contract_types_affected": ["dpa-gdpr", "consulting-agreement", "professional-services"],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "consulting-agreement",
+        "professional-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -677,8 +937,16 @@
       "regulation": "GDPR",
       "article": "Article 5(1)(f)",
       "requirement_summary": "Personal data shall be processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures (integrity and confidentiality principle). This principle underpins all contractual security requirements.",
-      "required_clauses": ["dpa-security-measures", "confidentiality-mutual"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "confidentiality-mutual"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -689,8 +957,13 @@
       "regulation": "GDPR",
       "article": "Article 5(2)",
       "requirement_summary": "The controller shall be responsible for, and be able to demonstrate compliance with, the data protection principles (accountability principle). This requires contracts to include audit rights, record-keeping obligations, and documentation of processing activities.",
-      "required_clauses": ["dpa-audit-rights", "dpa-records-of-processing"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-audit-rights",
+        "dpa-records-of-processing"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -701,8 +974,13 @@
       "regulation": "GDPR",
       "article": "Article 25(1)",
       "requirement_summary": "Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing, the controller shall implement appropriate technical and organisational measures designed to implement data-protection principles effectively (data protection by design). Contracts should require processors to support these measures.",
-      "required_clauses": ["dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
@@ -713,8 +991,13 @@
       "regulation": "GDPR",
       "article": "Article 25(2)",
       "requirement_summary": "The controller shall implement appropriate technical and organisational measures for ensuring that, by default, only personal data which are necessary for each specific purpose of the processing are processed (data protection by default). Contracts should specify data minimisation requirements.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
