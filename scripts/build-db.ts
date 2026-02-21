@@ -17,7 +17,9 @@ CREATE TABLE clause_types (
     'indemnification','liability','confidentiality','termination','force-majeure',
     'warranty','sla','data-protection','audit-rights','governing-law',
     'dispute-resolution','assignment','non-solicitation','insurance',
-    'compliance','ip','payment','representations'
+    'compliance','ip','payment','representations',
+    'employment','construction','m-and-a','international-trade',
+    'government','ai-technology','esg'
   )),
   name TEXT NOT NULL,
   description TEXT NOT NULL,
@@ -34,7 +36,8 @@ CREATE TABLE contract_types (
   name TEXT NOT NULL,
   category TEXT NOT NULL CHECK(category IN (
     'commercial','employment','ip-licensing','data-protection','vendor',
-    'partnership','finance'
+    'partnership','finance',
+    'construction','government','m-and-a','international'
   )),
   description TEXT NOT NULL,
   required_clauses TEXT NOT NULL DEFAULT '[]',
@@ -63,7 +66,8 @@ CREATE TABLE risk_patterns (
   name TEXT NOT NULL,
   risk_category TEXT NOT NULL CHECK(risk_category IN (
     'financial','operational','regulatory','reputational','ip',
-    'data-protection','continuity'
+    'data-protection','continuity',
+    'environmental','compliance','contractual'
   )),
   clause_type TEXT NOT NULL,
   trigger TEXT NOT NULL,
@@ -96,7 +100,8 @@ CREATE TABLE ip_provisions (
   provision_type TEXT NOT NULL CHECK(provision_type IN (
     'assignment','license-exclusive','license-non-exclusive','work-for-hire',
     'joint-ownership','background-ip','foreground-ip','open-source',
-    'trade-secret','moral-rights'
+    'trade-secret','moral-rights',
+    'employee-ip','ai-output','training-data'
   )),
   name TEXT NOT NULL,
   description TEXT NOT NULL,
