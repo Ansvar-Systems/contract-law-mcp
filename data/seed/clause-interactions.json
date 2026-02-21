@@ -1,0 +1,895 @@
+{
+  "clause_interactions": [
+    {
+      "id": "liability-cap-limits-indemnity",
+      "clause_a": "liability-cap-direct",
+      "clause_b": "indemnification-mutual",
+      "relationship": "limits",
+      "description": "General liability cap may limit the effective value of indemnification obligations.",
+      "review_guidance": "Verify whether indemnification is carved out from general liability cap or subject to separate super-cap.",
+      "risk_if_misaligned": "Indemnification becomes meaningless if capped below realistic claim values."
+    },
+    {
+      "id": "liability-cap-limits-data-breach-indemnity",
+      "clause_a": "liability-cap-direct",
+      "clause_b": "indemnification-data-breach",
+      "relationship": "limits",
+      "description": "Data breach indemnification may be rendered ineffective by a low general liability cap.",
+      "review_guidance": "Ensure data breach indemnification has a separate super-cap above the general liability cap.",
+      "risk_if_misaligned": "Data breach costs (notification, remediation, regulatory fines) may far exceed general liability cap."
+    },
+    {
+      "id": "liability-cap-limits-ip-indemnity",
+      "clause_a": "liability-cap-direct",
+      "clause_b": "indemnification-ip",
+      "relationship": "limits",
+      "description": "IP infringement indemnification may be capped by general liability limitation.",
+      "review_guidance": "IP indemnification should be carved out from general cap or subject to super-cap.",
+      "risk_if_misaligned": "IP litigation costs and injunction losses typically exceed standard liability caps."
+    },
+    {
+      "id": "consequential-exclusion-limits-sla-credits",
+      "clause_a": "liability-exclusion-consequential",
+      "clause_b": "sla-service-credits",
+      "relationship": "limits",
+      "description": "Consequential damages exclusion may prevent recovery of business losses beyond service credits.",
+      "review_guidance": "Verify that lost profits from SLA failures are not excluded as consequential damages.",
+      "risk_if_misaligned": "Service credits provide only nominal remedy; real business losses are unrecoverable."
+    },
+    {
+      "id": "consequential-exclusion-conflicts-data-breach-indemnity",
+      "clause_a": "liability-exclusion-consequential",
+      "clause_b": "indemnification-data-breach",
+      "relationship": "conflicts-with",
+      "description": "Consequential damages exclusion may conflict with data breach indemnification if breach costs are classified as consequential.",
+      "review_guidance": "Carve out data breach costs from consequential damages exclusion or define as direct damages.",
+      "risk_if_misaligned": "Data breach notification, remediation, and regulatory fines treated as excluded consequential damages."
+    },
+    {
+      "id": "sla-uptime-requires-resolution-time",
+      "clause_a": "sla-uptime",
+      "clause_b": "sla-resolution-time",
+      "relationship": "requires",
+      "description": "Uptime commitments are only meaningful if backed by resolution time targets.",
+      "review_guidance": "Verify that resolution time targets are consistent with uptime percentage commitments.",
+      "risk_if_misaligned": "99.9% uptime allows 8.7 hours annual downtime; resolution time must be shorter than this to be achievable."
+    },
+    {
+      "id": "sla-uptime-requires-response-time",
+      "clause_a": "sla-uptime",
+      "clause_b": "sla-response-time",
+      "relationship": "requires",
+      "description": "Uptime targets need corresponding response time commitments to detect and address issues promptly.",
+      "review_guidance": "Ensure P1 response time is measured in minutes, not hours, to support uptime targets.",
+      "risk_if_misaligned": "Long response times mean outages are not addressed until uptime target is already breached."
+    },
+    {
+      "id": "sla-credits-supplements-uptime",
+      "clause_a": "sla-service-credits",
+      "clause_b": "sla-uptime",
+      "relationship": "supplements",
+      "description": "Service credits provide financial enforcement mechanism for uptime commitments.",
+      "review_guidance": "Verify credit percentages are meaningful (10-30% of monthly fees) and tiered by severity.",
+      "risk_if_misaligned": "Uptime targets without financial consequences are aspirational, not enforceable."
+    },
+    {
+      "id": "sla-exclusions-limits-uptime",
+      "clause_a": "sla-exclusions",
+      "clause_b": "sla-uptime",
+      "relationship": "limits",
+      "description": "SLA exclusions reduce the effective uptime commitment by excluding certain downtime events.",
+      "review_guidance": "Verify exclusions are reasonable: planned maintenance windows, customer-caused issues. Not: all third-party failures.",
+      "risk_if_misaligned": "Broad exclusions reduce effective uptime from 99.9% to 95% or lower in practice."
+    },
+    {
+      "id": "termination-cause-requires-conf-survival",
+      "clause_a": "termination-cause",
+      "clause_b": "confidentiality-survival",
+      "relationship": "requires",
+      "description": "Termination for cause must not extinguish confidentiality obligations.",
+      "review_guidance": "Verify confidentiality survives termination for 3-5 years. Trade secrets indefinitely.",
+      "risk_if_misaligned": "Termination releases party from confidentiality, allowing disclosure of sensitive information."
+    },
+    {
+      "id": "termination-convenience-requires-wind-down",
+      "clause_a": "termination-convenience",
+      "clause_b": "termination-wind-down",
+      "relationship": "requires",
+      "description": "Termination for convenience needs a structured wind-down period to avoid abrupt service cessation.",
+      "review_guidance": "Verify wind-down period (3-12 months) matches service complexity.",
+      "risk_if_misaligned": "Convenience termination without wind-down creates cliff-edge service discontinuity."
+    },
+    {
+      "id": "termination-cause-requires-wind-down",
+      "clause_a": "termination-cause",
+      "clause_b": "termination-wind-down",
+      "relationship": "requires",
+      "description": "Even termination for cause needs orderly wind-down for service continuity.",
+      "review_guidance": "Wind-down obligation should survive even for-cause termination, though period may be shorter.",
+      "risk_if_misaligned": "For-cause termination with no wind-down leaves customer without service or data."
+    },
+    {
+      "id": "termination-insolvency-conflicts-wind-down",
+      "clause_a": "termination-insolvency",
+      "clause_b": "termination-wind-down",
+      "relationship": "conflicts-with",
+      "description": "Insolvency termination may be triggered but wind-down obligations may be unenforceable against an insolvent entity.",
+      "review_guidance": "Consider data escrow and alternative arrangements that do not depend on insolvent party cooperation.",
+      "risk_if_misaligned": "Wind-down provisions are meaningless if counter-party cannot perform due to insolvency."
+    },
+    {
+      "id": "termination-fees-limits-convenience",
+      "clause_a": "termination-fees",
+      "clause_b": "termination-convenience",
+      "relationship": "limits",
+      "description": "Termination fees effectively limit the practical utility of termination for convenience.",
+      "review_guidance": "Verify fees are reasonable (declining scale) and do not negate the termination right.",
+      "risk_if_misaligned": "Excessive termination fees make convenience termination financially impractical."
+    },
+    {
+      "id": "termination-change-of-control-supplements-assignment",
+      "clause_a": "termination-change-of-control",
+      "clause_b": "assignment-change-of-control",
+      "relationship": "supplements",
+      "description": "Change of control termination right supplements assignment restrictions by covering indirect transfers.",
+      "review_guidance": "Both clauses needed: assignment covers direct transfer; change of control covers indirect via share acquisition.",
+      "risk_if_misaligned": "Assignment restriction alone misses indirect transfers through share purchase or merger."
+    },
+    {
+      "id": "confidentiality-mutual-requires-exceptions",
+      "clause_a": "confidentiality-mutual",
+      "clause_b": "confidentiality-exceptions",
+      "relationship": "requires",
+      "description": "Mutual confidentiality needs well-defined exceptions to be commercially workable.",
+      "review_guidance": "Verify standard exceptions: public domain, prior knowledge, independent development, legally compelled disclosure.",
+      "risk_if_misaligned": "Confidentiality without exceptions may prevent normal business operations and legal compliance."
+    },
+    {
+      "id": "confidentiality-residuals-carves-out-mutual",
+      "clause_a": "confidentiality-residuals",
+      "clause_b": "confidentiality-mutual",
+      "relationship": "carves-out",
+      "description": "Residuals clause carves out information retained in unaided memory from confidentiality obligations.",
+      "review_guidance": "Verify residuals clause excludes trade secrets, personal data, and specific proprietary designs.",
+      "risk_if_misaligned": "Broad residuals effectively nullify confidentiality for non-documented information."
+    },
+    {
+      "id": "dpa-audit-supplements-security-measures",
+      "clause_a": "dpa-audit-rights",
+      "clause_b": "dpa-security-measures",
+      "relationship": "supplements",
+      "description": "Audit rights provide verification mechanism for contractual security measures.",
+      "review_guidance": "Verify audit scope covers all security measures specified in the DPA.",
+      "risk_if_misaligned": "Security measures are self-assessed without independent verification."
+    },
+    {
+      "id": "dpa-sub-processor-requires-security-measures",
+      "clause_a": "dpa-sub-processor",
+      "clause_b": "dpa-security-measures",
+      "relationship": "requires",
+      "description": "Sub-processor clause must require flow-down of equivalent security measures.",
+      "review_guidance": "Verify sub-processor agreements require at least equivalent security measures.",
+      "risk_if_misaligned": "Data processed by sub-processors with lower security standards than primary processor."
+    },
+    {
+      "id": "dpa-deletion-requires-processing-instructions",
+      "clause_a": "dpa-deletion-return",
+      "clause_b": "dpa-processing-instructions",
+      "relationship": "requires",
+      "description": "Deletion obligations must align with processing scope to ensure all data is addressed.",
+      "review_guidance": "Verify deletion covers all categories of data in processing instructions, including backups.",
+      "risk_if_misaligned": "Some data categories omitted from deletion, remaining with processor after contract end."
+    },
+    {
+      "id": "dpa-breach-notification-requires-security",
+      "clause_a": "dpa-controller-notification",
+      "clause_b": "dpa-security-measures",
+      "relationship": "requires",
+      "description": "Breach notification must be supported by security measures that enable detection.",
+      "review_guidance": "Verify security measures include monitoring and detection capabilities to identify breaches.",
+      "risk_if_misaligned": "Notification obligation meaningless if provider lacks capability to detect breaches."
+    },
+    {
+      "id": "dp-cross-border-requires-sccs",
+      "clause_a": "dp-cross-border-transfers",
+      "clause_b": "scc-module-2-c2p",
+      "relationship": "requires",
+      "description": "Cross-border transfers to non-adequate countries require Standard Contractual Clauses.",
+      "review_guidance": "Verify appropriate SCC module executed with completed annexes and Transfer Impact Assessment.",
+      "risk_if_misaligned": "International transfer without legal mechanism violates GDPR Chapter V."
+    },
+    {
+      "id": "scc-c2p-requires-tia",
+      "clause_a": "scc-module-2-c2p",
+      "clause_b": "scc-transfer-impact-assessment",
+      "relationship": "requires",
+      "description": "SCCs require a Transfer Impact Assessment to determine if supplementary measures are needed.",
+      "review_guidance": "Verify TIA conducted documenting destination country laws and identified supplementary measures.",
+      "risk_if_misaligned": "SCCs may be insufficient without supplementary measures identified by TIA."
+    },
+    {
+      "id": "scc-c2p-requires-supplementary",
+      "clause_a": "scc-module-2-c2p",
+      "clause_b": "scc-supplementary-measures",
+      "relationship": "requires",
+      "description": "Where TIA identifies risks, supplementary measures must be implemented alongside SCCs.",
+      "review_guidance": "Verify supplementary measures include: encryption, pseudonymisation, or access restrictions as needed.",
+      "risk_if_misaligned": "SCCs alone may not provide adequate protection against government access in destination country."
+    },
+    {
+      "id": "scc-p2p-requires-tia",
+      "clause_a": "scc-module-3-p2p",
+      "clause_b": "scc-transfer-impact-assessment",
+      "relationship": "requires",
+      "description": "Processor-to-processor SCCs also require TIA for compliance.",
+      "review_guidance": "Ensure TIA covers the specific P2P transfer scenario and destination country assessment.",
+      "risk_if_misaligned": "Sub-processor transfers without TIA may be challenged by supervisory authority."
+    },
+    {
+      "id": "scc-requires-toms-annex",
+      "clause_a": "scc-module-2-c2p",
+      "clause_b": "scc-toms-annex",
+      "relationship": "requires",
+      "description": "SCCs require completed TOMs annex specifying technical and organisational measures.",
+      "review_guidance": "Verify TOMs annex is completed with specific, not generic, security measures.",
+      "risk_if_misaligned": "Incomplete SCCs without TOMs annex are not legally valid."
+    },
+    {
+      "id": "scc-sub-processor-annex-supplements-dpa",
+      "clause_a": "scc-sub-processor-annex",
+      "clause_b": "dpa-sub-processor",
+      "relationship": "supplements",
+      "description": "SCC sub-processor annex supplements DPA sub-processor provisions for international transfers.",
+      "review_guidance": "Verify consistency between DPA sub-processor list and SCC sub-processor annex.",
+      "risk_if_misaligned": "Inconsistent sub-processor lists between DPA and SCCs create compliance gaps."
+    },
+    {
+      "id": "dp-localisation-conflicts-cross-border",
+      "clause_a": "dp-data-localisation",
+      "clause_b": "dp-cross-border-transfers",
+      "relationship": "conflicts-with",
+      "description": "Data localisation requirements may conflict with cross-border transfer provisions.",
+      "review_guidance": "Verify that data localisation is not undermined by transfer provisions allowing processing elsewhere.",
+      "risk_if_misaligned": "Contract allows data to leave specified jurisdiction despite localisation requirement."
+    },
+    {
+      "id": "dpa-data-subject-rights-requires-processing-instructions",
+      "clause_a": "dpa-data-subject-rights",
+      "clause_b": "dpa-processing-instructions",
+      "relationship": "requires",
+      "description": "Data subject rights assistance requires clear understanding of processing scope.",
+      "review_guidance": "Processing instructions should define data categories to enable effective data subject rights response.",
+      "risk_if_misaligned": "Processor cannot locate all relevant data for data subject request without clear processing scope."
+    },
+    {
+      "id": "dp-privacy-impact-requires-dpa-assistance",
+      "clause_a": "dp-privacy-impact-assessment",
+      "clause_b": "dpa-dpia-assistance",
+      "relationship": "requires",
+      "description": "DPIA completion requires processor cooperation and information.",
+      "review_guidance": "Verify processor has obligation to provide information needed for DPIA within reasonable timeframe.",
+      "risk_if_misaligned": "Incomplete DPIA due to processor non-cooperation."
+    },
+    {
+      "id": "force-majeure-standard-requires-termination-right",
+      "clause_a": "force-majeure-standard",
+      "clause_b": "force-majeure-termination-right",
+      "relationship": "requires",
+      "description": "Standard force majeure needs a termination right to prevent indefinite suspension.",
+      "review_guidance": "Verify termination right available if force majeure continues beyond 60-90 days.",
+      "risk_if_misaligned": "Parties trapped in non-performing contract during extended force majeure."
+    },
+    {
+      "id": "force-majeure-narrow-supplements-standard",
+      "clause_a": "force-majeure-narrow",
+      "clause_b": "force-majeure-standard",
+      "relationship": "supplements",
+      "description": "Narrow force majeure provides tighter definition than standard, reducing abuse potential.",
+      "review_guidance": "Choose narrow or standard based on risk appetite. Narrow better protects against FM abuse.",
+      "risk_if_misaligned": "Standard FM definition may be too broad, allowing provider to avoid performance for predictable events."
+    },
+    {
+      "id": "force-majeure-pandemic-supplements-standard",
+      "clause_a": "force-majeure-pandemic",
+      "clause_b": "force-majeure-standard",
+      "relationship": "supplements",
+      "description": "Pandemic-specific provision supplements standard FM with explicit pandemic coverage and mitigation.",
+      "review_guidance": "Post-COVID, verify pandemic is either included with mitigation duties or explicitly addressed.",
+      "risk_if_misaligned": "Unclear pandemic coverage leads to disputes over FM applicability."
+    },
+    {
+      "id": "fm-exclusion-supplements-liability",
+      "clause_a": "liability-force-majeure-exclusion",
+      "clause_b": "force-majeure-standard",
+      "relationship": "supplements",
+      "description": "Liability exclusion for force majeure events supplements the performance excuse.",
+      "review_guidance": "Verify FM liability exclusion does not extend beyond the scope of the FM clause itself.",
+      "risk_if_misaligned": "Liability exclusion broader than FM definition, creating unintended immunity."
+    },
+    {
+      "id": "ip-work-product-requires-background-reservation",
+      "clause_a": "ip-work-product-ownership",
+      "clause_b": "ip-background-reservation",
+      "relationship": "requires",
+      "description": "IP work product assignment requires clear background IP reservation to define boundary.",
+      "review_guidance": "Both clauses must exist with consistent definitions. Background IP schedule should be populated.",
+      "risk_if_misaligned": "Without background reservation, broad work product assignment may inadvertently capture pre-existing IP."
+    },
+    {
+      "id": "ip-improvements-supplements-work-product",
+      "clause_a": "ip-improvements",
+      "clause_b": "ip-work-product-ownership",
+      "relationship": "supplements",
+      "description": "Improvements clause supplements work product ownership by addressing enhancements to existing IP.",
+      "review_guidance": "Verify improvements clause is consistent with work product ownership allocation.",
+      "risk_if_misaligned": "Improvements may fall into ownership gap between background and foreground IP."
+    },
+    {
+      "id": "ip-license-back-supplements-work-product",
+      "clause_a": "ip-license-back",
+      "clause_b": "ip-work-product-ownership",
+      "relationship": "supplements",
+      "description": "Licence-back enables provider to reuse general methodologies when work product is assigned to customer.",
+      "review_guidance": "Licence-back should cover only general tools and methodologies, not customer-specific IP.",
+      "risk_if_misaligned": "Without licence-back, provider loses ability to reuse own methodologies. With broad licence-back, customer loses exclusivity."
+    },
+    {
+      "id": "ip-non-assertion-supplements-license-back",
+      "clause_a": "ip-non-assertion",
+      "clause_b": "ip-license-back",
+      "relationship": "supplements",
+      "description": "Non-assertion covenant supplements licence-back by preventing IP claims within the relationship.",
+      "review_guidance": "Verify non-assertion covers both licensed and assigned IP within the agreement scope.",
+      "risk_if_misaligned": "Party may assert IP rights despite existing licence arrangement."
+    },
+    {
+      "id": "warranty-non-infringement-requires-ip-indemnity",
+      "clause_a": "warranty-non-infringement",
+      "clause_b": "indemnification-ip",
+      "relationship": "requires",
+      "description": "Non-infringement warranty is only meaningful if backed by IP indemnification.",
+      "review_guidance": "Both warranty and indemnification should exist. Verify indemnification covers full defence costs.",
+      "risk_if_misaligned": "Warranty breach claim exists but without indemnification, customer bears own defence costs."
+    },
+    {
+      "id": "warranty-fitness-requires-sla",
+      "clause_a": "warranty-fitness",
+      "clause_b": "sla-uptime",
+      "relationship": "requires",
+      "description": "Fitness warranty needs SLA to define measurable standards for ongoing fitness.",
+      "review_guidance": "Warranty covers initial delivery; SLA covers ongoing service quality. Both needed for complete coverage.",
+      "risk_if_misaligned": "Gap between warranty period (typically 12 months) and ongoing SLA may leave unaddressed quality period."
+    },
+    {
+      "id": "warranty-services-supplements-sla",
+      "clause_a": "warranty-services",
+      "clause_b": "sla-uptime",
+      "relationship": "supplements",
+      "description": "Services warranty supplements SLA by setting quality standard for manner of service delivery.",
+      "review_guidance": "Warranty addresses how services are performed; SLA addresses measurable outcomes. Both needed.",
+      "risk_if_misaligned": "SLA measures outcomes but not quality of delivery process, or vice versa."
+    },
+    {
+      "id": "insurance-cyber-supplements-liability-supercap",
+      "clause_a": "insurance-cyber",
+      "clause_b": "liability-supercap-data",
+      "relationship": "supplements",
+      "description": "Cyber insurance provides financial backing for data breach super-cap liability.",
+      "review_guidance": "Verify insurance coverage equals or exceeds super-cap amount for data protection claims.",
+      "risk_if_misaligned": "Super-cap liability exceeds insurance coverage, leaving gap in financial backing."
+    },
+    {
+      "id": "insurance-pi-supplements-liability-cap",
+      "clause_a": "insurance-professional-indemnity",
+      "clause_b": "liability-cap-direct",
+      "relationship": "supplements",
+      "description": "Professional indemnity insurance provides financial backing for general liability cap.",
+      "review_guidance": "Verify PI coverage at least matches the general liability cap amount.",
+      "risk_if_misaligned": "Liability cap exceeds PI coverage, meaning provider cannot actually pay claims up to cap."
+    },
+    {
+      "id": "insurance-general-supplements-indemnity",
+      "clause_a": "insurance-general-liability",
+      "clause_b": "indemnification-mutual",
+      "relationship": "supplements",
+      "description": "General liability insurance provides financial backing for indemnification obligations.",
+      "review_guidance": "Verify insurance covers third-party claims that indemnification obligations address.",
+      "risk_if_misaligned": "Indemnification obligations exist but provider lacks insurance to back them."
+    },
+    {
+      "id": "audit-security-supplements-dpa-security",
+      "clause_a": "audit-rights-security",
+      "clause_b": "dpa-security-measures",
+      "relationship": "supplements",
+      "description": "Security audit rights provide verification mechanism for DPA security measures.",
+      "review_guidance": "Verify security audit scope covers all TOMs specified in the DPA.",
+      "risk_if_misaligned": "Security measures claimed but never independently verified."
+    },
+    {
+      "id": "audit-regulatory-requires-dpa-audit",
+      "clause_a": "audit-rights-regulatory",
+      "clause_b": "dpa-audit-rights",
+      "relationship": "supplements",
+      "description": "Regulatory audit rights supplement DPA-specific audit rights for broader compliance verification.",
+      "review_guidance": "Both general regulatory and DPA-specific audit rights should be included.",
+      "risk_if_misaligned": "DPA audit rights may be narrower than regulatory requirements demand."
+    },
+    {
+      "id": "audit-financial-supplements-payment-usage",
+      "clause_a": "audit-rights-financial",
+      "clause_b": "fin-payment-usage",
+      "relationship": "supplements",
+      "description": "Financial audit rights verify accuracy of usage-based billing.",
+      "review_guidance": "For variable pricing, financial audit must cover usage metrics and calculation methodology.",
+      "risk_if_misaligned": "Usage-based billing is unverifiable without audit rights over usage data."
+    },
+    {
+      "id": "audit-operational-supplements-sla",
+      "clause_a": "audit-rights-operational",
+      "clause_b": "sla-uptime",
+      "relationship": "supplements",
+      "description": "Operational audit rights allow verification of SLA measurement and reporting accuracy.",
+      "review_guidance": "Verify operational audit can access SLA measurement tools and underlying data.",
+      "risk_if_misaligned": "SLA compliance self-reported by provider without independent verification."
+    },
+    {
+      "id": "governing-law-requires-dispute-resolution",
+      "clause_a": "governing-law-choice",
+      "clause_b": "dispute-resolution-arbitration",
+      "relationship": "requires",
+      "description": "Governing law choice should be consistent with dispute resolution mechanism.",
+      "review_guidance": "Verify arbitration seat is compatible with governing law for procedural efficiency.",
+      "risk_if_misaligned": "Governing law and arbitration seat in different jurisdictions creates procedural complexity."
+    },
+    {
+      "id": "governing-law-requires-venue",
+      "clause_a": "governing-law-choice",
+      "clause_b": "governing-law-venue",
+      "relationship": "requires",
+      "description": "Governing law should be paired with a venue clause for completeness.",
+      "review_guidance": "Verify venue is consistent with governing law and practical for both parties.",
+      "risk_if_misaligned": "Governing law in one jurisdiction, venue in another creates confusion and expense."
+    },
+    {
+      "id": "dispute-escalation-supplements-mediation",
+      "clause_a": "dispute-resolution-escalation",
+      "clause_b": "dispute-resolution-mediation",
+      "relationship": "supplements",
+      "description": "Escalation procedure supplements mediation by providing structured pre-mediation resolution attempt.",
+      "review_guidance": "Verify escalation tiers have time limits to prevent indefinite delay before mediation.",
+      "risk_if_misaligned": "Without time limits, escalation becomes delay tactic before mediation can begin."
+    },
+    {
+      "id": "dispute-mediation-supplements-arbitration",
+      "clause_a": "dispute-resolution-mediation",
+      "clause_b": "dispute-resolution-arbitration",
+      "relationship": "supplements",
+      "description": "Mediation provides cost-effective resolution attempt before arbitration.",
+      "review_guidance": "Verify mediation has time limit (30-60 days) so it does not delay access to arbitration.",
+      "risk_if_misaligned": "Mandatory mediation without time limit delays arbitration indefinitely."
+    },
+    {
+      "id": "dispute-litigation-conflicts-arbitration",
+      "clause_a": "dispute-resolution-litigation",
+      "clause_b": "dispute-resolution-arbitration",
+      "relationship": "conflicts-with",
+      "description": "Litigation and arbitration clauses may conflict if both are specified without clear hierarchy.",
+      "review_guidance": "Choose one forum. If both referenced, specify clear hierarchy and scope for each.",
+      "risk_if_misaligned": "Parallel proceedings in different forums with potentially inconsistent outcomes."
+    },
+    {
+      "id": "assignment-consent-supplements-affiliates",
+      "clause_a": "assignment-consent",
+      "clause_b": "assignment-affiliates",
+      "relationship": "supplements",
+      "description": "Affiliate assignment exception supplements general consent requirement.",
+      "review_guidance": "Verify affiliate exception requires affiliate to meet same qualification standards.",
+      "risk_if_misaligned": "Broad affiliate exception allows assignment to minimally qualified group company."
+    },
+    {
+      "id": "non-solicitation-employee-supplements-mutual",
+      "clause_a": "non-solicitation-employee",
+      "clause_b": "non-solicitation-mutual",
+      "relationship": "supplements",
+      "description": "Employee-specific non-solicitation provides more targeted protection than general mutual provision.",
+      "review_guidance": "Verify scope covers directly involved personnel and period is reasonable (12 months).",
+      "risk_if_misaligned": "General mutual non-solicitation may be too broad or too narrow for practical protection."
+    },
+    {
+      "id": "representations-authority-requires-compliance",
+      "clause_a": "representations-authority",
+      "clause_b": "representations-compliance-laws",
+      "relationship": "requires",
+      "description": "Authority to contract requires compliance with applicable laws to be meaningful.",
+      "review_guidance": "Both representations needed. Authority confirms capacity; compliance confirms legality.",
+      "risk_if_misaligned": "Party has authority to contract but may be doing so in violation of applicable law."
+    },
+    {
+      "id": "representations-accuracy-supplements-warranty",
+      "clause_a": "representations-accuracy-information",
+      "clause_b": "warranty-accuracy-representations",
+      "relationship": "supplements",
+      "description": "Accuracy of information representations are reinforced by corresponding warranty.",
+      "review_guidance": "Warranty extends liability for inaccurate representations beyond contract execution.",
+      "risk_if_misaligned": "Representation without warranty may limit remedies for inaccurate information."
+    },
+    {
+      "id": "compliance-anti-bribery-requires-sanctions",
+      "clause_a": "compliance-anti-bribery",
+      "clause_b": "compliance-sanctions",
+      "relationship": "requires",
+      "description": "Anti-bribery compliance requires sanctions screening for effective compliance programme.",
+      "review_guidance": "Both provisions needed. Anti-bribery addresses conduct; sanctions addresses counter-party status.",
+      "risk_if_misaligned": "Anti-bribery compliance without sanctions screening misses entity-level risk."
+    },
+    {
+      "id": "compliance-export-supplements-sanctions",
+      "clause_a": "compliance-export-controls",
+      "clause_b": "compliance-sanctions",
+      "relationship": "supplements",
+      "description": "Export controls supplement sanctions by addressing technology and goods transfer restrictions.",
+      "review_guidance": "For technology contracts, both export controls and sanctions compliance needed.",
+      "risk_if_misaligned": "Sanctions compliance without export controls may miss technology transfer restrictions."
+    },
+    {
+      "id": "dora-service-description-requires-data-location",
+      "clause_a": "dora-service-description",
+      "clause_b": "dora-data-location",
+      "relationship": "requires",
+      "description": "DORA service description must include data processing and storage locations.",
+      "review_guidance": "Verify service description specifies all data locations including sub-processor locations.",
+      "risk_if_misaligned": "Service description incomplete under DORA without data location transparency."
+    },
+    {
+      "id": "dora-exit-strategy-requires-continuity",
+      "clause_a": "dora-exit-strategy",
+      "clause_b": "dora-continuity-arrangements",
+      "relationship": "requires",
+      "description": "DORA exit strategy must be supported by continuity arrangements during transition.",
+      "review_guidance": "Exit strategy must include service continuity during transition period.",
+      "risk_if_misaligned": "Exit strategy exists but service continuity during transition is not guaranteed."
+    },
+    {
+      "id": "dora-audit-supplements-security-testing",
+      "clause_a": "dora-audit-rights",
+      "clause_b": "dora-security-testing",
+      "relationship": "supplements",
+      "description": "DORA audit rights supplement security testing by providing broader oversight capability.",
+      "review_guidance": "Audit rights should enable verification of security testing results and methodology.",
+      "risk_if_misaligned": "Security testing conducted but results not verifiable through audit."
+    },
+    {
+      "id": "dora-subcontracting-requires-audit",
+      "clause_a": "dora-subcontracting",
+      "clause_b": "dora-audit-rights",
+      "relationship": "requires",
+      "description": "DORA subcontracting provisions require audit rights to extend to sub-contractors.",
+      "review_guidance": "Verify audit rights explicitly cover sub-contractors providing critical or important functions.",
+      "risk_if_misaligned": "Subcontracting permitted but no ability to audit sub-contractor compliance."
+    },
+    {
+      "id": "dora-incident-requires-continuity",
+      "clause_a": "dora-incident-reporting",
+      "clause_b": "dora-continuity-arrangements",
+      "relationship": "requires",
+      "description": "Incident reporting must be supported by continuity arrangements to maintain reporting during incidents.",
+      "review_guidance": "Verify incident reporting capability is maintained during service disruption.",
+      "risk_if_misaligned": "Major incident disrupts both service and incident reporting capability."
+    },
+    {
+      "id": "nis2-incident-supplements-dp-breach",
+      "clause_a": "nis2-incident-notification",
+      "clause_b": "dp-breach-notification-general",
+      "relationship": "supplements",
+      "description": "NIS2 incident notification supplements GDPR breach notification for dual-regulated entities.",
+      "review_guidance": "Verify notification process addresses both NIS2 (CSIRT) and GDPR (supervisory authority) timelines.",
+      "risk_if_misaligned": "Meeting one notification requirement may not satisfy the other."
+    },
+    {
+      "id": "nis2-security-requires-patching",
+      "clause_a": "nis2-security-requirements",
+      "clause_b": "nis2-patching-obligations",
+      "relationship": "requires",
+      "description": "NIS2 security requirements include vulnerability handling and patching as core obligations.",
+      "review_guidance": "Patching SLAs should be aligned with NIS2 security requirements (critical within 48 hours).",
+      "risk_if_misaligned": "General security requirements without specific patching obligations fail NIS2 compliance."
+    },
+    {
+      "id": "nis2-supply-chain-requires-access-control",
+      "clause_a": "nis2-supply-chain-transparency",
+      "clause_b": "nis2-access-control",
+      "relationship": "requires",
+      "description": "Supply chain transparency requires access control to prevent unauthorised supply chain changes.",
+      "review_guidance": "Access controls should prevent unauthorised changes to supply chain components.",
+      "risk_if_misaligned": "Supply chain transparency undermined by inadequate access controls."
+    },
+    {
+      "id": "nis2-certification-supplements-security",
+      "clause_a": "nis2-security-certification",
+      "clause_b": "nis2-security-requirements",
+      "relationship": "supplements",
+      "description": "Security certification provides third-party validation of NIS2 security requirements.",
+      "review_guidance": "Certification should cover scope aligned with NIS2 requirements, not just generic security.",
+      "risk_if_misaligned": "Certification scope does not cover all NIS2-required security measures."
+    },
+    {
+      "id": "hipaa-safeguards-requires-breach-notification",
+      "clause_a": "hipaa-safeguards",
+      "clause_b": "hipaa-breach-notification",
+      "relationship": "requires",
+      "description": "HIPAA safeguards must include breach detection capability to trigger notification obligations.",
+      "review_guidance": "Safeguards should include monitoring to detect PHI breaches that trigger notification.",
+      "risk_if_misaligned": "Breach notification obligation exists but no capability to detect qualifying breaches."
+    },
+    {
+      "id": "hipaa-termination-supplements-breach-notification",
+      "clause_a": "hipaa-termination-provisions",
+      "clause_b": "hipaa-breach-notification",
+      "relationship": "supplements",
+      "description": "HIPAA termination provisions address material breach of BAA including notification failures.",
+      "review_guidance": "Verify termination rights cover failure to comply with breach notification obligations.",
+      "risk_if_misaligned": "No termination remedy for persistent HIPAA breach notification failures."
+    },
+    {
+      "id": "hipaa-permitted-uses-limits-processing",
+      "clause_a": "hipaa-permitted-uses",
+      "clause_b": "dpa-processing-instructions",
+      "relationship": "limits",
+      "description": "HIPAA permitted use restrictions may be more restrictive than general DPA processing instructions.",
+      "review_guidance": "For dual GDPR-HIPAA scope, verify processing instructions satisfy both frameworks.",
+      "risk_if_misaligned": "Processing permitted under GDPR DPA but prohibited under HIPAA permitted uses."
+    },
+    {
+      "id": "liability-unlimited-carveouts-carves-out-cap",
+      "clause_a": "liability-unlimited-carveouts",
+      "clause_b": "liability-cap-direct",
+      "relationship": "carves-out",
+      "description": "Unlimited carve-outs remove specific risks from the general liability cap.",
+      "review_guidance": "Verify carve-outs are appropriate: typically IP infringement, confidentiality breach, wilful misconduct, death/personal injury.",
+      "risk_if_misaligned": "Too many carve-outs effectively negate the liability cap. Too few leave critical risks under-protected."
+    },
+    {
+      "id": "liability-supercap-data-carves-out-cap",
+      "clause_a": "liability-supercap-data",
+      "clause_b": "liability-cap-direct",
+      "relationship": "carves-out",
+      "description": "Data protection super-cap provides elevated but still capped liability for data breaches.",
+      "review_guidance": "Super-cap typically 2-5x base cap. Verify it covers regulatory fines, notification costs, and remediation.",
+      "risk_if_misaligned": "Super-cap too close to base cap provides no meaningful additional protection for data claims."
+    },
+    {
+      "id": "liability-floor-supplements-cap",
+      "clause_a": "liability-floor",
+      "clause_b": "liability-cap-direct",
+      "relationship": "supplements",
+      "description": "Liability floor prevents cap from becoming trivially small for low-value or variable-fee contracts.",
+      "review_guidance": "Floor should be set at minimum 6-12 months of expected fees.",
+      "risk_if_misaligned": "Without floor, cap tied to variable fees may be negligibly small."
+    },
+    {
+      "id": "liability-mutual-vs-asymmetric-supplements-cap",
+      "clause_a": "liability-mutual-vs-asymmetric",
+      "clause_b": "liability-cap-direct",
+      "relationship": "supplements",
+      "description": "Mutual vs asymmetric structure determines how the liability cap applies to each party.",
+      "review_guidance": "Verify whether cap applies equally or asymmetrically and whether asymmetry is justified by risk profile.",
+      "risk_if_misaligned": "Asymmetric cap without commercial justification indicates power imbalance."
+    },
+    {
+      "id": "liability-aggregate-supplements-cap",
+      "clause_a": "liability-aggregate-vs-per-incident",
+      "clause_b": "liability-cap-direct",
+      "relationship": "supplements",
+      "description": "Aggregate vs per-incident structure determines how cap accumulates across multiple claims.",
+      "review_guidance": "Verify both aggregate annual cap and per-incident cap are defined.",
+      "risk_if_misaligned": "Per-incident only: cumulative claims exceed expectations. Aggregate only: single large claim consumes all capacity."
+    },
+    {
+      "id": "fin-service-credit-supplements-sla-credits",
+      "clause_a": "fin-service-credit-mechanism",
+      "clause_b": "sla-service-credits",
+      "relationship": "supplements",
+      "description": "Financial service credit mechanism provides detailed calculation methodology for SLA credits.",
+      "review_guidance": "Credit mechanism should define: calculation formula, request process, application timing, and cap.",
+      "risk_if_misaligned": "SLA credits defined but calculation mechanism missing or unclear."
+    },
+    {
+      "id": "fin-liquidated-damages-supplements-sla",
+      "clause_a": "fin-liquidated-damages",
+      "clause_b": "sla-uptime",
+      "relationship": "supplements",
+      "description": "Liquidated damages provide pre-agreed remedy for SLA failures beyond service credits.",
+      "review_guidance": "Verify LDs are genuine pre-estimate of loss to avoid penalty clause risk.",
+      "risk_if_misaligned": "LDs set too high may be unenforceable as penalties; too low provides no incentive."
+    },
+    {
+      "id": "fin-step-in-supplements-termination",
+      "clause_a": "fin-step-in-rights",
+      "clause_b": "termination-cause",
+      "relationship": "supplements",
+      "description": "Step-in rights provide alternative to termination for critical service failures.",
+      "review_guidance": "Step-in should be available as remedy before termination, not only after.",
+      "risk_if_misaligned": "Only option is termination, with no intermediate remedy for service failure."
+    },
+    {
+      "id": "fin-escrow-supplements-termination-insolvency",
+      "clause_a": "fin-escrow-arrangement",
+      "clause_b": "termination-insolvency",
+      "relationship": "supplements",
+      "description": "Escrow arrangement provides data and software protection against provider insolvency.",
+      "review_guidance": "Verify escrow triggers include insolvency, cessation of support, and material uncured breach.",
+      "risk_if_misaligned": "Insolvency termination right exists but data/software is inaccessible without escrow."
+    },
+    {
+      "id": "fin-transition-pricing-supplements-wind-down",
+      "clause_a": "fin-transition-pricing",
+      "clause_b": "termination-wind-down",
+      "relationship": "supplements",
+      "description": "Transition pricing defines costs during wind-down period.",
+      "review_guidance": "Transition pricing should be at prevailing or slightly reduced rates, not punitive rates.",
+      "risk_if_misaligned": "Wind-down obligation exists but at inflated pricing that penalises exit."
+    },
+    {
+      "id": "fin-stranded-costs-supplements-termination-fees",
+      "clause_a": "fin-stranded-costs",
+      "clause_b": "fin-termination-fees",
+      "relationship": "supplements",
+      "description": "Stranded costs provisions supplement termination fees for contract-specific investments.",
+      "review_guidance": "Verify stranded costs are amortised and recoverable on early termination, not duplicative of termination fees.",
+      "risk_if_misaligned": "Customer pays both termination fees and unamortised stranded costs, creating double penalty."
+    },
+    {
+      "id": "fin-price-lock-conflicts-cpi-adjustment",
+      "clause_a": "fin-price-lock",
+      "clause_b": "fin-price-cpi-adjustment",
+      "relationship": "conflicts-with",
+      "description": "Price lock period may conflict with CPI adjustment if both apply simultaneously.",
+      "review_guidance": "Verify price lock takes precedence during lock period, with CPI adjustment only after lock expires.",
+      "risk_if_misaligned": "Ambiguity about whether CPI adjustment applies during price lock period."
+    },
+    {
+      "id": "fin-price-mfc-supplements-benchmarking",
+      "clause_a": "fin-price-mfc",
+      "clause_b": "fin-price-benchmarking",
+      "relationship": "supplements",
+      "description": "Most-favoured customer clause supplements benchmarking by providing automatic price protection.",
+      "review_guidance": "MFC provides real-time protection; benchmarking provides periodic market comparison. Both are valuable.",
+      "risk_if_misaligned": "Benchmarking without MFC means customer only discovers overpricing periodically."
+    },
+    {
+      "id": "fin-late-payment-supplements-net-30",
+      "clause_a": "fin-late-payment-interest",
+      "clause_b": "fin-payment-net-30",
+      "relationship": "supplements",
+      "description": "Late payment interest provides incentive for timely payment within net-30 terms.",
+      "review_guidance": "Interest rate should be commercially reasonable (base rate + 2-4%).",
+      "risk_if_misaligned": "Net-30 terms without late interest incentive leads to systematic late payment."
+    },
+    {
+      "id": "fin-open-book-supplements-cost-verification",
+      "clause_a": "fin-open-book-accounting",
+      "clause_b": "fin-cost-verification",
+      "relationship": "supplements",
+      "description": "Open book accounting provides ongoing transparency supplementing periodic cost verification.",
+      "review_guidance": "Open book should cover all cost categories used in pricing calculations.",
+      "risk_if_misaligned": "Cost verification right without access to underlying data is difficult to exercise."
+    },
+    {
+      "id": "fin-parent-guarantee-supplements-performance-bond",
+      "clause_a": "fin-parent-guarantee",
+      "clause_b": "fin-performance-bond",
+      "relationship": "supplements",
+      "description": "Parent guarantee provides broader financial backing complementing specific performance bond.",
+      "review_guidance": "One or both may be appropriate depending on counter-party financial strength.",
+      "risk_if_misaligned": "Neither guarantee nor bond means contractual obligations have no financial backing."
+    },
+    {
+      "id": "fin-gain-sharing-supplements-price-benchmarking",
+      "clause_a": "fin-gain-sharing",
+      "clause_b": "fin-price-benchmarking",
+      "relationship": "supplements",
+      "description": "Gain-sharing incentivises continuous improvement complementing benchmarking's market alignment.",
+      "review_guidance": "Gain-sharing motivates efficiency; benchmarking ensures market alignment. Both drive value.",
+      "risk_if_misaligned": "Benchmarking without gain-sharing means provider has no incentive to drive efficiencies."
+    },
+    {
+      "id": "payment-net-30-requires-late-interest",
+      "clause_a": "payment-net-30",
+      "clause_b": "payment-late-interest",
+      "relationship": "requires",
+      "description": "Net-30 payment terms need late interest to incentivise compliance.",
+      "review_guidance": "Verify interest clause specifies: rate, start date, compounding, and application process.",
+      "risk_if_misaligned": "Payment terms without interest incentive are routinely exceeded."
+    },
+    {
+      "id": "payment-price-adjustment-requires-mfc",
+      "clause_a": "payment-price-adjustment",
+      "clause_b": "payment-most-favoured-customer",
+      "relationship": "supplements",
+      "description": "Price adjustment mechanism supplemented by MFC to prevent adjustments above market.",
+      "review_guidance": "MFC should cap adjustments at rates offered to comparable customers.",
+      "risk_if_misaligned": "Price adjustments may exceed market rates without MFC protection."
+    },
+    {
+      "id": "indemnification-customer-conflicts-provider",
+      "clause_a": "indemnification-customer",
+      "clause_b": "indemnification-provider",
+      "relationship": "conflicts-with",
+      "description": "Customer and provider indemnification may conflict when both parties contributed to a loss.",
+      "review_guidance": "Include contributory fault mechanism to apportion liability for joint-cause incidents.",
+      "risk_if_misaligned": "Mutual claims with no apportionment mechanism leads to litigation."
+    },
+    {
+      "id": "dpa-confidentiality-supplements-mutual",
+      "clause_a": "dpa-confidentiality-personnel",
+      "clause_b": "confidentiality-mutual",
+      "relationship": "supplements",
+      "description": "DPA personnel confidentiality supplements general confidentiality for data protection compliance.",
+      "review_guidance": "Verify DPA confidentiality covers all personnel processing personal data, including temporary staff.",
+      "risk_if_misaligned": "General confidentiality may not meet GDPR Article 28(3)(b) specific personnel requirement."
+    },
+    {
+      "id": "dpa-records-supplements-processing-instructions",
+      "clause_a": "dpa-records-of-processing",
+      "clause_b": "dpa-processing-instructions",
+      "relationship": "supplements",
+      "description": "Records of processing provide evidence trail for processing instruction compliance.",
+      "review_guidance": "ROPA should be consistent with and traceable to documented processing instructions.",
+      "risk_if_misaligned": "Processing records do not match instructions, indicating unauthorised processing."
+    },
+    {
+      "id": "warranty-title-requires-ip-ownership",
+      "clause_a": "warranty-title",
+      "clause_b": "ip-work-product-ownership",
+      "relationship": "requires",
+      "description": "Title warranty provides assurance that IP assignment is valid and unencumbered.",
+      "review_guidance": "Title warranty should confirm: clear ownership, no encumbrances, no prior assignments or licences.",
+      "risk_if_misaligned": "IP assigned without title warranty may be subject to prior claims."
+    },
+    {
+      "id": "warranty-compliance-supplements-representations",
+      "clause_a": "warranty-compliance-laws",
+      "clause_b": "representations-compliance-laws",
+      "relationship": "supplements",
+      "description": "Warranty of compliance extends representation into ongoing obligation throughout contract term.",
+      "review_guidance": "Representation covers execution date; warranty covers ongoing performance period. Both needed.",
+      "risk_if_misaligned": "Representation only covers execution date, leaving ongoing compliance unaddressed."
+    },
+    {
+      "id": "fin-payment-milestone-requires-acceptance",
+      "clause_a": "fin-payment-milestone",
+      "clause_b": "warranty-fitness",
+      "relationship": "requires",
+      "description": "Milestone payments need acceptance criteria to determine when payment is earned.",
+      "review_guidance": "Each milestone should have defined acceptance criteria and testing period before payment is triggered.",
+      "risk_if_misaligned": "Payment triggered by milestone completion without quality verification."
+    },
+    {
+      "id": "fin-additional-insured-supplements-insurance",
+      "clause_a": "fin-additional-insured",
+      "clause_b": "insurance-general-liability",
+      "relationship": "supplements",
+      "description": "Additional insured status provides customer direct access to provider's insurance coverage.",
+      "review_guidance": "Verify additional insured endorsement on policy, not just contractual commitment.",
+      "risk_if_misaligned": "Contractual commitment to add as additional insured but no actual policy endorsement."
+    },
+    {
+      "id": "fin-penalty-cap-limits-liquidated-damages",
+      "clause_a": "fin-penalty-cap",
+      "clause_b": "fin-liquidated-damages",
+      "relationship": "limits",
+      "description": "Penalty cap limits maximum accumulation of liquidated damages.",
+      "review_guidance": "Verify penalty cap is reasonable (10-20% of affected deliverable value) and includes termination right at cap.",
+      "risk_if_misaligned": "No cap means liquidated damages can accumulate beyond contract value."
+    },
+    {
+      "id": "fin-earn-back-supplements-service-credits",
+      "clause_a": "fin-earn-back",
+      "clause_b": "fin-service-credit-mechanism",
+      "relationship": "supplements",
+      "description": "Earn-back mechanism supplements service credits by incentivising provider improvement.",
+      "review_guidance": "Earn-back should require sustained above-target performance (3+ months) before credit recovery.",
+      "risk_if_misaligned": "Without earn-back, provider may prefer termination over continuous credit outflow."
+    }
+  ]
+}

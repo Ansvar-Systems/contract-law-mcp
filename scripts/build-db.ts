@@ -442,6 +442,8 @@ export function buildDatabase(dbPath?: string): void {
   }
 
   // --- Load seed data (generic loader) ---
+  // Defer FK checks so files can be loaded in any order
+  db.pragma('foreign_keys = OFF');
   const seedDir = join(__dirname, '..', 'data', 'seed');
   if (existsSync(seedDir)) {
     const seedFiles = readdirSync(seedDir)
@@ -465,6 +467,16 @@ export function buildDatabase(dbPath?: string): void {
         }
       })();
     }
+  }
+  // Verify FK integrity after all data loaded
+  db.pragma('foreign_keys = ON');
+  const fkErrors = db.pragma('foreign_key_check');
+  if ((fkErrors as unknown[]).length > 0) {
+    const details = (fkErrors as Array<{ table: string; rowid: number; parent: string; fkid: number }>)
+      .slice(0, 10)
+      .map((e) => `  ${e.table} row ${e.rowid} -> ${e.parent}`)
+      .join('\n');
+    throw new Error(`Foreign key violations detected:\n${details}`);
   }
 
   // --- Metadata ---
