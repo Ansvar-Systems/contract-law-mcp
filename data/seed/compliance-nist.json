@@ -5,8 +5,15 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SR-1 (Supply Chain Risk Management Policy)",
       "requirement_summary": "The organisation develops, documents, and disseminates a supply chain risk management (C-SCRM) policy that addresses purpose, scope, roles and responsibilities. Contracts with suppliers must reflect the organisation's C-SCRM policy requirements, including the supplier's obligation to develop and maintain their own C-SCRM policies consistent with the organisation's requirements.",
-      "required_clauses": ["nis2-supply-chain-transparency", "warranty-compliance-laws"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -17,8 +24,13 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SR-2 (Supply Chain Risk Management Plan)",
       "requirement_summary": "The organisation develops a plan for managing supply chain risks associated with the development, acquisition, maintenance, and disposal of systems, system components, and system services. Contract requirements should flow from this plan and address risk tolerance, assessment criteria, and mitigation strategies.",
-      "required_clauses": ["nis2-supply-chain-transparency"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -29,8 +41,16 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SR-3 (Supply Chain Controls and Processes)",
       "requirement_summary": "The organisation establishes a process to identify, assess, and mitigate supply chain risks. Contracts must require suppliers to implement specific controls including: provenance tracking, integrity verification, anti-counterfeit measures, and supply chain security testing. Suppliers must demonstrate control effectiveness.",
-      "required_clauses": ["nis2-supply-chain-transparency", "nis2-security-requirements", "audit-rights-security"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -41,8 +61,14 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SR-5 (Acquisition Strategies, Tools, and Methods)",
       "requirement_summary": "The organisation employs acquisition strategies, contract tools, and procurement methods to protect against, detect, and mitigate supply chain risks. Contract clauses should include security requirements, right to audit, incident reporting, configuration management requirements, and vulnerability disclosure obligations.",
-      "required_clauses": ["audit-rights-security", "data-protection-breach-notification"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "audit-rights-security",
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -53,8 +79,15 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SR-6 (Supplier Assessments and Reviews)",
       "requirement_summary": "The organisation assesses and reviews the supply chain-related risks associated with suppliers or contractors and the system, system component, or system service they provide. Contracts should include the right to conduct assessments, require suppliers to provide evidence of security posture, and establish frequency of assessments.",
-      "required_clauses": ["audit-rights-security", "audit-rights-operational"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "audit-rights-security",
+        "audit-rights-operational"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -65,8 +98,15 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SR-8 (Notification Agreements)",
       "requirement_summary": "The organisation establishes agreements and procedures with the supply chain entity for the notification of supply chain compromises and the results of assessments or audits. Contracts must specify notification timelines, information to be provided, coordination procedures, and the supplier's obligation to actively monitor for and report security incidents.",
-      "required_clauses": ["data-protection-breach-notification", "nis2-incident-notification"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -77,8 +117,13 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SR-10 (Inspection of Systems or Components)",
       "requirement_summary": "The organisation inspects systems or system components upon delivery, at random, or at defined intervals to detect tampering. Contracts should reserve the right to inspect delivered systems and components, specify acceptance testing criteria, and address the return or remediation of non-conforming components.",
-      "required_clauses": ["audit-rights-security"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -89,8 +134,14 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SR-11 (Component Authenticity)",
       "requirement_summary": "The organisation develops and implements anti-counterfeit policies and procedures that include means to detect and prevent counterfeit components from entering the system. Contracts should require suppliers to implement anti-counterfeit measures, provide authenticity certificates, and accept liability for counterfeit components.",
-      "required_clauses": ["warranty-non-infringement", "indemnification-provider"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "warranty-non-infringement",
+        "indemnification-provider"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -101,8 +152,15 @@
       "regulation": "NIST SP 800-161r1",
       "article": "IR-6 (Incident Reporting - Supply Chain)",
       "requirement_summary": "The organisation requires the supply chain entity to report security incidents affecting the organisation's systems, data, or operations. Contracts must define incident categories, reporting timelines (typically within 24-72 hours), escalation procedures, required information in incident reports, and cooperation during investigation.",
-      "required_clauses": ["data-protection-breach-notification", "nis2-incident-notification"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -113,8 +171,15 @@
       "regulation": "NIST SP 800-161r1",
       "article": "PS-7 (External Personnel Security)",
       "requirement_summary": "The organisation establishes personnel security requirements including security roles and responsibilities for external providers, requires external providers to comply with personnel security policies and procedures, documents personnel security requirements, and monitors external provider compliance. Contracts must address background checks, security clearances, termination procedures, and access revocation for external personnel.",
-      "required_clauses": ["dpa-confidentiality-personnel", "nis2-access-control"],
-      "contract_types_affected": ["outsourcing-agreement", "managed-services", "contractor-agreement"],
+      "required_clauses": [
+        "dpa-confidentiality-personnel",
+        "nis2-access-control"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services",
+        "contractor-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -125,8 +190,14 @@
       "regulation": "NIST SP 800-161r1",
       "article": "CM-8 (System Component Inventory - Supply Chain)",
       "requirement_summary": "The organisation develops, documents, and maintains an inventory of system components, including information about the provenance and supply chain origins of components. Contracts should require suppliers to provide and maintain a Software Bill of Materials (SBOM) and to update the inventory when components change.",
-      "required_clauses": ["nis2-supply-chain-transparency"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -137,8 +208,13 @@
       "regulation": "NIST SP 800-161r1",
       "article": "AC-1/AC-2 (Access Control - Supply Chain)",
       "requirement_summary": "The organisation develops access control policies and manages system accounts for supply chain entities. Contracts must address: least privilege access, account provisioning and deprovisioning procedures, multi-factor authentication requirements, session management, and access review frequency for supplier accounts.",
-      "required_clauses": ["nis2-access-control"],
-      "contract_types_affected": ["outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-access-control"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -149,8 +225,15 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SA-4 (Acquisition Process)",
       "requirement_summary": "The organisation includes security and privacy requirements, descriptions, and criteria in the acquisition contract for information systems, system components, or information system services. This includes functional security requirements, strength of security mechanisms, security assurance requirements, documentation requirements, and development and evaluation-related requirements.",
-      "required_clauses": ["nis2-security-requirements", "warranty-compliance-laws"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -161,8 +244,15 @@
       "regulation": "NIST SP 800-161r1",
       "article": "SA-9 (External Information System Services)",
       "requirement_summary": "The organisation requires that providers of external information system services comply with organisational security requirements, employ appropriate security controls, and identify the functions, ports, protocols, and other services required for the use of external information system services. Contracts must address shared responsibilities, security control requirements, and monitoring obligations.",
-      "required_clauses": ["nis2-security-requirements", "dora-service-description"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-05-01",
       "enforcement_examples": null,
@@ -173,8 +263,14 @@
       "regulation": "CISA Secure by Design",
       "article": "Vendor commitments",
       "requirement_summary": "CISA Secure by Design principles require technology vendors to commit to shipping products that are secure by design and secure by default. Contracts should require vendors to commit to CISA Secure by Design principles, including: reducing classes of vulnerabilities, increasing customer security at no extra charge, and demonstrating a culture of security transparency.",
-      "required_clauses": ["warranty-compliance-laws", "nis2-security-requirements"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2023-04-13",
       "enforcement_examples": null,
@@ -185,8 +281,12 @@
       "regulation": "CISA Secure by Design",
       "article": "Security by default",
       "requirement_summary": "Technology products should be secure out of the box without requiring additional configuration, charges, or monitoring. Contracts should require that products come pre-configured with the most secure settings, that MFA is enabled by default, that unnecessary features are disabled by default, and that logging is enabled at no additional cost.",
-      "required_clauses": ["nis2-security-requirements"],
-      "contract_types_affected": ["saas-subscription"],
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "saas-subscription"
+      ],
       "jurisdiction": "US",
       "effective_date": "2023-04-13",
       "enforcement_examples": null,
@@ -197,8 +297,14 @@
       "regulation": "CISA Secure by Design",
       "article": "Transparency obligations",
       "requirement_summary": "Vendors should be transparent about their security practices, including publishing vulnerability disclosure policies, providing timely patch information, and sharing data about security incidents affecting their products. Contracts should require vendors to maintain a public vulnerability disclosure policy and publish security advisories in a machine-readable format (e.g., CSAF/VEX).",
-      "required_clauses": ["nis2-patching-obligations", "nis2-supply-chain-transparency"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-patching-obligations",
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2023-04-13",
       "enforcement_examples": null,
@@ -209,8 +315,13 @@
       "regulation": "CISA Secure by Design",
       "article": "Vulnerability disclosure",
       "requirement_summary": "Vendors should maintain a publicly available vulnerability disclosure policy (VDP) that allows anyone to report vulnerabilities without fear of legal action. Contracts should require vendors to operate a VDP consistent with ISO 29147, accept vulnerability reports from third parties, commit to reasonable disclosure timelines, and not pursue legal action against good-faith security researchers.",
-      "required_clauses": ["nis2-patching-obligations"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-patching-obligations"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2023-04-13",
       "enforcement_examples": null,
@@ -221,8 +332,13 @@
       "regulation": "CISA Secure by Design",
       "article": "SBOM requirements",
       "requirement_summary": "Vendors should provide a Software Bill of Materials (SBOM) for their products in a standard machine-readable format (SPDX or CycloneDX). Contracts should require SBOM delivery at time of deployment and upon each significant update, updated SBOMs within a defined timeframe, and the ability to use the SBOM for vulnerability management.",
-      "required_clauses": ["nis2-supply-chain-transparency"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2023-04-13",
       "enforcement_examples": null,
@@ -234,7 +350,9 @@
       "article": "Memory safety roadmap",
       "requirement_summary": "CISA recommends that vendors publish a memory safety roadmap, committing to reduce or eliminate memory safety vulnerabilities by transitioning to memory-safe languages or implementing mitigations. Contracts for critical software should require the vendor to disclose its memory safety strategy and demonstrate progress towards reducing memory safety vulnerabilities.",
       "required_clauses": [],
-      "contract_types_affected": ["saas-subscription"],
+      "contract_types_affected": [
+        "saas-subscription"
+      ],
       "jurisdiction": "US",
       "effective_date": "2023-12-06",
       "enforcement_examples": null,
@@ -245,8 +363,14 @@
       "regulation": "CISA Secure by Design",
       "article": "MFA by default",
       "requirement_summary": "CISA strongly recommends that all technology vendors enable multi-factor authentication (MFA) by default for all users, particularly for administrator accounts. Contracts should require MFA to be enabled by default, phishing-resistant MFA to be available, and MFA to be included at no additional cost.",
-      "required_clauses": ["nis2-access-control", "nis2-security-requirements"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "nis2-access-control",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2023-04-13",
       "enforcement_examples": null,
@@ -257,8 +381,13 @@
       "regulation": "CISA Secure by Design",
       "article": "Logging at no additional cost",
       "requirement_summary": "CISA recommends that vendors provide high-quality audit logs to customers at no additional cost and in standard formats. Contracts should require that security-relevant logs are enabled by default, retained for a reasonable period (minimum 6 months recommended), available in real-time via API or SIEM integration, and not gated behind premium pricing tiers.",
-      "required_clauses": ["audit-rights-security"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2023-04-13",
       "enforcement_examples": null,
@@ -269,8 +398,15 @@
       "regulation": "FAR",
       "article": "FAR 52.204-21",
       "requirement_summary": "Basic Safeguarding of Covered Contractor Information Systems. Federal contractors must apply 15 basic safeguarding requirements to contractor information systems that process, store, or transmit Federal contract information (FCI), including: limiting access to authorised users, limiting information system access to authorised types of transactions, verifying controls on connections, and controlling information posted on publicly accessible systems.",
-      "required_clauses": ["nis2-access-control", "nis2-security-requirements"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-access-control",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2016-06-15",
       "enforcement_examples": null,
@@ -281,8 +417,15 @@
       "regulation": "DFARS",
       "article": "DFARS 252.204-7012",
       "requirement_summary": "Safeguarding Covered Defense Information and Cyber Incident Reporting. Defence contractors must implement NIST SP 800-171 security requirements for systems processing Controlled Unclassified Information (CUI), report cyber incidents to DoD within 72 hours, preserve forensic images for 90 days, and flow down requirements to subcontractors. This clause creates direct flow-down contract obligations.",
-      "required_clauses": ["nis2-security-requirements", "data-protection-breach-notification", "nis2-incident-notification"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "data-protection-breach-notification",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2017-12-28",
       "enforcement_examples": "Aerojet Rocketdyne settled False Claims Act allegations for $9 million related to cybersecurity non-compliance with DFARS 252.204-7012 (2022).",
@@ -293,8 +436,15 @@
       "regulation": "FAR",
       "article": "FAR 52.239-1",
       "requirement_summary": "Privacy or Security Safeguards for cloud computing services. Cloud computing services used by the Federal Government must comply with FedRAMP requirements, maintain data within the United States or its territories unless otherwise authorised, and provide the Government with access to data and metadata. Contracts must specify FedRAMP authorisation level and continuous monitoring requirements.",
-      "required_clauses": ["dp-data-localisation", "nis2-security-requirements", "audit-rights-security"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "dp-data-localisation",
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2014-07-28",
       "enforcement_examples": null,
@@ -305,8 +455,15 @@
       "regulation": "CMMC",
       "article": "CMMC 2.0 Flow-Down Requirements",
       "requirement_summary": "The Cybersecurity Maturity Model Certification (CMMC) 2.0 requires contractors handling CUI to achieve certification at the appropriate level (Level 1: Foundational, Level 2: Advanced, Level 3: Expert). Flow-down obligations require subcontractors to achieve the applicable CMMC level before being awarded subcontracts involving CUI. Contracts must specify the required CMMC level and verification mechanism.",
-      "required_clauses": ["nis2-security-requirements", "nis2-security-certification", "warranty-compliance-laws"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "nis2-security-certification",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2025-10-01",
       "enforcement_examples": null,
@@ -317,8 +474,14 @@
       "regulation": "CMMC",
       "article": "CMMC Level 2 Assessment",
       "requirement_summary": "CMMC Level 2 requires implementation of 110 NIST SP 800-171 practices and either self-assessment or third-party assessment depending on the type of CUI involved. Contracts must specify the assessment type, frequency, Plan of Action and Milestones (POA&M) requirements, and the consequences of failing to maintain certification including contract termination rights.",
-      "required_clauses": ["audit-rights-security", "termination-cause"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "audit-rights-security",
+        "termination-cause"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2025-10-01",
       "enforcement_examples": null,
@@ -329,8 +492,15 @@
       "regulation": "FAR",
       "article": "Section 889 (NDAA 2019)",
       "requirement_summary": "Section 889 of the NDAA FY2019 prohibits the Federal Government from procuring or using telecommunications and video surveillance equipment or services from specified Chinese companies (Huawei, ZTE, Hytera, Hikvision, Dahua, and their subsidiaries). Contractors must represent that they do not use covered equipment or services. Contracts must include the prohibition and flow-down the restriction to subcontractors.",
-      "required_clauses": ["compliance-sanctions", "representations-compliance-laws"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "compliance-sanctions",
+        "representations-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2020-08-13",
       "enforcement_examples": null,
@@ -341,8 +511,14 @@
       "regulation": "FAR",
       "article": "FAR 52.204-25",
       "requirement_summary": "Prohibition on Contracting for Certain Telecommunications and Video Surveillance Services or Equipment. Contractors are prohibited from providing to the Government, or using in the performance of any contract, any equipment, system, or service that uses covered telecommunications equipment or services as a substantial or essential component. This includes a prohibition on using or providing covered equipment even if it is not directly related to the contract.",
-      "required_clauses": ["compliance-sanctions", "representations-compliance-laws"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "compliance-sanctions",
+        "representations-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2020-08-13",
       "enforcement_examples": null,
@@ -353,8 +529,15 @@
       "regulation": "Executive Order 14028",
       "article": "Section 4 (Enhancing Software Supply Chain Security)",
       "requirement_summary": "EO 14028 requires software vendors selling to the Federal Government to meet security standards including: providing a Software Bill of Materials (SBOM), attesting to conformity with secure software development practices (NIST SSDF SP 800-218), participating in vulnerability disclosure programs, and maintaining artifacts of secure development. Contracts must include these requirements.",
-      "required_clauses": ["nis2-supply-chain-transparency", "nis2-security-requirements", "nis2-patching-obligations"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "nis2-security-requirements",
+        "nis2-patching-obligations"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2021-05-12",
       "enforcement_examples": null,
@@ -365,8 +548,13 @@
       "regulation": "Executive Order 14028",
       "article": "Section 4(e) (SBOM)",
       "requirement_summary": "Software vendors must provide an SBOM for each product sold to the Federal Government. The SBOM must be generated in a machine-readable format (SPDX or CycloneDX) and must enumerate all third-party components, libraries, and dependencies. Contracts must specify SBOM delivery format, update frequency, and permitted use for vulnerability management.",
-      "required_clauses": ["nis2-supply-chain-transparency"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2021-05-12",
       "enforcement_examples": null,
@@ -377,10 +565,383 @@
       "regulation": "Executive Order 14028",
       "article": "Section 3 (Modernizing Federal Government Cybersecurity)",
       "requirement_summary": "Federal agencies must move toward Zero Trust Architecture. Contracts with technology vendors supporting federal systems must align with Zero Trust principles including: identity-centric access, micro-segmentation, least privilege, encryption of all traffic, and continuous monitoring. Vendor contracts should specify support for Zero Trust architecture requirements.",
-      "required_clauses": ["nis2-access-control", "nis2-security-requirements"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "nis2-access-control",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2021-05-12",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-csf2-gv-sc-01",
+      "regulation": "NIST CSF 2.0",
+      "article": "GV.SC-01 (Supply chain risk management programme)",
+      "requirement_summary": "Ansvar summary: A cybersecurity supply chain risk management programme, strategy, objectives, policies, and processes are established and agreed to by organisational stakeholders. Contracts with suppliers must flow from this programme and incorporate supply chain risk management requirements.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-02-26",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-csf2-gv-sc-03",
+      "regulation": "NIST CSF 2.0",
+      "article": "GV.SC-03 (Cybersecurity supply chain risk management integration)",
+      "requirement_summary": "Ansvar summary: Cybersecurity supply chain risk management is integrated into cybersecurity and enterprise risk management, risk assessment, and improvement processes. Contracts must align with the organisation's enterprise risk tolerance and include provisions for ongoing supplier risk assessment.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-02-26",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-csf2-gv-sc-05",
+      "regulation": "NIST CSF 2.0",
+      "article": "GV.SC-05 (Supplier requirements)",
+      "requirement_summary": "Ansvar summary: Requirements to address cybersecurity risks in supply chains are established, prioritised, and integrated into contracts and other types of agreements with suppliers and other relevant third parties. Contracts must specify security requirements, assessment rights, incident notification, and remediation timelines.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "audit-rights-security",
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-02-26",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-csf2-gv-sc-06",
+      "regulation": "NIST CSF 2.0",
+      "article": "GV.SC-06 (Due diligence and monitoring)",
+      "requirement_summary": "Ansvar summary: Planning and due diligence are conducted to reduce risks before entering into formal supplier or other third-party relationships. Ongoing monitoring is conducted to assess and manage supplier cybersecurity risks. Contracts must establish assessment frequency and remediation procedures.",
+      "required_clauses": [
+        "audit-rights-security",
+        "audit-rights-operational"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-02-26",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-csf2-gv-sc-07",
+      "regulation": "NIST CSF 2.0",
+      "article": "GV.SC-07 (Supplier risk understanding)",
+      "requirement_summary": "Ansvar summary: The risks posed by a supplier, their products and services, and other third parties are understood, recorded, prioritised, assessed, responded to, and monitored over the course of the relationship. Contracts must support ongoing risk visibility through reporting and assessment rights.",
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-02-26",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-csf2-gv-sc-09",
+      "regulation": "NIST CSF 2.0",
+      "article": "GV.SC-09 (Supply chain security practices)",
+      "requirement_summary": "Ansvar summary: Supply chain security practices are integrated into cybersecurity and enterprise risk management programmes, and their performance is monitored throughout the technology product and service life cycle. Contracts must address secure development, provenance, integrity verification, and end-of-life obligations.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "nis2-patching-obligations"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-02-26",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-csf2-gv-sc-10",
+      "regulation": "NIST CSF 2.0",
+      "article": "GV.SC-10 (Post-contract supply chain risk management)",
+      "requirement_summary": "Ansvar summary: Cybersecurity supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement. Contracts must address data return/destruction, transition assistance, and continued security obligations during wind-down periods.",
+      "required_clauses": [
+        "dora-exit-strategy",
+        "dpa-deletion-return",
+        "termination-wind-down"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-02-26",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-800-171r3-03-16-01",
+      "regulation": "NIST SP 800-171r3",
+      "article": "03.16.01 (Supply chain risk management policy)",
+      "requirement_summary": "Ansvar summary: Develop, document, and disseminate a supply chain risk management policy. Contractors handling CUI must implement C-SCRM policies and contractually flow down requirements to their subcontractors. Contracts must specify the CUI handling requirements from NIST 800-171 Rev 3.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-05-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-800-171r3-03-16-02",
+      "regulation": "NIST SP 800-171r3",
+      "article": "03.16.02 (Supply chain risk management plan)",
+      "requirement_summary": "Ansvar summary: Develop a plan for managing supply chain risks associated with the research and development, design, manufacturing, acquisition, delivery, integration, operations, maintenance, and disposal of CUI systems and components. Contracts must implement this plan through enforceable clauses.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-05-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-800-171r3-03-01-03",
+      "regulation": "NIST SP 800-171r3",
+      "article": "03.01.03 (CUI flow enforcement)",
+      "requirement_summary": "Ansvar summary: Enforce approved authorisations for controlling the flow of CUI within the system and between connected systems. Contracts must specify how CUI flow controls are implemented across organisational boundaries and restrict onward transfer without authorisation.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "confidentiality-mutual"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-05-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cmmc-level-1-flow-down",
+      "regulation": "CMMC 2.0",
+      "article": "Level 1 (Foundational)",
+      "requirement_summary": "Ansvar summary: CMMC Level 1 requires implementation of 15 basic safeguarding requirements from FAR 52.204-21. Contracts with subcontractors handling FCI must require CMMC Level 1 self-assessment and include provisions for verification of compliance status in SPRS.",
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2025-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cmmc-level-2-flow-down",
+      "regulation": "CMMC 2.0",
+      "article": "Level 2 (Advanced)",
+      "requirement_summary": "Ansvar summary: CMMC Level 2 requires implementation of all 110 security requirements from NIST SP 800-171 Rev 2. Contracts with subcontractors handling CUI must require CMMC Level 2 certification (third-party assessment for prioritised acquisitions or self-assessment for non-prioritised), with contractual commitment to maintain certification throughout the contract period.",
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "audit-rights-security",
+        "audit-rights-regulatory"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2025-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cmmc-level-3-flow-down",
+      "regulation": "CMMC 2.0",
+      "article": "Level 3 (Expert)",
+      "requirement_summary": "Ansvar summary: CMMC Level 3 requires enhanced security requirements from NIST SP 800-172 in addition to all Level 2 requirements. Contracts for programmes requiring Level 3 must include DIBCAC assessment obligations, continuous monitoring, and immediate notification of compliance status changes.",
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "audit-rights-security",
+        "audit-rights-regulatory"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2025-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cmmc-poam-requirements",
+      "regulation": "CMMC 2.0",
+      "article": "Plan of Action and Milestones (POA&M)",
+      "requirement_summary": "Ansvar summary: CMMC allows limited use of Plans of Action and Milestones (POA&Ms) for Level 2 assessments, with a 180-day closeout timeline and restrictions on which requirements can be on a POA&M. Contracts must address POA&M obligations, closeout deadlines, and consequences of failure to remediate within the allowed period.",
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2025-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cmmc-enclave-scoping",
+      "regulation": "CMMC 2.0",
+      "article": "Scoping and enclave guidance",
+      "requirement_summary": "Ansvar summary: CMMC assessment scope is determined by the boundary of the environment processing, storing, or transmitting CUI. Contracts must clearly define the assessment boundary, specify which systems are in scope, and require the contractor to maintain the boundary throughout the contract period.",
+      "required_clauses": [
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2025-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-800-53r5-sa-4",
+      "regulation": "NIST SP 800-53 Rev 5",
+      "article": "SA-4 (Acquisition Process)",
+      "requirement_summary": "Ansvar summary: Include security and privacy functional requirements, strength requirements, assurance requirements, documentation requirements, and acceptance criteria in acquisition contracts. Contracts must specify the minimum security controls required for information systems and services.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2020-09-23",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-800-53r5-sa-9",
+      "regulation": "NIST SP 800-53 Rev 5",
+      "article": "SA-9 (External System Services)",
+      "requirement_summary": "Ansvar summary: Require that providers of external system services comply with organisational security and privacy requirements and employ appropriate controls. Contracts must document the security controls expected from external service providers and establish monitoring procedures.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2020-09-23",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-800-53r5-sr-3",
+      "regulation": "NIST SP 800-53 Rev 5",
+      "article": "SR-3 (Supply Chain Controls and Processes)",
+      "requirement_summary": "Ansvar summary: Establish and apply a process to identify, assess, and mitigate supply chain risks associated with the development, acquisition, maintenance, and disposal of systems. Contracts must require suppliers to implement verifiable supply chain controls and provide evidence of their effectiveness.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2020-09-23",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-800-53r5-sr-11",
+      "regulation": "NIST SP 800-53 Rev 5",
+      "article": "SR-11 (Component Authenticity)",
+      "requirement_summary": "Ansvar summary: Develop and implement anti-counterfeit policies and procedures that include means to detect and prevent counterfeit components from entering the supply chain. Contracts must require suppliers to provide provenance documentation, anti-counterfeiting assurances, and replacement guarantees for counterfeit components.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2020-09-23",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nist-csf2-id-sc-04",
+      "regulation": "NIST CSF 2.0",
+      "article": "GV.SC-04 (Supplier diversification)",
+      "requirement_summary": "Suppliers are known and prioritised by criticality. Cybersecurity supply chain risk management includes consideration of supplier diversification to reduce single points of failure. Contracts should address supplier dependency risks and include provisions for alternative supplier engagement where critical functions are at stake.",
+      "required_clauses": [
+        "dora-exit-strategy",
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2024-02-26",
       "enforcement_examples": null,
       "law_mcp_ref": null
     }

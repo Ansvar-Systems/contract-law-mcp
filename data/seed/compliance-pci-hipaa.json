@@ -590,6 +590,379 @@
       "effective_date": "2007-06-12",
       "enforcement_examples": null,
       "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-3-5-1-sad",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Requirement 3.5.1",
+      "requirement_summary": "Ansvar summary: Sensitive authentication data (SAD) is not stored after authorisation, even if encrypted. Contracts with payment processors and TPSPs must expressly prohibit retention of full track data, card verification codes, or PINs/PIN blocks after authorisation completion.",
+      "required_clauses": [
+        "dpa-data-minimisation",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-3-7-1-key-management",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Requirement 3.7.1",
+      "requirement_summary": "Ansvar summary: Key-management policies and procedures are implemented for cryptographic keys used for protection of stored account data. Contracts with TPSPs handling encryption must specify key management responsibilities, key rotation schedules, split knowledge/dual control, and key custodian obligations.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-4-2-1-strong-crypto",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Requirement 4.2.1",
+      "requirement_summary": "Ansvar summary: Strong cryptography and security protocols are implemented to safeguard PAN during transmission over open, public networks. Contracts must require TPSPs to use TLS 1.2 or higher for all transmissions containing cardholder data and prohibit use of deprecated protocols.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-6-3-3-patching",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Requirement 6.3.3",
+      "requirement_summary": "Ansvar summary: All applicable patches and updates for bespoke and custom software are installed within one month of release for critical/high vulnerabilities. Contracts with software vendors and managed service providers must specify patching SLAs and require evidence of timely patch application.",
+      "required_clauses": [
+        "nis2-patching-obligations",
+        "sla-uptime"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-8-3-1-mfa",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Requirement 8.3.1",
+      "requirement_summary": "Ansvar summary: All access into the CDE for administrative access is authenticated via multi-factor authentication. Contracts with TPSPs who access the CDE must require MFA for all remote administrative connections and specify approved MFA methods.",
+      "required_clauses": [
+        "nis2-access-control",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-12-3-1-targeted-risk",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Requirement 12.3.1",
+      "requirement_summary": "Ansvar summary: A targeted risk analysis is performed for each PCI DSS requirement that provides flexibility for how frequently it is performed. Contracts must require TPSPs to document their targeted risk analyses and make them available during assessments.",
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-12-10-1-incident-response",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Requirement 12.10.1",
+      "requirement_summary": "Ansvar summary: An incident response plan exists and is ready to be activated in the event of a suspected or confirmed security incident involving cardholder data. TPSP contracts must require coordinated incident response, define notification timelines (no later than the entity's PCI DSS obligations), and specify forensic investigation cooperation.",
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-a1-shared-hosting",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Appendix A1 (Shared hosting)",
+      "requirement_summary": "Ansvar summary: Shared hosting providers must protect each entity's hosted environment and cardholder data. Contracts with shared hosting providers must specify logical separation of environments, restriction of access to individual entity environments, and logging/monitoring obligations per hosted entity.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-designated-entities",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Appendix A3 (Designated entities)",
+      "requirement_summary": "Ansvar summary: Designated entities supplemental validation (DESV) applies to entities designated by a payment brand as requiring additional validation of their PCI DSS compliance. Contracts with designated entities must include enhanced audit rights, quarterly compliance attestation, and immediate notification of compliance status changes.",
+      "required_clauses": [
+        "audit-rights-security",
+        "audit-rights-regulatory"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pci-req-12-8-5-info-maintained",
+      "regulation": "PCI DSS v4.0.1",
+      "article": "Requirement 12.8.5",
+      "requirement_summary": "Ansvar summary: Information is maintained about which PCI DSS requirements are managed by each TPSP, which are managed by the entity, and any that are shared between the TPSP and the entity. Contracts must include a responsibility matrix clearly delineating which party manages each applicable PCI DSS requirement.",
+      "required_clauses": [
+        "audit-rights-security",
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2024-03-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-312-a1-access-control",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.312(a)(1)",
+      "requirement_summary": "Ansvar summary: Covered entities and business associates must implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to persons or software programs that have been granted access rights. BAAs must require the business associate to implement access controls consistent with the covered entity's policies.",
+      "required_clauses": [
+        "nis2-access-control",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-312-a2-unique-user",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.312(a)(2)(i)",
+      "requirement_summary": "Ansvar summary: Assign a unique name and/or number for identifying and tracking user identity. BAAs must require unique user identification for all personnel accessing ePHI and prohibit shared or generic accounts.",
+      "required_clauses": [
+        "nis2-access-control"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-312-b-audit-controls",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.312(b)",
+      "requirement_summary": "Ansvar summary: Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI. BAAs must require the business associate to maintain audit logs of ePHI access and make logs available to the covered entity upon request.",
+      "required_clauses": [
+        "audit-rights-security",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-312-c1-integrity",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.312(c)(1)",
+      "requirement_summary": "Ansvar summary: Implement policies and procedures to protect ePHI from improper alteration or destruction. BAAs must require the business associate to implement integrity controls and mechanisms to authenticate ePHI.",
+      "required_clauses": [
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-312-d-authentication",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.312(d)",
+      "requirement_summary": "Ansvar summary: Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. BAAs must require the business associate to implement authentication mechanisms appropriate to the risk level, including multi-factor authentication for remote access.",
+      "required_clauses": [
+        "nis2-access-control",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-312-e1-transmission",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.312(e)(1)",
+      "requirement_summary": "Ansvar summary: Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic communications network. BAAs must require encryption of ePHI in transit using approved cryptographic standards.",
+      "required_clauses": [
+        "dpa-security-measures",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-308-a1-risk-analysis",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.308(a)(1)(ii)(A)",
+      "requirement_summary": "Ansvar summary: Conduct an accurate and thorough assessment of the potential risks and vulnerabilities to the confidentiality, integrity, and availability of ePHI held by the covered entity or business associate. BAAs must require annual risk assessments and sharing of results relevant to the contracted services.",
+      "required_clauses": [
+        "audit-rights-security",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-308-a5-security-awareness",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.308(a)(5)",
+      "requirement_summary": "Ansvar summary: Implement a security awareness and training programme for all members of the workforce. BAAs must require business associates to maintain security awareness training programmes for personnel who handle ePHI and provide evidence of training completion upon request.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-308-a6-incident-procedures",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.308(a)(6)",
+      "requirement_summary": "Ansvar summary: Implement policies and procedures to address security incidents. BAAs must require the business associate to identify, respond to, mitigate, and document security incidents involving ePHI, and to report incidents to the covered entity within contractually specified timelines.",
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "hipaa-164-310-a1-facility-access",
+      "regulation": "HIPAA Security Rule",
+      "article": "Section 164.310(a)(1)",
+      "requirement_summary": "Ansvar summary: Implement policies and procedures to limit physical access to electronic information systems and the facilities in which they are housed, while ensuring that properly authorised access is allowed. BAAs must require the business associate to implement physical access controls for facilities housing ePHI.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2003-04-14",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
     }
   ]
 }

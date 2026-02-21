@@ -6,7 +6,10 @@
       "threat_category": "integrity",
       "description": "Contract terms modified through informal channels without formal amendment process.",
       "attack_scenario": "Vendor emails updated terms with modified liability cap buried in attachment. Customer does not notice the change and continues performance under amended terms.",
-      "affected_clauses": ["representations-no-conflicts", "confidentiality-mutual"],
+      "affected_clauses": [
+        "representations-no-conflicts",
+        "confidentiality-mutual"
+      ],
       "detection": "Check for 'amendments must be in writing signed by authorised representatives' clause. Review email trail for informal term changes.",
       "mitigation": "Include robust amendment clause requiring written agreement by authorised representatives. Maintain contract change log.",
       "severity": "high",
@@ -18,7 +21,10 @@
       "threat_category": "integrity",
       "description": "Provider incrementally expands or shifts scope without formal change control to increase billing.",
       "attack_scenario": "Provider gradually performs out-of-scope work without raising change orders, then retrospectively invoices for 'additional services' citing implied acceptance.",
-      "affected_clauses": ["sla-uptime", "sla-response-time"],
+      "affected_clauses": [
+        "sla-uptime",
+        "sla-response-time"
+      ],
       "detection": "Compare actual deliverables against contracted scope. Review invoices for items not in original scope.",
       "mitigation": "Implement strict change control procedure. No work without approved change order. Regular scope reviews.",
       "severity": "medium",
@@ -30,7 +36,10 @@
       "threat_category": "availability",
       "description": "Provider withholds customer data or makes extraction impractical to force contract renewal.",
       "attack_scenario": "Customer terminates contract. Provider cites 'administrative processing time' to delay data return, then requires expensive professional services for data migration.",
-      "affected_clauses": ["termination-wind-down", "dpa-deletion-return"],
+      "affected_clauses": [
+        "termination-wind-down",
+        "dpa-deletion-return"
+      ],
       "detection": "Check for data return/deletion clause with specific timeframe, format requirements, and penalty for non-compliance.",
       "mitigation": "Include data return within 30 days in standard format. Add penalty for late return. Ensure ongoing API access during transition.",
       "severity": "critical",
@@ -42,7 +51,11 @@
       "threat_category": "integrity",
       "description": "Provider manipulates SLA measurement to report compliance despite actual service degradation.",
       "attack_scenario": "Provider redefines 'planned maintenance' broadly to exclude most downtime from SLA calculations, achieving 99.9% on paper while actual availability is 98%.",
-      "affected_clauses": ["sla-uptime", "sla-exclusions", "sla-service-credits"],
+      "affected_clauses": [
+        "sla-uptime",
+        "sla-exclusions",
+        "sla-service-credits"
+      ],
       "detection": "Review SLA measurement methodology and exclusions. Compare provider reports with customer-observed experience.",
       "mitigation": "Define measurement methodology precisely. Limit maintenance windows. Customer-side monitoring as verification.",
       "severity": "medium",
@@ -54,7 +67,11 @@
       "threat_category": "authorization",
       "description": "Processor engages sub-processors without proper notification or authorisation.",
       "attack_scenario": "Cloud provider's infrastructure partner engages new sub-processor in non-adequate country. Original provider does not notify controller. Customer data flows to unapproved jurisdiction.",
-      "affected_clauses": ["dpa-sub-processor", "dp-cross-border-transfers", "dp-data-localisation"],
+      "affected_clauses": [
+        "dpa-sub-processor",
+        "dp-cross-border-transfers",
+        "dp-data-localisation"
+      ],
       "detection": "Regular sub-processor list audits. Compare actual data flows with approved sub-processor list.",
       "mitigation": "Require 30-day advance notification. Include audit rights over sub-processor chain. Contractual penalty for unauthorised sub-processing.",
       "severity": "high",
@@ -66,7 +83,10 @@
       "threat_category": "repudiation",
       "description": "Processor delays breach notification to investigate internally or manage PR before notifying controller.",
       "attack_scenario": "Provider discovers data breach on Monday. Internal investigation takes 2 weeks. Provider notifies customer 18 days after discovery, missing the 72-hour regulatory deadline.",
-      "affected_clauses": ["data-protection-breach-notification", "dp-breach-notification-general"],
+      "affected_clauses": [
+        "data-protection-breach-notification",
+        "dp-breach-notification-general"
+      ],
       "detection": "Include contractual requirement for notification within 24 hours of awareness. Verify incident logs during audits.",
       "mitigation": "Define 'awareness' trigger clearly. Require 24-hour notification. Include contractual penalty for late notification. Annual incident response testing.",
       "severity": "critical",
@@ -78,7 +98,11 @@
       "threat_category": "repudiation",
       "description": "Provider claims ownership of deliverables despite customer funding, exploiting ambiguous IP clauses.",
       "attack_scenario": "Customer funds bespoke software development. Contract has vague IP clause. Provider licenses same software to customer's competitor, claiming it is 'background IP'.",
-      "affected_clauses": ["ip-work-product-ownership", "ip-background-reservation", "ip-improvements"],
+      "affected_clauses": [
+        "ip-work-product-ownership",
+        "ip-background-reservation",
+        "ip-improvements"
+      ],
       "detection": "Review IP clause for clear distinction between background and foreground IP. Check for defined IP schedule.",
       "mitigation": "Define background IP in schedule. Assign foreground IP explicitly. Include non-compete for customer-specific deliverables.",
       "severity": "high",
@@ -90,7 +114,10 @@
       "threat_category": "availability",
       "description": "Provider deliberately creates switching barriers through proprietary formats, integration dependencies, and data formats.",
       "attack_scenario": "Provider uses proprietary data format requiring conversion tools only they provide. Export feature is 'available' but outputs incomplete data missing critical metadata.",
-      "affected_clauses": ["termination-wind-down", "dpa-deletion-return"],
+      "affected_clauses": [
+        "termination-wind-down",
+        "dpa-deletion-return"
+      ],
       "detection": "Test data export functionality during contract term. Verify completeness and usability of exported data.",
       "mitigation": "Require standard data formats (CSV, JSON, XML). Test export capability annually. Include data completeness warranty in export.",
       "severity": "high",
@@ -102,7 +129,10 @@
       "threat_category": "confidentiality",
       "description": "Provider uses broad residuals clause to justify use of customer's confidential information and trade secrets.",
       "attack_scenario": "Provider's consultant works on customer's proprietary algorithm. Under residuals clause, consultant 'retains in unaided memory' the algorithm concept and applies it to competitor's project.",
-      "affected_clauses": ["confidentiality-residuals", "confidentiality-mutual"],
+      "affected_clauses": [
+        "confidentiality-residuals",
+        "confidentiality-mutual"
+      ],
       "detection": "Review residuals clause scope. Check for trade secret and personal data exclusions.",
       "mitigation": "Narrow residuals clause to general skills only. Exclude: trade secrets, personal data, specific designs, and proprietary algorithms.",
       "severity": "high",
@@ -114,7 +144,10 @@
       "threat_category": "integrity",
       "description": "Provider exploits vague pricing language to introduce unexpected charges.",
       "attack_scenario": "Contract says 'standard rates apply for additional services'. Provider unilaterally defines 'standard rates' at 3x market rate for out-of-scope work that becomes necessary.",
-      "affected_clauses": ["fin-price-lock", "fin-price-cpi-adjustment"],
+      "affected_clauses": [
+        "fin-price-lock",
+        "fin-price-cpi-adjustment"
+      ],
       "detection": "Check for fully defined pricing in all scenarios. Flag 'standard rates', 'reasonable charges', or 'as agreed' language.",
       "mitigation": "Define all pricing explicitly. Cap ad hoc rates. Require prior approval for any charges not in pricing schedule.",
       "severity": "medium",
@@ -126,7 +159,11 @@
       "threat_category": "repudiation",
       "description": "Provider uses procedural tactics to prevent effective audits.",
       "attack_scenario": "Provider requires 120-day audit notice, limits scope to pre-selected documents, restricts auditor access to sanitised environments, and challenges auditor qualifications.",
-      "affected_clauses": ["audit-rights-security", "audit-rights-regulatory", "dpa-audit-rights"],
+      "affected_clauses": [
+        "audit-rights-security",
+        "audit-rights-regulatory",
+        "dpa-audit-rights"
+      ],
       "detection": "Review audit clause for: notice period reasonableness, scope completeness, auditor qualification, and access rights.",
       "mitigation": "30-day notice maximum. Unrestricted scope for regulatory audits. Customer-chosen auditor (subject to NDA). Access to production systems.",
       "severity": "medium",
@@ -138,7 +175,10 @@
       "threat_category": "repudiation",
       "description": "Provider invokes force majeure for events within their control to avoid performance obligations.",
       "attack_scenario": "Provider claims IT infrastructure failure as force majeure event despite it being caused by their failure to maintain systems. Refuses service credits citing FM protection.",
-      "affected_clauses": ["force-majeure-standard", "force-majeure-narrow"],
+      "affected_clauses": [
+        "force-majeure-standard",
+        "force-majeure-narrow"
+      ],
       "detection": "Review force majeure definition. Ensure provider's own failures are excluded. Check for mitigation obligations.",
       "mitigation": "Narrowly define FM events. Exclude events within provider's reasonable control. Require mitigation efforts and regular status updates.",
       "severity": "medium",
@@ -150,7 +190,10 @@
       "threat_category": "availability",
       "description": "Provider insolvency results in loss of access to data and services with no recovery mechanism.",
       "attack_scenario": "SaaS provider enters administration. Administrators suspend all services. Customer data is on servers that may be sold to creditors. No escrow or export was arranged.",
-      "affected_clauses": ["termination-insolvency", "fin-escrow-arrangement"],
+      "affected_clauses": [
+        "termination-insolvency",
+        "fin-escrow-arrangement"
+      ],
       "detection": "Check for insolvency provisions, data escrow, and source code escrow arrangements.",
       "mitigation": "Include: insolvency termination right (where enforceable), data escrow with independent agent, source code escrow, and regular data backup to customer.",
       "severity": "critical",
@@ -162,7 +205,10 @@
       "threat_category": "authorization",
       "description": "Provider assigns contract to party that is a competitor, sanctioned entity, or lacks capability.",
       "attack_scenario": "Provider is acquired by customer's direct competitor. Contract is assigned to new parent. Competitor gains access to customer's confidential information and strategic plans.",
-      "affected_clauses": ["assignment-consent", "assignment-change-of-control"],
+      "affected_clauses": [
+        "assignment-consent",
+        "assignment-change-of-control"
+      ],
       "detection": "Check for assignment restrictions and change of control provisions with consent requirements.",
       "mitigation": "Require prior written consent for all assignments. Treat change of control as assignment. Include termination right on change of control.",
       "severity": "high",
@@ -174,7 +220,11 @@
       "threat_category": "confidentiality",
       "description": "Data gradually migrates to non-adequate jurisdictions through infrastructure changes and sub-processor additions.",
       "attack_scenario": "Provider migrates analytics workload to US-based sub-processor. Then moves backups to Singapore. Neither change triggers notification as each is 'minor infrastructure optimisation'.",
-      "affected_clauses": ["dp-cross-border-transfers", "dp-data-localisation", "dpa-sub-processor"],
+      "affected_clauses": [
+        "dp-cross-border-transfers",
+        "dp-data-localisation",
+        "dpa-sub-processor"
+      ],
       "detection": "Regular data flow mapping. Audit actual data locations against contracted locations. Monitor sub-processor changes.",
       "mitigation": "Contractual data residency requirement. Notification for any infrastructure change affecting data location. Annual data flow audit right.",
       "severity": "high",
@@ -186,7 +236,11 @@
       "threat_category": "availability",
       "description": "Provider's insurance lapses mid-contract, removing financial backing for claims.",
       "attack_scenario": "Provider lets cyber insurance lapse due to premium increases. Data breach occurs 3 months later. Provider lacks financial resources to cover notification costs and regulatory fines.",
-      "affected_clauses": ["insurance-cyber", "insurance-professional-indemnity", "insurance-general-liability"],
+      "affected_clauses": [
+        "insurance-cyber",
+        "insurance-professional-indemnity",
+        "insurance-general-liability"
+      ],
       "detection": "Check for ongoing insurance maintenance obligation with annual certificate requirement.",
       "mitigation": "Require annual insurance certificates. Immediate notification of lapse. Termination right if not remedied within 30 days.",
       "severity": "high",
@@ -198,7 +252,10 @@
       "threat_category": "integrity",
       "description": "Pre-contractual representations used to claim contract terms different from what was signed.",
       "attack_scenario": "Salesperson makes verbal promises about features and performance. Contract contains entire agreement clause. Customer relies on promises not captured in the contract.",
-      "affected_clauses": ["representations-authority", "representations-accuracy-information"],
+      "affected_clauses": [
+        "representations-authority",
+        "representations-accuracy-information"
+      ],
       "detection": "Verify entire agreement clause is present and properly drafted with fraud carve-out.",
       "mitigation": "Include robust entire agreement clause. Ensure all negotiated terms are captured in the signed agreement. No reliance on oral representations.",
       "severity": "medium",
@@ -210,7 +267,10 @@
       "threat_category": "authorization",
       "description": "Provider circumvents non-compete restrictions by using affiliate or subsidiary to serve competitor.",
       "attack_scenario": "Provider agrees not to serve customer's competitors. Provider's sister company (same parent) takes on competitor's work using shared resources and knowledge.",
-      "affected_clauses": ["non-solicitation-employee", "confidentiality-mutual"],
+      "affected_clauses": [
+        "non-solicitation-employee",
+        "confidentiality-mutual"
+      ],
       "detection": "Check if non-compete covers affiliates and related entities. Verify definition of 'competing' is comprehensive.",
       "mitigation": "Extend non-compete to all affiliates. Define 'competitor' broadly. Include information barrier requirements for affiliated entities.",
       "severity": "medium",
@@ -222,7 +282,11 @@
       "threat_category": "availability",
       "description": "Provider deliberately degrades service quality to encourage customer to terminate, avoiding provider termination penalties.",
       "attack_scenario": "Provider wants to exit unprofitable contract. Instead of terminating (and paying fees), provider reduces staff quality, extends response times, and delivers minimum compliance.",
-      "affected_clauses": ["sla-uptime", "sla-response-time", "sla-resolution-time"],
+      "affected_clauses": [
+        "sla-uptime",
+        "sla-response-time",
+        "sla-resolution-time"
+      ],
       "detection": "Monitor SLA trends over time. Track personnel changes and quality metrics.",
       "mitigation": "Include performance improvement plan obligations. Material and persistent SLA failure = termination for cause by customer (no fees).",
       "severity": "medium",
@@ -234,7 +298,11 @@
       "threat_category": "confidentiality",
       "description": "Provider uses customer's confidential data to train AI models, exposing information through model outputs.",
       "attack_scenario": "Provider's AI service ingests customer's proprietary threat intelligence data. Data is used to train general model. Competitor queries model and receives customer's proprietary analysis.",
-      "affected_clauses": ["confidentiality-mutual", "data-protection-processing-instructions", "ip-work-product-ownership"],
+      "affected_clauses": [
+        "confidentiality-mutual",
+        "data-protection-processing-instructions",
+        "ip-work-product-ownership"
+      ],
       "detection": "Review data processing scope for AI training exclusions. Check for model training opt-out provisions.",
       "mitigation": "Explicitly prohibit use of customer data for model training. Require opt-out from all AI training. Include audit right over training data usage.",
       "severity": "critical",
@@ -246,7 +314,10 @@
       "threat_category": "repudiation",
       "description": "Provider uses overly broad warranty exclusions to deny legitimate warranty claims.",
       "attack_scenario": "Software has defect. Provider claims warranty is void because customer used non-standard browser version (listed in broad exclusion clause covering 'unsupported configurations').",
-      "affected_clauses": ["warranty-fitness", "warranty-services"],
+      "affected_clauses": [
+        "warranty-fitness",
+        "warranty-services"
+      ],
       "detection": "Review warranty exclusions for breadth. Check if normal usage patterns could trigger exclusions.",
       "mitigation": "Limit warranty exclusions to: misuse, unauthorised modification, and force majeure. Exclude normal variations in environment.",
       "severity": "medium",
@@ -258,7 +329,10 @@
       "threat_category": "repudiation",
       "description": "Strict notice requirements used to invalidate legitimate termination attempts.",
       "attack_scenario": "Customer sends termination notice by email. Contract requires registered post to specific address. Provider claims notice is invalid and contract auto-renewed for another year.",
-      "affected_clauses": ["termination-cause", "termination-convenience"],
+      "affected_clauses": [
+        "termination-cause",
+        "termination-convenience"
+      ],
       "detection": "Review notice provisions for: methods, addresses, deemed delivery, and consequences of non-compliance.",
       "mitigation": "Accept multiple notice methods (email and post). Include deemed delivery rules. Require acknowledgement of receipt.",
       "severity": "medium",
@@ -270,7 +344,10 @@
       "threat_category": "integrity",
       "description": "Provider introduces copyleft-licensed open source code into deliverables, contaminating customer's proprietary code.",
       "attack_scenario": "Developer uses GPL-licensed library in customer's proprietary product. Under GPL, customer must release proprietary source code or cease distribution.",
-      "affected_clauses": ["ip-work-product-ownership", "warranty-non-infringement"],
+      "affected_clauses": [
+        "ip-work-product-ownership",
+        "warranty-non-infringement"
+      ],
       "detection": "Require SBOM for all deliverables. Run licence compliance scanning on all code deliveries.",
       "mitigation": "Require SBOM in SPDX format. Prohibit copyleft without approval. Run automated licence scanning. IP indemnification for contamination.",
       "severity": "high",
@@ -282,7 +359,10 @@
       "threat_category": "confidentiality",
       "description": "Provider's multi-tenant architecture fails to properly isolate customer data from other tenants.",
       "attack_scenario": "Shared database with row-level security. Application bug bypasses tenant isolation. Customer A's confidential data visible to Customer B through API queries.",
-      "affected_clauses": ["data-protection-security-measures", "confidentiality-mutual"],
+      "affected_clauses": [
+        "data-protection-security-measures",
+        "confidentiality-mutual"
+      ],
       "detection": "Review data isolation architecture. Check for tenant isolation testing and certification.",
       "mitigation": "Require documented isolation architecture. Annual penetration testing of tenant isolation. Per-tenant encryption keys.",
       "severity": "critical",
@@ -294,7 +374,10 @@
       "threat_category": "authorization",
       "description": "Provider uses new regulatory requirements as justification for unilateral contract changes or price increases.",
       "attack_scenario": "NIS2 comes into force. Provider claims compliance requires 40% price increase. Customer has no choice but to pay or be non-compliant.",
-      "affected_clauses": ["compliance-anti-bribery", "representations-compliance-laws"],
+      "affected_clauses": [
+        "compliance-anti-bribery",
+        "representations-compliance-laws"
+      ],
       "detection": "Check for regulatory change clause with cost allocation mechanism and right to negotiate.",
       "mitigation": "Include regulatory change clause: mutual obligation to comply, cost sharing mechanism, right to terminate if costs unreasonable.",
       "severity": "medium",
@@ -306,7 +389,10 @@
       "threat_category": "authorization",
       "description": "Processor processes personal data beyond controller's documented instructions for own purposes.",
       "attack_scenario": "Cloud provider uses customer's personal data for product analytics and targeted advertising through broadly worded processing instructions.",
-      "affected_clauses": ["dpa-processing-instructions", "data-protection-processing-instructions"],
+      "affected_clauses": [
+        "dpa-processing-instructions",
+        "data-protection-processing-instructions"
+      ],
       "detection": "Review processing instructions for specificity. Audit actual processing activities against instructions.",
       "mitigation": "Narrowly define processing instructions. Prohibit processing for provider's own purposes. Include technical controls to prevent unauthorised processing.",
       "severity": "high",
@@ -318,7 +404,10 @@
       "threat_category": "authorization",
       "description": "Provider retains personal data beyond the period necessary for the stated processing purpose.",
       "attack_scenario": "Contract ends. Provider retains 'anonymised' data indefinitely for analytics. Anonymisation is inadequate and data can be re-identified.",
-      "affected_clauses": ["dpa-deletion-return", "dpa-processing-instructions"],
+      "affected_clauses": [
+        "dpa-deletion-return",
+        "dpa-processing-instructions"
+      ],
       "detection": "Check deletion clause for: timeframe, certification, all copies (including backups), and anonymisation standards.",
       "mitigation": "Require deletion within 30 days. Written certification. Deletion of all copies including backups within 90 days. Define anonymisation standard.",
       "severity": "high",
@@ -330,7 +419,10 @@
       "threat_category": "availability",
       "description": "Party uses multi-tier dispute resolution as delay tactic to avoid resolving legitimate claims.",
       "attack_scenario": "Customer raises material breach. Provider insists on completing all 4 tiers of dispute resolution (negotiation, mediation, expert determination, arbitration) spanning 18 months.",
-      "affected_clauses": ["dispute-resolution-escalation", "dispute-resolution-mediation"],
+      "affected_clauses": [
+        "dispute-resolution-escalation",
+        "dispute-resolution-mediation"
+      ],
       "detection": "Review dispute resolution for: tier timeframes, mandatory vs optional tiers, and emergency/injunctive relief preservation.",
       "mitigation": "Set strict timeframes for each tier: 30 days negotiation, 60 days mediation. Preserve right to seek injunctive relief at any time.",
       "severity": "medium",
@@ -342,7 +434,10 @@
       "threat_category": "availability",
       "description": "Provider removes key personnel who built the relationship and deep knowledge, replacing with junior staff.",
       "attack_scenario": "Provider replaces experienced account manager and technical lead with junior staff 6 months into complex outsourcing. Service quality declines but remains just above SLA threshold.",
-      "affected_clauses": ["sla-uptime", "sla-response-time"],
+      "affected_clauses": [
+        "sla-uptime",
+        "sla-response-time"
+      ],
       "detection": "Check for key person clause with: named individuals, notice of departure, and replacement approval rights.",
       "mitigation": "Name key personnel. Require 30-day notice of changes. Customer approval for replacements. Knowledge transfer period.",
       "severity": "medium",
@@ -354,7 +449,10 @@
       "threat_category": "repudiation",
       "description": "Indemnifier denies claim based on technical non-compliance with claim procedure.",
       "attack_scenario": "Customer notifies provider of IP infringement claim by email instead of registered post. Provider denies indemnification obligation citing procedural non-compliance.",
-      "affected_clauses": ["indemnification-ip", "indemnification-mutual"],
+      "affected_clauses": [
+        "indemnification-ip",
+        "indemnification-mutual"
+      ],
       "detection": "Review indemnification procedure for: notification method, timeframe, and consequences of non-compliance.",
       "mitigation": "Reasonable notification requirements. Cure period for procedural defects. No forfeiture unless material prejudice from non-compliance.",
       "severity": "medium",
@@ -366,7 +464,10 @@
       "threat_category": "integrity",
       "description": "Provider's security certification (ISO 27001, SOC 2) lapses without notifying customer.",
       "attack_scenario": "Provider loses ISO 27001 certification after failed surveillance audit. Does not notify customer. Customer's own compliance claims rely on provider's certification.",
-      "affected_clauses": ["compliance-anti-bribery", "audit-rights-security"],
+      "affected_clauses": [
+        "compliance-anti-bribery",
+        "audit-rights-security"
+      ],
       "detection": "Check for certification maintenance obligation with annual evidence and immediate lapse notification.",
       "mitigation": "Require ongoing certification maintenance. Immediate notification of lapse or adverse finding. Annual certificate provision. Termination right if not remedied.",
       "severity": "high",
@@ -378,7 +479,10 @@
       "threat_category": "integrity",
       "description": "Provider structures relationship across multiple contracts to reduce effective liability cap per incident.",
       "attack_scenario": "Provider splits services into 5 separate contracts each with 12-month fee cap. Incident affects all services but liability is capped per contract, not aggregate relationship.",
-      "affected_clauses": ["liability-cap-direct", "liability-aggregate-vs-per-incident"],
+      "affected_clauses": [
+        "liability-cap-direct",
+        "liability-aggregate-vs-per-incident"
+      ],
       "detection": "Review if multiple contracts with same provider have separate or aggregate liability caps.",
       "mitigation": "Include umbrella liability clause across all agreements with same provider. Aggregate cap across the relationship.",
       "severity": "medium",
@@ -390,7 +494,10 @@
       "threat_category": "repudiation",
       "description": "Provider classifies security incidents below notification threshold to avoid disclosure obligations.",
       "attack_scenario": "Provider experiences data breach affecting 500 records. Classifies as 'security event' rather than 'incident' to avoid notification obligation. Breach widens to 50,000 records.",
-      "affected_clauses": ["data-protection-breach-notification", "dp-breach-notification-general"],
+      "affected_clauses": [
+        "data-protection-breach-notification",
+        "dp-breach-notification-general"
+      ],
       "detection": "Review incident classification criteria. Check for obligation to report events below incident threshold.",
       "mitigation": "Define incident broadly. Require notification of all security events (not just incidents). Include audit right over incident logs.",
       "severity": "high",
@@ -402,7 +509,10 @@
       "threat_category": "integrity",
       "description": "Related agreements governed by different laws creating inconsistent rights and obligations.",
       "attack_scenario": "MSA governed by English law. DPA governed by Irish law. Conflicting interpretation of liability for data breach. Each agreement points to different jurisdiction for dispute resolution.",
-      "affected_clauses": ["governing-law-choice", "governing-law-venue"],
+      "affected_clauses": [
+        "governing-law-choice",
+        "governing-law-venue"
+      ],
       "detection": "Review all related agreements for consistent governing law and dispute resolution.",
       "mitigation": "Align governing law across all related agreements. Single dispute resolution mechanism. Clear hierarchy between agreements.",
       "severity": "medium",
@@ -414,7 +524,10 @@
       "threat_category": "integrity",
       "description": "Broad or ambiguous definitions used to expand or contract clause scope beyond original intent.",
       "attack_scenario": "Definition of 'Confidential Information' includes 'information marked as confidential'. Provider never marks anything. Effectively no information is protected.",
-      "affected_clauses": ["confidentiality-mutual", "confidentiality-one-way"],
+      "affected_clauses": [
+        "confidentiality-mutual",
+        "confidentiality-one-way"
+      ],
       "detection": "Review all defined terms. Check if definitions are self-limiting or could be manipulated.",
       "mitigation": "Use inclusive definitions: information that a reasonable person would consider confidential, whether or not marked. Include catch-all categories.",
       "severity": "medium",
@@ -426,7 +539,10 @@
       "threat_category": "authorization",
       "description": "Counter-party's supply chain relationships expose customer to sanctions risk.",
       "attack_scenario": "Provider uses sub-processor based in country subject to sectoral sanctions. Customer's data is processed by sanctioned entity. Customer faces secondary sanctions exposure.",
-      "affected_clauses": ["compliance-sanctions", "dpa-sub-processor"],
+      "affected_clauses": [
+        "compliance-sanctions",
+        "dpa-sub-processor"
+      ],
       "detection": "Review sanctions representations. Require supply chain screening and ongoing monitoring.",
       "mitigation": "Include sanctions representation and warranty. Require ongoing screening. Immediate notification of sanctions risk. Termination right for sanctions breach.",
       "severity": "critical",
@@ -438,7 +554,10 @@
       "threat_category": "availability",
       "description": "Auto-renewal with narrow opt-out window traps customer in unwanted renewal.",
       "attack_scenario": "Contract auto-renews for 12 months unless 90-day notice given. No renewal reminder sent. Customer discovers renewal after window closes. Locked in for another year.",
-      "affected_clauses": ["termination-convenience", "termination-cause"],
+      "affected_clauses": [
+        "termination-convenience",
+        "termination-cause"
+      ],
       "detection": "Check for auto-renewal provisions: renewal period, notice window, reminder obligation, and price increase mechanism.",
       "mitigation": "Require 60-day advance renewal notice from provider. 30-day opt-out window after notice. Cap renewal price increase.",
       "severity": "medium",
@@ -450,7 +569,10 @@
       "threat_category": "availability",
       "description": "Contract with thinly capitalised subsidiary while parent company avoids guarantee obligations.",
       "attack_scenario": "Customer contracts with subsidiary with minimal assets. Subsidiary defaults on obligations. Parent company disclaims responsibility. Customer has unrecoverable claim.",
-      "affected_clauses": ["fin-parent-guarantee", "representations-authority"],
+      "affected_clauses": [
+        "fin-parent-guarantee",
+        "representations-authority"
+      ],
       "detection": "Verify contracting entity's financial standing. Check for parent guarantee if entity is subsidiary.",
       "mitigation": "Require parent company guarantee. Or require performance bond. Conduct due diligence on contracting entity's financial standing.",
       "severity": "high",
@@ -462,7 +584,10 @@
       "threat_category": "confidentiality",
       "description": "Counter-party discloses confidential information through legal proceedings or regulatory submissions.",
       "attack_scenario": "During unrelated litigation, provider discloses customer's confidential information as part of discovery. Information becomes part of public court record.",
-      "affected_clauses": ["confidentiality-mutual", "confidentiality-exceptions"],
+      "affected_clauses": [
+        "confidentiality-mutual",
+        "confidentiality-exceptions"
+      ],
       "detection": "Review confidentiality exceptions for legal proceedings. Check for protective order requirements.",
       "mitigation": "Require: prompt notification before disclosure, seek protective order, disclose minimum necessary, and exclude from public filings where possible.",
       "severity": "medium",
@@ -474,7 +599,10 @@
       "threat_category": "availability",
       "description": "Provider's business continuity plan exists on paper but fails when activated due to lack of testing.",
       "attack_scenario": "Data centre flood. Provider activates BCP. DR site has not been tested in 3 years. Configuration drift means failover fails. RTO of 4 hours becomes 4 days.",
-      "affected_clauses": ["sla-uptime", "dora-continuity-arrangements"],
+      "affected_clauses": [
+        "sla-uptime",
+        "dora-continuity-arrangements"
+      ],
       "detection": "Check for BCP/DR testing obligations with: frequency, scope, customer participation, and results reporting.",
       "mitigation": "Require annual DR testing with full failover. Customer observation rights. Results within 10 days. Remediation plan for gaps within 30 days.",
       "severity": "high",
@@ -486,7 +614,10 @@
       "threat_category": "availability",
       "description": "Counter-party recruits key personnel, gaining institutional knowledge and disrupting operations.",
       "attack_scenario": "Provider recruits customer's lead architect who designed the system the provider maintains. Architect takes institutional knowledge. Provider gains leverage in negotiations.",
-      "affected_clauses": ["non-solicitation-employee", "non-solicitation-mutual"],
+      "affected_clauses": [
+        "non-solicitation-employee",
+        "non-solicitation-mutual"
+      ],
       "detection": "Check for mutual non-solicitation clause with: scope, duration, and remedy.",
       "mitigation": "Mutual 12-month non-solicitation for directly involved personnel. Include garden leave payment option. Liquidated damages for breach.",
       "severity": "medium",
@@ -498,7 +629,10 @@
       "threat_category": "authorization",
       "description": "Provider delivers AI-generated content where IP ownership and originality are legally uncertain.",
       "attack_scenario": "Provider uses generative AI to create design documents and code. Deliverables may contain AI-generated content that is not copyrightable. Customer pays for IP it may not legally own.",
-      "affected_clauses": ["ip-work-product-ownership", "warranty-non-infringement"],
+      "affected_clauses": [
+        "ip-work-product-ownership",
+        "warranty-non-infringement"
+      ],
       "detection": "Check for AI usage disclosure and IP warranty covering AI-generated content.",
       "mitigation": "Require disclosure of AI tool usage. Include IP warranty covering AI-generated content. Indemnification for AI-related IP claims.",
       "severity": "high",
@@ -510,7 +644,11 @@
       "threat_category": "repudiation",
       "description": "Party structures operations across jurisdictions to minimise consequences of contractual breach.",
       "attack_scenario": "Provider locates assets in jurisdiction where foreign judgments are difficult to enforce. Provider breaches contract. Customer wins judgment but cannot enforce it.",
-      "affected_clauses": ["governing-law-choice", "governing-law-venue", "dispute-resolution-arbitration"],
+      "affected_clauses": [
+        "governing-law-choice",
+        "governing-law-venue",
+        "dispute-resolution-arbitration"
+      ],
       "detection": "Assess enforceability of judgments in provider's operational jurisdictions. Check for New York Convention coverage for arbitration.",
       "mitigation": "Use arbitration (New York Convention enforceability). Include multi-jurisdiction enforcement clause. Require assets in enforceable jurisdiction.",
       "severity": "medium",
@@ -522,7 +660,11 @@
       "threat_category": "availability",
       "description": "Failure in provider's supply chain cascades to affect customer without contractual protection.",
       "attack_scenario": "Provider's cloud infrastructure provider has major outage. Provider's own services fail. Provider claims force majeure citing third-party dependency. No step-in rights.",
-      "affected_clauses": ["force-majeure-standard", "sla-uptime", "sla-exclusions"],
+      "affected_clauses": [
+        "force-majeure-standard",
+        "sla-uptime",
+        "sla-exclusions"
+      ],
       "detection": "Review provider's critical dependencies. Check if force majeure covers third-party failures. Verify step-in rights.",
       "mitigation": "Exclude provider's supplier failures from force majeure. Require supplier risk management. Include step-in rights. Multi-vendor strategy.",
       "severity": "high",
@@ -534,7 +676,10 @@
       "threat_category": "integrity",
       "description": "Provider modifies service features, functionality, or architecture without customer consent.",
       "attack_scenario": "SaaS provider removes feature that customer depends on as part of 'product evolution'. Terms of service allow unilateral changes. Customer has no remedy.",
-      "affected_clauses": ["sla-uptime", "warranty-fitness"],
+      "affected_clauses": [
+        "sla-uptime",
+        "warranty-fitness"
+      ],
       "detection": "Check for service change provisions. Verify customer has consent right for material changes.",
       "mitigation": "Require: mutual agreement for material changes, 90-day notice for minor changes, feature freeze for contracted capabilities, and termination right for adverse changes.",
       "severity": "high",
@@ -546,7 +691,10 @@
       "threat_category": "repudiation",
       "description": "Party argues that consistent non-enforcement of a right constitutes waiver by conduct.",
       "attack_scenario": "Customer never claims service credits for 18 months of SLA failures. When claiming credits for major outage, provider argues right was waived by prior non-enforcement.",
-      "affected_clauses": ["sla-service-credits", "liability-cap-direct"],
+      "affected_clauses": [
+        "sla-service-credits",
+        "liability-cap-direct"
+      ],
       "detection": "Check for no-waiver clause. Verify it requires written waiver.",
       "mitigation": "Include clear no-waiver clause: failure to exercise right is not waiver. Waiver must be in writing. Maintain claim log.",
       "severity": "medium",
@@ -558,7 +706,10 @@
       "threat_category": "authorization",
       "description": "Third parties claim rights under the contract through beneficiary provisions.",
       "attack_scenario": "End users of customer's product claim they are third-party beneficiaries of the provider's SLA, bringing direct claims against provider.",
-      "affected_clauses": ["representations-no-conflicts", "sla-uptime"],
+      "affected_clauses": [
+        "representations-no-conflicts",
+        "sla-uptime"
+      ],
       "detection": "Check for third-party rights exclusion (Contracts (Rights of Third Parties) Act 1999 or equivalent).",
       "mitigation": "Include express exclusion of third-party rights except for intended beneficiaries (e.g., indemnified parties, group companies).",
       "severity": "low",
@@ -570,7 +721,10 @@
       "threat_category": "authorization",
       "description": "Business units engage cloud services directly, bypassing procurement and legal review.",
       "attack_scenario": "Department signs up for SaaS tool using corporate credit card. Standard terms apply with no DPA, no liability cap, and provider ownership of uploaded data.",
-      "affected_clauses": ["representations-authority", "confidentiality-mutual"],
+      "affected_clauses": [
+        "representations-authority",
+        "confidentiality-mutual"
+      ],
       "detection": "Review procurement process for shadow IT controls. Check for spend threshold triggers requiring legal review.",
       "mitigation": "Implement approved vendor programme. Require legal review above spend threshold. Centralized SaaS management platform.",
       "severity": "medium",
@@ -582,7 +736,10 @@
       "threat_category": "integrity",
       "description": "Party argues protective clause is unenforceable and should be severed, weakening the other party's position.",
       "attack_scenario": "Provider argues non-compete clause is unenforceable as restraint of trade. Court severs the clause entirely rather than reducing scope, leaving customer without any protection.",
-      "affected_clauses": ["non-solicitation-employee", "confidentiality-mutual"],
+      "affected_clauses": [
+        "non-solicitation-employee",
+        "confidentiality-mutual"
+      ],
       "detection": "Review severability clause for: blue-pencil provisions, reduction rather than removal, and savings language.",
       "mitigation": "Include blue-pencil clause allowing court to reduce unreasonable terms rather than sever entirely. Step-down provisions.",
       "severity": "medium",
@@ -594,11 +751,1134 @@
       "threat_category": "integrity",
       "description": "Provider uses AI to generate deliverables containing fabricated information (hallucinations) passed off as expert analysis.",
       "attack_scenario": "Legal advisory firm uses LLM to draft compliance analysis. Report cites non-existent regulations and case law. Customer relies on fabricated guidance for business decisions.",
-      "affected_clauses": ["warranty-services", "warranty-accuracy-representations"],
+      "affected_clauses": [
+        "warranty-services",
+        "warranty-accuracy-representations"
+      ],
       "detection": "Check for AI usage disclosure requirement and accuracy warranties covering AI-assisted deliverables.",
       "mitigation": "Require: disclosure of AI tool usage, human expert review certification, accuracy warranty, and professional standards compliance.",
       "severity": "high",
       "agent_use": "Contract Reviewer: flag when professional services may use AI without accuracy safeguards."
+    },
+    {
+      "id": "threat-constructive-dismissal-engineering",
+      "name": "Constructive Dismissal Through Contract Variation",
+      "threat_category": "integrity",
+      "description": "Employer unilaterally varies fundamental contract terms to force employee resignation without triggering redundancy obligations.",
+      "attack_scenario": "Employer relocates employee to distant office, changes role to unrelated function, and reduces bonus targets to zero. Employee resigns. Employer claims voluntary departure.",
+      "affected_clauses": [
+        "emp-redundancy",
+        "emp-notice-period",
+        "emp-flexible-working"
+      ],
+      "detection": "Review variation clause scope. Check for mutual consent requirements on fundamental terms. Verify mobility and flexibility clauses.",
+      "mitigation": "Require written consent for changes to role, location, and compensation. Define fundamental terms that cannot be varied unilaterally. Include constructive dismissal protections.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when employer retains broad unilateral variation rights over fundamental employment terms."
+    },
+    {
+      "id": "threat-restrictive-covenant-overreach",
+      "name": "Unreasonable Restrictive Covenant Overreach",
+      "threat_category": "authorization",
+      "description": "Employer imposes overly broad non-compete and non-solicitation restrictions that exceed legitimate business interests.",
+      "attack_scenario": "Senior developer signs contract with 2-year global non-compete covering all technology companies. On departure, cannot find work in their field for 2 years. Covenant may be unenforceable but creates chilling effect.",
+      "affected_clauses": [
+        "emp-non-compete",
+        "emp-restrictive-covenant",
+        "emp-post-termination"
+      ],
+      "detection": "Review scope, duration, geographic reach, and activity restriction of all restrictive covenants. Assess proportionality to role.",
+      "mitigation": "Limit non-compete to 6-12 months. Define specific competing businesses rather than broad sectors. Include garden leave to match restriction period. Stepped covenants by seniority.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when restrictive covenants exceed 12 months or have global geographic scope."
+    },
+    {
+      "id": "threat-bonus-clawback-manipulation",
+      "name": "Retrospective Bonus Clawback Manipulation",
+      "threat_category": "repudiation",
+      "description": "Employer uses broad clawback provisions to recover previously paid bonuses based on subjective criteria.",
+      "attack_scenario": "Employee receives GBP 200k bonus. Employer later discovers minor compliance infraction unrelated to bonus-earning activity. Clawback provision triggered for full amount. Employee must repay from after-tax income.",
+      "affected_clauses": [
+        "emp-clawback",
+        "emp-bonus-discretion",
+        "emp-bonus-deferral"
+      ],
+      "detection": "Review clawback triggers for specificity. Check proportionality mechanisms. Verify appeal rights.",
+      "mitigation": "Define clawback triggers narrowly and link to bonus-earning misconduct. Cap clawback at net (not gross) amount. Include proportionality requirement and appeal process.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when clawback provisions lack proportionality or have subjective triggers."
+    },
+    {
+      "id": "threat-tupe-information-withholding",
+      "name": "TUPE Transfer Information Withholding",
+      "threat_category": "repudiation",
+      "description": "Transferor deliberately withholds or misrepresents employee liability information during business transfer to shift costs to transferee.",
+      "attack_scenario": "Outsourcing provider fails to disclose pending employment tribunal claims, underfunded pension obligations, and custom contractual benefits before transfer. Transferee inherits GBP 500k in unexpected liabilities.",
+      "affected_clauses": [
+        "emp-tupe-transfer",
+        "emp-pension-contribution",
+        "emp-redundancy"
+      ],
+      "detection": "Review TUPE information obligations. Check for warranties on employee data completeness. Verify indemnity for pre-transfer liabilities.",
+      "mitigation": "Require comprehensive employee liability information 28+ days before transfer. Include specific indemnity for pre-transfer liabilities and undisclosed obligations. Escrow for disputed amounts.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when TUPE provisions lack comprehensive information warranties or pre-transfer indemnities."
+    },
+    {
+      "id": "threat-ip-assignment-gap",
+      "name": "Employee IP Assignment Gap Exploitation",
+      "threat_category": "authorization",
+      "description": "Employee creates valuable IP outside narrow assignment clause scope, retaining personal ownership of employer-funded innovations.",
+      "attack_scenario": "Employee develops patentable algorithm during work hours using employer resources. IP assignment clause only covers inventions in employee normal duties. Employee claims algorithm was personal project outside duties. Files personal patent.",
+      "affected_clauses": [
+        "emp-ip-assignment",
+        "emp-moonlighting",
+        "emp-company-property"
+      ],
+      "detection": "Review IP assignment scope against actual role responsibilities. Check for present assignment language vs obligation to assign. Verify coverage of all creation methods.",
+      "mitigation": "Use present assignment language. Cover all IP created using employer resources, during working hours, or related to employer business. Include invention disclosure obligation.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when IP assignment clause has narrow scope or uses obligation-to-assign rather than present-assignment language."
+    },
+    {
+      "id": "threat-garden-leave-circumvention",
+      "name": "Garden Leave Period Circumvention",
+      "threat_category": "availability",
+      "description": "Employee circumvents garden leave by providing consultancy services through personal company or sharing confidential information before leave starts.",
+      "attack_scenario": "Senior executive given 6-month notice with garden leave. During handover period before garden leave starts, executive copies client database and strategic plans. Sets up consultancy company. Begins servicing former clients through new entity on day one of garden leave.",
+      "affected_clauses": [
+        "emp-garden-leave",
+        "emp-confidentiality",
+        "emp-non-solicitation"
+      ],
+      "detection": "Check garden leave clause for: immediate activation right, device return obligations, and monitoring provisions during leave period.",
+      "mitigation": "Immediate garden leave activation right. Device and data return on day one. Ongoing confidentiality monitoring. Extend non-compete from end of garden leave, not notice.",
+      "severity": "medium",
+      "agent_use": "Risk Assessor: flag when garden leave lacks immediate activation or data return provisions."
+    },
+    {
+      "id": "threat-whistleblower-retaliation-through-performance",
+      "name": "Whistleblower Retaliation Through Performance Management",
+      "threat_category": "repudiation",
+      "description": "Employer uses performance management process to retaliate against whistleblower, creating paper trail for dismissal.",
+      "attack_scenario": "Employee reports compliance breach. Within weeks, receives first-ever negative performance review. Placed on performance improvement plan with unrealistic targets. Dismissed for performance 3 months later.",
+      "affected_clauses": [
+        "emp-whistleblower-protection",
+        "emp-disciplinary",
+        "emp-grievance"
+      ],
+      "detection": "Check for explicit whistleblower retaliation protections. Review performance management safeguards. Verify independent investigation requirements.",
+      "mitigation": "Include specific anti-retaliation provisions for whistleblowers. Require independent review of any adverse action within 12 months of disclosure. Reverse burden of proof.",
+      "severity": "critical",
+      "agent_use": "Risk Assessor: flag when whistleblower protection clause lacks explicit anti-retaliation mechanisms."
+    },
+    {
+      "id": "threat-training-repayment-trap",
+      "name": "Training Cost Repayment Trap",
+      "threat_category": "integrity",
+      "description": "Employer classifies routine onboarding and mandatory compliance training as repayable training costs to deter early departure.",
+      "attack_scenario": "Employee undergoes standard onboarding (classified as specialised training costing GBP 30k). Contract requires full repayment if leaving within 2 years. Employee effectively locked in by financial penalty.",
+      "affected_clauses": [
+        "emp-training-repayment",
+        "emp-probation",
+        "emp-notice-period"
+      ],
+      "detection": "Review training repayment scope. Check if mandatory or routine training is excluded. Verify pro-rata reduction mechanism.",
+      "mitigation": "Exclude mandatory and standard onboarding training. Cap repayable amounts to genuine external training costs. Pro-rata reduction monthly. Maximum 12-month clawback period.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when training repayment covers onboarding or lacks pro-rata reduction."
+    },
+    {
+      "id": "threat-equal-pay-audit-avoidance",
+      "name": "Equal Pay Transparency Avoidance",
+      "threat_category": "repudiation",
+      "description": "Employer structures pay through complex bonus and benefits packages to obscure pay inequality and avoid equal pay claims.",
+      "attack_scenario": "Female employee discovers male colleague in equivalent role receives 30 percent more total compensation. Employer argues roles are different due to minor title differences and discretionary bonus structure makes comparison impossible.",
+      "affected_clauses": [
+        "emp-equal-pay",
+        "emp-bonus-discretion",
+        "emp-commission-structure"
+      ],
+      "detection": "Review pay transparency obligations. Check if bonus criteria are objective and documented. Verify equal pay audit provisions.",
+      "mitigation": "Include objective bonus criteria. Require periodic equal pay audits. Document role equivalence methodology. Transparent pay bands.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when compensation structure lacks transparency or objective criteria."
+    },
+    {
+      "id": "threat-remote-work-jurisdiction-creep",
+      "name": "Remote Work Jurisdiction Liability Creep",
+      "threat_category": "authorization",
+      "description": "Employee working remotely from undisclosed jurisdiction creates tax, employment law, and permanent establishment risks for employer.",
+      "attack_scenario": "Employee approved for UK remote work relocates to Portugal without disclosure. After 6 months, employer has potential Portuguese permanent establishment, local employment law obligations, and tax reporting requirements.",
+      "affected_clauses": [
+        "emp-remote-work",
+        "emp-relocation",
+        "emp-expense-policy"
+      ],
+      "detection": "Review remote work clause for location restrictions and disclosure requirements. Check for tax and PE risk allocation.",
+      "mitigation": "Require advance written approval for location changes. Define approved work jurisdictions. Employee warranty on work location. Tax indemnity for undisclosed relocation.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when remote work clause lacks location restrictions or jurisdiction disclosure requirements."
+    },
+    {
+      "id": "threat-design-liability-gap",
+      "name": "Design Liability Gap Between Architect and Contractor",
+      "threat_category": "integrity",
+      "description": "Gap between architect design responsibility and contractor buildability obligation creates uninsured design liability exposure.",
+      "attack_scenario": "Architect designs complex facade system. Contractor provides contractor design portion for connections. Interface between designs fails. Each party blames the other. Neither PI policy covers the interface.",
+      "affected_clauses": [
+        "con-design-liability",
+        "con-contractor-design-portion",
+        "con-insurance-pi"
+      ],
+      "detection": "Review design responsibility matrix. Check for interface design liability. Verify PI insurance covers design overlap zones.",
+      "mitigation": "Define clear design responsibility matrix with interface ownership. Require novation of architect appointment. Ensure PI insurance covers interface design. Joint design review protocol.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when contractor design portion exists without clear interface liability allocation."
+    },
+    {
+      "id": "threat-extension-of-time-gaming",
+      "name": "Extension of Time Claim Gaming",
+      "threat_category": "repudiation",
+      "description": "Contractor manufactures or exaggerates delay events to claim extensions of time and avoid liquidated damages.",
+      "attack_scenario": "Contractor falls behind programme due to own resource failures. Files multiple EOT claims for minor weather events and information requests, each adding 1-2 weeks. Cumulative claims exceed actual delay by 3 months.",
+      "affected_clauses": [
+        "con-extension-of-time",
+        "con-delay-damages",
+        "con-practical-completion"
+      ],
+      "detection": "Review EOT procedure for: notice requirements, contemporaneous records, programme update obligations, and concurrency provisions.",
+      "mitigation": "Require detailed programme showing critical path impact. Contemporaneous daily records. Independent delay analyst for disputed claims. Concurrent delay sharing mechanism.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when EOT clause lacks critical path analysis requirement or concurrency provisions."
+    },
+    {
+      "id": "threat-pay-when-certified-manipulation",
+      "name": "Interim Payment Certification Manipulation",
+      "threat_category": "availability",
+      "description": "Contract administrator manipulates payment certification to underpay contractor or delay cash flow.",
+      "attack_scenario": "Employer-appointed contract administrator systematically undervalues interim applications by 30-40 percent. Contractor lacks cash flow to continue. By the time adjudication award is made, contractor is insolvent.",
+      "affected_clauses": [
+        "con-interim-payment",
+        "con-prompt-payment",
+        "con-right-to-suspend"
+      ],
+      "detection": "Review payment mechanism for: valuation methodology, pay less notice requirements, and suspension rights. Check independence of certifier.",
+      "mitigation": "Independent certifier appointment. Clear valuation methodology. Strict pay less notice deadlines. Right to suspend for non-payment. Interest on late payment at base rate plus 8 percent.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when payment certification lacks independent certifier or clear valuation methodology."
+    },
+    {
+      "id": "threat-variation-order-dispute",
+      "name": "Variation Order Valuation Dispute",
+      "threat_category": "integrity",
+      "description": "Employer instructs variations verbally then disputes valuation, leaving contractor performing unrequested additional work.",
+      "attack_scenario": "Employer representative instructs contractor to change cladding specification on site. No formal variation order issued. Work completed at significant cost. Employer disputes instruction was given and refuses payment.",
+      "affected_clauses": [
+        "con-variation-orders",
+        "con-loss-expense",
+        "con-final-account"
+      ],
+      "detection": "Review variation procedure for: written instruction requirement, deemed variation provisions, and valuation methodology.",
+      "mitigation": "Require all variations in writing. Include deemed variation for oral instructions confirmed in writing within 7 days. Pre-agreed rates for common variations. Dispute mechanism for valuation disagreements.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when variation clause requires only written instructions without deemed variation mechanism."
+    },
+    {
+      "id": "threat-defects-liability-expiry-gaming",
+      "name": "Defects Liability Period Expiry Gaming",
+      "threat_category": "repudiation",
+      "description": "Contractor uses temporary fixes to ensure defects only manifest after defects liability period expires.",
+      "attack_scenario": "Waterproofing contractor applies surface sealant over membrane defects. Defects are concealed for 18 months (beyond 12-month DLP). After DLP expires, membrane fails catastrophically. Contractor disclaims liability.",
+      "affected_clauses": [
+        "con-defects-liability",
+        "con-practical-completion",
+        "con-retention"
+      ],
+      "detection": "Review DLP duration and scope. Check for latent defect provisions. Verify retention release conditions.",
+      "mitigation": "Extend DLP to 24 months for critical elements. Include separate latent defects period (6-12 years). Hold 50 percent retention until end of extended DLP. Independent completion inspection.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when DLP is 12 months or less without latent defect provisions."
+    },
+    {
+      "id": "threat-building-safety-non-compliance",
+      "name": "Building Safety Act Non-Compliance Exposure",
+      "threat_category": "authorization",
+      "description": "Contractor or designer fails to comply with Building Safety Act duties, creating personal criminal liability and building control approval risks.",
+      "attack_scenario": "Principal contractor fails to maintain golden thread of building information for higher-risk building. Building control refuses to issue completion certificate. Employer cannot occupy building. Criminal prosecution initiated.",
+      "affected_clauses": [
+        "con-building-safety",
+        "con-cdm-regulations",
+        "con-design-liability"
+      ],
+      "detection": "Review BSA compliance obligations. Check for golden thread requirements. Verify duty holder appointments and competence evidence.",
+      "mitigation": "Explicit BSA duty holder appointments. Golden thread information management system. Competence declarations from all duty holders. Regular BSA compliance audits. Indemnity for non-compliance.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when higher-risk building project lacks explicit Building Safety Act compliance provisions."
+    },
+    {
+      "id": "threat-collateral-warranty-gap",
+      "name": "Collateral Warranty Coverage Gap",
+      "threat_category": "availability",
+      "description": "Tenant or funder left without contractual recourse against contractor or designer due to missing or inadequate collateral warranties.",
+      "attack_scenario": "Building defect discovered by tenant. No privity of contract with contractor. Collateral warranty was never executed. Employer is insolvent. Tenant has no party to claim against for GBP 2M remediation.",
+      "affected_clauses": [
+        "con-collateral-warranty",
+        "con-novation",
+        "con-step-in-rights"
+      ],
+      "detection": "Review collateral warranty obligations. Check execution status. Verify step-in rights and assignability.",
+      "mitigation": "Require collateral warranties as conditions precedent to payment. Third-party rights act alternative. Include step-in rights. Ensure two assignments permitted. Verify execution within 14 days of contract.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when construction contract lacks collateral warranty obligations for funders and tenants."
+    },
+    {
+      "id": "threat-sub-contractor-insolvency-cascade",
+      "name": "Sub-Contractor Insolvency Cascade",
+      "threat_category": "availability",
+      "description": "Key sub-contractor insolvency triggers chain reaction of delays and cost overruns without adequate contractual protections.",
+      "attack_scenario": "M and E sub-contractor enters administration mid-project. Specialist work is 60 percent complete. No other sub-contractor will warrant existing work. Programme delayed 6 months. Additional cost exceeds GBP 3M.",
+      "affected_clauses": [
+        "con-back-to-back",
+        "con-performance-bond",
+        "con-parent-company-guarantee"
+      ],
+      "detection": "Review sub-contractor vetting requirements. Check for performance bonds and PCGs. Verify step-in and assignment provisions.",
+      "mitigation": "Require sub-contractor performance bonds for packages above threshold. Parent company guarantees for specialist sub-contractors. Monthly financial health monitoring. Pre-qualified replacement sub-contractor list.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when critical sub-contractors lack performance bonds or financial health monitoring."
+    },
+    {
+      "id": "threat-retention-release-dispute",
+      "name": "Retention Monies Release Dispute",
+      "threat_category": "availability",
+      "description": "Employer withholds retention monies beyond entitled period using disputed defect claims as justification.",
+      "attack_scenario": "Contractor achieves practical completion. 12-month DLP expires with all notified defects remedied. Employer claims additional latent defects discovered at month 11 and withholds full 5 percent retention (GBP 1.5M) indefinitely.",
+      "affected_clauses": [
+        "con-retention",
+        "con-defects-liability",
+        "con-final-account"
+      ],
+      "detection": "Review retention release mechanism. Check for independent certification of defect remediation. Verify release timeline.",
+      "mitigation": "Split retention release: 50 percent at practical completion, 50 percent at DLP end. Independent certification of defect completion. Maximum 14-day release after certification. Adjudication for disputed amounts.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when retention clause lacks defined release timeline or independent certification."
+    },
+    {
+      "id": "threat-cdm-duty-holder-gap",
+      "name": "CDM Duty Holder Responsibility Gap",
+      "threat_category": "authorization",
+      "description": "Unclear CDM duty holder appointments create gaps in health and safety responsibility with potential criminal liability.",
+      "attack_scenario": "Multi-contractor project without clear principal contractor appointment. Serious accident occurs. HSE investigation reveals no party accepted principal contractor duties. Multiple parties face prosecution.",
+      "affected_clauses": [
+        "con-cdm-regulations",
+        "emp-health-safety",
+        "con-site-access"
+      ],
+      "detection": "Review CDM appointments. Check for principal designer and principal contractor identification. Verify construction phase plan responsibility.",
+      "mitigation": "Explicit CDM duty holder appointments in contract. Named principal designer and principal contractor. Construction phase plan as condition precedent to site access. Regular H and S audits.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when construction contract lacks explicit CDM duty holder appointments."
+    },
+    {
+      "id": "threat-warranty-disclosure-limitation",
+      "name": "Warranty Disclosure Letter Weaponisation",
+      "threat_category": "repudiation",
+      "description": "Seller uses disclosure letter to qualify warranties so extensively that warranties become commercially meaningless.",
+      "attack_scenario": "Buyer relies on warranty that there are no material litigation claims. Disclosure letter contains 200-page data room index as general disclosure qualifying all warranties. Buyer discovers GBP 5M claim post-completion but warranty is effectively nullified.",
+      "affected_clauses": [
+        "ma-disclosure-letter",
+        "ma-representations-warranties",
+        "ma-warranty-litigation"
+      ],
+      "detection": "Review disclosure letter for: general vs specific disclosure, fair disclosure standard, and data room materiality threshold.",
+      "mitigation": "Require specific disclosures against individual warranties. Prohibit general disclosure by reference to data room. Define fair disclosure standard requiring sufficient detail to identify nature and scope.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when disclosure letter permits general disclosure against all warranties."
+    },
+    {
+      "id": "threat-mac-clause-invocation",
+      "name": "Material Adverse Change Clause Opportunistic Invocation",
+      "threat_category": "repudiation",
+      "description": "Buyer invokes MAC clause to walk away from deal or renegotiate price based on market-wide changes not specific to target.",
+      "attack_scenario": "Buyer signs SPA at 10x EBITDA. Market correction reduces comparable valuations to 7x. Buyer invokes MAC clause citing general economic downturn. Seller disputes. Deal stalls for 12 months during litigation.",
+      "affected_clauses": [
+        "ma-mac-clause",
+        "ma-conditions-precedent",
+        "ma-limitation-periods"
+      ],
+      "detection": "Review MAC definition for: carve-outs for market-wide changes, materiality threshold, and measurement period.",
+      "mitigation": "Define MAC narrowly as target-specific. Carve out: market-wide changes, industry changes, regulatory changes, and pandemic effects. Include materiality threshold (e.g., 20 percent EBITDA decline). Time-limited measurement period.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when MAC clause lacks market-wide carve-outs or defined materiality threshold."
+    },
+    {
+      "id": "threat-earn-out-manipulation",
+      "name": "Earn-Out Target Manipulation by Buyer",
+      "threat_category": "integrity",
+      "description": "Buyer manipulates post-completion business operations to prevent earn-out targets being achieved.",
+      "attack_scenario": "Seller agrees to GBP 10M earn-out based on 3-year revenue targets. Post-completion, buyer diverts key customers to other group companies, reduces marketing budget, and reassigns sales team. Revenue targets missed. No earn-out paid.",
+      "affected_clauses": [
+        "ma-earn-out",
+        "ma-key-person",
+        "ma-reserved-matters"
+      ],
+      "detection": "Review earn-out protections for: conduct of business obligations, anti-embarrassment provisions, and independent accounting.",
+      "mitigation": "Include conduct of business covenant requiring buyer to operate business consistently. Anti-avoidance provision prohibiting actions designed to reduce earn-out. Independent accountant for determination. Accelerated payment on certain events.",
+      "severity": "critical",
+      "agent_use": "Contract Reviewer: flag when earn-out lacks conduct of business covenants or anti-avoidance provisions."
+    },
+    {
+      "id": "threat-locked-box-leakage",
+      "name": "Locked Box Value Leakage",
+      "threat_category": "integrity",
+      "description": "Seller extracts value from target company between locked box date and completion through permitted leakage loopholes.",
+      "attack_scenario": "Locked box date set 3 months before completion. Seller causes target to pay management fees, inter-company dividends, and bonus payments totalling GBP 2M as permitted leakage not adequately defined.",
+      "affected_clauses": [
+        "ma-locked-box",
+        "ma-completion-accounts",
+        "ma-warranty-accounts"
+      ],
+      "detection": "Review locked box provisions for: leakage definition completeness, permitted leakage scope, and daily compensation rate.",
+      "mitigation": "Define leakage broadly covering all value extraction. Narrow permitted leakage to specifically scheduled items. Daily interest compensation for leakage. Seller warranty on no leakage. Audit right over target accounts.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when locked box mechanism has broad permitted leakage or lacks daily compensation."
+    },
+    {
+      "id": "threat-warranty-insurance-gap",
+      "name": "Warranty and Indemnity Insurance Coverage Gap",
+      "threat_category": "availability",
+      "description": "W and I insurance policy excludes key warranty areas or has conditions that prevent claim recovery.",
+      "attack_scenario": "Buyer obtains W and I insurance for GBP 50M deal. Post-completion, discovers target has EUR 8M tax liability. W and I policy excludes known tax risks flagged in due diligence Q and A but buyer did not appreciate significance of disclosure.",
+      "affected_clauses": [
+        "ma-wi-insurance",
+        "ma-warranty-tax",
+        "ma-indemnity-specific"
+      ],
+      "detection": "Review W and I policy exclusions against specific deal risks. Check for knowledge scraping provisions. Verify de minimis and basket alignment with SPA.",
+      "mitigation": "Align W and I policy terms with SPA. Negotiate specific deal exclusions. Ensure knowledge scraping does not capture general due diligence. Separate specific indemnities for excluded risks.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when W and I insurance has not been cross-referenced against known deal risks."
+    },
+    {
+      "id": "threat-drag-along-minority-squeeze",
+      "name": "Drag-Along Rights Minority Squeeze Out",
+      "threat_category": "authorization",
+      "description": "Majority shareholder uses drag-along rights to force minority exit at unfavourable valuation or terms.",
+      "attack_scenario": "Majority shareholder (70 percent) receives offer from friendly buyer at below-market valuation. Exercises drag-along forcing minority (30 percent) to sell at same price. Minority has no price protection or independent valuation right.",
+      "affected_clauses": [
+        "ma-drag-along",
+        "ma-tag-along",
+        "ma-sha-protections"
+      ],
+      "detection": "Review drag-along for: minimum price protection, independent valuation, matching terms for all shareholders, and excluded transactions.",
+      "mitigation": "Include minimum price floor or independent valuation mechanism. Tag-along at same price and terms. Exclude related-party transactions from drag-along. Require arm length certification.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when drag-along lacks minimum price protection or independent valuation."
+    },
+    {
+      "id": "threat-good-leaver-reclassification",
+      "name": "Good Leaver to Bad Leaver Reclassification",
+      "threat_category": "repudiation",
+      "description": "Company manipulates circumstances to reclassify departing shareholder-employee from good leaver to bad leaver, drastically reducing share buyback price.",
+      "attack_scenario": "Founder-employee holds 20 percent at fair market value of GBP 5M. Company manufactures disciplinary issue. Founder dismissed for cause. Reclassified as bad leaver. Shares bought back at nominal value.",
+      "affected_clauses": [
+        "ma-good-bad-leaver",
+        "emp-disciplinary",
+        "ma-sha-protections"
+      ],
+      "detection": "Review good/bad leaver definitions. Check for subjective reclassification criteria. Verify appeal mechanism and independent determination.",
+      "mitigation": "Define good/bad leaver objectively with clear criteria. Require independent determination of leaver status. Include appeal mechanism. Minimum floor price even for bad leavers. Time-based vesting to fair value.",
+      "severity": "critical",
+      "agent_use": "Risk Assessor: flag when good/bad leaver provisions have subjective criteria or lack independent determination."
+    },
+    {
+      "id": "threat-conditions-precedent-delay",
+      "name": "Conditions Precedent Satisfaction Delay Tactic",
+      "threat_category": "availability",
+      "description": "Party deliberately delays satisfaction of conditions precedent to exploit market changes or renegotiate terms.",
+      "attack_scenario": "Buyer obligation to obtain regulatory clearance as CP. Buyer makes deficient filing to delay clearance. Market moves in buyer favour. Buyer uses delay to renegotiate 15 percent price reduction under threat of long-stop date expiry.",
+      "affected_clauses": [
+        "ma-conditions-precedent",
+        "ma-mac-clause",
+        "ma-limitation-periods"
+      ],
+      "detection": "Review CP clause for: best efforts vs reasonable efforts standard, cooperation obligations, and long-stop date consequences.",
+      "mitigation": "Require best efforts to satisfy CPs. Include cooperation obligations. Reverse break fee for deliberate delay. Seller right to waive CPs. Short long-stop date with automatic extensions only for regulatory delays.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when CPs lack efforts standard or reverse break fee for delay."
+    },
+    {
+      "id": "threat-material-contract-termination",
+      "name": "Post-Completion Material Contract Termination",
+      "threat_category": "availability",
+      "description": "Key customer or supplier terminates contract triggered by change of control, destroying deal value.",
+      "attack_scenario": "Target primary customer (40 percent revenue) has change of control termination right. Post-completion, customer terminates and moves to competitor. Target revenue drops 40 percent. No seller indemnity for customer loss.",
+      "affected_clauses": [
+        "ma-material-contracts",
+        "ma-warranty-contracts",
+        "ma-conditions-precedent"
+      ],
+      "detection": "Review material contracts for change of control provisions. Check for customer and supplier consent requirements. Verify warranty on material contract status.",
+      "mitigation": "Make key contract consents conditions precedent. Obtain waivers of change of control rights pre-completion. Specific indemnity for material contract terminations. Escrow portion of consideration against contract risk.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when material contracts have unwaived change of control termination rights."
+    },
+    {
+      "id": "threat-completion-accounts-manipulation",
+      "name": "Completion Accounts Manipulation",
+      "threat_category": "integrity",
+      "description": "Seller manipulates working capital and accounting policies between signing and completion to maximise completion price.",
+      "attack_scenario": "Between signing and completion, seller accelerates revenue recognition, delays supplier payments, and reclassifies capex as opex. Working capital appears GBP 3M higher than normal. Buyer overpays on completion accounts.",
+      "affected_clauses": [
+        "ma-completion-accounts",
+        "ma-warranty-accounts",
+        "ma-locked-box"
+      ],
+      "detection": "Review completion accounts mechanism for: consistent accounting policy requirement, working capital target, and dispute resolution.",
+      "mitigation": "Require consistent application of accounting policies. Define normalised working capital target. Independent accountant for disputes. Look-back period for unusual transactions. Buyer right to attend stocktake.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when completion accounts lack normalised working capital target or consistent policy requirement."
+    },
+    {
+      "id": "threat-ai-model-deprecation-without-notice",
+      "name": "AI Model Deprecation Without Migration Path",
+      "threat_category": "availability",
+      "description": "AI provider deprecates model version that customer depends on without adequate notice or migration support.",
+      "attack_scenario": "Customer builds production workflow around specific model capabilities. Provider deprecates model with 30-day notice. Replacement model produces different outputs. Customer workflow breaks. No migration support provided.",
+      "affected_clauses": [
+        "ai-model-deprecation",
+        "ai-model-versioning",
+        "ai-api-sla"
+      ],
+      "detection": "Review model lifecycle commitments. Check for deprecation notice period, migration support, and backward compatibility guarantees.",
+      "mitigation": "Require 6-month deprecation notice. Include migration support obligation. Guarantee model access for 12 months after deprecation announcement. Version pinning rights. API backward compatibility commitment.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when AI service contract lacks model deprecation notice period or migration support."
+    },
+    {
+      "id": "threat-ai-training-data-contamination",
+      "name": "AI Training Data Contamination Liability",
+      "threat_category": "integrity",
+      "description": "AI provider training data contains copyrighted, biased, or illegal content, creating downstream liability for customer deploying the model.",
+      "attack_scenario": "Customer deploys provider AI model for content generation. Model outputs contain verbatim copyrighted text from training data. Rights holder sues customer for copyright infringement. Provider indemnity excludes training data issues.",
+      "affected_clauses": [
+        "ai-training-data-rights",
+        "ai-output-indemnity",
+        "ai-output-ownership"
+      ],
+      "detection": "Review training data warranties and representations. Check indemnity scope for training data-related claims. Verify content filtering commitments.",
+      "mitigation": "Require training data provenance warranty. Include broad IP indemnity covering training data contamination. Contractual commitment to content filtering. Regular model audit rights.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when AI provider contract excludes training data issues from indemnity scope."
+    },
+    {
+      "id": "threat-ai-bias-regulatory-exposure",
+      "name": "AI Bias Creating Regulatory Discrimination Exposure",
+      "threat_category": "authorization",
+      "description": "AI system exhibits discriminatory bias creating regulatory enforcement risk and liability for deployer organisation.",
+      "attack_scenario": "HR department deploys AI screening tool. Tool systematically disadvantages candidates from certain demographic groups. Regulatory investigation reveals bias. Deployer fined and ordered to compensate affected candidates. Provider disclaims responsibility.",
+      "affected_clauses": [
+        "ai-bias-monitoring",
+        "ai-algorithmic-audit",
+        "ai-human-oversight"
+      ],
+      "detection": "Review AI Act compliance provisions. Check for bias testing obligations, monitoring commitments, and liability allocation for algorithmic discrimination.",
+      "mitigation": "Require pre-deployment bias testing with documented results. Ongoing bias monitoring with defined metrics. Shared liability for bias in high-risk applications. Human oversight requirements. Regular algorithmic audits.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when high-risk AI deployment lacks bias monitoring or shared liability provisions."
+    },
+    {
+      "id": "threat-ai-prompt-injection-liability",
+      "name": "AI Prompt Injection Causing Data Breach",
+      "threat_category": "confidentiality",
+      "description": "Malicious prompt injection in AI system causes disclosure of confidential data or execution of unintended actions.",
+      "attack_scenario": "Customer deploys AI chatbot with access to internal knowledge base. Adversarial user crafts prompt injection that extracts confidential customer data through chatbot responses. Provider claims customer responsible for deployment security.",
+      "affected_clauses": [
+        "ai-content-filtering",
+        "ai-penetration-testing",
+        "data-protection-security-measures"
+      ],
+      "detection": "Review security obligations for AI systems. Check for prompt injection testing, input sanitisation, and security update commitments.",
+      "mitigation": "Require provider to implement prompt injection defences. Regular adversarial testing. Shared responsibility for AI-specific security vulnerabilities. Mandatory security updates for discovered vulnerabilities.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when AI system contract lacks prompt injection security obligations."
+    },
+    {
+      "id": "threat-ai-usage-metering-opacity",
+      "name": "AI Usage Metering Opacity and Billing Disputes",
+      "threat_category": "integrity",
+      "description": "AI provider uses opaque token counting or usage metering that customers cannot independently verify.",
+      "attack_scenario": "Customer uses AI API with per-token pricing. Provider counts system prompts, hidden context, and retry attempts in usage metering. Actual billed tokens are 3x customer-observable usage. No audit mechanism exists.",
+      "affected_clauses": [
+        "ai-usage-metrics",
+        "ai-api-sla",
+        "fin-financial-audit-rights"
+      ],
+      "detection": "Review usage metering definitions. Check for transparency in counting methodology. Verify audit rights over usage data.",
+      "mitigation": "Define metering methodology precisely (what counts as billable usage). Provide real-time usage dashboard. Include audit right over metering systems. Cap billing for system-initiated tokens.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when AI pricing lacks transparent metering methodology or usage audit rights."
+    },
+    {
+      "id": "threat-ai-multi-tenant-data-leakage",
+      "name": "AI Multi-Tenant Model Data Leakage",
+      "threat_category": "confidentiality",
+      "description": "Fine-tuned or RAG-enhanced AI model in multi-tenant environment leaks one tenant data to another through model responses.",
+      "attack_scenario": "Provider offers shared fine-tuned model service. Customer A fine-tunes on proprietary pricing data. Customer B queries model and receives responses reflecting Customer A pricing insights. No tenant isolation in model layer.",
+      "affected_clauses": [
+        "ai-multi-tenancy",
+        "ai-data-residency",
+        "ai-training-restrictions"
+      ],
+      "detection": "Review multi-tenancy architecture for AI models. Check for model-level isolation, fine-tuning isolation, and data segregation commitments.",
+      "mitigation": "Require dedicated model instances for sensitive data. Prohibit cross-tenant training data mixing. Include data isolation architecture documentation. Regular tenant isolation testing.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when AI multi-tenant service lacks model-level data isolation guarantees."
+    },
+    {
+      "id": "threat-ai-cloud-exit-impossibility",
+      "name": "AI Cloud Platform Exit Lock-In",
+      "threat_category": "availability",
+      "description": "AI cloud platform creates technical dependencies that make migration practically impossible, despite contractual exit rights.",
+      "attack_scenario": "Customer builds ML pipeline on provider proprietary framework. Custom model formats, proprietary feature store, and platform-specific inference APIs. Migration requires rebuilding entire ML stack. Estimated cost exceeds 3 years of contract value.",
+      "affected_clauses": [
+        "ai-cloud-exit-planning",
+        "ai-vendor-lock-in",
+        "ai-data-portability"
+      ],
+      "detection": "Review exit provisions for AI-specific portability. Check for model export formats, data export, and training pipeline portability.",
+      "mitigation": "Require standard model export formats (ONNX, PMML). Include training data and feature definitions in export. Provider assistance for migration. Transition period with continued access. Cap transition charges.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when AI platform contract lacks model portability or standard export format requirements."
+    },
+    {
+      "id": "threat-ai-explainability-compliance-gap",
+      "name": "AI Explainability Compliance Gap",
+      "threat_category": "repudiation",
+      "description": "AI provider unable to provide explainability required by EU AI Act or sector regulations, creating compliance gap for deployer.",
+      "attack_scenario": "Financial institution deploys AI credit scoring from provider. Regulator requires explanation of individual decisions. Provider model is black-box. Cannot provide required explanations. Institution fined for non-compliance.",
+      "affected_clauses": [
+        "ai-explainability",
+        "ai-human-oversight",
+        "warranty-compliance-laws"
+      ],
+      "detection": "Review explainability commitments against regulatory requirements. Check for individual decision explanation capability. Verify documentation obligations.",
+      "mitigation": "Require explainability at individual decision level. Include regulatory explanation format compliance. Provider obligation to support regulatory inquiries. Technical documentation of model logic.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when high-risk AI application lacks individual decision explainability commitment."
+    },
+    {
+      "id": "threat-ai-synthetic-data-liability",
+      "name": "AI Synthetic Data Quality Liability",
+      "threat_category": "integrity",
+      "description": "AI-generated synthetic data used for testing or training contains statistical artefacts that lead to flawed business decisions.",
+      "attack_scenario": "Provider generates synthetic customer data for testing. Data has hidden correlation bias not present in real data. Customer trains production model on synthetic data. Model performs well on synthetic test data but fails on real data, causing significant misallocated resources.",
+      "affected_clauses": [
+        "ai-synthetic-data",
+        "warranty-fitness",
+        "warranty-services"
+      ],
+      "detection": "Review synthetic data quality warranties. Check for statistical validation requirements. Verify fitness-for-purpose commitments.",
+      "mitigation": "Include statistical fidelity warranty for synthetic data. Require documented validation methodology. Customer right to independent validation. Liability for decisions made on defective synthetic data.",
+      "severity": "medium",
+      "agent_use": "Risk Assessor: flag when synthetic data service lacks quality warranties or validation methodology."
+    },
+    {
+      "id": "threat-ai-foundation-model-license-scope",
+      "name": "Foundation Model License Scope Creep",
+      "threat_category": "authorization",
+      "description": "Foundation model license terms restrict commercial use cases not apparent at time of licensing, creating compliance risk.",
+      "attack_scenario": "Company licenses open-weight foundation model under permissive-seeming license. Deploys for customer-facing product. License actually prohibits use in high-risk domains. Company unknowingly violates license in healthcare application. Faces injunction and damages.",
+      "affected_clauses": [
+        "ai-foundation-model-license",
+        "ai-responsible-ai",
+        "warranty-non-infringement"
+      ],
+      "detection": "Review foundation model license for: use case restrictions, acceptable use policies, downstream distribution rights, and modification rights.",
+      "mitigation": "Comprehensive license audit before deployment. Map all intended use cases against license restrictions. Obtain explicit waivers for borderline use cases. Include downstream license compliance in vendor contracts.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when foundation model license has not been mapped against intended use cases."
+    },
+    {
+      "id": "threat-greenwashing-supply-chain-liability",
+      "name": "Greenwashing Liability Through Supply Chain Claims",
+      "threat_category": "integrity",
+      "description": "Company makes environmental claims based on supplier representations that prove false, creating greenwashing liability.",
+      "attack_scenario": "Company markets product as carbon-neutral based on supplier offsetting certificates. Certificates prove fraudulent. Company faces regulatory action under Green Claims Directive and consumer class action. Supplier provides no indemnity.",
+      "affected_clauses": [
+        "esg-green-claims",
+        "esg-greenwashing-liability",
+        "esg-carbon-disclosure"
+      ],
+      "detection": "Review ESG claim verification mechanisms. Check for supplier warranty on environmental data. Verify indemnity for false ESG claims.",
+      "mitigation": "Require third-party verified ESG data from suppliers. Include specific indemnity for false environmental claims. Audit rights over supplier ESG data. Right to retract claims and terminate if data is false.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when environmental claims rely on unverified supplier data without indemnity."
+    },
+    {
+      "id": "threat-scope3-reporting-manipulation",
+      "name": "Scope 3 Emissions Data Manipulation",
+      "threat_category": "integrity",
+      "description": "Supplier manipulates emissions data to appear more sustainable, distorting customer Scope 3 reporting obligations.",
+      "attack_scenario": "Customer reports Scope 3 emissions using supplier-provided data. Supplier underreports by 60 percent using non-standard methodology. Customer regulatory filing contains material misstatement. CSRD enforcement action initiated.",
+      "affected_clauses": [
+        "esg-scope3-emissions",
+        "esg-reporting-obligations",
+        "esg-sustainability-audit"
+      ],
+      "detection": "Review emissions data methodology requirements. Check for third-party verification. Verify consistency with recognised standards (GHG Protocol).",
+      "mitigation": "Require GHG Protocol-compliant methodology. Third-party verified emissions data. Annual sustainability audit rights. Indemnity for regulatory action caused by false data. Contractual emissions reduction targets.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when Scope 3 data obligations lack methodology specification or third-party verification."
+    },
+    {
+      "id": "threat-deforestation-due-diligence-failure",
+      "name": "EUDR Deforestation Due Diligence Chain Break",
+      "threat_category": "authorization",
+      "description": "Supply chain deforestation due diligence breaks at sub-supplier level, creating EUDR non-compliance risk.",
+      "attack_scenario": "Importer contracts with processor who provides deforestation-free certification. Processor sub-sources from smallholders with no traceability. EUDR inspection reveals supply chain gap. Importer faces product seizure and fine up to 4 percent of EU turnover.",
+      "affected_clauses": [
+        "esg-deforestation-free",
+        "esg-supply-chain-transparency",
+        "esg-sustainability-audit"
+      ],
+      "detection": "Review EUDR compliance obligations in supply contracts. Check for full traceability to plot of land. Verify due diligence statement provisions.",
+      "mitigation": "Require geolocation data for all sourced commodities. Full supply chain mapping to origin. Satellite monitoring integration. Right to audit entire supply chain. Immediate termination for non-compliance.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when EUDR-relevant commodity supply chain lacks traceability to origin."
+    },
+    {
+      "id": "threat-modern-slavery-statement-gap",
+      "name": "Modern Slavery Statement Enforcement Gap",
+      "threat_category": "authorization",
+      "description": "Supply chain modern slavery provisions exist on paper but lack enforcement mechanisms, creating human rights liability.",
+      "attack_scenario": "Company supply chain audit reveals forced labour in tier-3 supplier. Company modern slavery statement claims zero tolerance. Lack of contractual audit rights below tier-1 prevents verification. NGO expose causes reputational crisis.",
+      "affected_clauses": [
+        "esg-modern-slavery",
+        "esg-human-rights-dd",
+        "esg-labour-standards"
+      ],
+      "detection": "Review modern slavery provisions for: audit depth, cascade requirements, remediation obligations, and worker access to grievance mechanisms.",
+      "mitigation": "Cascade modern slavery requirements to all supply chain tiers. Unannounced audit rights. Worker grievance mechanisms. Remediation-first approach with termination as last resort. Annual due diligence reporting.",
+      "severity": "critical",
+      "agent_use": "Risk Assessor: flag when modern slavery provisions do not cascade beyond tier-1 suppliers."
+    },
+    {
+      "id": "threat-esg-termination-trigger-avoidance",
+      "name": "ESG Termination Trigger Avoidance Through Technicality",
+      "threat_category": "repudiation",
+      "description": "Supplier avoids ESG-related termination by technically meeting minimum thresholds while violating spirit of commitments.",
+      "attack_scenario": "Contract requires supplier to maintain B Corp certification. Supplier loses certification but immediately applies for recertification. Claims certification is pending, not lost. Avoids termination trigger while operating without certification for 18 months.",
+      "affected_clauses": [
+        "esg-termination-triggers",
+        "esg-reporting-obligations",
+        "esg-sustainability-audit"
+      ],
+      "detection": "Review ESG termination triggers for: clear definitions, grace periods, and interim compliance requirements.",
+      "mitigation": "Define ESG triggers precisely (lost vs pending vs expired). Include interim compliance obligations during grace period. Maximum cure period. Automatic suspension of preferred status during cure.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when ESG termination triggers have ambiguous definitions or unlimited cure periods."
+    },
+    {
+      "id": "threat-csddd-due-diligence-cascade",
+      "name": "CSDDD Due Diligence Cascade Failure",
+      "threat_category": "authorization",
+      "description": "Corporate Sustainability Due Diligence Directive obligations not adequately cascaded through supply chain contracts.",
+      "attack_scenario": "Large company subject to CSDDD has due diligence obligations for entire value chain. Key supplier contracts predate CSDDD and lack human rights and environmental due diligence provisions. Company cannot fulfil CSDDD obligations without contract renegotiation.",
+      "affected_clauses": [
+        "esg-human-rights-dd",
+        "esg-supply-chain-transparency",
+        "esg-labour-standards"
+      ],
+      "detection": "Review supply contracts for CSDDD compliance. Check for human rights and environmental due diligence cascade. Verify remediation and termination provisions.",
+      "mitigation": "Include CSDDD-compliant due diligence cascade in all supply contracts. Right to conduct human rights impact assessments. Require supplier prevention and remediation plans. Graduated response mechanism.",
+      "severity": "high",
+      "agent_use": "STRIDE Enumerator: flag when supply contracts lack CSDDD-compliant due diligence cascade provisions."
+    },
+    {
+      "id": "threat-carbon-offset-fraud",
+      "name": "Carbon Offset Credit Fraud in Contractual Commitments",
+      "threat_category": "integrity",
+      "description": "Contractual net-zero commitments rely on carbon offset credits that are worthless, double-counted, or from fraudulent projects.",
+      "attack_scenario": "Supplier commits to net-zero supply by 2030 using offset credits. Credits purchased from registry that later proves fraudulent (phantom forest projects). Customer net-zero claims invalidated. Regulatory and reputational damage.",
+      "affected_clauses": [
+        "esg-carbon-disclosure",
+        "esg-green-claims",
+        "esg-greenwashing-liability"
+      ],
+      "detection": "Review offset quality requirements. Check for recognised registry requirements (Gold Standard, Verra). Verify additionality and permanence criteria.",
+      "mitigation": "Require offsets from recognised registries only. Include additionality and permanence requirements. Prioritise reduction over offsetting. Independent verification of offset quality. Replacement obligation for invalidated credits.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when carbon commitments rely on offsets without quality standards or verification."
+    },
+    {
+      "id": "threat-living-wage-compliance-gap",
+      "name": "Living Wage Commitment Enforcement Gap",
+      "threat_category": "authorization",
+      "description": "Contractual living wage commitments not effectively monitored or enforced in supply chain.",
+      "attack_scenario": "Brand commits to living wage across supply chain. Tier-1 supplier signs living wage clause but pays minimum wage to agency workers who constitute 60 percent of workforce. Agency arrangement technically outside direct employment commitment.",
+      "affected_clauses": [
+        "esg-living-wage",
+        "esg-labour-standards",
+        "esg-supply-chain-transparency"
+      ],
+      "detection": "Review living wage provision scope. Check coverage of agency, temporary, and sub-contracted workers. Verify monitoring mechanism.",
+      "mitigation": "Define living wage to cover all workers including agency and temporary. Require worker payroll verification. Unannounced audit rights. Include worker grievance hotline. Price adjustment mechanism to support living wage.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when living wage commitment excludes agency or temporary workers."
+    },
+    {
+      "id": "threat-biodiversity-net-gain-dispute",
+      "name": "Biodiversity Net Gain Obligation Dispute",
+      "threat_category": "repudiation",
+      "description": "Developer disputes biodiversity net gain obligations or measurement methodology, delaying project completion.",
+      "attack_scenario": "Development contract requires 10 percent biodiversity net gain. Developer argues baseline assessment overvalued existing habitat. Disputes measurement methodology. Refuses to implement additional mitigation. Planning condition remains unsatisfied.",
+      "affected_clauses": [
+        "esg-biodiversity",
+        "con-sustainability-requirements",
+        "con-practical-completion"
+      ],
+      "detection": "Review BNG obligations for: baseline assessment methodology, measurement standard, and dispute resolution for ecological assessments.",
+      "mitigation": "Specify DEFRA biodiversity metric as measurement standard. Independent ecologist for baseline and completion assessment. Pre-agreed habitat banking arrangements. Escrow for long-term management costs.",
+      "severity": "medium",
+      "agent_use": "Risk Assessor: flag when biodiversity obligations lack specified measurement methodology or independent assessment."
+    },
+    {
+      "id": "threat-conflict-minerals-traceability-break",
+      "name": "Conflict Minerals Traceability Chain Break",
+      "threat_category": "authorization",
+      "description": "Supply chain conflict minerals due diligence breaks at smelter level, creating EU Conflict Minerals Regulation non-compliance.",
+      "attack_scenario": "Electronics manufacturer sources components with conflict mineral representations from tier-1 supplier. Smelter-level traceability not maintained. EU customs audit reveals non-compliant supply chain. Products detained at border.",
+      "affected_clauses": [
+        "esg-conflict-minerals",
+        "esg-supply-chain-transparency",
+        "esg-sustainability-audit"
+      ],
+      "detection": "Review conflict minerals provisions for: smelter-level traceability, OECD due diligence guidance alignment, and RCOI obligations.",
+      "mitigation": "Require RMAP-conformant smelter sourcing. Full chain of custody documentation. Annual conflict minerals report from all suppliers. Right to audit smelter information. Non-compliance triggers termination.",
+      "severity": "high",
+      "agent_use": "STRIDE Enumerator: flag when conflict minerals obligations lack smelter-level traceability or OECD alignment."
+    },
+    {
+      "id": "threat-sanctions-evasion-through-intermediary",
+      "name": "Sanctions Evasion Through Trade Intermediary",
+      "threat_category": "authorization",
+      "description": "Counter-party uses intermediary entities in non-sanctioned jurisdictions to circumvent trade sanctions.",
+      "attack_scenario": "Customer sells technology to Dubai trading company. Trading company re-exports to sanctioned country through complex intermediary chain. Customer faces secondary sanctions exposure. Trading company had known links to sanctioned entities.",
+      "affected_clauses": [
+        "intl-sanctions-compliance",
+        "intl-export-control",
+        "intl-trade-embargo"
+      ],
+      "detection": "Review end-use and end-user verification provisions. Check for re-export restrictions. Verify sanctions screening obligations cover beneficial ownership.",
+      "mitigation": "End-use certification with re-export restrictions. Beneficial ownership screening. Right to terminate on reasonable suspicion of evasion. Annual sanctions compliance certification. Audit right over distribution chain.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when international trade contract lacks end-use verification or re-export restrictions."
+    },
+    {
+      "id": "threat-incoterm-risk-transfer-misunderstanding",
+      "name": "Incoterm Risk Transfer Point Misunderstanding",
+      "threat_category": "integrity",
+      "description": "Parties select inappropriate Incoterm creating unintended risk allocation for transit damage, insurance, and customs obligations.",
+      "attack_scenario": "Buyer agrees FOB terms assuming seller responsible until goods reach buyer warehouse. FOB risk transfers at ship rail in port of loading. Goods damaged in transit. Buyer has no insurance for transit leg. Loss uninsured.",
+      "affected_clauses": [
+        "intl-incoterms",
+        "intl-trade-terms",
+        "insurance-general-liability"
+      ],
+      "detection": "Review Incoterm selection against actual logistics arrangement. Check insurance coverage matches risk transfer point. Verify customs obligation awareness.",
+      "mitigation": "Match Incoterm to actual risk appetite and logistics capability. Ensure marine insurance covers full transit. Document customs obligations explicitly. Include Incoterm education requirement for procurement teams.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when Incoterm selection does not match party logistics capability or insurance coverage."
+    },
+    {
+      "id": "threat-letter-of-credit-discrepancy",
+      "name": "Letter of Credit Documentary Discrepancy Exploitation",
+      "threat_category": "repudiation",
+      "description": "Buyer exploits minor documentary discrepancies to refuse payment under letter of credit.",
+      "attack_scenario": "Seller ships goods and presents LC documents. Buyer instructs bank to reject for minor discrepancy (company name abbreviated differently). By time discrepancy corrected, LC expired. Buyer has goods but no payment obligation under LC.",
+      "affected_clauses": [
+        "intl-letter-of-credit",
+        "intl-documentary-compliance",
+        "intl-documentary-collection"
+      ],
+      "detection": "Review LC terms for: discrepancy handling, amendment procedures, and presentation deadlines. Check document preparation standards.",
+      "mitigation": "Align LC terms exactly with commercial contract. Pre-check documents before presentation. Include LC amendment mechanism. Require confirmed LC for high-risk jurisdictions. Back-up payment obligation outside LC.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when international sale relies solely on LC payment without back-up payment obligation."
+    },
+    {
+      "id": "threat-dual-use-export-classification",
+      "name": "Dual-Use Goods Export Classification Dispute",
+      "threat_category": "authorization",
+      "description": "Goods or technology reclassified as dual-use after contract formation, creating unexpected export control compliance burden.",
+      "attack_scenario": "Company contracts to export AI processors to non-EU customer. Mid-contract, processor technology reclassified as dual-use under EU Regulation 2021/821. Export now requires licence. Customer in end-use risk country. Licence unlikely to be granted. Contract cannot be performed.",
+      "affected_clauses": [
+        "intl-export-control",
+        "intl-dual-use-goods",
+        "intl-technology-transfer"
+      ],
+      "detection": "Review export control classification and change provisions. Check for regulatory change risk allocation. Verify licence obligation responsibilities.",
+      "mitigation": "Include regulatory change clause covering export control reclassification. Allocate licence application responsibility. Force majeure coverage for export denial. Termination right without penalty if export licence refused.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when contract for technology export lacks export control reclassification provisions."
+    },
+    {
+      "id": "threat-currency-hedging-mismatch",
+      "name": "Currency Hedging Obligation Mismatch",
+      "threat_category": "integrity",
+      "description": "Long-term international contract with fixed pricing in one currency and costs in another, without adequate hedging provisions.",
+      "attack_scenario": "UK company contracts to deliver services priced in EUR over 5 years. GBP weakens 20 percent against EUR. Cost base in GBP rises proportionally. No currency adjustment mechanism. Project becomes loss-making in year 3.",
+      "affected_clauses": [
+        "intl-currency-hedging",
+        "fin-price-lock",
+        "fin-price-cpi-adjustment"
+      ],
+      "detection": "Review currency provisions for long-term contracts. Check for adjustment mechanisms. Verify hedging obligation or cost pass-through.",
+      "mitigation": "Include currency band (e.g., plus or minus 5 percent) with price adjustment outside band. Annual currency review mechanism. Option for hedging cost pass-through. Termination right for extreme currency movements.",
+      "severity": "medium",
+      "agent_use": "Risk Assessor: flag when multi-year international contract lacks currency adjustment mechanism."
+    },
+    {
+      "id": "threat-foreign-judgment-non-enforcement",
+      "name": "Foreign Judgment Non-Enforcement Risk",
+      "threat_category": "repudiation",
+      "description": "Court judgment obtained in one jurisdiction unenforceable in jurisdiction where counter-party assets are located.",
+      "attack_scenario": "UK company obtains GBP 5M judgment against Chinese supplier. China does not recognise UK court judgments. Supplier has no UK assets. Judgment is unenforceable. Legal costs wasted.",
+      "affected_clauses": [
+        "intl-foreign-judgment-enforcement",
+        "intl-jurisdiction",
+        "intl-arbitration-icc"
+      ],
+      "detection": "Assess bilateral treaty coverage for judgment enforcement. Check if Hague Convention applies. Evaluate counter-party asset locations.",
+      "mitigation": "Use ICC arbitration (New York Convention enforcement in 170+ countries). Include multi-jurisdiction enforcement clause. Require performance bond or bank guarantee from non-treaty jurisdictions.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when governing law jurisdiction lacks treaty coverage for enforcement in counter-party country."
+    },
+    {
+      "id": "threat-local-content-requirement-non-compliance",
+      "name": "Local Content Requirement Non-Compliance",
+      "threat_category": "authorization",
+      "description": "Failure to meet local content requirements in international contract leads to contract termination or penalty.",
+      "attack_scenario": "Infrastructure contractor commits to 40 percent local content in African mining project. Imports skilled labour and materials from home country due to local capacity gaps. Host government audit reveals only 15 percent local content. Contract terminated. Mobilisation costs lost.",
+      "affected_clauses": [
+        "intl-local-content",
+        "intl-technology-transfer",
+        "gov-social-value"
+      ],
+      "detection": "Review local content obligations and measurement methodology. Check for force majeure or capacity gap provisions. Verify reporting requirements.",
+      "mitigation": "Realistic local content targets with ramp-up schedule. Include capacity development obligation. Force majeure for genuine local capacity gaps. Regular reporting and verification. Graduated penalties rather than termination.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when local content targets lack ramp-up schedule or capacity gap provisions."
+    },
+    {
+      "id": "threat-sovereign-immunity-claim",
+      "name": "Sovereign Immunity Defence by State Entity",
+      "threat_category": "repudiation",
+      "description": "State-owned counter-party invokes sovereign immunity to avoid contractual obligations or arbitral award enforcement.",
+      "attack_scenario": "Company wins ICC arbitration award against state-owned enterprise. SOE invokes sovereign immunity to resist enforcement. Assets claimed to be state property immune from execution. Award remains unenforced for years.",
+      "affected_clauses": [
+        "intl-sovereign-immunity",
+        "gov-sovereign-immunity",
+        "intl-arbitration-icc"
+      ],
+      "detection": "Review waiver of immunity provisions. Check for commercial activity exception. Verify enforcement jurisdiction sovereign immunity rules.",
+      "mitigation": "Include express waiver of sovereign immunity for both jurisdiction and enforcement. Specify commercial activity nature. Identify commercial (not sovereign) assets for enforcement. Choose enforcement-friendly jurisdictions.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when contract with state entity lacks express sovereign immunity waiver."
+    },
+    {
+      "id": "threat-technology-transfer-forced-disclosure",
+      "name": "Forced Technology Transfer Through Local Requirements",
+      "threat_category": "confidentiality",
+      "description": "Host country regulations require technology transfer or local data storage that effectively forces disclosure of proprietary technology.",
+      "attack_scenario": "Software company enters joint venture in host country requiring source code escrow with local regulator. Regulator shares escrow contents with domestic competitor. Company intellectual property effectively transferred to competitor.",
+      "affected_clauses": [
+        "intl-technology-transfer",
+        "intl-cross-border-data",
+        "ip-background-reservation"
+      ],
+      "detection": "Review local law requirements for technology transfer. Check for source code disclosure obligations. Verify escrow agent independence.",
+      "mitigation": "Limit technology transfer to operational necessity. Use compilation-only escrow rather than source code. Contractual restrictions on escrow use. Joint venture IP quarantine. Exit provisions allowing IP withdrawal.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when international joint venture requires source code or technology disclosure to government entities."
+    },
+    {
+      "id": "threat-anti-bribery-supply-chain-exposure",
+      "name": "Anti-Bribery Supply Chain Exposure Through Agents",
+      "threat_category": "authorization",
+      "description": "Local agent or distributor makes corrupt payments on company behalf, creating FCPA/UK Bribery Act liability.",
+      "attack_scenario": "Company engages local agent for government contract in high-risk jurisdiction. Agent makes facilitation payments to officials. Company wins contract. Subsequent investigation reveals payments. Company faces prosecution under UK Bribery Act section 7.",
+      "affected_clauses": [
+        "intl-anti-bribery",
+        "intl-anti-money-laundering",
+        "compliance-anti-bribery"
+      ],
+      "detection": "Review agent appointment provisions. Check for due diligence requirements, commission transparency, and compliance monitoring.",
+      "mitigation": "Comprehensive agent due diligence. Commission paid only to verified bank accounts. Anti-bribery warranties and audit rights. Compliance training requirements. Termination right for any compliance concern. Indemnity for agent misconduct.",
+      "severity": "critical",
+      "agent_use": "STRIDE Enumerator: flag when agent appointment in high-risk jurisdiction lacks anti-bribery due diligence or audit rights."
+    },
+    {
+      "id": "threat-bid-rigging-consortium",
+      "name": "Bid Rigging Through Consortium Arrangement",
+      "threat_category": "integrity",
+      "description": "Consortium members collude to rotate winning bids across government contracts, maintaining artificial pricing.",
+      "attack_scenario": "Three companies form rotating consortia for government IT contracts. Each takes turns as lead bidder at inflated prices. Losing bids are deliberately non-competitive. Government pays 30 percent above market rate for 5 years.",
+      "affected_clauses": [
+        "gov-public-procurement",
+        "gov-conflict-of-interest",
+        "gov-transparency-obligations"
+      ],
+      "detection": "Review consortium arrangements for: independence of bids, pricing transparency, and rotation patterns.",
+      "mitigation": "Include anti-collusion declaration. Require independent bid preparation certification. Benchmark pricing against market rates. Audit trail for pricing decisions. Whistleblower mechanism for procurement fraud.",
+      "severity": "critical",
+      "agent_use": "Risk Assessor: flag when government contract involves consortium with history of rotating roles."
+    },
+    {
+      "id": "threat-conflict-of-interest-revolving-door",
+      "name": "Revolving Door Conflict of Interest",
+      "threat_category": "authorization",
+      "description": "Former government official joins contractor and uses insider knowledge to gain unfair advantage in procurement.",
+      "attack_scenario": "Senior procurement official joins IT contractor 3 months after leaving government. Uses knowledge of upcoming requirements and evaluation criteria to tailor bids. Contractor wins series of contracts. Other bidders complain.",
+      "affected_clauses": [
+        "gov-conflict-of-interest",
+        "gov-ethical-walls",
+        "gov-transparency-obligations"
+      ],
+      "detection": "Review conflict of interest provisions. Check for cooling-off period requirements. Verify ethical wall provisions for former officials.",
+      "mitigation": "Require declaration of former government employment. 12-month cooling-off period for direct procurement involvement. Ethical wall preventing access to insider information. Termination right for undisclosed conflicts.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when government contract lacks cooling-off period or conflict of interest declarations."
+    },
+    {
+      "id": "threat-social-value-commitment-non-delivery",
+      "name": "Social Value Commitment Non-Delivery",
+      "threat_category": "repudiation",
+      "description": "Contractor makes ambitious social value commitments to win bid then fails to deliver, with no effective enforcement.",
+      "attack_scenario": "Contractor commits to 30 percent local employment, 10 apprenticeships, and community investment to win social value-weighted procurement. Delivers 5 percent local employment, 2 apprenticeships, and no community investment. No contractual remedy available.",
+      "affected_clauses": [
+        "gov-social-value",
+        "gov-sme-subcontracting",
+        "gov-performance-regime"
+      ],
+      "detection": "Review social value obligations for: measurable KPIs, reporting requirements, and contractual remedies for non-delivery.",
+      "mitigation": "Define social value as measurable KPIs tied to payment mechanism. Quarterly reporting against commitments. Service credits for underperformance. Social value delivery as condition for contract extension.",
+      "severity": "medium",
+      "agent_use": "Risk Assessor: flag when social value commitments lack measurable KPIs or contractual enforcement mechanism."
+    },
+    {
+      "id": "threat-foi-commercial-confidentiality-override",
+      "name": "FOI Request Overriding Commercial Confidentiality",
+      "threat_category": "confidentiality",
+      "description": "Freedom of Information request results in disclosure of commercially sensitive pricing and methodology despite confidentiality provisions.",
+      "attack_scenario": "Competitor files FOI request for government contract pricing schedule. Government must disclose under transparency obligations. Contractor pricing methodology, margins, and resource costs disclosed. Competitor undercuts on all future bids.",
+      "affected_clauses": [
+        "gov-freedom-of-information",
+        "confidentiality-mutual",
+        "gov-transparency-obligations"
+      ],
+      "detection": "Review FOI provisions for: commercial confidentiality protections, consultation rights, and redaction procedures.",
+      "mitigation": "Include pre-disclosure consultation right. Mark genuinely confidential information. Agree FOI redaction protocol. Structure pricing to protect methodology while allowing headline disclosure.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when government contract lacks FOI consultation right or commercial confidentiality protocol."
+    },
+    {
+      "id": "threat-gainshare-manipulation",
+      "name": "Gainshare-Painshare Mechanism Manipulation",
+      "threat_category": "integrity",
+      "description": "Contractor manipulates baseline and measurement of gainshare-painshare mechanism to maximise gain and minimise pain.",
+      "attack_scenario": "Contractor deliberately inflates initial baseline costs. Achieves normal efficiency. Reports as significant savings. Claims 50 percent gainshare on phantom savings. When costs overrun, argues baseline was understated. Government bears all pain.",
+      "affected_clauses": [
+        "gov-gainshare-painshare",
+        "gov-open-book-accounting",
+        "gov-benchmarking"
+      ],
+      "detection": "Review gainshare baseline setting methodology. Check for independent verification. Verify symmetry of sharing mechanism.",
+      "mitigation": "Independent baseline verification. Annual benchmarking against market rates. Open book accounting. Symmetric sharing of both gains and losses. Cap on gainshare payments. Clawback for baseline manipulation.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when gainshare mechanism lacks independent baseline verification or asymmetric sharing."
+    },
+    {
+      "id": "threat-security-clearance-withdrawal",
+      "name": "Security Clearance Withdrawal Disrupting Service",
+      "threat_category": "availability",
+      "description": "Key personnel security clearance revoked or not renewed, disrupting delivery of government contract.",
+      "attack_scenario": "Lead consultant on classified government project has security clearance revoked after adverse personal circumstances. No cleared replacement available. Project halted for 6 months during replacement clearance process. Government invokes performance default.",
+      "affected_clauses": [
+        "gov-security-clearance",
+        "gov-key-personnel",
+        "gov-step-in-rights-public"
+      ],
+      "detection": "Review clearance provisions for: multiple cleared personnel requirement, clearance maintenance obligations, and replacement procedures.",
+      "mitigation": "Maintain 150 percent cleared personnel ratio. Immediate notification of clearance issues. Pre-cleared replacement personnel identified. Clearance maintenance as contractual obligation. Grace period for replacement.",
+      "severity": "high",
+      "agent_use": "Contract Reviewer: flag when classified government contract relies on single cleared individual without backup."
+    },
+    {
+      "id": "threat-state-aid-recovery-risk",
+      "name": "State Aid Recovery Risk for Contractor",
+      "threat_category": "authorization",
+      "description": "Government contract pricing constitutes illegal state aid that may be subject to recovery, creating financial exposure for contractor.",
+      "attack_scenario": "Government awards sole-source contract at above-market rates to support local employment. European Commission investigates as potential illegal state aid. Orders recovery of difference between contract price and market price. Contractor must repay EUR 5M.",
+      "affected_clauses": [
+        "gov-state-aid",
+        "gov-public-procurement",
+        "gov-most-favoured-customer"
+      ],
+      "detection": "Review contract pricing against market rates. Check for state aid compliance provisions. Verify procurement process compliance.",
+      "mitigation": "Include state aid compliance warranty from government. Market rate benchmarking evidence. Recovery indemnity from contracting authority. Termination right if state aid recovery ordered.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when government contract pricing significantly exceeds market rates without state aid analysis."
+    },
+    {
+      "id": "threat-step-in-rights-abuse",
+      "name": "Government Step-In Rights Overreach",
+      "threat_category": "authorization",
+      "description": "Government exercises step-in rights in circumstances beyond intended scope, taking control of contractor operations.",
+      "attack_scenario": "Minor service performance issue triggers emergency step-in. Government appoints replacement team at contractor expense. Government retains control for 6 months. Contractor continues paying but has no operational control. Quality actually declines under government management.",
+      "affected_clauses": [
+        "gov-step-in-rights-public",
+        "fin-step-in-rights",
+        "gov-performance-regime"
+      ],
+      "detection": "Review step-in triggers for proportionality. Check for contractor rights during step-in. Verify step-out mechanism and cost allocation.",
+      "mitigation": "Define step-in triggers narrowly and proportionately. Include cure period before step-in. Time-limit step-in period. Contractor right to propose remediation plan. Cost allocation based on fault. Clear step-out criteria.",
+      "severity": "medium",
+      "agent_use": "Contract Reviewer: flag when government step-in rights lack proportionality triggers or time limits."
+    },
+    {
+      "id": "threat-continuous-improvement-unfunded",
+      "name": "Unfunded Continuous Improvement Obligations",
+      "threat_category": "availability",
+      "description": "Government contract requires continuous improvement delivering year-on-year savings without additional funding for innovation.",
+      "attack_scenario": "Contract requires 3 percent annual efficiency savings over 10 years. By year 5, contractor has exhausted easy efficiencies. Must invest GBP 2M in automation to achieve further savings. Contract provides no innovation funding. Contractor cuts quality to meet savings target.",
+      "affected_clauses": [
+        "gov-continuous-improvement",
+        "gov-innovation-clause",
+        "gov-benchmarking"
+      ],
+      "detection": "Review continuous improvement obligations for: funding mechanism, innovation investment sharing, and quality protection.",
+      "mitigation": "Include innovation fund contribution from both parties. Set realistic improvement targets diminishing over time. Quality floor below which savings cannot reduce service. Investment cost sharing mechanism.",
+      "severity": "medium",
+      "agent_use": "Risk Assessor: flag when continuous improvement obligations lack innovation funding or quality floor."
+    },
+    {
+      "id": "threat-tupe-cost-underestimation",
+      "name": "Government TUPE Transfer Cost Underestimation",
+      "threat_category": "integrity",
+      "description": "Government provides incomplete TUPE information leading contractor to underestimate employment costs and win bid on incorrect basis.",
+      "attack_scenario": "Government outsources service. Provides ELI showing 50 employees. Actual transfer includes 20 additional agency workers with continuity of employment rights, unfunded pension liabilities of GBP 3M, and 5 pending tribunal claims.",
+      "affected_clauses": [
+        "gov-tupe-public",
+        "emp-tupe-transfer",
+        "emp-pension-contribution"
+      ],
+      "detection": "Review TUPE information completeness. Check for: agency workers, pension liabilities, pending claims, and custom terms. Verify warranty on ELI accuracy.",
+      "mitigation": "Require comprehensive ELI including agency workers 28+ days before bid submission. Government indemnity for pre-transfer liabilities and inaccurate ELI. Pension protection provisions. Price adjustment mechanism for undisclosed costs.",
+      "severity": "high",
+      "agent_use": "Risk Assessor: flag when government outsourcing contract lacks comprehensive TUPE information warranty or pre-transfer indemnity."
     }
   ]
 }

@@ -5,8 +5,15 @@
       "regulation": "CCPA",
       "article": "Section 1798.140(ag)",
       "requirement_summary": "A service provider is a person that processes personal information on behalf of a business pursuant to a written contract. The contract must prohibit the service provider from selling or sharing personal information, retaining, using, or disclosing personal information for any purpose other than performing the services specified in the contract, and must require the service provider to comply with the CCPA.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": "CA AG settled with Sephora for $1.2 million for failing to disclose sale of personal information and honor opt-out requests, including issues with service provider contracts (2022).",
@@ -17,8 +24,15 @@
       "regulation": "CCPA",
       "article": "Section 1798.100(d)",
       "requirement_summary": "A business that collects a consumer's personal information and discloses it to a service provider or contractor for a business purpose shall enter into an agreement with such service provider or contractor that specifies the limited and specified purpose for which the personal information is made available, obligates the service provider or contractor to comply with the CCPA, and grants the business rights to take reasonable steps to ensure compliance.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -29,8 +43,14 @@
       "regulation": "CCPA",
       "article": "Section 1798.140(ag)(1)(A)",
       "requirement_summary": "The written contract with a service provider must prohibit the service provider from selling or sharing the personal information provided to it by the business.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -41,8 +61,15 @@
       "regulation": "CCPA",
       "article": "Section 1798.140(ag)(1)(B)",
       "requirement_summary": "The written contract with a service provider must prohibit retaining, using, or disclosing the personal information for any purpose other than for the business purposes specified in the contract, including retaining, using, or disclosing the personal information for a commercial purpose other than providing the services specified in the contract.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-data-minimisation"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-data-minimisation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -53,8 +80,15 @@
       "regulation": "CCPA",
       "article": "Section 1798.140(ag)(1)(C)",
       "requirement_summary": "The written contract must prohibit the service provider from combining the personal information received from the business with personal information received from or on behalf of another person or collected from its own interaction with the consumer, except as permitted to detect data security incidents or protect against fraudulent or illegal activity.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-data-minimisation"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-data-minimisation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -65,8 +99,15 @@
       "regulation": "CCPA",
       "article": "Section 1798.140(ag)(1)(E)",
       "requirement_summary": "The service provider must notify the business if the service provider determines that it can no longer meet its obligations under the CCPA. The contract must grant the business the right to take reasonable and appropriate steps to stop and remediate unauthorized use of personal information.",
-      "required_clauses": ["dpa-breach-notification", "dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-breach-notification",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -77,8 +118,14 @@
       "regulation": "CCPA",
       "article": "Section 1798.140(ag)(2)",
       "requirement_summary": "A service provider that engages any other person to assist it in processing personal information on behalf of the business must notify the business of the engagement and ensure the engagement is pursuant to a written contract that includes the same obligations as the service provider contract. The subcontractor is also subject to the same restrictions and obligations as the service provider.",
-      "required_clauses": ["dpa-sub-processor"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -89,8 +136,14 @@
       "regulation": "CCPA",
       "article": "Section 1798.185(a)(10)",
       "requirement_summary": "A business must ensure that service providers and contractors cooperate with the business to enable the business to respond to verifiable consumer requests. The service provider must assist the business in fulfilling its obligations under the CCPA to respond to consumer rights requests within 45 days.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -101,8 +154,15 @@
       "regulation": "CCPA",
       "article": "Section 1798.140(ad)",
       "requirement_summary": "Sale means selling, renting, releasing, disclosing, disseminating, making available, transferring, or otherwise communicating orally, in writing, or by electronic or other means, a consumer's personal information by the business to a third party for monetary or other valuable consideration. Contracts must clearly define whether any data exchange constitutes a sale and include appropriate restrictions.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": "CA AG settlement with Sephora confirmed that sharing personal information with analytics providers in exchange for free services constituted a sale under the CCPA (2022).",
@@ -113,8 +173,13 @@
       "regulation": "CCPA",
       "article": "Section 1798.140(ah)",
       "requirement_summary": "Sharing means sharing, renting, releasing, disclosing, disseminating, making available, transferring, or otherwise communicating orally, in writing, or by electronic or other means, a consumer's personal information by the business to a third party for cross-context behavioral advertising, whether or not for monetary or other valuable consideration. Contracts with advertising partners must address sharing restrictions.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -125,8 +190,13 @@
       "regulation": "CCPA",
       "article": "Section 1798.120(a)",
       "requirement_summary": "A consumer shall have the right, at any time, to direct a business that sells or shares personal information about the consumer to third parties not to sell or share the consumer's personal information. This right is known as the right to opt-out. Contracts must include obligations for service providers and third parties to honor opt-out signals received by the business.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": "CPPA enforcement action against DoorDash for selling consumer personal information without providing an opt-out mechanism in violation of CCPA (2024).",
@@ -137,8 +207,13 @@
       "regulation": "CCPA",
       "article": "Section 1798.135(e)",
       "requirement_summary": "A business that has been notified by a consumer via an opt-out preference signal must treat the request as a valid opt-out of sale and sharing of personal information. Service provider and contractor agreements must ensure downstream compliance with opt-out preference signals such as the Global Privacy Control (GPC).",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": "CA AG enforcement advisory confirmed that businesses must honor GPC as a valid opt-out signal (2022).",
@@ -149,8 +224,14 @@
       "regulation": "CCPA",
       "article": "Section 1798.100(d)(4)",
       "requirement_summary": "A third party that receives personal information from a business pursuant to a written contract must enter into an agreement that specifies that the personal information is sold, shared, or disclosed only for limited and specified purposes, obligates the third party to comply with applicable CCPA obligations, and grants the business the right to take reasonable steps to ensure the third party uses the personal information consistently with the CCPA.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -161,8 +242,14 @@
       "regulation": "CCPA",
       "article": "Section 1798.100(a)",
       "requirement_summary": "A consumer shall have the right to request that a business that collects the consumer's personal information disclose to the consumer the categories and specific pieces of personal information the business has collected about that consumer. Service provider agreements must include cooperation obligations to help the business fulfil right-to-know requests within 45 days.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -173,8 +260,14 @@
       "regulation": "CCPA",
       "article": "Section 1798.105(a)",
       "requirement_summary": "A consumer shall have the right to request that a business delete any personal information about the consumer which the business has collected from the consumer. Upon receiving a verifiable consumer request, the business shall delete the consumer's personal information from its records, notify any service providers or contractors that maintain the information to delete it, and notify all third parties to whom the business has sold or shared the information to delete it.",
-      "required_clauses": ["dpa-deletion-return"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -185,8 +278,15 @@
       "regulation": "CCPA",
       "article": "Section 1798.105(c)",
       "requirement_summary": "A service provider or contractor shall cooperate with the business in responding to a verifiable consumer request to delete and shall delete the consumer's personal information from its records upon notification from the business, unless retention is necessary for specified exceptions (e.g., completing the transaction, detecting security incidents, complying with a legal obligation).",
-      "required_clauses": ["dpa-deletion-return", "dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-deletion-return",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -197,8 +297,14 @@
       "regulation": "CCPA",
       "article": "Section 1798.106(a)",
       "requirement_summary": "A consumer shall have the right to request that a business that maintains inaccurate personal information about the consumer correct that inaccurate personal information, taking into account the nature of the personal information and the purposes of the processing. Service provider agreements must include cooperation obligations to effectuate correction requests from the business.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -209,8 +315,16 @@
       "regulation": "CCPA",
       "article": "Section 1798.150(a)",
       "requirement_summary": "Any consumer whose nonencrypted and nonredacted personal information is subject to an unauthorized access and exfiltration, theft, or disclosure as a result of the business's violation of the duty to implement and maintain reasonable security procedures may institute a civil action for statutory damages of $100 to $750 per consumer per incident, or actual damages, whichever is greater. Service provider contracts should address security obligations and indemnification for breach liability.",
-      "required_clauses": ["dpa-security-measures", "dpa-breach-notification"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "dpa-breach-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": "Class action settlements under CCPA Section 1798.150 have resulted in multi-million dollar payouts, including the T-Mobile data breach settlement (2022).",
@@ -221,8 +335,13 @@
       "regulation": "CCPA",
       "article": "Section 1798.125(a)",
       "requirement_summary": "A business shall not discriminate against a consumer because the consumer exercised any of the consumer's rights under the CCPA, including by denying goods or services, charging different prices or rates, providing a different level or quality of goods or services, or suggesting that the consumer will receive a different price or rate or a different level or quality of goods or services. Contracts with service providers must ensure downstream compliance with non-discrimination obligations.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2020-01-01",
       "enforcement_examples": null,
@@ -233,8 +352,16 @@
       "regulation": "CPRA",
       "article": "Section 1798.140(j)",
       "requirement_summary": "CPRA introduced the category of contractor, defined as a person to whom the business makes available a consumer's personal information for a business purpose, pursuant to a written contract that prohibits the contractor from selling or sharing the personal information, processing the personal information for any purpose other than those specified in the contract, and requires the contractor to certify that it understands and will comply with the CCPA requirements.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-data-minimisation"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "professional-services"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-data-minimisation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "professional-services"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -245,8 +372,16 @@
       "regulation": "CPRA",
       "article": "Section 1798.140(j)(1)",
       "requirement_summary": "The written contract with a contractor must include a certification that the contractor understands the restrictions on processing personal information under the CCPA as amended by the CPRA and will comply with them. The business must monitor the contractor's compliance with the contract through measures including ongoing manual reviews and automated scans.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "professional-services"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "professional-services"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -257,8 +392,15 @@
       "regulation": "CPRA",
       "article": "Section 1798.121(a)",
       "requirement_summary": "A consumer shall have the right to direct a business that collects sensitive personal information about the consumer to limit its use of the consumer's sensitive personal information to that use which is necessary to perform the services or provide the goods reasonably expected by an average consumer. Sensitive personal information includes Social Security numbers, financial account information, precise geolocation, racial or ethnic origin, religious beliefs, genetic data, biometric information, health information, and sex life or sexual orientation data. Contracts must restrict service provider and contractor use of sensitive personal information.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-data-minimisation"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-data-minimisation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -269,8 +411,13 @@
       "regulation": "CPRA",
       "article": "Section 1798.121(b)",
       "requirement_summary": "A business that uses or discloses a consumer's sensitive personal information for purposes other than those authorized by Section 1798.121(a) shall provide notice to consumers of such use and provide a clear and conspicuous link titled 'Limit the Use of My Sensitive Personal Information'. Contracts with service providers must address obligations to support the business in providing these notices and honouring limitation requests.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -281,8 +428,16 @@
       "regulation": "CPRA",
       "article": "Section 1798.185(a)(15)",
       "requirement_summary": "The CPPA shall issue regulations requiring businesses whose processing of consumers' personal information presents significant risk to consumers' privacy or security to perform a cybersecurity audit on an annual basis and submit to the CPPA a regular risk assessment with respect to their processing of personal information. Contracts with service providers and contractors should include audit cooperation clauses and the right for the business to verify the service provider's compliance through regular audits.",
-      "required_clauses": ["dpa-audit-rights", "dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dpa-audit-rights",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -293,8 +448,15 @@
       "regulation": "CPRA",
       "article": "Section 1798.100(c)",
       "requirement_summary": "A business's collection, use, retention, and sharing of a consumer's personal information shall be reasonably necessary and proportionate to achieve the purposes for which the personal information was collected or processed. Businesses shall not collect, use, retain, or share consumers' personal information for purposes that are not reasonably necessary to or compatible with the disclosed purpose. Service provider contracts must incorporate data minimisation obligations aligned with these requirements.",
-      "required_clauses": ["dpa-data-minimisation", "dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-data-minimisation",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -305,8 +467,15 @@
       "regulation": "CPRA",
       "article": "Section 1798.100(a)(3)",
       "requirement_summary": "A business shall inform consumers of the length of time the business intends to retain each category of personal information, or if that is not possible, the criteria used to determine such period. A business shall not retain a consumer's personal information for longer than is reasonably necessary for the disclosed purpose. Service provider contracts must include data retention limits and deletion schedules aligned with the business's disclosed retention periods.",
-      "required_clauses": ["dpa-deletion-return", "dpa-data-minimisation"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-deletion-return",
+        "dpa-data-minimisation"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -317,8 +486,13 @@
       "regulation": "CPRA",
       "article": "Section 1798.185(a)(16)",
       "requirement_summary": "The CPPA shall issue regulations governing access and opt-out rights with respect to businesses' use of automated decision-making technology, including profiling, and requiring businesses' response to access requests to include meaningful information about the logic involved in such decision-making processes. Contracts with service providers that provide automated decision-making or profiling capabilities must address consumer rights to access, opt-out, and receive meaningful information about the logic involved.",
-      "required_clauses": ["dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -329,8 +503,15 @@
       "regulation": "CPRA",
       "article": "Section 1798.185(a)(15)(B)",
       "requirement_summary": "The CPPA shall issue regulations requiring businesses whose processing of consumers' personal information presents significant risk to consumers' privacy or security to submit to the CPPA on a regular basis a risk assessment with respect to their processing of personal information. The risk assessment shall identify and weigh the benefits and risks of the processing, whether the processing involves sensitive personal information, and whether the processing involves consumers' reasonable expectations. Contracts must address cooperation obligations for risk assessment activities.",
-      "required_clauses": ["dpa-audit-rights", "dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-audit-rights",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -341,8 +522,14 @@
       "regulation": "CPRA",
       "article": "Section 1798.185(a)(15)(B)(i)-(iv)",
       "requirement_summary": "The risk assessment required by the CPPA shall identify and weigh: (i) the benefits of the processing to the business, the consumer, other stakeholders, and the public; (ii) the potential risks to the rights of the consumer associated with such processing, including the reasonable expectations of the consumer; (iii) whether safeguards are in place to reduce the impact to the consumer's rights; and (iv) whether the processing involves sensitive personal information. Service provider contracts must include obligations to provide information necessary for the business to complete these risk assessments.",
-      "required_clauses": ["dpa-audit-rights"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
       "enforcement_examples": null,
@@ -353,10 +540,304 @@
       "regulation": "CPRA",
       "article": "Section 1798.185(a)(15)(A)",
       "requirement_summary": "The CPPA shall issue regulations requiring businesses whose processing of consumers' personal information presents significant risk to consumers' privacy or security to perform a cybersecurity audit on an annual basis. The audit shall be thorough and independent, and the regulations shall establish the factors for determining when processing presents significant risk. Service provider contracts must include provisions for cybersecurity audit cooperation and the right for the business to request evidence of the service provider's cybersecurity audit results.",
-      "required_clauses": ["dpa-audit-rights", "dpa-security-measures"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dpa-audit-rights",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US-CA",
       "effective_date": "2023-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cpa-controller-processor-contract",
+      "regulation": "Colorado Privacy Act",
+      "article": "Section 6-1-1305(2)",
+      "requirement_summary": "Ansvar summary: A contract between a controller and a processor must clearly set forth instructions for processing data, the nature and purpose of processing, the type of data subject to processing, the duration of processing, and the rights and obligations of both parties. The processor must assist the controller in meeting its obligations under the CPA.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US-CO",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cpa-processor-duty-confidentiality",
+      "regulation": "Colorado Privacy Act",
+      "article": "Section 6-1-1305(2)(a)",
+      "requirement_summary": "Ansvar summary: Each person processing personal data on behalf of a controller must be subject to a duty of confidentiality with respect to the data. Processor contracts must include binding confidentiality obligations for all personnel with access to personal data.",
+      "required_clauses": [
+        "confidentiality-mutual",
+        "dpa-confidentiality-personnel"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US-CO",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cpa-processor-subcontractor",
+      "regulation": "Colorado Privacy Act",
+      "article": "Section 6-1-1305(2)(d)",
+      "requirement_summary": "Ansvar summary: A processor shall engage any subcontractor pursuant to a written contract that requires the subcontractor to meet the obligations of the processor with respect to the personal data. The processor must give the controller an opportunity to object before engaging a subcontractor.",
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US-CO",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cpa-data-protection-assessment",
+      "regulation": "Colorado Privacy Act",
+      "article": "Section 6-1-1309",
+      "requirement_summary": "Ansvar summary: Controllers shall conduct and document data protection assessments for processing that presents a heightened risk of harm, including targeted advertising, sale of personal data, profiling, processing sensitive data, and any processing posing a significant risk. Processor contracts must require cooperation in conducting these assessments.",
+      "required_clauses": [
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US-CO",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cpa-universal-opt-out",
+      "regulation": "Colorado Privacy Act",
+      "article": "Section 6-1-1306(1)(a)(I)(A)",
+      "requirement_summary": "Ansvar summary: Controllers must provide a mechanism for consumers to opt out of the processing of personal data for targeted advertising or the sale of personal data, including recognition of universal opt-out mechanisms. Contracts with processors must require technical support for universal opt-out signals.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US-CO",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "vcdpa-processor-contract",
+      "regulation": "Virginia CDPA",
+      "article": "Section 59.1-578(A)",
+      "requirement_summary": "Ansvar summary: A contract between a controller and a processor must clearly set forth instructions for processing data, the nature and purpose of processing, the type of data subject to processing, the duration of processing, and the rights and obligations of both parties.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US-VA",
+      "effective_date": "2023-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "vcdpa-processor-confidentiality",
+      "regulation": "Virginia CDPA",
+      "article": "Section 59.1-578(A)(1)",
+      "requirement_summary": "Ansvar summary: The processor must ensure that each person processing personal data is subject to a duty of confidentiality with respect to the data. Contracts must impose confidentiality obligations on all processor personnel.",
+      "required_clauses": [
+        "confidentiality-mutual",
+        "dpa-confidentiality-personnel"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US-VA",
+      "effective_date": "2023-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "vcdpa-processor-deletion",
+      "regulation": "Virginia CDPA",
+      "article": "Section 59.1-578(A)(4)",
+      "requirement_summary": "Ansvar summary: At the direction of the controller, the processor must delete or return all personal data to the controller at the end of the provision of services unless retention is required by law. Contracts must specify deletion timelines and procedures upon contract termination.",
+      "required_clauses": [
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US-VA",
+      "effective_date": "2023-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "vcdpa-dpia-sensitive-data",
+      "regulation": "Virginia CDPA",
+      "article": "Section 59.1-580",
+      "requirement_summary": "Ansvar summary: Controllers shall conduct and document data protection assessments for processing that involves targeted advertising, sale of personal data, profiling that presents a reasonably foreseeable risk, and processing sensitive data. Processor contracts must require cooperation in assessments.",
+      "required_clauses": [
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US-VA",
+      "effective_date": "2023-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ctdpa-processor-contract",
+      "regulation": "Connecticut DPA",
+      "article": "Section 42-520(a)",
+      "requirement_summary": "Ansvar summary: A contract between a controller and a processor shall govern the processor's data processing procedures with respect to processing performed on behalf of the controller, including clear instructions for processing, the nature and purpose of processing, type of data, duration, and rights and obligations of both parties.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US-CT",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ctdpa-processor-assistance",
+      "regulation": "Connecticut DPA",
+      "article": "Section 42-520(a)(3)",
+      "requirement_summary": "Ansvar summary: The processor shall assist the controller by appropriate technical and organisational measures, insofar as possible, for fulfilment of the controller's obligations to respond to consumer rights requests. Contracts must specify the processor's obligations for supporting rights requests.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US-CT",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ctdpa-universal-opt-out",
+      "regulation": "Connecticut DPA",
+      "article": "Section 42-517(a)(6)",
+      "requirement_summary": "Ansvar summary: Controllers must allow consumers to opt out of the processing of personal data for targeted advertising through a universal opt-out mechanism by January 1, 2025. Contracts with processors must require technical implementation of universal opt-out signal recognition.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US-CT",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ctdpa-dpia",
+      "regulation": "Connecticut DPA",
+      "article": "Section 42-522",
+      "requirement_summary": "Ansvar summary: Controllers shall conduct and document data protection assessments of each of their processing activities that involves targeted advertising, sale of personal data, profiling presenting a reasonably foreseeable risk, processing of sensitive data, and any processing presenting a heightened risk of harm. Processor cooperation is required.",
+      "required_clauses": [
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US-CT",
+      "effective_date": "2023-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ocpa-processor-contract",
+      "regulation": "Oregon Consumer Privacy Act",
+      "article": "Section 2(1)",
+      "requirement_summary": "Ansvar summary: A contract between a controller and a processor must clearly specify processing instructions, the nature and purpose of processing, the type of personal data subject to processing, duration, and the rights and obligations of both parties. Oregon requires processor contracts to include data security obligations aligned with reasonable security standards.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US-OR",
+      "effective_date": "2024-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "tdpsa-processor-contract",
+      "regulation": "Texas Data Privacy and Security Act",
+      "article": "Section 541.103",
+      "requirement_summary": "Ansvar summary: A contract between a controller and a processor must clearly set forth instructions for processing personal data, nature and purpose of processing, type of data subject to processing, duration, and rights and obligations of both parties. The processor must provide a mechanism for the controller to conduct assessments or arrange for a qualified independent assessor.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US-TX",
+      "effective_date": "2024-07-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "tdpsa-processor-subcontractor",
+      "regulation": "Texas Data Privacy and Security Act",
+      "article": "Section 541.103(a)(4)",
+      "requirement_summary": "Ansvar summary: The processor shall engage a subcontractor only pursuant to a written contract that requires the subcontractor to meet the obligations of the processor. The processor must provide the controller notice before engaging a subcontractor, and the controller must have the opportunity to object.",
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US-TX",
+      "effective_date": "2024-07-01",
       "enforcement_examples": null,
       "law_mcp_ref": null
     }

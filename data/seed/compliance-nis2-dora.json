@@ -5,8 +5,15 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(1)",
       "requirement_summary": "Essential and important entities shall take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems which those entities use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on recipients of their services and on other services.",
-      "required_clauses": ["nis2-security-requirements"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -17,8 +24,16 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(2)(d)",
       "requirement_summary": "The measures shall include supply chain security, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers. Entities shall take into account the vulnerabilities specific to each direct supplier and service provider and the overall quality of products and cybersecurity practices of their suppliers and service providers.",
-      "required_clauses": ["nis2-security-requirements", "nis2-supply-chain-transparency"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -29,8 +44,14 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(2)(e)",
       "requirement_summary": "The measures shall include security in network and information systems acquisition, development and maintenance, including vulnerability handling and disclosure.",
-      "required_clauses": ["nis2-patching-obligations"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-patching-obligations"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -41,8 +62,14 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(2)(g)",
       "requirement_summary": "The measures shall include basic cyber hygiene practices and cybersecurity training.",
-      "required_clauses": ["nis2-security-requirements"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -53,8 +80,15 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(2)(h)",
       "requirement_summary": "The measures shall include policies and procedures regarding the use of cryptography and, where appropriate, encryption.",
-      "required_clauses": ["nis2-security-requirements", "dpa-security-measures"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -65,8 +99,14 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(2)(i)",
       "requirement_summary": "The measures shall include human resources security, access control policies and asset management.",
-      "required_clauses": ["nis2-access-control"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-access-control"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -77,8 +117,14 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(2)(j)",
       "requirement_summary": "The measures shall include the use of multi-factor authentication or continuous authentication solutions, secured voice, video and text communications and secured emergency communication systems within the entity, where appropriate.",
-      "required_clauses": ["nis2-security-requirements", "nis2-access-control"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "nis2-access-control"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -89,8 +135,14 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(3)",
       "requirement_summary": "When assessing which measures are appropriate, entities shall take into account the degree of their exposure to risks, their size, the likelihood of occurrence of incidents and their severity including societal and economic impact. Proportionality applies to supply chain contract requirements.",
-      "required_clauses": ["nis2-security-requirements"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -101,8 +153,15 @@
       "regulation": "NIS2 Directive",
       "article": "Article 23(1)",
       "requirement_summary": "Each Member State shall ensure that essential and important entities notify, without undue delay, its CSIRT or competent authority of any significant incident. Contracts must ensure suppliers and service providers support this obligation through timely incident reporting.",
-      "required_clauses": ["nis2-incident-notification"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -113,8 +172,15 @@
       "regulation": "NIS2 Directive",
       "article": "Article 23(4)(a)",
       "requirement_summary": "An early warning within 24 hours of becoming aware of a significant incident, indicating whether the incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact.",
-      "required_clauses": ["nis2-incident-notification"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -125,8 +191,15 @@
       "regulation": "NIS2 Directive",
       "article": "Article 23(4)(b)",
       "requirement_summary": "An incident notification within 72 hours of becoming aware of the significant incident, updating the information from the early warning, and setting out an initial assessment of the incident including its severity and impact, as well as indicators of compromise where available.",
-      "required_clauses": ["nis2-incident-notification"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -137,8 +210,15 @@
       "regulation": "NIS2 Directive",
       "article": "Article 23(4)(d)",
       "requirement_summary": "A final report shall be submitted not later than one month after the submission of the incident notification, including a detailed description of the incident, the type of threat or root cause, applied and ongoing mitigation measures, and the cross-border impact of the incident.",
-      "required_clauses": ["nis2-incident-notification"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -149,8 +229,13 @@
       "regulation": "NIS2 Directive",
       "article": "Article 20(1)",
       "requirement_summary": "Member States shall ensure that the management bodies of essential and important entities approve the cybersecurity risk-management measures taken by those entities, oversee their implementation, and can be held liable for infringements. Supply chain contracts must be approved by management body.",
-      "required_clauses": ["nis2-security-requirements"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -161,8 +246,13 @@
       "regulation": "NIS2 Directive",
       "article": "Article 20(2)",
       "requirement_summary": "Member States shall ensure that members of the management bodies of essential and important entities are required to follow training and shall encourage essential and important entities to offer similar training to their employees on a regular basis to enable them to gain sufficient knowledge and skills to identify risks and assess cybersecurity risk-management practices.",
-      "required_clauses": ["nis2-security-requirements"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -173,8 +263,15 @@
       "regulation": "NIS2 Directive",
       "article": "Article 21(5) implementing acts",
       "requirement_summary": "The Commission shall adopt implementing acts laying down technical and methodological requirements of the cybersecurity risk-management measures, including supply chain security requirements. Contracts should include provisions allowing for updates to security requirements when implementing acts are published.",
-      "required_clauses": ["nis2-security-requirements", "nis2-supply-chain-transparency"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -185,8 +282,14 @@
       "regulation": "NIS2 Directive",
       "article": "Article 12",
       "requirement_summary": "Each Member State shall establish a coordinated vulnerability disclosure policy and designate one of its CSIRTs as coordinator. Contracts should require suppliers to participate in coordinated vulnerability disclosure processes and address the handling of zero-day vulnerabilities.",
-      "required_clauses": ["nis2-patching-obligations"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-patching-obligations"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -197,8 +300,13 @@
       "regulation": "NIS2 Directive",
       "article": "Article 24",
       "requirement_summary": "Member States may require essential and important entities to use particular ICT products, ICT services and ICT processes that are certified under European cybersecurity certification schemes. Contracts should address certification requirements and the impact of certification status changes.",
-      "required_clauses": ["nis2-security-certification"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "nis2-security-certification"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -209,8 +317,14 @@
       "regulation": "NIS2 Directive",
       "article": "Articles 3, Annex I, Annex II",
       "requirement_summary": "NIS2 distinguishes between essential entities (Annex I: energy, transport, banking, financial market, health, drinking water, wastewater, digital infrastructure, ICT service management B2B, public administration, space) and important entities (Annex II: postal, waste, chemicals, food, manufacturing, digital providers, research). Essential entities face stricter supervision and higher penalties (at least EUR 10 million or 2% of turnover). Supply chain contracts must reflect the applicable tier.",
-      "required_clauses": ["nis2-security-requirements"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -221,8 +335,15 @@
       "regulation": "NIS2 Directive",
       "article": "Article 34",
       "requirement_summary": "Administrative fines of at least EUR 10 million or 2% of total worldwide annual turnover for essential entities, and at least EUR 7 million or 1.4% of total worldwide annual turnover for important entities. Contracts should address the allocation of liability for regulatory fines arising from supply chain failures.",
-      "required_clauses": ["indemnification-data-breach", "liability-supercap-data"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "indemnification-data-breach",
+        "liability-supercap-data"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2024-10-18",
       "enforcement_examples": null,
@@ -233,8 +354,15 @@
       "regulation": "DORA",
       "article": "Article 28(1)",
       "requirement_summary": "Financial entities shall manage ICT third-party risk as an integral component of ICT risk within their ICT risk management framework, and in accordance with the principle of proportionality, taking into account the nature, scale, complexity and importance of ICT-related dependencies.",
-      "required_clauses": ["dora-service-description"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -245,8 +373,13 @@
       "regulation": "DORA",
       "article": "Article 28(2)",
       "requirement_summary": "Financial entities shall adopt and regularly review a strategy on ICT third-party risk, including a policy on the use of ICT services supporting critical or important functions provided by ICT third-party service providers.",
-      "required_clauses": ["dora-service-description"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -257,8 +390,14 @@
       "regulation": "DORA",
       "article": "Article 28(4)",
       "requirement_summary": "Before entering into a contractual arrangement on the use of ICT services, financial entities shall identify and assess all relevant risks in relation to the contractual arrangement, including whether the contractual arrangement is in respect of the use of ICT services supporting a critical or important function.",
-      "required_clauses": ["dora-service-description"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -269,8 +408,15 @@
       "regulation": "DORA",
       "article": "Article 28(5)",
       "requirement_summary": "Financial entities may only enter into contractual arrangements with ICT third-party service providers that comply with appropriate information security standards. Where those contractual arrangements concern critical or important functions, financial entities shall ensure the ICT third-party service providers apply the most up-to-date and highest quality information security standards.",
-      "required_clauses": ["dora-service-description", "nis2-security-requirements"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-service-description",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -281,8 +427,14 @@
       "regulation": "DORA",
       "article": "Article 29(1)",
       "requirement_summary": "Financial entities shall conduct a preliminary assessment of ICT concentration risk before entering into a contractual arrangement, considering whether the conclusion of such arrangement would lead to ICT concentration risk, and assessing the substitutability of the ICT third-party service provider.",
-      "required_clauses": ["dora-exit-strategy"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-exit-strategy"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -293,8 +445,16 @@
       "regulation": "DORA",
       "article": "Article 30(2)(a)",
       "requirement_summary": "Contractual arrangements for the use of ICT services shall include a clear and complete description of all functions and ICT services to be provided by the ICT third-party service provider, indicating whether sub-outsourcing of an ICT service supporting a critical or important function, or material parts thereof, is permitted and, if so, the conditions applying to such sub-outsourcing.",
-      "required_clauses": ["dora-service-description", "dora-subcontracting"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-service-description",
+        "dora-subcontracting"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -305,8 +465,15 @@
       "regulation": "DORA",
       "article": "Article 30(2)(b)",
       "requirement_summary": "Contractual arrangements shall include the locations, namely the regions or countries, where the contracted or sub-outsourced functions and ICT services are to be provided and where data is to be processed, including the storage location, and the requirement for the ICT third-party service provider to notify the financial entity in advance if it envisages changing such locations.",
-      "required_clauses": ["dora-data-location"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-data-location"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -317,8 +484,16 @@
       "regulation": "DORA",
       "article": "Article 30(2)(c)",
       "requirement_summary": "Contractual arrangements shall include provisions on availability, authenticity, integrity and confidentiality in relation to the protection of data, including personal data.",
-      "required_clauses": ["dora-service-description", "dpa-security-measures"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-service-description",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -329,8 +504,16 @@
       "regulation": "DORA",
       "article": "Article 30(2)(d)",
       "requirement_summary": "Contractual arrangements shall include provisions on ensuring access, recovery and return in an easily accessible format of personal data and non-personal data processed by the ICT third-party service provider in the case of the insolvency, resolution or discontinuation of business operations, or in the case of the termination of the contractual arrangements.",
-      "required_clauses": ["dora-exit-strategy", "dpa-deletion-return"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-exit-strategy",
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -341,8 +524,17 @@
       "regulation": "DORA",
       "article": "Article 30(2)(e)",
       "requirement_summary": "Contractual arrangements shall include service level descriptions, including updates and revisions thereof, with precise quantitative and qualitative performance targets to enable effective monitoring and prompt corrective actions where agreed service levels are not met.",
-      "required_clauses": ["sla-uptime", "sla-response-time", "sla-service-credits"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "sla-uptime",
+        "sla-response-time",
+        "sla-service-credits"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -353,8 +545,15 @@
       "regulation": "DORA",
       "article": "Article 30(2)(f)",
       "requirement_summary": "Contractual arrangements shall include the obligation of the ICT third-party service provider to provide assistance to the financial entity at no additional cost or at a cost that is determined ex ante, when an ICT incident relating to the ICT service provided occurs.",
-      "required_clauses": ["dora-incident-reporting"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-incident-reporting"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -365,8 +564,15 @@
       "regulation": "DORA",
       "article": "Article 30(2)(g)",
       "requirement_summary": "Contractual arrangements shall include the obligation of the ICT third-party service provider to fully cooperate with the competent authorities and the resolution authorities of the financial entity, including persons appointed by them.",
-      "required_clauses": ["dora-audit-rights"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-audit-rights"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -377,8 +583,16 @@
       "regulation": "DORA",
       "article": "Article 30(2)(h)",
       "requirement_summary": "Contractual arrangements shall include termination rights and related minimum notice periods for the termination of the contractual arrangements, in accordance with the expectations of competent authorities and resolution authorities.",
-      "required_clauses": ["termination-cause", "termination-convenience"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "termination-cause",
+        "termination-convenience"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -389,8 +603,14 @@
       "regulation": "DORA",
       "article": "Article 30(2)(i)",
       "requirement_summary": "Contractual arrangements shall include the conditions for the participation of ICT third-party service providers in the financial entity's ICT security awareness programmes and digital operational resilience training.",
-      "required_clauses": ["dora-security-testing"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-security-testing"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -401,8 +621,17 @@
       "regulation": "DORA",
       "article": "Article 30(3)(a)",
       "requirement_summary": "For ICT services supporting critical or important functions, contractual arrangements shall additionally include full service level descriptions with precise quantitative and qualitative performance targets, and appropriate remedies and penalties in case of non-compliance with the agreed service levels.",
-      "required_clauses": ["sla-uptime", "sla-service-credits", "fin-liquidated-damages"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "sla-uptime",
+        "sla-service-credits",
+        "fin-liquidated-damages"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -413,8 +642,15 @@
       "regulation": "DORA",
       "article": "Article 30(3)(b)",
       "requirement_summary": "For ICT services supporting critical or important functions, contractual arrangements shall include notice periods and reporting obligations of the ICT third-party service provider to the financial entity, including notification of any development that may have a material impact on the ICT third-party service provider's ability to effectively deliver ICT services.",
-      "required_clauses": ["dora-incident-reporting"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-incident-reporting"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -425,8 +661,16 @@
       "regulation": "DORA",
       "article": "Article 30(3)(c)",
       "requirement_summary": "For ICT services supporting critical or important functions, contractual arrangements shall include the requirement for the ICT third-party service provider to implement and test business contingency plans and to have ICT security measures, tools and policies in place that provide an appropriate level of security for the provision of services.",
-      "required_clauses": ["dora-continuity-arrangements", "dora-security-testing"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-continuity-arrangements",
+        "dora-security-testing"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -437,8 +681,16 @@
       "regulation": "DORA",
       "article": "Article 30(3)(d)",
       "requirement_summary": "For ICT services supporting critical or important functions, contractual arrangements shall include the right of the financial entity to monitor on an ongoing basis the ICT third-party service provider's performance, including rights of access, inspection and audit.",
-      "required_clauses": ["dora-audit-rights", "audit-rights-security"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-audit-rights",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -449,8 +701,17 @@
       "regulation": "DORA",
       "article": "Article 30(3)(e)",
       "requirement_summary": "For ICT services supporting critical or important functions, contractual arrangements shall include exit strategies, including mandatory adequate transition periods and assistance upon termination, to reduce the risk of disruption at the financial entity, or to facilitate effective resolution.",
-      "required_clauses": ["dora-exit-strategy", "termination-wind-down", "fin-transition-pricing"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-exit-strategy",
+        "termination-wind-down",
+        "fin-transition-pricing"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -461,8 +722,14 @@
       "regulation": "DORA",
       "article": "Article 30(2)(a) sub-outsourcing",
       "requirement_summary": "Financial entities shall contractually ensure they can reject or approve proposed sub-outsourcing of ICT services supporting critical or important functions, or material parts thereof. The ICT third-party service provider shall inform the financial entity of any intended sub-outsourcing arrangement.",
-      "required_clauses": ["dora-subcontracting"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-subcontracting"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -473,8 +740,15 @@
       "regulation": "DORA",
       "article": "Article 30(2)(d) portability",
       "requirement_summary": "The contractual arrangements shall provide for the return of data in an easily accessible format upon termination, including establishing appropriate timeframes and formats for data migration. The financial entity must be able to effectively migrate to another ICT third-party service provider or revert to in-house solutions.",
-      "required_clauses": ["dora-exit-strategy", "fin-asset-transfer"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-exit-strategy",
+        "fin-asset-transfer"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -485,8 +759,17 @@
       "regulation": "DORA",
       "article": "Article 30(2)(e) performance",
       "requirement_summary": "Service level descriptions shall include precise quantitative and qualitative performance targets within the agreed service levels, to enable effective monitoring by the financial entity and prompt corrective actions when agreed service levels are not met.",
-      "required_clauses": ["sla-uptime", "sla-response-time", "sla-resolution-time"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "sla-uptime",
+        "sla-response-time",
+        "sla-resolution-time"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -497,8 +780,13 @@
       "regulation": "DORA",
       "article": "Article 30(3)(e) alternative providers",
       "requirement_summary": "Exit strategies shall take into account the potential for multiple ICT third-party service providers supporting the same critical or important function, thereby establishing alternative providers to reduce the risk of ICT concentration risk.",
-      "required_clauses": ["dora-exit-strategy"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-exit-strategy"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -509,8 +797,13 @@
       "regulation": "DORA",
       "article": "Article 31(1)",
       "requirement_summary": "The ESAs, through the Joint Committee, shall designate the ICT third-party service providers that are critical for financial entities. Designation criteria include: the systemic impact on the stability, continuity or quality of the provision of financial services; the systemic character or importance of the financial entities that rely on the respective ICT third-party service provider; and the degree of substitutability.",
-      "required_clauses": ["dora-service-description"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -521,8 +814,14 @@
       "regulation": "DORA",
       "article": "Article 33(1)",
       "requirement_summary": "The Lead Overseer shall assess whether each critical ICT third-party service provider has in place comprehensive, sound and effective rules, procedures, mechanisms and arrangements to manage the ICT risk which it may pose to financial entities. The oversight framework imposes obligations that flow down into contracts.",
-      "required_clauses": ["dora-audit-rights", "dora-security-testing"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-audit-rights",
+        "dora-security-testing"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -533,8 +832,13 @@
       "regulation": "DORA",
       "article": "Article 33(2)",
       "requirement_summary": "Critical ICT third-party service providers shall cooperate in good faith with the Lead Overseer and assist the Lead Overseer. Contracts must ensure the ICT third-party service provider cooperates with the oversight framework, including providing access to information, premises, and documentation.",
-      "required_clauses": ["dora-audit-rights"],
-      "contract_types_affected": ["msa", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-audit-rights"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -545,8 +849,15 @@
       "regulation": "DORA",
       "article": "Article 28(8)",
       "requirement_summary": "Financial entities shall be able to terminate contractual arrangements with ICT third-party service providers where: (a) the ICT third-party service provider has committed a significant breach; (b) material changes in circumstances that affect performance; (c) weaknesses identified in the ICT risk management; or (d) where the competent authority can no longer effectively supervise the financial entity as a result of the contractual arrangement.",
-      "required_clauses": ["termination-cause", "dora-exit-strategy"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "termination-cause",
+        "dora-exit-strategy"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -557,8 +868,16 @@
       "regulation": "DORA",
       "article": "Article 30(2)(f) incidents",
       "requirement_summary": "The ICT third-party service provider shall be obligated to provide notification of ICT-related incidents that may affect the financial entity's operational resilience, and to assist with incident investigation and response at no additional cost.",
-      "required_clauses": ["dora-incident-reporting", "nis2-incident-notification"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-incident-reporting",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
@@ -569,12 +888,241 @@
       "regulation": "DORA",
       "article": "Article 30(3)(c) risk management",
       "requirement_summary": "The ICT third-party service provider shall implement ICT security measures, tools and policies that provide an appropriate level of security for the provision of services by the financial entity, in line with its regulatory framework. This includes ongoing risk assessments and security posture reporting.",
-      "required_clauses": ["dora-security-testing", "nis2-security-requirements"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "dora-security-testing",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-01-17",
       "enforcement_examples": null,
       "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Art 30(3)(c)\")"
+    },
+    {
+      "id": "cra-art13-1-manufacturer-obligations",
+      "regulation": "Cyber Resilience Act",
+      "article": "Article 13(1)",
+      "requirement_summary": "Ansvar summary: Manufacturers shall ensure that products with digital elements are designed, developed, and produced in accordance with essential cybersecurity requirements set out in Annex I. Contracts for procurement of products with digital elements must require manufacturer compliance with CRA essential requirements and include warranties to that effect.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2027-12-11",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cra-art13-6-vulnerability-handling",
+      "regulation": "Cyber Resilience Act",
+      "article": "Article 13(6)",
+      "requirement_summary": "Ansvar summary: Manufacturers shall exercise due diligence when integrating components sourced from third parties into products with digital elements. They shall ensure that such components do not compromise the security of the product and shall verify the vulnerabilities of such components. Supply chain contracts must include vulnerability disclosure obligations and coordinate vulnerability handling across the supply chain.",
+      "required_clauses": [
+        "nis2-patching-obligations",
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2027-12-11",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cra-art14-reporting-obligations",
+      "regulation": "Cyber Resilience Act",
+      "article": "Article 14",
+      "requirement_summary": "Ansvar summary: Manufacturers shall notify ENISA of any actively exploited vulnerability contained in the product with digital elements within 24 hours of becoming aware of it. A vulnerability notification must be submitted within 72 hours, and a final report within 14 days. Contracts must align supplier incident reporting timelines with these CRA notification deadlines.",
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-09-11",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cra-art15-security-update-obligation",
+      "regulation": "Cyber Resilience Act",
+      "article": "Article 15",
+      "requirement_summary": "Ansvar summary: Manufacturers shall ensure that vulnerabilities are handled effectively and that security updates are made available for the expected product lifetime or for a minimum of five years, whichever is shorter. Contracts must specify the security update commitment period and require free-of-charge security updates for the agreed period.",
+      "required_clauses": [
+        "nis2-patching-obligations",
+        "sla-uptime"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2027-12-11",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cra-annex-i-security-by-design",
+      "regulation": "Cyber Resilience Act",
+      "article": "Annex I Part I (Security requirements)",
+      "requirement_summary": "Ansvar summary: Products with digital elements shall be designed, developed, and produced to ensure an appropriate level of cybersecurity including: delivered without known exploitable vulnerabilities, with a secure-by-default configuration, with protection against unauthorised access, with protection of confidentiality/integrity of data, and with minimised attack surface. Procurement contracts must reference these essential requirements as acceptance criteria.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2027-12-11",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "cra-annex-i-vulnerability-management",
+      "regulation": "Cyber Resilience Act",
+      "article": "Annex I Part II (Vulnerability handling)",
+      "requirement_summary": "Ansvar summary: Manufacturers shall identify and document vulnerabilities including through third-party component analysis, apply and publish security updates without delay, provide SBOM documentation, and coordinate disclosure. Supply chain contracts must require compliance with Part II vulnerability handling requirements and specify SBOM delivery obligations.",
+      "required_clauses": [
+        "nis2-patching-obligations",
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2027-12-11",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nis2-art21-2d-supply-chain-detail",
+      "regulation": "NIS2 Directive",
+      "article": "Article 21(2)(d) (detailed supply chain)",
+      "requirement_summary": "Ansvar summary: Entities shall take into account the vulnerabilities specific to each direct supplier and service provider, the overall quality of products and cybersecurity practices, including secure development procedures, of their suppliers and service providers, and the results of coordinated security risk assessments of critical supply chains carried out by competent authorities. Contracts must require suppliers to share vulnerability assessments, security certifications, and results of coordinated risk assessments.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2024-10-18",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"NIS2\", \"Art 21(2)(d)\")"
+    },
+    {
+      "id": "nis2-art21-4-implementing-acts",
+      "regulation": "NIS2 Directive",
+      "article": "Article 21(4)",
+      "requirement_summary": "Ansvar summary: The Commission shall adopt implementing acts laying down the technical and methodological requirements of the cybersecurity risk-management measures for certain entity types (DNS, TLD, cloud, data centres, CDNs, managed services, managed security services, online marketplaces, search engines, social networks, trust services). Contracts with providers in these categories must include change-of-law provisions for implementing act compliance.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2024-10-18",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nis2-art23-11-voluntary-notification",
+      "regulation": "NIS2 Directive",
+      "article": "Article 23(11)",
+      "requirement_summary": "Ansvar summary: Entities falling outside the scope of NIS2 may voluntarily notify significant incidents. This creates a pathway for non-essential/non-important entities to participate in the incident notification framework. Contracts may include voluntary notification provisions even where NIS2 does not directly apply, providing reciprocal incident intelligence.",
+      "required_clauses": [
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2024-10-18",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "nis2-art29-cybersecurity-information-sharing",
+      "regulation": "NIS2 Directive",
+      "article": "Article 29",
+      "requirement_summary": "Ansvar summary: Essential and important entities may exchange relevant cybersecurity information between themselves including cyber threat information, indicators of compromise, tactics, techniques, procedures, cybersecurity alerts, and configuration tools. Information sharing arrangements must be established contractually with appropriate confidentiality protections, liability limitations, and compliance with competition law.",
+      "required_clauses": [
+        "confidentiality-mutual",
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2024-10-18",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "dora-art28-3-critical-ict",
+      "regulation": "DORA",
+      "article": "Article 28(3) (Critical or important functions)",
+      "requirement_summary": "Ansvar summary: Where ICT third-party service providers support critical or important functions, financial entities shall ensure that contractual arrangements include all requirements set out in Article 30, including additional requirements under Article 30(3) for critical functions. The distinction between critical and non-critical functions drives the depth of contractual obligations required.",
+      "required_clauses": [
+        "dora-service-description",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "dora-art28-9-concentration-risk",
+      "regulation": "DORA",
+      "article": "Article 28(9)",
+      "requirement_summary": "Ansvar summary: Financial entities shall identify and assess whether the conclusion of a contractual arrangement on ICT services supporting critical or important functions would lead to undue concentration of ICT third-party risk. Contracts must include provisions addressing concentration risk, multi-vendor strategies, and exit planning to mitigate single-supplier dependency.",
+      "required_clauses": [
+        "dora-exit-strategy",
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
     }
   ]
 }

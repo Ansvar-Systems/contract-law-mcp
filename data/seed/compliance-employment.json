@@ -5,8 +5,14 @@
       "regulation": "Working Time Directive",
       "article": "Article 3",
       "requirement_summary": "Every worker is entitled to a minimum daily rest period of 11 consecutive hours per 24-hour period. Employment contracts must not require schedules that prevent workers from taking this mandatory rest.",
-      "required_clauses": ["emp-health-safety"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment", "emp-zero-hours-contract"],
+      "required_clauses": [
+        "emp-health-safety"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment",
+        "emp-zero-hours-contract"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2003-08-02",
       "enforcement_examples": "Spanish Supreme Court ruled employer liable for scheduling shifts with less than 11 hours rest between them (2019).",
@@ -17,8 +23,14 @@
       "regulation": "Working Time Directive",
       "article": "Article 5",
       "requirement_summary": "Every worker is entitled to a minimum uninterrupted weekly rest period of 24 hours plus the 11 hours of daily rest per each seven-day period. Member States may apply a reference period not exceeding 14 days for the weekly rest requirement.",
-      "required_clauses": ["emp-health-safety"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment", "emp-zero-hours-contract"],
+      "required_clauses": [
+        "emp-health-safety"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment",
+        "emp-zero-hours-contract"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2003-08-02",
       "enforcement_examples": null,
@@ -29,8 +41,15 @@
       "regulation": "Working Time Directive",
       "article": "Article 6",
       "requirement_summary": "Member States shall ensure average working time for each seven-day period, including overtime, does not exceed 48 hours. The reference period for calculating the average shall not exceed four months. Employment contracts must not stipulate working hours that exceed this limit.",
-      "required_clauses": ["emp-health-safety", "emp-flexible-working"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-health-safety",
+        "emp-flexible-working"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2003-08-02",
       "enforcement_examples": "CJEU ruled in Pfeiffer (C-397/01) that the 48-hour limit applies per worker, not per contract, preventing circumvention via multiple contracts with the same employer.",
@@ -41,8 +60,14 @@
       "regulation": "Working Time Directive",
       "article": "Article 7",
       "requirement_summary": "Every worker is entitled to paid annual leave of at least four weeks. This minimum period may not be replaced by an allowance in lieu, except where the employment relationship is terminated. Contracts must ensure this entitlement is clearly stated.",
-      "required_clauses": ["emp-annual-leave"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment", "emp-executive-employment"],
+      "required_clauses": [
+        "emp-annual-leave"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment",
+        "emp-executive-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2003-08-02",
       "enforcement_examples": "CJEU in Schultz-Hoff (C-350/06) held that workers unable to take leave due to illness must be able to carry over or receive payment on termination.",
@@ -53,8 +78,13 @@
       "regulation": "Working Time Directive",
       "article": "Article 8",
       "requirement_summary": "Member States shall ensure normal hours of work for night workers do not exceed an average of eight hours in any 24-hour period. Night workers whose work involves special hazards or heavy physical or mental strain shall not work more than eight hours in any 24-hour period.",
-      "required_clauses": ["emp-health-safety"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-health-safety"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2003-08-02",
       "enforcement_examples": null,
@@ -65,8 +95,13 @@
       "regulation": "Working Time Directive",
       "article": "Article 9",
       "requirement_summary": "Member States shall ensure that night workers are entitled to a free health assessment before assignment and at regular intervals thereafter. Workers suffering health problems recognised as connected with night work shall be transferred whenever possible to suitable day work.",
-      "required_clauses": ["emp-health-safety"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-health-safety"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2003-08-02",
       "enforcement_examples": null,
@@ -77,8 +112,13 @@
       "regulation": "Working Time Directive",
       "article": "Article 17",
       "requirement_summary": "Member States may derogate from Articles 3-6, 8, and 16 for managing executives, family workers, and workers officiating at religious ceremonies. Derogations must be accompanied by equivalent compensatory rest periods or, in exceptional cases, appropriate protection.",
-      "required_clauses": ["emp-health-safety", "emp-flexible-working"],
-      "contract_types_affected": ["emp-executive-employment"],
+      "required_clauses": [
+        "emp-health-safety",
+        "emp-flexible-working"
+      ],
+      "contract_types_affected": [
+        "emp-executive-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2003-08-02",
       "enforcement_examples": "CJEU in Isere (C-428/09) clarified that derogations must be interpreted narrowly and the managing executive exemption requires genuine autonomy over working time.",
@@ -89,8 +129,14 @@
       "regulation": "Working Time Directive",
       "article": "Article 22",
       "requirement_summary": "Member States may allow the 48-hour weekly limit to be exceeded if the worker gives individual written opt-out consent. The worker must not be subjected to any detriment for refusing. Employers must keep up-to-date records of opted-out workers and make them available to authorities.",
-      "required_clauses": ["emp-health-safety", "emp-flexible-working"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment"],
+      "required_clauses": [
+        "emp-health-safety",
+        "emp-flexible-working"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2003-08-02",
       "enforcement_examples": "UK tribunals have ruled opt-out clauses invalid where embedded in the main employment contract as a condition of employment rather than a separate voluntary agreement.",
@@ -101,8 +147,16 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 4",
       "requirement_summary": "Protection applies to reporting persons working in the private or public sector who acquired information on breaches in a work-related context, including employees, self-employed persons, shareholders, management, volunteers, trainees, and persons whose work-based relationship has ended or is yet to begin.",
-      "required_clauses": ["emp-whistleblower-protection"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-contractor-independent", "emp-internship-agreement", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-whistleblower-protection"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent",
+        "emp-internship-agreement",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": null,
@@ -113,8 +167,14 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 7",
       "requirement_summary": "Legal entities in the private sector with 50 or more workers must establish internal channels and procedures for receiving and following up on reports. Channels must allow reporting in writing, orally, or both, and must ensure the confidentiality of the reporting person's identity.",
-      "required_clauses": ["emp-whistleblower-protection", "emp-grievance"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment"],
+      "required_clauses": [
+        "emp-whistleblower-protection",
+        "emp-grievance"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": "Irish Workplace Relations Commission ordered reinstatement and compensation where employer lacked required internal reporting channel (2023).",
@@ -125,8 +185,14 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 8",
       "requirement_summary": "Internal reporting procedures must include acknowledgement of receipt within seven days, designation of an impartial person or department to diligently follow up, a reasonable timeframe (not exceeding three months) to provide feedback, and clear accessible information on external reporting.",
-      "required_clauses": ["emp-whistleblower-protection", "emp-grievance"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment"],
+      "required_clauses": [
+        "emp-whistleblower-protection",
+        "emp-grievance"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": null,
@@ -137,8 +203,16 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 16",
       "requirement_summary": "Any form of retaliation against reporting persons is prohibited, including dismissal, demotion, withholding of training, negative performance assessment, coercion, intimidation, harassment, blacklisting, damage to reputation, early termination of contracts, and psychiatric or medical referrals.",
-      "required_clauses": ["emp-whistleblower-protection", "emp-disciplinary"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-fixed-term-employment", "emp-contractor-independent"],
+      "required_clauses": [
+        "emp-whistleblower-protection",
+        "emp-disciplinary"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment",
+        "emp-contractor-independent"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": "French court awarded EUR 100,000 in damages to whistleblower dismissed in retaliation after reporting financial misconduct (Cour de cassation, 2023).",
@@ -149,8 +223,15 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 21",
       "requirement_summary": "In legal proceedings relating to a detriment suffered by the reporting person, once the reporting person establishes that they made a report and suffered a detriment, the burden of proof shifts to the person who took the detrimental measure to prove it was not linked to the report.",
-      "required_clauses": ["emp-whistleblower-protection", "emp-disciplinary"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-whistleblower-protection",
+        "emp-disciplinary"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": null,
@@ -161,8 +242,14 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 23",
       "requirement_summary": "Member States shall provide for effective, proportionate and dissuasive penalties applicable to natural or legal persons that hinder or attempt to hinder reporting, retaliate against reporting persons, bring vexatious proceedings against reporting persons, or breach the duty of maintaining confidentiality of the reporting person's identity.",
-      "required_clauses": ["emp-whistleblower-protection"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-contractor-independent"],
+      "required_clauses": [
+        "emp-whistleblower-protection"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": "Italian ANAC imposed penalties of up to EUR 50,000 on entities that retaliated against whistleblowers under national transposition (2023).",
@@ -173,8 +260,15 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 19",
       "requirement_summary": "Reporting persons have access to remedial measures including interim relief pending resolution, reinstatement or equivalent, compensation for actual damages, and full back pay. Contractual clauses purporting to restrict or waive workers' rights to report shall be considered void.",
-      "required_clauses": ["emp-whistleblower-protection", "emp-non-compete"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-whistleblower-protection",
+        "emp-non-compete"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": null,
@@ -185,8 +279,15 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 6",
       "requirement_summary": "Reporting persons qualify for protection when they had reasonable grounds to believe that the information reported was true at the time of reporting and fell within the Directive's scope. Good faith is not required; the objective standard of reasonable grounds applies.",
-      "required_clauses": ["emp-whistleblower-protection"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-contractor-independent", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-whistleblower-protection"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": null,
@@ -197,8 +298,16 @@
       "regulation": "EU Whistleblower Directive",
       "article": "Article 24",
       "requirement_summary": "Non-disclosure agreements and contractual confidentiality clauses cannot be invoked to prevent workers from reporting breaches. Any contractual or statutory provision that restricts the right to report under the Directive is unenforceable. Employers must ensure employment contracts reflect this limitation.",
-      "required_clauses": ["emp-whistleblower-protection", "emp-non-compete", "emp-non-solicitation"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-contractor-independent"],
+      "required_clauses": [
+        "emp-whistleblower-protection",
+        "emp-non-compete",
+        "emp-non-solicitation"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2021-12-17",
       "enforcement_examples": "Dutch court struck down NDA clause to the extent it prevented an ex-employee from reporting suspected fraud to authorities (2022).",
@@ -209,8 +318,17 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 4",
       "requirement_summary": "Employers must provide workers with essential information about the employment relationship including: identity of parties, place of work, job title or description, start date, end date if fixed-term, duration and conditions of probation, paid leave entitlement, notice periods, remuneration, working patterns, and applicable collective agreements.",
-      "required_clauses": ["emp-notice-period", "emp-annual-leave", "emp-probation"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment", "emp-zero-hours-contract", "emp-internship-agreement"],
+      "required_clauses": [
+        "emp-notice-period",
+        "emp-annual-leave",
+        "emp-probation"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment",
+        "emp-zero-hours-contract",
+        "emp-internship-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": null,
@@ -221,8 +339,16 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 5",
       "requirement_summary": "The essential information under Article 4 must be provided individually to the worker in the form of one or more documents during the period between the first working day and no later than the seventh calendar day after the start of the employment relationship. Certain additional items may be provided within one month.",
-      "required_clauses": ["emp-notice-period", "emp-probation"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment", "emp-zero-hours-contract", "emp-internship-agreement"],
+      "required_clauses": [
+        "emp-notice-period",
+        "emp-probation"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment",
+        "emp-zero-hours-contract",
+        "emp-internship-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": null,
@@ -233,8 +359,13 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 8",
       "requirement_summary": "Where employment relationships are subject to a probationary period, Member States shall ensure it does not exceed six months. In the case of fixed-term contracts, the probationary period must be proportionate to the expected duration and nature of the work. Renewal of a contract for the same function shall not trigger a new probationary period.",
-      "required_clauses": ["emp-probation"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-probation"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": "German Federal Labour Court applied proportionality principle to void a six-month probation in a twelve-month fixed-term contract (2023).",
@@ -245,8 +376,15 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 9",
       "requirement_summary": "Employers may not prohibit workers from taking up employment with other employers outside the work schedule established with that employer. Restrictions on parallel employment are permitted only on the basis of objective grounds such as health and safety, protection of business confidentiality, integrity of the public service, or avoidance of conflicts of interest.",
-      "required_clauses": ["emp-moonlighting", "emp-non-compete"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-executive-employment", "emp-fixed-term-employment"],
+      "required_clauses": [
+        "emp-moonlighting",
+        "emp-non-compete"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": "Belgian court invalidated blanket prohibition on secondary employment where employer failed to demonstrate objective justification (2023).",
@@ -257,8 +395,15 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 10",
       "requirement_summary": "Where an employer is required by Union or national law or collective agreements to provide training to a worker to carry out the work for which the worker is employed, such training shall be provided free of cost to the worker, count as working time, and where possible take place during working hours. Training cost repayment clauses for mandatory training are prohibited.",
-      "required_clauses": ["emp-non-compete", "emp-notice-period"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment", "emp-internship-agreement"],
+      "required_clauses": [
+        "emp-non-compete",
+        "emp-notice-period"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment",
+        "emp-internship-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": "Dutch court struck down training cost recoupment clause for legally mandatory training, ordering employer to reimburse deducted amounts (2023).",
@@ -269,8 +414,14 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 11",
       "requirement_summary": "Where the work pattern is entirely or mostly unpredictable, the employer may not require a worker to work unless the work takes place within predetermined reference hours and days communicated in advance, and the worker is informed by the employer of a work assignment within a reasonable notice period established in accordance with national law or collective agreements.",
-      "required_clauses": ["emp-flexible-working", "emp-health-safety"],
-      "contract_types_affected": ["emp-zero-hours-contract", "emp-employment-agreement"],
+      "required_clauses": [
+        "emp-flexible-working",
+        "emp-health-safety"
+      ],
+      "contract_types_affected": [
+        "emp-zero-hours-contract",
+        "emp-employment-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": null,
@@ -281,8 +432,13 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 12",
       "requirement_summary": "Workers on demand or zero-hours contracts whose actual working pattern over a reference period of at least 12 weeks establishes regular hours are entitled to request a form of employment with more predictable and secure working conditions. Employers must provide a reasoned written reply within one month.",
-      "required_clauses": ["emp-flexible-working", "emp-notice-period"],
-      "contract_types_affected": ["emp-zero-hours-contract"],
+      "required_clauses": [
+        "emp-flexible-working",
+        "emp-notice-period"
+      ],
+      "contract_types_affected": [
+        "emp-zero-hours-contract"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": "Irish WRC ordered employer to offer a banded-hours contract to a worker who consistently worked 30+ hours per week on a zero-hours arrangement (2023).",
@@ -293,8 +449,14 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 13",
       "requirement_summary": "Where employers are required by Union or national law to provide training, they must ensure it is available to workers on non-standard contracts (fixed-term, part-time, temporary agency) on equivalent terms. Member States may adopt measures to ensure equal treatment regarding training access.",
-      "required_clauses": ["emp-health-safety"],
-      "contract_types_affected": ["emp-fixed-term-employment", "emp-zero-hours-contract", "emp-internship-agreement"],
+      "required_clauses": [
+        "emp-health-safety"
+      ],
+      "contract_types_affected": [
+        "emp-fixed-term-employment",
+        "emp-zero-hours-contract",
+        "emp-internship-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": null,
@@ -305,11 +467,300 @@
       "regulation": "Transparent Working Conditions Directive",
       "article": "Article 18",
       "requirement_summary": "Workers who consider they have been dismissed or subjected to equivalent detriment for exercising rights under this Directive may request the employer to provide duly substantiated grounds for the dismissal or measure. The employer must provide those grounds in writing. Member States shall introduce measures to protect workers, including protection from dismissal, from adverse treatment for exercising their rights.",
-      "required_clauses": ["emp-disciplinary", "emp-grievance", "emp-notice-period"],
-      "contract_types_affected": ["emp-employment-agreement", "emp-fixed-term-employment", "emp-zero-hours-contract", "emp-internship-agreement"],
+      "required_clauses": [
+        "emp-disciplinary",
+        "emp-grievance",
+        "emp-notice-period"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment",
+        "emp-zero-hours-contract",
+        "emp-internship-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2022-08-01",
       "enforcement_examples": "French Conseil de Prud'hommes ruled dismissal void where worker was terminated after requesting written statement of employment terms as required by transposed directive (2024).",
+      "law_mcp_ref": null
+    },
+    {
+      "id": "tupe-reg4-automatic-transfer",
+      "regulation": "TUPE Regulations 2006",
+      "article": "Regulation 4(1)",
+      "requirement_summary": "Ansvar summary: On a relevant transfer, the contract of employment of any person employed by the transferor and assigned to the organised grouping of resources or employees that is subject to the relevant transfer shall have effect as if originally made between the person so employed and the transferee. Outsourcing, insourcing, and service change contracts must address automatic transfer of employment obligations.",
+      "required_clauses": [
+        "emp-tupe-transfer"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services",
+        "msa"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2006-04-06",
+      "enforcement_examples": "CJEU in Spijkers (C-24/85) established the multi-factor test for identifying a relevant transfer.",
+      "law_mcp_ref": null
+    },
+    {
+      "id": "tupe-reg7-dismissal-protection",
+      "regulation": "TUPE Regulations 2006",
+      "article": "Regulation 7(1)",
+      "requirement_summary": "Ansvar summary: Where either before or after a relevant transfer, any employee of the transferor or transferee is dismissed, that employee shall be treated as unfairly dismissed if the sole or principal reason for the dismissal is the transfer. Contracts must include provisions protecting against transfer-related dismissals and allocating liability for unfair dismissal claims.",
+      "required_clauses": [
+        "emp-tupe-transfer",
+        "emp-unfair-dismissal"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2006-04-06",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "tupe-reg11-information-consultation",
+      "regulation": "TUPE Regulations 2006",
+      "article": "Regulation 11(1)-(6)",
+      "requirement_summary": "Ansvar summary: Both transferor and transferee must inform and consult appropriate representatives of affected employees about the transfer, its reasons, and its legal, economic, and social implications. Contracts must specify information-sharing timelines, allocate consultation obligations, and address the costs of compliance with consultation requirements.",
+      "required_clauses": [
+        "emp-tupe-transfer"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2006-04-06",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ard-2001-23-art3-transfer",
+      "regulation": "Acquired Rights Directive",
+      "article": "Article 3(1)",
+      "requirement_summary": "Ansvar summary: The transferor's rights and obligations arising from a contract of employment or from an employment relationship existing on the date of a transfer shall, by reason of such transfer, be transferred to the transferee. EU outsourcing and service transition contracts must address the automatic transfer of employment relationships.",
+      "required_clauses": [
+        "emp-tupe-transfer"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services",
+        "msa"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2001-03-12",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "wbd-art4-1-personal-scope",
+      "regulation": "EU Whistleblower Directive",
+      "article": "Article 4(1)",
+      "requirement_summary": "Ansvar summary: The Directive applies to reporting persons who have obtained information on breaches in a work-related context, including employees, self-employed persons, shareholders, volunteers, trainees, and persons whose work-based relationship has not yet begun or has ended. Employment and contractor agreements must include whistleblower protection provisions.",
+      "required_clauses": [
+        "emp-whistleblower-protection"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment",
+        "emp-executive-employment"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2021-12-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "wbd-art8-internal-channels",
+      "regulation": "EU Whistleblower Directive",
+      "article": "Article 8",
+      "requirement_summary": "Ansvar summary: Legal entities in the private sector with 50 or more workers shall establish internal reporting channels and procedures. Contracts with service providers operating internal reporting channels must ensure confidentiality, independence, and follow-up within prescribed timelines (7 days acknowledgment, 3 months feedback).",
+      "required_clauses": [
+        "emp-whistleblower-protection"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2021-12-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "wbd-art19-prohibition-retaliation",
+      "regulation": "EU Whistleblower Directive",
+      "article": "Article 19",
+      "requirement_summary": "Ansvar summary: Member States shall take the necessary measures to prohibit any form of retaliation against reporting persons, including dismissal, suspension, demotion, coercion, discrimination, and damage to reputation. Employment contracts and settlement agreements must not contain clauses that waive or limit whistleblower protection rights.",
+      "required_clauses": [
+        "emp-whistleblower-protection",
+        "emp-unfair-dismissal"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-settlement-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2021-12-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "wbd-art21-retaliation-remedies",
+      "regulation": "EU Whistleblower Directive",
+      "article": "Article 21",
+      "requirement_summary": "Ansvar summary: Reporting persons who suffer retaliation shall have access to remedial measures including interim relief, reinstatement, compensation for damages, and reversal of the burden of proof. Contracts must not include provisions that would hinder access to these remedies.",
+      "required_clauses": [
+        "emp-whistleblower-protection"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-settlement-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2021-12-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "wtd-art18-derogations-collective",
+      "regulation": "Working Time Directive",
+      "article": "Article 18",
+      "requirement_summary": "Ansvar summary: Derogations from Articles 3, 4, 5, 8, and 16 may be made by means of collective agreements or agreements between the two sides of industry at national or regional level. Employment contracts relying on derogations must reference the applicable collective agreement and ensure compensatory rest is provided.",
+      "required_clauses": [
+        "emp-health-safety",
+        "emp-flexible-working"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2003-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "wtd-art2-on-call-working-time",
+      "regulation": "Working Time Directive",
+      "article": "Article 2 (as interpreted)",
+      "requirement_summary": "Ansvar summary: Following CJEU rulings in SIMAP (C-303/98) and Jaeger (C-151/02), time spent on call at the employer's premises constitutes working time for the purposes of the Working Time Directive. Employment contracts involving on-call duties must account for on-call time as working time when the worker is required to be physically present at the workplace.",
+      "required_clauses": [
+        "emp-health-safety"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2003-08-02",
+      "enforcement_examples": "CJEU ruled in SIMAP (C-303/98) that on-call time at the workplace is working time.",
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pwd-art3-terms-conditions",
+      "regulation": "Posted Workers Directive (revised)",
+      "article": "Article 3(1)",
+      "requirement_summary": "Ansvar summary: Member States shall ensure that posted workers are guaranteed the terms and conditions of employment laid down by law, regulation, or collective agreement in the Member State to whose territory the worker is posted, including: maximum work periods, minimum rest periods, minimum paid annual holidays, remuneration, health and safety, and equal treatment. Contracts for cross-border service provision must address posted worker entitlements.",
+      "required_clauses": [
+        "emp-health-safety",
+        "emp-annual-leave"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2020-07-30",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "pwd-art3-1a-long-term-posting",
+      "regulation": "Posted Workers Directive (revised)",
+      "article": "Article 3(1a)",
+      "requirement_summary": "Ansvar summary: Where the effective duration of a posting exceeds 12 months (or 18 months with a motivated notification), the host Member State shall guarantee all applicable terms and conditions of employment, with the exception of supplementary occupational retirement pension schemes and procedures for conclusion and termination of employment contracts. Contracts must address the enhanced obligations triggered by long-term posting.",
+      "required_clauses": [
+        "emp-health-safety"
+      ],
+      "contract_types_affected": [
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2020-07-30",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "twcd-art6-probation-limits",
+      "regulation": "Transparent and Predictable Working Conditions Directive",
+      "article": "Article 6",
+      "requirement_summary": "Ansvar summary: Where the employment relationship is subject to a probationary period, that period shall not exceed six months, including any extensions. For fixed-term contracts, the probationary period shall be proportionate to the expected duration and nature of the work. Employment contracts must specify probationary periods within these limits.",
+      "required_clauses": [
+        "emp-probation"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2022-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "twcd-art7-parallel-employment",
+      "regulation": "Transparent and Predictable Working Conditions Directive",
+      "article": "Article 7",
+      "requirement_summary": "Ansvar summary: Employers shall not prohibit a worker from taking up employment with other employers outside the work schedule established with that employer, and shall not subject a worker to adverse treatment for doing so. Exclusivity clauses in employment contracts must be justified on legitimate grounds such as health and safety, protection of business confidentiality, or avoidance of conflicts of interest.",
+      "required_clauses": [
+        "emp-non-compete"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2022-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "twcd-art14-remedies",
+      "regulation": "Transparent and Predictable Working Conditions Directive",
+      "article": "Article 14",
+      "requirement_summary": "Ansvar summary: Member States shall ensure that workers have access to effective and impartial dispute resolution and a right to redress, including adequate compensation, for infringement of their rights under this Directive. Employment contracts and dispute resolution clauses must not impede access to these statutory remedies.",
+      "required_clauses": [
+        "emp-dispute-resolution"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2022-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "twcd-art15-retaliation-protection",
+      "regulation": "Transparent and Predictable Working Conditions Directive",
+      "article": "Article 15",
+      "requirement_summary": "Member States shall introduce measures necessary to protect workers, including workers who are workers' representatives, from any adverse treatment by the employer or adverse consequences resulting from a complaint lodged with the employer or resulting from any proceedings initiated for the purpose of enforcing compliance with the rights provided for in this Directive. Employment contracts must not include clauses that penalise workers for asserting their rights under the Directive.",
+      "required_clauses": [
+        "emp-whistleblower-protection"
+      ],
+      "contract_types_affected": [
+        "emp-employment-agreement",
+        "emp-fixed-term-employment"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2022-08-01",
+      "enforcement_examples": null,
       "law_mcp_ref": null
     }
   ]

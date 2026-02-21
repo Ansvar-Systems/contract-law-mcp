@@ -5,8 +5,15 @@
       "regulation": "EU AI Act",
       "article": "Article 5(1)(a)",
       "requirement_summary": "AI systems that deploy subliminal techniques beyond a person's consciousness, or purposefully manipulative or deceptive techniques, with the objective or effect of materially distorting behaviour and causing significant harm, are prohibited. Contracts for AI services must include representations that the AI system does not employ such prohibited techniques.",
-      "required_clauses": ["ai-responsible-ai", "ai-content-filtering"],
-      "contract_types_affected": ["ai-services-agreement", "ai-api-license", "ai-model-license"],
+      "required_clauses": [
+        "ai-responsible-ai",
+        "ai-content-filtering"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-api-license",
+        "ai-model-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-02-02",
       "enforcement_examples": null,
@@ -17,8 +24,15 @@
       "regulation": "EU AI Act",
       "article": "Article 5(1)(b)",
       "requirement_summary": "AI systems that exploit vulnerabilities of a specific group of persons due to their age, disability, or social or economic situation, with the objective or effect of materially distorting their behaviour and causing significant harm, are prohibited. Contracts must warrant that AI systems are not designed or deployed to exploit such vulnerabilities.",
-      "required_clauses": ["ai-bias-monitoring", "ai-responsible-ai"],
-      "contract_types_affected": ["ai-services-agreement", "ai-api-license", "ai-model-license"],
+      "required_clauses": [
+        "ai-bias-monitoring",
+        "ai-responsible-ai"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-api-license",
+        "ai-model-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-02-02",
       "enforcement_examples": null,
@@ -29,8 +43,16 @@
       "regulation": "EU AI Act",
       "article": "Article 5(1)(c)",
       "requirement_summary": "AI systems that evaluate or classify natural persons based on social behaviour or personal characteristics leading to detrimental or unfavourable treatment (social scoring) are prohibited. Contracts involving AI-driven scoring or classification must include specific prohibitions against social scoring applications.",
-      "required_clauses": ["ai-bias-monitoring", "ai-responsible-ai", "ai-automated-decision"],
-      "contract_types_affected": ["ai-services-agreement", "ai-data-sharing", "ai-api-license"],
+      "required_clauses": [
+        "ai-bias-monitoring",
+        "ai-responsible-ai",
+        "ai-automated-decision"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-data-sharing",
+        "ai-api-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-02-02",
       "enforcement_examples": null,
@@ -41,8 +63,15 @@
       "regulation": "EU AI Act",
       "article": "Article 6(1)",
       "requirement_summary": "An AI system that is itself a product, or is a safety component of a product, covered by EU harmonisation legislation listed in Annex I, and is required to undergo a third-party conformity assessment, shall be classified as high-risk. Contracts for such AI systems must specify conformity assessment obligations and allocate responsibility for compliance.",
-      "required_clauses": ["ai-model-governance", "ai-algorithmic-audit"],
-      "contract_types_affected": ["ai-services-agreement", "ai-model-license", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-algorithmic-audit"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -53,8 +82,16 @@
       "regulation": "EU AI Act",
       "article": "Article 6(2)",
       "requirement_summary": "AI systems referred to in Annex III (covering biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, justice) are classified as high-risk. Contracts deploying AI in these domains must clearly identify the high-risk classification and include all corresponding obligations for providers and deployers.",
-      "required_clauses": ["ai-model-governance", "ai-human-oversight", "ai-liability-allocation"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-human-oversight",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -65,8 +102,15 @@
       "regulation": "EU AI Act",
       "article": "Article 7",
       "requirement_summary": "The Commission is empowered to amend Annex III by adding or modifying high-risk AI system use cases, provided the AI systems pose a risk of harm equivalent to or greater than existing listed systems. Contracts should include change-of-law clauses to address potential reclassification of AI systems as high-risk following Annex III amendments.",
-      "required_clauses": ["ai-model-governance", "ai-liability-allocation"],
-      "contract_types_affected": ["ai-services-agreement", "ai-model-license", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -77,8 +121,16 @@
       "regulation": "EU AI Act",
       "article": "Article 9",
       "requirement_summary": "A risk management system shall be established, implemented, documented, and maintained for high-risk AI systems throughout their lifecycle. The system must identify and analyse known and reasonably foreseeable risks, estimate and evaluate risks, and adopt suitable risk management measures. Contracts must allocate responsibility for maintaining the risk management system between provider and deployer.",
-      "required_clauses": ["ai-model-governance", "ai-algorithmic-audit", "ai-liability-allocation"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-algorithmic-audit",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -89,8 +141,17 @@
       "regulation": "EU AI Act",
       "article": "Article 10",
       "requirement_summary": "High-risk AI systems using techniques involving the training of AI models shall be developed on the basis of training, validation, and testing data sets that meet specified quality criteria. Data governance and management practices must address data collection, design choices, pre-processing, labelling, relevance, representativeness, error correction, and bias detection. Contracts must specify data quality standards, data provenance obligations, and bias mitigation responsibilities.",
-      "required_clauses": ["ai-training-data-rights", "ai-bias-monitoring", "ai-model-governance"],
-      "contract_types_affected": ["ai-data-sharing", "ai-model-license", "ai-services-agreement", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-training-data-rights",
+        "ai-bias-monitoring",
+        "ai-model-governance"
+      ],
+      "contract_types_affected": [
+        "ai-data-sharing",
+        "ai-model-license",
+        "ai-services-agreement",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -101,8 +162,15 @@
       "regulation": "EU AI Act",
       "article": "Article 11",
       "requirement_summary": "Technical documentation of a high-risk AI system shall be drawn up before that system is placed on the market or put into service and kept up to date. The documentation must demonstrate compliance with AI Act requirements and provide national competent authorities and notified bodies with the necessary information to assess compliance. Contracts must specify documentation deliverables, maintenance obligations, and access rights.",
-      "required_clauses": ["ai-model-governance", "ai-model-versioning"],
-      "contract_types_affected": ["ai-services-agreement", "ai-model-license", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-model-versioning"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -113,8 +181,16 @@
       "regulation": "EU AI Act",
       "article": "Article 12",
       "requirement_summary": "High-risk AI systems shall technically allow for the automatic recording of events (logs) over the lifetime of the system. Logging capabilities must enable monitoring of operation, traceability of decisions, and identification of risks. Contracts must specify log retention periods, log access rights, log format standards, and data sharing obligations with authorities.",
-      "required_clauses": ["ai-model-governance", "ai-algorithmic-audit", "ai-explainability"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-algorithmic-audit",
+        "ai-explainability"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -125,8 +201,16 @@
       "regulation": "EU AI Act",
       "article": "Article 13",
       "requirement_summary": "High-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently transparent to enable deployers to interpret the system's output and use it appropriately. Instructions for use shall include information about the provider, system characteristics, capabilities, limitations, intended purpose, and human oversight measures. Contracts must specify transparency deliverables and ongoing disclosure obligations.",
-      "required_clauses": ["ai-explainability", "ai-model-governance", "ai-human-oversight"],
-      "contract_types_affected": ["ai-services-agreement", "ai-api-license", "ai-model-license"],
+      "required_clauses": [
+        "ai-explainability",
+        "ai-model-governance",
+        "ai-human-oversight"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-api-license",
+        "ai-model-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -137,8 +221,16 @@
       "regulation": "EU AI Act",
       "article": "Article 14",
       "requirement_summary": "High-risk AI systems shall be designed and developed so that they can be effectively overseen by natural persons during their period of use. Human oversight measures shall aim to prevent or minimise risks, including the ability to fully understand the AI system's capacities and limitations, monitor operation, interpret outputs, decide not to use or override outputs, and intervene or interrupt the system. Contracts must allocate human oversight responsibilities and specify required oversight interfaces.",
-      "required_clauses": ["ai-human-oversight", "ai-automated-decision", "ai-explainability"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-human-oversight",
+        "ai-automated-decision",
+        "ai-explainability"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -149,8 +241,17 @@
       "regulation": "EU AI Act",
       "article": "Article 15",
       "requirement_summary": "High-risk AI systems shall be designed and developed to achieve an appropriate level of accuracy, robustness, and cybersecurity, and to perform consistently in those respects throughout their lifecycle. Accuracy metrics must be declared and technical measures must address errors, faults, inconsistencies, adversarial attacks, data poisoning, model manipulation, and confidentiality attacks. Contracts must include performance SLAs covering accuracy thresholds, robustness guarantees, and cybersecurity measures.",
-      "required_clauses": ["ai-model-governance", "ai-model-versioning", "ai-algorithmic-audit"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-api-license", "ai-model-license"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-model-versioning",
+        "ai-algorithmic-audit"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-api-license",
+        "ai-model-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -161,8 +262,15 @@
       "regulation": "EU AI Act",
       "article": "Article 26(1)",
       "requirement_summary": "Deployers of high-risk AI systems shall use such systems in accordance with the instructions of use accompanying the systems. Contracts must obligate deployers to follow provider instructions, and providers must ensure instructions of use are delivered and kept current throughout the contractual relationship.",
-      "required_clauses": ["ai-model-governance", "ai-human-oversight"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-api-license"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-human-oversight"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-api-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -173,8 +281,15 @@
       "regulation": "EU AI Act",
       "article": "Article 26(2)",
       "requirement_summary": "Deployers shall assign human oversight to natural persons who have the necessary competence, training, and authority, as well as the necessary support. Contracts must define the deployer's obligation to assign competent human oversight personnel and the provider's obligation to deliver adequate training and support materials.",
-      "required_clauses": ["ai-human-oversight", "ai-automated-decision"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-human-oversight",
+        "ai-automated-decision"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -185,8 +300,16 @@
       "regulation": "EU AI Act",
       "article": "Article 26(5)",
       "requirement_summary": "Deployers of high-risk AI systems shall use the information provided under Article 13 to carry out a data protection impact assessment (DPIA) where required under Article 35 of GDPR. Contracts must require providers to supply sufficient information to enable deployers to fulfil their DPIA obligations and must define cooperation duties for DPIA completion.",
-      "required_clauses": ["ai-explainability", "ai-model-governance", "ai-liability-allocation"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-data-sharing"],
+      "required_clauses": [
+        "ai-explainability",
+        "ai-model-governance",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-data-sharing"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -197,8 +320,15 @@
       "regulation": "EU AI Act",
       "article": "Article 50(1)",
       "requirement_summary": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed so that the natural person is informed they are interacting with an AI system, unless this is obvious from the circumstances and context of use. Contracts must include obligations to implement and maintain disclosure mechanisms and define liability for non-disclosure.",
-      "required_clauses": ["ai-explainability", "ai-responsible-ai"],
-      "contract_types_affected": ["ai-services-agreement", "ai-api-license", "ai-cloud-services"],
+      "required_clauses": [
+        "ai-explainability",
+        "ai-responsible-ai"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-api-license",
+        "ai-cloud-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -209,8 +339,16 @@
       "regulation": "EU AI Act",
       "article": "Article 50(2)",
       "requirement_summary": "Providers of AI systems that generate synthetic audio, image, video, or text content shall ensure outputs are marked in a machine-readable format and detectable as artificially generated or manipulated. Contracts must include obligations for implementing content provenance marking, specify technical standards for watermarking, and allocate liability for unmarked synthetic outputs.",
-      "required_clauses": ["ai-output-ownership", "ai-content-filtering", "ai-responsible-ai"],
-      "contract_types_affected": ["ai-services-agreement", "ai-api-license", "ai-model-license"],
+      "required_clauses": [
+        "ai-output-ownership",
+        "ai-content-filtering",
+        "ai-responsible-ai"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-api-license",
+        "ai-model-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -221,8 +359,15 @@
       "regulation": "EU AI Act",
       "article": "Article 51",
       "requirement_summary": "General-purpose AI (GPAI) models, including those integrated into AI systems, must comply with the obligations set out in Article 53. GPAI models with systemic risk must additionally comply with Article 55. Contracts involving GPAI models must clearly identify whether the model is classified as a GPAI model and, if so, whether it presents systemic risk, and allocate compliance obligations accordingly.",
-      "required_clauses": ["ai-model-governance", "ai-liability-allocation"],
-      "contract_types_affected": ["ai-model-license", "ai-technology-partnership", "ai-api-license"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-technology-partnership",
+        "ai-api-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-08-02",
       "enforcement_examples": null,
@@ -233,8 +378,18 @@
       "regulation": "EU AI Act",
       "article": "Article 53",
       "requirement_summary": "Providers of GPAI models shall draw up and keep up to date technical documentation including training and testing processes, evaluation results, and information on compute used for training. They must make available information and documentation to downstream providers to enable their compliance, put in place a policy to comply with EU copyright law, and draw up and make publicly available a sufficiently detailed summary of training data content. Contracts must specify documentation deliverables, downstream information sharing obligations, copyright compliance warranties, and training data transparency requirements.",
-      "required_clauses": ["ai-model-governance", "ai-training-data-rights", "ai-model-versioning", "ai-explainability"],
-      "contract_types_affected": ["ai-model-license", "ai-technology-partnership", "ai-api-license", "ai-data-sharing"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-training-data-rights",
+        "ai-model-versioning",
+        "ai-explainability"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-technology-partnership",
+        "ai-api-license",
+        "ai-data-sharing"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-08-02",
       "enforcement_examples": null,
@@ -245,8 +400,16 @@
       "regulation": "EU AI Act",
       "article": "Article 55",
       "requirement_summary": "Providers of GPAI models with systemic risk shall perform model evaluations including adversarial testing, assess and mitigate possible systemic risks, track and report serious incidents to the AI Office, and ensure an adequate level of cybersecurity protection. Contracts must include obligations for adversarial testing schedules, systemic risk mitigation plans, serious incident notification procedures, and cybersecurity baseline requirements.",
-      "required_clauses": ["ai-algorithmic-audit", "ai-model-governance", "ai-responsible-ai"],
-      "contract_types_affected": ["ai-model-license", "ai-technology-partnership", "ai-services-agreement"],
+      "required_clauses": [
+        "ai-algorithmic-audit",
+        "ai-model-governance",
+        "ai-responsible-ai"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-technology-partnership",
+        "ai-services-agreement"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-08-02",
       "enforcement_examples": null,
@@ -257,8 +420,16 @@
       "regulation": "EU AI Act",
       "article": "Article 53(1)(b)",
       "requirement_summary": "Providers of GPAI models shall make available to providers of AI systems who intend to integrate the GPAI model into their AI systems the information and documentation necessary to enable those providers to comply with their own obligations under the AI Act. Contracts between GPAI model providers and downstream AI system providers must include specific information sharing obligations, update notification duties, and cooperation clauses for regulatory compliance.",
-      "required_clauses": ["ai-model-governance", "ai-explainability", "ai-model-versioning"],
-      "contract_types_affected": ["ai-model-license", "ai-technology-partnership", "ai-api-license"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-explainability",
+        "ai-model-versioning"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-technology-partnership",
+        "ai-api-license"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2025-08-02",
       "enforcement_examples": null,
@@ -269,8 +440,16 @@
       "regulation": "EU AI Act",
       "article": "Article 72",
       "requirement_summary": "Providers shall establish and document a post-market monitoring system proportionate to the nature of the AI technologies and the risks of the high-risk AI system. The system must actively and systematically collect, document, and analyse relevant data provided by deployers or collected through other sources on the performance of high-risk AI systems throughout their lifetime. Contracts must specify data collection obligations on deployers, reporting channels, feedback mechanisms, and obligations to cooperate with the provider's monitoring system.",
-      "required_clauses": ["ai-model-governance", "ai-model-versioning", "ai-algorithmic-audit"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-model-versioning",
+        "ai-algorithmic-audit"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -281,8 +460,16 @@
       "regulation": "EU AI Act",
       "article": "Article 72(3)",
       "requirement_summary": "The post-market monitoring plan shall be part of the technical documentation and shall include a plan for continuous assessment of compliance with the requirements set out in Chapter III Section 2. Contracts must require both providers and deployers to contribute to the post-market monitoring plan, including by reporting performance degradation, unexpected outputs, misuse attempts, and incidents to the provider within contractually defined timeframes.",
-      "required_clauses": ["ai-model-governance", "ai-liability-allocation", "ai-hallucination-liability"],
-      "contract_types_affected": ["ai-services-agreement", "ai-cloud-services", "ai-technology-partnership"],
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-liability-allocation",
+        "ai-hallucination-liability"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "ai-technology-partnership"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,
@@ -293,8 +480,381 @@
       "regulation": "EU AI Act",
       "article": "Article 25",
       "requirement_summary": "Where a distributor, importer, deployer, or other third party is considered a provider under Article 25 (e.g., by placing their name on a high-risk AI system, making a substantial modification, or modifying the intended purpose), the original provider shall cooperate with the new provider and provide necessary information and technical access. Contracts between AI system providers and entities in the value chain must define conditions under which provider obligations transfer, specify cooperation duties, intellectual property access terms, and liability allocation upon reclassification as provider.",
-      "required_clauses": ["ai-liability-allocation", "ai-model-governance", "ai-training-restrictions", "ai-output-ownership"],
-      "contract_types_affected": ["ai-services-agreement", "ai-model-license", "ai-technology-partnership", "ai-api-license"],
+      "required_clauses": [
+        "ai-liability-allocation",
+        "ai-model-governance",
+        "ai-training-restrictions",
+        "ai-output-ownership"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license",
+        "ai-technology-partnership",
+        "ai-api-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art10-2-data-governance-quality",
+      "regulation": "EU AI Act",
+      "article": "Article 10(2)",
+      "requirement_summary": "Ansvar summary: Training, validation, and testing data sets shall be subject to data governance and management practices appropriate for the context of use. Data governance shall concern relevant design choices, data collection processes, data preparation operations, formulation of assumptions, assessment of availability/quantity/suitability, examination for possible biases, and identification of data gaps. Contracts for AI data services must specify data quality standards and governance responsibilities.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-bias-monitoring"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-data-sharing"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art10-5-training-data-personal",
+      "regulation": "EU AI Act",
+      "article": "Article 10(5)",
+      "requirement_summary": "Ansvar summary: Providers of high-risk AI systems may process special categories of personal data for bias monitoring and detection purposes only where strictly necessary and subject to appropriate safeguards. Contracts involving AI training data must address the legal basis for processing sensitive data for bias detection and specify safeguards.",
+      "required_clauses": [
+        "ai-bias-monitoring",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-data-sharing"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art16-provider-obligations",
+      "regulation": "EU AI Act",
+      "article": "Article 16",
+      "requirement_summary": "Ansvar summary: Providers of high-risk AI systems shall ensure their systems comply with the requirements of Chapter III Section 2, establish a quality management system (Art 17), draw up technical documentation (Art 11), keep logs (Art 19), ensure conformity assessment (Art 43), affix CE marking (Art 48), and register in the EU database (Art 49). Provider contracts must allocate these obligations clearly.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-algorithmic-audit"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license",
+        "ai-technology-partnership"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art17-quality-management",
+      "regulation": "EU AI Act",
+      "article": "Article 17",
+      "requirement_summary": "Ansvar summary: Providers of high-risk AI systems shall put a quality management system in place covering: compliance strategy, design and development techniques, examination/test/validation procedures, technical specifications, data management systems, risk management, post-market monitoring, incident reporting, and communication with authorities. Contracts must require providers to maintain and evidence their QMS.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-algorithmic-audit"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art20-corrective-actions",
+      "regulation": "EU AI Act",
+      "article": "Article 20",
+      "requirement_summary": "Ansvar summary: Providers of high-risk AI systems that are not in conformity with requirements shall immediately take necessary corrective actions including withdrawal or recall. Contracts must specify the provider's obligations to inform deployers of non-conformity, coordinate corrective actions, and bear the costs of recall or withdrawal.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art26-8-deployer-inform-affected",
+      "regulation": "EU AI Act",
+      "article": "Article 26(8)",
+      "requirement_summary": "Ansvar summary: Deployers of high-risk AI systems that make decisions or assist in making decisions related to natural persons shall inform those persons that they are subject to the use of a high-risk AI system. Contracts between providers and deployers must clarify information obligations and provide deployers with the necessary information to fulfil transparency requirements.",
+      "required_clauses": [
+        "ai-human-oversight",
+        "ai-automated-decision"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art27-fundamental-rights-impact",
+      "regulation": "EU AI Act",
+      "article": "Article 27",
+      "requirement_summary": "Ansvar summary: Deployers that are bodies governed by public law or private entities providing public services, and deployers of certain high-risk AI systems, shall perform a fundamental rights impact assessment before deploying the system. Contracts must require providers to supply information necessary for the deployer's impact assessment.",
+      "required_clauses": [
+        "ai-algorithmic-audit",
+        "ai-human-oversight"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art43-conformity-assessment",
+      "regulation": "EU AI Act",
+      "article": "Article 43",
+      "requirement_summary": "Ansvar summary: High-risk AI systems shall undergo a conformity assessment procedure before being placed on the market or put into service. The procedure may be based on internal control (Annex VI) or with the involvement of a notified body (Annex VII). Contracts must specify which party bears conformity assessment obligations and costs.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-algorithmic-audit"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art53-1a-gpai-technical-docs",
+      "regulation": "EU AI Act",
+      "article": "Article 53(1)(a)",
+      "requirement_summary": "Ansvar summary: Providers of general-purpose AI models shall draw up and keep up to date the technical documentation of the model, including its training and testing process and the results of its evaluation, and provide it to the AI Office and national competent authorities upon request. Contracts for GPAI model access must specify documentation provision obligations.",
+      "required_clauses": [
+        "ai-model-governance"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-api-license",
+        "ai-technology-partnership"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art53-1b-gpai-info-downstream",
+      "regulation": "EU AI Act",
+      "article": "Article 53(1)(b)",
+      "requirement_summary": "Ansvar summary: Providers of general-purpose AI models shall draw up, keep up to date, and make available information and documentation to providers of AI systems who intend to integrate the GPAI model into their AI system. The information must be sufficient to enable downstream providers to understand and comply with their own obligations. Contracts must specify scope and format of downstream documentation.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-responsible-ai"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-api-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art53-1c-gpai-copyright",
+      "regulation": "EU AI Act",
+      "article": "Article 53(1)(c)",
+      "requirement_summary": "Ansvar summary: Providers of general-purpose AI models shall put in place a policy to comply with Union copyright law, in particular to identify and comply with reservations of rights expressed under Article 4(3) of Directive 2019/790. Contracts for GPAI models must include copyright compliance representations and indemnification for IP infringement.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-ip-ownership"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-api-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art53-1d-gpai-training-summary",
+      "regulation": "EU AI Act",
+      "article": "Article 53(1)(d)",
+      "requirement_summary": "Ansvar summary: Providers of general-purpose AI models shall draw up and make publicly available a sufficiently detailed summary about the content used for training of the general-purpose AI model, according to a template provided by the AI Office. Contracts must address the provider's obligation to publish training data summaries.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-content-filtering"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-api-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art55-1-systemic-risk-obligations",
+      "regulation": "EU AI Act",
+      "article": "Article 55(1)",
+      "requirement_summary": "Ansvar summary: Providers of GPAI models with systemic risk shall, in addition to Article 53 obligations: perform model evaluation including adversarial testing, assess and mitigate systemic risks, track and report serious incidents, and ensure an adequate level of cybersecurity protection. Contracts must allocate these enhanced obligations between provider and deployer.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-algorithmic-audit",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-model-license",
+        "ai-api-license",
+        "ai-technology-partnership"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art50-4-deepfake-labelling",
+      "regulation": "EU AI Act",
+      "article": "Article 50(4)",
+      "requirement_summary": "Ansvar summary: Deployers of AI systems that generate or manipulate image, audio, or video content constituting a deep fake shall disclose that the content has been artificially generated or manipulated. Contracts for AI content generation services must require technical marking/labelling capabilities and allocate responsibility for disclosure compliance.",
+      "required_clauses": [
+        "ai-content-filtering",
+        "ai-responsible-ai"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-api-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art61-post-market-monitoring-system",
+      "regulation": "EU AI Act",
+      "article": "Article 61",
+      "requirement_summary": "Ansvar summary: Providers shall establish and document a post-market monitoring system proportionate to the nature of the AI technologies and the risks of the high-risk AI system. The system must actively and systematically collect, document, and analyse relevant data throughout the AI system's lifetime. Contracts must establish data sharing obligations to support post-market monitoring.",
+      "required_clauses": [
+        "ai-model-governance"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art62-serious-incident-reporting",
+      "regulation": "EU AI Act",
+      "article": "Article 62",
+      "requirement_summary": "Ansvar summary: Providers of high-risk AI systems placed on the Union market shall report any serious incident to the market surveillance authorities of the Member States where that incident occurred. Reports must be made immediately after the provider has established a causal link, and no later than 15 days. Contracts must define incident reporting coordination between providers and deployers.",
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "ai-model-governance"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art79-penalties-prohibited",
+      "regulation": "EU AI Act",
+      "article": "Article 99(1)-(3)",
+      "requirement_summary": "Ansvar summary: Non-compliance with prohibited AI practices (Art 5) attracts fines up to EUR 35 million or 7% of worldwide annual turnover. Non-compliance with other obligations attracts fines up to EUR 15 million or 3% of turnover. Supplying incorrect information attracts fines up to EUR 7.5 million or 1% of turnover. Contracts must include indemnification provisions reflecting these penalty tiers and compliance warranties.",
+      "required_clauses": [
+        "ai-liability-allocation",
+        "ai-responsible-ai"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license",
+        "ai-technology-partnership"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-02-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art6-3-high-risk-exception",
+      "regulation": "EU AI Act",
+      "article": "Article 6(3)",
+      "requirement_summary": "Ansvar summary: An AI system listed in Annex III shall not be considered high-risk if it does not pose a significant risk of harm to health, safety, or fundamental rights, including by not materially influencing the outcome of decision-making. Contracts should include provisions for reclassification if the exception conditions cease to apply, with corresponding change-of-obligations clauses.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art28-1-distributor-obligations",
+      "regulation": "EU AI Act",
+      "article": "Article 28(1)",
+      "requirement_summary": "Ansvar summary: Before making a high-risk AI system available on the market, distributors shall verify that the provider has drawn up the technical documentation, the system bears the CE marking, and the provider has designated an authorised representative. Distribution contracts must include compliance verification warranties and document provision requirements.",
+      "required_clauses": [
+        "ai-model-governance",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "ai-model-license"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2026-08-02",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ai-act-art25-1-deployer-becomes-provider",
+      "regulation": "EU AI Act",
+      "article": "Article 25(1)(a)-(c)",
+      "requirement_summary": "Ansvar summary: A deployer shall be considered a provider where it puts its name or trademark on a high-risk AI system already placed on the market, makes a substantial modification, or modifies the intended purpose. Contracts must clearly define modification rights, intended purpose restrictions, and the consequences of actions that trigger provider status.",
+      "required_clauses": [
+        "ai-model-governance",
+        "ai-liability-allocation"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-model-license",
+        "ai-cloud-services"
+      ],
       "jurisdiction": "EU",
       "effective_date": "2026-08-02",
       "enforcement_examples": null,

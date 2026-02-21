@@ -553,6 +553,795 @@
       "authority": "US Federal Acquisition Regulatory Council",
       "url": "https://www.acquisition.gov/far/52.227-11",
       "mandatory": true
+    },
+    {
+      "id": "gdpr-bcr-controller",
+      "source": "EDPB",
+      "name": "EDPB Binding Corporate Rules for Controllers (WP256)",
+      "description": "Framework for multinational organizations to adopt legally binding internal rules permitting intra-group transfers of personal data outside the EU/EEA, serving as an alternative to SCCs for controller-to-controller transfers.",
+      "contract_type": "dpa-gdpr",
+      "clauses_addressed": [
+        "dpa-international-transfers",
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dpa-data-subject-rights",
+        "dpa-audit-rights"
+      ],
+      "authority": "European Data Protection Board",
+      "url": "https://edpb.europa.eu/our-work-tools/our-documents/other/binding-corporate-rules_en",
+      "mandatory": false
+    },
+    {
+      "id": "gdpr-bcr-processor",
+      "source": "EDPB",
+      "name": "EDPB Binding Corporate Rules for Processors (WP257)",
+      "description": "Framework enabling processor organizations with global operations to implement binding internal rules for processing personal data transferred from EU/EEA clients, with commitments enforceable by data subjects.",
+      "contract_type": "dpa-gdpr",
+      "clauses_addressed": [
+        "dpa-international-transfers",
+        "dpa-sub-processor",
+        "dpa-security-measures",
+        "dpa-deletion-return",
+        "dpa-audit-rights"
+      ],
+      "authority": "European Data Protection Board",
+      "url": "https://edpb.europa.eu/our-work-tools/our-documents/other/binding-corporate-rules_en",
+      "mandatory": false
+    },
+    {
+      "id": "gdpr-dpa-art28-template",
+      "source": "EU Commission",
+      "name": "EU Commission Art. 28 GDPR DPA Model Clauses",
+      "description": "Standard contractual clauses for data processing agreements under Article 28(7) GDPR, providing a harmonized template for controller-processor contracts within the EU/EEA.",
+      "contract_type": "dpa-gdpr",
+      "clauses_addressed": [
+        "dpa-processing-instructions",
+        "dpa-confidentiality-personnel",
+        "dpa-security-measures",
+        "dpa-sub-processor",
+        "dpa-data-subject-rights",
+        "dpa-deletion-return",
+        "dpa-audit-rights"
+      ],
+      "authority": "European Commission",
+      "url": "https://commission.europa.eu/law/law-topic/data-protection_en",
+      "mandatory": false
+    },
+    {
+      "id": "nist-sp-800-53r5",
+      "source": "NIST",
+      "name": "NIST SP 800-53 Rev. 5 Security and Privacy Controls",
+      "description": "Comprehensive catalog of security and privacy controls for federal information systems and organizations, widely referenced in vendor contracts to define baseline security requirements and audit expectations.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "nis2-access-control",
+        "audit-rights-security",
+        "dpa-security-measures"
+      ],
+      "authority": "National Institute of Standards and Technology",
+      "url": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
+      "mandatory": false
+    },
+    {
+      "id": "cis-controls-v8",
+      "source": "CIS",
+      "name": "CIS Critical Security Controls v8",
+      "description": "Prioritized set of 18 cybersecurity safeguards mapped to implementation groups, commonly referenced in outsourcing and managed services contracts to define minimum security baselines.",
+      "contract_type": "managed-services",
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "nis2-patching-obligations",
+        "nis2-access-control",
+        "audit-rights-security"
+      ],
+      "authority": "Center for Internet Security",
+      "url": "https://www.cisecurity.org/controls/v8",
+      "mandatory": false
+    },
+    {
+      "id": "hipaa-baa-requirements",
+      "source": "US HHS",
+      "name": "HIPAA Business Associate Agreement Requirements",
+      "description": "Mandatory contractual requirements under 45 CFR 164.504(e) for covered entities engaging business associates who create, receive, maintain, or transmit protected health information.",
+      "contract_type": "hipaa-baa",
+      "clauses_addressed": [
+        "hipaa-permitted-uses",
+        "hipaa-safeguards",
+        "hipaa-breach-notification",
+        "hipaa-termination-provisions",
+        "dpa-sub-processor",
+        "audit-rights-security"
+      ],
+      "authority": "US Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html",
+      "mandatory": true
+    },
+    {
+      "id": "basel-iii-outsourcing",
+      "source": "BCBS",
+      "name": "Basel III/IV Outsourcing Principles (BCBS239)",
+      "description": "Principles for sound management of operational risk in outsourcing arrangements by banks, including contractual requirements for third-party risk management, data security, and business continuity.",
+      "contract_type": "outsourcing-agreement",
+      "clauses_addressed": [
+        "dora-audit-rights",
+        "dora-exit-strategy",
+        "dora-continuity-arrangements",
+        "dora-subcontracting",
+        "audit-rights-regulatory"
+      ],
+      "authority": "Basel Committee on Banking Supervision",
+      "url": "https://www.bis.org/bcbs/publ/d575.htm",
+      "mandatory": false
+    },
+    {
+      "id": "mifid-ii-outsourcing",
+      "source": "ESMA",
+      "name": "MiFID II Outsourcing Delegation Requirements",
+      "description": "Regulatory requirements under MiFID II and MiFIR for investment firms delegating critical or important operational functions, including mandatory contractual terms for oversight, audit, and termination.",
+      "contract_type": "outsourcing-agreement",
+      "clauses_addressed": [
+        "dora-audit-rights",
+        "dora-exit-strategy",
+        "dora-service-description",
+        "dora-continuity-arrangements",
+        "audit-rights-regulatory",
+        "termination-cause"
+      ],
+      "authority": "European Securities and Markets Authority",
+      "url": "https://www.esma.europa.eu/policy-rules/mifid-ii-and-mifir",
+      "mandatory": true
+    },
+    {
+      "id": "eba-outsourcing-guidelines",
+      "source": "EBA",
+      "name": "EBA Guidelines on Outsourcing Arrangements (EBA/GL/2019/02)",
+      "description": "Comprehensive guidelines for credit institutions and payment institutions on outsourcing arrangements, defining mandatory contractual provisions for critical and important functions.",
+      "contract_type": "outsourcing-agreement",
+      "clauses_addressed": [
+        "dora-audit-rights",
+        "dora-data-location",
+        "dora-exit-strategy",
+        "dora-subcontracting",
+        "dora-continuity-arrangements",
+        "audit-rights-regulatory"
+      ],
+      "authority": "European Banking Authority",
+      "url": "https://www.eba.europa.eu/regulation-and-policy/internal-governance/guidelines-on-outsourcing-arrangements",
+      "mandatory": true
+    },
+    {
+      "id": "fidic-red-book-2017",
+      "source": "FIDIC",
+      "name": "FIDIC Red Book (2017) - Conditions of Contract for Construction",
+      "description": "Internationally recognized standard form contract for construction works designed by the employer, covering measurement-based contracts with engineer administration and detailed provisions for variations, claims, and disputes.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "con-variation-orders",
+        "con-delay-damages",
+        "con-defects-liability",
+        "con-practical-completion",
+        "con-extension-of-time",
+        "con-interim-payment",
+        "con-dispute-adjudication-board",
+        "con-performance-bond"
+      ],
+      "authority": "International Federation of Consulting Engineers",
+      "url": "https://fidic.org/books/conditions-contract-construction-2nd-ed-2017-red-book",
+      "mandatory": false
+    },
+    {
+      "id": "fidic-yellow-book-2017",
+      "source": "FIDIC",
+      "name": "FIDIC Yellow Book (2017) - Conditions of Contract for Plant and Design-Build",
+      "description": "Standard form contract for projects where the contractor designs and builds, including detailed provisions for design obligations, testing, and performance guarantees for plant and equipment.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "con-design-liability",
+        "con-variation-orders",
+        "con-delay-damages",
+        "con-defects-liability",
+        "con-performance-bond",
+        "con-interim-payment",
+        "con-dispute-adjudication-board",
+        "con-contractor-design-portion"
+      ],
+      "authority": "International Federation of Consulting Engineers",
+      "url": "https://fidic.org/books/conditions-contract-plant-and-design-build-2nd-ed-2017-yellow-book",
+      "mandatory": false
+    },
+    {
+      "id": "nec4-ecc",
+      "source": "NEC",
+      "name": "NEC4 Engineering and Construction Contract",
+      "description": "Collaborative construction contract widely mandated in UK public sector procurement, featuring early warning mechanisms, compensation events, and proactive project management through mutual trust and cooperation.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "con-variation-orders",
+        "con-delay-damages",
+        "con-practical-completion",
+        "con-interim-payment",
+        "con-extension-of-time",
+        "con-loss-expense",
+        "con-termination-at-will",
+        "con-adjudication"
+      ],
+      "authority": "Institution of Civil Engineers",
+      "url": "https://www.neccontract.com/NEC4-Products/NEC4-Contracts/NEC4-Engineering-and-Construction-Contract",
+      "mandatory": false
+    },
+    {
+      "id": "jct-design-build-2024",
+      "source": "JCT",
+      "name": "JCT Design and Build Contract (DB 2024)",
+      "description": "Standard form UK construction contract for design-and-build procurement, where the contractor is responsible for both design and construction with a lump sum price, widely used in private sector UK projects.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "con-design-liability",
+        "con-defects-liability",
+        "con-practical-completion",
+        "con-interim-payment",
+        "con-retention",
+        "con-adjudication",
+        "con-collateral-warranty",
+        "con-insurance-car"
+      ],
+      "authority": "Joint Contracts Tribunal",
+      "url": "https://corporate.jctltd.co.uk/products/design-and-build-contract/",
+      "mandatory": false
+    },
+    {
+      "id": "ilo-declaration-2022",
+      "source": "ILO",
+      "name": "ILO Declaration on Fundamental Principles and Rights at Work",
+      "description": "International labour standards declaration covering freedom of association, elimination of forced labour, abolition of child labour, elimination of discrimination, and safe working environment, increasingly referenced in supply chain and employment contracts.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "esg-labour-standards",
+        "esg-child-labour-prohibition",
+        "esg-living-wage",
+        "esg-human-rights-dd",
+        "esg-modern-slavery"
+      ],
+      "authority": "International Labour Organization",
+      "url": "https://www.ilo.org/declaration/lang--en/index.htm",
+      "mandatory": false
+    },
+    {
+      "id": "oecd-ai-principles-2024",
+      "source": "OECD",
+      "name": "OECD Principles on Artificial Intelligence (2024 Update)",
+      "description": "Updated principles for trustworthy AI covering inclusive growth, human-centred values, transparency, robustness, and accountability, increasingly incorporated into AI procurement contracts and technology partnership agreements.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ai-responsible-ai",
+        "ai-explainability",
+        "ai-bias-monitoring",
+        "ai-human-oversight",
+        "ai-liability-allocation"
+      ],
+      "authority": "Organisation for Economic Co-operation and Development",
+      "url": "https://oecd.ai/en/ai-principles",
+      "mandatory": false
+    },
+    {
+      "id": "ieee-7000-2021",
+      "source": "IEEE",
+      "name": "IEEE 7000-2021 Standard for Ethical AI System Design",
+      "description": "Standard establishing processes for addressing ethical concerns during system design, providing a methodology for embedding values into autonomous and intelligent systems through stakeholder analysis and value prioritization.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ai-responsible-ai",
+        "ai-bias-monitoring",
+        "ai-explainability",
+        "ai-human-oversight",
+        "ai-model-governance"
+      ],
+      "authority": "Institute of Electrical and Electronics Engineers",
+      "url": "https://standards.ieee.org/ieee/7000/6781/",
+      "mandatory": false
+    },
+    {
+      "id": "iso-42001-aims",
+      "source": "ISO",
+      "name": "ISO/IEC 42001:2023 AI Management System",
+      "description": "Management system standard for organizations providing or using AI systems, specifying requirements for establishing, implementing, maintaining, and improving an AI management system within the context of the organization.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ai-model-governance",
+        "ai-responsible-ai",
+        "ai-bias-monitoring",
+        "ai-explainability",
+        "audit-rights-security",
+        "warranty-compliance-laws"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/81230.html",
+      "mandatory": false
+    },
+    {
+      "id": "iso-28000-supply-chain",
+      "source": "ISO",
+      "name": "ISO 28000:2022 Supply Chain Security Management",
+      "description": "Security management system standard for the supply chain, specifying requirements for a security management system including aspects critical to security assurance of supply chain operations and their contractual underpinnings.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-supply-chain-transparency",
+        "nis2-security-requirements",
+        "audit-rights-security",
+        "esg-supply-chain-transparency"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/79612.html",
+      "mandatory": false
+    },
+    {
+      "id": "iso-14001-environmental",
+      "source": "ISO",
+      "name": "ISO 14001:2015 Environmental Management Systems",
+      "description": "Environmental management system standard providing a framework for organizations to manage environmental responsibilities, increasingly required in procurement contracts and supply chain agreements as evidence of environmental commitment.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "esg-reporting-obligations",
+        "esg-carbon-disclosure",
+        "esg-environmental-remediation",
+        "esg-sustainability-audit",
+        "warranty-compliance-laws"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/60857.html",
+      "mandatory": false
+    },
+    {
+      "id": "iso-9001-quality",
+      "source": "ISO",
+      "name": "ISO 9001:2015 Quality Management Systems",
+      "description": "Quality management system standard specifying requirements for consistent provision of products and services that meet customer and regulatory requirements, commonly referenced as a baseline supplier qualification criterion in commercial contracts.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "warranty-services",
+        "warranty-fitness",
+        "audit-rights-operational",
+        "sla-uptime",
+        "warranty-compliance-laws"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/62085.html",
+      "mandatory": false
+    },
+    {
+      "id": "iatf-16949-automotive",
+      "source": "IATF",
+      "name": "IATF 16949:2016 Automotive Quality Management",
+      "description": "Quality management system standard for the automotive industry combining ISO 9001 with additional automotive-specific requirements, mandatory for direct and sub-tier suppliers to major automotive OEMs.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "warranty-fitness",
+        "warranty-services",
+        "audit-rights-operational",
+        "nis2-supply-chain-transparency",
+        "con-defects-liability"
+      ],
+      "authority": "International Automotive Task Force",
+      "url": "https://www.iatfglobaloversight.org/iatf-169462016/about/",
+      "mandatory": false
+    },
+    {
+      "id": "csa-ccm-v4",
+      "source": "CSA",
+      "name": "CSA Cloud Controls Matrix v4",
+      "description": "Cybersecurity control framework for cloud computing composed of 197 control objectives across 17 domains, used in cloud service contracts to specify security requirements and assess provider compliance.",
+      "contract_type": "saas-subscription",
+      "clauses_addressed": [
+        "dpa-security-measures",
+        "nis2-security-requirements",
+        "ai-data-residency",
+        "ai-right-to-audit-cloud",
+        "sla-uptime"
+      ],
+      "authority": "Cloud Security Alliance",
+      "url": "https://cloudsecurityalliance.org/research/cloud-controls-matrix",
+      "mandatory": false
+    },
+    {
+      "id": "eu-csrd-contractual",
+      "source": "EU Parliament & Council",
+      "name": "EU Corporate Sustainability Reporting Directive (CSRD)",
+      "description": "Directive requiring large and listed companies to report on sustainability matters using European Sustainability Reporting Standards, with contractual implications for supply chain data collection and value chain due diligence.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "esg-reporting-obligations",
+        "esg-carbon-disclosure",
+        "esg-scope3-emissions",
+        "esg-supply-chain-transparency",
+        "esg-sustainability-audit"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/dir/2022/2464/oj",
+      "mandatory": true
+    },
+    {
+      "id": "eu-csddd",
+      "source": "EU Parliament & Council",
+      "name": "EU Corporate Sustainability Due Diligence Directive (CSDDD)",
+      "description": "Directive requiring companies to conduct human rights and environmental due diligence across their value chains, with mandatory contractual cascading of obligations to direct and indirect business partners.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "esg-human-rights-dd",
+        "esg-modern-slavery",
+        "esg-labour-standards",
+        "esg-environmental-remediation",
+        "esg-supply-chain-transparency",
+        "esg-termination-triggers"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/dir/2024/1760/oj",
+      "mandatory": true
+    },
+    {
+      "id": "pci-dss-4-0-1",
+      "source": "PCI SSC",
+      "name": "PCI DSS v4.0.1 Third-Party Service Provider Requirements",
+      "description": "Payment Card Industry Data Security Standard requirements applicable to service providers handling cardholder data, including mandatory contractual provisions for data security, incident response, and compliance validation.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "dpa-security-measures",
+        "dpa-breach-notification",
+        "audit-rights-security",
+        "nis2-security-requirements",
+        "warranty-compliance-laws"
+      ],
+      "authority": "Payment Card Industry Security Standards Council",
+      "url": "https://www.pcisecuritystandards.org/document_library",
+      "mandatory": true
+    },
+    {
+      "id": "swift-csp",
+      "source": "SWIFT",
+      "name": "SWIFT Customer Security Programme (CSP)",
+      "description": "Mandatory security framework for institutions connected to the SWIFT network, requiring contractual commitments to implement security controls, undergo independent assessment, and attest compliance annually.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "audit-rights-security",
+        "dpa-security-measures",
+        "warranty-compliance-laws"
+      ],
+      "authority": "Society for Worldwide Interbank Financial Telecommunication",
+      "url": "https://www.swift.com/myswift/customer-security-programme-csp",
+      "mandatory": true
+    },
+    {
+      "id": "iso-22301-bcm",
+      "source": "ISO",
+      "name": "ISO 22301:2019 Business Continuity Management",
+      "description": "Standard for business continuity management systems specifying requirements to plan, establish, implement, operate, monitor, review, maintain, and continually improve a documented management system for business disruption protection.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "dora-continuity-arrangements",
+        "force-majeure-standard",
+        "sla-uptime",
+        "dora-exit-strategy",
+        "termination-insolvency"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/75106.html",
+      "mandatory": false
+    },
+    {
+      "id": "iso-31000-risk",
+      "source": "ISO",
+      "name": "ISO 31000:2018 Risk Management",
+      "description": "International standard providing principles, framework, and process for managing risk across all types of organizations, referenced in outsourcing contracts and partnership agreements to establish risk management expectations.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "representations-compliance-laws",
+        "audit-rights-operational",
+        "indemnification-mutual",
+        "liability-cap-direct"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/65694.html",
+      "mandatory": false
+    },
+    {
+      "id": "nist-ai-rmf-1-0",
+      "source": "NIST",
+      "name": "NIST AI Risk Management Framework 1.0",
+      "description": "Framework for managing risks associated with AI systems throughout their lifecycle, providing guidance on governance, mapping, measuring, and managing AI risks increasingly referenced in AI procurement and vendor contracts.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ai-model-governance",
+        "ai-bias-monitoring",
+        "ai-explainability",
+        "ai-human-oversight",
+        "ai-liability-allocation",
+        "ai-responsible-ai"
+      ],
+      "authority": "National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/artificial-intelligence/executive-order-safe-secure-and-trustworthy-artificial-intelligence",
+      "mandatory": false
+    },
+    {
+      "id": "etsi-en-303-645",
+      "source": "ETSI",
+      "name": "ETSI EN 303 645 Consumer IoT Cybersecurity",
+      "description": "European standard for cybersecurity baseline requirements for consumer Internet of Things devices, with contractual implications for manufacturers regarding default passwords, software updates, vulnerability disclosure, and secure communication.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "nis2-patching-obligations",
+        "warranty-compliance-laws",
+        "warranty-fitness"
+      ],
+      "authority": "European Telecommunications Standards Institute",
+      "url": "https://www.etsi.org/deliver/etsi_en/303600_303699/303645/",
+      "mandatory": false
+    },
+    {
+      "id": "itu-t-security-standards",
+      "source": "ITU",
+      "name": "ITU-T X.805 Security Architecture for Telecom Systems",
+      "description": "ITU Telecommunication Standardization Sector security architecture providing an end-to-end framework for network security, referenced in telecommunications procurement and interconnection agreements.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "nis2-access-control",
+        "dpa-security-measures",
+        "audit-rights-security"
+      ],
+      "authority": "International Telecommunication Union",
+      "url": "https://www.itu.int/rec/T-REC-X.805/en",
+      "mandatory": false
+    },
+    {
+      "id": "eu-nis2-supply-chain",
+      "source": "EU Parliament & Council",
+      "name": "NIS2 Directive Supply Chain Requirements (2022/2555)",
+      "description": "Directive imposing cybersecurity risk management and supply chain security obligations on essential and important entities, requiring contractual provisions for ICT supply chain transparency, incident reporting, and security measures.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "nis2-incident-notification",
+        "nis2-supply-chain-transparency",
+        "nis2-security-certification",
+        "nis2-patching-obligations"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+      "mandatory": true
+    },
+    {
+      "id": "uk-modern-slavery-act",
+      "source": "UK Government",
+      "name": "UK Modern Slavery Act 2015 - Supply Chain Provisions",
+      "description": "Legislation requiring commercial organizations with turnover above GBP 36 million to publish annual transparency statements on steps taken to ensure modern slavery and human trafficking are not occurring in their supply chains.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "esg-modern-slavery",
+        "esg-labour-standards",
+        "esg-human-rights-dd",
+        "esg-supply-chain-transparency",
+        "audit-rights-operational"
+      ],
+      "authority": "UK Government",
+      "url": "https://www.legislation.gov.uk/ukpga/2015/30/contents/enacted",
+      "mandatory": true
+    },
+    {
+      "id": "un-guiding-principles-bhr",
+      "source": "UN",
+      "name": "UN Guiding Principles on Business and Human Rights",
+      "description": "Authoritative global standard for preventing and addressing human rights impacts linked to business activity, establishing the Protect, Respect and Remedy framework increasingly embedded in supply chain and procurement contracts.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "esg-human-rights-dd",
+        "esg-modern-slavery",
+        "esg-labour-standards",
+        "esg-supply-chain-transparency",
+        "esg-termination-triggers"
+      ],
+      "authority": "United Nations Human Rights Council",
+      "url": "https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf",
+      "mandatory": false
+    },
+    {
+      "id": "eu-deforestation-regulation",
+      "source": "EU Parliament & Council",
+      "name": "EU Deforestation-Free Products Regulation (2023/1115)",
+      "description": "Regulation requiring operators and traders placing specific commodities on the EU market to ensure products are deforestation-free through due diligence statements, with contractual cascading requirements through the supply chain.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "esg-deforestation-free",
+        "esg-supply-chain-transparency",
+        "esg-sustainability-audit",
+        "warranty-compliance-laws",
+        "representations-compliance-laws"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1115/oj",
+      "mandatory": true
+    },
+    {
+      "id": "iso-37001-anti-bribery",
+      "source": "ISO",
+      "name": "ISO 37001:2016 Anti-Bribery Management Systems",
+      "description": "Standard specifying requirements for establishing, implementing, maintaining, and improving an anti-bribery management system, referenced in international joint venture, agency, and distribution contracts to demonstrate anti-corruption commitment.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "compliance-anti-bribery",
+        "intl-anti-bribery",
+        "representations-compliance-laws",
+        "audit-rights-operational",
+        "termination-cause"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/65034.html",
+      "mandatory": false
+    },
+    {
+      "id": "icc-arbitration-rules-2021",
+      "source": "ICC",
+      "name": "ICC Arbitration Rules (2021)",
+      "description": "Comprehensive procedural rules for international commercial arbitration administered by the ICC International Court of Arbitration, governing the conduct of arbitral proceedings from request through award.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "dispute-resolution-arbitration",
+        "intl-arbitration-icc",
+        "governing-law-choice",
+        "governing-law-venue"
+      ],
+      "authority": "International Chamber of Commerce",
+      "url": "https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration/rules-of-arbitration/",
+      "mandatory": false
+    },
+    {
+      "id": "lcia-arbitration-rules-2020",
+      "source": "LCIA",
+      "name": "LCIA Arbitration Rules (2020)",
+      "description": "Rules of the London Court of International Arbitration providing a procedural framework for administered international arbitration, commonly selected in contracts governed by English law or involving London-based parties.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "dispute-resolution-arbitration",
+        "governing-law-choice",
+        "governing-law-venue"
+      ],
+      "authority": "London Court of International Arbitration",
+      "url": "https://www.lcia.org/Dispute_Resolution_Services/lcia-arbitration-rules-2020.aspx",
+      "mandatory": false
+    },
+    {
+      "id": "scc-arbitration-rules-2023",
+      "source": "SCC",
+      "name": "SCC Arbitration Rules (2023)",
+      "description": "Rules of the Arbitration Institute of the Stockholm Chamber of Commerce, widely used as a neutral forum in East-West trade disputes and in contracts involving parties from different legal traditions.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "dispute-resolution-arbitration",
+        "governing-law-choice",
+        "governing-law-venue",
+        "intl-arbitration-icc"
+      ],
+      "authority": "Stockholm Chamber of Commerce Arbitration Institute",
+      "url": "https://sccinstitute.com/our-services/arbitration/rules/arbitration-rules/",
+      "mandatory": false
+    },
+    {
+      "id": "fedramp-contractual",
+      "source": "US Government",
+      "name": "FedRAMP Authorization Requirements for Cloud Services",
+      "description": "Federal Risk and Authorization Management Program providing a standardized approach to security authorization for cloud products and services used by US federal agencies, with mandatory contractual security and compliance requirements.",
+      "contract_type": "saas-subscription",
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "audit-rights-security",
+        "dpa-security-measures",
+        "dp-data-localisation",
+        "warranty-compliance-laws"
+      ],
+      "authority": "US General Services Administration",
+      "url": "https://www.fedramp.gov/",
+      "mandatory": true
+    },
+    {
+      "id": "tisax-automotive",
+      "source": "ENX",
+      "name": "TISAX Trusted Information Security Assessment Exchange",
+      "description": "Automotive industry standard for information security assessment based on the VDA ISA questionnaire, required by European automotive OEMs for suppliers handling confidential prototypes, connected car data, or personal data.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "confidentiality-mutual",
+        "dpa-security-measures",
+        "nis2-security-requirements",
+        "audit-rights-security",
+        "nis2-supply-chain-transparency"
+      ],
+      "authority": "ENX Association",
+      "url": "https://enx.com/en-us/tisax/",
+      "mandatory": false
+    },
+    {
+      "id": "eu-conflict-minerals",
+      "source": "EU Parliament & Council",
+      "name": "EU Conflict Minerals Regulation (2017/821)",
+      "description": "Regulation establishing supply chain due diligence obligations for EU importers of tin, tantalum, tungsten, and gold originating from conflict-affected and high-risk areas, with contractual cascading of due diligence requirements.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "esg-conflict-minerals",
+        "esg-supply-chain-transparency",
+        "representations-compliance-laws",
+        "audit-rights-operational"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2017/821/oj",
+      "mandatory": true
+    },
+    {
+      "id": "iso-27018-cloud-pii",
+      "source": "ISO",
+      "name": "ISO/IEC 27018:2019 Protection of PII in Public Clouds",
+      "description": "Code of practice for protection of personally identifiable information in public cloud computing environments acting as PII processors, commonly referenced in cloud service agreements to supplement data processing terms.",
+      "contract_type": "saas-subscription",
+      "clauses_addressed": [
+        "dpa-security-measures",
+        "dpa-processing-instructions",
+        "dpa-sub-processor",
+        "dp-data-localisation",
+        "dpa-deletion-return"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/76559.html",
+      "mandatory": false
+    },
+    {
+      "id": "gxfs-gaia-x",
+      "source": "Gaia-X",
+      "name": "Gaia-X Federation Services and Trust Framework",
+      "description": "European initiative establishing rules for interoperable and trustworthy data exchange, defining contractual standards for data sovereignty, portability, and self-descriptions in federated cloud and data space ecosystems.",
+      "contract_type": "saas-subscription",
+      "clauses_addressed": [
+        "ai-data-portability",
+        "ai-vendor-lock-in",
+        "dp-data-localisation",
+        "ai-data-residency",
+        "dpa-security-measures"
+      ],
+      "authority": "Gaia-X European Association for Data and Cloud",
+      "url": "https://gaia-x.eu/",
+      "mandatory": false
+    },
+    {
+      "id": "eu-data-act-2024",
+      "source": "EU Parliament & Council",
+      "name": "EU Data Act Contractual Fairness Rules (2023/2854)",
+      "description": "Regulation establishing rules on fair access to and use of data, including provisions on unfair contractual terms in B2B data sharing, switching between data processing services, and interoperability requirements.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ai-data-portability",
+        "ai-vendor-lock-in",
+        "ai-cloud-exit-planning",
+        "dora-exit-strategy",
+        "warranty-compliance-laws"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj",
+      "mandatory": true
+    },
+    {
+      "id": "cbpr-global-privacy",
+      "source": "Global CBPR Forum",
+      "name": "Global Cross-Border Privacy Rules (CBPR) System",
+      "description": "International certification framework for cross-border data transfers enabling organizations to demonstrate compliance with internationally recognized data privacy protections, serving as an alternative mechanism to SCCs for APAC-region transfers.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "dpa-international-transfers",
+        "dpa-security-measures",
+        "dpa-processing-instructions",
+        "dpa-data-subject-rights"
+      ],
+      "authority": "Global CBPR Forum",
+      "url": "https://www.globalcbpr.org/",
+      "mandatory": false
     }
   ]
 }

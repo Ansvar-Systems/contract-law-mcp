@@ -1002,6 +1002,269 @@
       "effective_date": "2018-05-25",
       "enforcement_examples": null,
       "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 25(2)\")"
+    },
+    {
+      "id": "gdpr-edpb-schrems-ii-supplementary",
+      "regulation": "GDPR (EDPB Recommendations 01/2020)",
+      "article": "Recommendations 01/2020 on supplementary measures",
+      "requirement_summary": "Ansvar summary: Following Schrems II (C-311/18), data exporters using SCCs must assess whether the third country's legal framework provides an essentially equivalent level of protection to the EU. Where it does not, supplementary measures (technical, contractual, or organisational) must be identified and implemented. Contracts must include transfer impact assessment obligations, documentation of supplementary measures, and suspension provisions where adequate protection cannot be ensured.",
+      "required_clauses": [
+        "scc-supplementary-measures",
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p",
+        "scc-module-1-c2c"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2021-06-18",
+      "enforcement_examples": "CJEU in Schrems II (C-311/18) invalidated Privacy Shield and imposed supplementary measures obligation.",
+      "law_mcp_ref": null
+    },
+    {
+      "id": "gdpr-edpb-tia-methodology",
+      "regulation": "GDPR (EDPB Recommendations 01/2020)",
+      "article": "Transfer Impact Assessment methodology",
+      "requirement_summary": "Ansvar summary: The EDPB recommends a six-step assessment process: (1) map transfers, (2) identify the transfer tool, (3) assess if the tool is effective in light of the third country's legal framework, (4) adopt supplementary measures, (5) take formal procedural steps, (6) re-evaluate at appropriate intervals. Contracts must facilitate this assessment by requiring the data importer to provide information about the third country's legal framework and government access requests.",
+      "required_clauses": [
+        "scc-supplementary-measures",
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2021-06-18",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "gdpr-art28-3-full-processor-contract",
+      "regulation": "GDPR",
+      "article": "Article 28(3) (comprehensive)",
+      "requirement_summary": "Ansvar summary: Processing by a processor shall be governed by a contract that sets out: (a) documented instructions, (b) confidentiality obligations, (c) security measures per Art 32, (d) sub-processor conditions, (e) assistance with data subject rights, (f) assistance with security/breach/DPIA obligations, (g) deletion or return on termination, (h) audit and inspection rights, and (h-bis) notification if instructions infringe GDPR. The contract must cover all eight mandatory elements to be compliant.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dpa-sub-processor",
+        "dpa-audit-rights",
+        "dpa-deletion-return",
+        "dpa-confidentiality-personnel"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": "Multiple DPAs have fined controllers for DPAs missing mandatory Art 28(3) elements.",
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 28(3)\")"
+    },
+    {
+      "id": "gdpr-edpb-07-2020-concepts-roles",
+      "regulation": "GDPR (EDPB Guidelines 07/2020)",
+      "article": "Controller and processor concepts (expanded)",
+      "requirement_summary": "Ansvar summary: EDPB Guidelines 07/2020 clarify that the determination of controller/processor status is a factual analysis based on 'why' and 'how' of processing. A processor that determines the purposes of processing becomes a controller. Contracts must accurately reflect the factual roles of the parties, and mischaracterisation may lead to enforcement action regardless of contractual labels.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2021-07-07",
+      "enforcement_examples": "Austrian DPA (2021) reclassified a service provider as joint controller despite contractual designation as processor.",
+      "law_mcp_ref": null
+    },
+    {
+      "id": "gdpr-art28-7-standard-contractual-clauses",
+      "regulation": "GDPR",
+      "article": "Article 28(7)-(8)",
+      "requirement_summary": "Ansvar summary: The Commission may lay down standard contractual clauses for the matters referred to in Article 28(3) and (4). A supervisory authority may adopt standard contractual clauses for the same matters. Contracts may use these EU-approved standard clauses as the basis for the data processing agreement, which provides a compliance safe harbour.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 28(7)\")"
+    },
+    {
+      "id": "gdpr-art83-5-penalties-maximum",
+      "regulation": "GDPR",
+      "article": "Article 83(5)",
+      "requirement_summary": "Ansvar summary: Infringements of the basic principles for processing (Arts 5, 6, 7, 9), data subject rights (Arts 12-22), and international transfer provisions (Arts 44-49) shall be subject to administrative fines up to EUR 20 million or 4% of total worldwide annual turnover, whichever is higher. Contracts must include indemnification provisions reflecting these maximum penalty levels and compliance warranties.",
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "representations-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": "Luxembourg CNPD fined Amazon EUR 746 million for targeted advertising without valid consent (2021).",
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 83(5)\")"
+    },
+    {
+      "id": "gdpr-art83-4-penalties-standard",
+      "regulation": "GDPR",
+      "article": "Article 83(4)",
+      "requirement_summary": "Ansvar summary: Infringements of controller/processor obligations (Arts 8, 11, 25-39, 42, 43) shall be subject to administrative fines up to EUR 10 million or 2% of total worldwide annual turnover, whichever is higher. Processor contracts must reflect the processor's direct liability under this provision and include appropriate indemnification.",
+      "required_clauses": [
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 83(4)\")"
+    },
+    {
+      "id": "gdpr-art27-representative",
+      "regulation": "GDPR",
+      "article": "Article 27",
+      "requirement_summary": "Ansvar summary: Where Article 3(2) applies (non-EU controllers/processors targeting EU data subjects), the controller or processor shall designate in writing a representative in the Union. The representative shall be mandated to be addressed by supervisory authorities and data subjects. Contracts with non-EU processors must address representative designation requirements.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 27\")"
+    },
+    {
+      "id": "gdpr-edpb-05-2021-international-transfers",
+      "regulation": "GDPR (EDPB Guidelines 05/2021)",
+      "article": "Interplay between Art 3 scope and Chapter V transfers",
+      "requirement_summary": "Ansvar summary: EDPB Guidelines 05/2021 clarify when a data flow constitutes an international transfer requiring Chapter V safeguards versus processing by an establishment within the EU. A transfer occurs when: (1) an EU controller/processor discloses data to (2) a controller/processor in a third country/international organisation, and (3) the third-country entity is a separate controller or processor. Contracts must correctly identify transfer scenarios and apply appropriate safeguards.",
+      "required_clauses": [
+        "dp-cross-border-transfers",
+        "scc-supplementary-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2021-11-18",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "gdpr-art35-3-dpia-required-processing",
+      "regulation": "GDPR",
+      "article": "Article 35(3)",
+      "requirement_summary": "Ansvar summary: A DPIA is required in particular where there is: (a) systematic and extensive evaluation of personal aspects based on automated processing including profiling, (b) large-scale processing of special categories or criminal offence data, or (c) systematic monitoring of a publicly accessible area on a large scale. Processor contracts must require the processor to assist the controller in conducting DPIAs for these processing activities.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 35(3)\")"
+    },
+    {
+      "id": "gdpr-art24-controller-responsibility",
+      "regulation": "GDPR",
+      "article": "Article 24",
+      "requirement_summary": "Ansvar summary: The controller shall implement appropriate technical and organisational measures to ensure and to be able to demonstrate that processing is performed in accordance with the GDPR. These measures shall be reviewed and updated where necessary. When engaging processors, the controller's demonstration obligation extends to the processor relationship, requiring documented evidence of processor compliance.",
+      "required_clauses": [
+        "dpa-audit-rights",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 24\")"
+    },
+    {
+      "id": "gdpr-edpb-02-2023-art-46-2a-bcr",
+      "regulation": "GDPR (EDPB Recommendations 1/2022)",
+      "article": "Binding Corporate Rules for controllers (BCR-C)",
+      "requirement_summary": "Ansvar summary: BCRs provide a transfer mechanism for intra-group transfers. BCR-C must include: binding nature, application of GDPR principles, data subject rights, complaint mechanisms, cooperation with DPAs, and mechanisms for ensuring compliance. Intra-group data sharing agreements must reflect approved BCR requirements and flow-down obligations to all group entities.",
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "gdpr-art7-conditions-consent",
+      "regulation": "GDPR",
+      "article": "Article 7",
+      "requirement_summary": "Ansvar summary: Where processing is based on consent, the controller must be able to demonstrate that the data subject has consented. Consent must be clearly distinguishable, intelligible, easily accessible, and in clear and plain language. The data subject shall have the right to withdraw consent at any time. Processor contracts must support the controller's consent management and withdrawal mechanisms.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 7\")"
+    },
+    {
+      "id": "gdpr-edpb-03-2019-videosurveilance",
+      "regulation": "GDPR (EDPB Guidelines 3/2019)",
+      "article": "Processing of personal data through video devices",
+      "requirement_summary": "Ansvar summary: EDPB Guidelines 3/2019 clarify that video surveillance systems processing personal data must comply with GDPR, including requirements for legal basis, transparency, data protection impact assessments, and retention limitations. Contracts for video surveillance services must address controller-processor roles, data retention, access controls, and data subject notification.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "managed-services",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2020-01-29",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "gdpr-art20-data-portability",
+      "regulation": "GDPR",
+      "article": "Article 20",
+      "requirement_summary": "Ansvar summary: Data subjects have the right to receive their personal data in a structured, commonly used, and machine-readable format and to transmit that data to another controller. Where technically feasible, the data subject has the right to have data transmitted directly between controllers. Processor contracts must require the processor to support data portability in agreed formats and timelines.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"GDPR\", \"Art 20\")"
     }
   ]
 }

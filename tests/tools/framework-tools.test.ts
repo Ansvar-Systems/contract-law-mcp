@@ -75,6 +75,6 @@ describe('search_frameworks', () => {
     const result = searchFrameworks(db, {});
     expect(result.results.length).toBeGreaterThan(0);
     // Should match the full count of standard_frameworks table
-    expect(result.results.length).toBe(35);
+    expect(result.results.length).toBe(81);
   });
 });

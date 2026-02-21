@@ -691,6 +691,184 @@
       "effective_date": "2023-04-04",
       "enforcement_examples": "ICO Monetary Penalty Notice: TikTok Information Technologies UK Limited, GBP 12,700,000 (4 April 2023). Largest ICO fine for children's data violations.",
       "law_mcp_ref": null
+    },
+    {
+      "id": "uk-gdpr-adequacy-eu-decision",
+      "regulation": "UK GDPR",
+      "article": "EU adequacy decision for UK",
+      "requirement_summary": "Ansvar summary: The European Commission adopted an adequacy decision for the UK on 28 June 2021, with a sunset clause requiring re-evaluation by June 2025. While adequacy remains in effect, no additional safeguards are required for EU-to-UK personal data transfers. Contracts should include fallback provisions (UK IDTA or UK Addendum to EU SCCs) in case adequacy lapses.",
+      "required_clauses": [
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2021-06-28",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-gdpr-idta-requirements",
+      "regulation": "UK GDPR / DPA 2018",
+      "article": "International Data Transfer Agreement (IDTA)",
+      "requirement_summary": "Ansvar summary: The UK IDTA is a standalone transfer mechanism for restricted transfers from the UK. The IDTA must be completed with transfer-specific details including: the parties, data description, purpose, security measures, and any supplementary measures. Contracts involving UK personal data transfers to third countries must use the IDTA or the UK Addendum to EU SCCs.",
+      "required_clauses": [
+        "dp-cross-border-transfers",
+        "scc-supplementary-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2022-03-21",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-gdpr-tia-requirement",
+      "regulation": "UK GDPR",
+      "article": "Transfer Risk Assessment (TRA)",
+      "requirement_summary": "Ansvar summary: The ICO requires data exporters to conduct a transfer risk assessment before making a restricted transfer, assessing whether the destination country's laws and practices provide an adequate level of protection. The TRA must assess government access laws, rule of law, and enforcement mechanisms. Contracts must facilitate TRA by requiring importers to provide relevant information about their jurisdiction's legal framework.",
+      "required_clauses": [
+        "dp-cross-border-transfers",
+        "scc-supplementary-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2022-03-21",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-gdpr-ico-accountability-framework",
+      "regulation": "UK GDPR (ICO guidance)",
+      "article": "ICO Accountability Framework",
+      "requirement_summary": "Ansvar summary: The ICO's accountability framework expects organisations to implement: (1) leadership and oversight, (2) policies and procedures, (3) training and awareness, (4) individuals' rights, (5) transparency, (6) records of processing and lawful basis, (7) contracts and data sharing, (8) risks and DPIAs, (9) records management and security, and (10) breach response and monitoring. Processor contracts must be assessed against this framework.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dpa-audit-rights"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2021-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-gdpr-ico-children-code",
+      "regulation": "UK GDPR / DPA 2018",
+      "article": "Age Appropriate Design Code (Children's Code)",
+      "requirement_summary": "Ansvar summary: The ICO's Age Appropriate Design Code sets 15 standards for online services likely to be accessed by children, including best interests, data minimisation, transparency, default settings, and parental controls. Contracts for online services that may be accessed by children must include obligations to comply with the Children's Code and specify age verification, privacy-by-default, and data minimisation requirements.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-data-minimisation"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "ai-services-agreement"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2021-09-02",
+      "enforcement_examples": "ICO issued a preliminary enforcement notice to TikTok for potential breaches of the Children's Code (2023).",
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-gdpr-ico-direct-marketing",
+      "regulation": "UK GDPR / PECR",
+      "article": "ICO Direct Marketing Guidance",
+      "requirement_summary": "Ansvar summary: The ICO's direct marketing guidance specifies requirements for electronic marketing communications under PECR, including consent requirements, soft opt-in, and unsubscribe mechanisms. Contracts with marketing service providers must specify the legal basis for each marketing channel, consent management obligations, and compliance with PECR requirements including the corporate subscriber rules.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2021-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-gdpr-ico-data-sharing-code",
+      "regulation": "UK GDPR (ICO Code of Practice)",
+      "article": "Data Sharing Code of Practice",
+      "requirement_summary": "Ansvar summary: The ICO's Data Sharing Code of Practice provides guidance on sharing personal data fairly and lawfully. It covers: deciding to share, fairness, lawfulness, governance and accountability, data quality, security, individuals' rights, and international data sharing. Data sharing agreements must address all elements of the code and establish governance mechanisms.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "confidentiality-mutual"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2021-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-gdpr-ico-ai-guidance",
+      "regulation": "UK GDPR (ICO guidance)",
+      "article": "ICO Guidance on AI and Data Protection",
+      "requirement_summary": "Ansvar summary: The ICO's guidance on AI and data protection addresses: lawfulness, fairness and transparency in AI, data minimisation, security, DPIAs for AI, individual rights in AI-driven decisions, and accountability. Contracts for AI services processing UK personal data must address AI-specific data protection requirements including transparency of automated decision-making, fairness testing, and right to human review.",
+      "required_clauses": [
+        "ai-human-oversight",
+        "ai-automated-decision",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "ai-services-agreement",
+        "ai-cloud-services",
+        "saas-subscription"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2021-01-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-dpa2018-s170-unlawful-obtaining",
+      "regulation": "DPA 2018",
+      "article": "Section 170 (Unlawful obtaining of personal data)",
+      "requirement_summary": "Ansvar summary: It is an offence to knowingly or recklessly obtain, disclose, or retain personal data without the consent of the controller or to procure the disclosure of personal data. Contracts must include provisions prohibiting unauthorised access, processing, and disclosure, and should specify that breach constitutes a criminal offence under UK law.",
+      "required_clauses": [
+        "dpa-security-measures",
+        "confidentiality-mutual"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "uk-dpa2018-s149-enforcement-notices",
+      "regulation": "DPA 2018",
+      "article": "Section 149 (Enforcement notices)",
+      "requirement_summary": "Ansvar summary: The ICO may serve an enforcement notice requiring a controller or processor to take, or refrain from taking, specified steps within a specified period. Non-compliance with an enforcement notice is a criminal offence. Contracts must include provisions requiring the processor to cooperate with ICO enforcement actions and notify the controller of any enforcement notices received.",
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "UK",
+      "effective_date": "2018-05-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
     }
   ]
 }

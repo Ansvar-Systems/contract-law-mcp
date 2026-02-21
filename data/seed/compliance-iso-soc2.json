@@ -5,8 +5,15 @@
       "regulation": "ISO/IEC 27036-1",
       "article": "Part 1: Overview and concepts",
       "requirement_summary": "Ansvar summary: ISO 27036-1 establishes the framework for information security in supplier relationships, defining key concepts including acquirer, supplier, ICT product/service, and supply chain. It requires organisations to treat supplier relationships as a first-class information security concern and to implement governance structures for supplier risk management.",
-      "required_clauses": ["nis2-security-requirements", "audit-rights-security"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2014-04-01",
       "enforcement_examples": null,
@@ -17,8 +24,16 @@
       "regulation": "ISO/IEC 27036-2",
       "article": "Part 2: Requirements",
       "requirement_summary": "Ansvar summary: ISO 27036-2 specifies requirements for supplier relationship information security, including: defining information security requirements in procurement processes, incorporating security requirements into supplier agreements, monitoring and reviewing supplier service delivery and information security, and managing changes to supplier services. Contracts must address security expectations, monitoring rights, incident handling, and termination/transition obligations.",
-      "required_clauses": ["nis2-security-requirements", "audit-rights-security", "termination-wind-down"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-security-requirements",
+        "audit-rights-security",
+        "termination-wind-down"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2014-04-01",
       "enforcement_examples": null,
@@ -29,8 +44,17 @@
       "regulation": "ISO/IEC 27036-2",
       "article": "Part 2: Agreement requirements (Clause 6)",
       "requirement_summary": "Ansvar summary: Supplier agreements shall include: description of information to be provided/accessed, classification of information, legal and regulatory requirements, obligation to implement controls, incident reporting procedures, right to audit, sub-supplier management requirements, and information handling/return/destruction on termination.",
-      "required_clauses": ["confidentiality-mutual", "audit-rights-security", "data-protection-breach-notification", "dpa-deletion-return"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "confidentiality-mutual",
+        "audit-rights-security",
+        "data-protection-breach-notification",
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2014-04-01",
       "enforcement_examples": null,
@@ -41,8 +65,16 @@
       "regulation": "ISO/IEC 27036-3",
       "article": "Part 3: ICT supply chain security",
       "requirement_summary": "Ansvar summary: ISO 27036-3 provides guidelines for ICT supply chain security, addressing risks specific to ICT products and services including: malicious functionality, counterfeit components, vulnerabilities in third-party software, and ICT supply chain attack vectors. Contracts for ICT products/services should address provenance verification, integrity assurance, vulnerability disclosure, and secure development practices.",
-      "required_clauses": ["nis2-supply-chain-transparency", "nis2-patching-obligations", "warranty-compliance-laws"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "nis2-patching-obligations",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2013-11-01",
       "enforcement_examples": null,
@@ -53,8 +85,13 @@
       "regulation": "ISO/IEC 27036-3",
       "article": "Part 3: Provenance and integrity (Clause 7)",
       "requirement_summary": "Ansvar summary: Acquirers should require suppliers to provide evidence of the provenance and integrity of ICT products and services, including software bills of materials (SBOM), secure development lifecycle evidence, and tamper-evidence mechanisms. Contracts should specify provenance documentation requirements and rights to verify integrity.",
-      "required_clauses": ["nis2-supply-chain-transparency"],
-      "contract_types_affected": ["saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2013-11-01",
       "enforcement_examples": null,
@@ -65,8 +102,15 @@
       "regulation": "ISO/IEC 27036-4",
       "article": "Part 4: Cloud services security",
       "requirement_summary": "Ansvar summary: ISO 27036-4 provides guidelines for information security of cloud services, addressing: shared responsibility models, data location and jurisdiction, portability and interoperability, incident management, and exit planning. Cloud service contracts must clearly define the shared responsibility model, data residency requirements, and exit/migration provisions.",
-      "required_clauses": ["dora-data-location", "dora-exit-strategy", "dpa-security-measures"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "dora-data-location",
+        "dora-exit-strategy",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2016-08-01",
       "enforcement_examples": null,
@@ -77,8 +121,15 @@
       "regulation": "ISO/IEC 27036-4",
       "article": "Part 4: Exit planning (Clause 8.3)",
       "requirement_summary": "Ansvar summary: Cloud service agreements must include exit planning provisions addressing: data export in standard formats, transition assistance period, data deletion confirmation, and provisions for continuity during migration. Exit plans should be tested periodically.",
-      "required_clauses": ["dora-exit-strategy", "dpa-deletion-return", "fin-transition-pricing"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "dora-exit-strategy",
+        "dpa-deletion-return",
+        "fin-transition-pricing"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2016-08-01",
       "enforcement_examples": null,
@@ -89,8 +140,13 @@
       "regulation": "ISO/IEC 27036-4",
       "article": "Part 4: Shared responsibility (Clause 7)",
       "requirement_summary": "Ansvar summary: Cloud service agreements must clearly delineate security responsibilities between the cloud service customer and cloud service provider for each cloud deployment and service model (IaaS, PaaS, SaaS). The shared responsibility matrix should be documented, regularly reviewed, and updated when services change.",
-      "required_clauses": ["dora-service-description"],
-      "contract_types_affected": ["saas-subscription", "managed-services"],
+      "required_clauses": [
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2016-08-01",
       "enforcement_examples": null,
@@ -101,8 +157,15 @@
       "regulation": "ISO/IEC 27701",
       "article": "Clause 7.2.6",
       "requirement_summary": "Ansvar summary: Controllers shall determine and document the controller-processor relationship obligations in a contract. The contract shall address: processing only on documented instructions, confidentiality of personnel, security measures, sub-processor engagement, data subject rights assistance, deletion/return of data, audit support, and notification of instruction infringement. Aligns with GDPR Art 28(3).",
-      "required_clauses": ["dpa-processing-instructions", "dpa-security-measures", "dpa-audit-rights", "dpa-deletion-return"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dpa-audit-rights",
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2019-08-01",
       "enforcement_examples": null,
@@ -113,8 +176,13 @@
       "regulation": "ISO/IEC 27701",
       "article": "Clause 8.2",
       "requirement_summary": "Ansvar summary: Processors shall process PII only in accordance with the documented instructions of the controller (or the customer in the case of multi-tier processing). The processor shall not process PII for any purpose other than as instructed and shall promptly inform the controller if an instruction appears to infringe applicable legislation.",
-      "required_clauses": ["dpa-processing-instructions", "dpa-controller-notification"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-controller-notification"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2019-08-01",
       "enforcement_examples": null,
@@ -125,8 +193,12 @@
       "regulation": "ISO/IEC 27701",
       "article": "Clause 8.2.4",
       "requirement_summary": "Ansvar summary: Processors shall not engage sub-processors without the prior written authorisation (general or specific) of the controller. Where general authorisation is given, the processor shall inform the controller of changes to sub-processors and allow the controller to object. Sub-processor contracts must impose equivalent obligations.",
-      "required_clauses": ["dpa-sub-processor"],
-      "contract_types_affected": ["dpa-gdpr"],
+      "required_clauses": [
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2019-08-01",
       "enforcement_examples": null,
@@ -137,8 +209,15 @@
       "regulation": "ISO/IEC 27701",
       "article": "Clause 7.5",
       "requirement_summary": "Ansvar summary: The organisation shall identify and document the basis for cross-border transfers of PII. Where transfers rely on contractual clauses, the organisation shall ensure the clauses provide an adequate level of protection as determined by applicable legislation and that the clauses address supplementary measures where required.",
-      "required_clauses": ["dp-cross-border-transfers", "scc-supplementary-measures"],
-      "contract_types_affected": ["dpa-gdpr", "scc-module-2-c2p", "scc-module-1-c2c"],
+      "required_clauses": [
+        "dp-cross-border-transfers",
+        "scc-supplementary-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p",
+        "scc-module-1-c2c"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2019-08-01",
       "enforcement_examples": null,
@@ -149,8 +228,14 @@
       "regulation": "ISO/IEC 27701",
       "article": "Clause 7.4",
       "requirement_summary": "Ansvar summary: The organisation shall implement privacy by design and privacy by default. Contracts with processors shall require implementation of appropriate technical and organisational measures to support the controller's privacy-by-design obligations, including data minimisation, purpose limitation, and privacy-enhancing technologies.",
-      "required_clauses": ["dpa-security-measures", "dpa-processing-instructions"],
-      "contract_types_affected": ["dpa-gdpr", "saas-subscription"],
+      "required_clauses": [
+        "dpa-security-measures",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2019-08-01",
       "enforcement_examples": null,
@@ -161,8 +246,16 @@
       "regulation": "SOC 2",
       "article": "CC9.9",
       "requirement_summary": "Ansvar summary: The entity assesses and manages risks associated with vendors and business partners. The vendor management control requires documented vendor selection and assessment, risk-based categorisation, contractual security obligations, ongoing monitoring and periodic re-assessment, and incident response coordination with vendors.",
-      "required_clauses": ["audit-rights-security", "warranty-compliance-laws"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "audit-rights-security",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-10-15",
       "enforcement_examples": null,
@@ -173,8 +266,15 @@
       "regulation": "SOC 2",
       "article": "Complementary Subservice Organisation Controls (CSOCs)",
       "requirement_summary": "Ansvar summary: Where a service organisation uses subservice organisations (sub-processors), the SOC 2 report must identify controls that the subservice organisation is expected to implement (CSOCs). Contracts with sub-processors must specify the expected CSOCs and require evidence of their operation, typically through the sub-processor's own SOC 2 report.",
-      "required_clauses": ["audit-rights-security", "dpa-sub-processor"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "audit-rights-security",
+        "dpa-sub-processor"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-10-15",
       "enforcement_examples": null,
@@ -185,8 +285,17 @@
       "regulation": "SOC 2",
       "article": "Trust Services Criteria (TSC)",
       "requirement_summary": "Ansvar summary: SOC 2 Trust Services Criteria cover five categories: Security (CC), Availability (A), Processing Integrity (PI), Confidentiality (C), and Privacy (P). Vendor contracts must address the applicable trust services criteria and specify the vendor's obligations for each included criterion, with requirements for annual assessment and evidence of control effectiveness.",
-      "required_clauses": ["sla-uptime", "confidentiality-mutual", "dpa-security-measures"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "sla-uptime",
+        "confidentiality-mutual",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-10-15",
       "enforcement_examples": null,
@@ -197,8 +306,14 @@
       "regulation": "SOC 2",
       "article": "Annual assessment requirements",
       "requirement_summary": "Ansvar summary: SOC 2 reports cover a specified review period (typically 12 months for Type II). Contracts should require vendors to undergo annual SOC 2 Type II examinations, provide copies of SOC 2 reports and bridge letters as applicable, and notify the entity of any qualified opinions, significant exceptions, or material changes to the control environment.",
-      "required_clauses": ["audit-rights-security"],
-      "contract_types_affected": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-10-15",
       "enforcement_examples": null,
@@ -209,8 +324,14 @@
       "regulation": "SOC 2",
       "article": "CC6.1 - CC6.3 (Logical and Physical Access)",
       "requirement_summary": "Ansvar summary: The entity restricts logical and physical access to information assets. Contracts with vendors who have logical or physical access to systems must specify access controls, authentication requirements, access provisioning and deprovisioning procedures, and restrictions on vendor access scope and duration.",
-      "required_clauses": ["nis2-access-control"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "nis2-access-control"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "US",
       "effective_date": "2022-10-15",
       "enforcement_examples": null,
@@ -221,8 +342,15 @@
       "regulation": "ISO 22301",
       "article": "Clause 8.3 (Business continuity strategies and solutions)",
       "requirement_summary": "Ansvar summary: ISO 22301 requires organisations to determine and implement business continuity strategies for their prioritised activities, including those dependent on suppliers. Contracts with critical suppliers must include: business continuity requirements, recovery time objectives (RTOs), recovery point objectives (RPOs), testing participation, alternative supply arrangements, and communication procedures during disruption.",
-      "required_clauses": ["dora-continuity-arrangements", "sla-uptime"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-continuity-arrangements",
+        "sla-uptime"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2019-10-31",
       "enforcement_examples": null,
@@ -233,10 +361,536 @@
       "regulation": "ISO 22301",
       "article": "Clause 8.3.5 (Supply chain continuity)",
       "requirement_summary": "Ansvar summary: Where an organisation is dependent on suppliers for the delivery of prioritised products and services, the organisation shall assess the risk of supplier disruption and implement measures to reduce dependency risk. Contracts shall address: alternative supplier arrangements, key person dependencies, supplier financial stability monitoring, and coordinated recovery testing.",
-      "required_clauses": ["dora-continuity-arrangements", "dora-exit-strategy"],
-      "contract_types_affected": ["msa", "outsourcing-agreement", "managed-services"],
+      "required_clauses": [
+        "dora-continuity-arrangements",
+        "dora-exit-strategy"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
       "jurisdiction": "Global",
       "effective_date": "2019-10-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27701-breach-notification",
+      "regulation": "ISO/IEC 27701",
+      "article": "Clause 7.3.5",
+      "requirement_summary": "Ansvar summary: The organisation shall notify relevant PII principals (data subjects) and supervisory authorities when a breach involving PII occurs, in accordance with applicable legislation. Contracts with processors must specify breach notification timelines, content requirements, and coordination obligations consistent with GDPR Art 33/34 requirements.",
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27701-data-minimisation",
+      "regulation": "ISO/IEC 27701",
+      "article": "Clause 7.4.2",
+      "requirement_summary": "Ansvar summary: The organisation shall limit the collection and processing of PII to what is adequate, relevant, and necessary for the identified purposes. Contracts must specify the minimum PII required for service delivery and prohibit processing beyond what is necessary.",
+      "required_clauses": [
+        "dpa-data-minimisation",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27701-retention",
+      "regulation": "ISO/IEC 27701",
+      "article": "Clause 7.4.7",
+      "requirement_summary": "Ansvar summary: PII shall not be retained longer than necessary for the identified purposes. Contracts shall specify retention periods, periodic review mechanisms, and secure deletion procedures upon expiry of the retention period or termination of the agreement.",
+      "required_clauses": [
+        "dpa-deletion-return",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27701-cross-border",
+      "regulation": "ISO/IEC 27701",
+      "article": "Clause 7.5.2",
+      "requirement_summary": "Ansvar summary: The organisation shall identify countries and international organisations to which PII may be transferred. Contracts must document all transfer destinations and ensure appropriate safeguards (SCCs, BCRs, adequacy decisions) are in place before transfer occurs.",
+      "required_clauses": [
+        "dp-cross-border-transfers",
+        "scc-supplementary-measures"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "scc-module-2-c2p"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27701-pii-inventory",
+      "regulation": "ISO/IEC 27701",
+      "article": "Clause 7.2.8",
+      "requirement_summary": "Ansvar summary: The organisation shall maintain an inventory of PII processing activities including categories of PII, purposes, recipients, transfers, and retention periods. Contracts with processors must require the processor to maintain equivalent records and make them available for audit.",
+      "required_clauses": [
+        "dpa-audit-rights",
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27701-consent-management",
+      "regulation": "ISO/IEC 27701",
+      "article": "Clause 7.2.3",
+      "requirement_summary": "Ansvar summary: Where consent is the legal basis for processing, the organisation shall implement mechanisms to obtain, record, and manage consent. Contracts with processors must require the processor to support the controller's consent management obligations, including withdrawal of consent and record-keeping.",
+      "required_clauses": [
+        "dpa-processing-instructions"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-08-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso22301-testing-exercises",
+      "regulation": "ISO 22301",
+      "article": "Clause 8.5 (Testing and exercising)",
+      "requirement_summary": "Ansvar summary: The organisation shall conduct exercises and tests of its business continuity procedures at planned intervals and when significant changes occur. Contracts with critical suppliers must require participation in joint business continuity exercises and testing of recovery procedures at least annually.",
+      "required_clauses": [
+        "dora-continuity-arrangements",
+        "sla-uptime"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-10-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso22301-bcp-documentation",
+      "regulation": "ISO 22301",
+      "article": "Clause 8.4 (Business continuity plans)",
+      "requirement_summary": "Ansvar summary: The organisation shall establish documented business continuity plans covering roles, responsibilities, activation criteria, communication procedures, and resource requirements. Contracts shall require suppliers to maintain and share relevant portions of their business continuity plans.",
+      "required_clauses": [
+        "dora-continuity-arrangements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-10-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso22301-bia",
+      "regulation": "ISO 22301",
+      "article": "Clause 8.2 (Business impact analysis)",
+      "requirement_summary": "Ansvar summary: The organisation shall conduct a business impact analysis to determine recovery priorities and objectives. Contracts with critical suppliers must reflect agreed RTOs and RPOs derived from the BIA and must include penalties or remedies for failure to meet recovery objectives.",
+      "required_clauses": [
+        "dora-continuity-arrangements",
+        "sla-uptime",
+        "sla-penalties-credits"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2019-10-31",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-cc1-control-environment",
+      "regulation": "SOC 2",
+      "article": "CC1.1 - CC1.5 (Control Environment)",
+      "requirement_summary": "Ansvar summary: The entity demonstrates a commitment to integrity and ethical values, exercises oversight responsibility, establishes structure and authority, demonstrates commitment to competence, and enforces accountability. Vendor contracts should require evidence of the vendor's control environment through SOC 2 reports or equivalent attestation.",
+      "required_clauses": [
+        "audit-rights-security",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-cc2-communication",
+      "regulation": "SOC 2",
+      "article": "CC2.1 - CC2.3 (Communication and Information)",
+      "requirement_summary": "Ansvar summary: The entity obtains or generates and uses relevant, quality information to support the functioning of internal controls. Contracts must require vendors to provide timely and accurate information about their control environment, including notification of material changes to controls.",
+      "required_clauses": [
+        "audit-rights-security",
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-cc3-risk-assessment",
+      "regulation": "SOC 2",
+      "article": "CC3.1 - CC3.4 (Risk Assessment)",
+      "requirement_summary": "Ansvar summary: The entity specifies objectives, identifies and analyses risks, assesses fraud risk, and identifies and assesses significant changes. Vendor contracts should require the vendor to perform risk assessments relevant to the services provided and share results upon request.",
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-cc5-monitoring",
+      "regulation": "SOC 2",
+      "article": "CC5.1 - CC5.3 (Control Activities)",
+      "requirement_summary": "Ansvar summary: The entity selects and develops control activities that contribute to mitigation of risks, selects and develops general controls over technology, and deploys through policies and procedures. Contracts must specify the control activities the vendor is expected to maintain.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-cc7-system-operations",
+      "regulation": "SOC 2",
+      "article": "CC7.1 - CC7.5 (System Operations)",
+      "requirement_summary": "Ansvar summary: The entity uses detection and monitoring procedures to identify changes to configurations, vulnerabilities, and security incidents. Contracts should require vendors to maintain detection capabilities, conduct vulnerability management, and respond to and communicate security incidents.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-cc8-change-management",
+      "regulation": "SOC 2",
+      "article": "CC8.1 (Change Management)",
+      "requirement_summary": "Ansvar summary: The entity authorises, designs, develops, configures, documents, tests, approves, and implements changes to infrastructure, data, software, and procedures. Vendor contracts should require notification of material changes and change management procedures for shared environments.",
+      "required_clauses": [
+        "nis2-security-requirements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-availability-a1",
+      "regulation": "SOC 2",
+      "article": "A1.1 - A1.3 (Availability)",
+      "requirement_summary": "Ansvar summary: The entity maintains, monitors, and evaluates current processing capacity and environmental protections, software, data backup processes, and recovery infrastructure. Contracts should specify availability SLAs, backup requirements, and disaster recovery testing obligations.",
+      "required_clauses": [
+        "sla-uptime",
+        "dora-continuity-arrangements"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-confidentiality-c1",
+      "regulation": "SOC 2",
+      "article": "C1.1 - C1.2 (Confidentiality)",
+      "requirement_summary": "Ansvar summary: The entity identifies and maintains confidential information to meet the entity's confidentiality commitments. Contracts must define what constitutes confidential information, specify handling requirements, and address disposal or return obligations.",
+      "required_clauses": [
+        "confidentiality-mutual",
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-processing-integrity-pi1",
+      "regulation": "SOC 2",
+      "article": "PI1.1 - PI1.5 (Processing Integrity)",
+      "requirement_summary": "Ansvar summary: The entity uses processing objectives, system inputs, processing activities, system outputs, and storage activities to maintain processing integrity. Contracts for data processing services should specify accuracy requirements, error handling, and validation procedures.",
+      "required_clauses": [
+        "sla-uptime",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "soc2-privacy-p1",
+      "regulation": "SOC 2",
+      "article": "P1.1 - P8.1 (Privacy)",
+      "requirement_summary": "Ansvar summary: The Privacy criteria cover notice, choice and consent, collection, use/retention/disposal, access, disclosure, quality, and monitoring. Where the SOC 2 report includes Privacy criteria, contracts must address each applicable privacy principle with specific obligations.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-10-15",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a5-19-supplier-security",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.5.19 (Information security in supplier relationships)",
+      "requirement_summary": "Ansvar summary: Processes and procedures shall be defined and implemented to manage the information security risks associated with the use of supplier's products or services. Contracts must specify security requirements, right to audit, incident management, and access control expectations for all suppliers.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a5-20-supplier-agreements",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.5.20 (Addressing information security within supplier agreements)",
+      "requirement_summary": "Ansvar summary: Relevant information security requirements shall be established and agreed with each supplier based on the type of supplier relationship. Agreements shall include requirements for handling, processing, storing, and communicating information, incident management, and personnel screening.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "confidentiality-mutual",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a5-21-ict-supply-chain",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.5.21 (Managing information security in the ICT supply chain)",
+      "requirement_summary": "Ansvar summary: Processes and procedures shall be defined and implemented to manage information security risks associated with the ICT products and services supply chain. Contracts shall address component provenance, secure development practices, vulnerability disclosure, and supply chain transparency.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "nis2-patching-obligations"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a5-22-supplier-monitoring",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.5.22 (Monitoring, review and change management of supplier services)",
+      "requirement_summary": "Ansvar summary: The organisation shall regularly monitor, review, evaluate, and manage changes to supplier information security practices and service delivery. Contracts must grant rights to conduct periodic reviews, require notification of significant changes, and establish remediation timelines for identified deficiencies.",
+      "required_clauses": [
+        "audit-rights-security",
+        "audit-rights-operational"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a5-23-cloud-services",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.5.23 (Information security for use of cloud services)",
+      "requirement_summary": "Ansvar summary: Processes for acquisition, use, management, and exit from cloud services shall be established in accordance with the organisation's information security requirements. Contracts must address shared responsibility, data location, portability, incident notification, and exit planning.",
+      "required_clauses": [
+        "dora-data-location",
+        "dora-exit-strategy",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a8-10-information-deletion",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.8.10 (Information deletion)",
+      "requirement_summary": "Ansvar summary: Information stored in information systems, devices, or any other storage media shall be deleted when no longer required. Contracts must specify deletion obligations, certification of deletion, and timelines for deletion on contract termination or data subject request.",
+      "required_clauses": [
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a5-31-legal-requirements",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.5.31 (Legal, statutory, regulatory and contractual requirements)",
+      "requirement_summary": "Ansvar summary: Legal, statutory, regulatory, and contractual requirements relevant to information security and the organisation's approach to meeting these requirements shall be identified, documented, and kept up to date. Contracts must include compliance representations and change-of-law provisions.",
+      "required_clauses": [
+        "warranty-compliance-laws",
+        "representations-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a5-34-privacy-pii",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.5.34 (Privacy and protection of PII)",
+      "requirement_summary": "Ansvar summary: Privacy and protection of PII shall be ensured as required by applicable legislation, regulations, and contractual requirements. Contracts shall include data protection addenda addressing processing limitations, data subject rights, breach notification, and cross-border transfers.",
+      "required_clauses": [
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dp-cross-border-transfers"
+      ],
+      "contract_types_affected": [
+        "dpa-gdpr",
+        "saas-subscription"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "iso27001-a5-24-incident-management-planning",
+      "regulation": "ISO/IEC 27001:2022",
+      "article": "Annex A.5.24 (Information security incident management planning and preparation)",
+      "requirement_summary": "Ansvar summary: The organisation shall plan and prepare for managing information security incidents by defining, establishing, and communicating information security incident management processes, roles, and responsibilities. Contracts with suppliers must include incident management procedures, escalation paths, and coordination obligations aligned with the organisation's incident management framework.",
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "Global",
+      "effective_date": "2022-10-25",
       "enforcement_examples": null,
       "law_mcp_ref": null
     }
