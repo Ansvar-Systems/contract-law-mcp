@@ -1,0 +1,63 @@
+{
+  "name": "@ansvar/contract-law-mcp",
+  "version": "1.0.0",
+  "mcpName": "eu.ansvar/contract-law-mcp",
+  "description": "Contract law expert MCP: clause analysis, compliance mapping (GDPR/NIS2/DORA/PCI DSS), IP provision guidance, negotiation intelligence, risk assessment, and business process threat patterns",
+  "author": "Ansvar Systems AB <hello@ansvar.ai>",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "contract-law-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "data/database.db",
+    "server.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:db": "node --import tsx scripts/build-db.ts",
+    "dev": "node --import tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:contract": "vitest run __tests__/contract/",
+    "ingest": "node --import tsx scripts/ingest.ts",
+    "ingest:gdpr": "node --import tsx scripts/ingest-gdpr.ts",
+    "ingest:edpb": "node --import tsx scripts/ingest-edpb.ts",
+    "ingest:nis2": "node --import tsx scripts/ingest-nis2.ts",
+    "ingest:dora": "node --import tsx scripts/ingest-dora.ts",
+    "ingest:nist": "node --import tsx scripts/ingest-nist.ts",
+    "drift:detect": "node --import tsx scripts/drift-detect.ts",
+    "validate": "npm run lint && npm test && npm run test:contract",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "postinstall": "test -d dist || npm run build || true"
+  },
+  "dependencies": {
+    "@ansvar/mcp-sqlite": "^1.0.3",
+    "@modelcontextprotocol/sdk": "^1.25.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.15.29",
+    "@vercel/node": "^5.6.4",
+    "better-sqlite3": "^12.6.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "overrides": {
+    "path-to-regexp": "^8.0.0",
+    "undici": "^7.0.0",
+    "ajv": "^8.18.0"
+  }
+}

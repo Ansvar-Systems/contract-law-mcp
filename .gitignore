@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.db
+data/source/
+.env
+coverage/
+.vercel/
+.DS_Store
+*.tgz

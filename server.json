@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "eu.ansvar/contract-law-mcp",
+  "description": "Contract law intelligence: clause analysis, compliance mapping (GDPR Art 28, NIS2, DORA, PCI DSS), IP provisions, negotiation red flags, risk assessment, and business process threat patterns for contract review and threat modeling",
+  "repository": {
+    "url": "https://github.com/Ansvar-Systems/Contract-law-mcp",
+    "source": "github"
+  },
+  "homepage": "https://ansvar.eu",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@ansvar/contract-law-mcp",
+      "version": "1.0.0",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}
