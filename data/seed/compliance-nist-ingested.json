@@ -1,0 +1,261 @@
+{
+  "compliance_requirements": [
+    {
+      "id": "ingested-nist-sa-4",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SA-4 (Acquisition Process)",
+      "requirement_summary": "Include security and privacy functional requirements, strength of security mechanism requirements, assurance requirements, documentation requirements, and acceptance criteria in acquisition contracts for information systems, components, and services. Contracts must specify the minimum security controls required.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sa-9",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SA-9 (External Information System Services)",
+      "requirement_summary": "Require that providers of external information system services comply with organisational security requirements and employ appropriate security controls. Contracts must document shared responsibilities, monitoring obligations, and functions/ports/protocols required for external services.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "dora-service-description",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-1",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-1 (Supply Chain Risk Management Policy and Procedures)",
+      "requirement_summary": "Develop, document, and disseminate a supply chain risk management policy that addresses purpose, scope, roles, responsibilities, management commitment, coordination among entities, and compliance. Contracts must reflect the organisation's C-SCRM policy requirements.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "warranty-compliance-laws"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-2",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-2 (Supply Chain Risk Management Plan)",
+      "requirement_summary": "Develop a plan for managing supply chain risks associated with the development, acquisition, maintenance, and disposal of systems, components, and services. Contract requirements should flow from this plan and address risk tolerance, assessment criteria, and mitigation strategies.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-3",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-3 (Supply Chain Controls and Processes)",
+      "requirement_summary": "Establish a process to identify, assess, and mitigate supply chain risks. Contracts must require suppliers to implement specific controls including provenance tracking, integrity verification, anti-counterfeit measures, and supply chain security testing.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency",
+        "nis2-security-requirements",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-4",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-4 (Provenance)",
+      "requirement_summary": "Document, monitor, and maintain valid provenance of systems, components, and associated data. Contracts should require suppliers to provide provenance documentation, maintain chain-of-custody records, and support verification of component origins.",
+      "required_clauses": [
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-5",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-5 (Acquisition Strategies, Tools, and Methods)",
+      "requirement_summary": "Employ acquisition strategies, contract tools, and procurement methods to protect against, detect, and mitigate supply chain risks. Contract clauses should include security requirements, right to audit, incident reporting, configuration management, and vulnerability disclosure obligations.",
+      "required_clauses": [
+        "audit-rights-security",
+        "data-protection-breach-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-6",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-6 (Supplier Assessments and Reviews)",
+      "requirement_summary": "Assess and review supply chain-related risks associated with suppliers or contractors and the systems, components, or services they provide. Contracts should include the right to conduct assessments and establish assessment frequency.",
+      "required_clauses": [
+        "audit-rights-security",
+        "audit-rights-operational"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-7",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-7 (Supply Chain Operations Security)",
+      "requirement_summary": "Employ operations security (OPSEC) controls and safeguards to protect supply chain-related information. Contracts must include confidentiality obligations covering supply chain architecture, security measures, and vulnerability information.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "confidentiality-mutual"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-8",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-8 (Notification Agreements)",
+      "requirement_summary": "Establish agreements and procedures with the supply chain entity for the notification of supply chain compromises and the results of assessments or audits. Contracts must specify notification timelines, required information, and coordination procedures.",
+      "required_clauses": [
+        "data-protection-breach-notification",
+        "nis2-incident-notification"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-9",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-9 (Tamper Resistance and Detection)",
+      "requirement_summary": "Implement tamper protection mechanisms for systems or components during development, manufacturing, and logistics. Contracts should require suppliers to implement tamper-evident packaging, secure shipping procedures, and integrity verification upon delivery.",
+      "required_clauses": [
+        "nis2-security-requirements",
+        "nis2-supply-chain-transparency"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-10",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-10 (Inspection of Systems or Components)",
+      "requirement_summary": "Inspect systems or system components upon delivery, at random, or at defined intervals to detect tampering. Contracts should reserve the right to inspect delivered systems and components and specify acceptance testing criteria.",
+      "required_clauses": [
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-11",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-11 (Component Authenticity)",
+      "requirement_summary": "Develop and implement anti-counterfeit policies and procedures that include means to detect and prevent counterfeit components from entering the system. Contracts should require suppliers to provide authenticity certificates and accept liability for counterfeit components.",
+      "required_clauses": [
+        "warranty-non-infringement",
+        "indemnification-provider"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    },
+    {
+      "id": "ingested-nist-sr-12",
+      "regulation": "NIST SP 800-161r1",
+      "article": "SR-12 (Component Disposal)",
+      "requirement_summary": "Dispose of system components using organisation-defined techniques and methods. Contracts should specify data sanitisation requirements, disposal verification procedures, and certificates of destruction for components containing sensitive data.",
+      "required_clauses": [
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "US",
+      "effective_date": "2022-05-01",
+      "enforcement_examples": null,
+      "law_mcp_ref": null
+    }
+  ]
+}

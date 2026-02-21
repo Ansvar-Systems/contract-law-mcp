@@ -1,0 +1,356 @@
+{
+  "compliance_requirements": [
+    {
+      "id": "ingested-dora-art28",
+      "regulation": "DORA",
+      "article": "Article 28",
+      "requirement_summary": "General principles for ICT third-party arrangements. Financial entities shall ensure contractual arrangements address general principles for ict third-party arrangements in accordance with DORA Regulation (EU) 2022/2554.",
+      "required_clauses": [
+        "dora-service-description",
+        "dora-exit-strategy"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Art 28\")"
+    },
+    {
+      "id": "ingested-dora-art29",
+      "regulation": "DORA",
+      "article": "Article 29",
+      "requirement_summary": "Preliminary assessment of ICT concentration risk. Financial entities shall ensure contractual arrangements address preliminary assessment of ict concentration risk in accordance with DORA Regulation (EU) 2022/2554.",
+      "required_clauses": [
+        "dora-exit-strategy",
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Art 29\")"
+    },
+    {
+      "id": "ingested-dora-art30-2a",
+      "regulation": "DORA",
+      "article": "Article 30(2)(a)",
+      "requirement_summary": "Contractual arrangements shall include a clear and complete description of all functions and ICT services to be provided, indicating whether sub-outsourcing of a critical or important function is permitted and the applicable conditions.",
+      "required_clauses": [
+        "dora-service-description",
+        "dora-subcontracting"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(a)\")"
+    },
+    {
+      "id": "ingested-dora-art30-2b",
+      "regulation": "DORA",
+      "article": "Article 30(2)(b)",
+      "requirement_summary": "Contractual arrangements shall include the locations where contracted or sub-outsourced functions and ICT services are provided and where data is processed, with advance notification of location changes.",
+      "required_clauses": [
+        "dora-data-location"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(b)\")"
+    },
+    {
+      "id": "ingested-dora-art30-2c",
+      "regulation": "DORA",
+      "article": "Article 30(2)(c)",
+      "requirement_summary": "Contractual arrangements shall include provisions on availability, authenticity, integrity and confidentiality in relation to the protection of data, including personal data.",
+      "required_clauses": [
+        "dora-service-description",
+        "dpa-security-measures"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(c)\")"
+    },
+    {
+      "id": "ingested-dora-art30-2d",
+      "regulation": "DORA",
+      "article": "Article 30(2)(d)",
+      "requirement_summary": "Contractual arrangements shall ensure access, recovery and return of data in an easily accessible format in case of insolvency, resolution, discontinuation, or termination.",
+      "required_clauses": [
+        "dora-exit-strategy",
+        "dpa-deletion-return"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(d)\")"
+    },
+    {
+      "id": "ingested-dora-art30-2e",
+      "regulation": "DORA",
+      "article": "Article 30(2)(e)",
+      "requirement_summary": "Contractual arrangements shall include service level descriptions with precise quantitative and qualitative performance targets to enable effective monitoring and prompt corrective actions.",
+      "required_clauses": [
+        "sla-uptime",
+        "sla-response-time",
+        "sla-service-credits"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(e)\")"
+    },
+    {
+      "id": "ingested-dora-art30-2f",
+      "regulation": "DORA",
+      "article": "Article 30(2)(f)",
+      "requirement_summary": "Contractual arrangements shall include the obligation of the ICT third-party service provider to provide assistance when an ICT incident occurs, at no additional cost or at a cost determined ex ante.",
+      "required_clauses": [
+        "dora-incident-reporting"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(f)\")"
+    },
+    {
+      "id": "ingested-dora-art30-2g",
+      "regulation": "DORA",
+      "article": "Article 30(2)(g)",
+      "requirement_summary": "Contractual arrangements shall include the obligation to fully cooperate with competent authorities and resolution authorities of the financial entity.",
+      "required_clauses": [
+        "dora-audit-rights"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(g)\")"
+    },
+    {
+      "id": "ingested-dora-art30-2h",
+      "regulation": "DORA",
+      "article": "Article 30(2)(h)",
+      "requirement_summary": "Contractual arrangements shall include termination rights and related minimum notice periods for the termination of the contractual arrangements.",
+      "required_clauses": [
+        "termination-cause",
+        "termination-convenience"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(h)\")"
+    },
+    {
+      "id": "ingested-dora-art30-2i",
+      "regulation": "DORA",
+      "article": "Article 30(2)(i)",
+      "requirement_summary": "Contractual arrangements shall include conditions for the ICT third-party service provider to participate in the financial entity's ICT security awareness and digital operational resilience training.",
+      "required_clauses": [
+        "dora-security-testing"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(2)(i)\")"
+    },
+    {
+      "id": "ingested-dora-art30-3a",
+      "regulation": "DORA",
+      "article": "Article 30(3)(a)",
+      "requirement_summary": "For critical or important functions, contractual arrangements shall additionally include full service level descriptions with performance targets, and remedies including penalties for non-compliance.",
+      "required_clauses": [
+        "sla-uptime",
+        "sla-service-credits",
+        "fin-liquidated-damages"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(3)(a)\")"
+    },
+    {
+      "id": "ingested-dora-art30-3b",
+      "regulation": "DORA",
+      "article": "Article 30(3)(b)",
+      "requirement_summary": "For critical or important functions, contractual arrangements shall include notice periods and reporting obligations about developments with material impact on service delivery.",
+      "required_clauses": [
+        "dora-incident-reporting"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(3)(b)\")"
+    },
+    {
+      "id": "ingested-dora-art30-3c",
+      "regulation": "DORA",
+      "article": "Article 30(3)(c)",
+      "requirement_summary": "For critical or important functions, the ICT third-party service provider must implement and test business contingency plans and maintain ICT security measures providing an appropriate level of security.",
+      "required_clauses": [
+        "dora-continuity-arrangements",
+        "dora-security-testing"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(3)(c)\")"
+    },
+    {
+      "id": "ingested-dora-art30-3d",
+      "regulation": "DORA",
+      "article": "Article 30(3)(d)",
+      "requirement_summary": "For critical or important functions, the financial entity shall have the right to monitor the ICT third-party service provider's performance on an ongoing basis, including rights of access, inspection and audit.",
+      "required_clauses": [
+        "dora-audit-rights",
+        "audit-rights-security"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(3)(d)\")"
+    },
+    {
+      "id": "ingested-dora-art30-3e",
+      "regulation": "DORA",
+      "article": "Article 30(3)(e)",
+      "requirement_summary": "For critical or important functions, contractual arrangements shall include exit strategies with mandatory adequate transition periods and assistance upon termination to reduce disruption risk.",
+      "required_clauses": [
+        "dora-exit-strategy",
+        "termination-wind-down",
+        "fin-transition-pricing"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "saas-subscription",
+        "outsourcing-agreement",
+        "managed-services"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Article 30(3)(e)\")"
+    },
+    {
+      "id": "ingested-dora-art31",
+      "regulation": "DORA",
+      "article": "Article 31",
+      "requirement_summary": "Designation of critical ICT third-party service providers. Financial entities shall ensure contractual arrangements address designation of critical ict third-party service providers in accordance with DORA Regulation (EU) 2022/2554.",
+      "required_clauses": [
+        "dora-subcontracting",
+        "dora-service-description"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Art 31\")"
+    },
+    {
+      "id": "ingested-dora-art33",
+      "regulation": "DORA",
+      "article": "Article 33",
+      "requirement_summary": "Oversight framework - conduct of oversight activities. Financial entities shall ensure contractual arrangements address oversight framework - conduct of oversight activities in accordance with DORA Regulation (EU) 2022/2554.",
+      "required_clauses": [
+        "dora-audit-rights",
+        "dora-security-testing"
+      ],
+      "contract_types_affected": [
+        "msa",
+        "outsourcing-agreement"
+      ],
+      "jurisdiction": "EU",
+      "effective_date": "2025-01-17",
+      "enforcement_examples": null,
+      "law_mcp_ref": "eu-compliance-mcp:get_regulation(\"DORA\", \"Art 33\")"
+    }
+  ]
+}
