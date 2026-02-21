@@ -1,0 +1,454 @@
+{
+  "clause_types": [
+    {
+      "id": "fin-payment-net-30",
+      "clause_category": "payment",
+      "name": "Payment Terms: Net 30",
+      "description": "Standard payment terms requiring payment within 30 calendar days of the date of a valid invoice. The most common payment term in commercial agreements, providing a reasonable balance between the supplier's cash flow needs and the customer's internal approval processes.",
+      "drafting_guidance": "Specify the trigger date (invoice date, date of receipt, or date of acceptance of deliverables). Define what constitutes a 'valid invoice' (required fields, purchase order reference, supporting documentation). Address electronic invoicing requirements and delivery mechanism. Specify the currency and any exchange rate provisions for international contracts. Include dispute resolution for contested invoices (right to withhold disputed portion, requirement to pay undisputed portion). Address the application of payments to outstanding invoices (oldest first, or as directed). Specify acceptable payment methods (wire transfer, ACH, direct debit). Include tax provisions (gross-up, withholding tax).",
+      "variations": {
+        "from-invoice": "30 days from invoice date",
+        "from-receipt": "30 days from receipt of valid invoice",
+        "from-acceptance": "30 days from acceptance of deliverables"
+      },
+      "contract_types": ["msa", "consulting-agreement", "professional-services", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-payment-net-60",
+      "clause_category": "payment",
+      "name": "Payment Terms: Net 60",
+      "description": "Extended payment terms requiring payment within 60 calendar days of the date of a valid invoice. Commonly negotiated by large enterprises with complex procurement and approval processes. Note that the EU Late Payment Directive limits B2B payment terms to 60 days unless expressly agreed and not grossly unfair.",
+      "drafting_guidance": "Same drafting considerations as Net 30. Additionally: verify compliance with the EU Late Payment Directive 2011/7/EU (which presumes 60-day terms require express agreement). Consider the cash flow impact on the supplier (may justify price adjustment or early payment discount). Address the applicability of statutory late payment interest. Consider whether different payment terms should apply to different fee types (e.g., 60 days for recurring fees, 30 days for expenses). Specify whether the extended terms are available from day one or earned through payment history.",
+      "variations": {
+        "standard": "60 days from invoice date for all fees",
+        "split": "60 days for recurring fees; 30 days for one-off charges and expenses",
+        "with-early-payment-discount": "60-day terms with discount for earlier payment"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": ["EU Late Payment Directive 2011/7/EU"]
+    },
+    {
+      "id": "fin-payment-net-90",
+      "clause_category": "payment",
+      "name": "Payment Terms: Net 90",
+      "description": "Extended payment terms requiring payment within 90 calendar days of the date of a valid invoice. Unusual and typically only found in contracts with very large enterprises or government entities. Significant cash flow burden on the supplier and may conflict with the EU Late Payment Directive.",
+      "drafting_guidance": "Exceptional terms that require careful consideration. Verify compliance with applicable late payment legislation (EU Late Payment Directive limits public sector to 30 days and B2B to 60 days presumptively). Consider requiring explicit written agreement to the extended terms separate from the main contract. The supplier should consider: price uplift to reflect financing costs, letters of credit or bank guarantees to mitigate payment risk, supply chain financing arrangements. Address the customer's creditworthiness (credit checks, financial covenants). Consider milestone-based or progress payments as an alternative. Include strong late payment provisions.",
+      "variations": {
+        "standard": "90 days from invoice date",
+        "with-financing": "90-day terms with supply chain financing arrangement",
+        "with-guarantee": "90-day terms with parent company guarantee or letter of credit"
+      },
+      "contract_types": ["outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["EU Late Payment Directive 2011/7/EU"]
+    },
+    {
+      "id": "fin-payment-milestone",
+      "clause_category": "payment",
+      "name": "Payment Terms: Milestone-Based",
+      "description": "Payment is triggered upon the achievement of defined milestones or deliverables rather than on a time-based schedule. Each milestone has a defined scope, acceptance criteria, and associated payment amount. Common in project-based engagements and software development agreements.",
+      "drafting_guidance": "Define each milestone clearly: description, deliverables, acceptance criteria (objective and measurable), target date, and payment amount. Specify the acceptance process (review period, testing requirements, defect remediation). Address the treatment of milestones achieved late (penalty, reduced payment, no payment). Define 'completion' for each milestone (delivery, testing, acceptance, go-live). Allocate the total contract value across milestones proportionate to effort and value. Include a retainage provision (hold back 10-15% until final acceptance). Address the consequences of milestone rejection (re-work, re-test, remediation). Specify invoicing and payment timing after milestone acceptance.",
+      "variations": {
+        "delivery-based": "Payment upon delivery of milestone deliverables",
+        "acceptance-based": "Payment upon formal acceptance of milestone deliverables",
+        "with-retainage": "Percentage withheld until final project completion"
+      },
+      "contract_types": ["professional-services", "consulting-agreement", "sow"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-payment-recurring",
+      "clause_category": "payment",
+      "name": "Payment Terms: Recurring Subscription",
+      "description": "Recurring fees payable at regular intervals (monthly, quarterly, annually) for ongoing access to services or software. Typically invoiced in advance for the upcoming period. Includes provisions for auto-renewal, price adjustments, and prorating for mid-period changes.",
+      "drafting_guidance": "Specify the billing frequency (monthly, quarterly, annually). Clarify whether fees are invoiced in advance or arrears. Address auto-renewal provisions and the notice period for non-renewal. Specify the pro-rating methodology for mid-period commencement or termination. Address the treatment of unused periods (refund policy for early termination). Include annual price adjustment provisions (CPI-linked, fixed percentage, or provider discretion with cap). Specify the minimum commitment period. Address volume-based pricing tiers and the process for moving between tiers. Specify the payment method (direct debit, credit card, wire transfer). Address the consequences of payment failure (grace period, service suspension, termination).",
+      "variations": {
+        "monthly-advance": "Monthly fees invoiced in advance",
+        "annual-advance": "Annual fees invoiced in advance (often with discount)",
+        "quarterly-arrears": "Quarterly fees invoiced in arrears based on usage"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "maintenance-support"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-payment-usage",
+      "clause_category": "payment",
+      "name": "Payment Terms: Usage-Based / Consumption",
+      "description": "Fees calculated based on actual usage or consumption of services, measured by defined metrics such as API calls, data volume, compute hours, transactions, or active users. May include a base fee plus overage charges, or be purely consumption-based.",
+      "drafting_guidance": "Define the usage metric(s) precisely (what is measured, how it is measured, the measurement frequency). Specify the rate per unit of usage (tiered pricing may apply for higher volumes). Address the measurement and reporting methodology (provider measurement tools, customer verification rights). Specify the billing cycle and invoice format (detailed usage breakdown). Include minimum commitment provisions (minimum monthly spend). Address usage spikes and burst capacity (pricing for peak usage). Specify the audit rights for usage measurements. Address the treatment of overage charges. Include budget alert mechanisms and spending caps. Specify the process for disputing usage measurements.",
+      "variations": {
+        "pure-consumption": "Fees based entirely on usage with no minimum commitment",
+        "base-plus-overage": "Base fee for included usage; overage charges for excess",
+        "tiered": "Unit price decreases at higher usage tiers"
+      },
+      "contract_types": ["saas-subscription", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-price-lock",
+      "clause_category": "payment",
+      "name": "Price Lock Period",
+      "description": "Guarantees that prices will not increase during a specified initial period (typically 12-24 months from contract commencement). After the lock period, prices may be adjusted subject to the price adjustment mechanism in the agreement.",
+      "drafting_guidance": "Specify the duration of the price lock (e.g., first 12 months, first 24 months, initial contract term). Define which prices are locked (all fees, base fees only, unit rates only). Specify the trigger for the end of the lock period (calendar date, end of initial term, first renewal). Address the price adjustment mechanism that applies after the lock period ends. Consider whether the price lock extends to renewal periods. Address the impact of significant scope changes during the lock period (additional services, increased volumes). Specify whether the price lock applies to all fee types or only recurring fees. Consider offering a longer price lock in exchange for a longer commitment.",
+      "variations": {
+        "12-month": "Prices locked for 12 months from commencement",
+        "initial-term": "Prices locked for the entire initial contract term",
+        "volume-conditional": "Prices locked subject to minimum volume commitments"
+      },
+      "contract_types": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-price-cpi-adjustment",
+      "clause_category": "payment",
+      "name": "CPI Price Adjustment",
+      "description": "Permits annual price increases linked to changes in a specified consumer price index (CPI) or equivalent inflation measure. Provides an objective, transparent mechanism for price adjustment that reflects changes in the cost of living and service delivery costs.",
+      "drafting_guidance": "Specify the index used (e.g., UK CPI, UK RPI, US CPI-U, EU HICP, national equivalent). Define the base period and comparison period for the calculation. Specify the maximum adjustment cap (e.g., maximum 5% in any single year, even if CPI exceeds this). Address negative CPI (deflation): specify whether prices can decrease or remain flat. Set the effective date of the adjustment (contract anniversary, calendar year). Specify the notice period for communicating the adjustment (typically 60-90 days). Include an alternative mechanism if the index is discontinued. Address the interaction with benchmarking provisions. Consider whether the adjustment applies to all fee components or only specified elements.",
+      "variations": {
+        "uncapped": "Adjustment equals full CPI change (no cap)",
+        "capped": "Adjustment limited to a maximum percentage regardless of CPI",
+        "floor-and-cap": "Minimum 0% (no decrease) and maximum percentage cap"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription", "msa"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-price-benchmarking",
+      "clause_category": "payment",
+      "name": "Benchmarking Right",
+      "description": "Grants the customer the right to benchmark the provider's pricing against market rates for comparable services at defined intervals. If benchmarking reveals that prices are above market, the provider must reduce prices or demonstrate value justification. Common in long-term outsourcing agreements.",
+      "drafting_guidance": "Specify the frequency of benchmarking (typically every 2-3 years). Define the benchmarking methodology (independent third-party benchmarker, scope of comparison, selection of comparables). Specify the peer group criteria (comparable service scope, quality, geography, provider tier). Define the materiality threshold for price adjustment (e.g., provider's prices exceed market median by more than 10%). Specify the adjustment mechanism and timeline (e.g., prices adjusted within 90 days to within 5% of market median). Address who bears the cost of benchmarking (typically customer, unless adjustment exceeds threshold). Include provider's right to demonstrate value justification in lieu of price reduction. Address the interaction with CPI and other price adjustment mechanisms.",
+      "variations": {
+        "mandatory-adjustment": "Provider must adjust prices to market if benchmarking reveals premium",
+        "justify-or-adjust": "Provider may justify premium or must adjust",
+        "termination-trigger": "Customer may terminate if provider refuses to adjust to market"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-price-mfc",
+      "clause_category": "payment",
+      "name": "Most Favoured Customer Pricing",
+      "description": "Provider warrants that the pricing offered to the customer is no less favourable than the pricing offered to any other customer of comparable size, volume, and service scope. If the provider offers more favourable pricing to a comparable customer, the same pricing must be extended to the MFC customer.",
+      "drafting_guidance": "Define the comparison group precisely (comparable customers by size, volume, service scope, geography, and contract term). Specify the scope of the MFC protection (pricing only, or including other commercial terms). Address the verification mechanism: provider's periodic certification, customer's audit rights, or independent verification. Specify the adjustment mechanism: retroactive (back to the date of the more favourable pricing) or prospective only. Address the interaction with promotional pricing, distressed pricing, and strategic deals (which may be excluded from comparison). Include appropriate confidentiality provisions. Specify the termination right if MFC pricing is not honoured. Address the practical challenges of comparing bespoke pricing structures.",
+      "variations": {
+        "pricing-only": "Limited to pricing comparison",
+        "retroactive": "Retroactive adjustment to the date of the more favourable pricing",
+        "prospective": "Adjustment applies only prospectively"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "msa"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-performance-bond",
+      "clause_category": "payment",
+      "name": "Performance Bond",
+      "description": "Requires the provider to procure a performance bond (surety bond) from a reputable financial institution, guaranteeing the provider's performance of its obligations under the agreement. If the provider fails to perform, the customer can call on the bond to recover losses up to the bond amount.",
+      "drafting_guidance": "Specify the bond amount (typically 10-30% of contract value). Identify the acceptable bond issuers (minimum credit rating requirements). Define the trigger events for calling the bond (material breach, failure to meet milestones, termination for cause). Specify the bond duration (full contract term plus a tail period). Address the provider's obligation to maintain and renew the bond throughout the term. Specify the process for calling the bond (notice requirements, documentation, independent determination of default). Address the relationship between the bond and other contractual remedies (bond proceeds offset against damages). Consider the cost of the bond (typically borne by the provider and factored into pricing). Address the return of the bond upon satisfactory completion.",
+      "variations": {
+        "full-term": "Bond maintained for the full contract term",
+        "milestone-based": "Bond amount decreases as milestones are achieved",
+        "on-demand": "On-demand bond callable without prior determination of default"
+      },
+      "contract_types": ["outsourcing-agreement", "professional-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-parent-guarantee",
+      "clause_category": "payment",
+      "name": "Parent Company Guarantee",
+      "description": "Requires the provider's parent company or a financially stronger affiliated entity to guarantee the provider's performance of its obligations under the agreement. Provides the customer with recourse to a more creditworthy entity in the event of the provider's default or insolvency.",
+      "drafting_guidance": "Specify the guarantor (parent company or specific affiliate). Define the scope of the guarantee (all obligations, financial obligations only, or specific obligations). Specify whether the guarantee is on a 'see to it' basis (guarantor ensures performance) or an indemnity basis (guarantor pays if provider defaults). Include representations about the guarantor's financial standing. Require notice of material changes to the guarantor's financial position. Address the consequences if the guarantor becomes insolvent or ceases to exist (replacement guarantee obligation). Specify the duration of the guarantee (contract term plus a survival period). Address the interaction between the guarantee and limitation of liability provisions. Ensure the guarantee is a legally binding, enforceable obligation.",
+      "variations": {
+        "full-performance": "Guarantee of all provider obligations",
+        "financial-only": "Guarantee limited to financial obligations (payment, indemnification)",
+        "see-to-it": "Guarantor undertakes to ensure performance by the provider"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "msa"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-escrow-arrangement",
+      "clause_category": "payment",
+      "name": "Source Code / IP Escrow",
+      "description": "Requires the deposit of source code, documentation, or other critical intellectual property with a neutral third-party escrow agent. The escrow materials are released to the customer upon the occurrence of specified release events (provider insolvency, material breach, discontinuation of product support).",
+      "drafting_guidance": "Identify the escrow agent (typically a specialist technology escrow provider such as NCC Group, Iron Mountain, or Escrow London). Define the escrow materials precisely (source code, build scripts, documentation, database schemas, configuration files, third-party licenses). Specify the deposit schedule (initial deposit within 30 days, updates quarterly or upon each release). Define the release events (provider insolvency, cessation of business, material breach unremedied for 30+ days, discontinuation of support/maintenance). Specify the verification process (annual or bi-annual technical verification of deposits). Address cost allocation (provider pays deposit and maintenance fees, or shared). Specify the license terms upon release (perpetual, non-exclusive license for internal use). Address the escrow agent's liability and insurance. Ensure the escrow agreement is a three-party agreement.",
+      "variations": {
+        "standard": "Single escrow agent with annual verification",
+        "enhanced": "Dual escrow with quarterly verification and automated build testing",
+        "saas-specific": "Includes data export capabilities in addition to source code"
+      },
+      "contract_types": ["software-license-proprietary", "saas-subscription", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-step-in-rights",
+      "clause_category": "payment",
+      "name": "Step-In Rights",
+      "description": "Grants the customer the right to temporarily assume control of the provider's operations or specific service delivery functions in the event of a material service failure, provider insolvency, or other specified trigger events. Ensures continuity of critical services while alternative arrangements are made.",
+      "drafting_guidance": "Define the trigger events (persistent SLA failures, material breach, insolvency event, force majeure lasting beyond specified period). Specify the scope of step-in rights (full service delivery, specific functions, management oversight only). Address the practical requirements: access to premises, systems, documentation, and personnel. Specify the duration of step-in (typically until the issue is resolved or alternative arrangements are in place). Address cost allocation during step-in (typically at the provider's expense if triggered by provider default). Specify the provider's obligations during step-in (cooperate, provide access, maintain contractual obligations). Address the relationship between step-in and termination (step-in does not waive termination rights). Include IP and license provisions necessary for step-in (access to software, data, documentation).",
+      "variations": {
+        "full-step-in": "Customer takes over full service delivery",
+        "partial-step-in": "Customer assumes management oversight; provider continues operations",
+        "third-party-step-in": "Customer may appoint a third party to step in"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-letter-of-credit",
+      "clause_category": "payment",
+      "name": "Letter of Credit",
+      "description": "Requires one party (typically the customer) to procure an irrevocable letter of credit from a reputable bank, providing assurance of payment to the provider. The letter of credit is drawn upon presentation of specified documents demonstrating that payment conditions have been met.",
+      "drafting_guidance": "Specify the letter of credit amount (sufficient to cover agreed payment obligations). Identify acceptable issuing banks (minimum credit rating requirements). Specify the type of letter of credit (irrevocable, confirmed/unconfirmed, standby/documentary). Define the documents required for draw-down (invoice, proof of delivery, compliance certificate). Specify the validity period and renewal requirements. Address the cost of the letter of credit (typically borne by the party required to procure it). Specify the governing rules (UCP 600 for documentary credits, ISP98 for standby credits). Address amendments and extensions. Specify the notice period for drawings. Address the consequences if the letter of credit is not maintained.",
+      "variations": {
+        "standby": "Standby letter of credit as security (drawn only on default)",
+        "documentary": "Documentary letter of credit for trade finance",
+        "revolving": "Revolving letter of credit that replenishes after each drawing"
+      },
+      "contract_types": ["outsourcing-agreement", "distribution-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["UCP 600", "ISP98"]
+    },
+    {
+      "id": "fin-open-book-accounting",
+      "clause_category": "payment",
+      "name": "Open-Book Accounting",
+      "description": "Requires the provider to maintain transparent financial records related to the agreement and grant the customer access to cost data, pricing calculations, and profit margins. Enables the customer to verify that charges are accurate and that the provider is not making excessive profits on the engagement.",
+      "drafting_guidance": "Define the scope of financial transparency (cost components, margin calculations, subcontractor costs, overhead allocations). Specify the frequency of financial reporting (monthly, quarterly). Define the customer's access rights (access to books and records, right to audit, right to receive detailed cost breakdowns). Address the confidentiality of financial information (both parties). Specify the remediation mechanism if overcharging is identified (refund plus interest). Address the interaction with gain-sharing and cost-saving mechanisms. Specify record retention requirements. Address the standard accounting principles to be applied (IFRS, local GAAP). Consider whether open-book accounting applies to the entire contract or only to cost-plus elements.",
+      "variations": {
+        "full-transparency": "Complete access to all cost data and margin information",
+        "summary-reporting": "Regular summary reports with audit rights for detailed review",
+        "cost-plus-only": "Open book limited to cost-plus pricing elements"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-financial-audit-rights",
+      "clause_category": "payment",
+      "name": "Financial Audit Rights",
+      "description": "Grants the customer the right to audit the provider's financial records, invoicing accuracy, and compliance with pricing terms. Includes the right to engage independent auditors to verify charges, cost calculations, and compliance with most-favoured-customer and benchmarking provisions.",
+      "drafting_guidance": "Specify the scope of audit (invoices, time records, expense reports, cost allocations, subcontractor invoices, margin calculations). Define the frequency (typically once per year, with additional audits on cause). Set the notice period (typically 30 days). Specify the audit period (current year plus 2-3 prior years). Address who bears the cost (customer pays unless audit reveals overcharging exceeding a threshold, e.g., 5%, in which case provider pays). Specify the auditor qualifications (independent accountant, subject to confidentiality agreement). Require the provider to retain records for the audit period. Address remediation: prompt refund of overcharges plus interest. Include a right to set off overcharges against future invoices. Specify the dispute resolution mechanism for contested audit findings.",
+      "variations": {
+        "standard": "Annual financial audit right at customer's cost",
+        "cost-shifting": "Provider bears cost if overcharging exceeds specified threshold",
+        "continuous": "Continuous access to financial systems with periodic formal audit"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-cost-verification",
+      "clause_category": "payment",
+      "name": "Cost Verification and Transparency",
+      "description": "Requires the provider to provide detailed cost breakdowns, supporting documentation, and transparency into its cost structure for cost-plus, time-and-materials, or reimbursable expense arrangements. Enables the customer to verify that charged costs are reasonable, actually incurred, and properly allocated.",
+      "drafting_guidance": "Define reimbursable costs precisely (categories, limits, approval thresholds). Require supporting documentation for all reimbursable costs (receipts, time sheets, subcontractor invoices). Specify the approval process for costs above defined thresholds (pre-approval required). Address travel and expense policies (compliance with customer's T&E policy or agreed standards). Specify the markup or handling fee on reimbursable costs (if any). Include provisions for disputed costs (withhold disputed portion, pay undisputed portion). Require regular cost reports (weekly or monthly). Address the treatment of cost overruns (notification obligation, approval process). Specify the customer's right to audit cost records.",
+      "variations": {
+        "full-documentation": "All costs require receipts and supporting documentation",
+        "threshold-based": "Documentation required only for costs above a threshold",
+        "pre-approved": "All significant costs require pre-approval"
+      },
+      "contract_types": ["consulting-agreement", "professional-services", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-gain-sharing",
+      "clause_category": "payment",
+      "name": "Gain-Sharing / Savings Sharing",
+      "description": "Establishes a mechanism for sharing cost savings, efficiency gains, or revenue upside between the parties. Incentivises the provider to deliver continuous improvement and innovation by allowing it to share in the financial benefits achieved. Common in outsourcing and managed services agreements.",
+      "drafting_guidance": "Define the baseline against which gains are measured (current costs, budgeted costs, agreed baseline metrics). Specify the gain-sharing formula (e.g., 50/50, 60/40 customer/provider). Define qualifying gains (cost reductions, productivity improvements, revenue increases). Address how gains are measured and verified (open-book accounting, independent verification). Specify the payment mechanism and timing for gain-sharing payments. Distinguish between one-time gains and recurring savings. Address the provider's obligation to propose and implement improvement initiatives. Specify the customer's right to approve or reject proposed changes. Address the treatment of gains that require customer investment. Include provisions for clawback if gains are not sustained.",
+      "variations": {
+        "cost-savings": "Share savings from cost reduction initiatives",
+        "productivity": "Share gains from productivity and efficiency improvements",
+        "revenue": "Share upside from revenue-generating initiatives"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-late-payment-interest",
+      "clause_category": "payment",
+      "name": "Late Payment Interest and Costs",
+      "description": "Imposes interest charges on overdue invoices, calculated daily from the due date until the date of actual payment. May also include the right to recover reasonable costs of collection. Compensates the creditor for the time value of money and incentivises timely payment.",
+      "drafting_guidance": "Specify the interest rate (e.g., 1.5% per month, 4% above Bank of England base rate, SOFR + 3%, statutory rate). Ensure the rate does not exceed usury limits in applicable jurisdictions. Specify whether interest compounds (simple or compound, and the compounding period). Clarify whether interest accrues automatically or requires notice. Address the interaction with invoice dispute provisions (interest should not accrue on legitimately disputed amounts during the dispute resolution period). Specify the right to recover collection costs (reasonable legal fees, debt recovery costs). Reference applicable statutory late payment regimes (UK Late Payment of Commercial Debts (Interest) Act 1998, EU Late Payment Directive). Address the right to suspend services for persistent late payment.",
+      "variations": {
+        "contractual-rate": "Fixed contractual rate (e.g., 1.5% per month)",
+        "reference-rate-plus": "Reference rate plus margin (e.g., SOFR + 3%)",
+        "statutory": "Applicable statutory late payment rate"
+      },
+      "contract_types": ["msa", "saas-subscription", "consulting-agreement", "professional-services", "outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": ["UK Late Payment of Commercial Debts (Interest) Act 1998", "EU Late Payment Directive 2011/7/EU"]
+    },
+    {
+      "id": "fin-service-credit-mechanism",
+      "clause_category": "payment",
+      "name": "Service Credit Mechanism",
+      "description": "Defines the financial remedy for failure to meet service level commitments. Service credits are calculated as a percentage of the applicable monthly fees and credited against future invoices. Establishes the credit rates per SLA tier, the calculation methodology, the claim process, and the maximum credit cap.",
+      "drafting_guidance": "Define the service credit calculation formula (e.g., percentage of monthly fee per SLA tier missed). Specify the maximum service credit cap per measurement period (typically 25-100% of monthly fee). Clarify whether service credits are the sole and exclusive remedy for SLA failures or in addition to other remedies. Define the claim process: automatic (provider calculates and applies) vs claim-based (customer must submit within specified period). Specify how credits are applied (offset against next invoice). Address what happens if credits exceed the invoice amount (carry forward, cash refund). Include a chronic failure threshold (e.g., SLA missed for 3 consecutive months) that triggers additional remedies such as a termination right. Specify the reporting mechanism for SLA performance.",
+      "variations": {
+        "automatic": "Credits calculated and applied automatically by provider",
+        "claim-based": "Customer must submit a credit claim within 30 days",
+        "with-chronic-failure": "Chronic SLA failure triggers termination right in addition to credits"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "outsourcing-agreement", "sla"],
+      "depends_on": ["sla-uptime"],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-liquidated-damages",
+      "clause_category": "payment",
+      "name": "Liquidated Damages",
+      "description": "Pre-agreed damages payable upon the occurrence of specified events, such as missed deadlines, failure to achieve milestones, or breach of specific obligations. Must represent a genuine pre-estimate of the likely loss to be enforceable (penalty clauses may be unenforceable in many jurisdictions).",
+      "drafting_guidance": "Ensure the liquidated damages amount represents a genuine pre-estimate of the likely loss (not a penalty). Document the rationale for the amount at the time of drafting. Specify the triggering events precisely. Define the calculation methodology (per day, per incident, percentage of contract value). Set a maximum cap on liquidated damages (typically 15-25% of the relevant deliverable or service charge). Address the relationship between liquidated damages and other remedies (typically LDs are the sole remedy for the specified breach, but other remedies remain available for other breaches). Consider the Cavendish Square v Makdessi (2015) and ParkingEye v Beavis (2015) framework for English law enforceability. Address the provider's right to cure and the impact of cure on LD accrual.",
+      "variations": {
+        "per-day": "Daily liquidated damages for late delivery",
+        "per-incident": "Fixed amount per qualifying breach or incident",
+        "tiered": "Increasing damages based on duration or severity of breach"
+      },
+      "contract_types": ["professional-services", "outsourcing-agreement", "sow"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-earn-back",
+      "clause_category": "payment",
+      "name": "Earn-Back / At-Risk Amount",
+      "description": "A portion of the provider's fees is 'at risk' and must be earned back through the achievement of specified performance targets. If targets are met, the provider receives the full fee; if targets are missed, the at-risk portion is forfeited. Creates a financial incentive for performance without the punitive character of liquidated damages.",
+      "drafting_guidance": "Specify the at-risk percentage (typically 10-20% of monthly fees). Define the performance targets clearly (SLA targets, customer satisfaction scores, quality metrics). Specify the measurement period (monthly, quarterly). Define the earn-back formula (linear relationship between performance and payout, threshold-based, or all-or-nothing). Address the minimum performance level for partial earn-back. Specify the payment timing for the at-risk amount (held back and paid upon performance confirmation, or clawed back if targets are missed). Distinguish between earn-back (incentive) and service credits (remedy) - they may operate in parallel. Address the administrative burden of the earn-back mechanism.",
+      "variations": {
+        "threshold": "Full earn-back if target met; no earn-back if missed",
+        "proportional": "Earn-back proportional to degree of target achievement",
+        "with-super-bonus": "At-risk amount plus bonus for exceeding targets"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-penalty-cap",
+      "clause_category": "payment",
+      "name": "Penalty / Remedies Cap",
+      "description": "Establishes a maximum aggregate cap on all financial remedies available under the agreement, including service credits, liquidated damages, earn-back forfeitures, and other performance-related deductions. Prevents the cumulative effect of multiple remedy mechanisms from exceeding a commercially acceptable total.",
+      "drafting_guidance": "Specify the aggregate cap amount or percentage (typically 100% of fees in the relevant period). List all remedy mechanisms included in the cap (service credits, liquidated damages, earn-back forfeitures, delay penalties). Clarify the interaction with the general limitation of liability (the penalty cap typically operates within the general liability cap). Specify the measurement period for the cap (monthly, quarterly, annually). Address whether the cap resets with each measurement period. Consider including a 'chronic failure' threshold that triggers additional remedies beyond the cap (typically termination). Address the relationship between the penalty cap and indemnification obligations (which typically sit outside the penalty cap). Ensure the customer retains meaningful remedies even with the cap in place.",
+      "variations": {
+        "monthly-cap": "Cap on remedies in any single month",
+        "annual-cap": "Cap on aggregate remedies in any contract year",
+        "cumulative": "Overall cap on remedies over the contract term"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["fin-service-credit-mechanism", "fin-liquidated-damages"],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-termination-fees",
+      "clause_category": "payment",
+      "name": "Early Termination Fees",
+      "description": "Specifies the financial compensation payable upon early termination of the agreement before the end of the minimum commitment period. Designed to compensate the provider for upfront investment, lost profits, and stranded costs resulting from early contract exit.",
+      "drafting_guidance": "Structure termination fees as a genuine pre-estimate of loss (not a penalty). Consider declining fee schedules over the contract term (reflecting reducing provider exposure as upfront costs are amortised). Specify which termination scenarios trigger fees (typically convenience termination only; not termination for cause by the customer). Define the fee calculation methodology (remaining committed fees, declining percentage, or fixed schedule). Address the relationship between termination fees and refunds for prepaid services. Specify payment timing (within 30 days of termination). Consider the enforceability of the termination fee under applicable law (penalty doctrine). Address whether the fee includes or excludes transition costs. Coordinate with the wind-down / transition assistance provisions.",
+      "variations": {
+        "remaining-commitment": "Fee equals remaining minimum commitment amount",
+        "declining-schedule": "Fee decreases by a fixed amount or percentage each period",
+        "actual-loss": "Fee based on provider's actual demonstrable losses"
+      },
+      "contract_types": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["termination-convenience"],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-stranded-costs",
+      "clause_category": "payment",
+      "name": "Stranded Costs Provision",
+      "description": "Addresses the treatment of costs incurred by the provider in reliance on the contract that become irrecoverable upon early termination or significant scope reduction. Includes unamortised capital expenditure, non-cancellable third-party commitments, and redundancy costs for dedicated personnel.",
+      "drafting_guidance": "Define 'stranded costs' precisely: unamortised capital expenditure made specifically for the customer, non-cancellable commitments to third-party suppliers, lease obligations for dedicated facilities, redundancy and redeployment costs for dedicated personnel. Require the provider to mitigate stranded costs (re-deploy assets, cancel commitments where possible, redeploy personnel). Specify the documentation requirements for claimed stranded costs (evidence of expenditure, amortisation schedules, mitigation efforts). Address the customer's right to audit stranded cost claims. Set a cap on recoverable stranded costs. Specify the payment timeline. Address the treatment of assets transferred to the customer (offset against stranded costs). Coordinate with the early termination fee provisions (avoid double recovery).",
+      "variations": {
+        "full-recovery": "Customer reimburses all legitimate stranded costs",
+        "capped": "Stranded costs recoverable up to a specified maximum",
+        "mitigated": "Customer pays only net stranded costs after mitigation efforts"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": ["termination-convenience"],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-asset-transfer",
+      "clause_category": "payment",
+      "name": "Asset Transfer on Termination",
+      "description": "Addresses the transfer of assets from the provider to the customer or successor provider upon termination or expiration of the agreement. Covers physical assets, software licenses, data, documentation, and intellectual property required for the customer to continue receiving the services.",
+      "drafting_guidance": "Identify the categories of assets subject to transfer (hardware, software, licenses, documentation, data, work-in-progress). Define the mechanism for determining transfer prices (book value, fair market value, agreed depreciation schedule). Specify the customer's right to select which assets to acquire (cherry-picking vs all-or-nothing). Address software license transferability (assignable licenses vs new licenses required). Specify the timeline for asset transfer (aligned with the transition period). Address the provider's obligation to maintain assets in good condition pending transfer. Specify the documentation required for asset transfer. Address tax implications (VAT, stamp duty). Coordinate with the IP provisions (work product ownership, license terms).",
+      "variations": {
+        "book-value": "Assets transferred at net book value",
+        "fair-market": "Assets transferred at fair market value (independent valuation)",
+        "at-cost": "Assets transferred at original cost less agreed depreciation"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": ["termination-wind-down"],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-transition-pricing",
+      "clause_category": "payment",
+      "name": "Transition Period Pricing",
+      "description": "Defines the pricing for services provided during the transition period following termination or expiration of the agreement. Ensures that transition services are available at commercially reasonable rates and that the provider cannot exploit the customer's dependency during the exit period.",
+      "drafting_guidance": "Specify the pricing for transition services (at contractual rates, at cost-plus basis, or at pre-agreed transition rates). Address the duration for which transition pricing applies (aligned with the contractual transition period). Specify whether the customer can extend the transition period and at what pricing. Address minimum volume commitments during transition. Specify invoicing and payment terms for transition services. Address the provider's right to charge for transition-specific activities (knowledge transfer, documentation, data migration) separately from ongoing services. Ensure the pricing mechanism prevents opportunistic pricing by the provider. Coordinate with the wind-down/transition assistance clause. Address the impact of volume reductions during transition on unit pricing.",
+      "variations": {
+        "contractual-rates": "Transition services at current contractual rates",
+        "cost-plus": "Transition services at cost-plus reasonable margin",
+        "pre-agreed": "Transition pricing agreed in advance and specified in a schedule"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": ["termination-wind-down"],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-insurance-minimum-coverage",
+      "clause_category": "insurance",
+      "name": "Minimum Insurance Coverage Requirements",
+      "description": "Specifies the types and minimum levels of insurance coverage that the provider must maintain throughout the contract term. Includes professional indemnity, cyber liability, general liability, employer's liability, and any additional coverage required by the nature of the services.",
+      "drafting_guidance": "List required insurance types with minimum coverage amounts: professional indemnity (errors and omissions), cyber liability, commercial general liability, employer's liability, workers' compensation. Specify minimum coverage amounts proportionate to contract value and risk profile. Require insurers to have minimum credit ratings (A.M. Best A- or equivalent). Specify the policy basis (claims-made vs occurrence). Require maintenance of coverage for a run-off period post-termination. Require provision of certificates of insurance annually and upon request. Address the consequences of lapse or material change in coverage (notification obligation, cure period, termination right). Specify whether the customer should be named as additional insured. Address the provider's obligation to notify of claims that may erode coverage.",
+      "variations": {
+        "standard": "Professional indemnity, general liability, employer's liability",
+        "enhanced": "Standard plus cyber liability, D&O, and excess/umbrella",
+        "sector-specific": "Additional coverage for regulated industries (financial services, healthcare)"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "consulting-agreement", "professional-services", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "fin-additional-insured",
+      "clause_category": "insurance",
+      "name": "Additional Insured Status",
+      "description": "Requires the provider to name the customer (and potentially its affiliates) as an additional insured on specified insurance policies. Gives the customer direct rights under the policy, enabling it to make claims directly against the provider's insurer without relying on the provider to pursue the claim.",
+      "drafting_guidance": "Specify which policies should include additional insured status (typically commercial general liability and umbrella/excess policies). Define the scope of additional insured coverage (arising out of the provider's performance of the agreement). Require an additional insured endorsement from the insurer (not just a certificate of insurance notation). Address the standard of additional insured endorsement (ISO CG 20 10 or equivalent). Specify whether coverage is primary and non-contributory (the provider's coverage responds first, not as excess to the customer's own coverage). Require waiver of subrogation in favour of the customer. Address the impact of additional insured status on the provider's coverage limits and premiums.",
+      "variations": {
+        "standard": "Additional insured on CGL policy only",
+        "comprehensive": "Additional insured on CGL, umbrella, and professional indemnity",
+        "primary-non-contributory": "Coverage is primary and non-contributory"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "consulting-agreement"],
+      "depends_on": ["fin-insurance-minimum-coverage"],
+      "compliance_refs": []
+    }
+  ]
+}

@@ -1,0 +1,1162 @@
+{
+  "clause_types": [
+    {
+      "id": "indemnification-mutual",
+      "clause_category": "indemnification",
+      "name": "Mutual Indemnification",
+      "description": "Both parties agree to indemnify and hold harmless the other party against third-party claims arising from their respective breach, negligence, or willful misconduct. Creates a balanced risk allocation where each party bears responsibility for losses it causes.",
+      "drafting_guidance": "Define scope of indemnifiable claims precisely. Specify carve-outs for IP infringement (often handled separately). Address defence and settlement control rights. Link to limitation of liability clause to cap indemnification exposure. Consider survival post-termination (typically 12-36 months). Specify notice requirements for claims. Address duty to mitigate.",
+      "variations": {
+        "symmetric": "Both parties indemnify on identical terms",
+        "asymmetric-scope": "Mutual but with different scopes per party (e.g., provider covers IP, customer covers misuse)"
+      },
+      "contract_types": ["msa", "saas-subscription", "consulting-agreement", "professional-services", "outsourcing-agreement"],
+      "depends_on": ["liability-cap-direct"],
+      "compliance_refs": []
+    },
+    {
+      "id": "indemnification-provider",
+      "clause_category": "indemnification",
+      "name": "One-Way Provider Indemnification",
+      "description": "The service provider indemnifies the customer against third-party claims arising from the provider's breach, negligence, IP infringement, or failure to comply with applicable laws. The customer has no reciprocal indemnification obligation.",
+      "drafting_guidance": "Typical in customer-favourable contracts. Define triggering events clearly. Include IP infringement indemnity with cure options (modify, replace, refund). Specify provider's right to control defence and settlement. Require prompt notice from customer. Cap indemnification through limitation of liability. Address provider's obligation to pay damages, settlements, and reasonable legal costs.",
+      "variations": {
+        "broad": "Covers all claims arising from provider's services",
+        "narrow": "Limited to specific claim types (e.g., IP infringement only)"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "outsourcing-agreement"],
+      "depends_on": ["liability-cap-direct", "warranty-non-infringement"],
+      "compliance_refs": []
+    },
+    {
+      "id": "indemnification-customer",
+      "clause_category": "indemnification",
+      "name": "One-Way Customer Indemnification",
+      "description": "The customer indemnifies the provider against third-party claims arising from the customer's use of the services, including misuse, violation of acceptable use policies, or claims related to customer data and content.",
+      "drafting_guidance": "Common where customer controls data or content. Define scope to cover claims arising from customer's data, content, or instructions. Include misuse of services and violation of AUP. Specify notice and cooperation obligations. Ensure alignment with acceptable use policy terms. Address IP claims arising from customer-provided materials.",
+      "variations": {
+        "data-focused": "Limited to claims arising from customer data/content",
+        "broad-use": "Covers all claims arising from customer's use of the services"
+      },
+      "contract_types": ["saas-subscription", "msa", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "indemnification-ip",
+      "clause_category": "indemnification",
+      "name": "IP Infringement Indemnification",
+      "description": "Specific indemnification for intellectual property infringement claims. Provider indemnifies customer against claims that the deliverables or services infringe third-party patents, copyrights, trademarks, or trade secrets. Typically includes cure rights allowing the provider to modify, replace, or procure continued use.",
+      "drafting_guidance": "Define covered IP rights (patents, copyrights, trademarks, trade secrets). Specify geographic scope of coverage. Include standard exclusions (customer modifications, combination with third-party products, use outside specifications). Provide cure options: modify to be non-infringing, procure a license, replace with non-infringing alternative, or refund. Address open source contamination risk. Specify who controls defence and settlement. Consider patent indemnity vs copyright indemnity separately.",
+      "variations": {
+        "full-ip": "Covers patents, copyrights, trademarks, and trade secrets",
+        "copyright-only": "Limited to copyright and trademark infringement",
+        "with-patent-exclusion": "Excludes patent infringement claims (common in open source contexts)"
+      },
+      "contract_types": ["software-license-proprietary", "saas-subscription", "msa", "ip-assignment"],
+      "depends_on": ["liability-cap-direct", "ip-background-reservation"],
+      "compliance_refs": []
+    },
+    {
+      "id": "indemnification-data-breach",
+      "clause_category": "indemnification",
+      "name": "Data Breach Indemnification",
+      "description": "Specific indemnification for costs and liabilities arising from data breaches caused by the indemnifying party. Covers regulatory fines, notification costs, credit monitoring, forensic investigation, legal fees, and third-party claims resulting from unauthorized access to or disclosure of personal data or confidential information.",
+      "drafting_guidance": "Define what constitutes a data breach (align with GDPR Art 4(12) definition). Specify covered costs: regulatory fines and penalties, notification costs, credit monitoring services, forensic investigation, legal fees, PR/crisis management. Consider whether regulatory fines are indemnifiable (varies by jurisdiction). Link to data protection agreement obligations. May be subject to separate super-cap rather than general liability cap. Address timing of indemnification payments. Consider whether gross negligence or willful misconduct carves out from liability cap.",
+      "variations": {
+        "full-cost": "Covers all breach-related costs including regulatory fines",
+        "excluding-fines": "Excludes regulatory fines (which may not be insurable or indemnifiable)",
+        "capped-separately": "Subject to a separate, higher liability cap than general indemnification"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["liability-supercap-data", "dpa-security-measures"],
+      "compliance_refs": ["GDPR Art 82", "GDPR Art 83"]
+    },
+    {
+      "id": "liability-cap-direct",
+      "clause_category": "liability",
+      "name": "Direct Damage Cap",
+      "description": "Caps each party's aggregate liability for direct damages to a specified monetary amount, typically expressed as a multiple of fees paid or payable in the preceding 12-month period. Direct damages include actual, proven losses that are the natural and probable consequence of the breach.",
+      "drafting_guidance": "Define the cap amount clearly (e.g., 12 months of fees, fixed monetary amount, or combination). Specify whether cap is per-incident or aggregate. Clarify what constitutes 'fees' for calculation purposes (e.g., excluding pass-through costs). Address whether the cap applies to all claims in aggregate or per-claim. Consider whether the cap rolls with the contract term or is fixed. Ensure the cap is commercially reasonable relative to contract value. Specify whether the cap applies to both parties symmetrically.",
+      "variations": {
+        "12-month-fees": "Capped at fees paid/payable in the preceding 12 months",
+        "24-month-fees": "Capped at fees paid/payable in the preceding 24 months",
+        "fixed-amount": "Capped at a fixed monetary amount",
+        "total-contract-value": "Capped at the total contract value"
+      },
+      "contract_types": ["msa", "saas-subscription", "professional-services", "consulting-agreement", "outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "liability-exclusion-consequential",
+      "clause_category": "liability",
+      "name": "Consequential Damage Exclusion",
+      "description": "Excludes liability for indirect, special, incidental, consequential, or punitive damages, including but not limited to loss of profits, loss of revenue, loss of data, loss of business opportunity, and cost of procurement of substitute services, regardless of whether such damages were foreseeable.",
+      "drafting_guidance": "List specific excluded damage types explicitly (lost profits, lost revenue, lost data, business interruption, cost of substitute goods/services). Include 'whether foreseeable or not' and 'whether or not advised of the possibility' language. Consider carve-outs for indemnification obligations, IP infringement, confidentiality breaches, and data protection breaches. Note that some jurisdictions restrict the enforceability of consequential damage exclusions (e.g., consumer contracts in the EU). Address the tension between this exclusion and indemnification obligations.",
+      "variations": {
+        "mutual": "Both parties exclude consequential damages",
+        "asymmetric": "Only one party benefits from the exclusion",
+        "with-carve-outs": "Excludion applies but with specified carve-outs (e.g., IP, data breach)"
+      },
+      "contract_types": ["msa", "saas-subscription", "professional-services", "consulting-agreement", "outsourcing-agreement"],
+      "depends_on": ["liability-cap-direct"],
+      "compliance_refs": []
+    },
+    {
+      "id": "liability-force-majeure-exclusion",
+      "clause_category": "liability",
+      "name": "Force Majeure Liability Exclusion",
+      "description": "Excludes liability for failure to perform obligations due to force majeure events. Neither party is liable for delays or failures in performance caused by circumstances beyond their reasonable control, provided the affected party gives prompt notice and uses reasonable efforts to mitigate.",
+      "drafting_guidance": "Cross-reference the force majeure clause definition. Clarify that the exclusion applies only during the continuance of the force majeure event. Specify that payment obligations are typically not excused by force majeure. Require mitigation efforts. Address the relationship between force majeure exclusion and termination rights if the event persists beyond a specified period.",
+      "variations": {
+        "standard": "Excludes liability for the duration of the force majeure event",
+        "with-termination-trigger": "Excludes liability but triggers termination right after specified period"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["force-majeure-standard"],
+      "compliance_refs": []
+    },
+    {
+      "id": "liability-supercap-data",
+      "clause_category": "liability",
+      "name": "Data Protection Super-Cap",
+      "description": "Establishes a separate, higher liability cap specifically for data protection breaches, recognizing the potentially greater exposure from regulatory fines, notification costs, and third-party claims. Typically set at 2-5x the general liability cap or a fixed higher amount.",
+      "drafting_guidance": "Define the super-cap amount (typically 2-5x the general cap, or a separate fixed amount). Specify which data protection obligations trigger the super-cap (e.g., breach of DPA, unauthorized data processing, failure to implement required security measures). Clarify the relationship between the super-cap and the general liability cap (additive or inclusive). Address whether regulatory fines are included within the super-cap. Consider whether the super-cap applies to both parties or only to the data processor.",
+      "variations": {
+        "multiple-of-general": "Set as a multiple of the general liability cap (e.g., 2x, 3x, 5x)",
+        "fixed-amount": "Set as a fixed monetary amount independent of the general cap",
+        "unlimited": "No cap on data protection liability (rare, provider-unfriendly)"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["liability-cap-direct"],
+      "compliance_refs": ["GDPR Art 82", "GDPR Art 83"]
+    },
+    {
+      "id": "liability-unlimited-carveouts",
+      "clause_category": "liability",
+      "name": "Unlimited Liability Carve-Outs",
+      "description": "Specifies categories of liability that are not subject to the contractual liability cap, exposing parties to unlimited liability for certain breaches. Common carve-outs include death or personal injury caused by negligence, fraud or fraudulent misrepresentation, wilful misconduct, breach of confidentiality, and IP infringement indemnity obligations.",
+      "drafting_guidance": "List carve-outs exhaustively and precisely. Common unlimited liability categories: death or personal injury from negligence, fraud or fraudulent misrepresentation, wilful misconduct or gross negligence, breach of confidentiality obligations, IP infringement indemnity, breach of data protection obligations (alternatively subject to super-cap). Consider the commercial balance; too many carve-outs undermine the liability cap. Ensure alignment with insurance coverage. Note that some jurisdictions do not permit contractual limitation of certain liabilities (e.g., liability for death or personal injury in the UK under UCTA 1977).",
+      "variations": {
+        "narrow": "Limited to fraud, death/personal injury, and wilful misconduct",
+        "broad": "Includes confidentiality, IP, data protection, and other specific breaches",
+        "statutory-only": "Only carves out liabilities that cannot be limited by law"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "professional-services"],
+      "depends_on": ["liability-cap-direct"],
+      "compliance_refs": []
+    },
+    {
+      "id": "liability-aggregate-vs-per-incident",
+      "clause_category": "liability",
+      "name": "Aggregate vs Per-Incident Liability",
+      "description": "Clarifies whether the liability cap applies to each individual claim or incident, or to the aggregate of all claims over the contract term. An aggregate cap provides more certainty but may be exhausted by a single large claim, leaving subsequent claims uncovered.",
+      "drafting_guidance": "Specify clearly whether the cap is aggregate (total exposure across all claims) or per-incident (separate cap for each qualifying event). For aggregate caps, consider whether the cap resets annually or applies for the full contract term. For per-incident caps, define what constitutes a single 'incident' (especially for related claims). Consider a hybrid approach with both a per-incident cap and an overall aggregate cap. Address how the cap interacts with insurance (which is typically per-occurrence with aggregate limits).",
+      "variations": {
+        "aggregate-annual": "Total cap resets each contract year",
+        "aggregate-term": "Total cap applies across the entire contract term",
+        "per-incident": "Separate cap for each qualifying event",
+        "hybrid": "Per-incident cap plus overall aggregate cap"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["liability-cap-direct"],
+      "compliance_refs": []
+    },
+    {
+      "id": "liability-mutual-vs-asymmetric",
+      "clause_category": "liability",
+      "name": "Mutual vs Asymmetric Liability Cap",
+      "description": "Determines whether the liability cap applies equally to both parties (mutual/symmetric) or whether different caps apply to each party (asymmetric). Asymmetric caps reflect the differing risk profiles of service provider and customer.",
+      "drafting_guidance": "Consider the risk profile of each party. Service providers typically face greater operational risk and may require a lower cap. Customers with high-value data or regulatory exposure may seek higher provider caps. Specify each party's cap amount clearly. Consider whether asymmetric caps should apply only to specific claim categories. Address how asymmetric caps interact with indemnification obligations. Ensure the cap structure is commercially balanced and reflects the value exchange.",
+      "variations": {
+        "symmetric": "Same cap amount for both parties",
+        "provider-lower": "Provider has a lower cap than customer (common in tech services)",
+        "risk-proportional": "Caps proportional to each party's risk profile"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement"],
+      "depends_on": ["liability-cap-direct"],
+      "compliance_refs": []
+    },
+    {
+      "id": "liability-floor",
+      "clause_category": "liability",
+      "name": "Liability Floor (De Minimis Threshold)",
+      "description": "Establishes a minimum threshold below which individual claims cannot be brought, and/or a minimum aggregate threshold that must be met before any claims can be pursued. Prevents nuisance claims and reduces administrative burden of minor disputes.",
+      "drafting_guidance": "Set the de minimis threshold at a commercially reasonable level relative to contract value (e.g., 0.5-2% of annual fees). Consider both individual claim threshold (per-claim minimum) and aggregate basket (total must exceed threshold before any claims can be brought). Specify whether excluded minor claims still count toward the aggregate basket. Address whether the floor applies to all claims or only to specific categories. Ensure the floor does not inadvertently prevent legitimate small claims that could indicate systemic issues.",
+      "variations": {
+        "per-claim-minimum": "Each individual claim must exceed a minimum amount",
+        "aggregate-basket": "Total claims must exceed a threshold before any can be pursued",
+        "tipping-basket": "Once aggregate threshold is exceeded, all claims (including those below it) become recoverable"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "share-purchase", "asset-purchase"],
+      "depends_on": ["liability-cap-direct"],
+      "compliance_refs": []
+    },
+    {
+      "id": "confidentiality-mutual",
+      "clause_category": "confidentiality",
+      "name": "Mutual Confidentiality / NDA",
+      "description": "Both parties undertake reciprocal obligations to protect confidential information disclosed by the other party. Defines what constitutes confidential information, permitted disclosures, and the standard of care required. Typically survives termination for 3-5 years.",
+      "drafting_guidance": "Define 'Confidential Information' broadly but with clear exclusions (publicly available, independently developed, rightfully received from third parties, required by law). Specify the standard of care (at least the same degree of care as own confidential information, and no less than reasonable care). Address permitted disclosures (employees, contractors, professional advisors on need-to-know basis). Include compelled disclosure provisions (court order, regulatory requirement) with notice obligation. Specify return or destruction obligations on termination. Set survival period (typically 3-5 years, indefinite for trade secrets). Address residuals (information retained in unaided memory).",
+      "variations": {
+        "standard": "Reciprocal obligations with standard exclusions",
+        "enhanced": "Additional protections including marking requirements and access logging"
+      },
+      "contract_types": ["msa", "nda-mutual", "saas-subscription", "consulting-agreement", "professional-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "confidentiality-one-way",
+      "clause_category": "confidentiality",
+      "name": "One-Way Confidentiality / NDA",
+      "description": "Only one party (the disclosing party) shares confidential information, and only the receiving party has confidentiality obligations. Used when information flow is primarily one-directional, such as during due diligence or vendor evaluations.",
+      "drafting_guidance": "Identify the disclosing party and receiving party clearly. Define the purpose for which information is disclosed (the 'Permitted Purpose'). Restrict use of confidential information to the Permitted Purpose only. Include the same exclusions and standard of care as mutual NDA. Consider whether the receiving party may share with affiliates. Specify return/destruction obligations. Address what happens if the receiving party becomes obligated to disclose (regulatory, litigation). Include non-solicitation provisions if appropriate for the context.",
+      "variations": {
+        "evaluation-purpose": "Disclosure for the purpose of evaluating a potential transaction",
+        "project-specific": "Disclosure limited to a specific project or engagement"
+      },
+      "contract_types": ["nda-one-way", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "confidentiality-residuals",
+      "clause_category": "confidentiality",
+      "name": "Residuals Clause",
+      "description": "Permits a party to use general ideas, concepts, know-how, and techniques retained in the unaided memory of its personnel who had access to confidential information. Protects against claims that an employee's general knowledge constitutes misappropriation of trade secrets.",
+      "drafting_guidance": "Define 'residuals' carefully: information retained in the unaided memory of personnel without intentional memorization. Exclude specific proprietary data, trade secrets, source code, algorithms, and customer data. Specify that the residuals right does not create a license to any intellectual property. Clarify that the clause does not permit intentional memorization or reverse engineering. Consider restricting the clause to general know-how and skills rather than specific business information. This clause is contentious; disclosing parties often resist it.",
+      "variations": {
+        "broad": "Covers any information retained in unaided memory",
+        "narrow": "Limited to general ideas, concepts, and techniques (excludes specific data)"
+      },
+      "contract_types": ["msa", "consulting-agreement", "nda-mutual"],
+      "depends_on": ["confidentiality-mutual"],
+      "compliance_refs": []
+    },
+    {
+      "id": "confidentiality-exceptions",
+      "clause_category": "confidentiality",
+      "name": "Standard Confidentiality Exceptions",
+      "description": "Defines the standard carve-outs from confidentiality obligations: information that is or becomes publicly available, was already known to the receiving party, is independently developed without use of confidential information, or is rightfully received from a third party without restriction.",
+      "drafting_guidance": "Include all four standard exceptions: (1) publicly available (not through receiving party's breach), (2) already known (with evidence predating disclosure), (3) independently developed (without reference to confidential information, documented), (4) received from a third party (without breach of obligation to disclosing party). Address compelled disclosure as a separate provision (not an exception but a permitted disclosure with conditions). Consider adding a fifth exception for information approved for release in writing by the disclosing party. Burden of proof for exceptions should rest on the receiving party.",
+      "variations": {
+        "four-exception": "Standard four exceptions only",
+        "five-exception": "Adds written approval by disclosing party as fifth exception"
+      },
+      "contract_types": ["nda-mutual", "nda-one-way", "msa", "saas-subscription"],
+      "depends_on": ["confidentiality-mutual"],
+      "compliance_refs": []
+    },
+    {
+      "id": "confidentiality-survival",
+      "clause_category": "confidentiality",
+      "name": "Confidentiality Survival Period",
+      "description": "Specifies the duration for which confidentiality obligations continue after termination or expiration of the agreement. Balances the disclosing party's need for ongoing protection with the receiving party's need for certainty regarding the duration of its obligations.",
+      "drafting_guidance": "Specify an explicit survival period (typically 3-5 years from termination/expiration). Consider indefinite survival for trade secrets. Address whether the survival period runs from the date of disclosure or from agreement termination. Ensure alignment with the definition of confidential information (trade secrets may warrant longer protection). Consider regulatory requirements that may impose minimum retention periods. Address the practical enforceability of long survival periods. Specify whether return/destruction obligations apply at agreement end or at the end of the survival period.",
+      "variations": {
+        "3-year": "Confidentiality survives for 3 years post-termination",
+        "5-year": "Confidentiality survives for 5 years post-termination",
+        "indefinite-trade-secrets": "General confidentiality for 3-5 years; trade secrets indefinitely"
+      },
+      "contract_types": ["nda-mutual", "nda-one-way", "msa", "consulting-agreement"],
+      "depends_on": ["confidentiality-mutual"],
+      "compliance_refs": []
+    },
+    {
+      "id": "termination-cause",
+      "clause_category": "termination",
+      "name": "Termination for Cause (Material Breach)",
+      "description": "Allows either party to terminate the agreement if the other party commits a material breach and fails to cure it within a specified notice period. Defines what constitutes a material breach and the procedure for providing notice and opportunity to cure.",
+      "drafting_guidance": "Define 'material breach' or list specific events that constitute material breach. Set a reasonable cure period (typically 30 days for most breaches, shorter for payment defaults). Specify the notice requirements (written notice detailing the breach). Address breaches that are incurable (e.g., confidentiality breach, insolvency). Consider whether repeated breaches of the same obligation (even if individually cured) can constitute grounds for termination. Specify consequences of termination (accrued rights, payment of outstanding amounts, transition assistance). Address whether the non-breaching party may suspend performance during the cure period.",
+      "variations": {
+        "standard-30-day": "30-day cure period for material breach",
+        "tiered": "Different cure periods for different breach types (e.g., 10 days for payment, 30 days for other breaches)"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "consulting-agreement", "professional-services", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "termination-convenience",
+      "clause_category": "termination",
+      "name": "Termination for Convenience",
+      "description": "Allows one or both parties to terminate the agreement at any time without cause by providing advance written notice. Commonly includes a minimum notice period and may include early termination fees or wind-down obligations.",
+      "drafting_guidance": "Specify the notice period (typically 30-90 days). Determine whether the right is mutual or available only to the customer. Address financial consequences: payment for services rendered through termination date, early termination fees (if applicable), refund of prepaid amounts for unused services. Consider whether minimum commitment periods apply before the convenience termination right becomes available. Specify transition assistance obligations. Address treatment of work-in-progress and partially completed deliverables.",
+      "variations": {
+        "mutual": "Both parties may terminate for convenience",
+        "customer-only": "Only the customer may terminate for convenience",
+        "with-minimum-term": "Convenience termination available only after a minimum commitment period"
+      },
+      "contract_types": ["msa", "saas-subscription", "consulting-agreement", "managed-services", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "termination-insolvency",
+      "clause_category": "termination",
+      "name": "Insolvency Trigger",
+      "description": "Allows immediate termination upon the occurrence of specified insolvency events affecting the other party, including filing for bankruptcy, appointment of a receiver or administrator, making an arrangement with creditors, or ceasing to carry on business.",
+      "drafting_guidance": "List specific insolvency events comprehensively (voluntary or involuntary bankruptcy filing, appointment of receiver/administrator/liquidator, creditor arrangement, cessation of business, inability to pay debts as they fall due). Note that ipso facto clauses may be unenforceable in certain jurisdictions (e.g., US Bankruptcy Code Section 365, UK Corporate Insolvency and Governance Act 2020). Consider alternatives such as adequate assurance mechanisms. Address data and IP rights in the event of insolvency. Specify whether termination is automatic or requires notice. Consider escrow arrangements for critical IP or data.",
+      "variations": {
+        "automatic": "Termination occurs automatically upon insolvency event",
+        "optional": "Non-insolvent party has the right (but not obligation) to terminate",
+        "with-cure-period": "Insolvency event triggers a short cure period before termination right arises"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "saas-subscription", "managed-services", "software-license-proprietary"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "termination-change-of-control",
+      "clause_category": "termination",
+      "name": "Change of Control Termination",
+      "description": "Grants a termination right upon a change of control of the other party, defined as the acquisition of a majority of voting shares, a merger or consolidation, or a sale of substantially all assets. Protects against the agreement being effectively assigned to a competitor or undesirable entity.",
+      "drafting_guidance": "Define 'change of control' precisely (acquisition of 50%+ voting rights, merger, consolidation, sale of substantially all assets). Specify the notification timeline (typically 30 days advance notice or within 30 days of the change). Set the termination exercise window (e.g., 90 days from notification). Address whether internal reorganisations and affiliate transfers are excluded. Consider whether the change of control clause is reciprocal. Address financial consequences (early termination fees may or may not apply). Coordinate with assignment clause provisions.",
+      "variations": {
+        "mutual": "Either party may terminate on the other's change of control",
+        "customer-only": "Only customer has the right to terminate on provider change of control",
+        "competitor-trigger": "Termination right only if acquirer is a competitor"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "saas-subscription", "software-license-proprietary"],
+      "depends_on": ["assignment-consent"],
+      "compliance_refs": []
+    },
+    {
+      "id": "termination-wind-down",
+      "clause_category": "termination",
+      "name": "Wind-Down / Transition Assistance",
+      "description": "Requires the service provider to continue providing services and transition assistance for a specified period following termination or expiration, to enable the customer to migrate to an alternative provider or bring services in-house. Transition assistance is typically provided at agreed rates.",
+      "drafting_guidance": "Specify the maximum wind-down period (typically 3-12 months). Define the scope of transition assistance (knowledge transfer, data migration, documentation, parallel running). Set the pricing for transition services (at contractual rates, cost-plus, or pre-agreed rates). Address provider obligations: maintain service levels, cooperate with successor provider, provide access to systems and documentation. Specify data extraction and handover requirements. Ensure the wind-down obligation survives termination. Include a transition plan obligation. Address IP and licensing during transition.",
+      "variations": {
+        "standard": "Fixed transition period at contractual rates",
+        "extended": "Up to 12 months with detailed transition plan",
+        "at-cost": "Transition assistance provided at cost (no profit margin)"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription", "msa"],
+      "depends_on": ["termination-cause", "termination-convenience"],
+      "compliance_refs": []
+    },
+    {
+      "id": "termination-fees",
+      "clause_category": "termination",
+      "name": "Termination Fees / Early Exit",
+      "description": "Specifies the financial consequences of early termination, including early termination fees, payment for stranded costs, and treatment of prepaid amounts. Designed to compensate the non-terminating party for the financial impact of early contract exit.",
+      "drafting_guidance": "Structure termination fees as a genuine pre-estimate of loss (liquidated damages) to ensure enforceability. Consider declining fee schedules over the contract term. Specify whether termination fees apply to all termination scenarios or only convenience termination. Address the relationship between termination fees and other remedies. Ensure fees do not constitute a penalty (unenforceable in many jurisdictions). Specify payment timing and invoicing. Consider whether the customer should receive credit for fees already paid. Address stranded costs separately from termination fees.",
+      "variations": {
+        "declining-schedule": "Fee decreases over the contract term",
+        "remaining-commitment": "Fee equals remaining minimum commitment",
+        "capped-percentage": "Fee capped at a percentage of remaining contract value"
+      },
+      "contract_types": ["saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["termination-convenience"],
+      "compliance_refs": []
+    },
+    {
+      "id": "force-majeure-standard",
+      "clause_category": "force-majeure",
+      "name": "Standard Force Majeure",
+      "description": "Excuses non-performance of contractual obligations (other than payment) caused by events beyond a party's reasonable control. Typically includes natural disasters, war, terrorism, government actions, and similar events. Requires prompt notice and mitigation efforts.",
+      "drafting_guidance": "Include both a general definition ('events beyond reasonable control') and a non-exhaustive list of specific events. Standard events: natural disasters (earthquake, flood, hurricane), war, armed conflict, terrorism, civil unrest, government sanctions/embargoes, epidemic, strikes/labour disputes, utility failures, telecommunications failures. Require prompt written notice specifying the event and expected duration. Impose a duty to mitigate and use reasonable efforts to resume performance. Specify that payment obligations are not excused. Include a termination right if the force majeure event continues beyond a specified period (typically 60-180 days). Address partial performance during force majeure.",
+      "variations": {
+        "broad": "Wide definition with extensive list of qualifying events",
+        "narrow": "Limited to natural disasters and government actions only"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "consulting-agreement", "professional-services", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "force-majeure-pandemic",
+      "clause_category": "force-majeure",
+      "name": "Pandemic-Inclusive Force Majeure",
+      "description": "Force majeure clause that explicitly addresses pandemics, epidemics, and public health emergencies as qualifying events, including government-imposed lockdowns, quarantine orders, and travel restrictions. Developed in response to COVID-19 experience to provide greater certainty.",
+      "drafting_guidance": "Explicitly list pandemics, epidemics, and public health emergencies (as declared by WHO or relevant national authority). Include government-imposed restrictions (lockdowns, quarantine orders, travel bans, business closures). Address whether a future wave of a known pandemic qualifies (e.g., new COVID-19 variants may not qualify if the pandemic is 'known'). Consider whether remote working capability eliminates the force majeure defence for certain obligations. Address supply chain disruptions resulting from pandemics. Specify the standard for invoking the clause (must be the proximate cause, not merely a contributing factor).",
+      "variations": {
+        "explicit-pandemic": "Pandemics explicitly listed as a qualifying event",
+        "government-orders": "Focus on government-imposed restrictions rather than the pandemic itself"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "force-majeure-termination-right",
+      "clause_category": "force-majeure",
+      "name": "Force Majeure with Termination Right",
+      "description": "Force majeure clause that includes an explicit termination right if the force majeure event continues beyond a specified period, allowing either party to terminate without liability. Prevents parties from being indefinitely bound to a frustrated contract.",
+      "drafting_guidance": "Specify the trigger period (typically 60-180 days of continuous force majeure). Clarify whether the termination right is mutual or available only to the non-affected party. Address whether the period is measured from the start of the event or from the date of notice. Specify consequences of termination: payment for services rendered, return of prepaid amounts, no liability for early termination. Consider whether the non-affected party should have the right to source alternative supply during the force majeure period. Address partial force majeure (where only some obligations are affected).",
+      "variations": {
+        "90-day-trigger": "Termination right after 90 consecutive days of force majeure",
+        "180-day-trigger": "Termination right after 180 consecutive days of force majeure",
+        "mutual-right": "Either party may terminate regardless of which party is affected"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["force-majeure-standard"],
+      "compliance_refs": []
+    },
+    {
+      "id": "force-majeure-narrow",
+      "clause_category": "force-majeure",
+      "name": "Narrow Force Majeure Definition",
+      "description": "A restrictive force majeure clause that limits qualifying events to a short, exhaustive list of truly unforeseeable and unavoidable events. Excludes events that could have been anticipated, insured against, or mitigated through business continuity planning.",
+      "drafting_guidance": "Use an exhaustive (closed) list rather than a general definition. Limit to catastrophic events: natural disasters of exceptional severity, declared war, nuclear incidents, government expropriation. Exclude labour disputes, utility failures, cyber attacks, supply chain issues, and other events that can be managed through business continuity planning. Require that the party invoking force majeure demonstrates that no reasonable alternative performance was available. Include a duty to maintain business continuity plans. This approach favours the non-affected party and is more common in critical services contracts.",
+      "variations": {
+        "exhaustive-list": "Only listed events qualify; no catch-all provision",
+        "act-of-god-only": "Limited to natural disasters and government sovereign acts"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "warranty-services",
+      "clause_category": "warranty",
+      "name": "Service Performance Warranty",
+      "description": "Provider warrants that services will be performed in a professional and workmanlike manner, in accordance with generally accepted industry standards, and in compliance with the specifications and service levels set out in the agreement.",
+      "drafting_guidance": "Define the standard of performance ('professional and workmanlike manner', 'in accordance with industry best practice', or 'commercially reasonable skill and care'). Reference specific service levels and specifications. Specify the remedy for breach of warranty (re-performance, credit, or refund). Set a warranty claim period (typically 30-90 days from delivery). Address whether warranty applies to all services or only specific deliverables. Consider consequential impact of warranty breach on liability provisions. Clarify the relationship between warranty and SLA obligations.",
+      "variations": {
+        "best-efforts": "Obligation to use best efforts (higher standard)",
+        "reasonable-care": "Obligation to use reasonable care and skill (standard)",
+        "results-based": "Warranty of specific outcomes or results"
+      },
+      "contract_types": ["msa", "professional-services", "consulting-agreement", "managed-services", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "warranty-fitness",
+      "clause_category": "warranty",
+      "name": "Fitness for Purpose Warranty",
+      "description": "Provider warrants that the deliverables or services are fit for the particular purpose communicated by the customer and relied upon by the customer in entering into the agreement. A higher standard than mere conformity to specification.",
+      "drafting_guidance": "Specify the particular purpose explicitly in the contract (do not leave it implied). Document the customer's communication of the purpose and the provider's acceptance. Address the interaction with specification-based warranties (fitness for purpose may extend beyond specifications). Consider the allocation of risk where the customer's purpose evolves during the engagement. Note that implied fitness for purpose warranties may exist under applicable law (e.g., UCC Section 2-315, UK Sale of Goods Act 1979 Section 14(3)). Address whether the warranty covers fitness at the time of delivery only or ongoing fitness.",
+      "variations": {
+        "express": "Purpose explicitly stated in the contract",
+        "implied": "Relies on statutory implied warranty"
+      },
+      "contract_types": ["software-license-proprietary", "saas-subscription", "professional-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "warranty-non-infringement",
+      "clause_category": "warranty",
+      "name": "Non-Infringement Warranty",
+      "description": "Provider warrants that the deliverables, software, or services do not infringe any third-party intellectual property rights, including patents, copyrights, trademarks, or trade secrets. Closely linked to the IP infringement indemnification obligation.",
+      "drafting_guidance": "Specify the scope of IP rights covered (patents, copyrights, trademarks, trade secrets). Define the geographic scope (worldwide or limited to specific jurisdictions). Address open source compliance and license compatibility. Include standard exclusions: customer modifications, use in combination with third-party products, use outside documentation. Coordinate with IP infringement indemnification clause. Consider whether the warranty extends to third-party components incorporated by the provider. Address the warranty in the context of standard/off-the-shelf versus bespoke deliverables.",
+      "variations": {
+        "broad": "Covers all IP rights worldwide",
+        "limited-geography": "Limited to specified jurisdictions",
+        "excluding-patents": "Covers copyright and trademark but excludes patent claims"
+      },
+      "contract_types": ["software-license-proprietary", "saas-subscription", "ip-assignment", "msa"],
+      "depends_on": ["indemnification-ip"],
+      "compliance_refs": []
+    },
+    {
+      "id": "warranty-title",
+      "clause_category": "warranty",
+      "name": "Warranty of Title",
+      "description": "Provider warrants that it has good and marketable title to the deliverables or the right to grant the licenses contemplated by the agreement, free from any liens, encumbrances, or third-party claims.",
+      "drafting_guidance": "Confirm provider owns or has the right to license all deliverables. Address third-party components (open source, licensed modules). Warrant that deliverables are free from liens, security interests, and encumbrances. Consider whether the warranty extends to background IP incorporated into deliverables. Address the chain of title for work created by subcontractors. Coordinate with IP assignment and license-back provisions. Include representations regarding the absence of conflicting obligations to third parties.",
+      "variations": {
+        "full-title": "Absolute warranty of ownership",
+        "right-to-license": "Warranty limited to the right to grant the licenses in the agreement"
+      },
+      "contract_types": ["ip-assignment", "software-license-proprietary", "saas-subscription"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "warranty-compliance-laws",
+      "clause_category": "warranty",
+      "name": "Compliance with Laws Warranty",
+      "description": "Each party warrants that it will comply with all applicable laws, regulations, and industry standards in the performance of its obligations under the agreement. May include specific compliance areas such as anti-bribery, data protection, export controls, and sanctions.",
+      "drafting_guidance": "Specify whether the warranty is general (all applicable laws) or targeted to specific regulatory areas. Consider listing key compliance areas: data protection (GDPR), anti-bribery (FCPA, UK Bribery Act), sanctions, export controls, employment law, environmental law. Address the standard (compliance with laws 'in all material respects' vs absolute compliance). Allocate responsibility for changes in law during the contract term. Consider cost-sharing for compliance-driven changes. Coordinate with specific compliance clauses (anti-bribery, sanctions). Address the consequences of regulatory non-compliance on the contract.",
+      "variations": {
+        "general": "Broad compliance with all applicable laws",
+        "specific": "Compliance warranty limited to listed regulatory areas",
+        "with-cost-allocation": "Includes provisions for allocating costs of regulatory changes"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "saas-subscription", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "warranty-accuracy-representations",
+      "clause_category": "warranty",
+      "name": "Accuracy of Representations Warranty",
+      "description": "Each party warrants that all representations made in the agreement and in any documents or materials provided in connection with the agreement are true, accurate, and not misleading in any material respect as of the date made.",
+      "drafting_guidance": "Specify the date as of which representations are made (signing date, effective date, or ongoing). Address whether representations are qualified by materiality or knowledge. Consider repeating representations (deemed made at each renewal or order). Specify the consequences of a representation proving untrue (breach of warranty, termination right, indemnification). Address the interaction with due diligence and disclosed information. Consider whether representations are given by the entity only or also by its officers and directors.",
+      "variations": {
+        "at-signing": "Representations true as of the date of signing only",
+        "repeating": "Representations deemed repeated at specified intervals",
+        "knowledge-qualified": "Representations qualified by 'to the best of the party's knowledge'"
+      },
+      "contract_types": ["msa", "share-purchase", "asset-purchase", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "sla-uptime",
+      "clause_category": "sla",
+      "name": "Uptime / Availability Commitment",
+      "description": "Provider commits to maintaining a minimum percentage of service availability (uptime) over a specified measurement period. Typically expressed as a percentage (e.g., 99.9%) with defined exclusions and a corresponding service credit regime for failures to meet the target.",
+      "drafting_guidance": "Define the uptime percentage precisely (99.5%, 99.9%, 99.95%, 99.99%). Specify the measurement period (monthly, quarterly). Define how uptime is measured (total minutes minus downtime, divided by total minutes). Define downtime clearly (complete unavailability vs degraded performance). List scheduled maintenance exclusions and the process for scheduling maintenance windows. Specify monitoring methodology (provider monitoring, independent monitoring, customer monitoring). Address partial outages and degraded service. Link to service credit mechanism for failures to meet the commitment.",
+      "variations": {
+        "99.5": "99.5% monthly uptime (approximately 3.6 hours downtime/month)",
+        "99.9": "99.9% monthly uptime (approximately 43.8 minutes downtime/month)",
+        "99.95": "99.95% monthly uptime (approximately 21.9 minutes downtime/month)",
+        "99.99": "99.99% monthly uptime (approximately 4.3 minutes downtime/month)"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "outsourcing-agreement", "sla"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "sla-response-time",
+      "clause_category": "sla",
+      "name": "Incident Response Time SLA",
+      "description": "Defines maximum response times for incidents based on severity classification. Response time is measured from the point the incident is reported to the point the provider acknowledges receipt and begins investigation. Different severity levels have different response time targets.",
+      "drafting_guidance": "Define severity levels clearly (P1/Critical, P2/High, P3/Medium, P4/Low). Specify response time targets per severity level (e.g., P1: 15 minutes, P2: 1 hour, P3: 4 hours, P4: 1 business day). Clarify what constitutes a 'response' (acknowledgment, initial assessment, or commencement of investigation). Define business hours vs 24/7 support coverage per severity level. Specify the incident reporting mechanism (ticketing system, phone, email). Address escalation procedures for missed response times. Distinguish between response time and resolution time.",
+      "variations": {
+        "24x7": "Response times apply 24/7 for all severity levels",
+        "business-hours": "Response times measured during business hours only (except P1)",
+        "tiered": "Different coverage hours per severity level"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "outsourcing-agreement", "sla", "maintenance-support"],
+      "depends_on": ["sla-uptime"],
+      "compliance_refs": []
+    },
+    {
+      "id": "sla-resolution-time",
+      "clause_category": "sla",
+      "name": "Incident Resolution Time SLA",
+      "description": "Defines maximum resolution times for incidents based on severity classification. Resolution time is measured from the point the incident is reported to the point the service is restored to normal operation. Interim workarounds may pause the resolution clock if agreed.",
+      "drafting_guidance": "Define resolution targets per severity level (e.g., P1: 4 hours, P2: 8 hours, P3: 2 business days, P4: 5 business days). Clarify what constitutes 'resolution' (full fix, workaround, or restoration of service). Address the impact of workarounds on resolution time measurement (does a workaround stop the clock?). Specify escalation procedures if resolution targets are at risk. Define root cause analysis requirements for P1/P2 incidents. Address the relationship between resolution time SLA and service credits. Consider whether resolution requires customer confirmation.",
+      "variations": {
+        "fix-based": "Resolution requires a permanent fix",
+        "workaround-based": "Resolution includes provision of an acceptable workaround",
+        "customer-confirmed": "Resolution clock stops only when customer confirms resolution"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "outsourcing-agreement", "sla", "maintenance-support"],
+      "depends_on": ["sla-response-time"],
+      "compliance_refs": []
+    },
+    {
+      "id": "sla-service-credits",
+      "clause_category": "sla",
+      "name": "Service Credit Mechanism",
+      "description": "Defines the financial remedy for failure to meet service level commitments. Service credits are typically calculated as a percentage of monthly fees and are applied as a credit against future invoices. Establishes the service credit rates, calculation methodology, claim process, and maximum credit cap.",
+      "drafting_guidance": "Define service credit percentages per SLA tier missed (e.g., <99.9% = 5% credit, <99.5% = 10% credit, <99.0% = 25% credit). Set a maximum monthly service credit cap (typically 25-100% of monthly fees). Specify whether service credits are the sole and exclusive remedy for SLA failures or whether other remedies remain available. Define the claim process (automatic vs customer-initiated, claim deadline). Address how credits are applied (offset against future invoices, or refund if contract terminates). Consider a chronic failure threshold that triggers termination rights. Specify the reporting and measurement mechanism.",
+      "variations": {
+        "automatic": "Service credits applied automatically without customer claim",
+        "claim-based": "Customer must submit a claim within a specified period",
+        "tiered": "Credit percentage increases with severity of SLA miss"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "outsourcing-agreement", "sla"],
+      "depends_on": ["sla-uptime"],
+      "compliance_refs": []
+    },
+    {
+      "id": "sla-exclusions",
+      "clause_category": "sla",
+      "name": "SLA Exclusions",
+      "description": "Defines the circumstances under which downtime or performance failures are excluded from SLA calculations and do not trigger service credits. Common exclusions include scheduled maintenance, force majeure events, customer-caused issues, and third-party service failures.",
+      "drafting_guidance": "List exclusions clearly and exhaustively. Common exclusions: scheduled maintenance (with minimum advance notice), force majeure events, customer-caused issues (misuse, unauthorized modifications), third-party service failures (ISP, cloud provider), actions requested by customer. Require advance notice for scheduled maintenance (minimum 48-72 hours, preferably during low-usage windows). Consider whether emergency maintenance should be excluded. Address the burden of proof for exclusions (provider must demonstrate the exclusion applies). Limit the total permitted scheduled maintenance per period. Ensure exclusions do not render the SLA meaningless.",
+      "variations": {
+        "narrow": "Limited exclusions (only scheduled maintenance and customer-caused issues)",
+        "broad": "Extensive exclusions including third-party failures and beta features"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "outsourcing-agreement", "sla"],
+      "depends_on": ["sla-uptime", "sla-service-credits"],
+      "compliance_refs": []
+    },
+    {
+      "id": "audit-rights-operational",
+      "clause_category": "audit-rights",
+      "name": "Operational Audit Rights",
+      "description": "Grants the customer the right to audit the provider's operational practices, processes, and controls related to the delivery of services under the agreement. Includes the right to inspect facilities, review documentation, and interview personnel.",
+      "drafting_guidance": "Specify audit scope (processes, controls, facilities, personnel). Set frequency limits (typically once per year, with additional audits on cause). Define notice requirements (30 days advance notice). Specify who may conduct the audit (customer personnel, independent third-party auditor). Address cost allocation (typically each party bears its own costs). Require the auditor to execute a confidentiality agreement. Specify the provider's obligation to cooperate and provide reasonable access. Address remediation timelines for audit findings. Consider accepting SOC 2 Type II reports or ISO 27001 certification in lieu of on-site audits.",
+      "variations": {
+        "standard": "Annual audit right with 30-day notice",
+        "enhanced": "Quarterly audit rights with 14-day notice",
+        "report-based": "Provider furnishes SOC 2/ISO certifications in lieu of on-site audit"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "msa"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "audit-rights-financial",
+      "clause_category": "audit-rights",
+      "name": "Financial Audit Rights",
+      "description": "Grants the right to audit the provider's financial records, invoicing, and cost calculations related to the agreement. Particularly relevant in cost-plus, gain-sharing, or open-book pricing arrangements. Includes the right to verify fee calculations, cost pass-throughs, and compliance with most-favoured-customer obligations.",
+      "drafting_guidance": "Specify the records subject to audit (invoices, time records, cost allocations, subcontractor costs). Define the audit period (current year plus prior years, typically up to 3 years). Address who bears the cost of the audit (customer unless the audit reveals overcharging above a threshold, e.g., 5%). Specify record retention requirements. Address remediation: require prompt refund of any overcharges identified plus interest. Include a right to set off overcharges against future invoices. Specify the auditor qualifications (qualified accountant or independent third party).",
+      "variations": {
+        "standard": "Annual financial audit right",
+        "open-book": "Continuous access to cost records with periodic formal audits",
+        "threshold-triggered": "Audit costs shift to provider if overcharges exceed a threshold"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "audit-rights-security",
+      "clause_category": "audit-rights",
+      "name": "Security Audit Rights",
+      "description": "Grants the right to audit the provider's information security practices, including penetration testing, vulnerability assessments, and review of security controls. Essential for contracts involving processing of personal data or sensitive information.",
+      "drafting_guidance": "Define audit scope (security policies, access controls, encryption, incident response, business continuity). Specify whether penetration testing is included and under what conditions. Address the use of vulnerability scanners and security assessment tools. Require advance coordination to avoid service disruption. Specify the frequency (annual baseline, additional on cause or after a security incident). Address the use of certifications and attestations (SOC 2 Type II, ISO 27001, PCI DSS) as supplementary evidence. Require prompt remediation of critical and high-severity findings. Specify reporting format and confidentiality of findings. Address the provider's right to review and respond to audit reports.",
+      "variations": {
+        "self-assessment": "Provider completes security questionnaire and provides certifications",
+        "third-party": "Independent third-party security assessment",
+        "full-pentest": "Includes penetration testing with agreed scope and rules of engagement"
+      },
+      "contract_types": ["saas-subscription", "outsourcing-agreement", "managed-services", "dpa-gdpr"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 28(3)(h)", "NIS2 Art 21"]
+    },
+    {
+      "id": "audit-rights-regulatory",
+      "clause_category": "audit-rights",
+      "name": "Regulatory Audit Rights",
+      "description": "Grants regulatory authorities and their appointed agents the right to access, inspect, and audit the provider's premises, systems, and records related to regulated activities. Ensures the customer can comply with its own regulatory obligations by providing regulator access to its supply chain.",
+      "drafting_guidance": "Specify which regulators are covered (data protection authorities, financial regulators, sector-specific regulators). Require the provider to cooperate with regulatory audits and inspections. Address advance notice (regulators may not provide notice for unannounced inspections). Specify the provider's obligation to maintain records in a format suitable for regulatory review. Address cross-border regulatory access (particularly relevant under GDPR, DORA, and financial services regulations). Ensure the provider cannot refuse access to regulators. Address cost allocation for regulatory audit cooperation. Include flow-down requirements for subcontractors.",
+      "variations": {
+        "standard": "Cooperation with regulatory audits upon reasonable notice",
+        "financial-services": "Enhanced rights including unannounced inspections per DORA/EBA guidelines",
+        "flow-down": "Provider must ensure equivalent regulatory access to its subcontractors"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "dpa-gdpr", "hipaa-baa"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 28(3)(h)", "DORA Art 30(3)", "NIS2 Art 21"]
+    },
+    {
+      "id": "governing-law-choice",
+      "clause_category": "governing-law",
+      "name": "Choice of Governing Law",
+      "description": "Specifies the law that governs the interpretation and enforcement of the agreement. Provides legal certainty and predictability by designating a single jurisdiction's laws as applicable to the contract, excluding conflict of laws principles.",
+      "drafting_guidance": "Choose a governing law that is well-developed for commercial contracts (England and Wales, New York, Delaware, Singapore, Sweden). Exclude conflict of laws / choice of laws principles to prevent renvoi. Consider the relationship between governing law and dispute resolution venue. Address mandatory local law requirements that may override the chosen governing law. Consider whether the governing law is familiar to both parties. For international contracts, consider the applicability of the CISG (and whether to exclude it). Address the impact of governing law on limitation of liability enforceability.",
+      "variations": {
+        "england-wales": "Governed by the laws of England and Wales",
+        "new-york": "Governed by the laws of the State of New York",
+        "swedish": "Governed by the laws of Sweden",
+        "delaware": "Governed by the laws of the State of Delaware"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "consulting-agreement", "nda-mutual", "nda-one-way", "software-license-proprietary"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "governing-law-venue",
+      "clause_category": "governing-law",
+      "name": "Venue / Jurisdiction Selection",
+      "description": "Specifies the courts that have jurisdiction to hear disputes arising from the agreement. May be exclusive (only the specified courts) or non-exclusive (specified courts plus any other court with jurisdiction). Closely linked to the choice of governing law.",
+      "drafting_guidance": "Specify whether jurisdiction is exclusive or non-exclusive. Exclusive jurisdiction provides certainty but may be inconvenient for one party. Non-exclusive jurisdiction preserves the option to litigate in other convenient forums. Ensure consistency between governing law and venue (e.g., English law with English courts). Address the enforceability of judgments across jurisdictions (consider the Hague Convention on Choice of Court Agreements). For cross-border contracts, consider whether the chosen venue is neutral. Address provisional and protective measures (injunctive relief) in jurisdictions other than the chosen venue.",
+      "variations": {
+        "exclusive": "Exclusive jurisdiction of specified courts",
+        "non-exclusive": "Non-exclusive jurisdiction with specified courts as default",
+        "split": "Specified courts for substantive disputes; any court for injunctive relief"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "consulting-agreement"],
+      "depends_on": ["governing-law-choice"],
+      "compliance_refs": []
+    },
+    {
+      "id": "governing-law-arbitration",
+      "clause_category": "governing-law",
+      "name": "International Arbitration Clause",
+      "description": "Provides that disputes shall be resolved by binding arbitration under specified rules (ICC, LCIA, SIAC, AAA) rather than through court litigation. Preferred for international contracts due to the enforceability of arbitral awards under the New York Convention and the neutrality of arbitral proceedings.",
+      "drafting_guidance": "Specify the arbitration institution and rules (ICC, LCIA, SIAC, UNCITRAL). Set the seat of arbitration (determines procedural law of arbitration). Specify the number of arbitrators (1 for smaller disputes, 3 for complex/high-value disputes). Define the language of arbitration. Address the appointment mechanism for arbitrators. Include a confidentiality provision for arbitral proceedings. Address interim measures and emergency arbitrator provisions. Consider expedited arbitration procedures for smaller claims. Preserve the right to seek injunctive relief from courts. Specify the allocation of arbitration costs. Ensure the clause is sufficiently specific to be enforceable.",
+      "variations": {
+        "icc": "ICC Rules of Arbitration, Paris seat",
+        "lcia": "LCIA Rules, London seat",
+        "siac": "SIAC Rules, Singapore seat",
+        "uncitral": "UNCITRAL Rules with ad hoc administration"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "joint-venture", "strategic-partnership"],
+      "depends_on": ["governing-law-choice"],
+      "compliance_refs": []
+    },
+    {
+      "id": "dispute-resolution-escalation",
+      "clause_category": "dispute-resolution",
+      "name": "Dispute Escalation Procedure",
+      "description": "Establishes a multi-tier dispute resolution process requiring the parties to attempt resolution through escalating levels of management before resorting to formal proceedings. Typically progresses from operational contacts to senior management to executive sponsors before external resolution mechanisms.",
+      "drafting_guidance": "Define escalation tiers (e.g., Tier 1: operational managers, 10 business days; Tier 2: senior management/directors, 10 business days; Tier 3: C-suite/executive sponsors, 10 business days). Specify the total maximum escalation period before formal proceedings. Require good faith negotiation at each tier. Address whether the escalation process is a condition precedent to formal proceedings (and enforceability of such conditions). Specify the form of dispute notice (written, detailing the nature of the dispute). Preserve the right to seek urgent injunctive relief without completing the escalation process. Address confidentiality of escalation discussions.",
+      "variations": {
+        "two-tier": "Operational management then executive escalation",
+        "three-tier": "Operational, senior management, then executive escalation",
+        "with-timeline": "Strict timelines at each escalation level"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription", "joint-venture"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "dispute-resolution-mediation",
+      "clause_category": "dispute-resolution",
+      "name": "Mediation-First Dispute Resolution",
+      "description": "Requires the parties to submit disputes to mediation before commencing arbitration or litigation. Mediation provides a structured, facilitated negotiation with a neutral third party, with the goal of reaching a mutually acceptable settlement without the cost and adversarial nature of formal proceedings.",
+      "drafting_guidance": "Specify the mediation institution and rules (CEDR, JAMS, ICC Mediation, AAA). Set a time limit for the mediation process (typically 30-60 days). Address the appointment of the mediator (agreed by the parties or appointed by the institution). Specify cost allocation (typically shared equally). Include confidentiality provisions for mediation discussions. Clarify that mediation is non-binding and settlements are enforceable as contracts. Address the transition from mediation to formal proceedings if mediation fails. Preserve the right to seek interim measures from courts during mediation. Specify the location and language of mediation.",
+      "variations": {
+        "mandatory": "Mediation is a mandatory step before arbitration/litigation",
+        "optional": "Mediation is offered as an option but not required",
+        "time-limited": "Mediation limited to a specified period (e.g., 30 days)"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "joint-venture", "strategic-partnership"],
+      "depends_on": ["dispute-resolution-escalation"],
+      "compliance_refs": []
+    },
+    {
+      "id": "dispute-resolution-arbitration",
+      "clause_category": "dispute-resolution",
+      "name": "Binding Arbitration",
+      "description": "Disputes that cannot be resolved through negotiation or mediation are referred to final and binding arbitration. The arbitral award is enforceable in substantially all jurisdictions under the New York Convention. Provides confidentiality, neutrality, and expertise advantages over court litigation for international commercial disputes.",
+      "drafting_guidance": "Specify the arbitration rules (ICC, LCIA, SIAC, UNCITRAL, AAA-ICDR). Designate the seat of arbitration carefully (determines procedural law and enforcement). Specify the number of arbitrators (1 for claims under a threshold, 3 for larger claims). Define the language of proceedings. Address discovery/disclosure rules. Include confidentiality provisions. Specify the applicable substantive law. Address the allocation of costs and legal fees. Preserve the right to seek injunctive relief from courts. Address multi-party and multi-contract arbitration. Consider joinder and consolidation provisions. Set a time limit for rendering the award.",
+      "variations": {
+        "institutional": "Administered by an arbitral institution (ICC, LCIA, SIAC)",
+        "ad-hoc": "Ad hoc arbitration under UNCITRAL Rules",
+        "expedited": "Expedited arbitration procedures for claims below a threshold"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "joint-venture", "software-license-proprietary", "strategic-partnership"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "dispute-resolution-litigation",
+      "clause_category": "dispute-resolution",
+      "name": "Litigation in Courts",
+      "description": "Disputes are resolved through litigation in the courts of the specified jurisdiction. Appropriate for domestic contracts, contracts where court precedent is important, or where one party requires the procedural tools available in court (e.g., extensive discovery, summary judgment).",
+      "drafting_guidance": "Specify the court(s) with jurisdiction (exclusive or non-exclusive). Ensure consistency with the governing law clause. Consider whether the chosen courts will enforce the agreement's other provisions (e.g., limitation of liability). Address service of process provisions. Consider the enforceability of judgments in the other party's jurisdiction. Address the availability of interim and injunctive relief. Consider jury trial waiver provisions (US contracts). Address the recovery of legal costs and fees (English rule vs American rule). Consider the impact of publicity (court proceedings are typically public).",
+      "variations": {
+        "exclusive": "Exclusive jurisdiction of specified courts",
+        "non-exclusive": "Non-exclusive jurisdiction",
+        "with-jury-waiver": "Includes waiver of right to jury trial (US contracts)"
+      },
+      "contract_types": ["msa", "saas-subscription", "consulting-agreement", "employment-agreement"],
+      "depends_on": ["governing-law-venue"],
+      "compliance_refs": []
+    },
+    {
+      "id": "assignment-consent",
+      "clause_category": "assignment",
+      "name": "No Assignment Without Consent",
+      "description": "Neither party may assign, transfer, or delegate its rights or obligations under the agreement without the prior written consent of the other party. Consent may not be unreasonably withheld, conditioned, or delayed. Protects both parties from having the contract novated to an undesirable counterparty.",
+      "drafting_guidance": "Specify that assignment includes any transfer, delegation, or novation of rights or obligations. Clarify that 'not unreasonably withheld' is the standard for consent (or use 'sole discretion' for stronger protection). Address whether a change of control constitutes an assignment (coordinate with change of control clause). Define exceptions: assignments to affiliates, assignments in connection with a merger or sale of all/substantially all assets. Specify consequences of unauthorized assignment (void, voidable, or breach). Address the impact of assignment on guarantees, security, and performance bonds.",
+      "variations": {
+        "consent-required": "Prior written consent required (not unreasonably withheld)",
+        "sole-discretion": "Prior written consent required (at sole discretion)",
+        "affiliate-exception": "Consent required except for assignments to affiliates"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "consulting-agreement", "software-license-proprietary", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "assignment-change-of-control",
+      "clause_category": "assignment",
+      "name": "Assignment on Change of Control",
+      "description": "Addresses whether a change of control of a party constitutes an assignment requiring consent, and provides specific provisions for the treatment of the agreement upon a change of control event. May allow automatic assignment to the acquiring entity or require consent.",
+      "drafting_guidance": "Define 'change of control' consistently with the termination for change of control clause. Specify whether change of control is deemed an assignment (triggering consent requirements) or is treated separately. Address the notification timeline. Consider anti-assignment provisions in the context of M&A transactions. Address the interaction with insolvency-related provisions. Specify the consequences if consent is not obtained (termination right, not automatic termination). Consider whether the acquirer must assume all obligations. Address non-compete and exclusivity implications of the acquiring entity.",
+      "variations": {
+        "deemed-assignment": "Change of control is deemed an assignment requiring consent",
+        "notification-only": "Change of control requires notification but not consent",
+        "termination-option": "Non-affected party has the option to terminate (not assignment)"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "saas-subscription", "software-license-proprietary"],
+      "depends_on": ["assignment-consent", "termination-change-of-control"],
+      "compliance_refs": []
+    },
+    {
+      "id": "assignment-affiliates",
+      "clause_category": "assignment",
+      "name": "Permitted Assignment to Affiliates",
+      "description": "Permits assignment of the agreement to an affiliate (as defined) without the other party's consent, provided that the assigning party remains liable for its affiliate's performance or the affiliate meets specified financial and operational criteria.",
+      "drafting_guidance": "Define 'affiliate' clearly (typically entities controlling, controlled by, or under common control with a party, where control means 50%+ voting rights). Specify conditions: assigning party remains jointly and severally liable, affiliate meets financial covenants, no assignment to a competitor. Require written notice of the assignment. Address whether the affiliate must formally assume the agreement's obligations. Consider the impact on data protection (new controller/processor). Address tax and regulatory implications of affiliate assignments. Specify that the affiliate exception does not apply to competitors.",
+      "variations": {
+        "with-guarantee": "Assigning party guarantees affiliate's performance",
+        "unconditional": "Free assignment to affiliates without conditions",
+        "qualified": "Assignment to affiliates meeting specified financial/operational criteria"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "saas-subscription"],
+      "depends_on": ["assignment-consent"],
+      "compliance_refs": []
+    },
+    {
+      "id": "non-solicitation-mutual",
+      "clause_category": "non-solicitation",
+      "name": "Mutual Non-Solicitation of Employees",
+      "description": "Both parties agree not to directly or indirectly solicit, recruit, or hire each other's employees who have been involved in the performance of the agreement for a specified period during and after the contract term. Does not restrict employees who respond to general advertisements.",
+      "drafting_guidance": "Specify the restricted period (typically during the term plus 6-12 months post-termination). Define 'solicit' to include direct and indirect approaches. Include an exception for general recruitment advertising (job postings, career fairs). Address whether the restriction applies to all employees or only those involved in the engagement. Consider the enforceability of non-solicitation clauses in the relevant jurisdiction (may be void in some US states, particularly California). Specify remedies for breach (typically liquidated damages based on placement fee equivalent). Address the relationship between non-solicitation and non-compete provisions.",
+      "variations": {
+        "narrow": "Restricted to key personnel involved in the engagement",
+        "broad": "Applies to all employees of either party",
+        "liquidated-damages": "Breach triggers liquidated damages (e.g., 6 months' salary)"
+      },
+      "contract_types": ["msa", "consulting-agreement", "outsourcing-agreement", "professional-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "non-solicitation-employee",
+      "clause_category": "non-solicitation",
+      "name": "Employee Non-Solicitation (Customers/Clients)",
+      "description": "Restricts an employee or contractor from soliciting the company's customers, clients, or business relationships for a specified period after the employment or engagement ends. Protects the company's customer relationships and goodwill.",
+      "drafting_guidance": "Specify the restricted period (typically 6-12 months post-termination). Define the scope of restricted clients (those the individual personally served or had material contact with). Clarify what constitutes 'solicitation' (active outreach, not passive response to inbound enquiries). Consider geographic limitations if applicable. Address enforceability concerns (must be reasonable in scope, duration, and geography). Consider garden leave provisions as an alternative or complement. Specify the remedy (injunctive relief, damages). Note that enforceability varies significantly by jurisdiction.",
+      "variations": {
+        "personal-contacts": "Limited to clients the individual personally served",
+        "all-clients": "Applies to all company clients known to the individual"
+      },
+      "contract_types": ["employment-agreement", "contractor-agreement", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "insurance-professional-indemnity",
+      "clause_category": "insurance",
+      "name": "Professional Indemnity Insurance",
+      "description": "Requires the provider to maintain professional indemnity (errors and omissions) insurance with minimum coverage limits throughout the term and for a specified period following termination. Protects the customer against losses arising from the provider's professional negligence, errors, or omissions in the delivery of services.",
+      "drafting_guidance": "Specify minimum coverage amount (typically proportionate to contract value, minimum GBP 1-5 million). Require the policy to cover professional negligence, errors, omissions, and breach of professional duty. Specify the claims-made vs occurrence basis. Require maintenance of insurance for a run-off period after termination (typically 12-24 months). Require evidence of insurance (certificate of insurance, not the full policy). Address the customer's right to be notified of material changes to coverage. Specify whether the customer should be named as an additional insured. Address the provider's obligation to notify of claims that may affect coverage.",
+      "variations": {
+        "standard": "Minimum coverage with annual evidence requirement",
+        "enhanced": "Higher coverage with additional insured status for customer",
+        "with-run-off": "Includes run-off coverage for specified period post-termination"
+      },
+      "contract_types": ["msa", "consulting-agreement", "professional-services", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "insurance-cyber",
+      "clause_category": "insurance",
+      "name": "Cyber Insurance Requirement",
+      "description": "Requires the provider to maintain cyber liability insurance covering data breaches, network security failures, privacy violations, and related costs including notification expenses, regulatory fines defence, and crisis management. Increasingly essential for technology and data processing agreements.",
+      "drafting_guidance": "Specify minimum coverage amount (typically GBP/USD 2-10 million depending on data volumes). Require coverage for: data breach response costs, notification costs, credit monitoring, regulatory defence and fines, business interruption, network security liability, media liability (if applicable), cyber extortion/ransomware. Specify whether the policy should cover first-party losses (provider's own costs) and/or third-party claims (customer's liability). Require evidence of coverage annually. Address the relationship between cyber insurance and data breach indemnification. Consider whether the customer should be named as an additional insured.",
+      "variations": {
+        "standard": "Basic cyber liability coverage",
+        "comprehensive": "Includes cyber extortion, business interruption, and regulatory fines",
+        "data-processor": "Tailored to data processing agreements with DPA-aligned coverage"
+      },
+      "contract_types": ["saas-subscription", "managed-services", "outsourcing-agreement", "dpa-gdpr"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "insurance-general-liability",
+      "clause_category": "insurance",
+      "name": "General Liability Insurance",
+      "description": "Requires the provider to maintain commercial general liability (CGL) insurance covering bodily injury, property damage, and personal injury arising from the provider's operations, products, or completed operations. A baseline insurance requirement in most commercial contracts.",
+      "drafting_guidance": "Specify minimum coverage per occurrence and aggregate (e.g., GBP/USD 1-5 million per occurrence, GBP/USD 2-10 million aggregate). Require coverage for bodily injury, property damage, personal and advertising injury. Consider products liability and completed operations coverage. Specify whether the customer should be named as an additional insured. Require waiver of subrogation in favour of the customer. Address the interaction with other insurance requirements (professional indemnity, cyber). Require 30 days' advance notice of cancellation or material change.",
+      "variations": {
+        "standard": "Standard CGL coverage with minimum limits",
+        "with-additional-insured": "Customer named as additional insured",
+        "with-umbrella": "CGL plus umbrella/excess liability coverage"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "consulting-agreement", "professional-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "payment-net-30",
+      "clause_category": "payment",
+      "name": "Net 30 Payment Terms",
+      "description": "Invoices are due and payable within 30 days of the invoice date. The standard payment term in most commercial agreements, balancing the provider's cash flow needs with the customer's payment processing timeline.",
+      "drafting_guidance": "Specify the payment trigger (invoice date, receipt of invoice, or end of month of invoice). Define the invoice delivery mechanism (email, electronic invoicing system). Specify the currency of payment and any exchange rate provisions. Address tax treatment (invoices exclusive of VAT/sales tax unless stated). Include late payment interest provisions. Specify the customer's right to dispute invoices (and the process for disputes). Address set-off rights. Consider prompt payment discounts as an incentive. Specify the payment method (bank transfer, direct debit).",
+      "variations": {
+        "from-invoice-date": "30 days from the date of the invoice",
+        "from-receipt": "30 days from receipt of a valid invoice",
+        "end-of-month": "Payment due at the end of the month following invoice"
+      },
+      "contract_types": ["msa", "saas-subscription", "consulting-agreement", "professional-services", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "payment-net-60",
+      "clause_category": "payment",
+      "name": "Net 60 Payment Terms",
+      "description": "Invoices are due and payable within 60 days of the invoice date. Extended payment terms often negotiated by larger customers with procurement departments and longer internal approval processes. Places greater cash flow burden on the provider.",
+      "drafting_guidance": "Same considerations as Net 30, but consider the cash flow impact on the provider. May warrant a price adjustment to compensate for extended payment terms. Consider the applicability of late payment legislation (EU Late Payment Directive 2011/7/EU imposes a maximum 60-day payment term for B2B transactions unless expressly agreed and not grossly unfair to the creditor). Address whether the extended terms apply to all invoice types or only recurring fees. Consider requiring a deposit or advance payment to offset the extended terms.",
+      "variations": {
+        "standard": "60 days from invoice date",
+        "with-deposit": "60-day terms but with upfront deposit or advance payment",
+        "for-recurring-only": "60 days for recurring fees; 30 days for one-off charges"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": ["EU Late Payment Directive 2011/7/EU"]
+    },
+    {
+      "id": "payment-late-interest",
+      "clause_category": "payment",
+      "name": "Late Payment Interest",
+      "description": "Imposes interest charges on overdue payments, calculated from the due date until the date of actual payment. Serves as an incentive for timely payment and compensation for the time value of money. Rate is typically expressed as a percentage above a reference rate.",
+      "drafting_guidance": "Specify the interest rate clearly (e.g., 1.5% per month, 4% above Bank of England base rate, SOFR + 3%). Ensure the rate does not exceed usury limits in applicable jurisdictions. Address whether interest compounds and the compounding period. Specify whether interest accrues automatically or requires notice. Consider whether to reference statutory late payment interest rates (e.g., UK Late Payment of Commercial Debts (Interest) Act 1998). Address the interaction with invoice dispute processes (interest should not accrue on genuinely disputed amounts). Specify whether the right to charge interest is in addition to other remedies.",
+      "variations": {
+        "fixed-rate": "Fixed interest rate per month (e.g., 1.5%)",
+        "reference-plus": "Reference rate plus margin (e.g., SOFR + 3%)",
+        "statutory": "Applies the applicable statutory late payment interest rate"
+      },
+      "contract_types": ["msa", "saas-subscription", "consulting-agreement", "professional-services", "outsourcing-agreement"],
+      "depends_on": ["payment-net-30"],
+      "compliance_refs": []
+    },
+    {
+      "id": "payment-price-adjustment",
+      "clause_category": "payment",
+      "name": "Price Adjustment / Escalation",
+      "description": "Permits the provider to adjust prices periodically (typically annually) to reflect increases in the cost of delivering the services. May be based on a fixed percentage, a consumer price index (CPI), or a benchmarking exercise. Balances the provider's need for cost recovery with the customer's need for price predictability.",
+      "drafting_guidance": "Specify the adjustment mechanism: fixed annual increase (e.g., 3%), CPI-linked (specify the index, base period, and calculation methodology), or cost-plus with open book verification. Set the frequency of adjustments (typically annually on the anniversary or renewal date). Provide advance notice requirements (typically 60-90 days). Consider a cap on annual increases (e.g., maximum 5% in any single year). Address the customer's right to benchmark prices and the consequences if benchmarking reveals above-market pricing. Specify the treatment of price adjustments during a minimum commitment period. Consider a 'most favoured customer' provision as an alternative or complement.",
+      "variations": {
+        "cpi-linked": "Annual increase linked to CPI or equivalent index",
+        "fixed-percentage": "Fixed annual percentage increase",
+        "benchmark-based": "Prices subject to periodic market benchmarking"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "payment-most-favoured-customer",
+      "clause_category": "payment",
+      "name": "Most Favoured Customer (MFC) Clause",
+      "description": "Provider warrants that the pricing offered to the customer is at least as favourable as the pricing offered to any other customer of comparable size, volume, and service scope. If the provider offers more favourable terms to another customer, the same terms must be extended to the MFC customer.",
+      "drafting_guidance": "Define the comparison group precisely (customers of comparable size, volume, industry, and geographic scope). Specify the scope of the MFC protection (pricing only, or also commercial terms). Address the verification mechanism (periodic certification by provider, audit rights). Specify the remedy if a more favourable price is identified (retroactive adjustment, prospective adjustment, or both). Consider practical challenges in comparing bespoke pricing structures. Address the interaction with promotional pricing, distressed pricing, and strategic deals. Include a right to terminate if MFC pricing is not offered. Specify the lookback period for comparison.",
+      "variations": {
+        "pricing-only": "Limited to pricing comparison",
+        "full-terms": "Extends to all commercial terms (pricing, SLAs, liability)",
+        "prospective-only": "Adjustment applies only prospectively, not retroactively"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "representations-authority",
+      "clause_category": "representations",
+      "name": "Representation of Authority",
+      "description": "Each party represents and warrants that it is duly organised, validly existing, and in good standing under the laws of its jurisdiction of incorporation, and that it has full power and authority to enter into and perform its obligations under the agreement. The person signing has been duly authorised to bind the party.",
+      "drafting_guidance": "Confirm corporate existence and good standing. Confirm authority to enter into the agreement and perform obligations. Confirm that the signatory is duly authorised. Address whether board or shareholder approval is required (and has been obtained). Confirm that entering into the agreement does not conflict with the party's constitutional documents, existing agreements, or applicable law. Consider requiring a board resolution or power of attorney for significant contracts. Address the impact of subsequent corporate actions (merger, dissolution) on the validity of the representation.",
+      "variations": {
+        "standard": "Basic authority and capacity representations",
+        "enhanced": "Includes confirmation of no conflicts and regulatory approvals"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "share-purchase", "asset-purchase", "joint-venture"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "representations-no-conflicts",
+      "clause_category": "representations",
+      "name": "No Conflicts Representation",
+      "description": "Each party represents that entering into and performing the agreement does not and will not conflict with, violate, or result in a breach of its constitutional documents, any agreement to which it is a party, any court order or judgment, or any applicable law or regulation.",
+      "drafting_guidance": "Cover conflicts with: constitutional documents (articles of association, certificate of incorporation), existing contractual obligations (exclusivity agreements, non-compete obligations), court orders and judgments, applicable laws and regulations. Address the standard of knowledge (actual knowledge vs constructive knowledge). Consider whether the representation is given absolutely or qualified by materiality. Address the consequences of a breach of this representation (indemnification, termination right). Consider whether the representation should be repeated throughout the contract term. Coordinate with the representation of authority.",
+      "variations": {
+        "absolute": "Unqualified representation of no conflicts",
+        "knowledge-qualified": "Qualified by 'to the best of the party's knowledge'",
+        "materiality-qualified": "No conflicts that would materially impair performance"
+      },
+      "contract_types": ["msa", "share-purchase", "asset-purchase", "joint-venture"],
+      "depends_on": ["representations-authority"],
+      "compliance_refs": []
+    },
+    {
+      "id": "representations-compliance-laws",
+      "clause_category": "representations",
+      "name": "Compliance with Laws Representation",
+      "description": "Each party represents that it is and will remain in compliance with all applicable laws, regulations, and industry standards relevant to its performance under the agreement. May be a continuing representation that is deemed repeated throughout the contract term.",
+      "drafting_guidance": "Specify whether the representation covers past compliance (as of the date of the agreement) and/or future compliance (on a continuing basis). Address specific compliance areas: data protection (GDPR), anti-bribery (FCPA, UK Bribery Act 2010), sanctions, export controls, employment law, health and safety, environmental law. Consider whether the representation is qualified by materiality ('in all material respects'). Address the consequences of non-compliance (notification obligation, cure period, termination right). Coordinate with specific compliance clauses. Consider whether the representation should be given only by the provider or by both parties.",
+      "variations": {
+        "point-in-time": "Representation true as of the agreement date only",
+        "continuing": "Deemed repeated throughout the contract term",
+        "material-compliance": "Qualified by 'in all material respects'"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "representations-accuracy-information",
+      "clause_category": "representations",
+      "name": "Accuracy of Information Representation",
+      "description": "Each party represents that all information provided to the other party in connection with the agreement (including during due diligence, in proposals, and in schedules) is true, accurate, complete, and not misleading in any material respect. Covers written information, oral representations, and data provided.",
+      "drafting_guidance": "Specify the scope of information covered (proposals, tenders, due diligence materials, schedules, technical documentation). Address the standard (true, accurate, and complete vs true and accurate in all material respects). Specify the date as of which the representation is made. Address the duty to update information if it becomes inaccurate or misleading. Consider whether the representation extends to information provided by third parties on the representing party's behalf. Specify the consequences of inaccuracy (indemnification, adjustment of terms, termination right). Address the interaction with warranties and indemnities. Consider whether a disclosure schedule qualifies the representation.",
+      "variations": {
+        "absolute": "All information is true, accurate, and complete",
+        "material": "True and accurate in all material respects",
+        "best-knowledge": "To the best of the party's knowledge, information, and belief"
+      },
+      "contract_types": ["msa", "share-purchase", "asset-purchase", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "compliance-anti-bribery",
+      "clause_category": "compliance",
+      "name": "Anti-Bribery and Corruption",
+      "description": "Each party warrants compliance with applicable anti-bribery and anti-corruption laws, including the UK Bribery Act 2010, US Foreign Corrupt Practices Act (FCPA), and local anti-corruption legislation. Prohibits bribes, facilitation payments, and improper inducements. Includes obligations regarding gifts, hospitality, and political contributions.",
+      "drafting_guidance": "Reference specific legislation (UK Bribery Act 2010, FCPA, local laws). Prohibit bribes, kickbacks, facilitation payments, and improper inducements. Require anti-bribery policies and procedures (including a gifts and hospitality policy). Include training obligations for personnel involved in the contract. Address third-party intermediaries and agents (require due diligence and contractual flow-down). Require prompt notification of any actual or suspected breach. Specify termination rights for breach. Include audit rights for compliance verification. Address the interaction with whistleblowing provisions. Consider requiring annual compliance certifications.",
+      "variations": {
+        "standard": "General anti-bribery compliance warranty",
+        "enhanced": "Includes training, certification, and third-party due diligence obligations",
+        "with-audit": "Includes dedicated anti-bribery audit rights"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "consulting-agreement", "distribution-agreement", "reseller-agreement", "joint-venture"],
+      "depends_on": [],
+      "compliance_refs": ["UK Bribery Act 2010", "US FCPA", "OECD Anti-Bribery Convention"]
+    },
+    {
+      "id": "compliance-sanctions",
+      "clause_category": "compliance",
+      "name": "Sanctions Compliance",
+      "description": "Each party represents and warrants that it is not a sanctioned person, entity, or located in a sanctioned country, and that it will comply with all applicable economic sanctions, trade restrictions, and embargo programmes. Covers OFAC (US), OFSI (UK), EU sanctions, and UN sanctions.",
+      "drafting_guidance": "Reference specific sanctions regimes (OFAC SDN List, OFSI Consolidated List, EU Consolidated Financial Sanctions List, UN Security Council Sanctions). Require representation that the party is not a sanctioned person or entity, not owned or controlled by a sanctioned person, and not located in a comprehensively sanctioned jurisdiction. Require ongoing monitoring and screening. Address the consequences of a party becoming sanctioned during the contract term (immediate termination right). Include flow-down requirements for subcontractors. Address the interaction with payment provisions (frozen assets). Require notification of changes in ownership or control that may affect sanctions compliance.",
+      "variations": {
+        "standard": "General sanctions compliance warranty with key regimes listed",
+        "enhanced": "Includes ongoing screening, certification, and subcontractor flow-down",
+        "multi-regime": "Comprehensive coverage of US, UK, EU, and UN sanctions"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "distribution-agreement", "reseller-agreement", "joint-venture"],
+      "depends_on": [],
+      "compliance_refs": ["US EAR", "US OFAC", "UK OFSI", "EU Council Regulation 269/2014"]
+    },
+    {
+      "id": "compliance-export-controls",
+      "clause_category": "compliance",
+      "name": "Export Control Compliance",
+      "description": "Requires compliance with applicable export control laws and regulations governing the transfer of controlled goods, software, technology, and technical data across borders. Covers the US Export Administration Regulations (EAR), International Traffic in Arms Regulations (ITAR), and EU Dual-Use Regulation.",
+      "drafting_guidance": "Reference specific export control regimes (US EAR, US ITAR, EU Dual-Use Regulation 2021/821, Wassenaar Arrangement). Identify any export-controlled items or technology included in the deliverables. Specify ECCN/export classification numbers where known. Require the receiving party to comply with all applicable export control requirements. Prohibit re-export or re-transfer without required authorisations. Address deemed export rules (technology access by foreign nationals). Require end-user certificates where applicable. Address the interaction with sanctions compliance. Specify record-keeping and reporting obligations.",
+      "variations": {
+        "standard": "General export control compliance warranty",
+        "technology-specific": "Includes ECCN classification and specific control requirements",
+        "us-centric": "Focused on EAR and ITAR compliance"
+      },
+      "contract_types": ["software-license-proprietary", "msa", "distribution-agreement", "oem-agreement"],
+      "depends_on": ["compliance-sanctions"],
+      "compliance_refs": ["US EAR", "EU Dual-Use Regulation 2021/821"]
+    },
+    {
+      "id": "ip-work-product-ownership",
+      "clause_category": "ip",
+      "name": "Work Product Ownership / IP Assignment",
+      "description": "Specifies that all intellectual property created by the provider specifically for the customer under the agreement (foreground IP / work product) is owned by the customer. Provider assigns all rights, title, and interest in the work product to the customer upon creation or payment.",
+      "drafting_guidance": "Define 'work product' or 'foreground IP' precisely (IP created specifically for the customer under the agreement). Distinguish from provider's background IP and general know-how. Specify the trigger for assignment (upon creation, upon delivery, or upon payment). Include present assignment language ('hereby assigns' not 'agrees to assign'). Address moral rights (waiver where permitted, consent where waiver is not possible). Require execution of confirmatory assignment documents. Address IP created by subcontractors (require equivalent assignment from subs). Consider the impact on the provider's ability to serve other clients. Coordinate with the license-back provision to ensure the provider retains necessary usage rights.",
+      "variations": {
+        "full-assignment": "All work product assigned to customer absolutely",
+        "payment-conditional": "Assignment conditional upon full payment",
+        "joint-development": "Jointly created IP with agreed allocation"
+      },
+      "contract_types": ["professional-services", "consulting-agreement", "software-license-proprietary", "ip-assignment"],
+      "depends_on": ["ip-background-reservation"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ip-background-reservation",
+      "clause_category": "ip",
+      "name": "Background IP Reservation",
+      "description": "Provider retains all rights in its pre-existing intellectual property (background IP), tools, methodologies, frameworks, and general know-how that exist prior to or are developed independently of the engagement. Customer receives a license to use background IP only to the extent incorporated into the deliverables.",
+      "drafting_guidance": "Define 'background IP' clearly (pre-existing IP, tools, methodologies, libraries, frameworks). Require the provider to identify material background IP incorporated into deliverables (ideally in a schedule). Grant the customer a perpetual, irrevocable, non-exclusive license to use background IP as incorporated into the deliverables, but only for the customer's internal business purposes. Address modifications to background IP made during the engagement (typically remain provider's property with license to customer). Ensure the license survives termination. Address the right to sublicense (affiliates, successor organisations). Consider escrow arrangements for critical background IP.",
+      "variations": {
+        "standard": "Provider retains background IP with license to customer for deliverables use",
+        "scheduled": "Background IP identified in a schedule attached to the agreement",
+        "broad-license": "Wide license to customer including modification and sublicensing rights"
+      },
+      "contract_types": ["professional-services", "consulting-agreement", "msa", "software-license-proprietary"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "ip-license-back",
+      "clause_category": "ip",
+      "name": "License-Back to Provider",
+      "description": "Where work product IP is assigned to the customer, the customer grants the provider a non-exclusive, perpetual license to use the work product (or elements thereof) for the provider's internal purposes, including serving other clients, improving its methodologies, and developing derivative works. Enables the provider to benefit from its work without retaining ownership.",
+      "drafting_guidance": "Define the scope of the license-back (internal use only, or including use for other clients). Specify restrictions (no licensing to competitors, no disclosure of customer-specific data). Address whether the license-back includes the right to create derivative works. Ensure the license-back does not undermine the customer's ownership rights. Consider whether the license-back should be royalty-free or subject to fees. Address confidentiality obligations regarding the customer's information embedded in the work product. Specify whether the license-back survives termination. Consider excluding customer-specific configurations and data from the license-back.",
+      "variations": {
+        "internal-only": "Provider may use only for internal purposes (R&D, training)",
+        "broad": "Provider may use for other clients and commercial purposes (excluding customer data)",
+        "derivative-works": "Includes the right to create derivative works"
+      },
+      "contract_types": ["professional-services", "consulting-agreement", "ip-assignment"],
+      "depends_on": ["ip-work-product-ownership"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ip-improvements",
+      "clause_category": "ip",
+      "name": "Improvements and Enhancements",
+      "description": "Addresses ownership and usage rights for improvements, enhancements, and derivative works created during the engagement. Improvements to the provider's background IP typically remain the provider's property, while improvements to the customer's foreground IP are assigned to the customer.",
+      "drafting_guidance": "Define 'improvements' and 'enhancements' clearly. Distinguish between improvements to background IP (typically remain with provider) and improvements to foreground IP (typically assigned to customer). Address improvements that cannot be easily attributed to background or foreground IP. Specify the license terms for improvements retained by the provider but incorporated into deliverables. Consider whether the customer has first right of refusal for improvements developed by the provider that are relevant to the customer's use case. Address the treatment of improvements suggested by the customer but implemented by the provider. Coordinate with the work product ownership and license-back provisions.",
+      "variations": {
+        "customer-owns-all": "All improvements assigned to customer regardless of origin",
+        "follows-base": "Improvements follow ownership of the base IP",
+        "joint-ownership": "Improvements jointly owned with cross-licenses"
+      },
+      "contract_types": ["professional-services", "consulting-agreement", "software-license-proprietary", "saas-subscription"],
+      "depends_on": ["ip-work-product-ownership", "ip-background-reservation"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ip-non-assertion",
+      "clause_category": "ip",
+      "name": "IP Non-Assertion Covenant",
+      "description": "A covenant by which one party agrees not to assert its intellectual property rights against the other party in connection with the other party's authorized use of the deliverables or services under the agreement. Provides additional comfort beyond the non-infringement warranty.",
+      "drafting_guidance": "Define the scope of the non-assertion covenant precisely (limited to IP embodied in the deliverables and services, not all IP owned by the granting party). Specify the permitted use that is covered by the covenant. Address whether the covenant extends to affiliates and successors. Consider whether the covenant survives termination and for how long. Address the interaction with patent licenses and cross-licenses. Specify exceptions (defensive assertion if the other party initiates patent litigation). Consider the anti-trust implications of broad non-assertion covenants. Coordinate with the license grant and non-infringement warranty.",
+      "variations": {
+        "narrow": "Limited to IP embodied in specific deliverables",
+        "broad": "Covers all IP that could be asserted against the other party's authorised use",
+        "defensive-only": "Non-assertion except in response to IP claims by the other party"
+      },
+      "contract_types": ["software-license-proprietary", "ip-assignment", "ip-license-exclusive", "ip-license-non-exclusive", "saas-subscription"],
+      "depends_on": ["warranty-non-infringement"],
+      "compliance_refs": []
+    },
+    {
+      "id": "data-protection-processing-instructions",
+      "clause_category": "data-protection",
+      "name": "Data Processing Instructions",
+      "description": "Establishes that the processor shall process personal data only on documented instructions from the controller, unless required by EU or Member State law. Defines the scope, nature, and purpose of processing, the types of personal data, and the categories of data subjects.",
+      "drafting_guidance": "Document the subject matter, duration, nature and purpose of processing, types of personal data, and categories of data subjects (typically in a schedule). Specify that processing is limited to documented instructions. Address what constitutes 'documented instructions' (the agreement itself, written orders, permitted purposes). Include the processor's obligation to inform the controller if an instruction infringes GDPR. Address the process for issuing additional instructions. Specify that the processor must not process personal data for its own purposes. Include GDPR Art 28(3)(a) compliant language.",
+      "variations": {
+        "scheduled": "Processing details in a separate schedule/annex",
+        "embedded": "Processing details within the DPA body",
+        "with-sub-instructions": "Includes process for issuing additional instructions during the term"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 28(3)(a)", "GDPR Art 29"]
+    },
+    {
+      "id": "data-protection-security-measures",
+      "clause_category": "data-protection",
+      "name": "Security Measures (Art 32 GDPR)",
+      "description": "Requires the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk of processing, taking into account the state of the art, costs, and the nature, scope, context, and purposes of processing.",
+      "drafting_guidance": "Reference GDPR Art 32 requirements. Specify the minimum security measures (pseudonymisation, encryption at rest and in transit, access controls, logging, backup and recovery, regular testing). Include specific measures in a technical and organisational measures annex. Require the processor to maintain and update measures to address evolving threats. Specify the processor's obligation to notify the controller of material changes to security measures. Address employee security obligations (background checks, training, confidentiality agreements). Include the right to audit security measures. Address security certifications (ISO 27001, SOC 2) as evidence of compliance.",
+      "variations": {
+        "annex-based": "Detailed measures in a separate technical annex",
+        "certification-based": "Compliance demonstrated through ISO 27001/SOC 2 certification",
+        "risk-based": "Measures proportionate to the risk of processing"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["data-protection-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(c)", "GDPR Art 32"]
+    },
+    {
+      "id": "data-protection-breach-notification",
+      "clause_category": "data-protection",
+      "name": "Data Breach Notification",
+      "description": "Requires the processor to notify the controller without undue delay upon becoming aware of a personal data breach. The notification must include details of the breach, the likely consequences, and the measures taken or proposed to address the breach and mitigate its effects.",
+      "drafting_guidance": "Specify the notification timeline (without undue delay, and in any event within a specified number of hours, e.g., 24-72 hours). Define what constitutes a 'personal data breach' (aligned with GDPR Art 4(12)). Specify the minimum information to include in the notification: nature of the breach, categories and approximate number of data subjects affected, likely consequences, measures taken or proposed. Address the processor's obligation to cooperate with the controller's breach response. Specify ongoing information obligations as more details become available. Address the preservation of evidence. Coordinate with the controller's obligations under GDPR Art 33 (supervisory authority notification within 72 hours).",
+      "variations": {
+        "24-hour": "Notification within 24 hours of awareness",
+        "48-hour": "Notification within 48 hours of awareness",
+        "without-undue-delay": "GDPR standard language without specific hour requirement"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["data-protection-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(f)", "GDPR Art 33", "GDPR Art 34"]
+    }
+  ]
+}

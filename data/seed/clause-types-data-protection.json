@@ -1,0 +1,599 @@
+{
+  "clause_types": [
+    {
+      "id": "dpa-processing-instructions",
+      "clause_category": "data-protection",
+      "name": "DPA: Documented Processing Instructions",
+      "description": "The processor shall process personal data only on documented instructions from the controller, including with regard to transfers of personal data to a third country or an international organisation, unless required to do so by Union or Member State law. Implements GDPR Art 28(3)(a).",
+      "drafting_guidance": "Specify that all processing must be pursuant to documented instructions. Define what constitutes 'documented instructions' (the DPA itself, the main agreement, written orders via a specified mechanism). Include the processor's obligation to inform the controller immediately if it believes an instruction infringes the GDPR or other data protection provisions. Document the subject matter, duration, nature and purpose of processing, types of personal data, and categories of data subjects in a schedule. Address the controller's right to modify instructions and the process for doing so. Specify that the processor may not process personal data for its own purposes.",
+      "variations": {
+        "strict": "Processing only per explicit written instructions; any deviation requires prior approval",
+        "flexible": "Instructions include the agreement terms and reasonable inferences from the service scope"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 28(3)(a)", "GDPR Art 29"]
+    },
+    {
+      "id": "dpa-confidentiality-personnel",
+      "clause_category": "data-protection",
+      "name": "DPA: Confidentiality of Processing Personnel",
+      "description": "The processor shall ensure that persons authorised to process the personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality. Implements GDPR Art 28(3)(b).",
+      "drafting_guidance": "Require all personnel with access to personal data to sign confidentiality agreements or be subject to statutory confidentiality obligations. Specify the scope of the confidentiality obligation (covers all personal data processed under the agreement). Require the processor to maintain records of personnel authorised to process personal data. Address the training requirements for authorised personnel (data protection awareness, secure handling). Specify that the confidentiality obligation survives the termination of the individual's employment or engagement. Address subcontractor personnel (flow-down of confidentiality requirements).",
+      "variations": {
+        "contractual": "Confidentiality through contractual agreements with all personnel",
+        "statutory": "Reliance on statutory professional confidentiality obligations (e.g., legal or medical professionals)"
+      },
+      "contract_types": ["dpa-gdpr", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(b)"]
+    },
+    {
+      "id": "dpa-security-measures",
+      "clause_category": "data-protection",
+      "name": "DPA: Technical and Organisational Security Measures",
+      "description": "The processor shall implement all measures required pursuant to GDPR Art 32, taking into account the state of the art, the costs of implementation, and the nature, scope, context, and purposes of processing, as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons. Implements GDPR Art 28(3)(c).",
+      "drafting_guidance": "Reference GDPR Art 32 explicitly. Include the four Art 32(1) measures: (a) pseudonymisation and encryption, (b) confidentiality, integrity, availability and resilience of systems, (c) ability to restore data availability and access in a timely manner, (d) regular testing, assessing, and evaluating effectiveness of measures. Specify detailed measures in a Technical and Organisational Measures (TOMs) annex. Include minimum standards: encryption at rest (AES-256) and in transit (TLS 1.2+), access controls, multi-factor authentication, logging and monitoring, regular vulnerability assessments, incident response procedures. Require the processor to update measures as threats evolve. Address certification evidence (ISO 27001, SOC 2 Type II).",
+      "variations": {
+        "annex-detailed": "Comprehensive TOMs specified in a separate annex",
+        "certification-referenced": "Processor maintains ISO 27001/SOC 2 and provides evidence",
+        "risk-proportionate": "Measures proportionate to the sensitivity and volume of data"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(c)", "GDPR Art 32"]
+    },
+    {
+      "id": "dpa-sub-processor",
+      "clause_category": "data-protection",
+      "name": "DPA: Sub-Processor Management",
+      "description": "The processor shall not engage another processor (sub-processor) without prior specific or general written authorisation of the controller. Where general authorisation is given, the processor must inform the controller of any intended changes and provide the controller with an opportunity to object. Implements GDPR Art 28(2) and Art 28(3)(d).",
+      "drafting_guidance": "Choose between specific authorisation (prior approval for each sub-processor) or general authorisation (with objection right for changes). For general authorisation: specify the notification period (typically 30 days), the objection mechanism, and the consequences of objection (terminate affected services, assist with migration). Require flow-down of all data protection obligations to sub-processors via a written contract under Art 28(4). Maintain a list of approved sub-processors (as a schedule or on a public URL). Address the processor's liability for sub-processor acts and omissions. Specify due diligence requirements for selecting sub-processors. Address sub-sub-processors (same requirements apply).",
+      "variations": {
+        "specific-authorisation": "Prior written consent required for each sub-processor",
+        "general-authorisation": "General authorisation with notification and objection right",
+        "list-based": "Pre-approved list in schedule with update notification mechanism"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(2)", "GDPR Art 28(3)(d)", "GDPR Art 28(4)"]
+    },
+    {
+      "id": "dpa-data-subject-rights",
+      "clause_category": "data-protection",
+      "name": "DPA: Data Subject Rights Assistance",
+      "description": "The processor shall assist the controller in fulfilling its obligation to respond to requests for exercising data subject rights under GDPR Chapter III, taking into account the nature of the processing. Covers access, rectification, erasure, restriction, portability, and objection rights. Implements GDPR Art 28(3)(e).",
+      "drafting_guidance": "Specify the processor's obligations when it receives a data subject request directly (forward to controller, do not respond independently unless instructed). Define the timeline for forwarding requests (without undue delay, typically within 2-3 business days). Address the processor's obligation to implement technical measures enabling the controller to respond to requests (e.g., data export functionality, deletion capability). Specify cost allocation for assistance (typically included in the service fees for standard requests; additional charges for complex or high-volume requests). Address each right specifically: access (provide data copies), rectification (correct data), erasure (delete data), restriction (mark data for restricted processing), portability (provide in structured format), objection (cease processing). Coordinate with retention obligations.",
+      "variations": {
+        "full-assistance": "Processor assists with all data subject rights at no additional cost",
+        "standard-plus-complex": "Standard requests included; complex or bulk requests at additional cost",
+        "technical-measures": "Focus on implementing technical capabilities for self-service"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(e)", "GDPR Art 15-22"]
+    },
+    {
+      "id": "dpa-deletion-return",
+      "clause_category": "data-protection",
+      "name": "DPA: Data Deletion or Return",
+      "description": "At the choice of the controller, the processor shall delete or return all personal data to the controller after the end of the provision of services relating to processing, and delete existing copies unless Union or Member State law requires storage. Implements GDPR Art 28(3)(g).",
+      "drafting_guidance": "Specify the controller's choice mechanism (delete, return, or combination). Define the timeline for deletion/return (typically within 30-90 days of termination). Specify the format for data return (structured, commonly used, machine-readable format per Art 20). Address the method and certification of deletion (secure deletion with written certification, overwriting, or physical destruction for media). Specify what constitutes 'existing copies' (production data, backups, logs, archives, test environments). Address backup retention cycles (data in backups will be deleted in the ordinary course of backup rotation). Address the exception for legally required retention (specify the legal basis and ensure security measures continue). Specify the timeline for certification of deletion.",
+      "variations": {
+        "delete-default": "Default to deletion unless controller requests return",
+        "return-then-delete": "Return data first, then delete after confirmation",
+        "phased": "Immediate deletion of production data; backup deletion per rotation schedule"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(g)"]
+    },
+    {
+      "id": "dpa-audit-rights",
+      "clause_category": "data-protection",
+      "name": "DPA: Controller Audit Rights (Art 28)",
+      "description": "The processor shall make available to the controller all information necessary to demonstrate compliance with Art 28 obligations and allow for and contribute to audits, including inspections, conducted by the controller or another auditor mandated by the controller. Implements GDPR Art 28(3)(h).",
+      "drafting_guidance": "Specify the scope of audit rights (compliance with DPA obligations, security measures, sub-processor management). Define the frequency (at least annual, with additional audits on cause or after a security incident). Require reasonable advance notice (typically 30 days, shorter for cause). Address the use of third-party auditors (required to sign confidentiality agreements). Specify cost allocation (typically each party bears its own costs; processor may charge for excessive audits). Address alternatives to on-site audits: SOC 2 Type II reports, ISO 27001 certification, completed security questionnaires. Require the processor to cooperate and provide reasonable access to premises, systems, and personnel. Address the treatment of audit findings (remediation plan with timelines). Include the processor's right to object to auditors who are competitors.",
+      "variations": {
+        "full-access": "Full on-site audit rights with access to premises and systems",
+        "report-based": "Processor provides SOC 2/ISO certification with supplemental questionnaires",
+        "hybrid": "Annual report-based review with on-site audit right on cause"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(h)"]
+    },
+    {
+      "id": "dpa-controller-notification",
+      "clause_category": "data-protection",
+      "name": "DPA: Controller Notification Obligations",
+      "description": "The processor shall immediately inform the controller if, in its opinion, an instruction from the controller infringes the GDPR or other Union or Member State data protection provisions. Also includes notification of data breaches, regulatory enquiries, and data subject requests. Implements GDPR Art 28(3)(a) notification requirement.",
+      "drafting_guidance": "Specify the notification triggers: (1) processor believes an instruction infringes data protection law, (2) personal data breach occurs, (3) data subject request received, (4) regulatory authority enquiry or inspection regarding the processing, (5) processor becomes aware of circumstances that may affect its ability to comply with the DPA. Define the notification timeline for each trigger (breach notification: without undue delay and within 24-72 hours; other notifications: prompt/without undue delay). Specify the notification mechanism (email to designated contact, ticketing system). Address the content requirements for each notification type. Specify the processor's obligation to cooperate following notification.",
+      "variations": {
+        "comprehensive": "Covers all notification triggers with specific timelines",
+        "breach-focused": "Primary focus on breach notification with general notification for other events",
+        "tiered-timeline": "Different timelines based on severity and urgency"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(a)", "GDPR Art 33"]
+    },
+    {
+      "id": "dpa-dpia-assistance",
+      "clause_category": "data-protection",
+      "name": "DPA: DPIA and Prior Consultation Assistance",
+      "description": "The processor shall assist the controller with data protection impact assessments (DPIAs) under GDPR Art 35 and prior consultation with supervisory authorities under Art 36, taking into account the nature of the processing and the information available to the processor. Implements GDPR Art 28(3)(f).",
+      "drafting_guidance": "Specify the scope of DPIA assistance (provide information about processing activities, security measures, risks, and safeguards). Define the timeline for providing assistance (within a reasonable period upon request). Address cost allocation (typically included for standard DPIA assistance; additional charges for bespoke assessments). Require the processor to provide information about sub-processors relevant to the DPIA. Address the processor's role in ongoing monitoring and reassessment of DPIAs. Specify cooperation with supervisory authorities during prior consultation. Include the processor's obligation to implement any additional safeguards identified through the DPIA process.",
+      "variations": {
+        "full-cooperation": "Processor actively participates in DPIA process",
+        "information-provision": "Processor provides requested information but controller leads the DPIA",
+        "with-cost-allocation": "Standard assistance included; additional assessments at agreed rates"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 28(3)(f)", "GDPR Art 35", "GDPR Art 36"]
+    },
+    {
+      "id": "dpa-records-of-processing",
+      "clause_category": "data-protection",
+      "name": "DPA: Records of Processing Activities",
+      "description": "The processor shall maintain records of all categories of processing activities carried out on behalf of the controller, as required by GDPR Art 30(2). Records must include the name and contact details of the processor, categories of processing, transfers to third countries, and a general description of security measures.",
+      "drafting_guidance": "Specify the minimum content of processing records per Art 30(2): processor and controller names and contact details, DPO details, categories of processing carried out on behalf of each controller, transfers to third countries (including the transfer mechanism), general description of technical and organisational security measures. Require records to be maintained in electronic format and made available to the supervisory authority on request. Address the update frequency for records. Specify the processor's obligation to cooperate with the controller's own records obligations under Art 30(1). Address the relationship between processing records and the processing schedule in the DPA.",
+      "variations": {
+        "electronic": "Records maintained in electronic format with regular updates",
+        "integrated": "Records integrated into the processor's RPA system and shared with controller",
+        "on-request": "Records maintained internally and provided to controller upon request"
+      },
+      "contract_types": ["dpa-gdpr", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 30(2)"]
+    },
+    {
+      "id": "scc-module-1-c2c",
+      "clause_category": "data-protection",
+      "name": "SCC Module 1: Controller to Controller Transfer",
+      "description": "EU Standard Contractual Clauses for international transfers of personal data between two controllers. Applies when a controller in the EEA transfers personal data to a controller in a third country that lacks an adequacy decision. Based on the European Commission's Implementing Decision (EU) 2021/914.",
+      "drafting_guidance": "Adopt the EU Commission's standard text without modification (modifying the clauses may invalidate them). Complete the annexes: Annex I (list of parties, description of transfer, competent supervisory authority), Annex II (technical and organisational measures). Select the optional clauses (docking clause for additional parties, choice of Member State law). Conduct a Transfer Impact Assessment (TIA) to evaluate the legal framework in the recipient country. Implement supplementary measures where necessary (encryption, pseudonymisation, contractual commitments not to comply with government access requests). Address the interaction between SCCs and the main agreement.",
+      "variations": {
+        "standard": "Unmodified EU Commission standard text",
+        "with-supplementary-measures": "SCCs plus additional technical and contractual safeguards"
+      },
+      "contract_types": ["scc-module-1-c2c", "data-sharing-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 46(2)(c)", "EU Decision 2021/914"]
+    },
+    {
+      "id": "scc-module-2-c2p",
+      "clause_category": "data-protection",
+      "name": "SCC Module 2: Controller to Processor Transfer",
+      "description": "EU Standard Contractual Clauses for international transfers of personal data from a controller in the EEA to a processor in a third country. The most commonly used module for technology services where the provider processes data on behalf of the customer. Based on EU Decision 2021/914.",
+      "drafting_guidance": "Adopt the EU Commission's standard text. Complete Annex I (parties, transfer description, competent supervisory authority), Annex II (TOMs), and Annex III (list of sub-processors where general authorisation under Clause 9(a) is used). The SCCs supplement the DPA (Art 28 GDPR); ensure consistency between the two. Conduct a Transfer Impact Assessment. Select optional provisions: Clause 7 (docking clause), Clause 9(a) options (specific vs general authorisation for sub-processors), Clause 11(a) (independent dispute resolution body), Clause 17 (governing law), Clause 18 (choice of forum). Address Schrems II requirements: assess third country laws, implement supplementary measures where the SCCs alone are insufficient.",
+      "variations": {
+        "general-authorisation": "General authorisation for sub-processors with notification/objection mechanism",
+        "specific-authorisation": "Prior specific authorisation required for each sub-processor",
+        "with-tia": "Includes documented Transfer Impact Assessment"
+      },
+      "contract_types": ["scc-module-2-c2p", "dpa-gdpr", "saas-subscription"],
+      "depends_on": ["dpa-processing-instructions"],
+      "compliance_refs": ["GDPR Art 46(2)(c)", "EU Decision 2021/914"]
+    },
+    {
+      "id": "scc-module-3-p2p",
+      "clause_category": "data-protection",
+      "name": "SCC Module 3: Processor to Processor Transfer",
+      "description": "EU Standard Contractual Clauses for international transfers from a processor in the EEA to a sub-processor in a third country. Used in supply chains where an EEA-based processor engages a sub-processor outside the EEA. Based on EU Decision 2021/914.",
+      "drafting_guidance": "Adopt the EU Commission's standard text. This module applies between the EEA processor (data exporter) and the third-country sub-processor (data importer). The EEA processor must have the controller's authorisation for the sub-processor engagement. Complete all annexes. Address the tripartite relationship between controller, processor, and sub-processor. Ensure the controller retains third-party beneficiary rights under the SCCs. Conduct a Transfer Impact Assessment. Implement supplementary measures where necessary. Address the flow-down of all Art 28 requirements to the sub-processor.",
+      "variations": {
+        "standard": "Unmodified standard text with completed annexes",
+        "with-controller-approval": "Includes mechanism for controller approval of sub-processor"
+      },
+      "contract_types": ["scc-module-3-p2p", "dpa-gdpr"],
+      "depends_on": ["dpa-sub-processor"],
+      "compliance_refs": ["GDPR Art 46(2)(c)", "EU Decision 2021/914"]
+    },
+    {
+      "id": "scc-module-4-p2c",
+      "clause_category": "data-protection",
+      "name": "SCC Module 4: Processor to Controller Transfer",
+      "description": "EU Standard Contractual Clauses for transfers from a processor in the EEA to a controller in a third country. Less commonly used; applies where an EEA entity processes personal data on behalf of a non-EEA controller and transfers data back to that controller.",
+      "drafting_guidance": "Adopt the EU Commission's standard text. This module has a more limited scope than Modules 1-3 as the data importer is a controller determining purposes and means. Complete all annexes including the description of the transfer and technical measures. The data importer (controller) must comply with GDPR principles as contractually agreed. Conduct a Transfer Impact Assessment. This module is relevant for shared services centres, global payroll providers, and similar arrangements where an EEA entity processes data and returns it to a non-EEA headquarters.",
+      "variations": {
+        "standard": "Unmodified standard text",
+        "with-gdpr-principles": "Enhanced contractual commitment to GDPR principles by the data importer"
+      },
+      "contract_types": ["scc-module-4-p2c", "dpa-gdpr"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 46(2)(c)", "EU Decision 2021/914"]
+    },
+    {
+      "id": "scc-toms-annex",
+      "clause_category": "data-protection",
+      "name": "SCC: Technical and Organisational Measures Annex",
+      "description": "Annex II to the Standard Contractual Clauses detailing the technical and organisational security measures implemented by the data importer to protect transferred personal data. Must describe specific measures for encryption, access control, business continuity, incident management, and regular testing.",
+      "drafting_guidance": "Structure the annex to cover: (a) pseudonymisation and encryption measures, (b) measures for ensuring ongoing confidentiality, integrity, availability and resilience, (c) measures for ensuring ability to restore data availability and access, (d) processes for regularly testing and evaluating effectiveness. Include specific technical details: encryption algorithms and key management, access control mechanisms, network security, physical security, HR security measures, supplier management, incident response procedures, business continuity and disaster recovery, data handling and asset management, logging and monitoring, vulnerability management. Reference applicable security certifications. Update the annex when measures change materially.",
+      "variations": {
+        "detailed": "Comprehensive technical specification of all security measures",
+        "summary": "High-level description with reference to certifications and detailed security documentation",
+        "risk-based": "Measures structured according to the risk assessment for the specific data transfer"
+      },
+      "contract_types": ["scc-module-1-c2c", "scc-module-2-c2p", "scc-module-3-p2p", "scc-module-4-p2c", "dpa-gdpr"],
+      "depends_on": [],
+      "compliance_refs": ["EU Decision 2021/914 Annex II"]
+    },
+    {
+      "id": "scc-sub-processor-annex",
+      "clause_category": "data-protection",
+      "name": "SCC: Sub-Processor List Annex",
+      "description": "Annex III to the Standard Contractual Clauses listing all sub-processors authorised by the controller under the general authorisation option (Clause 9(a)). Includes each sub-processor's name, address, contact details, description of processing, and country of processing.",
+      "drafting_guidance": "List all current sub-processors with: legal entity name, registered address, contact person or privacy team, description of the processing activities performed, location(s) of processing, transfer mechanism used (if outside EEA). Establish a process for updating the annex when sub-processors change. Specify the notification mechanism and timeline for informing the controller of changes. Address the controller's objection right and the consequences of objection. Consider maintaining a public sub-processor list (web page) that is updated in real-time and referenced by the annex. Ensure consistency with the sub-processor management clause in the DPA.",
+      "variations": {
+        "scheduled": "Fixed list in a contract schedule, updated by amendment",
+        "web-referenced": "Annex references a URL where the current sub-processor list is maintained",
+        "tiered": "Critical sub-processors listed in the annex; non-critical on the web list"
+      },
+      "contract_types": ["scc-module-2-c2p", "scc-module-3-p2p", "dpa-gdpr"],
+      "depends_on": ["dpa-sub-processor"],
+      "compliance_refs": ["EU Decision 2021/914 Annex III"]
+    },
+    {
+      "id": "scc-transfer-impact-assessment",
+      "clause_category": "data-protection",
+      "name": "SCC: Transfer Impact Assessment",
+      "description": "A documented assessment of the laws and practices of the destination country that may impinge on the effectiveness of the safeguards provided by the Standard Contractual Clauses. Required by the CJEU Schrems II judgment and Clause 14 of the SCCs. Assesses whether the data importer can comply with its SCC obligations.",
+      "drafting_guidance": "Assess: the legal framework in the destination country (government access laws, data protection laws, rule of law, judicial independence), the specific circumstances of the transfer (type of data, sector, data importer's experience with government access requests, volume and regularity of transfers). Document the assessment methodology and conclusions. Identify supplementary measures where necessary (additional encryption, pseudonymisation, contractual commitments). Update the assessment periodically and when there are material changes in the legal framework. Consider EDPB Recommendations 01/2020 on supplementary measures. Retain the assessment as part of the accountability documentation.",
+      "variations": {
+        "comprehensive": "Full assessment of destination country laws with legal analysis",
+        "risk-based": "Focused assessment based on the specific data types and processing activities",
+        "templated": "Standardised template assessment with jurisdiction-specific modules"
+      },
+      "contract_types": ["scc-module-1-c2c", "scc-module-2-c2p", "scc-module-3-p2p", "dpa-gdpr"],
+      "depends_on": [],
+      "compliance_refs": ["CJEU Schrems II (C-311/18)", "EDPB Recommendations 01/2020", "EU Decision 2021/914 Clause 14"]
+    },
+    {
+      "id": "scc-supplementary-measures",
+      "clause_category": "data-protection",
+      "name": "SCC: Supplementary Measures",
+      "description": "Additional technical, contractual, and organisational safeguards implemented to supplement the Standard Contractual Clauses where the Transfer Impact Assessment identifies that the SCCs alone do not provide an essentially equivalent level of protection. Based on EDPB Recommendations 01/2020.",
+      "drafting_guidance": "Implement technical measures: strong encryption with EEA-controlled keys, pseudonymisation with EEA-controlled mapping, split processing across jurisdictions. Implement contractual measures: commitment not to comply with government access requests that conflict with EU law, transparency reporting on government access requests, obligation to challenge disproportionate requests. Implement organisational measures: strict access controls, EEA-based key management, security certifications. Document all supplementary measures and their effectiveness. Update measures as the legal landscape evolves. Address the scenario where no supplementary measures can ensure an essentially equivalent level of protection (do not transfer the data).",
+      "variations": {
+        "technical-focus": "Primarily technical measures (encryption, pseudonymisation)",
+        "contractual-focus": "Primarily contractual commitments (transparency, challenge obligations)",
+        "comprehensive": "Combination of technical, contractual, and organisational measures"
+      },
+      "contract_types": ["scc-module-1-c2c", "scc-module-2-c2p", "scc-module-3-p2p", "dpa-gdpr"],
+      "depends_on": ["scc-transfer-impact-assessment"],
+      "compliance_refs": ["EDPB Recommendations 01/2020", "CJEU Schrems II (C-311/18)"]
+    },
+    {
+      "id": "nis2-security-requirements",
+      "clause_category": "data-protection",
+      "name": "NIS2: Supply Chain Security Requirements",
+      "description": "Contractual clauses requiring suppliers to implement cybersecurity risk management measures aligned with NIS2 Directive requirements. Essential and important entities must ensure their supply chain security through contractual obligations covering security policies, incident handling, business continuity, and supply chain security.",
+      "drafting_guidance": "Reference NIS2 Art 21 cybersecurity risk management measures. Require the supplier to implement: risk analysis and information system security policies, incident handling procedures, business continuity and crisis management, supply chain security, security in network and information systems acquisition, development and maintenance, policies and procedures to assess cybersecurity risk management measures effectiveness, basic cyber hygiene practices and cybersecurity training, cryptography and encryption policies, HR security, access control, asset management. Specify minimum security standards and certifications. Include audit rights for verifying compliance. Address penalties for non-compliance. Require notification of security-related changes.",
+      "variations": {
+        "essential-entity": "Full NIS2 Art 21 requirements for essential entities",
+        "important-entity": "Proportionate NIS2 requirements for important entities",
+        "critical-supplier": "Enhanced requirements for suppliers providing critical ICT services"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": [],
+      "compliance_refs": ["NIS2 Art 21", "NIS2 Art 22"]
+    },
+    {
+      "id": "nis2-incident-notification",
+      "clause_category": "data-protection",
+      "name": "NIS2: Incident Notification Obligations",
+      "description": "Contractual clauses requiring suppliers to notify the customer of significant cybersecurity incidents within specified timeframes aligned with NIS2 Directive requirements. Enables the customer entity to comply with its own notification obligations to the CSIRT and competent authority.",
+      "drafting_guidance": "Align notification timelines with NIS2 Art 23: early warning within 24 hours of awareness, incident notification within 72 hours, intermediate report upon request, final report within one month of incident notification. Define 'significant incident' per NIS2 Art 23(3): caused or capable of causing severe operational disruption or financial loss, or affected or capable of affecting other natural or legal persons by causing considerable material or non-material damage. Specify the content of each notification phase. Address the supplier's obligation to provide ongoing updates. Require cooperation with incident investigation. Include provisions for coordinating public communications about incidents.",
+      "variations": {
+        "nis2-aligned": "Notification timelines aligned with NIS2 Art 23 requirements",
+        "enhanced": "Shorter initial notification period (e.g., 12 hours) with detailed follow-up",
+        "sector-specific": "Adapted for specific sector requirements (financial services, healthcare)"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["nis2-security-requirements"],
+      "compliance_refs": ["NIS2 Art 23"]
+    },
+    {
+      "id": "nis2-access-control",
+      "clause_category": "data-protection",
+      "name": "NIS2: Access Control and Authentication",
+      "description": "Contractual clauses requiring suppliers to implement robust access control and authentication measures for systems and data accessed in connection with the services. Includes multi-factor authentication, role-based access, privileged access management, and regular access reviews.",
+      "drafting_guidance": "Require multi-factor authentication for all administrative and privileged access. Implement role-based access control (RBAC) with least privilege principle. Require privileged access management (PAM) with session recording. Mandate regular access reviews (quarterly for privileged access, annually for standard access). Require unique individual accounts (no shared credentials). Implement network segmentation to limit access scope. Require strong password policies. Address remote access security. Specify access logging and monitoring requirements. Require prompt access revocation upon personnel changes. Address access requirements for sub-contractors.",
+      "variations": {
+        "standard": "MFA, RBAC, and regular access reviews",
+        "enhanced": "PAM, session recording, real-time monitoring, zero-trust architecture",
+        "tiered": "Different requirements based on data sensitivity and access level"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services"],
+      "depends_on": ["nis2-security-requirements"],
+      "compliance_refs": ["NIS2 Art 21(2)(i)"]
+    },
+    {
+      "id": "nis2-patching-obligations",
+      "clause_category": "data-protection",
+      "name": "NIS2: Patching and Vulnerability Management",
+      "description": "Contractual clauses requiring suppliers to maintain comprehensive vulnerability management programmes, including timely patching of security vulnerabilities, regular vulnerability assessments, and penetration testing. Aligns with NIS2 requirements for security in network and information systems.",
+      "drafting_guidance": "Specify patching timelines based on severity: critical vulnerabilities within 24-48 hours, high within 7 days, medium within 30 days, low within 90 days. Require regular vulnerability scanning (at least monthly for external systems, quarterly for internal). Mandate annual penetration testing by qualified third parties. Require automated patch management systems. Address the handling of zero-day vulnerabilities. Specify the process for emergency patching outside normal change windows. Require vulnerability disclosure (notification to customer of vulnerabilities affecting the service). Address end-of-life and end-of-support software management. Include provisions for compensating controls where immediate patching is not possible.",
+      "variations": {
+        "standard": "Patching timelines and regular scanning",
+        "enhanced": "Continuous vulnerability monitoring with automated remediation",
+        "regulated": "Aligned with specific regulatory requirements (PCI DSS, DORA)"
+      },
+      "contract_types": ["msa", "outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["nis2-security-requirements"],
+      "compliance_refs": ["NIS2 Art 21(2)(e)"]
+    },
+    {
+      "id": "nis2-supply-chain-transparency",
+      "clause_category": "data-protection",
+      "name": "NIS2: Supply Chain Transparency",
+      "description": "Contractual clauses requiring suppliers to maintain transparency regarding their own supply chain, including disclosure of critical sub-suppliers, concentration risks, and security posture of the supply chain. Enables the customer to assess and manage its overall supply chain risk.",
+      "drafting_guidance": "Require disclosure of critical sub-suppliers (identity, location, services provided, security posture). Address concentration risk (single points of failure in the supply chain). Require flow-down of security requirements to sub-suppliers. Specify the right to receive information about sub-supplier security incidents. Address the supplier's due diligence process for selecting and monitoring sub-suppliers. Require notification of material changes to the supply chain (new sub-suppliers, changes in sub-supplier security posture, sub-supplier insolvency). Include the right to object to specific sub-suppliers on security grounds. Address substitution rights if a sub-supplier is deemed unacceptable.",
+      "variations": {
+        "full-disclosure": "Complete transparency of supply chain with periodic reporting",
+        "critical-only": "Disclosure limited to critical sub-suppliers",
+        "risk-based": "Transparency requirements proportionate to the risk assessment"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "msa"],
+      "depends_on": ["nis2-security-requirements"],
+      "compliance_refs": ["NIS2 Art 21(2)(d)", "NIS2 Art 22"]
+    },
+    {
+      "id": "nis2-security-certification",
+      "clause_category": "data-protection",
+      "name": "NIS2: Security Certification Requirements",
+      "description": "Contractual clauses requiring suppliers to obtain and maintain relevant cybersecurity certifications as evidence of compliance with security requirements. May require specific certifications such as ISO 27001, SOC 2 Type II, or European Cybersecurity Certification Scheme (EUCS) certifications.",
+      "drafting_guidance": "Specify required certifications (ISO 27001, SOC 2 Type II, CSA STAR, EUCS when available). Define the scope of certification (must cover the services provided under the agreement). Require annual renewal and provision of current certificates. Address the consequences of loss of certification (notification, remediation timeline, termination right). Specify whether certification is a standalone requirement or may be supplemented by audits. Address the relationship between certification and audit rights (certification may reduce but not eliminate audit rights). Consider accepting equivalent certifications. Address the timeline for obtaining required certifications if not currently held.",
+      "variations": {
+        "mandatory": "Specific certifications required as a condition of the agreement",
+        "preferred": "Certifications preferred but not mandatory (with alternative audit rights)",
+        "phased": "Certifications required within a specified period after contract commencement"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["nis2-security-requirements"],
+      "compliance_refs": ["NIS2 Art 24", "NIS2 Art 25"]
+    },
+    {
+      "id": "dora-service-description",
+      "clause_category": "data-protection",
+      "name": "DORA: ICT Service Description",
+      "description": "Contractual clauses providing a clear and complete description of all ICT services to be provided, including quantitative and qualitative performance targets, and specifying whether sub-contracting is permitted and under what conditions. Required by DORA Art 30(2)(a) for critical or important ICT third-party service providers.",
+      "drafting_guidance": "Provide a comprehensive description of all ICT services, including: functional specifications, performance standards (quantitative and qualitative), applicable service levels and measurement methodology, locations where data will be processed and stored, data security requirements, business continuity provisions. Specify whether sub-contracting of critical or important functions is permitted. Address the interaction between service description and SLA. Define the change management process for service modifications. Specify reporting requirements (regular service reports, incident reports). Address the financial entity's right to monitor and assess service delivery on an ongoing basis.",
+      "variations": {
+        "comprehensive": "Detailed service description with quantitative metrics",
+        "framework": "High-level description with detailed SOWs for each service component",
+        "critical-function": "Enhanced requirements for services supporting critical or important functions"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": [],
+      "compliance_refs": ["DORA Art 30(2)(a)"]
+    },
+    {
+      "id": "dora-data-location",
+      "clause_category": "data-protection",
+      "name": "DORA: Data Location and Processing",
+      "description": "Contractual clauses specifying the locations where ICT services will be provided and data will be processed and stored, including the locations of sub-contractors. Financial entities must be informed of any planned changes to data location. Required by DORA Art 30(2)(b).",
+      "drafting_guidance": "Specify the exact locations (country, region) where data will be processed and stored. Address sub-contractor locations. Require prior notification (minimum 60-90 days) of any planned changes to data processing locations. Include the financial entity's right to object to location changes. Address the implications of data localisation requirements. Specify the process for approving new locations. Address the distinction between primary processing, backup/DR, and support access locations. Coordinate with data protection requirements (GDPR transfers, SCCs). Specify the consequences if data is processed in an unapproved location.",
+      "variations": {
+        "eea-only": "All processing within the EEA",
+        "approved-locations": "Processing in pre-approved locations with change notification",
+        "with-sovereignty": "Data sovereignty requirements with local storage and processing"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["dora-service-description"],
+      "compliance_refs": ["DORA Art 30(2)(b)"]
+    },
+    {
+      "id": "dora-audit-rights",
+      "clause_category": "data-protection",
+      "name": "DORA: ICT Third-Party Audit Rights",
+      "description": "Contractual clauses providing the financial entity, its appointed third parties, and competent authorities with full access rights to audit and inspect the ICT third-party service provider. Includes unrestricted access to premises, systems, documents, and personnel. Required by DORA Art 30(3).",
+      "drafting_guidance": "Grant unrestricted rights of access, inspection, and audit to: the financial entity, third-party auditors appointed by the financial entity, competent authorities (including ESAs and the Lead Overseer). Specify that audit rights cannot be contractually limited or restricted. Address the scope: premises, information, systems, networks, personnel, internal audits, quality assurance processes. Include the right to conduct on-site and off-site inspections. Specify the ICT third-party's obligation to cooperate fully with audits. Address the use of pooled audits and third-party certifications as supplementary (not replacement) evidence. Require the provider to make available internal audit reports. Address cost allocation.",
+      "variations": {
+        "full-access": "Unrestricted audit rights per DORA Art 30(3)",
+        "with-pooled-audits": "Includes provision for pooled audits by multiple financial entities",
+        "regulator-inclusive": "Explicit provision for competent authority and ESA access"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["dora-service-description"],
+      "compliance_refs": ["DORA Art 30(3)", "DORA Art 28(6)"]
+    },
+    {
+      "id": "dora-subcontracting",
+      "clause_category": "data-protection",
+      "name": "DORA: Sub-Contracting Approval",
+      "description": "Contractual clauses addressing the conditions under which the ICT third-party service provider may sub-contract the provision of ICT services, particularly where the sub-contracted services support critical or important functions. Requires the financial entity's approval and flow-down of all contractual requirements.",
+      "drafting_guidance": "Specify whether sub-contracting is permitted for critical or important functions (and under what conditions). Require prior written approval for new sub-contractors. Maintain a register of approved sub-contractors with details of services provided. Require flow-down of all security, audit, and data protection requirements to sub-contractors. Address the ICT provider's liability for sub-contractor performance. Require notification of material changes to sub-contracting arrangements. Include the financial entity's right to object to sub-contractors. Address the process for substituting sub-contractors. Require due diligence on sub-contractors' operational resilience capabilities.",
+      "variations": {
+        "approval-required": "Prior written approval for all sub-contracting",
+        "notification-based": "Notification with objection right for new sub-contractors",
+        "prohibited-for-critical": "Sub-contracting prohibited for critical functions"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services"],
+      "depends_on": ["dora-service-description"],
+      "compliance_refs": ["DORA Art 30(2)(a)"]
+    },
+    {
+      "id": "dora-exit-strategy",
+      "clause_category": "data-protection",
+      "name": "DORA: Exit Strategy and Transition",
+      "description": "Contractual clauses ensuring the financial entity can exit the ICT third-party arrangement without undue disruption to business activities, without limiting compliance with regulatory requirements, and without detriment to the continuity and quality of services provided to clients. Required by DORA Art 28(8).",
+      "drafting_guidance": "Require the development of exit plans and transition strategies. Specify the transition assistance period (typically 6-24 months for critical functions). Define transition assistance services (knowledge transfer, data migration, parallel running, documentation). Specify pricing for transition services. Address data portability and format requirements. Require the provider to cooperate with successor providers. Address the treatment of intellectual property during and after transition. Specify data deletion requirements post-transition. Include provisions for extending the agreement during the transition period. Address the financial entity's right to test the exit strategy periodically. Ensure no lock-in through proprietary formats or technology dependencies.",
+      "variations": {
+        "comprehensive": "Detailed exit plan with periodic testing",
+        "framework": "Exit strategy framework developed within first 6 months",
+        "critical-function": "Enhanced exit provisions for critical or important functions"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["dora-service-description"],
+      "compliance_refs": ["DORA Art 28(8)", "EBA Guidelines on outsourcing arrangements"]
+    },
+    {
+      "id": "dora-continuity-arrangements",
+      "clause_category": "data-protection",
+      "name": "DORA: Business Continuity Arrangements",
+      "description": "Contractual clauses requiring the ICT third-party service provider to maintain appropriate business continuity and disaster recovery arrangements to ensure continuity of ICT services supporting critical or important functions. Includes testing requirements and recovery time objectives.",
+      "drafting_guidance": "Require the provider to maintain and test business continuity plans (BCP) and disaster recovery plans (DRP). Specify recovery time objectives (RTO) and recovery point objectives (RPO) for critical services. Require annual BCP/DRP testing with the financial entity's participation or review. Specify the provider's obligation to notify the financial entity of any disruption to BCP/DRP capability. Address the alignment of provider BCP/DRP with the financial entity's own operational resilience requirements. Require the provider to maintain alternative processing capabilities. Specify reporting requirements for BCP/DRP test results. Address the interaction with SLA commitments during disaster recovery scenarios.",
+      "variations": {
+        "standard": "Annual BCP/DRP testing with recovery objectives",
+        "enhanced": "Semi-annual testing with financial entity participation",
+        "resilience-focused": "Aligned with DORA operational resilience testing framework"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["dora-service-description"],
+      "compliance_refs": ["DORA Art 11", "DORA Art 30(2)(d)"]
+    },
+    {
+      "id": "dora-incident-reporting",
+      "clause_category": "data-protection",
+      "name": "DORA: ICT Incident Reporting",
+      "description": "Contractual clauses requiring the ICT third-party service provider to report ICT-related incidents to the financial entity in accordance with DORA requirements. Enables the financial entity to comply with its own incident classification and reporting obligations to competent authorities.",
+      "drafting_guidance": "Align incident classification with DORA Art 18 criteria: number of clients/counterparts affected, duration, geographic spread, data losses, criticality of services affected, economic impact. Specify notification timelines: initial notification within 4 hours for major ICT incidents, detailed report within 24 hours, interim reports as required, final report within one month. Define the content of each report phase. Require the provider to cooperate with the financial entity's incident classification process. Address the provider's obligation to implement improvements identified through incident analysis. Include provisions for coordinating incident response between the parties. Specify the escalation process for major incidents.",
+      "variations": {
+        "dora-aligned": "Full alignment with DORA Art 19 reporting requirements",
+        "enhanced": "Shorter initial notification period with detailed ongoing updates",
+        "tiered": "Different reporting requirements based on incident severity classification"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["dora-service-description"],
+      "compliance_refs": ["DORA Art 17", "DORA Art 18", "DORA Art 19", "DORA Art 30(2)(e)"]
+    },
+    {
+      "id": "dora-security-testing",
+      "clause_category": "data-protection",
+      "name": "DORA: Security Testing Requirements",
+      "description": "Contractual clauses requiring the ICT third-party service provider to participate in and support the financial entity's digital operational resilience testing programme, including threat-led penetration testing (TLPT) where required. Aligns with DORA Art 24-27.",
+      "drafting_guidance": "Require the provider to participate in the financial entity's operational resilience testing programme. Specify the provider's obligation to support TLPT (threat-led penetration testing) conducted under DORA Art 26. Address the use of TIBER-EU framework for testing methodology. Require the provider to cooperate with third-party testers appointed by the financial entity. Specify the provider's obligation to remediate vulnerabilities identified through testing. Address the confidentiality of test results. Specify cost allocation for testing activities. Include provisions for the provider's own testing programme (vulnerability assessments, penetration testing). Address the mutual recognition of TLPT results under DORA Art 26(4).",
+      "variations": {
+        "standard": "Cooperation with financial entity testing programme",
+        "tlpt-inclusive": "Includes participation in TLPT per DORA Art 26",
+        "self-testing": "Provider conducts its own testing with results shared with financial entity"
+      },
+      "contract_types": ["outsourcing-agreement", "managed-services", "saas-subscription"],
+      "depends_on": ["dora-service-description"],
+      "compliance_refs": ["DORA Art 24", "DORA Art 25", "DORA Art 26", "DORA Art 27"]
+    },
+    {
+      "id": "hipaa-permitted-uses",
+      "clause_category": "data-protection",
+      "name": "HIPAA BAA: Permitted Uses and Disclosures",
+      "description": "Defines the permitted uses and disclosures of protected health information (PHI) by the business associate. The business associate may only use or disclose PHI as permitted by the BAA, as required by law, or as otherwise permitted by HIPAA. Specifies the scope of permitted processing and the prohibition on unauthorised uses.",
+      "drafting_guidance": "Specify the permitted uses and disclosures (to perform services under the agreement, for the business associate's proper management and administration, to carry out its legal responsibilities). Prohibit use or disclosure of PHI in a manner that would violate HIPAA if done by the covered entity. Address de-identification requirements (HIPAA Safe Harbor or Expert Determination methods). Specify the minimum necessary standard for access to PHI. Address the use of PHI for marketing, fundraising, or sale (generally prohibited without authorisation). Include provisions for uses and disclosures of PHI for research. Address the business associate's obligation to comply with applicable HIPAA requirements as if it were a covered entity.",
+      "variations": {
+        "standard": "Permitted uses limited to services under the agreement",
+        "with-management": "Includes business associate's proper management and administration",
+        "restricted": "Narrowly defined permitted uses with explicit prohibitions"
+      },
+      "contract_types": ["hipaa-baa"],
+      "depends_on": [],
+      "compliance_refs": ["45 CFR 164.504(e)(2)(i)", "45 CFR 164.502(a)"]
+    },
+    {
+      "id": "hipaa-safeguards",
+      "clause_category": "data-protection",
+      "name": "HIPAA BAA: Safeguards",
+      "description": "Requires the business associate to implement appropriate administrative, physical, and technical safeguards to protect the confidentiality, integrity, and availability of electronic protected health information (ePHI) that it creates, receives, maintains, or transmits on behalf of the covered entity.",
+      "drafting_guidance": "Require compliance with HIPAA Security Rule (45 CFR Part 164 Subpart C). Specify administrative safeguards: security management process, security officer designation, workforce training, access management. Specify physical safeguards: facility access controls, workstation security, device and media controls. Specify technical safeguards: access control, audit controls, integrity controls, transmission security. Require risk assessment per 45 CFR 164.308(a)(1)(ii)(A). Address the use of encryption for ePHI at rest and in transit. Specify the business associate's obligation to report security incidents. Address sub-contractor security requirements. Require documentation of all safeguards.",
+      "variations": {
+        "standard": "Compliance with HIPAA Security Rule requirements",
+        "enhanced": "Additional safeguards beyond HIPAA minimum (NIST CSF, HITRUST)",
+        "certified": "HITRUST CSF certification required as evidence of safeguards"
+      },
+      "contract_types": ["hipaa-baa"],
+      "depends_on": ["hipaa-permitted-uses"],
+      "compliance_refs": ["45 CFR 164.314(a)(2)(i)(B)", "45 CFR Part 164 Subpart C"]
+    },
+    {
+      "id": "hipaa-breach-notification",
+      "clause_category": "data-protection",
+      "name": "HIPAA BAA: Breach Notification",
+      "description": "Requires the business associate to notify the covered entity of any breach of unsecured protected health information without unreasonable delay and in no case later than 60 calendar days after discovery of the breach. Includes the obligation to identify affected individuals and the nature of the PHI involved.",
+      "drafting_guidance": "Specify the notification timeline (without unreasonable delay, no later than 60 days after discovery; many BAAs require shorter periods such as 5-30 days). Define 'breach' per 45 CFR 164.402 (acquisition, access, use, or disclosure of PHI in a manner not permitted under the Privacy Rule that compromises the security or privacy of the PHI). Address the four-factor risk assessment to determine if breach notification is required. Specify the content of the notification: identification of individuals affected, description of the PHI involved, date of breach and date of discovery, description of investigation, mitigation steps taken. Address the covered entity's obligation to notify affected individuals and HHS. Allocate notification costs. Address the business associate's obligation to mitigate harmful effects.",
+      "variations": {
+        "standard-60-day": "Notification within 60 days per HIPAA minimum",
+        "expedited": "Notification within 5-10 business days of discovery",
+        "with-cost-allocation": "Specifies allocation of notification and mitigation costs"
+      },
+      "contract_types": ["hipaa-baa"],
+      "depends_on": ["hipaa-permitted-uses"],
+      "compliance_refs": ["45 CFR 164.410", "45 CFR 164.314(a)(2)(i)(C)"]
+    },
+    {
+      "id": "hipaa-termination-provisions",
+      "clause_category": "data-protection",
+      "name": "HIPAA BAA: Termination Provisions",
+      "description": "Specifies the conditions under which the covered entity may terminate the BAA and the underlying agreement if the business associate violates a material term of the BAA. Addresses the return or destruction of PHI upon termination and the business associate's obligations post-termination.",
+      "drafting_guidance": "Specify termination triggers: material breach of the BAA, failure to cure a breach within a specified period, pattern of violations. Require the covered entity to provide an opportunity to cure (if cure is possible) or take reasonable steps to end the violation. Address the return or destruction of all PHI upon termination (per 45 CFR 164.504(e)(2)(ii)(J)). Specify the timeline for return/destruction. Address the exception where return or destruction is not feasible (extend BAA protections to retained PHI indefinitely). Specify the business associate's obligations post-termination: limit use and disclosure of retained PHI, maintain safeguards, return or destroy when feasible. Address the interplay between BAA termination and termination of the underlying services agreement.",
+      "variations": {
+        "immediate": "Immediate termination right for material BAA breach",
+        "cure-period": "Opportunity to cure within 30 days before termination",
+        "with-transition": "Transition period for migration of PHI to alternative provider"
+      },
+      "contract_types": ["hipaa-baa"],
+      "depends_on": ["hipaa-permitted-uses"],
+      "compliance_refs": ["45 CFR 164.504(e)(2)(iii)", "45 CFR 164.504(e)(2)(ii)(J)"]
+    },
+    {
+      "id": "dp-data-localisation",
+      "clause_category": "data-protection",
+      "name": "Data Localisation Requirement",
+      "description": "Requires that personal data or specified categories of data are stored and/or processed only within defined geographic boundaries, such as the European Economic Area (EEA), a specific Member State, or the territory of a specific country. Driven by regulatory requirements, data sovereignty concerns, or customer policy.",
+      "drafting_guidance": "Specify the geographic boundaries for data storage and processing (EEA, specific country, specific region). Define what constitutes 'data' for localisation purposes (at rest, in transit, during processing, backups). Address whether remote access from outside the specified geography is permitted (and under what conditions). Specify the consequences of breach (termination right, indemnification). Address the treatment of metadata and logs. Consider the interaction with cloud provider data residency features. Address business continuity and disaster recovery locations (may require exception for DR sites). Specify audit rights for verifying data localisation. Address the cost implications of localisation requirements.",
+      "variations": {
+        "strict": "All data at rest and in processing within specified geography only",
+        "storage-only": "Data at rest within specified geography; processing may occur elsewhere",
+        "with-exceptions": "Localisation with defined exceptions (DR, support access)"
+      },
+      "contract_types": ["dpa-gdpr", "outsourcing-agreement", "saas-subscription", "managed-services"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 44-49"]
+    },
+    {
+      "id": "dp-cross-border-transfers",
+      "clause_category": "data-protection",
+      "name": "Cross-Border Data Transfer Provisions",
+      "description": "Establishes the legal mechanisms and safeguards for transferring personal data from the EEA to third countries. Addresses adequacy decisions, Standard Contractual Clauses, Binding Corporate Rules, and supplementary measures required following the Schrems II judgment.",
+      "drafting_guidance": "Identify all transfers of personal data to third countries (including sub-processor locations, support access, and backup sites). Specify the transfer mechanism for each transfer: adequacy decision (Art 45), Standard Contractual Clauses (Art 46(2)(c)), Binding Corporate Rules (Art 47), or derogation (Art 49). For SCC-based transfers, require a Transfer Impact Assessment. Document supplementary measures where required (technical, contractual, organisational). Address the process for adapting transfer mechanisms if the legal basis changes (e.g., adequacy decision revoked). Require notification of new or changed transfers. Address the UK-specific requirements (UK IDTA or UK Addendum to EU SCCs). Maintain a transfer register.",
+      "variations": {
+        "scc-based": "Transfers governed by Standard Contractual Clauses",
+        "adequacy-based": "Transfers to countries with adequacy decisions only",
+        "multi-mechanism": "Different mechanisms for different transfers based on destination"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 44-49", "CJEU Schrems II (C-311/18)"]
+    },
+    {
+      "id": "dp-breach-notification-general",
+      "clause_category": "data-protection",
+      "name": "Data Breach Notification (General)",
+      "description": "General contractual obligation to notify the other party of data security breaches affecting confidential information or personal data processed under the agreement. Applies independent of specific regulatory frameworks and covers both personal data breaches and broader information security incidents.",
+      "drafting_guidance": "Define 'data breach' broadly to cover personal data breaches, confidential information breaches, and security incidents. Specify the notification timeline (typically 24-72 hours). Define the content of the notification: nature of the breach, data affected, individuals affected (if known), likely consequences, measures taken or proposed. Address the obligation to cooperate with the affected party's incident response. Specify ongoing reporting obligations as more information becomes available. Address the obligation to mitigate the impact of the breach. Allocate costs for breach response (notification, credit monitoring, forensic investigation). Address public communications and media management. Specify record-keeping requirements for breach incidents.",
+      "variations": {
+        "24-hour": "Notification within 24 hours of awareness",
+        "48-hour": "Notification within 48 hours of awareness",
+        "72-hour": "Notification within 72 hours (aligned with GDPR Art 33)"
+      },
+      "contract_types": ["msa", "saas-subscription", "outsourcing-agreement", "managed-services", "consulting-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "dp-privacy-impact-assessment",
+      "clause_category": "data-protection",
+      "name": "Privacy Impact Assessment Cooperation",
+      "description": "Requires the service provider to cooperate with the customer's privacy impact assessments (PIAs) and data protection impact assessments (DPIAs) by providing relevant information about processing activities, security measures, risks, and safeguards implemented in connection with the services.",
+      "drafting_guidance": "Specify the scope of cooperation: provide information about processing activities, data flows, security measures, and risks. Define the timeline for responding to PIA/DPIA information requests (typically within 10-15 business days). Address cost allocation for cooperation. Require the provider to implement additional safeguards identified through the PIA/DPIA process. Specify the provider's obligation to notify the customer of changes that may affect the PIA/DPIA (new processing activities, changes to security measures, new sub-processors). Address the ongoing nature of PIA/DPIA (not a one-time exercise). Coordinate with GDPR Art 35 DPIA requirements and Art 36 prior consultation obligations.",
+      "variations": {
+        "full-cooperation": "Provider actively participates in PIA/DPIA process",
+        "information-provision": "Provider provides requested information; customer leads the assessment",
+        "pre-service": "PIA/DPIA required before commencement of processing"
+      },
+      "contract_types": ["dpa-gdpr", "saas-subscription", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Art 35", "GDPR Art 36"]
+    }
+  ]
+}
