@@ -1,0 +1,827 @@
+{
+  "clause_types": [
+    {
+      "id": "intl-incoterms",
+      "clause_category": "international-trade",
+      "name": "Incoterms 2020 Trade Terms",
+      "description": "Specifies the applicable ICC Incoterms 2020 rule governing the allocation of costs, risks, and responsibilities between buyer and seller for the delivery of goods. Incoterms define when risk of loss transfers from seller to buyer, which party arranges and pays for transport and insurance, and which party handles export/import clearance. The chosen Incoterm fundamentally shapes the economics and risk profile of the entire transaction.",
+      "drafting_guidance": "Always specify the Incoterms edition year (e.g., 'CIF Shanghai Incoterms 2020') to avoid ambiguity with earlier versions. Select the appropriate rule based on mode of transport: FAS, FOB, CFR, and CIF apply only to sea and inland waterway transport; EXW, FCA, CPT, CIP, DAP, DPU, and DDP apply to any mode. Define the named place or port precisely (e.g., 'FOB Port of Rotterdam Pier 7'). Consider the practical implications: EXW places maximum burden on buyer (export clearance, loading); DDP places maximum burden on seller (import clearance, duties). Address insurance requirements explicitly even when the Incoterm does not mandate insurance (e.g., FOB). Specify the currency for cost allocation and whether the Incoterm price includes specific ancillary costs. Consider supplementing Incoterms with explicit contractual provisions for loading/unloading costs at origin and destination, which Incoterms do not always fully allocate.",
+      "variations": {
+        "fob": "FOB (Free On Board) - risk transfers when goods pass ship's rail at port of shipment",
+        "cif": "CIF (Cost, Insurance and Freight) - seller arranges transport and insurance to destination port",
+        "dap": "DAP (Delivered At Place) - seller delivers goods at named destination, buyer handles import clearance",
+        "ddp": "DDP (Delivered Duty Paid) - seller bears all costs and risks including import duties and taxes"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-distribution", "intl-off-take"],
+      "depends_on": ["intl-bill-of-lading"],
+      "compliance_refs": ["ICC Incoterms 2020"]
+    },
+    {
+      "id": "intl-letter-of-credit",
+      "clause_category": "international-trade",
+      "name": "Letter of Credit Payment Mechanism",
+      "description": "Requires the buyer to procure an irrevocable documentary letter of credit (L/C) from a reputable issuing bank, confirmed by an advising bank in the seller's jurisdiction if required, as the primary payment mechanism. Letters of credit governed by UCP 600 provide the seller with a bank's independent undertaking to pay against compliant presentation of specified documents, eliminating buyer credit risk. The L/C mechanism is the cornerstone of international trade finance, balancing the competing interests of buyer and seller who may have no established relationship.",
+      "drafting_guidance": "Specify that the L/C must be governed by UCP 600 (ICC Uniform Customs and Practice for Documentary Credits, 2007 revision). Define the required documents for presentation (commercial invoice, transport document, insurance certificate, packing list, certificate of origin, inspection certificate). Specify whether the L/C must be confirmed by a bank in the seller's country and whether it must be at sight or usance (deferred payment). Set the timeline for L/C issuance (typically 15-30 days before shipment). Define the L/C amount (contract value plus tolerance, typically 5-10% to accommodate quantity/price variations). Address amendment procedures and who bears the costs of the L/C (issuance, confirmation, amendment fees). Specify the latest shipment date and L/C expiry date with adequate buffer. Include provisions for discrepant documents and the process for waiver or correction.",
+      "variations": {
+        "irrevocable-confirmed": "Irrevocable L/C confirmed by a bank in seller's jurisdiction for maximum security",
+        "irrevocable-unconfirmed": "Irrevocable L/C without confirmation, relying on issuing bank creditworthiness",
+        "standby": "Standby letter of credit as backup payment mechanism if primary payment method fails",
+        "transferable": "Transferable L/C allowing seller to transfer credit to one or more sub-suppliers"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take"],
+      "depends_on": ["intl-documentary-compliance"],
+      "compliance_refs": ["UCP 600", "ISP98 (Standby L/Cs)", "ISBP 745"]
+    },
+    {
+      "id": "intl-bill-of-lading",
+      "clause_category": "international-trade",
+      "name": "Bill of Lading Requirements",
+      "description": "Defines the requirements for bills of lading and other transport documents that evidence the contract of carriage, receipt of goods by the carrier, and document of title to the goods. In international trade, the bill of lading serves a triple function: it is a receipt for goods shipped, evidence of the contract of carriage, and a negotiable document of title that controls constructive possession of the goods. The type and form of bill of lading directly impacts the parties' ability to trade goods in transit and to present compliant documents under letters of credit.",
+      "drafting_guidance": "Specify the type of bill of lading required: clean on-board ocean bill of lading, combined transport/multimodal bill of lading, or sea waybill (non-negotiable). For L/C transactions, ensure alignment with UCP 600 Articles 19-25 governing transport documents. Specify whether the B/L must be 'shipped on board' (not merely 'received for shipment'). Define the number of originals required (typically full set of 3/3 originals). Address the consignee field: 'to order' (negotiable), 'to order of [named party]', or straight consignment. Specify marking requirements (shipping marks, container numbers). Address the notify party designation. Include provisions for switch bills of lading if goods may be re-directed in transit. Consider electronic bills of lading under the MLETR framework or platforms such as Bolero or essDOCS. Specify the acceptable age of bills of lading (typically not stale, i.e., presented within 21 days of issuance per UCP 600 Art 14(c)).",
+      "variations": {
+        "clean-on-board": "Clean on-board ocean bill of lading with no clauses or notations indicating defective condition",
+        "multimodal": "Combined transport document covering carriage by more than one mode of transport",
+        "sea-waybill": "Non-negotiable sea waybill suitable where document-of-title function is not needed",
+        "electronic": "Electronic bill of lading under Bolero, essDOCS, or MLETR-compliant platform"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take"],
+      "depends_on": ["intl-incoterms"],
+      "compliance_refs": ["UCP 600 Art 19-25", "Hague-Visby Rules", "Hamburg Rules", "Rotterdam Rules", "MLETR"]
+    },
+    {
+      "id": "intl-documentary-collection",
+      "clause_category": "international-trade",
+      "name": "Documentary Collection Payment Terms",
+      "description": "Establishes documentary collection (D/P or D/A) as the payment mechanism, governed by ICC Uniform Rules for Collections (URC 522). Under documents against payment (D/P), the collecting bank releases shipping documents to the buyer only upon payment. Under documents against acceptance (D/A), documents are released upon the buyer's acceptance of a time draft, creating a deferred payment obligation. Documentary collections offer a middle ground between open account and letter of credit terms, providing some security without the cost of an L/C.",
+      "drafting_guidance": "Specify whether the collection is D/P (documents against payment, also called 'sight draft') or D/A (documents against acceptance, creating a usance/term obligation). Identify the remitting bank (seller's bank) and the collecting/presenting bank (buyer's bank). Define the documents to be presented (commercial invoice, transport documents, insurance certificate, etc.). Specify the applicable rules (URC 522). For D/A collections, define the tenor of the accepted draft (e.g., 60 or 90 days after sight). Address the buyer's obligation to accept or pay within a specified period. Include provisions for the case of non-payment or non-acceptance (protest, return of documents, seller's remedies). Note the critical limitation: unlike L/Cs, banks in a documentary collection act only as agents and have no independent payment obligation. Address storage and insurance costs if goods arrive before documents are taken up.",
+      "variations": {
+        "documents-against-payment": "D/P: documents released only upon immediate cash payment",
+        "documents-against-acceptance": "D/A: documents released upon acceptance of time draft",
+        "with-bank-guarantee": "D/A supplemented by a bank guarantee to mitigate acceptance risk"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading"],
+      "depends_on": ["intl-bill-of-lading"],
+      "compliance_refs": ["URC 522"]
+    },
+    {
+      "id": "intl-trade-finance",
+      "clause_category": "international-trade",
+      "name": "Trade Finance and Credit Support",
+      "description": "Establishes the trade finance structure supporting the transaction, including pre-export financing, post-shipment financing, buyer's credit, forfaiting arrangements, or supply chain finance programmes. Trade finance instruments bridge the cash flow gap between the seller's need for payment upon shipment and the buyer's preference for payment upon receipt and inspection. Properly structured trade finance reduces counterparty risk and enables transactions that might otherwise be commercially unviable.",
+      "drafting_guidance": "Define the trade finance instrument(s) to be used and the responsible party for arranging financing. For pre-export finance, specify the drawdown conditions, interest rate basis, and repayment trigger (typically upon receipt of L/C proceeds). For forfaiting, address the discount rate, the without-recourse nature of the purchase, and the documentation required (avalised bills of exchange or promissory notes). For supply chain finance, specify the platform, the discount rate or pricing, and the relationship between the buyer's payment obligation and the finance provider's advance. Address the interaction between trade finance arrangements and the underlying commercial contract (e.g., assignment of receivables, security interests). Include representations regarding the absence of existing liens or encumbrances on the receivables. Specify which party bears the cost of financing (finance charges, commitment fees, arrangement fees).",
+      "variations": {
+        "pre-export": "Pre-shipment financing secured against confirmed L/C or purchase order",
+        "forfaiting": "Without-recourse purchase of trade receivables at a discount",
+        "supply-chain-finance": "Buyer-initiated early payment programme through a finance platform",
+        "buyers-credit": "Medium-term credit facility arranged for the buyer by the seller's export credit agency"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take", "intl-tolling"],
+      "depends_on": ["intl-letter-of-credit"],
+      "compliance_refs": ["ICC Uniform Rules for Forfaiting (URF 800)", "UCP 600"]
+    },
+    {
+      "id": "intl-customs-compliance",
+      "clause_category": "international-trade",
+      "name": "Customs Compliance and Import/Export Procedures",
+      "description": "Allocates responsibility for customs clearance, compliance with import and export regulations, and payment of customs duties, taxes, and levies. Customs compliance extends beyond the Incoterms allocation to address specific regulatory requirements such as advance customs declarations, authorised economic operator (AEO) status, preferential tariff treatment under free trade agreements, customs valuation methodology, and post-clearance audit obligations. Non-compliance with customs regulations can result in seizure of goods, financial penalties, and criminal prosecution.",
+      "drafting_guidance": "Clearly allocate export and import clearance responsibilities (which may differ from Incoterms if parties agree otherwise). Specify the customs valuation method and ensure consistency with WTO Customs Valuation Agreement. Require the exporting party to provide all documentation necessary for customs clearance (commercial invoice, packing list, certificate of origin, preferential origin declarations). Address duty drawback entitlements and which party benefits. Specify which party applies for and maintains AEO status or equivalent trusted trader programmes. Include provisions for customs audits and the allocation of liability for additional duties or penalties assessed post-clearance. Address the impact of tariff changes during the contract term (who bears the risk of increased duties). Require compliance with all applicable customs regulations including advance manifest requirements and security filing obligations (e.g., ISF/10+2 for US imports). Specify the HS tariff classification for the goods.",
+      "variations": {
+        "seller-export-buyer-import": "Standard allocation: seller handles export clearance, buyer handles import clearance",
+        "full-service-seller": "Seller handles both export and import clearance (DDP-style arrangement)",
+        "customs-broker-appointed": "Both parties appoint licensed customs brokers with defined cooperation obligations"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading", "intl-off-take"],
+      "depends_on": ["intl-incoterms", "intl-country-of-origin"],
+      "compliance_refs": ["WTO Customs Valuation Agreement", "Revised Kyoto Convention", "WCO SAFE Framework"]
+    },
+    {
+      "id": "intl-export-control",
+      "clause_category": "international-trade",
+      "name": "Export Control Compliance",
+      "description": "Requires both parties to comply with applicable export control laws and regulations governing the export, re-export, and transfer of controlled goods, software, and technology. Export controls restrict the transfer of items that have military applications, dual-use potential, or national security significance. Key regimes include the EU Export Control Regulation 2021/821, US Export Administration Regulations (EAR), the Wassenaar Arrangement, the Missile Technology Control Regime (MTCR), the Nuclear Suppliers Group (NSG), and the Australia Group. Violation of export controls carries severe criminal and civil penalties.",
+      "drafting_guidance": "Require the seller to classify goods under all applicable export control classification systems (EU Dual-Use Annex I, US Commerce Control List, national military lists). Include seller's representation that it has obtained all necessary export licences and authorisations. Require the buyer to provide end-use certificates and end-user statements where required. Include a prohibition on re-export to embargoed or sanctioned destinations without prior written consent and appropriate licences. Address deemed export restrictions (transfer of controlled technology to foreign nationals within the same country). Include a right to suspend or terminate if export control compliance cannot be assured. Require both parties to maintain export control compliance programmes and records for the statutory retention period (typically 5-7 years). Address the allocation of liability for penalties arising from export control violations. Include specific provisions for technology transfer and technical data.",
+      "variations": {
+        "eu-focused": "Primary compliance with EU Regulation 2021/821 with catch-all provisions",
+        "us-focused": "Primary compliance with US EAR/ITAR with re-export control provisions",
+        "multi-jurisdictional": "Comprehensive compliance with EU, US, and other applicable national export control regimes"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-license-international", "intl-agency"],
+      "depends_on": ["intl-dual-use-goods"],
+      "compliance_refs": ["EU Regulation 2021/821", "US EAR (15 CFR 730-774)", "Wassenaar Arrangement", "MTCR", "NSG"]
+    },
+    {
+      "id": "intl-sanctions-compliance",
+      "clause_category": "international-trade",
+      "name": "Sanctions Compliance",
+      "description": "Requires both parties to comply with all applicable economic and trade sanctions programmes, including those administered by OFAC (US), OFSI (UK), and EU Council Regulations. Sanctions compliance extends to screening parties, beneficial owners, and transactions against designated persons lists (SDN, consolidated lists), territorial sanctions (country-based embargoes), and sectoral sanctions restricting specific types of transactions. Sanctions violations carry severe penalties including criminal prosecution, substantial fines, and reputational damage that can be existential for international businesses.",
+      "drafting_guidance": "Include comprehensive representations and warranties that neither party, nor its beneficial owners, directors, or officers, is a Sanctioned Person (defined to include SDN list, EU consolidated list, OFSI consolidated list, and UN sanctions list). Require ongoing screening of counterparties and beneficial owners against sanctions lists (not merely at contract execution). Include an immediate termination right if a party becomes a Sanctioned Person or if performance would violate applicable sanctions. Address secondary sanctions risk (particularly US secondary sanctions that apply to non-US persons). Define the screening methodology and frequency (at minimum, upon each transaction or shipment). Address the treatment of existing obligations if sanctions are imposed mid-contract (wind-down provisions, licensing requirements). Include specific carve-outs for humanitarian exemptions where applicable. Require notification of any sanctions-related enquiries from authorities. Address the allocation of costs and losses arising from sanctions-related performance disruption.",
+      "variations": {
+        "basic": "Standard sanctions representations and termination right",
+        "enhanced": "Enhanced due diligence with ongoing screening, beneficial ownership verification, and audit rights",
+        "comprehensive": "Full compliance programme integration with transaction-level screening and reporting"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading", "intl-agency", "intl-franchise", "intl-off-take", "intl-license-international", "intl-tolling"],
+      "depends_on": ["intl-trade-embargo"],
+      "compliance_refs": ["OFAC Regulations (31 CFR 500-599)", "EU Council Regulations", "OFSI (UK Sanctions Act 2018)", "UN Security Council Resolutions"]
+    },
+    {
+      "id": "intl-anti-bribery",
+      "clause_category": "international-trade",
+      "name": "Anti-Bribery and Anti-Corruption",
+      "description": "Requires both parties to comply with all applicable anti-bribery and anti-corruption laws, including the UK Bribery Act 2010, the US Foreign Corrupt Practices Act (FCPA), and local anti-corruption legislation. The clause addresses the prohibition of bribery of foreign public officials, commercial bribery, facilitation payments, and the provision of hospitality or gifts that could constitute improper inducements. Under the UK Bribery Act section 7, a commercial organisation may be held strictly liable for failing to prevent bribery by associated persons unless it can demonstrate adequate procedures.",
+      "drafting_guidance": "Include absolute prohibitions on bribery, corruption, and facilitation payments (note: the UK Bribery Act does not recognise a facilitation payments defence). Require both parties to maintain adequate anti-bribery compliance procedures proportionate to bribery risk. Address the engagement of agents, intermediaries, and sub-contractors (who present the highest bribery risk in international trade). Require disclosure of all commissions, fees, and payments to agents or intermediaries. Include the right to audit the counterparty's anti-corruption compliance and books and records. Specify hospitality and gifts thresholds and approval requirements. Require maintenance of accurate books and records (a standalone obligation under the FCPA). Include termination rights for breach of anti-bribery provisions. Require prompt notification of any actual or suspected bribery or corruption. Address specific high-risk scenarios: government procurement, customs clearance, permit applications, and facilitation of regulatory approvals. Consider requiring annual anti-corruption compliance certifications.",
+      "variations": {
+        "standard": "Standard anti-bribery representations, warranties, and compliance obligations",
+        "enhanced": "Enhanced provisions including agent due diligence, audit rights, and annual certification",
+        "uk-bribery-act-adequate-procedures": "Provisions designed to satisfy the UK Bribery Act section 7 adequate procedures defence"
+      },
+      "contract_types": ["intl-distribution", "intl-agency", "intl-franchise", "intl-supply-international", "intl-commodity-trading", "intl-license-international"],
+      "depends_on": [],
+      "compliance_refs": ["UK Bribery Act 2010", "US FCPA (15 USC 78dd-1 et seq.)", "OECD Anti-Bribery Convention", "UNCAC"]
+    },
+    {
+      "id": "intl-anti-money-laundering",
+      "clause_category": "international-trade",
+      "name": "Anti-Money Laundering Compliance",
+      "description": "Requires both parties to comply with applicable anti-money laundering (AML) and counter-terrorism financing (CTF) laws and regulations. In international trade, trade-based money laundering (TBML) is a significant risk vector involving the manipulation of trade transactions to transfer value across borders. Common TBML techniques include over- and under-invoicing, multiple invoicing, and the misrepresentation of goods or services. The Financial Action Task Force (FATF) has identified trade-based money laundering as one of the three main methods by which criminal organisations move money across borders.",
+      "drafting_guidance": "Include representations that neither party's funds derive from unlawful activity and that the transaction is not being used to launder proceeds of crime. Require customer due diligence (CDD) and, for higher-risk relationships, enhanced due diligence (EDD) on counterparties and beneficial owners. Address the FATF risk-based approach to AML compliance. Include suspicious activity reporting obligations (noting that tipping-off is a criminal offence in many jurisdictions). Require maintenance of adequate AML compliance programmes, including KYC procedures, transaction monitoring, and record-keeping. Address the specific TBML risks in the transaction: verify that pricing is consistent with market rates, that goods descriptions are accurate, and that shipping routes are commercially rational. Include the right to terminate if AML concerns cannot be resolved. Specify record retention periods consistent with applicable law (typically 5-7 years after termination).",
+      "variations": {
+        "standard": "Standard AML representations and compliance obligations",
+        "enhanced": "Enhanced due diligence with beneficial ownership verification and transaction monitoring",
+        "financial-institution-grade": "Full AML programme integration with automated screening and suspicious activity reporting"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-distribution", "intl-agency"],
+      "depends_on": ["intl-sanctions-compliance"],
+      "compliance_refs": ["FATF Recommendations", "EU Anti-Money Laundering Directives (AMLD)", "US Bank Secrecy Act", "UK Proceeds of Crime Act 2002"]
+    },
+    {
+      "id": "intl-trade-embargo",
+      "clause_category": "international-trade",
+      "name": "Trade Embargo and Restricted Territories",
+      "description": "Prohibits the supply, delivery, or transhipment of goods or services to embargoed countries or restricted territories, and establishes a contractual mechanism for addressing changes to embargo regimes during the contract term. Trade embargoes may be comprehensive (prohibiting virtually all transactions with a territory) or sectoral (restricting specific categories of goods, services, or financial transactions). Embargoes are imposed by the UN Security Council, the EU, the US (OFAC), the UK (OFSI), and other national authorities, and may overlap or conflict, creating complex multi-jurisdictional compliance challenges.",
+      "drafting_guidance": "Define 'Embargoed Territory' with reference to specific sanctions programmes and maintain the definition as a living list that updates automatically with changes to applicable sanctions. Include a prohibition on direct or indirect supply to Embargoed Territories, including through re-export, diversion, or transhipment. Address the buyer's obligation not to divert goods to Embargoed Territories and include corresponding end-use/end-user commitments. Include a right to suspend or terminate shipments if there is reasonable concern about diversion to an Embargoed Territory. Address the practical consequences of mid-contract embargo changes: allocation of costs for diverted shipments, insurance implications, and contract adjustment mechanisms. Require notification of any government enquiry regarding potential embargo violations. Include provisions for the wind-down of existing obligations if a territory becomes embargoed during the contract term, including licensing and authorisation requirements for wind-down transactions.",
+      "variations": {
+        "comprehensive-list": "Comprehensive prohibition covering all currently embargoed territories with automatic updates",
+        "schedule-based": "Named restricted territories in a schedule, updated by mutual agreement",
+        "risk-tiered": "Tiered approach with prohibited territories and restricted territories requiring enhanced controls"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading", "intl-off-take"],
+      "depends_on": ["intl-sanctions-compliance"],
+      "compliance_refs": ["UN Security Council Resolutions", "EU Restrictive Measures", "OFAC Country Programmes", "OFSI Financial Sanctions"]
+    },
+    {
+      "id": "intl-country-of-origin",
+      "clause_category": "international-trade",
+      "name": "Country of Origin and Preferential Origin",
+      "description": "Establishes the requirements for determining and certifying the country of origin of goods, including both non-preferential origin (for customs duties and trade statistics) and preferential origin (for obtaining reduced or zero-duty tariff treatment under free trade agreements). Origin determination rules vary significantly between jurisdictions and between preferential and non-preferential contexts. Incorrect origin declarations can result in duty assessments, penalties, and loss of preferential tariff benefits, with potential criminal liability for fraudulent declarations.",
+      "drafting_guidance": "Specify the applicable rules of origin (WTO Agreement on Rules of Origin for non-preferential origin; specific FTA origin protocols for preferential origin). Require the seller to provide certificates of origin issued by competent authorities or authorised bodies. For preferential origin claims, specify the relevant FTA and the applicable origin criteria (wholly obtained, substantial transformation, value-added percentage, change in tariff classification). Address the seller's obligation to maintain records supporting origin declarations for the retention period required by the applicable FTA (typically 3-5 years). Include representations that origin certificates are accurate and that the seller will notify the buyer of any changes affecting origin status. Allocate liability for additional duties or penalties resulting from incorrect origin declarations. Address cumulation rules and the impact of third-country components on origin determination. Consider requiring the seller to be a registered exporter (REX) or approved exporter where applicable.",
+      "variations": {
+        "non-preferential": "Standard country of origin determination for MFN duty rates",
+        "preferential-fta": "Preferential origin certification under a specific free trade agreement",
+        "self-certification": "Exporter self-certification of origin (e.g., under EU REX system or USMCA)"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading"],
+      "depends_on": ["intl-customs-compliance"],
+      "compliance_refs": ["WTO Agreement on Rules of Origin", "EU Generalised System of Preferences", "Pan-Euro-Mediterranean Convention on Rules of Origin"]
+    },
+    {
+      "id": "intl-dual-use-goods",
+      "clause_category": "international-trade",
+      "name": "Dual-Use Goods Classification and Controls",
+      "description": "Addresses the classification, licensing, and end-use controls applicable to dual-use items that have both civilian and potential military applications. Dual-use controls apply to goods, software, and technology listed in multilateral control regimes (Wassenaar Arrangement, MTCR, NSG, Australia Group) and transposed into national control lists such as Annex I of EU Regulation 2021/821 and the US Commerce Control List. The EU dual-use regulation also includes a 'catch-all' provision requiring authorisation for unlisted items where the exporter knows or has been informed that the items are or may be intended for weapons of mass destruction end-uses.",
+      "drafting_guidance": "Require the seller to provide the export control classification number (ECCN) for US-controlled items and the equivalent classification under EU Annex I or national lists. Include representations regarding the dual-use classification status of the goods and confirmation that required export licences have been obtained. Address the catch-all provisions in Article 4 of EU Regulation 2021/821 and Section 744 of the EAR. Require the buyer to provide end-use certificates and end-user statements confirming that the goods will not be used for prohibited end-uses (nuclear, chemical, biological weapons, or missile delivery systems). Include re-export restrictions requiring the buyer to obtain prior written consent before re-exporting controlled items. Address technology transfer controls applicable to technical data, software, and know-how shared during the transaction. Include record-keeping obligations for export licence documentation. Specify the right to withhold shipment pending export licence approval.",
+      "variations": {
+        "listed-items": "Controls for items specifically listed on dual-use control lists",
+        "catch-all": "Enhanced controls addressing catch-all provisions for unlisted but potentially sensitive items",
+        "technology-focused": "Specific provisions for intangible technology transfers and deemed exports"
+      },
+      "contract_types": ["intl-supply-international", "intl-license-international", "intl-distribution"],
+      "depends_on": ["intl-export-control"],
+      "compliance_refs": ["EU Regulation 2021/821 (Dual-Use Regulation)", "US EAR Commerce Control List", "Wassenaar Arrangement Dual-Use List"]
+    },
+    {
+      "id": "intl-technology-transfer",
+      "clause_category": "international-trade",
+      "name": "International Technology Transfer",
+      "description": "Governs the cross-border transfer of technology, technical data, know-how, and intellectual property, addressing the legal, regulatory, and commercial framework for technology transfer transactions. Technology transfers raise complex issues at the intersection of intellectual property law, export control law, competition law, and the recipient country's foreign investment and technology import regulations. Many jurisdictions impose mandatory technology transfer registration, approval, or tax obligations that must be addressed contractually.",
+      "drafting_guidance": "Define the scope of transferred technology precisely (patents, trade secrets, know-how, technical data, software, manufacturing processes). Specify the transfer mechanism (licence, assignment, or provision of technical assistance). Address export control restrictions on technology transfer, including deemed export rules (transfer to foreign nationals). Comply with the recipient country's technology import regulations and registration requirements. Specify the territory and field-of-use restrictions for the transferred technology. Address improvement patents and grant-back provisions. Include provisions for technical assistance, training, and ongoing support obligations. Address the treatment of confidential technical information and trade secrets. Specify royalty and licence fee payment terms, including withholding tax provisions and tax gross-up obligations. Address the impact of future export control changes on the technology transfer arrangement. Include provisions for technology escrow if the transferor becomes insolvent. Address data localisation requirements in the recipient country that may affect technology transfer.",
+      "variations": {
+        "full-transfer": "Complete technology package transfer with training and ongoing support",
+        "licensed-access": "Licensed access to technology with restrictions on modification and sub-licensing",
+        "joint-development": "Collaborative technology development with shared ownership of improvements"
+      },
+      "contract_types": ["intl-license-international", "intl-franchise", "intl-tolling"],
+      "depends_on": ["intl-export-control", "intl-dual-use-goods"],
+      "compliance_refs": ["EU Regulation 2021/821 Art 2(1)", "US EAR Part 734 (Technology Controls)", "TRIPS Agreement"]
+    },
+    {
+      "id": "intl-local-content",
+      "clause_category": "international-trade",
+      "name": "Local Content Requirements",
+      "description": "Addresses mandatory or negotiated local content requirements that mandate a minimum percentage of goods, services, labour, or value-add to be sourced from the host country. Local content requirements are imposed by many resource-rich and developing countries as a condition of market access, government procurement, or natural resource exploitation licences. While WTO TRIMS Agreement restricts certain trade-related investment measures including local content requirements, many jurisdictions continue to impose them through sector-specific legislation, procurement regulations, or investment conditions.",
+      "drafting_guidance": "Identify all applicable local content legislation and regulations in the destination country. Define how local content is measured (percentage of contract value, percentage of labour hours, value of locally sourced materials, or a combination). Specify the local content target and the timeline for achieving progressive local content increases. Address the mechanism for certifying local content compliance (independent audit, government certification, self-reporting). Allocate the risk if local content requirements cannot be met due to insufficient local capacity (force majeure, contract adjustment, or waiver mechanism). Include provisions for local supplier development and capacity building. Address the pricing implications of local content requirements (local sourcing may be more expensive than international alternatives). Specify the consequences of non-compliance (contract penalties, licence revocation, debarment from future procurement). Address the interaction with the WTO TRIMS Agreement and any applicable bilateral investment treaties.",
+      "variations": {
+        "mandatory-statutory": "Compliance with mandatory local content legislation with defined minimum percentages",
+        "progressive": "Progressive local content increase over contract term with annual targets",
+        "best-endeavours": "Best endeavours obligation to maximise local content without fixed minimums"
+      },
+      "contract_types": ["intl-supply-international", "intl-franchise", "intl-tolling", "intl-off-take"],
+      "depends_on": ["intl-customs-compliance"],
+      "compliance_refs": ["WTO TRIMS Agreement", "Local content legislation (jurisdiction-specific)"]
+    },
+    {
+      "id": "intl-currency-hedging",
+      "clause_category": "international-trade",
+      "name": "Currency and Foreign Exchange Provisions",
+      "description": "Establishes the contractual framework for managing foreign exchange risk in cross-border transactions, including the specification of payment currencies, exchange rate determination mechanisms, currency hedging obligations, and the allocation of foreign exchange risk between the parties. Currency volatility can materially alter the economic balance of international contracts, and failure to address foreign exchange risk contractually is one of the most common sources of international commercial disputes.",
+      "drafting_guidance": "Specify the contract currency and the payment currency (which may differ). Where prices are quoted in one currency but payment is made in another, define the exchange rate source (e.g., ECB reference rate, Federal Reserve rate, Bloomberg fixing) and the fixing date (date of invoice, date of shipment, or date of payment). Address the allocation of foreign exchange risk: fixed exchange rate (one party bears all risk), shared band (parties share risk within a defined corridor), or full pass-through (buyer bears all risk). For long-term contracts, consider including a currency adjustment clause that reopens pricing if exchange rates move beyond a defined threshold (typically 5-10%). Address currency convertibility and transfer restrictions in countries with exchange controls. Specify the treatment of foreign exchange gains and losses for accounting purposes. Include provisions for the scenario where a payment currency becomes unavailable due to sanctions, exchange controls, or currency collapse. Address the interaction with letters of credit (which fix the payment amount in the L/C currency).",
+      "variations": {
+        "fixed-rate": "Fixed exchange rate for the contract duration, with one party bearing all FX risk",
+        "floating-with-collar": "Floating exchange rate within a defined corridor; adjustment mechanism if rate moves outside band",
+        "natural-hedge": "Matching of revenue and cost currencies to create a natural hedge"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take", "intl-tolling", "intl-distribution"],
+      "depends_on": [],
+      "compliance_refs": ["IMF Articles of Agreement Art VIII", "EU Payment Services Directive"]
+    },
+    {
+      "id": "intl-hardship-clause",
+      "clause_category": "international-trade",
+      "name": "Hardship and Changed Circumstances",
+      "description": "Provides a contractual mechanism for adapting the contract when unforeseen events fundamentally alter the equilibrium of the contract, making performance excessively onerous for one party without rendering it impossible. Unlike force majeure (which addresses impossibility), hardship addresses situations where performance remains possible but has become economically devastating for one party. The concept is recognised in UNIDROIT Principles Articles 6.2.1-6.2.3, the ICC Hardship Clause 2020, and many civil law systems under the doctrine of impr\u00e9vision, but is not generally recognised in common law jurisdictions absent express contractual provision.",
+      "drafting_guidance": "Define 'hardship' precisely, distinguishing it from force majeure (hardship = performance possible but excessively onerous; force majeure = performance impossible or impracticable). Specify the threshold for invoking hardship (e.g., cost of performance increases by more than 30%, or value of performance diminishes by more than 30%). Include a non-exhaustive list of hardship-triggering events: dramatic currency fluctuations, commodity price spikes, unexpected regulatory changes, trade embargo changes. Establish the procedural requirements: written notice, supporting evidence, good-faith renegotiation period (typically 30-60 days). Define the consequences if renegotiation fails: adaptation by an expert or arbitral tribunal, or right to terminate. Address the obligation of the affected party to continue performing during renegotiation. Specify whether the clause is triggered by a single event or cumulative events. Address the relationship with force majeure provisions to avoid overlap or gaps.",
+      "variations": {
+        "icc-2020": "Based on ICC Hardship Clause 2020 with renegotiation and arbitral adaptation",
+        "unidroit": "Based on UNIDROIT Principles Art 6.2.1-6.2.3 with judicial/arbitral adaptation",
+        "threshold-based": "Triggered when cost/value change exceeds a defined percentage threshold"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take", "intl-tolling", "intl-distribution"],
+      "depends_on": ["intl-force-majeure-international"],
+      "compliance_refs": ["UNIDROIT Principles Art 6.2.1-6.2.3", "ICC Hardship Clause 2020", "CISG Art 79 (by analogy)"]
+    },
+    {
+      "id": "intl-adaptation-clause",
+      "clause_category": "international-trade",
+      "name": "Contract Adaptation and Price Revision",
+      "description": "Establishes mechanisms for periodic or event-driven adaptation of contract terms, particularly pricing, to reflect changed market conditions over the life of a long-term international contract. Adaptation clauses are essential in commodity trading, long-term supply agreements, and off-take agreements where market conditions, input costs, regulatory requirements, or exchange rates may change materially over the contract term. Without adaptation mechanisms, long-term contracts risk becoming commercially unworkable, leading to disputes, renegotiation demands, or abandonment.",
+      "drafting_guidance": "Define the adaptation triggers: scheduled review dates (e.g., annual or quarterly), index-linked adjustments (commodity indices, CPI), threshold-based triggers (when specified parameters move beyond a defined band), or event-based triggers (regulatory change, tariff change). Specify the adaptation mechanism: automatic formula-based adjustment, negotiated adjustment within defined parameters, or expert determination. For commodity-linked pricing, specify the reference index (e.g., Platts, Argus, LME, ICE), the averaging period, and the adjustment lag. Include a fallback mechanism if the parties cannot agree on an adaptation (expert determination, arbitration, or termination right). Address the frequency of adaptation and any minimum notice period. Specify whether adaptation operates retrospectively or prospectively only. Include caps or floors on total cumulative adjustment to prevent extreme outcomes. Address the interaction with hardship and force majeure clauses.",
+      "variations": {
+        "index-linked": "Automatic adjustment linked to published commodity or price indices",
+        "periodic-review": "Scheduled renegotiation at defined intervals with fallback to expert determination",
+        "event-triggered": "Adaptation triggered by specific events such as tariff changes or regulatory action"
+      },
+      "contract_types": ["intl-commodity-trading", "intl-off-take", "intl-supply-international", "intl-tolling"],
+      "depends_on": ["intl-hardship-clause"],
+      "compliance_refs": ["UNIDROIT Principles Art 6.2.1-6.2.3", "ICC Hardship Clause 2020"]
+    },
+    {
+      "id": "intl-choice-of-law",
+      "clause_category": "international-trade",
+      "name": "Choice of Law / Governing Law (International)",
+      "description": "Specifies the substantive law governing the interpretation, validity, and enforcement of the contract in an international context. The choice of governing law determines which country's contract law principles, statutory provisions, and judicial precedent apply to the parties' rights and obligations. In international trade, the choice must also address the application or exclusion of the CISG (UN Convention on Contracts for the International Sale of Goods), the interaction with mandatory local laws that cannot be contracted out of, and the impact of the governing law choice on the enforceability of key contract provisions such as limitation of liability, penalty clauses, and good faith obligations.",
+      "drafting_guidance": "Select a governing law that is well-developed for commercial transactions, politically neutral between the parties, and whose courts or arbitral institutions have jurisdiction to hear disputes. Common neutral choices include English law, Swiss law, and New York law. Explicitly address the CISG: either include it (by choosing the law of a CISG contracting state without exclusion) or exclude it (with express language: 'the CISG shall not apply'). Many international practitioners routinely exclude the CISG in favour of a single national law for certainty. Address the applicable law for specific issues that may be governed by different laws under conflict-of-laws rules: property/title transfer (lex situs), contractual capacity, formal validity, and mandatory rules. Consider the impact of the governing law on key contract provisions: English law permits broad limitation of liability (subject to UCTA reasonableness); German law may void disproportionate limitation clauses; French law requires good faith in performance. Specify that the choice of law does not include the conflict-of-laws rules of the chosen jurisdiction (to prevent renvoi).",
+      "variations": {
+        "english-law": "English law excluding CISG, providing well-developed commercial contract jurisprudence",
+        "cisg-applicable": "Law of a CISG contracting state with CISG applying to international sale of goods",
+        "split-governing-law": "Different governing laws for different aspects of the contract (e.g., English law for commercial terms, local law for regulatory compliance)"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-agency", "intl-franchise", "intl-commodity-trading", "intl-off-take", "intl-license-international", "intl-tolling"],
+      "depends_on": [],
+      "compliance_refs": ["CISG (UN Convention on Contracts for International Sale of Goods)", "Rome I Regulation (EC) No 593/2008", "Hague Principles on Choice of Law in International Commercial Contracts"]
+    },
+    {
+      "id": "intl-jurisdiction",
+      "clause_category": "international-trade",
+      "name": "Jurisdiction and Forum Selection",
+      "description": "Designates the courts that have jurisdiction to hear disputes arising from the international contract, and specifies whether that jurisdiction is exclusive or non-exclusive. Forum selection in international contracts must consider not only the chosen court's competence and procedural efficiency but also the enforceability of the resulting judgment in the counterparty's jurisdiction. The Hague Convention on Choice of Court Agreements (2005) provides a framework for the recognition and enforcement of judgments from courts chosen by exclusive choice-of-court agreements, but its adoption is not universal.",
+      "drafting_guidance": "Choose between exclusive jurisdiction (only the designated court may hear disputes) and non-exclusive jurisdiction (the designated court may hear disputes but parties retain the right to commence proceedings in other competent courts). Consider the enforceability of judgments: English court judgments may be enforced across the EU under the Brussels I Regulation recast (for pre-Brexit cases) or the Hague Convention; New York judgments may be enforceable on a reciprocal basis in many jurisdictions. Specify the precise court (e.g., 'the courts of England and Wales' or 'the courts of the Southern District of New York'). Address the interaction with arbitration clauses (jurisdiction clauses typically serve as fallback or for interim relief where arbitration is the primary dispute mechanism). Consider requiring submission to jurisdiction and appointment of an agent for service of process in the chosen jurisdiction. Address anti-suit injunction availability in the chosen forum. Consider whether the chosen forum has specialist commercial courts (English Commercial Court, Singapore International Commercial Court).",
+      "variations": {
+        "exclusive": "Exclusive jurisdiction of named courts, excluding all other forums",
+        "non-exclusive": "Non-exclusive jurisdiction allowing proceedings in the named courts or other competent courts",
+        "asymmetric": "One party has exclusive jurisdiction while the other retains freedom to choose among competent forums"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-agency", "intl-franchise", "intl-commodity-trading", "intl-license-international"],
+      "depends_on": ["intl-choice-of-law"],
+      "compliance_refs": ["Hague Convention on Choice of Court Agreements 2005", "Brussels I Regulation Recast (EU) No 1215/2012"]
+    },
+    {
+      "id": "intl-arbitration-icc",
+      "clause_category": "international-trade",
+      "name": "ICC International Arbitration",
+      "description": "Provides for the resolution of disputes by arbitration under the Rules of Arbitration of the International Chamber of Commerce (ICC), which is the world's leading international commercial arbitration institution. ICC arbitration offers procedural neutrality, party autonomy in the selection of arbitrators, confidentiality, and the significant advantage that ICC awards are enforceable in over 170 countries under the New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards (1958). ICC arbitration is the standard dispute resolution mechanism for high-value international trade transactions.",
+      "drafting_guidance": "Use the ICC model arbitration clause as a starting point and customise as needed. Specify the number of arbitrators (one for lower-value disputes, three for complex or high-value disputes). Define the seat of arbitration (which determines the procedural law governing the arbitration and the courts with supervisory jurisdiction). Choose a neutral seat with a modern arbitration law based on the UNCITRAL Model Law (e.g., London, Paris, Singapore, Hong Kong, Stockholm). Specify the language of the arbitration. Address the scope of arbitrable disputes (all disputes 'arising out of or in connection with' the contract). Include emergency arbitrator provisions for urgent interim measures. Consider including a multi-tier dispute resolution clause (negotiation, then mediation, then arbitration). Address the interaction with court proceedings (parties should agree that courts may still grant interim relief in support of arbitration). Specify the applicable rules of law (which may differ from the governing law of the contract). Address the allocation of arbitration costs. Consider ICC Expedited Procedure Provisions for disputes under USD 3 million.",
+      "variations": {
+        "standard": "ICC arbitration with three arbitrators at a neutral seat",
+        "expedited": "ICC Expedited Procedure with sole arbitrator for disputes under USD 3 million",
+        "multi-tier": "Negotiation followed by ICC mediation followed by ICC arbitration"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-agency", "intl-franchise", "intl-commodity-trading", "intl-off-take", "intl-license-international", "intl-tolling"],
+      "depends_on": ["intl-choice-of-law"],
+      "compliance_refs": ["ICC Rules of Arbitration 2021", "New York Convention 1958", "UNCITRAL Model Law on International Commercial Arbitration"]
+    },
+    {
+      "id": "intl-mediation",
+      "clause_category": "international-trade",
+      "name": "International Mediation",
+      "description": "Establishes mediation as a mandatory or optional step in the dispute resolution process before arbitration or litigation. International mediation involves a neutral third party facilitating negotiations between the disputing parties to help them reach a mutually acceptable settlement. The Singapore Convention on Mediation (2019) provides for the cross-border enforcement of mediated settlement agreements, enhancing the attractiveness of mediation in international commerce. Mediation preserves commercial relationships and typically resolves disputes faster and at lower cost than arbitration or litigation.",
+      "drafting_guidance": "Specify whether mediation is mandatory (a pre-condition to arbitration or litigation) or voluntary (available at either party's option). Identify the mediation institution and rules (ICC Mediation Rules, CEDR, JAMS International, or Singapore International Mediation Centre). Define the mediation timeframe (typically 30-60 days from appointment of mediator). Address mediator selection: party agreement, or institutional appointment if parties cannot agree. Specify the seat of mediation (where the mediation will be conducted). Address the language of mediation. Include confidentiality provisions for the mediation process and without-prejudice protections for settlement discussions. Specify that statements made during mediation are not admissible in subsequent arbitration or litigation. Address cost sharing (typically shared equally). Include a tolling provision to ensure that the mediation process does not cause limitation periods to expire. Specify the consequences of a party failing to participate in good faith in mediation.",
+      "variations": {
+        "mandatory-pre-arbitration": "Mandatory mediation as a pre-condition to commencing arbitration",
+        "optional-parallel": "Optional mediation available at any time, including parallel to arbitration",
+        "singapore-convention": "Mediation designed to produce an enforceable settlement under the Singapore Convention"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-franchise", "intl-commodity-trading"],
+      "depends_on": ["intl-arbitration-icc"],
+      "compliance_refs": ["Singapore Convention on Mediation 2019", "ICC Mediation Rules 2014", "EU Mediation Directive 2008/52/EC"]
+    },
+    {
+      "id": "intl-language-of-contract",
+      "clause_category": "international-trade",
+      "name": "Language of Contract and Communications",
+      "description": "Specifies the authoritative language of the contract and the language for official communications, notices, and dispute resolution proceedings. In international transactions between parties speaking different languages, it is common to execute the contract in multiple languages or to translate the contract for the convenience of one party. Without a clear language clause, disputes may arise over which language version prevails, and local courts or regulatory authorities may require translations or refuse to recognise foreign-language contracts. Many jurisdictions also impose mandatory language requirements for certain types of contracts or filings.",
+      "drafting_guidance": "Designate a single authoritative language version (e.g., 'This contract is executed in English, which shall be the authoritative version'). If the contract is executed in multiple languages, specify which version prevails in the event of discrepancy. Address the language for official notices, correspondence, and communications (should align with the authoritative language). Specify the language for dispute resolution proceedings (arbitration, mediation, or court proceedings). Consider local law requirements: some jurisdictions require contracts to be in the local language (e.g., Indonesia, Brazil, France for employment, Quebec). Address the status of translated versions (for convenience only, not legally binding). Specify which party bears the cost of translation. Address the language requirements for supporting documents (certificates of origin, inspection certificates, transport documents). Consider the practical implications for day-to-day contract management and the language competency of contract administrators.",
+      "variations": {
+        "single-authoritative": "Single language version is authoritative; translations for convenience only",
+        "dual-language": "Two language versions with specified prevailing language in case of conflict",
+        "local-language-required": "Authoritative version in commercial language plus mandatory local language version for regulatory compliance"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-agency", "intl-franchise", "intl-license-international"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "intl-sovereign-immunity",
+      "clause_category": "international-trade",
+      "name": "Waiver of Sovereign Immunity",
+      "description": "Requires a state entity, state-owned enterprise, or government instrumentality to waive its sovereign immunity from jurisdiction and execution, enabling the counterparty to enforce the contract and any resulting judgment or arbitral award against the sovereign entity and its assets. Under the doctrine of sovereign immunity, states and their instrumentalities enjoy immunity from the jurisdiction of foreign courts and from the execution of judgments against their assets, unless they consent to waive that immunity. The UN Convention on Jurisdictional Immunities of States (not yet in force), the UK State Immunity Act 1978, and the US Foreign Sovereign Immunities Act 1976 provide the legal framework.",
+      "drafting_guidance": "Require an express, irrevocable waiver of sovereign immunity from jurisdiction (consent to be sued in the designated forum). Separately require an express waiver of sovereign immunity from execution and attachment (consent to enforcement of judgments or awards against the state entity's assets). The waiver of immunity from execution is particularly important because many jurisdictions distinguish between jurisdictional immunity and execution immunity, and a waiver of the former does not automatically waive the latter. Specify the categories of assets subject to execution (commercial assets only, or all assets). Address the distinction between commercial and governmental assets (diplomatic premises, military property, and central bank assets typically enjoy special protections). Include representations that the state entity has the authority to waive sovereign immunity and that the waiver has been duly authorised. Address the applicable sovereign immunity legislation (FSIA, SIA, or equivalent). Consider requiring the state entity to designate assets available for execution and to maintain a minimum asset level in commercial jurisdictions.",
+      "variations": {
+        "full-waiver": "Comprehensive waiver of both jurisdictional and execution immunity",
+        "limited-waiver": "Waiver of jurisdictional immunity only, with execution immunity preserved",
+        "commercial-assets-only": "Waiver of execution immunity limited to commercial (non-sovereign) assets"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take"],
+      "depends_on": ["intl-jurisdiction", "intl-arbitration-icc"],
+      "compliance_refs": ["UK State Immunity Act 1978", "US Foreign Sovereign Immunities Act 1976 (28 USC 1602-1611)", "UN Convention on Jurisdictional Immunities 2004"]
+    },
+    {
+      "id": "intl-force-majeure-international",
+      "clause_category": "international-trade",
+      "name": "Force Majeure (International Trade)",
+      "description": "Excuses or suspends a party's performance obligations when performance is prevented, impeded, or delayed by events beyond the party's reasonable control, adapted specifically for international trade risks. International force majeure clauses must address a broader range of events than domestic equivalents, including trade embargoes, sanctions, export licence revocation, port closures, canal blockages, pandemics, political instability, currency inconvertibility, and government seizure of goods. The ICC Force Majeure Clause 2020 provides a widely-used international standard that can be incorporated by reference.",
+      "drafting_guidance": "Define force majeure events comprehensively, including both a specific list and a general catch-all. International trade-specific events to include: trade embargoes and sanctions, export or import licence revocation, port closures or congestion, canal or strait blockages, political instability or civil unrest, government requisition or seizure of goods, pandemic or epidemic, currency inconvertibility or transfer restrictions, and piracy. Specify the threshold for invocation: 'prevented' (highest threshold), 'hindered' (intermediate), or 'delayed' (lowest). Require prompt written notice with evidence of the force majeure event and its impact. Define the consequences: suspension of affected obligations, extension of time for performance, and allocation of additional costs. Specify the maximum suspension period before either party may terminate (typically 3-6 months). Address the obligation to mitigate the effects of force majeure (alternative sourcing, alternative routes, alternative ports). Consider incorporating the ICC Force Majeure Clause 2020 by reference. Address the relationship with hardship clauses (events that do not reach force majeure threshold may constitute hardship). Address partial force majeure (affecting some but not all obligations).",
+      "variations": {
+        "icc-2020": "ICC Force Majeure Clause 2020 incorporated by reference",
+        "extended-international": "Comprehensive international force majeure with trade-specific events and mitigation duties",
+        "split-risk": "Different force majeure consequences for buyer and seller reflecting different risk profiles"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading", "intl-off-take", "intl-tolling", "intl-agency"],
+      "depends_on": ["intl-hardship-clause"],
+      "compliance_refs": ["ICC Force Majeure Clause 2020", "CISG Art 79", "UNIDROIT Principles Art 7.1.7"]
+    },
+    {
+      "id": "intl-documentary-compliance",
+      "clause_category": "international-trade",
+      "name": "Documentary Compliance and Presentation",
+      "description": "Establishes the documentary requirements for trade transactions, specifying which documents must be produced, their required form and content, presentation deadlines, and the consequences of documentary discrepancies. In documentary trade (L/C and documentary collection transactions), the principle of strict compliance means that banks examine documents on their face and will reject documents that do not strictly comply with the credit terms. Documentary discrepancies are the leading cause of first-presentation rejection under letters of credit, with industry statistics showing a discrepancy rate of 60-75% on first presentation.",
+      "drafting_guidance": "List all required documents with precise specifications: commercial invoice (content, number of copies), transport document (type, consignee, notify party), insurance document (type, coverage amount, risks covered), packing list, certificate of origin, inspection certificate, phytosanitary certificate, fumigation certificate, and any other documents required by the importing country's regulations. For L/C transactions, ensure document requirements in the contract align with the L/C terms to avoid discrepancies. Reference ISBP 745 (ICC International Standard Banking Practice) for guidance on acceptable document variations. Specify the presentation period (UCP 600 allows 21 days from shipment, but the contract may specify a shorter period). Address the consequences of documentary discrepancies: right to cure, cost allocation for amendments, and buyer's obligation to provide waivers for minor discrepancies. Specify document preparation responsibilities (which party prepares which documents). Address electronic document presentation where applicable.",
+      "variations": {
+        "lc-aligned": "Documentary requirements precisely aligned with letter of credit terms per UCP 600",
+        "regulatory-enhanced": "Enhanced documentation including regulatory certificates required by importing country",
+        "electronic": "Electronic document presentation through approved platforms"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take"],
+      "depends_on": ["intl-letter-of-credit", "intl-bill-of-lading"],
+      "compliance_refs": ["UCP 600", "ISBP 745", "eUCP Version 2.0"]
+    },
+    {
+      "id": "intl-trade-terms",
+      "clause_category": "international-trade",
+      "name": "Trade Terms and Definitions",
+      "description": "Provides a comprehensive definitions section tailored to international trade, establishing the precise meaning of trade-specific terminology used throughout the contract. International trade contracts involve specialised terminology drawn from multiple legal traditions, international conventions, trade customs, and industry practices. Ambiguous or undefined terms are a leading source of international commercial disputes, particularly when parties from different legal and linguistic backgrounds assign different meanings to the same term.",
+      "drafting_guidance": "Define all critical trade terms explicitly, including: 'Goods' (with reference to detailed specifications), 'Shipment' vs 'Delivery' (which may have different meanings under different Incoterms), 'Arrival' vs 'Discharge', 'Bill of Lading Date' vs 'On-Board Date', 'Working Days' vs 'Business Days' (specifying which jurisdiction's calendar applies), 'FOB Value' vs 'CIF Value' for insurance and customs purposes. Address CISG terminology if the CISG applies (e.g., 'fundamental breach' under Art 25, 'reasonable time' under Art 39). Define monetary terms: 'Contract Price', 'Unit Price', 'FOB Price', including whether prices include or exclude duties, taxes, and insurance. Define quantity terms: measurement units, tolerance percentages, and the method for determining final quantity (draft survey, shore tank measurement, weight certificates). Address the hierarchy of documents: which document prevails in case of conflict between the contract, purchase order, specifications, and Incoterms.",
+      "variations": {
+        "commodity-specific": "Definitions tailored to specific commodity trade (petroleum, minerals, agricultural products)",
+        "cisg-aligned": "Definitions aligned with CISG terminology and concepts",
+        "industry-standard": "Definitions incorporating industry-standard terms (GAFTA, FOSFA, IFIA)"
+      },
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take", "intl-distribution"],
+      "depends_on": ["intl-incoterms"],
+      "compliance_refs": ["CISG", "ICC Incoterms 2020", "GAFTA Contract Forms", "FOSFA Contract Forms"]
+    },
+    {
+      "id": "intl-cross-border-data",
+      "clause_category": "international-trade",
+      "name": "Cross-Border Data Transfer in Trade",
+      "description": "Addresses the transfer of personal data and commercially sensitive business data across borders in the context of international trade transactions. Cross-border data flows are essential for international trade operations (customer data, shipment tracking, customs declarations, payment processing), but are subject to increasingly complex data localisation and data protection requirements. GDPR Chapter V restricts transfers of personal data outside the EEA, and many other jurisdictions have enacted data localisation laws that restrict or condition the cross-border transfer of certain categories of data.",
+      "drafting_guidance": "Identify the categories of data that will be transferred cross-border (personal data of employees, customer data, shipment and logistics data, financial data, customs data). For personal data transfers from the EEA, ensure compliance with GDPR Chapter V: adequacy decision, Standard Contractual Clauses (SCCs), Binding Corporate Rules (BCRs), or derogations under Art 49. Address the Schrems II implications by conducting a transfer impact assessment (TIA) and implementing supplementary measures where required. For non-personal commercial data, address trade secret protection across borders and the applicable legal framework for confidential business information. Address data localisation requirements in relevant jurisdictions (e.g., Russia, China, India). Specify the technical and organisational measures for securing data in transit and at rest across borders. Address the rights of data subjects whose data is transferred and the mechanism for handling cross-border data subject requests. Include provisions for regulatory change: if a transfer mechanism becomes invalid, specify the fallback mechanism and the right to suspend transfers.",
+      "variations": {
+        "gdpr-sccs": "Transfer mechanism based on EU Standard Contractual Clauses with supplementary measures",
+        "multi-jurisdictional": "Comprehensive data transfer framework addressing EU, UK, and other applicable data protection regimes",
+        "data-localisation": "Provisions for compliance with data localisation requirements in the destination country"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-franchise", "intl-license-international"],
+      "depends_on": [],
+      "compliance_refs": ["GDPR Chapter V (Art 44-49)", "EU Standard Contractual Clauses (Commission Decision 2021/914)", "UK International Data Transfer Agreement"]
+    },
+    {
+      "id": "intl-local-counsel",
+      "clause_category": "international-trade",
+      "name": "Local Counsel and Regulatory Advisor Requirements",
+      "description": "Requires each party to engage qualified local counsel in relevant jurisdictions to advise on compliance with local laws, regulations, and customs. In international trade, contractual obligations intersect with multiple national legal systems governing customs, taxation, employment, data protection, anti-corruption, environmental compliance, and product safety. Parties cannot reasonably be expected to have expertise in every applicable legal system, and failure to obtain competent local advice is a common source of compliance failures, regulatory penalties, and contractual disputes in international trade.",
+      "drafting_guidance": "Specify the jurisdictions in which local counsel must be engaged (at minimum, the jurisdictions of import, export, and contract performance). Define the scope of local counsel's advisory role: regulatory compliance, customs procedures, tax obligations, employment law, data protection, product registration, and licensing requirements. Address the allocation of local counsel costs (each party typically bears its own costs, but consider allocating costs for shared regulatory requirements). Require each party to provide the other with copies of material local legal advice that affects contract performance (subject to privilege considerations). Include a representation that each party has obtained or will obtain competent local legal advice before performing material obligations in a foreign jurisdiction. Address the consequences of conflicting local legal requirements (which party bears the risk, whether the contract should be adapted). Consider requiring regulatory impact assessments before entering new markets under the contract.",
+      "variations": {
+        "mandatory-engagement": "Mandatory engagement of local counsel in all jurisdictions of contract performance",
+        "on-request": "Engagement of local counsel upon request by either party for specific compliance questions",
+        "shared-counsel": "Parties agree to use a shared local counsel for certain regulatory matters, with separate counsel for contentious issues"
+      },
+      "contract_types": ["intl-distribution", "intl-agency", "intl-franchise", "intl-license-international"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "intl-foreign-judgment-enforcement",
+      "clause_category": "international-trade",
+      "name": "Foreign Judgment and Award Enforcement",
+      "description": "Addresses the recognition and enforcement of foreign court judgments and arbitral awards, including the parties' obligations to cooperate with enforcement proceedings and not to challenge enforcement on grounds inconsistent with their contractual commitments. The enforceability of dispute resolution outcomes is a critical consideration in international trade: a judgment or award that cannot be enforced against the losing party's assets is of limited practical value. Arbitral awards enjoy broad enforceability under the New York Convention (1958), while foreign court judgments face a more fragmented enforcement landscape depending on bilateral treaties, regional instruments, and national laws.",
+      "drafting_guidance": "Include an express covenant that each party will not oppose or challenge the recognition and enforcement of any judgment or award rendered in accordance with the dispute resolution provisions of the contract. For arbitral awards, reference the New York Convention and confirm that the seat of arbitration is in a New York Convention contracting state. For court judgments, identify the applicable enforcement framework: Brussels I Regulation recast (within the EU), Hague Convention on Choice of Court Agreements (for exclusive jurisdiction agreements), bilateral enforcement treaties, or national enforcement laws. Address the assets available for enforcement and any asset protection undertakings. Include a covenant not to claim sovereign immunity from enforcement (for state entity counterparties). Address the appointment of agents for service of process in relevant enforcement jurisdictions. Specify the language and form requirements for enforcement applications. Include an obligation to pay the costs of enforcement proceedings if the paying party fails to comply voluntarily with a judgment or award.",
+      "variations": {
+        "arbitration-new-york-convention": "Focus on enforcement of arbitral awards under the New York Convention",
+        "judgment-hague": "Focus on enforcement of court judgments under the Hague Convention",
+        "comprehensive": "Addresses enforcement of both arbitral awards and court judgments across multiple jurisdictions"
+      },
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading", "intl-off-take", "intl-franchise"],
+      "depends_on": ["intl-arbitration-icc", "intl-jurisdiction"],
+      "compliance_refs": ["New York Convention 1958", "Hague Convention on Choice of Court Agreements 2005", "Brussels I Regulation Recast (EU) No 1215/2012"]
+    }
+  ],
+  "contract_types": [
+    {
+      "id": "intl-distribution",
+      "name": "International Distribution Agreement",
+      "category": "international",
+      "description": "Agreement appointing a distributor to purchase goods from the supplier and resell them in a defined territory, establishing the commercial relationship between a manufacturer or supplier and an independent distributor operating in a foreign market. The distributor buys goods in its own name, assumes title and risk, and resells at its own price (subject to any resale price maintenance restrictions under local competition law). International distribution agreements must navigate complex issues including territorial exclusivity, EU and local competition law constraints, import/export compliance, and local distribution law protections that may grant the distributor mandatory termination compensation.",
+      "required_clauses": ["intl-choice-of-law", "intl-arbitration-icc", "intl-sanctions-compliance", "intl-anti-bribery", "intl-incoterms", "intl-export-control", "intl-customs-compliance"],
+      "recommended_clauses": ["intl-currency-hedging", "intl-force-majeure-international", "intl-hardship-clause", "intl-language-of-contract", "intl-cross-border-data", "intl-local-counsel", "intl-country-of-origin", "intl-foreign-judgment-enforcement"],
+      "typical_parties": "Supplier / Manufacturer <-> Distributor",
+      "regulatory_drivers": ["EU Competition Law (Vertical Block Exemption Regulation)", "Local distribution law (e.g., Belgian Commercial Agency Act, Middle East agency laws)", "CISG"],
+      "related_agreements": ["intl-agency", "intl-supply-international"]
+    },
+    {
+      "id": "intl-agency",
+      "name": "International Commercial Agency Agreement",
+      "category": "international",
+      "description": "Agreement appointing a commercial agent to negotiate or conclude contracts on behalf of the principal in a foreign market. Unlike a distributor, the agent does not take title to goods but acts as an intermediary, earning commission on sales concluded. International agency agreements are heavily regulated in many jurisdictions: the EU Commercial Agents Directive (86/653/EEC) grants agents mandatory rights to compensation or indemnity upon termination, and many Middle Eastern and Latin American countries impose even more protective agency laws that may override contractual provisions, restrict termination, and mandate registration.",
+      "required_clauses": ["intl-choice-of-law", "intl-arbitration-icc", "intl-anti-bribery", "intl-sanctions-compliance", "intl-language-of-contract", "intl-export-control"],
+      "recommended_clauses": ["intl-force-majeure-international", "intl-currency-hedging", "intl-local-counsel", "intl-cross-border-data", "intl-foreign-judgment-enforcement", "intl-anti-money-laundering"],
+      "typical_parties": "Principal <-> Commercial Agent",
+      "regulatory_drivers": ["EU Commercial Agents Directive 86/653/EEC", "Local agency laws (Middle East, Latin America)", "UK Commercial Agents Regulations 1993"],
+      "related_agreements": ["intl-distribution", "intl-supply-international"]
+    },
+    {
+      "id": "intl-franchise",
+      "name": "International Franchise Agreement",
+      "category": "international",
+      "description": "Agreement granting a franchisee the right to operate a business using the franchisor's brand, business system, intellectual property, and know-how in a foreign territory. International franchising involves the replication of a proven business model across borders, raising complex issues of intellectual property protection, quality control, local regulatory compliance, and cultural adaptation. Many jurisdictions have franchise-specific disclosure and registration requirements (e.g., US FTC Franchise Rule, EU national franchise laws, Australian Franchising Code of Conduct) and may impose mandatory protections on franchisees including cooling-off periods, good faith obligations, and restrictions on non-compete clauses.",
+      "required_clauses": ["intl-choice-of-law", "intl-arbitration-icc", "intl-anti-bribery", "intl-sanctions-compliance", "intl-technology-transfer", "intl-language-of-contract", "intl-cross-border-data"],
+      "recommended_clauses": ["intl-local-content", "intl-force-majeure-international", "intl-currency-hedging", "intl-local-counsel", "intl-hardship-clause", "intl-foreign-judgment-enforcement"],
+      "typical_parties": "Franchisor <-> Master Franchisee / Area Developer",
+      "regulatory_drivers": ["US FTC Franchise Rule (16 CFR 436)", "EU national franchise laws", "Local franchise disclosure requirements", "Competition law (vertical restraints)"],
+      "related_agreements": ["intl-license-international", "intl-distribution"]
+    },
+    {
+      "id": "intl-supply-international",
+      "name": "International Supply Agreement",
+      "category": "international",
+      "description": "Agreement for the cross-border sale and purchase of goods between a supplier in one country and a buyer in another, establishing the terms of sale including specifications, quantities, pricing, delivery, payment, quality control, and risk allocation. International supply agreements are governed by the CISG (unless excluded), supplemented by Incoterms for delivery and risk transfer, and must address the full range of international trade compliance requirements including customs, export controls, sanctions, and product regulatory compliance in the destination market.",
+      "required_clauses": ["intl-incoterms", "intl-choice-of-law", "intl-arbitration-icc", "intl-letter-of-credit", "intl-bill-of-lading", "intl-customs-compliance", "intl-export-control", "intl-sanctions-compliance", "intl-anti-bribery", "intl-documentary-compliance"],
+      "recommended_clauses": ["intl-force-majeure-international", "intl-hardship-clause", "intl-currency-hedging", "intl-country-of-origin", "intl-trade-terms", "intl-language-of-contract", "intl-anti-money-laundering", "intl-foreign-judgment-enforcement", "intl-local-counsel"],
+      "typical_parties": "Supplier / Manufacturer <-> Buyer / Importer",
+      "regulatory_drivers": ["CISG", "EU Product Safety Regulation", "Customs regulations", "Export control regulations"],
+      "related_agreements": ["intl-distribution", "intl-off-take", "intl-commodity-trading"]
+    },
+    {
+      "id": "intl-tolling",
+      "name": "International Tolling Agreement",
+      "category": "international",
+      "description": "Agreement under which one party (the toller) processes raw materials or semi-finished goods owned by the other party (the toll customer) into finished or further-processed products, with the toll customer retaining ownership of the materials throughout the processing cycle. International tolling arrangements are common in the petroleum, metals, chemicals, and agricultural sectors. The key legal distinction from a supply agreement is that title to the materials never passes to the toller, creating specific issues around customs treatment (inward processing relief), insurance of goods in the toller's possession, quality risk allocation, and the toller's lien rights over processed goods.",
+      "required_clauses": ["intl-incoterms", "intl-choice-of-law", "intl-arbitration-icc", "intl-customs-compliance", "intl-sanctions-compliance", "intl-export-control"],
+      "recommended_clauses": ["intl-force-majeure-international", "intl-hardship-clause", "intl-currency-hedging", "intl-adaptation-clause", "intl-trade-finance", "intl-local-content", "intl-anti-bribery", "intl-technology-transfer"],
+      "typical_parties": "Toll Customer (material owner) <-> Toller (processor)",
+      "regulatory_drivers": ["Customs inward processing regulations", "Environmental regulations", "Product safety regulations"],
+      "related_agreements": ["intl-supply-international", "intl-off-take", "intl-commodity-trading"]
+    },
+    {
+      "id": "intl-off-take",
+      "name": "International Off-Take Agreement",
+      "category": "international",
+      "description": "Long-term agreement under which a buyer commits to purchase a specified quantity or percentage of the output from a production facility, mine, or agricultural operation, typically used to underpin project financing for the production facility. Off-take agreements are fundamental to the project finance structure of natural resource projects, providing the revenue certainty that lenders require to finance construction and operation. The off-take agreement must address long-term price determination, quantity flexibility, quality specifications, force majeure, hardship, and the complex interplay between the off-take commitment and the project's financing arrangements.",
+      "required_clauses": ["intl-incoterms", "intl-choice-of-law", "intl-arbitration-icc", "intl-letter-of-credit", "intl-sanctions-compliance", "intl-customs-compliance", "intl-adaptation-clause", "intl-force-majeure-international"],
+      "recommended_clauses": ["intl-hardship-clause", "intl-currency-hedging", "intl-trade-finance", "intl-documentary-compliance", "intl-local-content", "intl-sovereign-immunity", "intl-anti-bribery", "intl-export-control", "intl-foreign-judgment-enforcement"],
+      "typical_parties": "Producer / Project Company <-> Off-Taker / Buyer",
+      "regulatory_drivers": ["Mining and natural resource legislation", "Environmental regulations", "Export control regulations", "Project finance covenants"],
+      "related_agreements": ["intl-commodity-trading", "intl-supply-international", "intl-tolling"]
+    },
+    {
+      "id": "intl-commodity-trading",
+      "name": "International Commodity Trading Agreement",
+      "category": "international",
+      "description": "Agreement for the purchase and sale of commodities (petroleum products, metals, minerals, agricultural products, or soft commodities) in the international market. Commodity trading contracts are typically based on industry-standard forms (GAFTA for grain and feed, FOSFA for oils/fats/oilseeds, Shell/BP terms for petroleum, LME for metals) and incorporate specialised provisions for quality determination (assay, sampling), quantity measurement (draft survey, shore tank), pricing (index-linked, formula-based), laytime and demurrage, and documentary requirements specific to the commodity sector.",
+      "required_clauses": ["intl-incoterms", "intl-choice-of-law", "intl-arbitration-icc", "intl-letter-of-credit", "intl-bill-of-lading", "intl-documentary-compliance", "intl-sanctions-compliance", "intl-trade-terms"],
+      "recommended_clauses": ["intl-force-majeure-international", "intl-hardship-clause", "intl-currency-hedging", "intl-adaptation-clause", "intl-customs-compliance", "intl-country-of-origin", "intl-anti-money-laundering", "intl-anti-bribery", "intl-trade-embargo", "intl-foreign-judgment-enforcement"],
+      "typical_parties": "Commodity Seller / Trader <-> Commodity Buyer / Trader",
+      "regulatory_drivers": ["Commodity exchange rules (LME, ICE, CME)", "GAFTA/FOSFA trade rules", "Sanctions regulations", "Customs regulations"],
+      "related_agreements": ["intl-supply-international", "intl-off-take", "intl-tolling"]
+    },
+    {
+      "id": "intl-license-international",
+      "name": "International Technology License Agreement",
+      "category": "international",
+      "description": "Agreement granting a licensee the right to use intellectual property, technology, or know-how across borders, including patent licences, trade secret licences, software licences, and comprehensive technology transfer packages. International technology licensing raises complex issues at the intersection of IP law, export controls, competition law, tax law (withholding taxes on royalties, transfer pricing), and the recipient country's technology import regulations. Licensors must balance the desire to protect their IP with the need to comply with local mandatory provisions that may limit the scope of contractual restrictions.",
+      "required_clauses": ["intl-choice-of-law", "intl-arbitration-icc", "intl-technology-transfer", "intl-export-control", "intl-sanctions-compliance", "intl-cross-border-data"],
+      "recommended_clauses": ["intl-dual-use-goods", "intl-anti-bribery", "intl-currency-hedging", "intl-force-majeure-international", "intl-language-of-contract", "intl-local-counsel", "intl-foreign-judgment-enforcement"],
+      "typical_parties": "Licensor (IP Owner) <-> Licensee",
+      "regulatory_drivers": ["TRIPS Agreement", "Export control regulations (dual-use technology)", "Competition law (technology transfer block exemption)", "Tax treaties (royalty withholding)"],
+      "related_agreements": ["intl-franchise", "intl-distribution"]
+    }
+  ],
+  "risk_patterns": [
+    {
+      "id": "intl-risk-incoterms-mismatch",
+      "name": "Incoterms Mismatch with Payment and Insurance Terms",
+      "risk_category": "financial",
+      "clause_type": "international-trade",
+      "trigger": "Selected Incoterm is inconsistent with payment mechanism or insurance provisions in the contract",
+      "description": "Misalignment between the chosen Incoterm and other contract provisions creates gaps in risk coverage. For example, FOB terms place insurance responsibility on the buyer, but the contract may assume the seller arranges insurance; or CIF terms are specified for a container shipment where FCA/CIP would be more appropriate since the seller loses control of goods at the container terminal, not when goods cross the ship's rail.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Uninsured loss of goods in transit, disputed liability for damage during loading/unloading, and payment disputes when documentary requirements under the L/C do not align with the Incoterm obligations.",
+      "detection_guidance": "Cross-reference the Incoterm clause with insurance provisions, payment mechanism (L/C documentary requirements), and risk-of-loss allocation. Verify that the Incoterm is appropriate for the mode of transport (maritime-only terms should not be used for containerised or multimodal transport).",
+      "remediation": "Align Incoterm selection with transport mode (use CIP instead of CIF for containers), ensure insurance obligations match the Incoterm allocation, and synchronise L/C documentary requirements with the Incoterm-specific documents.",
+      "real_world_impact": "Common dispute source: goods damaged between container yard and vessel loading under FOB terms, where neither party had insured the gap period."
+    },
+    {
+      "id": "intl-risk-sanctions-mid-contract",
+      "name": "Mid-Contract Sanctions Designation",
+      "risk_category": "regulatory",
+      "clause_type": "international-trade",
+      "trigger": "Counterparty, beneficial owner, or territory becomes subject to new sanctions during contract performance",
+      "description": "Sanctions regimes are dynamic and can change rapidly in response to geopolitical events. A counterparty, its ultimate beneficial owner, or the destination territory may be designated under a sanctions programme after contract execution, making continued performance illegal. Without adequate contractual provisions, the non-designated party faces the dilemma of breaching the contract (by ceasing performance) or breaching sanctions law (by continuing performance).",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Criminal liability and substantial fines for sanctions violations (up to USD 20 million under OFAC, unlimited under UK sanctions), asset freezing, reputational damage, loss of banking relationships, and debarment from government contracts.",
+      "detection_guidance": "Review the sanctions clause for: automatic termination right upon designation, ongoing screening obligations, beneficial ownership verification requirements, and wind-down provisions for existing obligations.",
+      "remediation": "Include a comprehensive sanctions clause with immediate termination right, ongoing screening obligations, wind-down licensing provisions, and clear allocation of costs and losses arising from sanctions-related performance disruption. Require notification of any change in beneficial ownership.",
+      "real_world_impact": "Numerous enforcement actions by OFAC and OFSI against companies that continued trading with newly-designated parties without obtaining specific licences for wind-down of pre-existing contracts."
+    },
+    {
+      "id": "intl-risk-documentary-rejection",
+      "name": "Letter of Credit Documentary Discrepancies",
+      "risk_category": "financial",
+      "clause_type": "international-trade",
+      "trigger": "Shipping documents do not strictly comply with letter of credit terms, resulting in bank rejection",
+      "description": "Under the principle of strict documentary compliance in UCP 600, banks are obligated to reject documents that do not comply on their face with the terms of the credit. Industry statistics indicate that 60-75% of documentary presentations under letters of credit are rejected on first presentation due to discrepancies. Common discrepancies include: late presentation, inconsistent description of goods, incorrect shipping marks, missing documents, and inconsistencies between documents.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Payment delay (typically 2-4 weeks for discrepancy resolution), additional bank charges for discrepant handling, risk of buyer refusing to authorise waiver of discrepancies, and potential loss of payment security if the L/C expires before compliant presentation can be made.",
+      "detection_guidance": "Review the documentary compliance clause for: alignment between contract and L/C documentary requirements, document preparation responsibilities, pre-shipment document review procedures, and discrepancy resolution mechanisms.",
+      "remediation": "Include a documentary compliance clause requiring the buyer to issue L/C terms consistent with the contract, establish pre-shipment document review procedures, define a discrepancy resolution process with buyer's waiver obligations for minor discrepancies, and allocate costs of documentary amendments.",
+      "real_world_impact": "Seller shipped petroleum cargo worth USD 45 million under L/C but used a different cargo description on the bill of lading than specified in the credit; bank rejected, buyer refused waiver, seller forced to sell cargo at distressed price."
+    },
+    {
+      "id": "intl-risk-export-licence-denial",
+      "name": "Export Licence Denial or Revocation",
+      "risk_category": "compliance",
+      "clause_type": "international-trade",
+      "trigger": "Required export licence is denied, delayed, or revoked by export control authority",
+      "description": "Export of controlled goods, software, or technology requires a licence from the relevant export control authority. Licences may be denied due to end-use concerns, end-user concerns, or foreign policy considerations. Even where a licence has been granted, it may be revoked or suspended if circumstances change. Without contractual allocation of this risk, the seller may face both an inability to perform and a claim for breach.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Inability to deliver goods, contract termination, loss of profit on the transaction, potential claims for consequential damages, and reputational damage if the buyer's operations are disrupted.",
+      "detection_guidance": "Check for export control classification of the goods, whether export licences have been applied for and obtained, and whether the contract includes a licence contingency clause excusing performance if the licence is denied or revoked.",
+      "remediation": "Include an export licence contingency clause making the seller's delivery obligation conditional on obtaining and maintaining all necessary export licences. Allocate the risk of licence denial (seller's obligation to apply diligently, but no liability for governmental denial). Address the buyer's right to terminate and receive a refund of prepayments if the licence is not obtained within a specified period.",
+      "real_world_impact": "US BIS denial of export licences for semiconductor equipment to certain end-users in China disrupted multi-million dollar supply contracts where sellers had no licence contingency clause."
+    },
+    {
+      "id": "intl-risk-currency-volatility",
+      "name": "Unhedged Currency Exposure in Long-Term Contracts",
+      "risk_category": "financial",
+      "clause_type": "international-trade",
+      "trigger": "Multi-year international contract with no currency hedging or adjustment mechanism",
+      "description": "Long-term international contracts denominated in a single currency expose the party whose costs are denominated in a different currency to potentially severe foreign exchange losses. Currency movements of 20-30% are not uncommon over a multi-year contract term, and in periods of economic instability, movements can be far more extreme. Without a contractual hedging or adjustment mechanism, one party may be forced to perform at a significant loss.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Margin erosion of 10-30% from adverse exchange rate movements over the contract term, potential triggering of hardship or renegotiation demands, and in extreme cases, counterparty insolvency leading to contract default.",
+      "detection_guidance": "For any international contract with a term exceeding 12 months, check for: specified payment currency, exchange rate adjustment mechanism, hedging obligations, and hardship or price revision provisions linked to currency movements.",
+      "remediation": "Specify a currency adjustment mechanism (automatic adjustment if exchange rate moves beyond a defined corridor, e.g., +/-5%), require hedging for currency exposure above a defined threshold, or denominate the contract in the currency of the party with the greater cost exposure. Include hardship provisions specifically addressing extreme currency movements.",
+      "real_world_impact": "Turkish lira depreciation of over 40% in 2021 rendered numerous USD-denominated import contracts commercially devastating for Turkish buyers, triggering widespread hardship claims and contract defaults."
+    },
+    {
+      "id": "intl-risk-bribery-agent",
+      "name": "Agent Bribery in International Distribution",
+      "risk_category": "compliance",
+      "clause_type": "international-trade",
+      "trigger": "Engagement of local agents or intermediaries in high-risk jurisdictions without adequate anti-bribery due diligence",
+      "description": "The use of local agents and intermediaries in international trade creates the highest bribery risk. Under the UK Bribery Act section 7, a commercial organisation is strictly liable for failing to prevent bribery by 'associated persons' (which includes agents and intermediaries) unless it can demonstrate 'adequate procedures.' Under the FCPA, companies face liability for payments made through intermediaries where they knew or should have known that the payments would be used for corrupt purposes.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Criminal prosecution, unlimited fines under the UK Bribery Act, disgorgement of profits under FCPA, debarment from public procurement, loss of export licences, and severe reputational damage. Directors may face personal criminal liability.",
+      "detection_guidance": "Review the contract for: anti-bribery representations and warranties, agent due diligence requirements, commission transparency provisions, audit rights over agent's books and records, and compliance programme requirements. Flag high-risk indicators: unusually high commission rates, agents with government connections, agents in high-risk Transparency International CPI jurisdictions.",
+      "remediation": "Implement comprehensive anti-bribery provisions: mandatory due diligence on agents before engagement, written anti-bribery representations, cap on commission rates with full transparency, audit rights, annual compliance certifications, immediate termination right for breach, and flow-down of anti-bribery obligations to sub-agents.",
+      "real_world_impact": "Rolls-Royce paid GBP 671 million (2017) and Airbus paid EUR 3.6 billion (2020) in global bribery settlements related to payments made through intermediaries in international contracts."
+    },
+    {
+      "id": "intl-risk-governing-law-gap",
+      "name": "Governing Law Gap in Multi-Jurisdictional Performance",
+      "risk_category": "contractual",
+      "clause_type": "international-trade",
+      "trigger": "Contract governed by one law but performed in multiple jurisdictions with mandatory local laws that override contractual provisions",
+      "description": "In international trade, the chosen governing law may be overridden by mandatory local laws in the jurisdictions of performance (lois de police/overriding mandatory provisions). Common examples include: agency termination compensation laws that apply regardless of contractual choice of law, local employment laws for personnel transferred under the contract, data protection laws imposing obligations on data processing within the jurisdiction, and competition law restrictions that invalidate contractual provisions.",
+      "severity": "medium",
+      "likelihood": "common",
+      "impact": "Contractual provisions may be unenforceable in the jurisdiction of performance, creating unexpected liabilities (e.g., mandatory termination compensation for agents, non-compete restrictions voided by local competition law). Legal costs of multi-jurisdictional compliance. Potential contract invalidity for provisions that violate local mandatory rules.",
+      "detection_guidance": "Identify all jurisdictions of contract performance. Review the governing law clause for acknowledgment of mandatory local law applicability. Check whether key provisions (termination, non-compete, limitation of liability) are enforceable under the laws of each performance jurisdiction.",
+      "remediation": "Include a clause acknowledging that certain local mandatory laws may apply in addition to the governing law. Require local counsel review of key provisions for enforceability. Consider split governing law provisions for jurisdiction-specific obligations. Build in flexibility for local compliance requirements.",
+      "real_world_impact": "European principal terminated Middle Eastern agent under English law contract; local court applied mandatory UAE agency law regardless of choice of law, awarding the agent substantial termination compensation not contemplated by the contract."
+    },
+    {
+      "id": "intl-risk-cisg-unintended",
+      "name": "Unintended Application of CISG",
+      "risk_category": "contractual",
+      "clause_type": "international-trade",
+      "trigger": "Contract for international sale of goods between parties in CISG contracting states without express exclusion or inclusion of CISG",
+      "description": "The CISG applies automatically to contracts for the sale of goods between parties whose places of business are in different CISG contracting states, unless the parties have excluded its application. Many parties are unaware that the CISG applies to their contract, leading to unexpected legal consequences. CISG provisions differ significantly from common national laws on key issues: no requirement for written form, different rules for contract formation, a broader force majeure standard under Article 79, and a unique 'fundamental breach' concept governing the right to avoid the contract.",
+      "severity": "medium",
+      "likelihood": "common",
+      "impact": "Unexpected application of unfamiliar legal principles to the contract. Potential loss of rights that would exist under the assumed national law (e.g., different limitation periods, different remedies for defective goods). Additional legal costs for CISG-specific advice.",
+      "detection_guidance": "Check whether both parties' places of business are in CISG contracting states. Review the governing law clause for express inclusion or exclusion of the CISG. If the CISG is not mentioned, flag as a risk requiring clarification.",
+      "remediation": "Expressly address the CISG in the governing law clause. Either exclude it ('The CISG shall not apply to this contract') for certainty under a single national law, or expressly include it with supplementary provisions addressing gaps in CISG coverage (e.g., statute of limitations, interest rates, property transfer).",
+      "real_world_impact": "US court applied CISG (rather than expected UCC) to a sale of goods contract between US and German parties, applying the CISG's 'reasonable time' examination requirement rather than the UCC's more precise inspection provisions."
+    },
+    {
+      "id": "intl-risk-trade-embargo-diversion",
+      "name": "Goods Diversion to Embargoed Territories",
+      "risk_category": "regulatory",
+      "clause_type": "international-trade",
+      "trigger": "Goods sold to a non-embargoed buyer are re-exported or diverted to an embargoed territory",
+      "description": "Even where the direct sale is to a buyer in a non-embargoed territory, the goods may be diverted or re-exported to an embargoed destination. The seller may face liability under export control and sanctions laws for goods that end up in embargoed territories if the seller knew or had reason to know about the diversion. Red flags include: unusual shipping routes, intermediate destinations with no commercial rationale, and buyers with known connections to embargoed territories.",
+      "severity": "critical",
+      "likelihood": "rare",
+      "impact": "Criminal prosecution for sanctions evasion, substantial financial penalties, loss of export privileges, and reputational damage. The seller may be held liable even for indirect diversion through intermediaries.",
+      "detection_guidance": "Review the contract for: end-use and end-user restrictions, prohibition on re-export to embargoed territories, buyer's representations regarding final destination, and the seller's right to audit or obtain assurances regarding the final destination of goods.",
+      "remediation": "Include comprehensive end-use and anti-diversion provisions: buyer's representations regarding final destination, prohibition on re-export or diversion without prior written consent, right to require end-user certificates, ongoing monitoring rights, and immediate termination if diversion is suspected. Implement internal compliance screening procedures for red-flag indicators.",
+      "real_world_impact": "ZTE Corporation paid USD 1.19 billion in penalties (2017) for illegally shipping US-origin telecommunications equipment to Iran and North Korea through shell companies."
+    },
+    {
+      "id": "intl-risk-sovereign-immunity-enforcement",
+      "name": "Sovereign Immunity Blocking Award Enforcement",
+      "risk_category": "contractual",
+      "clause_type": "international-trade",
+      "trigger": "Arbitral award or judgment obtained against a state entity that invokes sovereign immunity to block enforcement",
+      "description": "When contracting with state entities, state-owned enterprises, or government instrumentalities in international trade, the counterparty faces the risk that even a favourable judgment or arbitral award cannot be enforced because the state entity claims sovereign immunity from execution. Many states distinguish between jurisdictional immunity (which can be waived by entering a commercial contract) and execution immunity (which often requires a separate, express waiver). Even with a waiver, enforcement against sovereign assets may be practically impossible if the state's commercial assets are located in jurisdictions that do not recognise the waiver.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Inability to recover awarded damages despite winning the dispute, requiring lengthy and expensive enforcement proceedings across multiple jurisdictions. Average enforcement period for awards against sovereign entities: 3-7 years.",
+      "detection_guidance": "Review the contract for: express waiver of sovereign immunity from both jurisdiction and execution, identification of commercial assets available for execution, and the counterparty's legal status (state entity, SOE, or private entity with state ownership).",
+      "remediation": "Require express, irrevocable waiver of both jurisdictional and execution immunity in the contract. Identify specific commercial assets available for execution. Require the state entity to maintain assets in enforcement-friendly jurisdictions. Consider requiring a bank guarantee or standby letter of credit as security for potential claims. Obtain legal advice on the enforceability of the sovereign immunity waiver under the applicable sovereign immunity legislation.",
+      "real_world_impact": "Numerous arbitral awards against sovereign entities remain unenforced for years, including several awards against Venezuela and Argentina where enforcement proceedings span multiple jurisdictions over a decade."
+    }
+  ],
+  "negotiation_intelligence": [
+    {
+      "id": "neg-intl-no-sanctions-clause",
+      "clause_type": "international-trade",
+      "flag_level": "red",
+      "condition": "International trade contract with no sanctions compliance clause or only generic compliance representation",
+      "explanation": "The absence of a comprehensive sanctions clause in an international trade contract creates existential risk. A generic 'comply with all applicable laws' representation is insufficient because it does not address ongoing screening obligations, mid-contract designation scenarios, or wind-down procedures. Sanctions enforcement has intensified dramatically, with OFAC, OFSI, and EU authorities imposing record penalties.",
+      "market_standard": "All international trade contracts include detailed sanctions compliance clauses with screening obligations, representations, termination rights, and wind-down provisions. Enhanced provisions are standard for counterparties in or connected to high-risk jurisdictions.",
+      "suggested_response": "Insert a comprehensive sanctions clause covering: defined Sanctioned Person and Sanctioned Territory concepts, representations and warranties, ongoing screening obligations, immediate termination right upon designation, wind-down provisions for existing obligations, and allocation of costs arising from sanctions-related disruption.",
+      "perspective": "both",
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading", "intl-agency", "intl-off-take"]
+    },
+    {
+      "id": "neg-intl-no-hardship",
+      "clause_type": "international-trade",
+      "flag_level": "amber",
+      "condition": "Long-term international trade contract (>2 years) without a hardship or price revision clause",
+      "explanation": "Long-term international contracts without a hardship mechanism are inherently fragile. Market conditions, exchange rates, regulatory requirements, and input costs will inevitably change over a multi-year term. Without a contractual mechanism for adaptation, the disadvantaged party is left with two unattractive options: continue performing at a loss, or breach the contract and face litigation. Common law systems generally do not recognise hardship as a ground for contract modification absent express provision.",
+      "market_standard": "Hardship clauses are standard in long-term international trade contracts, particularly commodity supply, off-take, and distribution agreements. ICC Hardship Clause 2020 is widely used. Threshold triggers typically range from 20-30% change in cost or value of performance.",
+      "suggested_response": "Include a hardship clause based on the ICC Hardship Clause 2020 or UNIDROIT Principles Art 6.2.1-6.2.3. Define the threshold for invocation (e.g., 25% change in cost or value), establish a mandatory renegotiation period (30-60 days), and provide for expert or arbitral adaptation if renegotiation fails.",
+      "perspective": "both",
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take", "intl-tolling", "intl-distribution"]
+    },
+    {
+      "id": "neg-intl-cisg-silent",
+      "clause_type": "international-trade",
+      "flag_level": "amber",
+      "condition": "International sale of goods contract between CISG contracting state parties without express CISG inclusion or exclusion",
+      "explanation": "Silence on the CISG creates uncertainty about the applicable law. The CISG applies automatically to qualifying contracts unless expressly excluded. Many international trade practitioners and their clients are unfamiliar with CISG provisions, which differ from their national law expectations on contract formation, examination obligations, notice requirements, and remedies for breach.",
+      "market_standard": "Best practice is to expressly address the CISG in every international sale of goods contract. The majority of sophisticated cross-border commodity and supply contracts expressly exclude the CISG in favour of a single chosen national law, though some civil law practitioners prefer to include it.",
+      "suggested_response": "Expressly address the CISG. If excluding: add 'The United Nations Convention on Contracts for the International Sale of Goods (CISG) shall not apply to this Agreement.' If including: specify that the CISG applies, supplemented by the chosen national law for matters not covered by the CISG.",
+      "perspective": "both",
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-distribution", "intl-off-take"]
+    },
+    {
+      "id": "neg-intl-arbitration-no-seat",
+      "clause_type": "international-trade",
+      "flag_level": "red",
+      "condition": "ICC or other institutional arbitration clause without a specified seat of arbitration",
+      "explanation": "An arbitration clause without a specified seat is a pathological clause that may render the arbitration agreement unworkable or create significant procedural uncertainty. The seat determines the procedural law governing the arbitration (lex arbitri), the courts with supervisory jurisdiction, and the grounds for challenge or annulment of the award. Without a seat, the institution or a court must determine it, causing delay and uncertainty.",
+      "market_standard": "All properly drafted international arbitration clauses specify the seat of arbitration. Common neutral seats include London, Paris, Singapore, Hong Kong, Stockholm, and Geneva, all of which have modern arbitration legislation based on the UNCITRAL Model Law (except England, which has its own Arbitration Act 1996).",
+      "suggested_response": "Specify a neutral seat with a well-developed arbitration law: 'The seat of arbitration shall be [London/Paris/Singapore/Hong Kong/Stockholm].' Choose a seat that is neutral between the parties and a signatory to the New York Convention. Consider the availability of skilled arbitrators, the efficiency of the local courts in supporting arbitration, and the enforceability of awards from that seat in the jurisdictions where the counterparty has assets.",
+      "perspective": "both",
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-commodity-trading", "intl-franchise", "intl-off-take", "intl-license-international"]
+    },
+    {
+      "id": "neg-intl-lc-terms-misaligned",
+      "clause_type": "international-trade",
+      "flag_level": "red",
+      "condition": "Letter of credit required by contract but L/C terms not specified or inconsistent with contract terms",
+      "explanation": "A letter of credit is only effective if its terms precisely mirror the underlying contract obligations. If the contract requires a documentary credit but does not specify the documentary requirements, the L/C may be issued with terms that do not match the seller's ability to present compliant documents. This is the single most common cause of L/C discrepancies and payment delays in international trade.",
+      "market_standard": "Contracts requiring L/C payment should include a detailed L/C clause specifying: issuing bank standards, confirmation requirements, document list, presentation period, L/C amount (including tolerance), latest shipment date, and L/C expiry date. The contract should require the buyer to issue L/C terms consistent with the contract.",
+      "suggested_response": "Include a comprehensive L/C clause specifying all documentary requirements, require the buyer to issue the L/C at least 15-30 days before the first shipment date, require the buyer to amend the L/C at its cost if terms are inconsistent with the contract, and include a right to suspend shipment if the L/C is not issued or amended on time.",
+      "perspective": "seller",
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take"]
+    },
+    {
+      "id": "neg-intl-no-export-control",
+      "clause_type": "international-trade",
+      "flag_level": "red",
+      "condition": "Contract involving potentially controlled goods or technology without export control provisions",
+      "explanation": "Failure to address export controls in contracts involving potentially controlled items is a critical compliance gap. Export control violations carry severe penalties (criminal prosecution, fines up to USD 1 million per violation under EAR, entity listing). Even items that are not listed on control lists may be subject to catch-all controls if the exporter knows or is informed of a WMD-related end-use.",
+      "market_standard": "All international trade contracts involving goods, software, or technology include export control provisions with classification obligations, licensing contingency, end-use restrictions, and re-export prohibitions. Enhanced provisions for dual-use items and controlled technology.",
+      "suggested_response": "Insert comprehensive export control provisions: seller's obligation to classify goods, licence contingency clause (delivery conditional on obtaining export licence), buyer's end-use and end-user representations, prohibition on re-export without consent, record-keeping obligations, and right to withhold delivery pending licence approval.",
+      "perspective": "seller",
+      "contract_types": ["intl-supply-international", "intl-distribution", "intl-license-international"]
+    },
+    {
+      "id": "neg-intl-agent-commission-opaque",
+      "clause_type": "international-trade",
+      "flag_level": "amber",
+      "condition": "Agent or intermediary commission structure that lacks transparency or exceeds market rates",
+      "explanation": "Opaque or excessive agent commissions are the primary red flag for bribery risk in international trade. Under the UK Bribery Act and FCPA, the principal may be liable for corrupt payments made by agents from their commission. Commissions significantly above market rates without clear commercial justification suggest that a portion may be intended for corrupt purposes. Enforcement agencies specifically scrutinise agent commission structures.",
+      "market_standard": "Agent commissions should be transparent, documented, and proportionate to services rendered. Market rates vary by sector and region but typically range from 2-10% for commercial agency. Commissions above 15% require strong commercial justification. Best practice includes itemised commission calculations, prohibition on sub-commission payments without approval, and audit rights.",
+      "suggested_response": "Require full transparency on commission calculations with itemised breakdowns. Cap commissions at market rates with documented justification for the level agreed. Prohibit sub-commissions or payments to third parties from commission proceeds without prior written approval. Include audit rights over commission-related records. Require annual anti-corruption compliance certifications.",
+      "perspective": "buyer",
+      "contract_types": ["intl-agency", "intl-distribution", "intl-franchise"]
+    },
+    {
+      "id": "neg-intl-incoterms-appropriate",
+      "clause_type": "international-trade",
+      "flag_level": "green",
+      "condition": "Incoterms 2020 correctly specified with named place, consistent with transport mode and payment mechanism",
+      "explanation": "Properly specified Incoterms with the correct edition year, a precisely named place of delivery, and consistency with the transport mode and payment mechanism indicate a well-drafted international trade contract. The Incoterm appropriately allocates delivery risk, cost, and insurance responsibilities between the parties.",
+      "market_standard": "International trade contracts should specify Incoterms 2020 (or latest edition), name the precise delivery point, use the appropriate Incoterm for the transport mode (maritime terms for sea/inland waterway only; multimodal terms for containerised cargo), and ensure consistency with insurance and payment provisions.",
+      "suggested_response": "Accept. Verify that insurance coverage matches the Incoterm risk transfer point, that L/C documentary requirements align with Incoterm document obligations, and that the named place is sufficiently precise to avoid ambiguity.",
+      "perspective": "both",
+      "contract_types": ["intl-supply-international", "intl-commodity-trading", "intl-off-take", "intl-distribution"]
+    }
+  ],
+  "clause_interactions": [
+    {
+      "id": "intl-incoterms-requires-bill-of-lading",
+      "clause_a": "intl-incoterms",
+      "clause_b": "intl-bill-of-lading",
+      "relationship": "requires",
+      "description": "The selected Incoterm determines which transport document is required and its form. Maritime Incoterms (FOB, CFR, CIF) require an on-board ocean bill of lading, while multimodal Incoterms (FCA, CPT, CIP) may accept a combined transport document or multimodal bill of lading.",
+      "review_guidance": "Verify that the bill of lading type specified in the contract matches the transport mode implied by the Incoterm. FOB/CFR/CIF require shipped-on-board ocean bills of lading; FCA/CPT/CIP may accept multimodal documents. Ensure the L/C documentary requirements are consistent with both.",
+      "risk_if_misaligned": "Mismatch between Incoterm and transport document type will cause L/C documentary discrepancies and potential payment rejection. Seller may be unable to tender compliant documents despite having performed all delivery obligations."
+    },
+    {
+      "id": "intl-sanctions-limits-force-majeure",
+      "clause_a": "intl-sanctions-compliance",
+      "clause_b": "intl-force-majeure-international",
+      "relationship": "limits",
+      "description": "Sanctions compliance obligations limit the scope of force majeure relief. A party cannot claim force majeure to excuse performance that has become impossible due to sanctions if the sanctions were foreseeable at the time of contracting or if the party's own non-compliance with sanctions screening obligations contributed to the situation.",
+      "review_guidance": "Verify that the force majeure clause addresses sanctions as a triggering event but does not excuse performance by a party that failed to conduct adequate sanctions screening. Consider whether sanctions should be a force majeure event (excusing performance) or a standalone termination trigger (immediate right to terminate).",
+      "risk_if_misaligned": "Ambiguity over whether sanctions constitute force majeure can lead to disputes over the affected party's entitlements during the sanctions period, particularly regarding the obligation to continue performing unaffected obligations and the allocation of costs."
+    },
+    {
+      "id": "intl-choice-of-law-requires-arbitration",
+      "clause_a": "intl-choice-of-law",
+      "clause_b": "intl-arbitration-icc",
+      "relationship": "requires",
+      "description": "The choice of governing law must be coordinated with the arbitration clause. The governing law determines the substantive law applied to the merits of the dispute, while the seat of arbitration determines the procedural law (lex arbitri). Inconsistency between the governing law and the arbitration provisions can create confusion and satellite litigation.",
+      "review_guidance": "Verify that the governing law clause and arbitration clause are consistent: the CISG inclusion/exclusion should be clear, the seat of arbitration should have a modern arbitration law, and the language of the contract should be consistent with the language of arbitration. Check that the arbitration clause covers all disputes 'arising out of or in connection with' the contract.",
+      "risk_if_misaligned": "Inconsistent governing law and arbitration provisions may lead to challenges to the tribunal's jurisdiction, parallel court proceedings to determine the applicable law, and potential annulment of the award on procedural grounds."
+    },
+    {
+      "id": "intl-hardship-supplements-force-majeure",
+      "clause_a": "intl-hardship-clause",
+      "clause_b": "intl-force-majeure-international",
+      "relationship": "supplements",
+      "description": "The hardship clause supplements force majeure by addressing situations where performance remains possible but has become excessively onerous, filling the gap between normal commercial risk (which the parties must absorb) and impossibility (which triggers force majeure). Together, the two clauses provide a comprehensive framework for addressing changed circumstances.",
+      "review_guidance": "Verify that the hardship and force majeure clauses have clearly distinct triggering thresholds (hardship: excessively onerous but possible; force majeure: impossible or impracticable) and non-overlapping remedies (hardship: renegotiation and adaptation; force majeure: suspension and termination). Ensure there is no gap between the two thresholds that would leave certain scenarios unaddressed.",
+      "risk_if_misaligned": "Overlap between hardship and force majeure creates confusion over which clause applies and which remedies are available. A gap between the two clauses leaves the parties without a contractual remedy for events that exceed normal commercial risk but do not reach the force majeure threshold."
+    },
+    {
+      "id": "intl-export-control-conflicts-with-local-content",
+      "clause_a": "intl-export-control",
+      "clause_b": "intl-local-content",
+      "relationship": "conflicts-with",
+      "description": "Export control restrictions may conflict with local content requirements if the local content obligation requires the transfer of controlled technology, the sharing of controlled technical data with local personnel (deemed export), or the sourcing of components from entities that cannot receive controlled items. This tension is particularly acute in defence and dual-use sectors.",
+      "review_guidance": "Assess whether compliance with local content requirements would require the export or deemed export of controlled technology, technical data, or components in violation of export control regulations. Verify that the contract includes a regulatory compliance hierarchy that gives export control obligations precedence over local content commitments.",
+      "risk_if_misaligned": "The party may face a compliance dilemma: violating export control laws to meet local content requirements, or failing to meet local content requirements to comply with export controls. Either outcome exposes the party to penalties, contract breach claims, or loss of operating licences."
+    }
+  ]
+}

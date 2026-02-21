@@ -1,0 +1,561 @@
+{
+  "clause_types": [
+    {
+      "id": "esg-reporting-obligations",
+      "clause_category": "esg",
+      "name": "ESG Reporting Obligations",
+      "description": "Requires the supplier to collect, maintain, and disclose specified environmental, social, and governance data to enable the buyer to comply with mandatory ESG disclosure regimes such as the EU Corporate Sustainability Reporting Directive (CSRD), the EU Taxonomy Regulation, and the Task Force on Climate-related Financial Disclosures (TCFD) framework. The clause must define the reporting metrics, methodology, frequency, assurance level, and the consequences of late or inaccurate reporting.",
+      "drafting_guidance": "Specify the exact ESG metrics required (GHG emissions by scope, energy consumption, water usage, waste generation, workforce diversity, governance disclosures). Define the reporting standard (GRI, ESRS, SASB, TCFD). Specify the reporting frequency (quarterly, semi-annually, annually). Require data to be provided in a machine-readable format compatible with the buyer's reporting systems. Address limited vs reasonable assurance requirements for reported data. Include a right to audit the accuracy of ESG data. Specify the timeline for delivery relative to the buyer's own reporting deadlines (typically 30-60 days before). Address the consequences of late, incomplete, or inaccurate reporting (service credits, liquidated damages, termination right). Require the supplier to maintain records supporting all reported data for a minimum of 5 years. Address the allocation of costs for data collection and assurance.",
+      "variations": {
+        "csrd-aligned": "Reporting metrics aligned with EU ESRS standards under CSRD, covering all double-materiality topics",
+        "tcfd-aligned": "Climate-focused reporting aligned with TCFD four-pillar framework (governance, strategy, risk management, metrics)",
+        "minimal": "Limited to GHG emissions data (scope 1 and 2) and basic social metrics"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["EU CSRD (Directive 2022/2464)", "EU Taxonomy Regulation (2020/852)", "TCFD Recommendations", "EU ESRS"]
+    },
+    {
+      "id": "esg-carbon-disclosure",
+      "clause_category": "esg",
+      "name": "Carbon Emission Disclosure and Reduction Targets",
+      "description": "Obligates the supplier to measure, verify, and disclose its greenhouse gas emissions in accordance with the GHG Protocol Corporate Standard, and to commit to science-based emission reduction targets validated by the Science Based Targets initiative (SBTi) or equivalent. The clause covers scope 1 (direct), scope 2 (energy indirect), and, where material, scope 3 (value chain) emissions, and requires a credible decarbonisation pathway.",
+      "drafting_guidance": "Require measurement in accordance with the GHG Protocol Corporate Standard (revised edition). Specify the scope of disclosure (scope 1, 2, and relevant scope 3 categories per the GHG Protocol Scope 3 Standard). Require third-party verification of emissions data (ISO 14064-3 or equivalent). Define the baseline year and target year for reduction commitments. Require alignment with a 1.5C or well-below-2C pathway. Address the use of renewable energy certificates (RECs) and power purchase agreements (PPAs) for scope 2 reporting (market-based vs location-based). Include interim milestones (annual or biennial targets). Specify the consequences of failure to meet reduction targets. Address the treatment of carbon offsets (quality criteria, vintage, additionality). Require annual progress reporting.",
+      "variations": {
+        "sbti-validated": "Emission reduction targets validated by the Science Based Targets initiative",
+        "net-zero-pathway": "Commitment to net-zero emissions by a specified date with interim milestones",
+        "disclosure-only": "Disclosure obligation without binding reduction targets"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-carbon-offset"],
+      "depends_on": ["esg-reporting-obligations"],
+      "compliance_refs": ["GHG Protocol Corporate Standard", "SBTi Criteria", "Paris Agreement Art 2", "EU CSRD"]
+    },
+    {
+      "id": "esg-scope3-emissions",
+      "clause_category": "esg",
+      "name": "Scope 3 Value Chain Emissions Obligations",
+      "description": "Imposes specific obligations on the supplier to measure, report, and progressively reduce its scope 3 (value chain) emissions attributable to the goods or services supplied under the agreement. Scope 3 emissions typically represent 70-90% of a company's total carbon footprint and are increasingly subject to mandatory disclosure under the EU CSRD and voluntary frameworks such as CDP. The clause must address data quality, estimation methodologies, and cascading obligations to sub-tier suppliers.",
+      "drafting_guidance": "Define the relevant scope 3 categories per the GHG Protocol Scope 3 Standard (categories 1-15). Specify the data quality hierarchy (primary activity data preferred over spend-based estimates). Require the supplier to collect primary emissions data from its own tier-1 suppliers for material categories. Address the use of emission factors and databases (DEFRA, EPA, ecoinvent). Specify the allocation methodology for shared products and services. Require the supplier to cascade scope 3 measurement obligations to its sub-tier suppliers. Define materiality thresholds (e.g., suppliers representing 80% of procurement spend must provide primary data within 24 months). Include data quality improvement roadmaps. Address the treatment of biogenic emissions. Specify the format for data exchange (e.g., PACT/Pathfinder framework for product carbon footprints).",
+      "variations": {
+        "comprehensive": "All 15 scope 3 categories measured and reported with primary data targets",
+        "material-categories": "Focus on the 3-5 most material scope 3 categories with phased data quality improvement",
+        "product-level": "Product carbon footprint (PCF) approach for specific goods supplied"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing"],
+      "depends_on": ["esg-carbon-disclosure", "esg-supply-chain-transparency"],
+      "compliance_refs": ["GHG Protocol Scope 3 Standard", "EU CSRD (ESRS E1)", "PACT/Pathfinder Framework", "CDP Supply Chain Programme"]
+    },
+    {
+      "id": "esg-modern-slavery",
+      "clause_category": "esg",
+      "name": "Modern Slavery and Forced Labour Prohibition",
+      "description": "Requires the supplier to warrant that it does not use, and will take all reasonable steps to ensure that its supply chain does not use, forced labour, compulsory labour, debt bondage, human trafficking, or any form of modern slavery as defined by the ILO Forced Labour Convention (No. 29), the UK Modern Slavery Act 2015, and applicable national legislation. The supplier must implement due diligence procedures proportionate to the risk profile of its operations and supply chain.",
+      "drafting_guidance": "Include a representation and warranty that the supplier's operations and supply chain are free from modern slavery, forced labour, and human trafficking. Define modern slavery broadly, referencing ILO Convention No. 29 (Forced Labour), ILO Convention No. 105 (Abolition of Forced Labour), and the ILO indicators of forced labour. Require the supplier to publish an annual modern slavery statement (for UK MSA compliance, if applicable). Require due diligence procedures: risk assessment of supply chain by geography and sector, supplier codes of conduct, on-site audits of high-risk suppliers, worker interviews, grievance mechanisms. Specify remediation obligations if modern slavery is detected (do not simply terminate; require a corrective action plan that prioritises worker welfare). Address the worker-pays principle (no recruitment fees charged to workers). Require transparency regarding labour supply chains, including the use of labour agents and recruitment agencies. Specify audit rights and access to supplier premises.",
+      "variations": {
+        "uk-msa-aligned": "Aligned with UK Modern Slavery Act 2015 s.54 transparency requirements",
+        "due-diligence-focused": "Emphasis on proactive due diligence with audit programme for high-risk tiers",
+        "remediation-oriented": "Focus on responsible remediation rather than zero-tolerance termination"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-responsible-sourcing", "esg-framework"],
+      "depends_on": [],
+      "compliance_refs": ["UK Modern Slavery Act 2015", "ILO Convention No. 29", "ILO Convention No. 105", "UN Guiding Principles on Business and Human Rights", "EU CSDDD (Directive 2024/1760)"]
+    },
+    {
+      "id": "esg-human-rights-dd",
+      "clause_category": "esg",
+      "name": "Human Rights Due Diligence",
+      "description": "Obligates the supplier to conduct ongoing human rights due diligence across its operations and value chain in accordance with the UN Guiding Principles on Business and Human Rights and the EU Corporate Sustainability Due Diligence Directive (CSDDD). The clause requires the supplier to identify, prevent, mitigate, and account for actual and potential adverse human rights impacts, and to provide for or cooperate in remediation where impacts have occurred.",
+      "drafting_guidance": "Structure the due diligence obligation around the six-step OECD Due Diligence Guidance framework: (1) embed responsible business conduct into policies and management systems, (2) identify and assess actual and potential adverse impacts, (3) cease, prevent, or mitigate adverse impacts, (4) track implementation and results, (5) communicate how impacts are addressed, (6) provide for or cooperate in remediation. Reference the UN Guiding Principles on Business and Human Rights as the authoritative framework. Require a human rights impact assessment (HRIA) covering the supplier's operations and value chain. Define the scope of human rights covered (at minimum: ILO core conventions, UDHR, ICCPR, ICESCR). Require a grievance mechanism accessible to affected stakeholders. Specify the reporting obligations (annual human rights report or integration into sustainability report). Address the cascading of HRDD obligations to sub-tier suppliers. Specify the buyer's access to HRDD documentation and audit rights. Address the interaction with the EU CSDDD compliance obligations.",
+      "variations": {
+        "csddd-aligned": "Full alignment with EU CSDDD due diligence obligations and administrative supervision",
+        "ungp-aligned": "Due diligence structured around the UN Guiding Principles three-pillar framework",
+        "risk-based": "Risk-based approach focusing HRDD on salient human rights issues by geography and sector"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing"],
+      "depends_on": ["esg-modern-slavery", "esg-labour-standards"],
+      "compliance_refs": ["EU CSDDD (Directive 2024/1760)", "UN Guiding Principles on Business and Human Rights", "OECD Due Diligence Guidance for Responsible Business Conduct", "ILO Declaration on Fundamental Principles and Rights at Work"]
+    },
+    {
+      "id": "esg-conflict-minerals",
+      "clause_category": "esg",
+      "name": "Conflict Minerals Due Diligence",
+      "description": "Requires the supplier to implement supply chain due diligence for tin, tantalum, tungsten, and gold (3TG) and other specified minerals, in accordance with the EU Conflict Minerals Regulation and the OECD Due Diligence Guidance for Responsible Supply Chains of Minerals from Conflict-Affected and High-Risk Areas. The supplier must ensure that minerals in its products do not directly or indirectly finance or benefit armed groups in conflict-affected and high-risk areas.",
+      "drafting_guidance": "Define the minerals in scope (3TG at minimum; consider extending to cobalt, mica, and other minerals depending on the product). Require due diligence aligned with the five-step OECD framework for mineral supply chains. Require the supplier to identify smelters and refiners in its supply chain and to source from facilities validated by recognised assurance programmes (RMI Responsible Minerals Assurance Process, LBMA Good Delivery). Specify the reporting obligations (annual Conflict Minerals Report, CMRT or EMRT templates). Address the treatment of recycled and scrap sources. Require the supplier to cascade due diligence obligations to its sub-tier suppliers. Specify the consequences of non-compliance (remediation plan, right to audit, termination for persistent failure). Address the EU Conflict Minerals Regulation requirements for EU importers of 3TG.",
+      "variations": {
+        "3tg-only": "Due diligence limited to tin, tantalum, tungsten, and gold per EU Regulation",
+        "extended-minerals": "Extended scope covering cobalt, mica, and other minerals associated with human rights risks",
+        "sec-aligned": "Aligned with US SEC Conflict Minerals Rule (for dual-listed companies)"
+      },
+      "contract_types": ["esg-responsible-sourcing", "esg-sustainability-supply"],
+      "depends_on": ["esg-supply-chain-transparency"],
+      "compliance_refs": ["EU Conflict Minerals Regulation (2017/821)", "OECD Due Diligence Guidance for Minerals", "US Dodd-Frank Act s.1502", "RMI Responsible Minerals Assurance Process"]
+    },
+    {
+      "id": "esg-deforestation-free",
+      "clause_category": "esg",
+      "name": "Deforestation-Free Supply Chain",
+      "description": "Requires the supplier to warrant and demonstrate that relevant commodities (cattle, cocoa, coffee, oil palm, rubber, soya, and wood) supplied under the agreement are deforestation-free and produced in accordance with the legislation of the country of production, as mandated by the EU Deforestation Regulation (EUDR). The supplier must implement a due diligence system including geolocation data, risk assessment, and risk mitigation measures.",
+      "drafting_guidance": "Reference the EU Deforestation Regulation (2023/1115) and its requirements. Define the commodities in scope (the seven EUDR commodities plus any additional commodities relevant to the agreement). Require the supplier to provide a due diligence statement for each consignment. Specify the geolocation requirements (GPS coordinates of the plots of land where commodities were produced, accurate to within 4 decimal places). Require evidence of the deforestation cut-off date compliance (31 December 2020 for EUDR). Address the benchmarking system for source countries (standard, low, or high risk) and the corresponding due diligence requirements. Require third-party verification for high-risk sources. Address the treatment of derived products (e.g., palm oil derivatives, leather from cattle). Specify record retention (minimum 5 years per EUDR). Include the right to audit the supplier's due diligence system. Address the consequences of non-compliance, including product recall obligations.",
+      "variations": {
+        "eudr-full": "Full compliance with EU Deforestation Regulation for all seven commodities",
+        "commodity-specific": "Tailored to specific commodities relevant to the contractual supply chain",
+        "beyond-legal": "Zero-deforestation commitment extending beyond EUDR requirements to all natural ecosystems"
+      },
+      "contract_types": ["esg-responsible-sourcing", "esg-sustainability-supply"],
+      "depends_on": ["esg-supply-chain-transparency"],
+      "compliance_refs": ["EU Deforestation Regulation (2023/1115)", "EU Timber Regulation (995/2010) (superseded)", "EUDR Benchmarking System"]
+    },
+    {
+      "id": "esg-circular-economy",
+      "clause_category": "esg",
+      "name": "Circular Economy and Waste Reduction",
+      "description": "Imposes obligations on the supplier to design, manufacture, and deliver products and services in accordance with circular economy principles, including waste prevention, reuse, repair, remanufacturing, and recycling. The clause addresses product lifecycle obligations, take-back schemes, recycled content requirements, and the reduction of packaging waste, aligned with the EU Circular Economy Action Plan and relevant extended producer responsibility (EPR) legislation.",
+      "drafting_guidance": "Define the circular economy principles applicable to the agreement (waste hierarchy: prevent, reuse, recycle, recover, dispose). Specify minimum recycled content requirements for products and packaging. Require design for durability, repairability, and recyclability (referencing EU Ecodesign for Sustainable Products Regulation where applicable). Establish product take-back and end-of-life management obligations. Specify waste reduction targets (e.g., 50% reduction in single-use packaging by year, zero waste to landfill). Require the supplier to report on circular economy metrics (recycled content percentage, waste diversion rate, product lifespan extension). Address extended producer responsibility (EPR) obligations and cost allocation. Specify hazardous substance restrictions (EU RoHS, REACH). Include penalties for failure to meet circular economy targets. Address the interaction with the EU Packaging and Packaging Waste Regulation.",
+      "variations": {
+        "product-focused": "Circular economy obligations for physical products (recycled content, take-back, recyclability)",
+        "packaging-focused": "Obligations relating to sustainable packaging and packaging waste reduction",
+        "service-model": "Product-as-a-service or leasing model with supplier retaining ownership and lifecycle responsibility"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-responsible-sourcing"],
+      "depends_on": [],
+      "compliance_refs": ["EU Circular Economy Action Plan", "EU Ecodesign for Sustainable Products Regulation", "EU Packaging and Packaging Waste Regulation", "EU Waste Framework Directive (2008/98/EC)"]
+    },
+    {
+      "id": "esg-environmental-remediation",
+      "clause_category": "esg",
+      "name": "Environmental Remediation and Liability",
+      "description": "Allocates responsibility and liability for the investigation and remediation of environmental contamination arising from or discovered during the performance of the agreement. Addresses the obligations under the EU Environmental Liability Directive, the polluter-pays principle, and applicable national environmental protection legislation. The clause must define the scope of contamination covered, remediation standards, cost allocation, and indemnification obligations.",
+      "drafting_guidance": "Define the scope of environmental contamination covered (soil, groundwater, surface water, air, sediment). Specify the applicable remediation standard (background levels, risk-based levels, regulatory clean-up standards). Allocate responsibility between pre-existing contamination and contamination caused during the contract term. Require baseline environmental assessments before commencement of activities. Specify the notification obligations upon discovery of contamination. Define the remediation process (investigation, risk assessment, remediation action plan, regulatory approval, implementation, monitoring). Address cost allocation and indemnification (polluter pays, proportionate liability, joint and several liability). Specify the interaction with environmental insurance. Include representations and warranties regarding environmental compliance. Address the buyer's access rights for environmental monitoring. Specify the survival period for environmental indemnities (typically 10-30 years for contamination claims).",
+      "variations": {
+        "polluter-pays": "Full responsibility on the party causing contamination, with indemnification",
+        "shared-liability": "Proportionate cost sharing based on contribution to contamination",
+        "capped-remediation": "Remediation obligations capped at a specified amount with insurance backstop"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "outsourcing-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["EU Environmental Liability Directive (2004/35/CE)", "EU Industrial Emissions Directive (2010/75/EU)", "Polluter-Pays Principle (TFEU Art 191(2))"]
+    },
+    {
+      "id": "esg-sustainability-audit",
+      "clause_category": "esg",
+      "name": "Sustainability Audit Rights",
+      "description": "Grants the buyer the right to audit and inspect the supplier's sustainability performance, ESG data accuracy, and compliance with contractual ESG obligations. The audit scope encompasses environmental management systems, labour practices, human rights due diligence, anti-corruption controls, and supply chain due diligence processes. The clause must address the frequency, scope, methodology, and consequences of audit findings.",
+      "drafting_guidance": "Define the scope of sustainability audits (environmental management, labour conditions, health and safety, human rights due diligence, anti-corruption, supply chain management). Specify the frequency (annual scheduled audits plus unannounced audits on cause). Define the audit methodology (document review, on-site inspection, worker interviews, management interviews, records review). Specify the notice period for scheduled audits (typically 15-30 days). Address unannounced audits (permitted on reasonable suspicion of material non-compliance). Specify who may conduct audits (buyer's internal team, independent third-party auditors, recognised audit bodies such as SMETA, SA8000, or RBA). Address cost allocation (typically buyer pays for routine audits; supplier pays if material non-compliance is found). Define the remediation process for audit findings (corrective action plan, timeline, re-audit). Specify the consequences of persistent non-compliance (escalation, termination right). Address access to sub-tier supplier facilities. Require the supplier to maintain self-assessment capabilities between audits.",
+      "variations": {
+        "full-access": "Unrestricted audit rights including unannounced visits and worker interviews",
+        "third-party": "Audits conducted by recognised bodies (SMETA, SA8000, RBA VAP) with results shared with buyer",
+        "self-assessment": "Supplier self-assessment with periodic third-party verification and buyer audit on cause"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing"],
+      "depends_on": ["esg-reporting-obligations"],
+      "compliance_refs": ["EU CSDDD (Directive 2024/1760)", "German Supply Chain Act (LkSG) s.6", "SMETA Best Practice Guidance", "SA8000 Standard"]
+    },
+    {
+      "id": "esg-green-claims",
+      "clause_category": "esg",
+      "name": "Green Claims Substantiation",
+      "description": "Requires the supplier to ensure that all environmental claims made about its products, services, or operations are accurate, substantiated by robust scientific evidence, and compliant with the EU Green Claims Directive and applicable national advertising standards. The clause prohibits vague, misleading, or unsubstantiated environmental claims (greenwashing) and requires independent verification of material claims.",
+      "drafting_guidance": "Prohibit unsubstantiated environmental claims (e.g., 'eco-friendly', 'green', 'sustainable', 'carbon neutral' without evidence). Require that all environmental claims are specific, accurate, and verifiable. Specify that claims must be substantiated by recognised scientific evidence and life-cycle assessment methodologies (ISO 14040/14044). Require independent third-party verification of environmental claims before publication. Address the use of environmental labels and certification schemes (must be based on a certification scheme with third-party verification per the EU Green Claims Directive). Prohibit claims based solely on carbon offsetting (e.g., 'carbon neutral' claims relying on offsets without real emission reductions). Address comparative claims (must be based on equivalent scope and methodology). Require pre-approval of environmental marketing materials by the buyer. Include indemnification for losses arising from misleading green claims. Address the EU Empowering Consumers Directive amendments on greenwashing.",
+      "variations": {
+        "eu-gcd-aligned": "Full alignment with EU Green Claims Directive verification and substantiation requirements",
+        "pre-approval": "All environmental claims require buyer pre-approval before publication",
+        "no-offset-claims": "Prohibition on carbon-neutral or net-zero claims based primarily on carbon offsets"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-carbon-offset"],
+      "depends_on": [],
+      "compliance_refs": ["EU Green Claims Directive (proposed)", "EU Unfair Commercial Practices Directive (2005/29/EC)", "EU Empowering Consumers Directive (2024/825)", "ISO 14021 (Environmental Labels)", "ISO 14040/14044 (LCA)"]
+    },
+    {
+      "id": "esg-just-transition",
+      "clause_category": "esg",
+      "name": "Just Transition Provisions",
+      "description": "Addresses the social impact of the transition to a low-carbon and environmentally sustainable economy on workers, communities, and regions dependent on carbon-intensive industries. The clause requires the supplier to develop and implement a just transition plan that provides for worker retraining, redeployment, social protection measures, stakeholder engagement, and community support, consistent with the ILO Guidelines for a Just Transition and the EU Just Transition Mechanism.",
+      "drafting_guidance": "Require the supplier to assess the social impact of decarbonisation and sustainability measures on its workforce and affected communities. Define just transition obligations: worker consultation and social dialogue, retraining and upskilling programmes, redeployment within the supplier's organisation, severance and social protection measures for affected workers, community investment in affected regions. Specify stakeholder engagement requirements (trade unions, worker representatives, local communities, local government). Require a just transition plan with measurable milestones and reporting. Address the allocation of just transition costs between the parties. Reference the ILO Guidelines for a Just Transition to Environmentally Sustainable Economies and the Paris Agreement preamble. Address the interaction with employment law obligations (collective consultation, TUPE/transfers of undertakings). Require annual reporting on just transition measures implemented and outcomes achieved.",
+      "variations": {
+        "comprehensive-plan": "Full just transition plan with retraining, redeployment, and community investment",
+        "worker-focused": "Focus on workforce impact with retraining and social protection commitments",
+        "reporting-only": "Obligation to report on just transition risks and measures without binding targets"
+      },
+      "contract_types": ["esg-framework", "esg-sustainability-supply"],
+      "depends_on": ["esg-labour-standards"],
+      "compliance_refs": ["ILO Guidelines for a Just Transition", "Paris Agreement Preamble", "EU Just Transition Mechanism", "EU CSRD (ESRS S1, S2)"]
+    },
+    {
+      "id": "esg-biodiversity",
+      "clause_category": "esg",
+      "name": "Biodiversity and Ecosystem Protection",
+      "description": "Imposes obligations on the supplier to assess, avoid, minimise, and offset adverse impacts on biodiversity, ecosystems, and natural capital resulting from its operations and supply chain, consistent with the Kunming-Montreal Global Biodiversity Framework and the EU Biodiversity Strategy for 2030. The clause applies the mitigation hierarchy (avoid, minimise, restore, offset) and requires the supplier to contribute to nature-positive outcomes.",
+      "drafting_guidance": "Require a biodiversity impact assessment for operations in or adjacent to areas of high biodiversity value (IUCN Key Biodiversity Areas, UNESCO World Heritage Sites, Ramsar wetlands, national protected areas). Apply the mitigation hierarchy: avoid impacts in the first instance, minimise unavoidable impacts, restore degraded habitats, offset residual impacts through biodiversity offsets meeting BBOP principles. Prohibit operations in designated protected areas without prior impact assessment and regulatory approval. Require no-net-loss or net-positive biodiversity outcomes for high-impact activities. Define the species and habitats in scope. Require the supplier to report on biodiversity metrics aligned with the Taskforce on Nature-related Financial Disclosures (TNFD) framework. Address the interaction with the EU Deforestation Regulation and the EU Nature Restoration Law. Specify monitoring and reporting obligations (species surveys, habitat assessments, ecosystem service valuations). Address the use of biodiversity credits and nature-based solutions.",
+      "variations": {
+        "no-net-loss": "Mitigation hierarchy applied with a no-net-loss biodiversity outcome requirement",
+        "nature-positive": "Net-positive biodiversity commitment aligned with the Global Biodiversity Framework",
+        "tnfd-reporting": "Biodiversity risk assessment and disclosure aligned with TNFD recommendations"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-responsible-sourcing", "esg-framework"],
+      "depends_on": ["esg-deforestation-free"],
+      "compliance_refs": ["Kunming-Montreal Global Biodiversity Framework", "EU Biodiversity Strategy for 2030", "TNFD Recommendations", "BBOP Standard on Biodiversity Offsets", "EU Nature Restoration Law"]
+    },
+    {
+      "id": "esg-water-stewardship",
+      "clause_category": "esg",
+      "name": "Water Stewardship and Efficiency",
+      "description": "Requires the supplier to measure, report, and reduce its water consumption and to implement responsible water management practices, particularly in water-stressed regions. The clause addresses water withdrawal, consumption, discharge quality, water risk assessment, and compliance with the EU Water Framework Directive and relevant national water legislation. Suppliers operating in water-stressed catchments must demonstrate active participation in collective water stewardship initiatives.",
+      "drafting_guidance": "Require the supplier to measure and report water withdrawal by source (surface water, groundwater, municipal supply, recycled water). Specify reporting methodology (CDP Water Security questionnaire, GRI 303 Water and Effluents). Require a water risk assessment using recognised tools (WRI Aqueduct, WWF Water Risk Filter) to identify operations in water-stressed basins. Define water efficiency targets (absolute reduction or intensity-based targets). Specify wastewater discharge quality standards (compliance with EU Water Framework Directive, local discharge permits, IFC EHS Guidelines). Require water recycling and reuse programmes for water-intensive operations. Address the treatment of process chemicals and pollutants in effluent. Require participation in local water stewardship initiatives for high-risk sites (Alliance for Water Stewardship Standard). Specify reporting frequency and audit rights for water data. Address the interaction with environmental remediation provisions for groundwater contamination.",
+      "variations": {
+        "comprehensive": "Full water stewardship programme with risk assessment, targets, and collective action",
+        "efficiency-focused": "Water consumption reduction targets with intensity metrics",
+        "discharge-focused": "Focus on wastewater quality and compliance with discharge standards"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-responsible-sourcing"],
+      "depends_on": ["esg-reporting-obligations"],
+      "compliance_refs": ["EU Water Framework Directive (2000/60/EC)", "Alliance for Water Stewardship Standard", "GRI 303 (Water and Effluents)", "CDP Water Security", "UN CEO Water Mandate"]
+    },
+    {
+      "id": "esg-labour-standards",
+      "clause_category": "esg",
+      "name": "ILO Core Labour Standards Compliance",
+      "description": "Requires the supplier to comply with the eight ILO core conventions covering the fundamental principles and rights at work: freedom of association and collective bargaining (C087, C098), elimination of forced labour (C029, C105), abolition of child labour (C138, C182), and elimination of discrimination in employment (C100, C111). The clause extends to the supplier's sub-tier supply chain and requires proactive due diligence to identify and address violations.",
+      "drafting_guidance": "Require compliance with all eight ILO core conventions, regardless of whether the country of operation has ratified them. Address freedom of association: workers' right to form and join trade unions, right to collective bargaining, prohibition on retaliation against union members. Address forced labour: prohibition on bonded labour, debt bondage, prison labour, and trafficking (cross-reference modern slavery clause). Address child labour: minimum working age per ILO Convention No. 138, prohibition on worst forms of child labour per Convention No. 182, age verification procedures, apprenticeship programme safeguards. Address discrimination: equal pay for equal work, prohibition on discrimination based on race, gender, religion, sexual orientation, disability, and other protected characteristics. Require the supplier to implement a code of conduct embedding ILO standards and to flow down to sub-tier suppliers. Specify monitoring and audit mechanisms. Define the remediation process for identified violations.",
+      "variations": {
+        "strict-compliance": "Zero-tolerance approach with immediate termination right for core convention violations",
+        "progressive-improvement": "Baseline compliance with progressive improvement targets for supply chain",
+        "verified": "Third-party social audit verification (SA8000, BSCI, Fair Labor Association)"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-responsible-sourcing", "esg-framework"],
+      "depends_on": [],
+      "compliance_refs": ["ILO Convention No. 87 (Freedom of Association)", "ILO Convention No. 98 (Collective Bargaining)", "ILO Convention No. 29 (Forced Labour)", "ILO Convention No. 105 (Abolition of Forced Labour)", "ILO Convention No. 138 (Minimum Age)", "ILO Convention No. 182 (Worst Forms of Child Labour)", "ILO Convention No. 100 (Equal Remuneration)", "ILO Convention No. 111 (Discrimination)"]
+    },
+    {
+      "id": "esg-living-wage",
+      "clause_category": "esg",
+      "name": "Living Wage Commitment",
+      "description": "Requires the supplier to pay all workers involved in the performance of the agreement a living wage that meets the basic needs of workers and their families, as determined by a recognised living wage benchmark. A living wage exceeds the statutory minimum wage in most jurisdictions and reflects the actual cost of a decent standard of living, including food, housing, healthcare, education, transport, and discretionary income.",
+      "drafting_guidance": "Define the living wage benchmark to be applied (Global Living Wage Coalition, WageIndicator, Living Wage Foundation, Anker methodology, Fair Wage Network). Specify the geographic scope (all workers at all facilities involved in contract performance, including sub-tier suppliers). Define 'worker' broadly (direct employees, agency workers, contract workers, seasonal workers). Require the supplier to conduct a living wage gap analysis comparing actual wages to the applicable benchmark. Specify the timeline for achieving living wage compliance (immediate for direct employees; phased for supply chain workers with interim milestones). Address the distinction between living wage and minimum wage. Require annual reporting on wage levels relative to the benchmark. Specify audit rights for wage verification. Address the cost implications (the buyer may need to contribute through pricing adjustments). Require the supplier to develop a responsible purchasing practices policy to avoid price pressure that undermines living wage commitments.",
+      "variations": {
+        "immediate-compliance": "Living wage for all direct employees from contract commencement",
+        "phased-approach": "Phased implementation across supply chain tiers over 3-5 years",
+        "benchmark-linked": "Wages indexed to a specified living wage benchmark with annual adjustment"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-responsible-sourcing"],
+      "depends_on": ["esg-labour-standards"],
+      "compliance_refs": ["EU Adequate Minimum Wages Directive (2022/2041)", "Global Living Wage Coalition / Anker Methodology", "SA8000 Standard", "ETI Base Code"]
+    },
+    {
+      "id": "esg-child-labour-prohibition",
+      "clause_category": "esg",
+      "name": "Child Labour Prohibition and Age Verification",
+      "description": "Expressly prohibits the use of child labour in the performance of the agreement and throughout the supplier's supply chain, and requires the supplier to implement age verification procedures and monitoring mechanisms. The clause distinguishes between prohibited child labour, hazardous work for young persons, and permissible light work in accordance with ILO Convention No. 138 (Minimum Age) and ILO Convention No. 182 (Worst Forms of Child Labour). Where child labour is discovered, the clause requires responsible remediation that prioritises the welfare of the child.",
+      "drafting_guidance": "Define child labour per ILO Convention No. 138: work performed by children below the applicable minimum working age (15 years generally, 14 in developing countries as transitional measure, 13/12 for light work). Prohibit all worst forms of child labour per ILO Convention No. 182 without exception (slavery, trafficking, forced recruitment, prostitution, illicit activities, hazardous work). Require robust age verification procedures (documentary evidence, birth certificates, government-issued ID). Specify monitoring mechanisms for high-risk supply chains (agriculture, garment, mining, cobalt extraction). Define the remediation protocol if child labour is detected: do not simply dismiss the child (which worsens outcomes); instead, ensure access to education, provide financial support to the family, and transition the child to appropriate activities. Require the supplier to work with specialist organisations for remediation (ILO-IPEC, local NGOs). Address apprenticeship and vocational training programmes (permissible conditions). Specify audit and reporting requirements.",
+      "variations": {
+        "zero-tolerance": "Absolute prohibition with immediate escalation and remediation protocol",
+        "risk-based-monitoring": "Enhanced monitoring for high-risk sectors and geographies with remediation support",
+        "education-linked": "Prohibition coupled with education access programmes in high-risk sourcing regions"
+      },
+      "contract_types": ["esg-responsible-sourcing", "esg-sustainability-supply"],
+      "depends_on": ["esg-labour-standards"],
+      "compliance_refs": ["ILO Convention No. 138 (Minimum Age)", "ILO Convention No. 182 (Worst Forms of Child Labour)", "UN Convention on the Rights of the Child", "EU CSDDD (Directive 2024/1760)"]
+    },
+    {
+      "id": "esg-supply-chain-transparency",
+      "clause_category": "esg",
+      "name": "Supply Chain Transparency and Traceability",
+      "description": "Requires the supplier to maintain full visibility and traceability across its supply chain, disclosing the identities, locations, and ESG performance of sub-tier suppliers involved in the production of goods or delivery of services under the agreement. The clause addresses the supplier mapping requirements of the German Supply Chain Act (LkSG), the EU CSDDD, and the EU Deforestation Regulation, and requires a due diligence system for identifying and prioritising high-risk supply chain nodes.",
+      "drafting_guidance": "Require the supplier to map its supply chain to at least tier 2 (and tier 3+ for high-risk commodities). Specify the information required for each supplier: legal name, registered address, site addresses, products or services supplied, country of origin of raw materials, workforce demographics, ESG certifications, and risk assessment rating. Require annual disclosure of the supplier list (or material changes). Address the confidentiality of supplier information (balanced against transparency obligations). Require the supplier to implement a risk-based due diligence system for its supply chain (prioritising by geography, sector, commodity, and known risk indicators). Specify the use of recognised supply chain transparency platforms (Sedex, EcoVadis, IntegrityNext). Address the cascading of transparency obligations to sub-tier suppliers. Specify audit rights for supply chain verification, including the right to visit sub-tier supplier facilities. Require a risk mitigation plan for identified high-risk suppliers. Address the German LkSG requirements for risk analysis and preventive measures across the supply chain.",
+      "variations": {
+        "full-disclosure": "Complete supply chain disclosure to tier 3+ with annual updates",
+        "risk-based": "Disclosure focused on high-risk suppliers and commodities with risk-proportionate depth",
+        "platform-based": "Supplier registration on a recognised ESG platform (EcoVadis, Sedex) with data sharing"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-responsible-sourcing", "esg-framework"],
+      "depends_on": [],
+      "compliance_refs": ["German Supply Chain Act (LkSG)", "EU CSDDD (Directive 2024/1760)", "EU Deforestation Regulation (2023/1115)", "French Duty of Vigilance Law (2017)", "Norwegian Transparency Act (2022)"]
+    },
+    {
+      "id": "esg-termination-triggers",
+      "clause_category": "esg",
+      "name": "ESG Termination Triggers",
+      "description": "Defines the ESG-related events and breaches that entitle the buyer to terminate the agreement, either immediately or upon failure to remediate within a specified cure period. ESG termination triggers address both zero-tolerance violations (such as modern slavery, child labour, and severe environmental pollution) that warrant immediate termination, and remediable ESG failures (such as missed reporting deadlines or audit non-conformities) that trigger a graduated response culminating in termination if not cured.",
+      "drafting_guidance": "Distinguish between immediate termination events and events subject to a cure period. Immediate termination triggers (no cure period): confirmed use of forced labour, child labour, or human trafficking; conviction for bribery or corruption; deliberate environmental crime causing serious harm; systemic fraud in ESG reporting. Cure-period termination triggers (typically 30-60 days): failure to provide ESG reports by the deadline; failure to meet emission reduction milestones; audit non-conformities rated 'major'; failure to implement corrective action plans from sustainability audits; loss of required ESG certifications. Specify the notice requirements and the evidence threshold for termination. Address the consequences of termination (wind-down obligations, data return, final ESG report). Preserve the buyer's right to claim damages in addition to termination. Address reputational risk mitigation (public communication coordination). Specify survival provisions for ESG obligations that extend beyond termination (environmental remediation, ongoing reporting for disclosed data).",
+      "variations": {
+        "zero-tolerance": "Immediate termination for any breach of core human rights or environmental obligations",
+        "graduated": "Tiered response: warning, corrective action plan, suspension of orders, termination",
+        "remediation-first": "Extended cure periods with mandatory remediation before termination right arises"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing"],
+      "depends_on": ["esg-modern-slavery", "esg-child-labour-prohibition", "esg-human-rights-dd"],
+      "compliance_refs": ["EU CSDDD (Directive 2024/1760) Art 7(5)", "German Supply Chain Act (LkSG) s.7", "UK Modern Slavery Act 2015"]
+    },
+    {
+      "id": "esg-greenwashing-liability",
+      "clause_category": "esg",
+      "name": "Greenwashing Liability and Indemnification",
+      "description": "Allocates liability for greenwashing between the parties and provides indemnification for losses arising from misleading, inaccurate, or unsubstantiated environmental or sustainability claims made by the supplier. The clause addresses regulatory penalties under the EU Green Claims Directive and EU Unfair Commercial Practices Directive, consumer class actions, investor claims, and reputational damage arising from greenwashing by the supplier that is attributed to or associated with the buyer's brand.",
+      "drafting_guidance": "Define greenwashing broadly: any environmental or sustainability claim that is misleading, deceptive, unsubstantiated, vague, or that omits material information about environmental impact. Require the supplier to indemnify the buyer against all losses arising from the supplier's greenwashing, including: regulatory fines and penalties (EU Green Claims Directive, national advertising standards), consumer claims and class actions, investor claims, reputational damage, and costs of corrective advertising. Specify the standard of substantiation required for environmental claims (scientific evidence, life-cycle assessment, third-party verification). Address the allocation of liability where both parties have contributed to the claim (e.g., buyer's marketing uses supplier's unverified data). Require the supplier to maintain professional indemnity or product liability insurance covering greenwashing claims. Include a pre-approval mechanism for environmental claims. Specify the survival period for greenwashing indemnities (typically 3-5 years post-termination). Address the interaction with the EU Empowering Consumers Directive and national advertising regulations.",
+      "variations": {
+        "full-indemnity": "Supplier fully indemnifies buyer for all greenwashing losses without cap limitation",
+        "shared-liability": "Proportionate liability based on each party's contribution to the misleading claim",
+        "capped-indemnity": "Greenwashing indemnity subject to a separate super-cap above general liability cap"
+      },
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-carbon-offset"],
+      "depends_on": ["esg-green-claims"],
+      "compliance_refs": ["EU Green Claims Directive (proposed)", "EU Unfair Commercial Practices Directive (2005/29/EC)", "EU Empowering Consumers Directive (2024/825)", "ASA CAP Code (UK)", "FTC Green Guides (US)"]
+    }
+  ],
+  "contract_types": [
+    {
+      "id": "esg-sustainability-supply",
+      "name": "Sustainability Supply Agreement",
+      "category": "commercial",
+      "description": "A supply agreement with comprehensive sustainability and ESG obligations embedded into the commercial terms. Governs the procurement of goods or services where the buyer requires the supplier to meet defined environmental, social, and governance standards throughout the supply chain, including emission reduction targets, human rights due diligence, circular economy obligations, and ESG reporting. Used by companies subject to the EU CSDDD, the German LkSG, or voluntary sustainability commitments such as the UN Global Compact.",
+      "required_clauses": ["esg-reporting-obligations", "esg-carbon-disclosure", "esg-modern-slavery", "esg-labour-standards", "esg-supply-chain-transparency", "esg-sustainability-audit", "esg-termination-triggers"],
+      "recommended_clauses": ["esg-scope3-emissions", "esg-human-rights-dd", "esg-green-claims", "esg-living-wage", "esg-child-labour-prohibition", "esg-greenwashing-liability", "esg-biodiversity", "esg-water-stewardship", "esg-circular-economy"],
+      "typical_parties": "Buyer / Procuring Entity <-> Supplier / Manufacturer",
+      "regulatory_drivers": ["EU CSDDD", "German LkSG", "French Duty of Vigilance Law", "EU CSRD", "UK Modern Slavery Act"],
+      "related_agreements": ["msa", "esg-framework", "esg-responsible-sourcing"]
+    },
+    {
+      "id": "esg-framework",
+      "name": "ESG Framework Agreement",
+      "category": "commercial",
+      "description": "An overarching framework agreement that establishes the ESG principles, standards, and governance structures applicable to all commercial engagements between the parties. The framework sets the baseline ESG requirements that apply across multiple individual supply agreements, service agreements, or project engagements, and provides a unified governance structure for ESG performance management, reporting, escalation, and continuous improvement. Commonly used by multinational companies to standardise ESG expectations across their supplier base.",
+      "required_clauses": ["esg-reporting-obligations", "esg-human-rights-dd", "esg-modern-slavery", "esg-labour-standards", "esg-sustainability-audit", "esg-termination-triggers", "esg-supply-chain-transparency"],
+      "recommended_clauses": ["esg-carbon-disclosure", "esg-scope3-emissions", "esg-green-claims", "esg-greenwashing-liability", "esg-just-transition", "esg-biodiversity", "esg-conflict-minerals", "esg-living-wage"],
+      "typical_parties": "Corporate Buyer / Group Procurement <-> Strategic Supplier / Supplier Base",
+      "regulatory_drivers": ["EU CSDDD", "German LkSG", "EU CSRD", "EU Taxonomy Regulation"],
+      "related_agreements": ["msa", "esg-sustainability-supply", "esg-responsible-sourcing"]
+    },
+    {
+      "id": "esg-carbon-offset",
+      "name": "Carbon Offset Purchase Agreement",
+      "category": "commercial",
+      "description": "Agreement for the purchase of verified carbon credits or offsets from emission reduction or removal projects. Governs the credit type, vintage, verification standard, registry, retirement process, and the allocation of risks relating to credit invalidity, double-counting, and project failure. Addresses the increasing regulatory scrutiny of carbon offset claims, including the EU Green Claims Directive requirements for offset-based environmental claims and the integrity standards of the Voluntary Carbon Markets Integrity Initiative (VCMI) and Integrity Council for the Voluntary Carbon Market (ICVCM).",
+      "required_clauses": ["esg-green-claims", "esg-carbon-disclosure", "esg-greenwashing-liability"],
+      "recommended_clauses": ["esg-reporting-obligations", "esg-biodiversity"],
+      "typical_parties": "Carbon Credit Buyer <-> Carbon Credit Seller / Project Developer",
+      "regulatory_drivers": ["EU Green Claims Directive", "VCMI Claims Code of Practice", "ICVCM Core Carbon Principles", "Article 6 Paris Agreement"],
+      "related_agreements": ["esg-sustainability-supply", "esg-framework"]
+    },
+    {
+      "id": "esg-responsible-sourcing",
+      "name": "Responsible Sourcing Agreement",
+      "category": "commercial",
+      "description": "Agreement governing the sourcing of raw materials, commodities, or components where the buyer requires assurance that sourcing practices are environmentally sustainable, socially responsible, and compliant with applicable due diligence regulations. Covers conflict minerals, deforestation-free commodities, living wages, child labour prohibition, and supply chain traceability. Used for high-risk supply chains in agriculture, mining, textiles, and electronics where adverse human rights and environmental impacts are prevalent.",
+      "required_clauses": ["esg-supply-chain-transparency", "esg-modern-slavery", "esg-child-labour-prohibition", "esg-labour-standards", "esg-sustainability-audit", "esg-termination-triggers"],
+      "recommended_clauses": ["esg-conflict-minerals", "esg-deforestation-free", "esg-living-wage", "esg-human-rights-dd", "esg-water-stewardship", "esg-environmental-remediation"],
+      "typical_parties": "Buyer / Brand Owner <-> Raw Material Supplier / Commodity Trader / Manufacturer",
+      "regulatory_drivers": ["EU CSDDD", "EU Deforestation Regulation", "EU Conflict Minerals Regulation", "German LkSG", "UK Modern Slavery Act"],
+      "related_agreements": ["esg-sustainability-supply", "esg-framework"]
+    }
+  ],
+  "risk_patterns": [
+    {
+      "id": "esg-risk-scope3-data-gap",
+      "name": "Scope 3 Emissions Data Gap",
+      "risk_category": "regulatory",
+      "clause_type": "esg",
+      "trigger": "Supply agreement lacks scope 3 emissions reporting obligation or relies entirely on spend-based estimates",
+      "description": "Without contractual obligations for suppliers to provide primary activity-level scope 3 emissions data, the buyer is unable to accurately measure and report its value chain emissions, creating non-compliance risk under the EU CSRD and potential liability for materially misstated sustainability reports.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Regulatory enforcement action for inaccurate CSRD disclosures; inability to set or track science-based targets; investor downgrade of ESG ratings.",
+      "detection_guidance": "Check whether the contract includes an obligation for the supplier to report scope 3 emissions data using primary activity data (not just spend-based estimates). Verify methodology references (GHG Protocol Scope 3 Standard).",
+      "remediation": "Add scope 3 reporting obligations with phased data quality improvement targets. Require primary activity data for material emission categories within 12-24 months. Reference GHG Protocol Scope 3 Standard and PACT/Pathfinder framework.",
+      "real_world_impact": "Companies reporting under CSRD face significant restatement risk where scope 3 data is based on low-quality industry averages rather than supplier-specific data."
+    },
+    {
+      "id": "esg-risk-modern-slavery-absent",
+      "name": "Missing Modern Slavery Provisions",
+      "risk_category": "reputational",
+      "clause_type": "esg",
+      "trigger": "Supply agreement with suppliers operating in high-risk sectors or geographies contains no modern slavery or forced labour provisions",
+      "description": "Absence of modern slavery provisions in supply agreements with high-risk suppliers exposes the buyer to severe reputational harm, regulatory sanctions under the UK Modern Slavery Act and EU CSDDD, and potential complicity in human rights abuses through its supply chain. The German Supply Chain Act (LkSG) imposes fines of up to 2% of global turnover for failures in human rights due diligence.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Regulatory fines (up to 2% global turnover under LkSG); brand damage and consumer boycotts; exclusion from public procurement; personal liability for directors under CSDDD.",
+      "detection_guidance": "Check for modern slavery, forced labour, or human rights due diligence clauses. Flag as critical risk if absent in agreements with suppliers in agriculture, mining, textiles, electronics, or construction sectors, or operating in countries with high forced labour prevalence (Global Slavery Index).",
+      "remediation": "Add comprehensive modern slavery and forced labour prohibition clause with due diligence obligations, audit rights, worker grievance mechanisms, and responsible remediation protocols. Reference ILO Conventions No. 29 and No. 105.",
+      "real_world_impact": "Major apparel brands have faced significant shareholder value destruction and consumer backlash following discovery of forced labour in Xinjiang cotton supply chains."
+    },
+    {
+      "id": "esg-risk-greenwashing-exposure",
+      "name": "Greenwashing Liability Exposure",
+      "risk_category": "regulatory",
+      "clause_type": "esg",
+      "trigger": "Contract permits supplier to make environmental claims about products or services without requiring substantiation or third-party verification",
+      "description": "Unsubstantiated environmental claims made by a supplier can expose the buyer to greenwashing liability under the EU Green Claims Directive, the EU Unfair Commercial Practices Directive, and national advertising standards bodies. Where the buyer incorporates the supplier's environmental claims into its own marketing, the buyer assumes joint liability for any misleading representations.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Regulatory fines and injunctions; consumer class actions; investor litigation; reputational damage; requirement for corrective advertising.",
+      "detection_guidance": "Check whether environmental claims in the contract or product specifications are substantiated with references to specific standards, methodologies, or third-party certifications. Flag vague terms such as 'eco-friendly', 'green', 'sustainable', or 'carbon neutral' without supporting evidence.",
+      "remediation": "Add green claims substantiation clause requiring scientific evidence, life-cycle assessment, and third-party verification for all environmental claims. Include greenwashing indemnification from the supplier. Prohibit carbon-neutral claims based solely on offsets.",
+      "real_world_impact": "Multiple airlines and energy companies have faced enforcement action for misleading carbon-neutral claims based on low-quality carbon offsets."
+    },
+    {
+      "id": "esg-risk-deforestation-non-compliance",
+      "name": "EUDR Non-Compliance Risk",
+      "risk_category": "compliance",
+      "clause_type": "esg",
+      "trigger": "Supply agreement for EUDR-regulated commodities lacks due diligence, geolocation, and deforestation-free warranty provisions",
+      "description": "The EU Deforestation Regulation prohibits the placing on the EU market of specified commodities (cattle, cocoa, coffee, oil palm, rubber, soya, wood) and derived products unless they are deforestation-free and produced in accordance with the legislation of the country of production. Operators must exercise due diligence, including geolocation of production plots. Failure to contractually secure supplier compliance exposes the buyer to prohibition on sale, product seizure, and fines proportionate to turnover.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Prohibition on placing products on the EU market; product seizure and destruction; fines proportionate to annual turnover; exclusion from public procurement for 12 months.",
+      "detection_guidance": "For contracts involving any of the seven EUDR commodities or their derived products, check for: deforestation-free warranty, geolocation data provision obligation, due diligence statement requirements, and reference to the 31 December 2020 cut-off date.",
+      "remediation": "Add deforestation-free supply chain clause with geolocation requirements, due diligence system, and warranty that commodities comply with EU Deforestation Regulation (2023/1115). Include audit rights and termination triggers for non-compliance.",
+      "real_world_impact": "Major food and consumer goods companies have been forced to restructure entire supply chains in response to EUDR requirements, with non-compliant suppliers losing market access."
+    },
+    {
+      "id": "esg-risk-no-sustainability-audit",
+      "name": "No Sustainability Audit Rights",
+      "risk_category": "operational",
+      "clause_type": "esg",
+      "trigger": "ESG or sustainability obligations in the contract are not accompanied by audit rights or verification mechanisms",
+      "description": "ESG obligations without corresponding audit rights are unverifiable and therefore unenforceable. Without the right to audit sustainability data and inspect supplier operations, the buyer has no mechanism to confirm compliance with ESG requirements, creating a false sense of security and potential regulatory liability under the EU CSDDD and German LkSG, which require companies to monitor the effectiveness of their due diligence measures.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Inability to verify ESG compliance; regulatory finding that due diligence is inadequate; exposure to supply chain incidents that should have been detected through auditing.",
+      "detection_guidance": "Check whether ESG obligations in the contract are accompanied by: sustainability audit rights, access to supplier premises, right to conduct worker interviews, access to ESG data and records, and right to engage third-party auditors.",
+      "remediation": "Add comprehensive sustainability audit clause with full access rights, unannounced audit capability, worker interview rights, and third-party audit provisions. Require the supplier to participate in recognised audit programmes (SMETA, SA8000, RBA VAP).",
+      "real_world_impact": "Companies subject to the German LkSG have received regulatory warnings for relying solely on supplier self-assessments without conducting or commissioning independent audits."
+    },
+    {
+      "id": "esg-risk-csddd-non-compliance",
+      "name": "EU CSDDD Compliance Gap",
+      "risk_category": "regulatory",
+      "clause_type": "esg",
+      "trigger": "Supply chain contracts do not incorporate human rights and environmental due diligence obligations aligned with EU CSDDD requirements",
+      "description": "The EU Corporate Sustainability Due Diligence Directive (CSDDD) requires in-scope companies to identify, prevent, mitigate, and account for adverse human rights and environmental impacts in their operations and value chains. Companies must contractually cascade due diligence obligations to their business partners. Failure to include CSDDD-compliant contractual provisions exposes the company to administrative supervision, fines of up to 5% of net worldwide turnover, and civil liability for damages caused by failures in due diligence.",
+      "severity": "critical",
+      "likelihood": "common",
+      "impact": "Administrative fines up to 5% of net worldwide turnover; civil liability for damages caused to victims; injunctive relief; naming and shaming by supervisory authorities; director personal liability.",
+      "detection_guidance": "For companies in scope of EU CSDDD (EU companies >1000 employees and EUR 450M turnover; third-country companies with EUR 450M turnover in EU), check supply chain contracts for: human rights due diligence obligations, environmental due diligence obligations, cascading provisions to sub-tier suppliers, contractual assurances and verification mechanisms, and termination provisions for due diligence failures.",
+      "remediation": "Implement CSDDD-aligned contractual cascade: require human rights and environmental due diligence obligations, supply chain transparency, sustainability audit rights, grievance mechanism access, and remediation obligations. Include CSDDD-specific termination triggers for persistent due diligence failures.",
+      "real_world_impact": "Early enforcement of the German LkSG (the precursor to CSDDD at national level) has resulted in formal proceedings against companies with inadequate supply chain due diligence contractual provisions."
+    },
+    {
+      "id": "esg-risk-carbon-offset-invalidity",
+      "name": "Carbon Offset Credit Invalidity",
+      "risk_category": "financial",
+      "clause_type": "esg",
+      "trigger": "Carbon offset purchase agreement lacks provisions for credit quality, vintage, additionality, registry, or invalidity risk allocation",
+      "description": "Purchasing carbon credits without contractual protections for credit quality creates financial and reputational risk. Credits may be invalidated due to lack of additionality, permanence failure (reversal of sequestration), double counting, or project developer fraud. Where credits are used to support carbon-neutral or net-zero claims, invalidity exposes the buyer to greenwashing liability under the EU Green Claims Directive.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Financial loss from invalidated credits; restatement of emissions data; greenwashing liability; reputational damage from association with discredited offset projects.",
+      "detection_guidance": "For carbon offset purchase agreements, check for: credit standard specification (Gold Standard, Verra VCS, ICVCM Core Carbon Principles), vintage restrictions, additionality warranty, permanence guarantee or buffer pool, registry specification and retirement process, replacement credit obligation for invalidated credits, and prohibition on double counting.",
+      "remediation": "Add credit quality specifications including recognised standard (Gold Standard, VCS), maximum vintage age, additionality warranty, permanence guarantee with replacement obligation, specified registry, and buyer's right to audit project documentation. Include greenwashing indemnity from seller.",
+      "real_world_impact": "Major corporate buyers have suffered reputational damage and financial loss after purchasing credits from projects subsequently found to lack additionality or to have overstated emission reductions by 90% or more."
+    },
+    {
+      "id": "esg-risk-termination-without-esg-triggers",
+      "name": "No ESG-Specific Termination Rights",
+      "risk_category": "contractual",
+      "clause_type": "esg",
+      "trigger": "Contract includes ESG obligations but does not include ESG-specific termination triggers or treats ESG breach only under general breach provisions",
+      "description": "Where ESG obligations are included but not linked to specific termination triggers, the buyer may lack the ability to exit the relationship promptly when serious ESG violations are discovered. General material breach provisions often require cure periods that are inappropriate for zero-tolerance ESG violations such as confirmed modern slavery or deliberate environmental crime. The EU CSDDD specifically requires termination as an ultimate remedy where adverse impacts cannot be prevented or mitigated.",
+      "severity": "medium",
+      "likelihood": "common",
+      "impact": "Inability to exit relationships with non-compliant suppliers promptly; ongoing exposure to reputational and regulatory risk during protracted cure periods; failure to meet CSDDD obligation to terminate as last resort.",
+      "detection_guidance": "Check whether ESG obligations are linked to specific termination triggers distinct from general breach provisions. Verify that zero-tolerance violations (modern slavery, child labour, environmental crime) permit immediate termination without cure period.",
+      "remediation": "Add ESG-specific termination triggers distinguishing between zero-tolerance violations (immediate termination) and remediable failures (cure period of 30-60 days). Ensure alignment with EU CSDDD Art 7(5) requirement for termination as ultimate remedy.",
+      "real_world_impact": "Companies have been criticised for continuing supply relationships with known human rights violators because their contracts only provided general breach provisions with 90-day cure periods."
+    }
+  ],
+  "negotiation_intelligence": [
+    {
+      "id": "neg-esg-no-reporting-clause",
+      "clause_type": "esg",
+      "flag_level": "red",
+      "condition": "No ESG or sustainability reporting obligations in a supply agreement with a supplier subject to CSRD or operating in a high-risk sector",
+      "explanation": "Without contractual ESG reporting obligations, the buyer cannot obtain the value chain data required for its own CSRD disclosures and has no visibility into the supplier's environmental and social performance. This gap is increasingly unacceptable given mandatory reporting requirements and investor expectations for supply chain ESG data.",
+      "market_standard": "Leading practice: comprehensive ESG reporting aligned with ESRS, including scope 1, 2, and material scope 3 emissions, social metrics, and governance disclosures. Minimum market standard: at least annual GHG emissions and labour practices reporting.",
+      "suggested_response": "Require comprehensive ESG reporting aligned with the buyer's own CSRD reporting needs. Specify metrics, methodology, frequency (at minimum annual), and assurance level. Include right to audit ESG data accuracy. Consider EcoVadis or CDP supply chain programme as baseline.",
+      "perspective": "buyer",
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing"]
+    },
+    {
+      "id": "neg-esg-audit-rights-denied",
+      "clause_type": "esg",
+      "flag_level": "red",
+      "condition": "Supplier refuses sustainability audit rights or limits audits to self-assessment questionnaires only",
+      "explanation": "Self-assessment questionnaires alone are insufficient for verifying ESG compliance. The EU CSDDD and German LkSG require companies to verify the effectiveness of their due diligence measures, which necessitates independent audit capability. Without audit rights, ESG provisions are unenforceable and the buyer's due diligence programme is deficient.",
+      "market_standard": "Market standard includes annual third-party audit rights (SMETA or equivalent), access to supplier premises, worker interviews, and unannounced audit rights on cause. Leading practice includes access to sub-tier supplier facilities.",
+      "suggested_response": "Non-negotiable for CSDDD and LkSG compliance. Counter with: annual scheduled audit by recognised auditor (SMETA 4-pillar), unannounced audit right on reasonable cause, access to premises and worker interviews, right to extend audits to tier-2 suppliers for high-risk supply chains.",
+      "perspective": "buyer",
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing"]
+    },
+    {
+      "id": "neg-esg-zero-tolerance-termination",
+      "clause_type": "esg",
+      "flag_level": "amber",
+      "condition": "Contract includes zero-tolerance termination for all ESG non-compliance without graduated response or remediation pathway",
+      "explanation": "While zero-tolerance termination is appropriate for the most severe violations (confirmed modern slavery, child labour, deliberate environmental crime), applying it to all ESG non-compliance can be counterproductive. Immediate termination without remediation may worsen outcomes for affected workers and communities, and is inconsistent with the CSDDD's requirement that termination be used as a last resort after prevention and mitigation efforts have failed.",
+      "market_standard": "Best practice distinguishes between zero-tolerance violations (immediate termination) and remediable non-compliance (graduated response: corrective action plan, suspension, termination). The EU CSDDD requires termination only as a last resort where adverse impacts cannot be prevented or adequately mitigated.",
+      "suggested_response": "Propose graduated ESG response framework: (1) corrective action plan with 30-60 day cure period for remediable issues, (2) order suspension for persistent non-compliance, (3) termination for failure to remediate or for zero-tolerance violations. Reserve immediate termination for confirmed modern slavery, child labour, human trafficking, and deliberate environmental crime.",
+      "perspective": "both",
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing"]
+    },
+    {
+      "id": "neg-esg-cost-of-compliance",
+      "clause_type": "esg",
+      "flag_level": "amber",
+      "condition": "Extensive ESG obligations imposed without addressing the cost implications or pricing adjustments for the supplier",
+      "explanation": "Imposing significant ESG obligations (scope 3 reporting, living wage commitments, third-party audits, deforestation-free sourcing) without addressing the cost of compliance creates a tension between sustainability ambitions and commercial viability. Suppliers may agree to obligations they cannot afford to implement, leading to superficial compliance, fraud in ESG data, or financial distress.",
+      "market_standard": "Responsible purchasing practices are increasingly recognised as essential to effective ESG compliance. The ILO and UN Global Compact recommend that buyers' purchasing practices reflect the cost of sustainable production. Some frameworks (ACT purchasing practices methodology) assess buyers on this dimension.",
+      "suggested_response": "Acknowledge the cost of ESG compliance in pricing discussions. Consider phased implementation with buyer co-investment for major capital requirements (e.g., emission reduction technology, living wage gap closure). Include gain-sharing for cost savings from sustainability improvements. Align payment terms with the supplier's compliance investment timeline.",
+      "perspective": "seller",
+      "contract_types": ["esg-sustainability-supply", "esg-responsible-sourcing"]
+    },
+    {
+      "id": "neg-esg-comprehensive-framework",
+      "clause_type": "esg",
+      "flag_level": "green",
+      "condition": "ESG framework includes CSDDD-aligned due diligence, reporting, audit rights, graduated termination triggers, and responsible remediation provisions",
+      "explanation": "A comprehensive ESG contractual framework that addresses human rights and environmental due diligence, reporting, auditing, graduated enforcement, and responsible remediation represents best practice and is aligned with the EU CSDDD, German LkSG, and the UN Guiding Principles on Business and Human Rights.",
+      "market_standard": "Consistent with leading practice for companies subject to mandatory human rights and environmental due diligence legislation. Represents the emerging market standard for multinational supply chain agreements.",
+      "suggested_response": "Accept. Verify: (1) reporting metrics align with buyer's CSRD disclosures, (2) audit methodology includes worker interviews and access to sub-tier suppliers, (3) termination triggers distinguish zero-tolerance from remediable violations, (4) remediation protocols prioritise affected stakeholder welfare, (5) cost of compliance is reflected in pricing.",
+      "perspective": "both",
+      "contract_types": ["esg-sustainability-supply", "esg-framework", "esg-responsible-sourcing"]
+    },
+    {
+      "id": "neg-esg-offset-reliance",
+      "clause_type": "esg",
+      "flag_level": "red",
+      "condition": "Carbon reduction commitments are met primarily through carbon offset purchases rather than actual emission reductions",
+      "explanation": "Relying primarily on carbon offsets rather than actual emission reductions to meet contractual carbon targets is increasingly scrutinised by regulators, investors, and civil society. The EU Green Claims Directive will prohibit environmental claims based solely on offsets. The SBTi and VCMI require that offsets supplement, not substitute, deep decarbonisation. Carbon-neutral claims based on offsets are subject to greenwashing enforcement action.",
+      "market_standard": "Leading practice: offsets limited to residual emissions (typically <10% of total) after all feasible abatement measures have been implemented. The SBTi does not permit offsets to count toward near-term science-based targets. VCMI Claims Code requires demonstrated emission reductions before using offsets for beyond-value-chain claims.",
+      "suggested_response": "Require that emission reduction commitments are met primarily through actual operational emission reductions, with offsets permitted only for residual emissions that cannot feasibly be abated. Cap offset reliance at 10-15% of total reduction target. Specify offset quality requirements (ICVCM Core Carbon Principles, Gold Standard, or Verra VCS). Prohibit carbon-neutral claims based solely on offsets.",
+      "perspective": "buyer",
+      "contract_types": ["esg-carbon-offset", "esg-sustainability-supply", "esg-framework"]
+    }
+  ],
+  "clause_interactions": [
+    {
+      "id": "esg-reporting-requires-audit",
+      "clause_a": "esg-reporting-obligations",
+      "clause_b": "esg-sustainability-audit",
+      "relationship": "requires",
+      "description": "ESG reporting obligations are only meaningful if the buyer has the right to verify the accuracy of reported data through sustainability audits.",
+      "review_guidance": "Verify that sustainability audit rights are sufficiently broad to cover all ESG metrics reported under the reporting obligations clause. Audit scope should include access to source data, calculation methodologies, and supporting documentation.",
+      "risk_if_misaligned": "ESG data reported by the supplier is unverifiable, creating a false sense of compliance and potential liability for the buyer's own sustainability disclosures under CSRD."
+    },
+    {
+      "id": "esg-green-claims-requires-greenwashing-liability",
+      "clause_a": "esg-green-claims",
+      "clause_b": "esg-greenwashing-liability",
+      "relationship": "requires",
+      "description": "Green claims substantiation requirements are effective only if backed by a greenwashing indemnification provision that allocates financial liability for misleading claims.",
+      "review_guidance": "Verify that the greenwashing indemnification clause covers all categories of environmental claims subject to the green claims substantiation clause. Ensure the indemnity scope includes regulatory fines, consumer claims, and reputational damage.",
+      "risk_if_misaligned": "The buyer bears the financial consequences of the supplier's misleading environmental claims, despite having contractually required substantiation that the supplier failed to provide."
+    },
+    {
+      "id": "esg-human-rights-dd-supplements-modern-slavery",
+      "clause_a": "esg-human-rights-dd",
+      "clause_b": "esg-modern-slavery",
+      "relationship": "supplements",
+      "description": "Human rights due diligence obligations provide the broader framework within which the modern slavery prohibition operates, extending protection beyond forced labour to cover all internationally recognised human rights.",
+      "review_guidance": "Ensure the human rights due diligence clause addresses the full scope of human rights (ILO core conventions, UDHR, ICCPR, ICESCR) and does not duplicate or contradict the specific modern slavery provisions. The HRDD clause should encompass modern slavery as one element of a broader due diligence programme.",
+      "risk_if_misaligned": "Narrow focus on modern slavery without broader HRDD creates gaps in protection for other human rights (freedom of association, discrimination, living conditions) and may not satisfy EU CSDDD requirements."
+    }
+  ]
+}

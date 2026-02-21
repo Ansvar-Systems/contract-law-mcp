@@ -1,0 +1,1607 @@
+{
+  "clause_types": [
+    {
+      "id": "emp-non-compete",
+      "clause_category": "employment",
+      "name": "Non-Compete Clause",
+      "description": "Restricts the employee from engaging in competing business activities during and after the termination of employment. Non-compete clauses must be carefully calibrated to be enforceable, as courts in most EU jurisdictions apply proportionality tests considering the duration, geographic scope, and breadth of restricted activities against the employer's legitimate business interest in protecting trade secrets, client relationships, and specialized training investments.",
+      "drafting_guidance": "Define the restricted activities precisely, avoiding overbroad language such as \"any business that competes\" in favour of specific sectors, products, or services. Specify the geographic scope (national, regional, or limited to specific territories where the employer operates). Limit the duration to what is strictly necessary, typically 6-12 months post-termination; clauses exceeding 12 months face heightened scrutiny in most EU jurisdictions. In jurisdictions requiring compensation during the restriction period (e.g., Germany under HGB §74, France, Italy), specify the compensation amount (typically 50-100% of base salary). Address the employer's right to waive the restriction (with notice period for waiver). Consider including a garden leave mechanism as an alternative or supplement. Specify the remedies for breach (injunctive relief, liquidated damages, forfeiture of deferred compensation). Address the interaction with statutory requirements in the employee's jurisdiction.",
+      "variations": {
+        "compensated-restriction": "Non-compete with mandatory compensation during the restriction period, as required in Germany, France, and Italy",
+        "activity-specific": "Restriction limited to specific competing products, services, or client accounts rather than broad industry exclusion",
+        "waivable": "Employer retains discretion to waive the restriction upon termination, typically with a specified notice period"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-non-compete-agreement",
+        "emp-settlement-agreement"
+      ],
+      "depends_on": [
+        "emp-confidentiality",
+        "emp-garden-leave"
+      ],
+      "compliance_refs": [
+        "German Commercial Code (HGB) §74-§75d",
+        "EU Directive 2019/1152 Art 9(2)",
+        "UK Trade Secrets (Enforcement, etc.) Regulations 2018"
+      ]
+    },
+    {
+      "id": "emp-non-solicitation",
+      "clause_category": "employment",
+      "name": "Non-Solicitation Clause",
+      "description": "Prohibits the departing employee from soliciting or enticing away the employer's clients, customers, suppliers, or other employees for a specified period following termination. Non-solicitation clauses are generally more readily enforceable than non-compete clauses because they impose a narrower restriction that is more directly connected to the employer's protectable interest in its client relationships and workforce stability.",
+      "drafting_guidance": "Distinguish between client non-solicitation and employee non-solicitation, as they protect different interests. For client non-solicitation, limit the restriction to clients with whom the employee had material dealings during a specified look-back period (typically 12-24 months before termination). Define \"solicitation\" carefully to distinguish active solicitation from passive acceptance of approaches by former clients. For employee non-solicitation, specify the categories of employees covered (direct reports, team members, or employees in the same business unit). Specify the duration (6-12 months is typical; 12 months is the common market standard). Address the interaction with non-compete restrictions to avoid duplication. Consider carve-outs for public advertising not targeted at specific individuals.",
+      "variations": {
+        "client-only": "Restriction limited to solicitation of clients and customers with whom the employee had personal dealings",
+        "employee-only": "Restriction limited to soliciting or recruiting the employer's employees, typically restricted to specific teams or seniority levels",
+        "combined": "Both client and employee non-solicitation with separately defined scope, duration, and remedies"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-non-compete-agreement",
+        "emp-settlement-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK case law: Patsystems Holdings Ltd v Neilly [2012] EWHC 2609"
+      ]
+    },
+    {
+      "id": "emp-garden-leave",
+      "clause_category": "employment",
+      "name": "Garden Leave",
+      "description": "Permits the employer to require the employee to remain at home during the notice period while continuing to receive full pay and benefits. Garden leave serves as an alternative or complement to post-termination restrictive covenants, enabling the employer to keep the employee away from clients, colleagues, and confidential information while the employee's knowledge becomes stale. The clause must be supported by an express contractual right, as implied garden leave rights are limited under English common law.",
+      "drafting_guidance": "Include an express contractual right to place the employee on garden leave during all or part of the notice period. Specify the employer's obligations during garden leave (continued salary, benefits, pension contributions, and any contractual bonuses). Define the employee's obligations during garden leave: remain available for work if required, not contact clients or colleagues, not attend competitor premises, return company property, maintain confidentiality. Address the interaction with post-termination restrictive covenants. Consider whether the garden leave period should count toward or reduce any post-termination restriction period (many courts will credit garden leave against non-compete duration). Specify the employer's right to require the employee to perform specific duties, attend handover meetings, or assist with transition during garden leave. Address the employee's right to take alternative employment during garden leave (generally prohibited). Reference the implied duty of trust and confidence and the impact of William Hill Organisation Ltd v Tucker [1999] ICR 291.",
+      "variations": {
+        "full-period": "Garden leave for the entire notice period with no requirement to attend the workplace",
+        "partial": "Garden leave for a specified portion of the notice period, with attendance required for handover activities",
+        "discretionary": "Employer discretion to impose garden leave at any point during the notice period"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [
+        "emp-notice-period"
+      ],
+      "compliance_refs": [
+        "UK case law: William Hill Organisation Ltd v Tucker [1999] ICR 291",
+        "UK case law: SG&R Valuation Service v Boudrais [2008] EWHC 1340"
+      ]
+    },
+    {
+      "id": "emp-tupe-transfer",
+      "clause_category": "employment",
+      "name": "TUPE Transfer Provisions",
+      "description": "Addresses the automatic transfer of employees and their terms and conditions of employment upon a relevant transfer of an undertaking or a service provision change, as required by the Transfer of Undertakings (Protection of Employment) Regulations 2006 (TUPE) implementing the EU Acquired Rights Directive 2001/23/EC. The clause allocates liabilities between the transferor and transferee for employee claims, consultation obligations, and ongoing employment costs.",
+      "drafting_guidance": "Require the transferor to provide Employee Liability Information (ELI) at least 28 days before the transfer, including: identity and age of transferring employees, particulars of employment, disciplinary and grievance records from the preceding two years, details of any collective agreements, and details of any claims, actions, or orders. Include comprehensive warranties regarding the accuracy and completeness of the ELI. Allocate liability for pre-transfer employee claims (transferor) and post-transfer claims (transferee). Address the obligation to inform and consult with employee representatives or, where no representatives exist, directly affected employees. Specify indemnities for breach of information and consultation obligations. Address the treatment of occupational pension schemes (which are partially excluded from TUPE). Consider harmonisation of terms post-transfer and the restrictions on dismissal by reason of the transfer. Address measures the transferee envisages taking in respect of transferring employees and the notification requirements.",
+      "variations": {
+        "asset-transfer": "TUPE provisions for transfer of a business or undertaking as a going concern",
+        "service-provision-change": "TUPE provisions for outsourcing, insourcing, or re-tendering of service contracts",
+        "cross-border": "Transfer provisions addressing multiple jurisdictions under the EU Acquired Rights Directive"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-secondment-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "TUPE Regulations 2006 (SI 2006/246)",
+        "EU Acquired Rights Directive 2001/23/EC",
+        "UK Employment Rights Act 1996 s.218"
+      ]
+    },
+    {
+      "id": "emp-notice-period",
+      "clause_category": "employment",
+      "name": "Notice Period",
+      "description": "Specifies the minimum period of advance notice that either party must give to terminate the employment relationship. Notice periods serve both employee protection and employer operational continuity, and must comply with statutory minimums that vary by jurisdiction and length of service. In many EU jurisdictions, the statutory minimum notice period increases with the employee's length of service, and contractual provisions must meet or exceed these floors.",
+      "drafting_guidance": "Specify the notice period for both employer-initiated and employee-initiated termination (these may differ, particularly for senior roles). Ensure the contractual notice period meets or exceeds the statutory minimum in the applicable jurisdiction. Under UK law, statutory minimum notice is one week per year of service up to 12 weeks (Employment Rights Act 1996 s.86). Under German law, statutory notice periods range from four weeks to seven months depending on length of service (BGB §622). Address the form of notice (written notice to a specified address or email). Specify whether the notice period runs from the date of receipt or the end of the calendar month. Address payment in lieu of notice (PILON) and whether the employer has the contractual right to make a PILON (express PILON clause). Consider the interaction with garden leave provisions. Address what constitutes gross misconduct warranting summary dismissal without notice. Specify the treatment of benefits, bonus accrual, and equity vesting during the notice period.",
+      "variations": {
+        "symmetric": "Equal notice periods for employer and employee termination",
+        "asymmetric": "Longer notice period for employer termination than employee termination, reflecting stronger employee protection",
+        "graduated": "Notice period increases with length of service, mirroring or exceeding statutory requirements"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK Employment Rights Act 1996 s.86-91",
+        "German Civil Code (BGB) §622",
+        "EU Directive 2019/1152 Art 8"
+      ]
+    },
+    {
+      "id": "emp-probation",
+      "clause_category": "employment",
+      "name": "Probationary Period",
+      "description": "Establishes an initial period of employment during which either party may terminate the relationship with shorter notice and reduced procedural requirements, enabling the employer to assess the employee's suitability for the role and the employee to evaluate whether the position meets their expectations. Under EU Directive 2019/1152 on Transparent and Predictable Working Conditions, probationary periods must be proportionate to the nature and duration of the employment and must not exceed six months unless objectively justified.",
+      "drafting_guidance": "Specify the duration of the probation period (typically 3-6 months; EU Directive 2019/1152 limits probation to six months). Define the reduced notice period during probation (typically one week). Specify the assessment process: interim reviews, performance criteria, and confirmation of successful completion. Address the extension of probation (permitted in limited circumstances, such as employee absence during the probation period, but must remain proportionate under EU Directive 2019/1152 Art 8(2)). Specify the consequences of unsuccessful completion (termination with notice or non-renewal). Address whether unfair dismissal protections apply during probation (in the UK, the qualifying period for unfair dismissal is two years, but discrimination and whistleblowing claims have no qualifying period). Specify the employee's entitlements during probation (benefits, training, holiday accrual). Consider jurisdictions where probationary dismissal requires objective justification.",
+      "variations": {
+        "standard": "Three-month probation with one interim review and confirmation at conclusion",
+        "extended": "Six-month probation with monthly reviews and the possibility of one extension of up to three months",
+        "performance-based": "Probation linked to achievement of specified performance milestones rather than a fixed duration"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment",
+        "emp-internship-agreement"
+      ],
+      "depends_on": [
+        "emp-notice-period"
+      ],
+      "compliance_refs": [
+        "EU Directive 2019/1152 Art 8",
+        "UK Employment Rights Act 1996 s.108"
+      ]
+    },
+    {
+      "id": "emp-restrictive-covenant",
+      "clause_category": "employment",
+      "name": "Restrictive Covenant (General)",
+      "description": "An umbrella provision encompassing all post-termination restrictions imposed on the employee, including non-compete, non-solicitation, non-dealing, and non-poaching obligations. The enforceability of restrictive covenants in employment contracts is subject to the restraint of trade doctrine, requiring the employer to demonstrate that each restriction protects a legitimate business interest and goes no further than is reasonably necessary for that protection.",
+      "drafting_guidance": "Draft each restriction as a separate, severable sub-clause so that if one restriction is found unenforceable, the remaining restrictions survive. Identify the specific legitimate business interest protected by each restriction (trade secrets, confidential information, client connections, workforce stability). Apply the three-part enforceability test: (1) the restriction protects a legitimate proprietary interest, (2) the restriction is reasonable between the parties, and (3) the restriction is reasonable in the public interest. Specify the duration, geographic scope, and scope of restricted activities for each restriction separately. Include a severability clause permitting the court to blue-pencil or reduce unreasonable restrictions rather than striking the entire provision. Consider including a declaration clause where the employee acknowledges the reasonableness of the restrictions. Address the remedies available for breach (injunctive relief, damages, forfeiture provisions). Ensure compliance with local mandatory rules on compensated restrictions.",
+      "variations": {
+        "comprehensive": "Full suite of post-termination restrictions including non-compete, non-solicitation, non-dealing, and non-poaching",
+        "tailored": "Restrictions tailored to the employee's specific role, seniority, and access to protectable interests",
+        "tiered": "Different levels of restriction for different categories of employees based on seniority or function"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-non-compete-agreement"
+      ],
+      "depends_on": [
+        "emp-non-compete",
+        "emp-non-solicitation",
+        "emp-confidentiality"
+      ],
+      "compliance_refs": [
+        "UK restraint of trade doctrine: Nordenfelt v Maxim Nordenfelt Guns [1894] AC 535",
+        "EU Directive 2019/1152 Art 9"
+      ]
+    },
+    {
+      "id": "emp-stock-option-vesting",
+      "clause_category": "employment",
+      "name": "Stock Option and Equity Vesting",
+      "description": "Governs the grant, vesting schedule, exercise conditions, and treatment upon termination of stock options, restricted stock units (RSUs), or other equity-based compensation awarded to the employee. Equity incentive provisions must address the complex interaction between employment law, securities regulation, and tax treatment across multiple jurisdictions where the employee may have rendered services.",
+      "drafting_guidance": "Specify the type of equity award (stock options, restricted stock units, performance shares, phantom equity). Define the vesting schedule: time-based (typically four years with a one-year cliff), performance-based (linked to individual or company KPIs), or hybrid. Specify the vesting commencement date and the treatment of partial vesting periods. Address acceleration provisions: single-trigger (acceleration upon change of control) or double-trigger (acceleration upon change of control plus termination). Define the treatment of unvested equity upon termination by different means (resignation, termination for cause, termination without cause, redundancy, death, disability). Specify the exercise period following termination (typically 90 days for voluntary leavers, 12 months for involuntary termination). Address clawback provisions for vested equity (link to emp-clawback). Consider the tax implications and the employer's withholding obligations. Address the interaction with settlement agreements and the treatment of equity in compromise negotiations.",
+      "variations": {
+        "time-based": "Standard four-year vesting with one-year cliff and monthly or quarterly vesting thereafter",
+        "performance-based": "Vesting contingent on achievement of specified company or individual performance targets",
+        "double-trigger": "Acceleration only upon both a change of control event and subsequent termination within a specified period"
+      },
+      "contract_types": [
+        "emp-executive-employment",
+        "emp-employment-agreement"
+      ],
+      "depends_on": [
+        "emp-clawback"
+      ],
+      "compliance_refs": [
+        "UK Income Tax (Earnings and Pensions) Act 2003 Part 7",
+        "EU Shareholder Rights Directive II (2017/828) Art 9a-9b"
+      ]
+    },
+    {
+      "id": "emp-clawback",
+      "clause_category": "employment",
+      "name": "Clawback Provision",
+      "description": "Entitles the employer to recover previously paid or vested compensation (bonuses, commissions, equity awards) upon the occurrence of specified trigger events such as financial restatement, material misconduct, breach of restrictive covenants, or regulatory action. Clawback provisions are increasingly mandated by financial regulators for senior executives in regulated firms and are considered best practice in corporate governance across all sectors.",
+      "drafting_guidance": "Define the trigger events for clawback: material financial restatement, fraud or dishonesty, gross misconduct, material breach of employment terms, breach of restrictive covenants, regulatory censure or fine. Specify the look-back period (typically 3-7 years from the date of payment or vesting). Define the types of compensation subject to clawback (annual bonus, deferred bonus, equity awards, sign-on payments). Specify the recovery mechanism: repayment demand, set-off against future compensation, cancellation of unvested awards, adjustment of future awards. Address the procedural requirements: notice to the employee, opportunity to make representations, decision-making process. Consider the interaction with local employment law restrictions on deductions from wages (UK Employment Rights Act 1996 s.13). Address the tax treatment of clawed-back compensation. For regulated financial services firms, ensure compliance with PRA/FCA Remuneration Code and EBA Guidelines on Sound Remuneration Policies.",
+      "variations": {
+        "regulatory-mandated": "Clawback provisions complying with financial services regulatory requirements (PRA/FCA Remuneration Code)",
+        "misconduct-only": "Clawback triggered only by employee fraud, dishonesty, or material misconduct",
+        "performance-based": "Clawback triggered by material financial restatement or failure to meet performance conditions"
+      },
+      "contract_types": [
+        "emp-executive-employment",
+        "emp-employment-agreement"
+      ],
+      "depends_on": [
+        "emp-bonus-deferral"
+      ],
+      "compliance_refs": [
+        "PRA/FCA Dual-regulated firms Remuneration Code",
+        "EBA Guidelines on Sound Remuneration Policies (EBA/GL/2021/04)",
+        "UK Corporate Governance Code 2018 Provision 37"
+      ]
+    },
+    {
+      "id": "emp-bonus-deferral",
+      "clause_category": "employment",
+      "name": "Bonus Deferral",
+      "description": "Requires that a proportion of the employee's variable remuneration is deferred for a specified period before vesting and payment, allowing for the application of malus (reduction of unvested awards) and clawback (recovery of vested awards) provisions. Deferral is mandatory for certain categories of staff in regulated financial services firms under the PRA/FCA Remuneration Code and EBA Guidelines, and is increasingly adopted as best practice across other sectors.",
+      "drafting_guidance": "Specify the proportion of variable remuneration subject to deferral (40-60% is typical for material risk takers in regulated firms; 60% for senior management and material risk takers with particularly high variable remuneration under EBA Guidelines). Define the deferral period (typically 3-5 years for senior management in regulated firms; 4-5 years for PRA-designated senior management functions). Specify the vesting schedule (pro rata annual or cliff vesting at the end of the deferral period). Define malus conditions: events that permit the employer to reduce or cancel unvested deferred awards before vesting (financial restatement, misconduct, risk management failure, significant downturn in financial performance). Require at least 50% of deferred variable remuneration to be in instruments (shares, share-linked instruments, or equivalent non-cash instruments). Specify the retention period post-vesting (typically 12 months for shares). Address the interaction with clawback provisions for amounts that have already vested and been paid.",
+      "variations": {
+        "regulatory-compliant": "Deferral structure compliant with PRA/FCA Remuneration Code for identified staff in regulated firms",
+        "voluntary": "Voluntary deferral arrangement with employer matching or enhanced vesting for deferred amounts",
+        "performance-vesting": "Deferred amounts vest subject to achievement of multi-year performance conditions"
+      },
+      "contract_types": [
+        "emp-executive-employment",
+        "emp-employment-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "PRA/FCA Remuneration Code",
+        "EBA Guidelines on Sound Remuneration Policies (EBA/GL/2021/04)",
+        "CRD V (Directive 2019/878) Art 94"
+      ]
+    },
+    {
+      "id": "emp-ip-assignment",
+      "clause_category": "employment",
+      "name": "Intellectual Property Assignment",
+      "description": "Requires the employee to assign to the employer all intellectual property rights (patents, copyrights, designs, database rights, trade marks, and know-how) created by the employee in the course of employment or using the employer's resources. The clause must navigate the complex interaction between statutory provisions that automatically vest certain IP rights in the employer (such as UK Patents Act 1977 s.39 and UK CDPA 1988 s.11) and those that require express assignment.",
+      "drafting_guidance": "Include a present assignment of all IP created in the course of employment (\"hereby assigns\" not \"agrees to assign\"). Specify the scope: IP created (i) in the course of the employee's normal duties, (ii) in the course of specifically assigned duties, (iii) using the employer's resources or confidential information, or (iv) that relates to the employer's business. Address moral rights: in the UK, require a waiver of moral rights under CDPA 1988 s.87 (note: moral rights cannot be assigned, only waived). Require the employee to disclose all potentially relevant IP created during employment. Include a power of attorney enabling the employer to execute IP registration documents on the employee's behalf if the employee is unavailable. Address pre-existing IP owned by the employee and specify the terms on which it is licensed to the employer if incorporated into work product. Consider the inventor compensation provisions under the Patents Act 1977 s.40 (outstanding benefit test). Specify that the assignment survives termination. Address the treatment of IP created using employer resources outside working hours.",
+      "variations": {
+        "broad-assignment": "Assignment of all IP related to the employer's current or anticipated business activities",
+        "duty-limited": "Assignment limited to IP created in the course of the employee's normal or specifically assigned duties",
+        "with-inventor-compensation": "Assignment with an express compensation mechanism for employee inventions of outstanding benefit"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent",
+        "emp-consulting-individual"
+      ],
+      "depends_on": [
+        "emp-confidentiality"
+      ],
+      "compliance_refs": [
+        "UK Patents Act 1977 s.39-43",
+        "UK Copyright, Designs and Patents Act 1988 s.11, s.87",
+        "German Employee Inventions Act (Arbeitnehmererfindungsgesetz)"
+      ]
+    },
+    {
+      "id": "emp-confidentiality",
+      "clause_category": "employment",
+      "name": "Confidentiality and Non-Disclosure",
+      "description": "Imposes obligations on the employee to protect the employer's confidential information and trade secrets during and after the employment relationship. While employees owe an implied duty of confidentiality during employment under common law, the scope of protection narrows significantly after termination to cover only true trade secrets and information of a sufficiently high degree of confidentiality. An express confidentiality clause is therefore essential to define and extend protection beyond what common law provides.",
+      "drafting_guidance": "Define confidential information broadly but with specificity, including: trade secrets, business plans, financial information, client lists, pricing data, algorithms, source code, technical know-how, marketing strategies, and personnel information. Exclude information that is or becomes publicly available (other than through the employee's breach), information the employee can demonstrate they possessed before employment, and information received from a third party without restriction. Specify the duration of the confidentiality obligation post-termination (indefinite for true trade secrets; 2-5 years for other confidential information). Address the permitted disclosures: legal requirement, regulatory obligation, whistleblowing. Include the obligation to return or destroy all confidential information upon termination. Reference the distinction between Faccenda Chicken Class 1, 2, and 3 information under English law. Address the interaction with the Trade Secrets (Enforcement, etc.) Regulations 2018 and EU Trade Secrets Directive 2016/943. Specify remedies for breach (injunctive relief, damages, account of profits).",
+      "variations": {
+        "comprehensive": "Broad definition of confidential information with indefinite post-termination duration for trade secrets",
+        "time-limited": "Confidentiality obligation with a specified expiry date post-termination (typically 2-5 years)",
+        "tiered": "Different levels of protection and duration for different categories of information (trade secrets, confidential, restricted)"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent",
+        "emp-consulting-individual",
+        "emp-internship-agreement",
+        "emp-secondment-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "EU Trade Secrets Directive 2016/943",
+        "UK Trade Secrets (Enforcement, etc.) Regulations 2018",
+        "UK case law: Faccenda Chicken Ltd v Fowler [1987] Ch 117"
+      ]
+    },
+    {
+      "id": "emp-whistleblower-protection",
+      "clause_category": "employment",
+      "name": "Whistleblower Protection",
+      "description": "Establishes protections for employees who report breaches of law, regulatory requirements, or internal policies through designated reporting channels, in compliance with the EU Whistleblower Protection Directive 2019/1937 and implementing national legislation. The clause must ensure that reporting persons are protected from retaliation, that confidentiality of their identity is maintained, and that reports are investigated through a fair and impartial process.",
+      "drafting_guidance": "Specify the scope of protected disclosures (breaches of EU law in areas listed in Directive 2019/1937 Art 2: public procurement, financial services, product safety, transport safety, environmental protection, radiation protection, food safety, public health, consumer protection, data protection, and other areas). Define the internal reporting channels (dedicated reporting platform, compliance officer, ombudsperson, ethics hotline). Specify the procedural requirements: acknowledgement of receipt within seven days, feedback to the reporting person within three months, impartial investigation, documented outcome. Prohibit all forms of retaliation (dismissal, demotion, withholding of training, negative performance assessment, coercion, intimidation, harassment). Establish a reversal of the burden of proof for retaliation claims (where the reporting person establishes a prima facie case of detriment, the employer must prove the measure was based on duly justified grounds). Address anonymous reporting and the protection of the reporter's identity. Specify the protection for facilitators (persons who assist the reporting person) and third parties connected to the reporting person.",
+      "variations": {
+        "directive-compliant": "Full compliance with EU Whistleblower Protection Directive 2019/1937 including all mandatory safeguards",
+        "enhanced": "Extended scope beyond EU Directive requirements to cover all internal policy violations and ethical concerns",
+        "multi-channel": "Multiple reporting channels including internal hotline, external ombudsperson, and digital platform"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent",
+        "emp-consulting-individual"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "EU Whistleblower Protection Directive 2019/1937",
+        "UK Public Interest Disclosure Act 1998",
+        "EU Directive 2019/1937 Art 6, Art 19-21"
+      ]
+    },
+    {
+      "id": "emp-data-subject-access",
+      "clause_category": "employment",
+      "name": "Employee Data Protection and Subject Access",
+      "description": "Addresses the employer's obligations regarding the collection, processing, and retention of employee personal data under the GDPR and applicable national data protection legislation, including the employee's rights as a data subject. Employment relationships involve extensive processing of sensitive personal data (health data, biometric data, financial data, performance data), requiring a clear lawful basis and transparency regarding the purposes and scope of processing.",
+      "drafting_guidance": "Specify the categories of personal data processed (identity, contact, financial, health, performance, disciplinary, monitoring data). Identify the lawful basis for each category of processing (contract performance under Art 6(1)(b), legitimate interest under Art 6(1)(f), legal obligation under Art 6(1)(c), or explicit consent under Art 9(2)(a) for special category data). Provide a clear privacy notice compliant with GDPR Art 13-14. Address the employee's data subject rights: access (Art 15), rectification (Art 16), erasure (Art 17), restriction (Art 18), portability (Art 20), and objection (Art 21). Specify the retention periods for each category of employee data. Address cross-border data transfers (where employer has entities outside the EEA). Address workplace monitoring (email, internet, CCTV, GPS tracking) with reference to WP29 Opinion 2/2017 and EDPB Guidelines. Specify the process for handling data subject access requests from employees. Address automated decision-making in HR processes (recruitment screening, performance scoring) under Art 22.",
+      "variations": {
+        "gdpr-standard": "Standard GDPR-compliant employee data processing provisions with full privacy notice",
+        "monitoring-enhanced": "Enhanced provisions addressing workplace monitoring, including email, internet, CCTV, and device monitoring",
+        "international": "Provisions addressing cross-border data transfers within a multinational group, including Standard Contractual Clauses"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "GDPR (Regulation 2016/679) Art 6, Art 9, Art 13-22, Art 88",
+        "EDPB Guidelines on processing personal data in the context of connected vehicles",
+        "WP29 Opinion 2/2017 on data processing at work"
+      ]
+    },
+    {
+      "id": "emp-grievance",
+      "clause_category": "employment",
+      "name": "Grievance Procedure",
+      "description": "Establishes a formal internal procedure for employees to raise concerns, complaints, or disputes regarding their employment conditions, treatment by colleagues or management, or any other workplace matter. A well-drafted grievance procedure promotes early resolution of disputes, reduces tribunal claims, and demonstrates the employer's commitment to fair treatment. Under the ACAS Code of Practice on Disciplinary and Grievance Procedures, failure to follow a proper procedure may result in an uplift of up to 25% on tribunal awards.",
+      "drafting_guidance": "Structure the procedure in clear stages: informal resolution (discussion with line manager), formal stage 1 (written grievance to designated manager), formal stage 2 (appeal to a more senior manager or panel). Specify the time limits for each stage (typically 5 working days for acknowledgement, 10-15 working days for investigation and hearing). Require the employee to set out the grievance in writing, identifying the issues and the desired resolution. Guarantee the right to be accompanied by a trade union representative or work colleague at formal grievance hearings (UK Employment Relations Act 1999 s.10). Specify the investigation process: appointment of an impartial investigator, gathering of evidence, interviews with relevant parties. Address grievances raised during disciplinary proceedings and the appropriate sequencing. Specify the documentation requirements (written outcome letter, right of appeal, records retention). Address collective grievances and the interface with trade union consultation. Ensure compliance with the ACAS Code of Practice on Disciplinary and Grievance Procedures.",
+      "variations": {
+        "acas-aligned": "Procedure fully aligned with the ACAS Code of Practice on Disciplinary and Grievance Procedures",
+        "mediation-integrated": "Procedure incorporating a voluntary mediation stage before escalation to formal grievance",
+        "multi-stage": "Extended multi-stage process with separate panels for first-instance hearing and appeal"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "ACAS Code of Practice on Disciplinary and Grievance Procedures",
+        "UK Employment Relations Act 1999 s.10-13",
+        "UK Employment Tribunals Act 1996 s.207A"
+      ]
+    },
+    {
+      "id": "emp-disciplinary",
+      "clause_category": "employment",
+      "name": "Disciplinary Procedure",
+      "description": "Establishes the employer's formal procedure for addressing employee misconduct, poor performance, or other breaches of employment terms, including the investigation process, hearing rights, sanctions, and appeal mechanism. A fair and well-documented disciplinary procedure is essential for defending unfair dismissal claims and must be consistent with the ACAS Code of Practice, which tribunals are required to take into account when considering relevant cases.",
+      "drafting_guidance": "Define the categories of misconduct subject to the disciplinary procedure: minor misconduct (lateness, dress code violations), serious misconduct (insubordination, negligence, breach of policy), and gross misconduct (fraud, theft, violence, serious breach of confidentiality, harassment). Specify the investigation process: appointment of an investigating officer separate from the decision-maker, gathering of documentary and witness evidence, opportunity for the employee to respond. Specify the hearing process: written notice of the allegations and evidence, right to be accompanied by a trade union representative or colleague, right to present evidence and call witnesses, and right to respond to allegations. Define the available sanctions: verbal warning, written warning, final written warning, demotion, dismissal with notice, summary dismissal without notice (for gross misconduct). Specify the appeal process: right to appeal within a specified period (typically 5 working days), appeal heard by a more senior manager not involved in the original decision. Specify the duration of warnings on file (typically 6 months for verbal warnings, 12 months for written warnings). Address suspension on full pay pending investigation.",
+      "variations": {
+        "acas-code": "Procedure strictly following the ACAS Code of Practice on Disciplinary and Grievance Procedures",
+        "fast-track": "Expedited procedure for cases of gross misconduct permitting summary dismissal following investigation and hearing",
+        "performance-specific": "Separate performance improvement process with capability review, performance improvement plan (PIP), and defined assessment periods"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "ACAS Code of Practice on Disciplinary and Grievance Procedures",
+        "UK Employment Rights Act 1996 s.94-98",
+        "UK Employment Relations Act 1999 s.10"
+      ]
+    },
+    {
+      "id": "emp-health-safety",
+      "clause_category": "employment",
+      "name": "Health and Safety Obligations",
+      "description": "Defines the mutual obligations of the employer and employee regarding workplace health and safety, including the employer's duty to provide a safe working environment and safe systems of work, and the employee's duty to comply with health and safety policies and cooperate with the employer's safety measures. The clause must address the employer's obligations under the EU Framework Directive 89/391/EEC and national implementing legislation.",
+      "drafting_guidance": "Specify the employer's obligations: provision of a safe workplace, risk assessments, safe systems of work, information and training, personal protective equipment, health surveillance where required. Specify the employee's obligations: compliance with health and safety policies, use of safety equipment, reporting of hazards and incidents, cooperation with the employer's health and safety measures. Address the requirement for risk assessments (general and specific: DSE, manual handling, hazardous substances, pregnant workers, young workers). Specify the obligations regarding workplace accidents and incidents: immediate reporting, investigation, RIDDOR reporting (UK) or equivalent national reporting requirements. Address the right of employees to stop work in the event of serious and imminent danger without suffering detriment (EU Framework Directive Art 8(4)). Specify the employer's obligations regarding mental health and psychosocial risks. Address the obligations regarding home workers and remote workers. Specify the consequences of employee non-compliance with health and safety requirements (disciplinary action).",
+      "variations": {
+        "office-based": "Health and safety provisions focused on office environment risks (DSE, ergonomics, fire safety, mental health)",
+        "industrial": "Comprehensive provisions for industrial or manufacturing environments including machinery safety, hazardous substances, and PPE",
+        "hybrid": "Provisions addressing both on-site and remote working health and safety obligations"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent",
+        "emp-internship-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "EU Framework Directive 89/391/EEC",
+        "UK Health and Safety at Work etc. Act 1974",
+        "UK Management of Health and Safety at Work Regulations 1999"
+      ]
+    },
+    {
+      "id": "emp-remote-work",
+      "clause_category": "employment",
+      "name": "Remote and Hybrid Working Arrangements",
+      "description": "Establishes the terms and conditions for remote or hybrid working arrangements, including eligibility, working hours, equipment provision, expense reimbursement, data security, health and safety in the home workspace, and the employer's right to require attendance at the workplace. The EU Framework Agreement on Telework and national implementing legislation in many EU Member States impose specific obligations on employers providing remote work arrangements.",
+      "drafting_guidance": "Specify whether remote working is a contractual right or a discretionary arrangement that may be withdrawn with notice. Define the hybrid working pattern (e.g., minimum days in the office per week or month). Specify the employer's obligations: provision of equipment (laptop, monitor, keyboard, chair), contribution to home office costs (internet, electricity, heating), maintenance and technical support. Specify the employee's obligations: maintenance of a suitable workspace, compliance with data security policies (encrypted devices, secure network, screen lock), availability during core hours, attendance at mandatory in-person events. Address health and safety in the home workspace: requirement for a DSE self-assessment, employer's right to inspect or request photographs of the workspace, provision of ergonomic equipment. Address data protection and information security: prohibition on use of public WiFi, secure storage of confidential documents, compliance with the employer's ISMS policies. Specify the right to disconnect and working time recording obligations. Address the tax implications of home working (P11D benefits, home office allowance). Specify the applicable jurisdiction and governing law where remote working crosses national borders.",
+      "variations": {
+        "fully-remote": "Permanent remote working arrangement with no regular office attendance requirement",
+        "hybrid-structured": "Structured hybrid arrangement with specified office and remote days each week",
+        "discretionary": "Remote working at the employer's discretion, revocable with reasonable notice"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent"
+      ],
+      "depends_on": [
+        "emp-health-safety",
+        "emp-flexible-working"
+      ],
+      "compliance_refs": [
+        "EU Framework Agreement on Telework (2002)",
+        "EU Directive 2019/1152 Art 4(2)",
+        "UK Health and Safety at Work etc. Act 1974 s.2"
+      ]
+    },
+    {
+      "id": "emp-moonlighting",
+      "clause_category": "employment",
+      "name": "Outside Activities and Secondary Employment",
+      "description": "Regulates the employee's ability to engage in secondary employment, directorships, consultancy work, or other outside activities during the term of employment. Under EU Directive 2019/1152 on Transparent and Predictable Working Conditions, Member States must ensure that employers do not prohibit workers from taking up employment with other employers outside the work schedule established with that employer, except where restrictions are justified on the grounds of health and safety, protection of business confidentiality, integrity of the public service, or avoidance of conflicts of interest.",
+      "drafting_guidance": "Specify whether outside activities require prior written consent from the employer or merely prior notification. Define the categories of activity subject to the restriction: paid employment, directorships, consultancy, voluntary work, political office. Avoid blanket prohibitions that would violate EU Directive 2019/1152 Art 9(1); instead, specify the legitimate grounds for restriction (conflict of interest, Working Time Directive compliance, protection of confidential information, reputational risk). Require the employee to disclose any existing outside activities at the commencement of employment. Specify the process for requesting consent: written application, assessment criteria (conflict of interest, time commitment, reputational impact), response timeline. Address the interaction with the Working Time Directive 2003/88/EC and the aggregate weekly working time limit of 48 hours (opt-out where applicable). Specify the consequences of engaging in unauthorized outside activities (disciplinary action). Include a carve-out for de minimis activities (charitable work, personal investments, academic publishing).",
+      "variations": {
+        "consent-required": "All outside employment and directorships require prior written consent from a designated authority",
+        "notification-only": "Employee must notify the employer of outside activities but consent is not required unless a conflict arises",
+        "restricted-categories": "Prohibition on specific categories of outside activity (competing businesses, directorship of regulated entities) with freedom for other activities"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [
+        "emp-confidentiality"
+      ],
+      "compliance_refs": [
+        "EU Directive 2019/1152 Art 9(1)",
+        "Working Time Directive 2003/88/EC Art 6",
+        "UK Working Time Regulations 1998 reg 4"
+      ]
+    },
+    {
+      "id": "emp-post-termination",
+      "clause_category": "employment",
+      "name": "Post-Termination Obligations",
+      "description": "Consolidates all obligations that survive the termination of the employment relationship, including the return of company property and information, cooperation with ongoing matters, handover obligations, and the continued observance of confidentiality, non-compete, and non-solicitation restrictions. A well-drafted post-termination clause ensures an orderly transition and reduces the risk of disputes during the vulnerable period following the employee's departure.",
+      "drafting_guidance": "Specify the obligations that arise immediately upon termination: return of all company property (laptop, phone, access cards, vehicles, documents, data), deletion of company data from personal devices, resignation from any directorships or offices held on behalf of the employer. Define the handover obligations: preparation of a handover document, briefing of successors, completion of pending matters within the employee's control. Specify cooperation obligations: availability to answer questions from the successor (for a reasonable period, typically 3-6 months), assistance with litigation or regulatory investigations in which the employee's evidence is required (with reasonable compensation for time). List the surviving obligations with their respective durations: confidentiality (indefinite for trade secrets, specified period for other information), non-compete (specified months), non-solicitation (specified months). Address the employer's obligation to provide a reference and any agreed form of reference. Specify the final payment obligations: accrued salary, accrued holiday pay, pro-rata bonus (if applicable), expenses, and the timing of final payment. Address the consequences of failure to return company property.",
+      "variations": {
+        "comprehensive": "Full suite of post-termination obligations including return of property, handover, cooperation, and surviving restrictions",
+        "executive": "Enhanced post-termination obligations for senior executives including agreed reference, announcements, and transition support",
+        "minimal": "Basic post-termination obligations limited to return of property and confidentiality"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-settlement-agreement"
+      ],
+      "depends_on": [
+        "emp-non-compete",
+        "emp-non-solicitation",
+        "emp-confidentiality"
+      ],
+      "compliance_refs": [
+        "UK Employment Rights Act 1996 s.86-91",
+        "GDPR Art 17 (right to erasure of employee data)"
+      ]
+    },
+    {
+      "id": "emp-severance",
+      "clause_category": "employment",
+      "name": "Severance and Termination Payments",
+      "description": "Defines the payments and benefits payable to the employee upon termination of employment, beyond statutory minimum entitlements. Severance provisions typically cover payment in lieu of notice (PILON), enhanced redundancy payments, pro-rata bonus, accelerated equity vesting, continuation of benefits, and outplacement support. The tax treatment of severance payments must be carefully structured to take advantage of the GBP 30,000 exemption under UK tax law or equivalent exemptions in other jurisdictions.",
+      "drafting_guidance": "Specify the components of the severance package: payment in lieu of notice (PILON), enhanced redundancy payment (multiple of statutory or contractual notice pay), pro-rata bonus for the current performance year, treatment of deferred compensation and unvested equity, continuation of benefits (health insurance, life insurance) for a specified period post-termination, outplacement support. Include an express PILON clause to ensure tax-efficient treatment (a contractual right to make PILON means the payment is taxable as earnings rather than as a termination payment eligible for the GBP 30,000 exemption). Consider structuring the severance to maximise the GBP 30,000 tax exemption under ITEPA 2003 s.401-404. Address the conditions for severance eligibility (typically not available on termination for gross misconduct). Specify the payment terms (lump sum or instalments) and whether severance is subject to mitigation (reduction if the employee obtains alternative employment). Address the interaction with settlement agreements and the requirement for independent legal advice.",
+      "variations": {
+        "enhanced-redundancy": "Enhanced redundancy payment based on a multiple of statutory redundancy pay, typically 1-2 weeks per year of service",
+        "executive-package": "Comprehensive executive severance including PILON, enhanced redundancy, accelerated vesting, benefits continuation, and outplacement",
+        "contractual-pilon": "Payment in lieu of notice as a contractual entitlement, enabling clean break termination"
+      },
+      "contract_types": [
+        "emp-executive-employment",
+        "emp-employment-agreement",
+        "emp-settlement-agreement"
+      ],
+      "depends_on": [
+        "emp-notice-period"
+      ],
+      "compliance_refs": [
+        "UK Income Tax (Earnings and Pensions) Act 2003 s.401-404",
+        "UK Employment Rights Act 1996 s.135-165",
+        "EU Directive 98/59/EC (Collective Redundancies)"
+      ]
+    },
+    {
+      "id": "emp-relocation",
+      "clause_category": "employment",
+      "name": "Relocation Clause",
+      "description": "Governs the terms under which the employer may require the employee to relocate to a different work location, or under which the employer provides relocation assistance when the employee is hired from another geographic area. The clause addresses mobility obligations, relocation expenses, temporary accommodation, spousal support, and clawback of relocation costs if the employee leaves within a specified period.",
+      "drafting_guidance": "Distinguish between (i) a mobility clause permitting the employer to require relocation and (ii) a relocation assistance package offered as part of the hiring terms. For mobility clauses, specify the geographic scope (within the same city, within the country, internationally), the notice period for relocation (typically 3-6 months), and the reasonableness test that will be applied. Address the right to refuse relocation and the consequences (potential redundancy situation). For relocation assistance, specify the components: removal costs, temporary accommodation (duration and budget), property search support, stamp duty or equivalent costs, spousal career support, school search assistance, tax equalisation for international relocations. Include a clawback provision for relocation costs if the employee voluntarily resigns within a specified period (typically 12-24 months), with the clawback reducing on a pro-rata basis. Address the tax treatment of relocation expenses and the employer's withholding obligations. For international relocations, address immigration and work permit requirements.",
+      "variations": {
+        "domestic": "Relocation assistance for domestic moves, covering removal costs, temporary accommodation, and property transaction costs",
+        "international": "Comprehensive international relocation package including immigration support, tax equalisation, spousal assistance, and schooling",
+        "mobility-clause": "Employer's right to require relocation with reasonable notice and defined geographic scope"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK Income Tax (Earnings and Pensions) Act 2003 s.271-289 (relocation expenses exemption)"
+      ]
+    },
+    {
+      "id": "emp-training-repayment",
+      "clause_category": "employment",
+      "name": "Training Cost Repayment",
+      "description": "Requires the employee to repay the costs of employer-funded training, qualifications, or professional development if the employee leaves employment within a specified period following completion of the training. Training repayment clauses must be carefully drafted to be enforceable, as courts will scrutinise whether the repayment obligation is a genuine pre-estimate of the employer's loss or constitutes a penalty or unreasonable restraint of trade.",
+      "drafting_guidance": "Specify the types of training subject to repayment (professional qualifications, external courses, certifications, degree programmes, but typically not mandatory training required by the employer for the role). Define the repayment period (typically 12-24 months from completion of the training, with the obligation reducing on a sliding scale). Specify the repayment amount: full cost during the first period, reducing on a monthly or quarterly pro-rata basis thereafter. Define what constitutes the cost (course fees, examination fees, study materials, travel, study leave salary). Specify the trigger for repayment (voluntary resignation or dismissal for gross misconduct within the repayment period). Address the deduction mechanism and compliance with Part II of the Employment Rights Act 1996 (requirement for written authorisation of deductions from wages). Ensure the clause does not operate as a penalty or unreasonable restraint of trade (Neil v Strathclyde Regional Council [1984]). Consider whether the clause is reasonable in the context of the employee's salary level.",
+      "variations": {
+        "sliding-scale": "Repayment obligation reduces on a monthly sliding scale over 12-24 months",
+        "full-recovery": "Full cost recovery within 12 months, reducing to 50% in months 13-24",
+        "conditional": "Repayment only triggered if the employee voluntarily resigns; no repayment obligation if dismissed by the employer"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK Employment Rights Act 1996 s.13 (deductions from wages)",
+        "UK case law: Neil v Strathclyde Regional Council [1984]"
+      ]
+    },
+    {
+      "id": "emp-retirement-benefit",
+      "clause_category": "employment",
+      "name": "Retirement and Pension Benefits",
+      "description": "Specifies the employer's pension and retirement benefit obligations, including the type of pension scheme (defined benefit or defined contribution), contribution rates, eligibility criteria, and the interaction with statutory auto-enrolment requirements. Pension provisions represent a significant financial commitment and must comply with complex regulatory requirements including the Pensions Act 2008 (auto-enrolment), the Pensions Act 2004, and, for cross-border arrangements, the IORP II Directive.",
+      "drafting_guidance": "Specify the type of pension arrangement: defined contribution (employer and employee contribution rates), defined benefit (accrual rate, pensionable salary definition, normal retirement age), or hybrid. For defined contribution schemes, specify the employer's contribution rate (as a percentage of pensionable salary), the employee's contribution rate, and salary sacrifice options. Ensure compliance with auto-enrolment requirements under the Pensions Act 2008 (minimum employer contribution currently 3% of qualifying earnings; total minimum contribution 8%). Specify the definition of pensionable salary (basic salary only, or including allowances and bonuses). Address the employer's right to substitute the pension scheme or amend contribution rates (subject to consultation). For senior executives, consider supplementary pension arrangements (funded or unfunded supplementary retirement benefits, employer-financed retirement benefit scheme). Address the interaction with lifetime allowance, annual allowance, and salary sacrifice arrangements. Specify the death-in-service benefit (typically 4x basic salary). Address the treatment of pension contributions during maternity, paternity, and sick leave.",
+      "variations": {
+        "defined-contribution": "Employer-matched defined contribution pension with specified contribution rates",
+        "executive-supplementary": "Enhanced pension arrangement for senior executives, potentially including supplementary unfunded retirement benefits",
+        "salary-sacrifice": "Pension contributions structured through a salary sacrifice arrangement for National Insurance efficiency"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK Pensions Act 2008 (auto-enrolment)",
+        "UK Pensions Act 2004",
+        "IORP II Directive (2016/2341)",
+        "UK Finance Act (annual allowance and lifetime allowance provisions)"
+      ]
+    },
+    {
+      "id": "emp-parental-leave",
+      "clause_category": "employment",
+      "name": "Parental and Family Leave",
+      "description": "Establishes the employee's entitlements to maternity leave, paternity leave, shared parental leave, adoption leave, parental leave, and other family-related leave, including the applicable pay, benefits continuation, and return-to-work rights. The clause must comply with the EU Work-Life Balance Directive 2019/1158 and applicable national implementing legislation, while many employers offer enhanced entitlements beyond the statutory minimum as part of their benefits package.",
+      "drafting_guidance": "Specify the entitlement to each type of family leave: maternity leave (duration, pay, qualification criteria), paternity leave (duration, pay), shared parental leave (mechanism for sharing leave between parents), adoption leave, parental leave, time off for dependants. For enhanced maternity pay, specify the duration and amount (e.g., 26 weeks at full pay followed by statutory maternity pay). Specify the qualifying criteria for enhanced pay (typically minimum 26 weeks' continuous service). Address the accrual of holiday entitlement during family leave. Specify the continuation of benefits during leave (pension contributions, life insurance, health insurance, company car). Address the right to return to the same or a suitable alternative role. Under the EU Work-Life Balance Directive 2019/1158, specify the two months of non-transferable parental leave for each parent, paid at a level determined by the Member State. Address the right to request flexible working upon return from parental leave. Specify the protection from detrimental treatment or dismissal connected to the exercise of family leave rights. Address keeping-in-touch (KIT) days during maternity and adoption leave.",
+      "variations": {
+        "enhanced-maternity": "Enhanced maternity pay beyond statutory minimum, typically 13-26 weeks at full pay",
+        "equal-parental": "Gender-neutral parental leave policy offering equal enhanced leave entitlements to all parents regardless of gender",
+        "statutory-minimum": "Leave entitlements at statutory minimum levels with no enhanced pay"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "EU Work-Life Balance Directive 2019/1158",
+        "UK Maternity and Parental Leave etc. Regulations 1999",
+        "UK Shared Parental Leave Regulations 2014",
+        "UK Employment Rights Act 1996 s.71-80"
+      ]
+    },
+    {
+      "id": "emp-flexible-working",
+      "clause_category": "employment",
+      "name": "Flexible Working Arrangements",
+      "description": "Establishes the framework for employees to request and, where agreed, work under flexible working arrangements including part-time work, compressed hours, job sharing, flexitime, staggered hours, and annualised hours. Under the UK Employment Relations (Flexible Working) Act 2023, all employees have the right to request flexible working from day one of employment, and employers must deal with requests in a reasonable manner within a two-month decision period.",
+      "drafting_guidance": "Specify the types of flexible working available (part-time, compressed hours, flexitime, job sharing, staggered hours, annualised hours, term-time working). Define the application process in compliance with the Employment Relations (Flexible Working) Act 2023: right to make two statutory requests per year, employer must respond within two months, employer may refuse only on specified business grounds. List the permitted grounds for refusal (burden of additional costs, detrimental effect on ability to meet customer demand, inability to reorganise work among existing staff, inability to recruit additional staff, detrimental impact on quality or performance, insufficiency of work during the periods the employee proposes to work, planned structural changes). Specify the trial period mechanism for flexible working arrangements. Address the right to revert to original working pattern. Specify the impact of flexible working on pro-rata salary, holiday entitlement, pension contributions, and other benefits. Address the interaction with remote working provisions. Ensure that the process does not discriminate indirectly on the grounds of sex or disability.",
+      "variations": {
+        "statutory-compliant": "Process aligned with the Employment Relations (Flexible Working) Act 2023 statutory requirements",
+        "enhanced": "Employer proactively offers flexible working options at recruitment and during employment, beyond statutory requirements",
+        "hybrid-framework": "Structured hybrid working framework combining office and remote working with flexible core hours"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [
+        "emp-remote-work"
+      ],
+      "compliance_refs": [
+        "UK Employment Relations (Flexible Working) Act 2023",
+        "UK Flexible Working Regulations 2014 (as amended)",
+        "EU Work-Life Balance Directive 2019/1158 Art 9"
+      ]
+    },
+    {
+      "id": "emp-equal-pay",
+      "clause_category": "employment",
+      "name": "Equal Pay and Pay Transparency",
+      "description": "Addresses the employer's obligation to provide equal pay for equal work or work of equal value regardless of gender, and the emerging requirements for pay transparency under the EU Pay Transparency Directive 2023/970. The clause establishes mechanisms for pay audits, pay gap reporting, and remediation of unjustified pay disparities, and specifies the employee's right to information about pay levels and criteria.",
+      "drafting_guidance": "Affirm the employer's commitment to equal pay for equal work or work of equal value in compliance with Article 157 TFEU and the UK Equality Act 2010 s.64-80. Address the requirements of the EU Pay Transparency Directive 2023/970 (to be transposed by June 2026): right of applicants to receive information on pay range before interview, prohibition on asking salary history, right of employees to information on average pay levels by gender for equivalent work, and mandatory reporting of gender pay gap data. Specify the job evaluation methodology used to determine work of equal value. Require regular pay audits (at least every three years for employers with 100+ employees under the EU Directive). Address the remediation process for identified pay gaps: analysis of whether pay differences are justified by objective, gender-neutral criteria, and corrective action timeline. Specify the employer's reporting obligations (UK gender pay gap reporting for employers with 250+ employees). Address the interaction with the right to discuss pay with colleagues (prohibition on pay secrecy clauses under EU Directive Art 7). Include provisions for ongoing monitoring and the role of employee representatives.",
+      "variations": {
+        "eu-directive-compliant": "Full compliance with EU Pay Transparency Directive 2023/970 including pay range disclosure, reporting, and audit",
+        "uk-reporting": "Compliance with UK mandatory gender pay gap reporting requirements for employers with 250+ employees",
+        "comprehensive": "Enhanced pay transparency framework exceeding statutory requirements, including pay band publication and regular equality audits"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "EU Pay Transparency Directive 2023/970",
+        "UK Equality Act 2010 s.64-80",
+        "TFEU Art 157",
+        "UK Equality Act 2010 (Gender Pay Gap Information) Regulations 2017"
+      ]
+    },
+    {
+      "id": "emp-redundancy",
+      "clause_category": "employment",
+      "name": "Redundancy Provisions",
+      "description": "Establishes the substantive and procedural requirements for making employees redundant, including the definition of redundancy, selection criteria, consultation obligations, enhanced redundancy payments, and the right to time off for job-seeking. Redundancy procedures must comply with the individual and collective consultation requirements under national implementing legislation of the EU Collective Redundancies Directive 98/59/EC.",
+      "drafting_guidance": "Define redundancy in accordance with the statutory definition (UK Employment Rights Act 1996 s.139: cessation of business, closure of workplace, or diminished requirements for work of a particular kind). Specify the consultation obligations: individual consultation with each affected employee, and collective consultation with employee representatives where 20 or more redundancies are proposed within 90 days (30 days' consultation for 20-99 redundancies; 45 days for 100+ redundancies under UK TULRCA 1992 s.188). Define the selection criteria: objective, measurable, and non-discriminatory (skills, qualifications, attendance records, disciplinary records, performance assessments, length of service). Specify the enhanced redundancy payment: formula (e.g., one month's salary per year of service, capped at a maximum number of years) or a fixed multiple of statutory redundancy pay. Specify alternative employment obligations: duty to offer suitable alternative employment, trial period in new role. Address the right to time off for job-seeking (UK Employment Rights Act 1996 s.52). Specify the notification to the Redundancy Payments Service (HR1 form). Address the interaction with TUPE provisions where redundancy follows a transfer.",
+      "variations": {
+        "enhanced-payment": "Enhanced redundancy payment above statutory minimum, typically based on actual salary with no statutory cap",
+        "voluntary-first": "Voluntary redundancy scheme offered before compulsory selection, often with enhanced terms",
+        "collective-consultation": "Comprehensive collective consultation framework with elected or nominated employee representatives"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [
+        "emp-severance",
+        "emp-notice-period"
+      ],
+      "compliance_refs": [
+        "EU Collective Redundancies Directive 98/59/EC",
+        "UK Employment Rights Act 1996 s.135-165",
+        "UK Trade Union and Labour Relations (Consolidation) Act 1992 s.188-198"
+      ]
+    },
+    {
+      "id": "emp-change-of-control-retention",
+      "clause_category": "employment",
+      "name": "Change of Control and Retention",
+      "description": "Provides for enhanced severance, accelerated equity vesting, retention bonuses, or other protections for key employees in the event of a change of control of the employer (acquisition, merger, or significant change in ownership). Change of control provisions are critical for retaining key talent during M&A transactions and for protecting executives from termination following a takeover.",
+      "drafting_guidance": "Define the change of control trigger events: acquisition of a specified percentage of voting shares (typically 50% or more), sale of all or substantially all assets, merger or consolidation, change in the composition of the board of directors. Specify the protections available: single-trigger benefits (payable upon the change of control event itself) or double-trigger benefits (payable only upon the change of control plus subsequent termination or constructive dismissal within a specified period, typically 12-24 months). For retention bonuses, specify the retention period (typically 12-24 months from the change of control), the payment schedule (50% on commencement, 50% at the end of the retention period), and the clawback conditions. For accelerated equity vesting, specify whether acceleration is full or partial and whether it applies to time-based and performance-based awards. Address the definition of good reason (constructive dismissal triggers): material reduction in role, salary, or reporting level; relocation beyond a specified distance; material breach of employment terms. Specify the tax treatment of change of control payments, including the potential application of excess parachute payment rules.",
+      "variations": {
+        "single-trigger": "Benefits payable automatically upon change of control, regardless of whether the employee is terminated",
+        "double-trigger": "Benefits payable only upon change of control followed by termination or constructive dismissal within a specified period",
+        "retention-bonus": "Cash retention bonus payable for remaining in employment through and after the change of control transition period"
+      },
+      "contract_types": [
+        "emp-executive-employment",
+        "emp-employment-agreement"
+      ],
+      "depends_on": [
+        "emp-stock-option-vesting",
+        "emp-severance"
+      ],
+      "compliance_refs": [
+        "UK City Code on Takeovers and Mergers (Rule 16)",
+        "UK Corporate Governance Code 2018 Provision 39"
+      ]
+    },
+    {
+      "id": "emp-bonus-discretion",
+      "clause_category": "employment",
+      "name": "Discretionary Bonus",
+      "description": "Establishes the terms of the employer's discretionary bonus scheme, including the performance assessment criteria, the employer's discretion in determining bonus amounts, and the conditions that must be satisfied for bonus eligibility. Courts have increasingly scrutinised discretionary bonus provisions, requiring employers to exercise their discretion rationally and in good faith, and have been willing to imply obligations of transparency and non-arbitrariness into bonus schemes.",
+      "drafting_guidance": "Specify that the bonus is discretionary and that there is no contractual entitlement to a bonus in any year (but recognise that repeated payment may give rise to a contractual entitlement through custom and practice). Define the performance assessment criteria: individual performance (KPIs, competency assessment), team performance, business unit performance, and company financial performance. Specify the performance period and assessment timeline. Address the employer's discretion to determine the bonus pool and individual allocations, subject to the duty to exercise discretion rationally, in good faith, and not in an arbitrary, capricious, or perverse manner (Braganza v BP Shipping Ltd [2015] UKSC 17). Specify the payment conditions: the employee must be in employment and not under notice on the payment date (but note that this condition may be unenforceable for employees terminated during the performance period). Address the pro-rating of bonus for employees who join or leave during the performance period. Specify the deferral and malus/clawback provisions for variable remuneration (link to emp-bonus-deferral and emp-clawback). Address the tax treatment and employer's NIC obligations.",
+      "variations": {
+        "wholly-discretionary": "Bonus entirely at the employer's discretion with no guaranteed minimum or formula",
+        "formulaic": "Bonus calculated by reference to a defined formula based on measurable performance metrics, with limited discretion",
+        "target-based": "Bonus linked to achievement of specified targets with a target bonus percentage and maximum cap"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [
+        "emp-bonus-deferral",
+        "emp-clawback"
+      ],
+      "compliance_refs": [
+        "UK case law: Braganza v BP Shipping Ltd [2015] UKSC 17",
+        "UK case law: Keen v Commerzbank AG [2006] EWCA Civ 1536"
+      ]
+    },
+    {
+      "id": "emp-commission-structure",
+      "clause_category": "employment",
+      "name": "Commission Structure",
+      "description": "Defines the commission-based compensation structure for sales, business development, or revenue-generating employees, including the commission rates, qualifying transactions, measurement period, payment timing, and treatment of commissions upon termination. Commission structures must be drafted with precision to avoid disputes over entitlement, particularly regarding deals in the pipeline at the date of termination and post-termination commissions on transactions initiated by the departing employee.",
+      "drafting_guidance": "Define the qualifying transactions or events that generate commission entitlement (signed contracts, delivered revenue, collected cash, or a combination). Specify the commission rate(s): flat rate, tiered (increasing with volume), or regressive (decreasing beyond quota). Define the measurement period (monthly, quarterly, annually). Specify the commission base: gross revenue, net revenue, gross margin, or contract value. Address the treatment of multi-year contracts (commission on the full contract value or annual revenue). Specify draws against commission and the reconciliation mechanism. Address accelerators and decelerators tied to quota attainment. Specify the timing of commission payment (typically within 30 days of the qualifying event). Address the treatment of returned, cancelled, or disputed transactions (commission clawback). Critically, define the treatment of commissions upon termination: entitlement to commissions on deals closed before termination, treatment of pipeline deals, and any post-termination commission tail. Specify the right to amend the commission plan and the notice period for changes.",
+      "variations": {
+        "revenue-based": "Commission calculated as a percentage of recognised revenue from qualifying transactions",
+        "margin-based": "Commission calculated as a percentage of gross margin or gross profit on qualifying transactions",
+        "tiered-accelerator": "Tiered commission rates with accelerators for above-quota performance and potential decelerators for underperformance"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-contractor-independent",
+        "emp-consulting-individual"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK Employment Rights Act 1996 s.13 (deductions from wages)",
+        "EU Directive 86/653/EEC (Commercial Agents)"
+      ]
+    },
+    {
+      "id": "emp-expense-policy",
+      "clause_category": "employment",
+      "name": "Expense Reimbursement Policy",
+      "description": "Establishes the employer's obligations and procedures for reimbursing employees for legitimate business expenses incurred in the performance of their duties, including travel, accommodation, subsistence, entertainment, and other business-related costs. The expense policy must balance the employer's duty to reimburse reasonable expenses with the need for fiscal control and compliance with tax requirements.",
+      "drafting_guidance": "Specify the categories of reimbursable expenses: travel (public transport, mileage, flights, taxis), accommodation, meals and subsistence, client entertainment, professional subscriptions, working-from-home expenses. Define the approval process: pre-approval for expenses above a specified threshold, line manager authorisation, submission deadlines. Specify the per diem rates or maximum amounts for each category. Address the documentation requirements: original receipts, itemised invoices, business justification. Specify the payment mechanism and timeline (reimbursement through payroll or expense management system within a specified period). Address company credit card use and obligations. Specify the consequences of fraudulent or non-compliant expense claims (disciplinary action, recovery of overpayments). Address the tax treatment of expenses: tax-exempt payments for qualifying business expenses under ITEPA 2003 s.336-339, dispensation agreements, and PAYE Settlement Agreements for residual benefits. Consider the use of benchmark scale rates approved by HMRC.",
+      "variations": {
+        "reimbursement": "Employee pays expenses personally and claims reimbursement with supporting documentation",
+        "company-card": "Expenses charged to a company credit card with monthly reconciliation and approval",
+        "per-diem": "Fixed per diem rates for travel, accommodation, and subsistence, eliminating the need for individual receipts"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent",
+        "emp-secondment-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK Income Tax (Earnings and Pensions) Act 2003 s.336-339",
+        "HMRC Employment Income Manual (EIM)"
+      ]
+    },
+    {
+      "id": "emp-company-property",
+      "clause_category": "employment",
+      "name": "Company Property and Equipment",
+      "description": "Governs the provision, use, care, and return of company-owned property and equipment issued to the employee for the performance of their duties, including IT equipment (laptops, mobile phones, monitors), vehicles, access cards, and other assets. The clause must address the employee's obligations regarding care and appropriate use of company property, data security, and the consequences of loss, damage, or failure to return property upon termination.",
+      "drafting_guidance": "Specify the items of company property provided (laptop, mobile phone, monitor, keyboard, mouse, company car, fuel card, access cards, keys). Define the acceptable use: business purposes only, or permitted limited personal use (specify any restrictions). Specify the employee's obligations: reasonable care, compliance with IT security policies (encryption, password protection, software updates), prohibition on installing unauthorised software, obligation to report loss, theft, or damage immediately. Address the data security requirements: prohibition on storing company data on personal devices (unless authorised under a BYOD policy), obligation to use VPN for remote access, prohibition on disabling security features. Specify the return obligations upon termination: all items to be returned by the last day of employment or within a specified period. Address the consequences of failure to return property: the employer's right to deduct the replacement cost from final salary (subject to written authorisation under Employment Rights Act 1996 s.13). Specify the right of the employer to remotely wipe company data from devices upon termination. Address the tax treatment of equipment provided (benefit in kind under P11D, or trivial benefits exemption).",
+      "variations": {
+        "standard-issue": "Standard equipment provision with return obligations and acceptable use policy",
+        "byod": "Bring-your-own-device policy with employer contribution, data separation requirements, and remote wipe capability",
+        "executive": "Enhanced equipment provision for senior executives including company vehicle, mobile phone, and home office setup"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-internship-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK Employment Rights Act 1996 s.13 (deductions from wages)",
+        "GDPR Art 5(1)(f) (integrity and confidentiality)"
+      ]
+    },
+    {
+      "id": "emp-social-media-policy",
+      "clause_category": "employment",
+      "name": "Social Media and Online Conduct Policy",
+      "description": "Regulates the employee's use of social media platforms and online conduct, both during and outside working hours, to protect the employer's reputation, confidential information, and client relationships. The policy must balance the employer's legitimate interests with the employee's rights to freedom of expression and privacy, and must comply with data protection legislation regarding the monitoring of employees' online activity.",
+      "drafting_guidance": "Define the scope of social media covered (LinkedIn, Twitter/X, Facebook, Instagram, TikTok, personal blogs, online forums, and any future platforms). Distinguish between professional use of social media (on behalf of the employer) and personal use. For professional use, specify approval requirements, brand guidelines, and the process for managing official company accounts. For personal use, specify the restrictions: prohibition on disclosing confidential information, prohibition on making defamatory or discriminatory statements about the employer, colleagues, clients, or competitors, requirement to include a disclaimer that views are personal and do not represent the employer. Address the interaction between social media use and existing obligations (confidentiality, non-solicitation, non-compete). Specify the employer's monitoring of social media: extent, lawful basis under GDPR, and employee notification. Address the consequences of policy breaches (disciplinary action, up to and including summary dismissal for serious breaches). Specify the protection for whistleblowing disclosures made through social media. Address the ownership and handover of professional social media accounts and connections upon termination.",
+      "variations": {
+        "liberal": "Permissive approach with minimal restrictions on personal social media use, focusing on core prohibitions",
+        "restrictive": "Comprehensive restrictions on social media use with prior approval required for any employer-related content",
+        "industry-specific": "Tailored provisions for regulated industries (financial services, healthcare) with additional compliance requirements"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-internship-agreement"
+      ],
+      "depends_on": [
+        "emp-confidentiality"
+      ],
+      "compliance_refs": [
+        "ECHR Art 8 (right to respect for private life)",
+        "ECHR Art 10 (freedom of expression)",
+        "GDPR Art 6(1)(f) (legitimate interest for monitoring)"
+      ]
+    },
+    {
+      "id": "emp-drug-alcohol-testing",
+      "clause_category": "employment",
+      "name": "Drug and Alcohol Testing Policy",
+      "description": "Establishes the employer's policy for testing employees for drug and alcohol use, including the circumstances in which testing may be conducted, the testing procedures, the consequences of positive results, and the safeguards for employee rights. Drug and alcohol testing policies must be carefully balanced against the employee's right to privacy and must comply with data protection legislation, as test results constitute special category health data under the GDPR.",
+      "drafting_guidance": "Specify the circumstances in which testing may be conducted: pre-employment, random, for-cause (reasonable suspicion of impairment), post-incident, return-to-duty. Define the substances tested (alcohol, controlled drugs, prescription medications that may impair performance). Specify the testing methodology (urine, oral fluid, blood, breath) and the accredited laboratory standards (e.g., UKAS-accredited laboratory). Address the chain of custody procedures to ensure test integrity. Specify the consequences of a positive test: further investigation, occupational health referral, employee assistance programme (EAP), disciplinary action, and the distinction between dependent use (referral and support) and recreational use (disciplinary). Address the refusal to submit to testing and its consequences. Specify the GDPR lawful basis for processing test results (special category data under Art 9): consent, legal obligation, or substantial public interest (for safety-critical roles). Address the retention period for test results. Specify the right to a confirmatory re-test. Address reasonable adjustments for employees with substance use disorders under the Equality Act 2010.",
+      "variations": {
+        "safety-critical": "Mandatory random testing programme for safety-critical roles (transport, construction, machinery operation)",
+        "for-cause-only": "Testing permitted only where there is reasonable cause to suspect impairment or following a workplace incident",
+        "supportive": "Policy emphasising support and rehabilitation through EAP, with disciplinary action as a last resort"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent"
+      ],
+      "depends_on": [
+        "emp-health-safety",
+        "emp-disciplinary"
+      ],
+      "compliance_refs": [
+        "GDPR Art 9 (special category data)",
+        "UK Equality Act 2010 s.6 (disability)",
+        "UK Health and Safety at Work etc. Act 1974 s.2-3",
+        "Transport and Works Act 1992"
+      ]
+    },
+    {
+      "id": "emp-background-check",
+      "clause_category": "employment",
+      "name": "Background Screening and Vetting",
+      "description": "Establishes the employer's right to conduct pre-employment and, where appropriate, periodic background checks on employees, including identity verification, right to work, criminal records, credit history, qualification verification, employment references, and enhanced security vetting for regulated or security-sensitive roles. Background checks must comply with data protection requirements and the principle of proportionality.",
+      "drafting_guidance": "Specify the types of background checks to be conducted: identity verification, right to work check (mandatory under UK Immigration, Asylum and Nationality Act 2006), basic or enhanced DBS check (for eligible roles under the Rehabilitation of Offenders Act 1974 (Exceptions) Order 1975), credit reference check (for financial services or roles involving financial responsibility), qualification and employment history verification, professional registration verification, social media screening. Specify the GDPR lawful basis for each type of check (legal obligation for right to work; legitimate interest or consent for other checks). Address the principle of proportionality: checks should be relevant to the role and not excessively intrusive. Specify the timing of checks (pre-employment, upon promotion to sensitive roles, periodic re-screening for regulated roles). Address the consequences of adverse findings: opportunity for the candidate or employee to explain, assessment of relevance to the role, and decision-making process. Specify the retention period for vetting records (aligned with the purpose and GDPR Art 5(1)(e)). Address enhanced vetting requirements for financial services (FCA fit and proper person test, Senior Managers and Certification Regime).",
+      "variations": {
+        "basic": "Standard pre-employment checks including identity, right to work, and employment references",
+        "enhanced": "Comprehensive screening including DBS, credit checks, qualification verification, and social media review",
+        "regulated": "Enhanced vetting for regulated financial services roles including FCA fitness and propriety assessment and SMCR compliance"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent",
+        "emp-internship-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK Rehabilitation of Offenders Act 1974",
+        "UK Immigration, Asylum and Nationality Act 2006",
+        "GDPR Art 6, Art 9, Art 10",
+        "FCA Fit and Proper Test (FIT)"
+      ]
+    },
+    {
+      "id": "emp-references",
+      "clause_category": "employment",
+      "name": "Employment References",
+      "description": "Addresses the employer's obligations and policies regarding the provision and receipt of employment references, including the scope of information disclosed, the duty of care owed to both the subject and the recipient of the reference, and the agreed form of reference in settlement situations. While there is no general legal obligation to provide a reference under English law, employers who do provide references owe a duty of care to ensure they are true, accurate, and fair.",
+      "drafting_guidance": "Specify the employer's policy on providing references: comprehensive character and performance references, or factual references only (dates of employment, job title, salary). For comprehensive references, specify the scope of information to be included and the authorisation process. Address the duty of care under Spring v Guardian Assurance plc [1995] 2 AC 296: the reference must be true, accurate, and fair, and must not give a misleading impression by omission. Specify who is authorised to provide references on behalf of the employer. Address the employee's right to see the reference before it is sent (not legally required but best practice). For settlement agreements, include a mutually agreed form of reference as an annex. Address the protection of personal data in references under GDPR (subject access requests for references received are governed by a partial exemption). Specify the retention period for copies of references given. Address the regulatory obligations to provide references in certain sectors (financial services under SM&CR).",
+      "variations": {
+        "factual-only": "Reference limited to confirmation of dates of employment, job title, and reason for leaving",
+        "comprehensive": "Full character and performance reference covering skills, conduct, reason for leaving, and suitability for new role",
+        "agreed-form": "Mutually agreed form of reference annexed to a settlement agreement"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-settlement-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "UK case law: Spring v Guardian Assurance plc [1995] 2 AC 296",
+        "FCA/PRA SM&CR Regulatory Reference Requirements",
+        "GDPR Art 15 (subject access) and Schedule 2 Part 4 Para 24 (references exemption)"
+      ]
+    },
+    {
+      "id": "emp-annual-leave",
+      "clause_category": "employment",
+      "name": "Annual Leave and Holiday Entitlement",
+      "description": "Specifies the employee's entitlement to paid annual leave, including the number of days, the accrual method, the booking process, carry-over rules, and the treatment of untaken leave upon termination. Under the EU Working Time Directive 2003/88/EC and the UK Working Time Regulations 1998, all workers are entitled to a minimum of four weeks' paid annual leave (20 days for a full-time worker), with many employers offering enhanced entitlements.",
+      "drafting_guidance": "Specify the total annual leave entitlement (statutory minimum plus any enhanced contractual entitlement). Under the UK Working Time Regulations 1998, workers are entitled to 5.6 weeks' paid annual leave (28 days for a full-time worker, inclusive of bank holidays, or 20 days plus 8 bank holidays). Specify the holiday year (calendar year or employer's financial year). Address accrual during the first and final year of employment (pro-rata calculation). Specify the booking process and approval requirements (advance notice, minimum and maximum booking periods, blackout periods). Address the carry-over of unused leave: under the Working Time Regulations, the four-week EU entitlement must generally be taken in the leave year (no carry-over), while the additional 1.6 weeks may be carried over if permitted by a relevant agreement. Address the impact of the Schultz-Hoff (C-350/06) and King v Sash Windows (C-214/16) CJEU decisions on carry-over where the worker was unable to take leave due to sickness or employer failure. Specify the payment for untaken leave upon termination and the deduction for excess leave taken. Address the treatment of leave during maternity, paternity, and long-term sickness absence.",
+      "variations": {
+        "enhanced": "Contractual entitlement above the statutory minimum, with additional days accruing with length of service",
+        "unlimited": "Unlimited or discretionary leave policy with no fixed annual entitlement but a minimum expected number of days",
+        "buy-sell": "Flexible scheme allowing employees to buy additional leave days or sell unused days back to the employer"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment",
+        "emp-internship-agreement"
+      ],
+      "depends_on": [],
+      "compliance_refs": [
+        "Working Time Directive 2003/88/EC Art 7",
+        "UK Working Time Regulations 1998 reg 13-16",
+        "CJEU: Schultz-Hoff (C-350/06)",
+        "CJEU: King v Sash Windows (C-214/16)"
+      ]
+    },
+    {
+      "id": "emp-sick-leave",
+      "clause_category": "employment",
+      "name": "Sick Leave and Absence Management",
+      "description": "Establishes the employer's policy on sick leave, including notification requirements, medical evidence, statutory and enhanced sick pay, return-to-work procedures, and long-term absence management. The clause must address the employer's obligations under disability discrimination legislation to make reasonable adjustments for employees with qualifying disabilities, including adjustments to sickness absence triggers and procedures.",
+      "drafting_guidance": "Specify the notification requirements: timing of notification (before the start of the working day or within one hour), method of notification (telephone call, not text or email), daily or periodic updates during absence. Specify the medical evidence requirements: self-certification for absences up to 7 calendar days (UK), fit note from a GP or hospital doctor for absences exceeding 7 calendar days. Specify sick pay entitlements: statutory sick pay (SSP) for up to 28 weeks, plus any enhanced contractual sick pay (e.g., 13 weeks at full pay, 13 weeks at half pay). Address the interaction between SSP and contractual sick pay (offset or in addition). Specify the return-to-work process: return-to-work interview, phased return, occupational health assessment for long-term absence. Establish trigger points for absence management (Bradford factor, specified number of absences within 12 months). Address the management of long-term absence: regular contact, occupational health referrals, consideration of reasonable adjustments under the Equality Act 2010, and ultimately termination on grounds of capability. Address mental health absences specifically and the employer's duty of care. Specify the right to require an independent medical examination.",
+      "variations": {
+        "enhanced-pay": "Enhanced sick pay above statutory minimum, with specified durations at full and half pay",
+        "occupational-health": "Integrated absence management with early occupational health referral and phased return-to-work support",
+        "trigger-based": "Structured absence management with defined trigger points for formal review and action"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment"
+      ],
+      "depends_on": [
+        "emp-health-safety"
+      ],
+      "compliance_refs": [
+        "UK Social Security Contributions and Benefits Act 1992 s.151-163 (SSP)",
+        "UK Equality Act 2010 s.20 (reasonable adjustments)",
+        "UK Employment Rights Act 1996 s.98(3) (capability dismissal)"
+      ]
+    },
+    {
+      "id": "emp-pension-contribution",
+      "clause_category": "employment",
+      "name": "Pension Contribution Structure",
+      "description": "Defines the specific contribution rates and structure for the employer's pension scheme, including employer and employee contribution rates, salary sacrifice arrangements, pensionable pay definitions, and the auto-enrolment compliance framework. The contribution structure must meet the minimum requirements of the Pensions Act 2008 auto-enrolment obligations and should clearly define the pensionable earnings base to avoid disputes.",
+      "drafting_guidance": "Specify the employer contribution rate as a percentage of pensionable salary (minimum 3% of qualifying earnings for auto-enrolment; competitive rates typically range from 5-15% depending on seniority). Specify the employee contribution rate (minimum 5% of qualifying earnings for auto-enrolment). Define pensionable salary precisely: basic salary only, or basic salary plus specified allowances; specify the inclusion or exclusion of bonus, commission, overtime, and benefits. Specify whether contributions are on a salary sacrifice basis (where the employee gives up salary in exchange for an employer pension contribution, saving employer and employee National Insurance). Address the interaction with the annual allowance (currently GBP 60,000) and the tapered annual allowance for high earners. Specify the employer's auto-enrolment duties: eligible jobholders must be automatically enrolled, re-enrolment every three years, opt-out procedures. Specify the pension scheme provider and the employer's right to change the provider with notice. Address death-in-service benefits and their interaction with pension scheme membership. Specify the treatment of pension contributions during maternity leave, sick leave, and garden leave.",
+      "variations": {
+        "matched": "Employer matches employee contributions up to a specified maximum percentage",
+        "flat-rate": "Fixed employer contribution rate regardless of employee contribution level",
+        "tiered-by-seniority": "Employer contribution rate increases with seniority or grade, reflecting competitive market practice"
+      },
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ],
+      "depends_on": [
+        "emp-retirement-benefit"
+      ],
+      "compliance_refs": [
+        "UK Pensions Act 2008 s.3 (auto-enrolment)",
+        "UK Pensions Act 2008 s.16 (employer duties)",
+        "UK Finance Act (annual allowance provisions)",
+        "The Workplace Pension Reform (Employers' Duties) Order"
+      ]
+    }
+  ],
+  "contract_types": [
+    {
+      "id": "emp-employment-agreement",
+      "name": "Employment Agreement (Standard)",
+      "category": "employment",
+      "description": "The foundational contract governing the relationship between an employer and an employee, setting out the terms and conditions of employment including job title, duties, remuneration, working hours, leave entitlements, and termination provisions. Under EU Directive 2019/1152 on Transparent and Predictable Working Conditions, employers must provide employees with written particulars of employment covering all essential terms within seven days of the commencement of employment.",
+      "required_clauses": [
+        "emp-notice-period",
+        "emp-probation",
+        "emp-confidentiality",
+        "emp-ip-assignment",
+        "emp-non-solicitation",
+        "emp-grievance",
+        "emp-disciplinary",
+        "emp-health-safety",
+        "emp-annual-leave"
+      ],
+      "recommended_clauses": [
+        "emp-sick-leave",
+        "emp-pension-contribution",
+        "emp-data-subject-access",
+        "emp-company-property",
+        "emp-expense-policy"
+      ],
+      "typical_parties": "Employer <-> Employee",
+      "regulatory_drivers": [
+        "EU Directive 2019/1152 (Transparent and Predictable Working Conditions)",
+        "UK Employment Rights Act 1996 s.1-7B (written statement of employment particulars)"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-executive-employment",
+      "name": "Executive Employment Agreement",
+      "category": "employment",
+      "description": "A comprehensive employment contract for senior executives, C-suite officers, and board-level appointees that addresses enhanced compensation structures (including equity, bonus deferral, and long-term incentive plans), change of control protections, extended post-termination restrictions, director duties, and regulatory compliance obligations applicable to senior management. Executive agreements typically involve significant negotiation and must balance the employer's need for protection with the executive's bargaining power.",
+      "required_clauses": [
+        "emp-notice-period",
+        "emp-non-compete",
+        "emp-non-solicitation",
+        "emp-garden-leave",
+        "emp-confidentiality",
+        "emp-ip-assignment",
+        "emp-stock-option-vesting",
+        "emp-clawback",
+        "emp-bonus-deferral",
+        "emp-bonus-discretion"
+      ],
+      "recommended_clauses": [
+        "emp-severance",
+        "emp-change-of-control-retention",
+        "emp-post-termination",
+        "emp-restrictive-covenant",
+        "emp-data-subject-access",
+        "emp-pension-contribution"
+      ],
+      "typical_parties": "Employer <-> Executive/C-Suite",
+      "regulatory_drivers": [
+        "UK Companies Act 2006 s.188 (directors' service contracts)",
+        "UK Corporate Governance Code 2018",
+        "FCA Senior Managers and Certification Regime (SM&CR)"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-contractor-independent",
+      "name": "Independent Contractor Agreement",
+      "category": "employment",
+      "description": "Governs the engagement of an individual as an independent contractor (self-employed) rather than as an employee, setting out the scope of services, fees, deliverables, and the mutual understanding of the contractor's independent status. The correct classification of individuals as employees or independent contractors is critical, as misclassification exposes the engaging entity to tax liabilities (IR35 in the UK), employment rights claims, and penalties from tax authorities and labour inspectorates.",
+      "required_clauses": [
+        "emp-confidentiality",
+        "emp-ip-assignment",
+        "emp-non-solicitation",
+        "emp-health-safety",
+        "emp-data-subject-access"
+      ],
+      "recommended_clauses": [
+        "emp-background-check",
+        "emp-expense-policy"
+      ],
+      "typical_parties": "Engaging Company <-> Independent Contractor",
+      "regulatory_drivers": [
+        "UK Income Tax (Earnings and Pensions) Act 2003 Chapter 8 (IR35)",
+        "UK Employment Rights Act 1996 s.230 (definition of employee)",
+        "EU case law on employment status: Uber BV v Aslam [2021] UKSC 5"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-secondment-agreement",
+      "name": "Secondment Agreement",
+      "category": "employment",
+      "description": "Governs the temporary assignment of an employee from their substantive employer (the home employer) to work under the direction and control of a third-party host organisation, while the employment relationship with the home employer is maintained. Secondment agreements must clearly allocate responsibilities between the home and host employers regarding supervision, health and safety, confidentiality, intellectual property, and the costs of the secondee.",
+      "required_clauses": [
+        "emp-confidentiality",
+        "emp-health-safety",
+        "emp-data-subject-access",
+        "emp-ip-assignment"
+      ],
+      "recommended_clauses": [
+        "emp-expense-policy",
+        "emp-tupe-transfer"
+      ],
+      "typical_parties": "Home Employer <-> Host Organisation <-> Secondee",
+      "regulatory_drivers": [
+        "EU Posted Workers Directive (96/71/EC as amended by 2018/957)",
+        "UK Employment Rights Act 1996 s.218 (continuity of employment)"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-settlement-agreement",
+      "name": "Settlement Agreement (Compromise Agreement)",
+      "category": "employment",
+      "description": "A legally binding agreement between the employer and employee that settles actual or potential employment claims in exchange for a termination payment and other agreed terms. Under UK law, a settlement agreement must satisfy the requirements of the Employment Rights Act 1996 s.203(3) to effectively waive the employee's statutory employment rights, including the requirement that the employee receives independent legal advice from a qualified adviser.",
+      "required_clauses": [
+        "emp-severance",
+        "emp-confidentiality",
+        "emp-non-compete",
+        "emp-non-solicitation"
+      ],
+      "recommended_clauses": [
+        "emp-post-termination",
+        "emp-references"
+      ],
+      "typical_parties": "Employer <-> Departing Employee",
+      "regulatory_drivers": [
+        "UK Employment Rights Act 1996 s.203(3)",
+        "UK Equality Act 2010 s.147",
+        "ACAS Code of Practice on Settlement Agreements"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-non-compete-agreement",
+      "name": "Standalone Non-Compete Agreement",
+      "category": "employment",
+      "description": "A standalone agreement imposing post-termination restrictive covenants on the employee, typically entered into contemporaneously with or subsequent to the employment agreement, where the restrictions are given fresh consideration (such as a promotion, pay increase, or access to enhanced confidential information). Standalone non-compete agreements are common in jurisdictions where post-termination restrictions require separate consideration beyond the employment relationship itself.",
+      "required_clauses": [
+        "emp-non-compete",
+        "emp-non-solicitation",
+        "emp-restrictive-covenant"
+      ],
+      "recommended_clauses": [
+        "emp-confidentiality"
+      ],
+      "typical_parties": "Employer <-> Employee/Executive",
+      "regulatory_drivers": [
+        "EU Directive 2019/1152 Art 9(2)",
+        "German Commercial Code (HGB) §74-§75d"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-consulting-individual",
+      "name": "Individual Consulting Agreement",
+      "category": "employment",
+      "description": "Governs the engagement of an individual consultant to provide advisory, professional, or expert services on a project or retainer basis. Unlike an independent contractor agreement (which typically involves delivery of defined outputs), a consulting agreement often involves ongoing advisory services, strategic input, and knowledge transfer. The agreement must clearly establish the consultant's self-employed status and address the risk of deemed employment under tax and employment legislation.",
+      "required_clauses": [
+        "emp-confidentiality",
+        "emp-ip-assignment",
+        "emp-non-solicitation",
+        "emp-non-compete",
+        "emp-data-subject-access"
+      ],
+      "recommended_clauses": [
+        "emp-whistleblower-protection",
+        "emp-commission-structure"
+      ],
+      "typical_parties": "Client <-> Individual Consultant",
+      "regulatory_drivers": [
+        "UK Income Tax (Earnings and Pensions) Act 2003 Chapter 8 (IR35)",
+        "EU Directive 2019/1152"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-internship-agreement",
+      "name": "Internship and Work Placement Agreement",
+      "category": "employment",
+      "description": "Governs the terms of an internship, work placement, or traineeship arrangement, distinguishing between unpaid internships (where the intern is a volunteer or student undertaking a required placement), paid internships (where the intern is a worker entitled to the National Minimum Wage), and structured graduate programmes. The legal status of the intern has significant implications for employment rights, including the entitlement to the minimum wage, holiday pay, and protection from discrimination.",
+      "required_clauses": [
+        "emp-probation",
+        "emp-confidentiality",
+        "emp-health-safety",
+        "emp-company-property"
+      ],
+      "recommended_clauses": [
+        "emp-data-subject-access",
+        "emp-background-check"
+      ],
+      "typical_parties": "Employer <-> Intern/Trainee",
+      "regulatory_drivers": [
+        "UK National Minimum Wage Act 1998",
+        "EU Directive 2019/1152",
+        "EU Quality Framework for Traineeships (Council Recommendation 2014)"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-fixed-term-employment",
+      "name": "Fixed-Term Employment Contract",
+      "category": "employment",
+      "description": "An employment contract for a specified duration or until the completion of a specific task, providing both the employer and employee with certainty regarding the length of the engagement. Under the EU Fixed-Term Work Directive 1999/70/EC and the UK Fixed-term Employees (Prevention of Less Favourable Treatment) Regulations 2002, fixed-term employees must not be treated less favourably than comparable permanent employees, and the use of successive fixed-term contracts is restricted to prevent abuse.",
+      "required_clauses": [
+        "emp-notice-period",
+        "emp-probation",
+        "emp-confidentiality",
+        "emp-ip-assignment",
+        "emp-annual-leave"
+      ],
+      "recommended_clauses": [
+        "emp-sick-leave",
+        "emp-pension-contribution",
+        "emp-data-subject-access"
+      ],
+      "typical_parties": "Employer <-> Fixed-Term Employee",
+      "regulatory_drivers": [
+        "EU Fixed-Term Work Directive 1999/70/EC",
+        "UK Fixed-term Employees (Prevention of Less Favourable Treatment) Regulations 2002",
+        "UK Employment Rights Act 1996 s.235(2B)"
+      ],
+      "related_agreements": []
+    },
+    {
+      "id": "emp-zero-hours-contract",
+      "name": "Zero-Hours Contract",
+      "category": "employment",
+      "description": "An employment or worker contract under which the employer is not obliged to provide any minimum number of working hours and the worker is not obliged to accept any hours offered. Zero-hours contracts have been subject to significant legislative scrutiny and reform, with the EU Directive 2019/1152 on Transparent and Predictable Working Conditions imposing restrictions on on-demand and unpredictable work patterns, and the UK Employment Rights Bill 2024 proposing the abolition of exploitative zero-hours arrangements.",
+      "required_clauses": [
+        "emp-notice-period",
+        "emp-confidentiality",
+        "emp-health-safety",
+        "emp-annual-leave"
+      ],
+      "recommended_clauses": [
+        "emp-data-subject-access",
+        "emp-moonlighting"
+      ],
+      "typical_parties": "Employer <-> Worker",
+      "regulatory_drivers": [
+        "EU Directive 2019/1152 Art 10-11 (minimum predictability of work)",
+        "UK Employment Rights Act 1996 s.27A (exclusivity clauses prohibition)",
+        "UK Employment Rights Bill 2024 (zero-hours reform provisions)"
+      ],
+      "related_agreements": []
+    }
+  ],
+  "risk_patterns": [
+    {
+      "id": "emp-risk-unenforceable-non-compete",
+      "name": "Unenforceable Non-Compete Clause",
+      "risk_category": "contractual",
+      "clause_type": "employment",
+      "trigger": "Non-compete clause with excessive duration (more than 12 months), overly broad geographic scope, or unreasonably wide activity restriction",
+      "description": "Non-compete clauses that exceed what is reasonably necessary to protect the employer's legitimate business interests are unenforceable under the restraint of trade doctrine. Courts in most EU jurisdictions apply a strict proportionality test, and an unenforceable non-compete leaves the employer with no protection at all if the court declines to apply blue-pencil severance. In Germany, an uncompensated non-compete is void, yet the employee may elect to hold the employer to the restriction and claim compensation.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Complete loss of post-termination protection if the clause is struck down; potential claim by the employee for compensation during an invalid restriction period (Germany); litigation costs and reputational damage.",
+      "detection_guidance": "Flag non-compete clauses with duration exceeding 12 months, geographic scope broader than the employer's actual market, or activity restrictions covering industries or roles beyond the employee's actual responsibilities. Check whether mandatory compensation is provided where required by local law.",
+      "remediation": "Reduce the duration to 6-12 months. Narrow the geographic scope to territories where the employer has genuine business operations. Restrict the activities to those directly competing with the employee's specific role. Add mandatory compensation where required by jurisdiction. Include a severability clause permitting the court to narrow rather than strike the restriction.",
+      "real_world_impact": "In Tillman v Egon Zehnder Ltd [2019] UKSC 32, the Supreme Court saved an otherwise unenforceable non-compete clause by severing an unreasonable prohibition on holding shares, but emphasised that not all clauses can be rescued through severance."
+    },
+    {
+      "id": "emp-risk-ir35-misclassification",
+      "name": "Worker Misclassification (IR35/Employment Status)",
+      "risk_category": "financial",
+      "clause_type": "employment",
+      "trigger": "Individual engaged under a contractor or consulting agreement where the working arrangements exhibit characteristics of employment (personal service, mutuality of obligation, control)",
+      "description": "Misclassifying an individual as an independent contractor when the true nature of the relationship is one of employment exposes the engaging entity to significant tax liabilities (unpaid PAYE, National Insurance contributions, penalties, and interest), employment rights claims (unfair dismissal, holiday pay, sick pay), and potential penalties from HMRC. Under the UK's off-payroll working rules (IR35), the responsibility for determining status lies with the end client for medium and large organisations.",
+      "severity": "critical",
+      "likelihood": "common",
+      "impact": "HMRC tax assessments for unpaid PAYE and NIC (potentially going back 6 years, or 20 years in cases of fraud); employment tribunal claims for holiday pay, notice pay, and unfair dismissal; penalties of up to 100% of underpaid tax.",
+      "detection_guidance": "Review contractor agreements for indicators of employment: personal service requirement, mutuality of obligation, employer control over how/when/where work is performed, integration into the client's organisation, exclusive engagement, use of client equipment, and lack of genuine right to substitution.",
+      "remediation": "Conduct a thorough status assessment using HMRC's CEST tool and independent legal advice. Restructure arrangements to reflect genuine self-employment (right of substitution, project-based deliverables, own equipment, financial risk). Alternatively, bring the individual onto the payroll with appropriate employment terms.",
+      "real_world_impact": "HMRC has successfully pursued multi-million pound assessments against organisations misclassifying workers, including in the public sector following the 2017 public sector IR35 reforms. The Atholl House Productions Ltd v HMRC [2022] cases demonstrate ongoing uncertainty in status determination."
+    },
+    {
+      "id": "emp-risk-missing-whistleblower-protection",
+      "name": "Missing Whistleblower Protection Provisions",
+      "risk_category": "regulatory",
+      "clause_type": "employment",
+      "trigger": "Employment agreement or company handbook lacks whistleblower reporting channels and anti-retaliation protections as required by EU Directive 2019/1937",
+      "description": "Failure to implement whistleblower protection provisions that comply with EU Directive 2019/1937 exposes the employer to regulatory penalties, inability to detect compliance breaches early, and claims from reporting persons who suffer retaliation. The Directive requires organisations with 50 or more employees to establish internal reporting channels and prohibits all forms of retaliation against reporting persons, with a reversal of the burden of proof for retaliation claims.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Regulatory penalties for non-compliance with national implementing legislation; inability to detect and remediate compliance breaches; retaliation claims with reversed burden of proof; reputational damage from public disclosure of unaddressed violations.",
+      "detection_guidance": "Check for the presence of a whistleblower policy, internal reporting channels, anti-retaliation provisions, and procedures for investigating and following up on reports. Verify compliance with the specific requirements of the applicable national implementing legislation.",
+      "remediation": "Implement a whistleblower protection framework compliant with EU Directive 2019/1937: establish confidential internal reporting channels, designate an impartial person or department to receive and follow up on reports, prohibit retaliation, provide for acknowledgement within 7 days and feedback within 3 months, and train management on their obligations.",
+      "real_world_impact": "Companies without adequate whistleblower protection have experienced delayed detection of fraud and compliance failures that escalated into material financial losses and regulatory enforcement actions, as whistleblowers resorted to external reporting or media disclosure rather than internal channels."
+    },
+    {
+      "id": "emp-risk-gdpr-employee-monitoring",
+      "name": "Unlawful Employee Monitoring",
+      "risk_category": "data-protection",
+      "clause_type": "employment",
+      "trigger": "Employment contract or policy authorises workplace monitoring (email, internet, CCTV, GPS, keystroke logging) without proper GDPR lawful basis, data protection impact assessment, or employee notification",
+      "description": "Implementing employee monitoring without a valid GDPR lawful basis, proportionality assessment, and transparent notification to employees risks enforcement action by data protection authorities, claims from employees for breach of privacy rights under GDPR and ECHR Article 8, and potential inadmissibility of monitoring evidence in disciplinary or litigation proceedings. The EDPB and national supervisory authorities have consistently emphasised that employee monitoring must be necessary, proportionate, and transparent.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "GDPR fines up to EUR 20 million or 4% of annual global turnover; employee claims for breach of privacy; invalidity of disciplinary actions based on unlawful monitoring evidence; injunctive relief prohibiting continued monitoring.",
+      "detection_guidance": "Check for the presence and adequacy of: monitoring policy notified to employees, GDPR lawful basis for each type of monitoring, data protection impact assessment (DPIA) for systematic monitoring, proportionality assessment, retention periods for monitoring data, and access restrictions on monitoring outputs.",
+      "remediation": "Conduct a DPIA for all employee monitoring activities. Establish a clear GDPR lawful basis (typically legitimate interest under Art 6(1)(f) with a documented balancing test). Implement transparent notification to employees via an accessible monitoring policy. Ensure proportionality: monitor the minimum data necessary, limit access to monitoring outputs, apply appropriate retention periods, and provide employee access to their monitoring data upon request.",
+      "real_world_impact": "The French data protection authority (CNIL) fined Amazon France Logistique EUR 32 million in 2024 for excessive employee monitoring through warehouse scanning systems, finding the monitoring disproportionate to the legitimate aim of performance management."
+    },
+    {
+      "id": "emp-risk-tupe-non-compliance",
+      "name": "TUPE Non-Compliance",
+      "risk_category": "operational",
+      "clause_type": "employment",
+      "trigger": "Business transfer or service provision change occurs without proper TUPE compliance including employee liability information, consultation, and automatic transfer of employment terms",
+      "description": "Failure to comply with TUPE obligations during a relevant transfer or service provision change exposes both transferor and transferee to significant liabilities including claims for unfair dismissal (automatically unfair if the reason for dismissal is the transfer), failure to inform and consult (protective award of up to 13 weeks' uncapped pay per affected employee), and inherited liabilities for the transferor's pre-transfer breaches of employment contracts.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Protective awards of up to 13 weeks' uncapped pay per affected employee for failure to inform and consult; automatically unfair dismissal claims; inherited employment liabilities that were not identified or indemnified; contractual indemnity claims between transferor and transferee.",
+      "detection_guidance": "In any transaction involving the transfer of a business, undertaking, or service contract, check for: TUPE applicability analysis, employee liability information provision (28 days before transfer), information and consultation with employee representatives, due diligence on transferring employees' terms and liabilities, and contractual indemnities for pre-transfer liabilities.",
+      "remediation": "Conduct a TUPE applicability analysis at the outset of any business transfer or service provision change. Ensure timely provision of employee liability information. Establish or elect employee representatives for consultation. Negotiate comprehensive employment indemnities in the commercial agreement. Conduct thorough due diligence on transferring employees' terms, benefits, and pending claims.",
+      "real_world_impact": "In outsourcing and re-tendering scenarios, incoming service providers have faced significant unexpected employment costs from inherited liabilities (equal pay claims, enhanced pension obligations, long-service employees with protective notice periods) that were not disclosed in the employee liability information."
+    },
+    {
+      "id": "emp-risk-no-equal-pay-audit",
+      "name": "Equal Pay and Pay Transparency Non-Compliance",
+      "risk_category": "regulatory",
+      "clause_type": "employment",
+      "trigger": "Employer has no pay audit mechanism, gender pay gap reporting, or pay transparency provisions in employment documentation, despite being within scope of the EU Pay Transparency Directive 2023/970",
+      "description": "The EU Pay Transparency Directive 2023/970 (to be transposed by June 2026) imposes significant new obligations including pre-employment pay range disclosure, employee right to pay information, mandatory gender pay gap reporting for employers with 100+ employees, and joint pay assessments where the gender pay gap exceeds 5% and cannot be justified. Non-compliance exposes employers to enforcement action, employee claims for equal pay adjustments, and reputational damage from public reporting of non-compliant pay gaps.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Enforcement penalties under national implementing legislation; individual and collective equal pay claims with shifted burden of proof; mandatory joint pay assessments with employee representatives; reputational damage from publicly reported gender pay gaps; retrospective pay adjustments.",
+      "detection_guidance": "Check whether the employer has: conducted a pay audit within the last three years, established a methodology for evaluating work of equal value, implemented pay transparency in recruitment processes, mechanisms for employees to request pay comparator information, and a remediation process for unjustified pay gaps.",
+      "remediation": "Implement a pay transparency framework: establish a job evaluation methodology, conduct a comprehensive pay audit, analyse and justify any gender pay gaps, implement corrective pay adjustments for unjustified disparities, ensure pay range disclosure in recruitment, and establish regular reporting mechanisms.",
+      "real_world_impact": "Major employers have faced substantial financial exposure from equal pay litigation, with some UK local authorities paying hundreds of millions in back-pay and compensation following mass equal pay claims brought by predominantly female workers in traditionally undervalued roles."
+    },
+    {
+      "id": "emp-risk-inadequate-settlement",
+      "name": "Defective Settlement Agreement",
+      "risk_category": "contractual",
+      "clause_type": "employment",
+      "trigger": "Settlement agreement fails to satisfy the statutory requirements for a valid waiver of employment rights, leaving the employer exposed to claims that were intended to be settled",
+      "description": "A settlement agreement that does not satisfy the requirements of Employment Rights Act 1996 s.203(3) will be ineffective to waive the employee's statutory employment rights, meaning the employee can still bring tribunal claims despite having received a termination payment. Common defects include failure to specify the particular proceedings being settled, failure to ensure the employee received advice from a relevant independent adviser, and failure to ensure the adviser's insurance cover was in place.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Employee retains the right to bring tribunal claims despite having received settlement payment; employer cannot recover the settlement payment if the agreement is ineffective; additional costs of defending claims and potentially paying a second settlement.",
+      "detection_guidance": "Verify that the settlement agreement: identifies a particular complaint or particular proceedings being settled, confirms the employee has received advice from a relevant independent adviser (solicitor, trade union official, or advice centre worker), identifies the adviser, confirms the adviser's insurance cover, and states that the conditions regulating settlement agreements under the relevant statutes are satisfied.",
+      "remediation": "Ensure the settlement agreement satisfies all statutory requirements: list every specific claim being waived (by reference to the relevant statutory provision), identify the independent adviser by name and role, confirm the adviser has appropriate insurance coverage, and include confirmations required by each relevant statute (ERA 1996, EqA 2010, TUPE 2006, WTR 1998, etc.).",
+      "real_world_impact": "Employment tribunals have permitted claims to proceed despite settlement payments where the agreement failed to identify the specific statutory complaints being waived or where the independent advice requirement was not properly satisfied."
+    },
+    {
+      "id": "emp-risk-fixed-term-abuse",
+      "name": "Successive Fixed-Term Contract Abuse",
+      "risk_category": "compliance",
+      "clause_type": "employment",
+      "trigger": "Employee engaged on successive fixed-term contracts totalling more than four years without objective justification for continued use of fixed-term arrangements",
+      "description": "Under the UK Fixed-term Employees (Prevention of Less Favourable Treatment) Regulations 2002 (implementing the EU Fixed-Term Work Directive 1999/70/EC), an employee who has been continuously employed on successive fixed-term contracts for four years or more is deemed to be a permanent employee unless the continued use of fixed-term contracts can be objectively justified. Additionally, fixed-term employees must not be treated less favourably than comparable permanent employees regarding pay, benefits, training, and career development opportunities.",
+      "severity": "medium",
+      "likelihood": "occasional",
+      "impact": "Automatic conversion to permanent employment status; claims for equal treatment with comparable permanent employees; back-pay claims for any less favourable treatment during the fixed-term period; redundancy liability upon eventual termination.",
+      "detection_guidance": "Review the history of fixed-term contracts for each individual: total continuous service across all fixed-term contracts, any gaps in service, the reason for using fixed-term arrangements, and whether objective justification for continued fixed-term use has been documented.",
+      "remediation": "Convert long-serving fixed-term employees to permanent contracts unless genuine objective justification exists for continued fixed-term engagement. Ensure fixed-term employees receive equal treatment with comparable permanent employees. Implement a tracking system for fixed-term contract durations and renewals with automated alerts at the three-year mark.",
+      "real_world_impact": "Universities and research institutions have faced significant exposure from long-serving fixed-term researchers and academics who successfully claimed permanent employment status and equal treatment rights after years of successive fixed-term engagements."
+    },
+    {
+      "id": "emp-risk-no-pension-auto-enrolment",
+      "name": "Pension Auto-Enrolment Non-Compliance",
+      "risk_category": "regulatory",
+      "clause_type": "employment",
+      "trigger": "Employer has not enrolled eligible jobholders into a qualifying workplace pension scheme or has failed to make the minimum employer contribution",
+      "description": "Under the Pensions Act 2008, all employers must automatically enrol eligible jobholders (aged 22 to State Pension age, earning above the earnings trigger) into a qualifying workplace pension scheme and pay minimum employer contributions. Non-compliance attracts escalating fixed penalty notices (initially GBP 400), daily penalties for continued non-compliance, and potentially criminal prosecution for wilful non-compliance. The Pensions Regulator has enforcement powers including compliance notices, penalty notices, and contribution notices.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Fixed penalty notices escalating to GBP 50,000 per day for large employers; criminal prosecution for wilful non-compliance; contribution notices requiring payment of unpaid contributions; reputational damage from Pensions Regulator enforcement.",
+      "detection_guidance": "Check for: automatic enrolment of all eligible jobholders, minimum employer contribution of 3% of qualifying earnings, minimum total contribution of 8%, re-enrolment every three years, opt-out procedures, and declaration of compliance filed with the Pensions Regulator.",
+      "remediation": "Immediately enrol all eligible jobholders into a qualifying pension scheme. Pay minimum employer contributions of 3% of qualifying earnings. File a declaration of compliance with the Pensions Regulator. Implement processes for ongoing assessment of new joiners, re-enrolment, and contribution calculations.",
+      "real_world_impact": "The Pensions Regulator has issued thousands of compliance and penalty notices and has prosecuted directors for wilful non-compliance with auto-enrolment duties, with penalties reaching tens of thousands of pounds for persistent non-compliance."
+    },
+    {
+      "id": "emp-risk-missing-flexible-working-process",
+      "name": "Missing Flexible Working Request Process",
+      "risk_category": "compliance",
+      "clause_type": "employment",
+      "trigger": "Employer has no documented process for handling statutory flexible working requests or fails to respond within the statutory two-month decision period",
+      "description": "Under the UK Employment Relations (Flexible Working) Act 2023, all employees have the right to request flexible working from day one of employment and may make two requests per 12-month period. Employers must deal with requests in a reasonable manner and decide within two months. Failure to follow the statutory process or refusal on grounds other than the eight prescribed business reasons exposes the employer to tribunal complaints, with potential awards of up to eight weeks' pay and a declaration that the employer reconsider the application.",
+      "severity": "medium",
+      "likelihood": "common",
+      "impact": "Tribunal awards of up to eight weeks' pay per complaint; orders to reconsider the request; indirect sex discrimination claims if refusals disproportionately affect women; reputational and recruitment damage in a competitive talent market.",
+      "detection_guidance": "Check for: a documented flexible working request process, compliance with the two-month decision period, use of prescribed business reasons for refusal, training for managers on handling requests, and records of requests and outcomes.",
+      "remediation": "Implement a flexible working policy compliant with the Employment Relations (Flexible Working) Act 2023. Train managers on handling requests reasonably, using only the eight prescribed business reasons for refusal. Establish a tracking system to ensure responses within the two-month statutory period. Consider offering trial periods for flexible working arrangements.",
+      "real_world_impact": "Employers who refuse flexible working requests without adequate justification face not only statutory complaints but also indirect sex discrimination claims, as the majority of flexible working requests are made by women with caring responsibilities."
+    },
+    {
+      "id": "emp-risk-clawback-unenforceability",
+      "name": "Unenforceable Clawback Provision",
+      "risk_category": "financial",
+      "clause_type": "employment",
+      "trigger": "Clawback provision attempts to recover compensation without a clear contractual basis, defined trigger events, or procedural fairness safeguards",
+      "description": "Clawback provisions that lack a clear contractual basis, attempt to recover amounts through unlawful deductions from wages, or operate without procedural fairness safeguards may be unenforceable. Under the Employment Rights Act 1996 s.13, deductions from wages require written authorisation or a relevant provision in the worker's contract. Courts will also scrutinise whether clawback provisions are penal in nature.",
+      "severity": "medium",
+      "likelihood": "occasional",
+      "impact": "Inability to recover mis-paid or over-awarded compensation; deductions from wages claims; reputational damage from disputes over compensation recovery; regulatory non-compliance in financial services where clawback is mandatory.",
+      "detection_guidance": "Check that clawback provisions: have a clear contractual basis in the employment agreement, define specific trigger events, specify the look-back period and calculation methodology, include procedural fairness safeguards (notice, opportunity to make representations), and comply with deduction from wages requirements.",
+      "remediation": "Ensure clawback provisions are incorporated into the employment contract with written consent. Define specific, objective trigger events. Include procedural safeguards: written notice of intention to invoke clawback, opportunity for the employee to make representations, and a decision-making process involving someone independent of the trigger event. Specify recovery mechanisms that comply with ERA 1996 s.13.",
+      "real_world_impact": "Financial regulators have criticised firms whose clawback provisions proved unenforceable when needed, undermining the purpose of deferred variable remuneration and malus/clawback as risk alignment mechanisms."
+    },
+    {
+      "id": "emp-risk-discrimination-in-redundancy",
+      "name": "Discriminatory Redundancy Selection",
+      "risk_category": "regulatory",
+      "clause_type": "employment",
+      "trigger": "Redundancy selection criteria that are subjective, not transparently applied, or that have an adverse disproportionate impact on employees with protected characteristics",
+      "description": "Redundancy selection criteria that directly or indirectly discriminate against employees with protected characteristics (age, sex, disability, race, religion, pregnancy, sexual orientation, gender reassignment, marriage, and civil partnership) render the dismissal automatically unfair and give rise to discrimination claims with uncapped compensation. Selection criteria such as attendance records, flexibility, and part-time status may indirectly discriminate unless objectively justified.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Automatically unfair dismissal findings; uncapped discrimination compensation including injury to feelings; protective award for failure to consult; reputational damage; class action risk where selection criteria systematically disadvantage a protected group.",
+      "detection_guidance": "Review redundancy selection criteria for potential direct or indirect discrimination. Flag criteria based on: attendance records (may disadvantage disabled employees or pregnant employees), flexibility or willingness to work overtime (may disadvantage women with caring responsibilities), length of service (may indirectly discriminate by age), or subjective management assessments without moderation.",
+      "remediation": "Use objective, measurable, non-discriminatory selection criteria (skills, qualifications, relevant experience, performance records with standardised assessment). Apply criteria consistently with moderation across selectors. Conduct an equality impact assessment before finalising criteria. Make reasonable adjustments for disabled employees in the selection process. Document the rationale for each selection decision.",
+      "real_world_impact": "Employers have faced substantial discrimination awards where attendance-based selection criteria disproportionately affected employees returning from disability-related absence or maternity leave."
+    },
+    {
+      "id": "emp-risk-working-time-non-compliance",
+      "name": "Working Time Directive Non-Compliance",
+      "risk_category": "regulatory",
+      "clause_type": "employment",
+      "trigger": "Employer does not monitor working time, does not provide minimum rest periods, or requires employees to work more than 48 hours per week without a valid opt-out agreement",
+      "description": "The EU Working Time Directive 2003/88/EC (implemented in the UK by the Working Time Regulations 1998) imposes maximum weekly working time (48 hours averaged over a 17-week reference period), minimum daily rest (11 consecutive hours), minimum weekly rest (24 hours per 7-day period), and rest breaks during the working day (20 minutes after 6 hours). Following the CJEU decision in CCOO v Deutsche Bank (C-55/18), employers are required to establish a system for measuring working time.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Regulatory enforcement action for systematic non-compliance; employee claims for health damage caused by excessive working hours; criminal prosecution for failure to limit working time; invalidity of opt-out agreements that do not meet statutory requirements.",
+      "detection_guidance": "Check for: working time recording systems, 48-hour weekly maximum compliance (or valid individual opt-out agreements), 11-hour daily rest provision, weekly rest provision, rest break provisions, and night work limits.",
+      "remediation": "Implement a working time recording system. Ensure valid opt-out agreements where employees work more than 48 hours (voluntary, in writing, right to withdraw with notice). Monitor actual hours worked and take corrective action where limits are being exceeded. Ensure managers understand their obligation to manage working time and provide rest periods.",
+      "real_world_impact": "Following the CJEU Deutsche Bank ruling, several EU Member States have introduced mandatory working time recording obligations, with penalties for employers who fail to measure and monitor employees' actual working hours."
+    },
+    {
+      "id": "emp-risk-no-data-processing-lawful-basis",
+      "name": "Missing Lawful Basis for Employee Data Processing",
+      "risk_category": "data-protection",
+      "clause_type": "employment",
+      "trigger": "Employment agreement relies solely on employee consent as the GDPR lawful basis for processing employee personal data, rather than using more appropriate bases such as contractual necessity or legal obligation",
+      "description": "Relying on consent as the primary lawful basis for processing employee personal data is problematic because consent in the employment context is unlikely to be freely given due to the power imbalance between employer and employee (EDPB Guidelines on Consent, WP259). If consent is the sole lawful basis and is withdrawn by the employee, the employer may lack any basis for processing essential employment data. Data protection authorities have consistently held that employers should use contractual necessity (Art 6(1)(b)), legal obligation (Art 6(1)(c)), or legitimate interest (Art 6(1)(f)) as the primary lawful bases for employment data processing.",
+      "severity": "medium",
+      "likelihood": "common",
+      "impact": "GDPR enforcement action for processing without a valid lawful basis; inability to process essential employment data if consent is withdrawn; employee subject access requests revealing inadequate data processing documentation.",
+      "detection_guidance": "Review the employment agreement and privacy notice for the stated lawful basis for each category of employee data processing. Flag if consent is the sole or primary lawful basis for core employment data processing (payroll, performance management, absence management).",
+      "remediation": "Map all employee data processing activities and assign the appropriate lawful basis: contractual necessity for core employment processing, legal obligation for tax and social security, legitimate interest (with documented balancing test) for monitoring and security, and explicit consent only where genuinely necessary and no other basis applies (e.g., optional health screening). Provide a comprehensive privacy notice to employees under GDPR Art 13.",
+      "real_world_impact": "The Austrian data protection authority (DSB) found that employee consent to video surveillance was not freely given due to the employment power imbalance, resulting in a finding of unlawful processing and a requirement to identify an alternative lawful basis."
+    },
+    {
+      "id": "emp-risk-collective-redundancy-failure",
+      "name": "Collective Redundancy Consultation Failure",
+      "risk_category": "compliance",
+      "clause_type": "employment",
+      "trigger": "Employer proposes 20 or more redundancies within a 90-day period at a single establishment without initiating collective consultation with appropriate employee representatives",
+      "description": "Under the EU Collective Redundancies Directive 98/59/EC (implemented in the UK by TULRCA 1992 s.188), employers proposing to make 20 or more employees redundant within a 90-day period at one establishment must consult with appropriate representatives of the affected employees. Consultation must begin in good time and must cover ways to avoid the redundancies, reduce the numbers affected, and mitigate the consequences. Failure to consult attracts a protective award of up to 90 days' pay per affected employee.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Protective awards of up to 90 days' uncapped pay per affected employee; criminal prosecution for failure to notify the Secretary of State (HR1 notification); reputational damage; injunctive relief preventing dismissals until consultation is completed.",
+      "detection_guidance": "Whenever a restructuring or cost reduction exercise is planned, assess whether 20 or more redundancies may arise within a 90-day period at any single establishment. Check for: election of employee representatives (or use of existing trade union representatives), commencement of consultation at the appropriate stage (before any binding decisions are taken), provision of prescribed information in writing, and HR1 notification to the Redundancy Payments Service.",
+      "remediation": "Before announcing any redundancy programme, assess the collective consultation obligations. Elect or nominate employee representatives if no recognised trade union exists. Commence consultation in good time before any binding decisions (at least 30 days for 20-99 redundancies, 45 days for 100+). Provide prescribed information in writing. File the HR1 notification with the Redundancy Payments Service.",
+      "real_world_impact": "Following the Woolworths collapse, thousands of employees received protective awards because the company failed to conduct proper collective consultation before making mass redundancies. Similar protective awards have been made against employers who treated consultation as a formality rather than a genuine process."
+    }
+  ],
+  "negotiation_intelligence": [
+    {
+      "id": "neg-emp-excessive-non-compete",
+      "clause_type": "employment",
+      "flag_level": "red",
+      "condition": "Non-compete clause exceeds 12 months in duration, covers an unreasonably broad geographic area, or restricts activities beyond the employee's actual role and responsibilities",
+      "explanation": "Non-compete clauses that exceed what is reasonably necessary to protect the employer's legitimate business interests are unenforceable under the restraint of trade doctrine. Courts apply a strict proportionality test: the restriction must protect a legitimate proprietary interest and go no further than is reasonably necessary. Overbroad restrictions risk complete unenforceability, leaving the employer with no protection at all.",
+      "market_standard": "Market standard for senior executives is 6-12 months with geographic limitation to the employer's actual market. For mid-level employees, 6 months is typical. Restrictions exceeding 12 months are exceptional and require strong justification. Many EU jurisdictions require compensation during the restriction period (Germany: minimum 50% of last compensation; France: typically 33-50%).",
+      "suggested_response": "Negotiate the duration down to 6-12 months depending on seniority. Narrow the geographic scope to territories where the employer actively operates. Restrict activities to those directly competing with the employee's specific business unit or function. If compensation during the restriction period is required by applicable law, ensure it is specified. Include a severability clause and the employer's right to waive the restriction.",
+      "perspective": "both",
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-non-compete-agreement"
+      ]
+    },
+    {
+      "id": "neg-emp-no-garden-leave",
+      "clause_type": "employment",
+      "flag_level": "amber",
+      "condition": "Executive employment agreement includes long notice period but no express garden leave clause, leaving the employer unable to exclude the employee from the workplace during the notice period",
+      "explanation": "Without an express garden leave clause, the employer's ability to exclude a senior employee from the workplace during the notice period is limited. Under William Hill Organisation Ltd v Tucker [1999], the court held that an implied right to garden leave will only arise where the employee has specialised skills that require regular exercise. An express clause provides certainty and strengthens the enforceability of post-termination restrictions, as courts may credit garden leave against the non-compete period.",
+      "market_standard": "Garden leave clauses are standard in executive employment agreements across all sectors. Best practice includes express provision for continued salary and benefits, obligation to remain available, prohibition on contact with clients and colleagues, and interaction with post-termination restrictions (garden leave credit against non-compete duration).",
+      "suggested_response": "Add an express garden leave clause granting the employer discretion to place the employee on garden leave during all or part of the notice period. Specify continued salary and benefits. Address whether the garden leave period reduces the duration of any post-termination non-compete restriction. Maintain the employee's obligation to remain available and not take alternative employment during garden leave.",
+      "perspective": "buyer",
+      "contract_types": [
+        "emp-executive-employment",
+        "emp-employment-agreement"
+      ]
+    },
+    {
+      "id": "neg-emp-single-trigger-acceleration",
+      "clause_type": "employment",
+      "flag_level": "red",
+      "condition": "Change of control provision includes single-trigger acceleration of equity awards, payable automatically upon the change of control event regardless of continued employment",
+      "explanation": "Single-trigger equity acceleration is strongly disfavoured by institutional shareholders and proxy advisory firms (ISS, Glass Lewis) as it provides a windfall to executives without any loss of employment. Single-trigger acceleration also creates a misaligned incentive, as executives may be motivated to support a transaction to accelerate their equity rather than to maximise shareholder value. The UK Corporate Governance Code 2018 Provision 39 recommends that notice or contract periods for directors should be one year or less and that compensation commitments on early termination should be scrutinised.",
+      "market_standard": "Market standard for listed companies and PE-backed businesses is double-trigger acceleration: equity accelerates only upon both a change of control event and the executive's termination without cause or resignation for good reason within 12-24 months of the change of control. Single-trigger acceleration is only accepted for options approaching expiry that would otherwise lapse in the transaction.",
+      "suggested_response": "Reject single-trigger acceleration. Propose double-trigger acceleration requiring both a change of control and subsequent qualifying termination (without cause or for good reason) within 12-24 months. If the executive insists on single-trigger for a portion, limit it to a small percentage of awards and ensure the majority vest on a double-trigger basis.",
+      "perspective": "buyer",
+      "contract_types": [
+        "emp-executive-employment"
+      ]
+    },
+    {
+      "id": "neg-emp-no-clawback",
+      "clause_type": "employment",
+      "flag_level": "red",
+      "condition": "Executive compensation package includes significant variable remuneration (bonus, equity) but no malus or clawback provisions",
+      "explanation": "Variable remuneration without malus and clawback provisions creates a moral hazard: the executive retains upside from risk-taking without exposure to downside when risks materialise. For regulated financial services firms, malus and clawback are mandatory under the PRA/FCA Remuneration Code and CRD V. Even outside financial services, the UK Corporate Governance Code 2018 Provision 37 recommends that remuneration schemes should include provisions to enable recovery or withholding of variable pay.",
+      "market_standard": "Malus and clawback provisions are now standard for executive compensation across listed companies and large private companies. Typical triggers include material financial restatement, fraud or dishonesty, gross misconduct, material risk management failure, and regulatory censure. Look-back periods typically range from 3-7 years for clawback.",
+      "suggested_response": "Include malus (reduction of unvested awards) and clawback (recovery of vested and paid awards) provisions with the following trigger events: material financial restatement, fraud or dishonesty, gross misconduct, material breach of employment terms, regulatory censure, and material risk management failure. Specify a look-back period of at least three years. Ensure procedural fairness with notice and opportunity to make representations.",
+      "perspective": "buyer",
+      "contract_types": [
+        "emp-executive-employment",
+        "emp-employment-agreement"
+      ]
+    },
+    {
+      "id": "neg-emp-probation-exceeds-6-months",
+      "clause_type": "employment",
+      "flag_level": "amber",
+      "condition": "Probationary period exceeds six months without objective justification, potentially violating EU Directive 2019/1152 Art 8",
+      "explanation": "EU Directive 2019/1152 on Transparent and Predictable Working Conditions limits probationary periods to a maximum of six months unless a longer period is objectively justified by the nature of the employment or is in the interest of the worker. Member States may provide for longer probation periods in exceptional circumstances, but the default maximum is six months. Excessive probation periods leave employees in a precarious position with reduced termination protections.",
+      "market_standard": "Three months is the most common probationary period for standard employees across EU jurisdictions. Six months is accepted for senior or complex roles. Periods exceeding six months are exceptional and require documented objective justification under the Directive.",
+      "suggested_response": "Reduce the probation period to 3-6 months. If a longer period is genuinely necessary for the role (e.g., highly specialised technical position with a long onboarding cycle), document the objective justification. Include an interim review at the mid-point of probation and clear performance criteria for successful completion.",
+      "perspective": "both",
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-fixed-term-employment"
+      ]
+    },
+    {
+      "id": "neg-emp-training-repayment-excessive",
+      "clause_type": "employment",
+      "flag_level": "amber",
+      "condition": "Training repayment clause requires full repayment of training costs regardless of when the employee leaves within a long repayment period, without a pro-rata reduction mechanism",
+      "explanation": "Training repayment clauses that require full repayment without a sliding scale reduction over time risk being found unenforceable as penalties or unreasonable restraints of trade. Courts will assess whether the repayment obligation is a genuine pre-estimate of the employer's declining benefit from the training investment. A clause requiring full repayment 23 months after completing training is likely to be considered penal.",
+      "market_standard": "Market standard is a sliding scale reduction over 12-24 months: 100% repayment in months 1-6, reducing by a fixed percentage each month thereafter. The repayment obligation should apply only to voluntary resignation or dismissal for gross misconduct, not to employer-initiated termination.",
+      "suggested_response": "Implement a sliding scale repayment mechanism reducing on a monthly pro-rata basis over 12-24 months from completion of the training. Limit the repayment trigger to voluntary resignation and dismissal for gross misconduct. Exclude mandatory training required for the role. Ensure the clause complies with deduction from wages requirements.",
+      "perspective": "both",
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ]
+    },
+    {
+      "id": "neg-emp-ip-assignment-overreach",
+      "clause_type": "employment",
+      "flag_level": "amber",
+      "condition": "IP assignment clause purports to assign all intellectual property created by the employee regardless of whether it relates to the employer's business or was created using the employer's resources",
+      "explanation": "Overly broad IP assignment clauses that capture all IP created by the employee, including inventions and works created in the employee's own time without using the employer's resources and unrelated to the employer's business, may be unenforceable as unreasonable restraints. In some jurisdictions, employees have statutory rights to inventions created outside the scope of employment. The clause should be limited to IP created in the course of the employee's duties or using the employer's resources.",
+      "market_standard": "Market standard limits the assignment to IP created: (i) in the course of the employee's normal duties, (ii) in the course of specifically assigned duties, or (iii) using the employer's confidential information or resources. Best practice includes a mechanism for the employee to declare pre-existing IP and personal projects.",
+      "suggested_response": "Narrow the assignment to IP created in the course of the employee's duties or using the employer's resources. Allow the employee to declare pre-existing IP (excluded from the assignment). Include a mechanism for the employee to seek approval for personal projects. Consider inventor compensation provisions where the employee creates inventions of outstanding benefit to the employer.",
+      "perspective": "seller",
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment",
+        "emp-contractor-independent"
+      ]
+    },
+    {
+      "id": "neg-emp-no-severance-on-coc",
+      "clause_type": "employment",
+      "flag_level": "red",
+      "condition": "Executive employment agreement lacks any change of control protection, leaving the executive vulnerable to termination following an acquisition with only standard notice and statutory redundancy pay",
+      "explanation": "Senior executives play a critical role in M&A transactions and are disproportionately at risk of termination following a change of control. Without contractual change of control protections, an executive who loses their position after an acquisition receives only standard contractual notice pay and statutory redundancy pay, which is inadequate compensation for the loss of a senior role. The absence of change of control protections also reduces the executive's motivation to support a transaction that may lead to their termination.",
+      "market_standard": "Change of control protections are standard for C-suite and senior leadership roles. Market standard includes double-trigger severance (12-24 months' base salary plus target bonus), accelerated equity vesting, benefits continuation for the severance period, and outplacement support. Single-trigger retention bonuses (50-100% of base salary) are also common during the transition period.",
+      "suggested_response": "Negotiate double-trigger change of control protections: enhanced severance payable upon qualifying termination (without cause or constructive dismissal) within 12-24 months of a change of control. Include accelerated equity vesting, benefits continuation, and outplacement. Define good reason triggers (material diminution of role, salary reduction, forced relocation).",
+      "perspective": "seller",
+      "contract_types": [
+        "emp-executive-employment"
+      ]
+    },
+    {
+      "id": "neg-emp-comprehensive-employment",
+      "clause_type": "employment",
+      "flag_level": "green",
+      "condition": "Employment agreement includes clear written particulars, proportionate restrictive covenants, GDPR-compliant data processing provisions, whistleblower protection, grievance and disciplinary procedures, and compliant pension auto-enrolment",
+      "explanation": "A well-drafted employment agreement that addresses all material terms in compliance with EU Directive 2019/1152 on Transparent and Predictable Working Conditions represents best practice and minimises the risk of disputes, regulatory non-compliance, and unenforceable provisions. Comprehensive agreements protect both the employer and employee by establishing clear expectations and procedures.",
+      "market_standard": "Consistent with best practice for employers subject to EU employment law. Represents the expected standard for reputable employers in competitive talent markets.",
+      "suggested_response": "Accept. Verify: (1) written particulars comply with EU Directive 2019/1152 and ERA 1996 s.1, (2) restrictive covenants are proportionate to the employee's role, (3) GDPR processing relies on appropriate lawful bases (not solely consent), (4) whistleblower channels comply with EU Directive 2019/1937, (5) grievance and disciplinary procedures follow the ACAS Code, and (6) pension auto-enrolment meets statutory minimum contribution rates.",
+      "perspective": "both",
+      "contract_types": [
+        "emp-employment-agreement",
+        "emp-executive-employment"
+      ]
+    },
+    {
+      "id": "neg-emp-zero-hours-exclusivity",
+      "clause_type": "employment",
+      "flag_level": "red",
+      "condition": "Zero-hours contract includes an exclusivity clause prohibiting the worker from working for other employers despite no guaranteed hours being offered",
+      "explanation": "Exclusivity clauses in zero-hours contracts are prohibited under UK Employment Rights Act 1996 s.27A (inserted by the Small Business, Enterprise and Employment Act 2015). An employer cannot prohibit a zero-hours worker from working for other employers or subject the worker to any detriment for doing so. Similarly, EU Directive 2019/1152 Art 9(1) restricts employers from prohibiting workers from taking up employment with other employers outside the work schedule. Such clauses are void and their inclusion signals a potentially exploitative employment practice.",
+      "market_standard": "Exclusivity clauses are prohibited by law in zero-hours contracts. The worker must be free to accept work from other sources given the absence of any guaranteed minimum hours. Under the UK Employment Rights Bill 2024, zero-hours contracts face further reform including rights to guaranteed hours based on regular working patterns.",
+      "suggested_response": "Remove the exclusivity clause immediately as it is void under law. If the employer requires exclusivity, the arrangement should be restructured as a contract with guaranteed minimum hours. Consider whether the arrangement should be a part-time or full-time employment contract rather than a zero-hours arrangement.",
+      "perspective": "seller",
+      "contract_types": [
+        "emp-zero-hours-contract"
+      ]
+    }
+  ],
+  "clause_interactions": [
+    {
+      "id": "emp-non-compete-requires-confidentiality",
+      "clause_a": "emp-non-compete",
+      "clause_b": "emp-confidentiality",
+      "relationship": "requires",
+      "description": "A non-compete clause is enforceable only to the extent it protects a legitimate business interest. Confidential information and trade secrets are the primary legitimate interests justifying non-compete restrictions. Without a well-defined confidentiality clause identifying the protectable information, the non-compete clause lacks the evidentiary foundation needed to demonstrate a legitimate interest worthy of protection.",
+      "review_guidance": "Verify that the confidentiality clause clearly defines the categories of information that constitute the employer's protectable interest. Ensure the non-compete clause's scope, duration, and geographic limitation are proportionate to the confidential information the employee has access to. A senior executive with access to trade secrets and strategic plans may justify broader restrictions than a mid-level employee with access to limited operational data.",
+      "risk_if_misaligned": "The non-compete clause may be unenforceable if the employer cannot demonstrate a legitimate business interest warranting the restriction, because the confidentiality clause fails to identify specific protectable information."
+    },
+    {
+      "id": "emp-garden-leave-limits-non-compete",
+      "clause_a": "emp-garden-leave",
+      "clause_b": "emp-non-compete",
+      "relationship": "limits",
+      "description": "Courts may credit time spent on garden leave against the duration of a post-termination non-compete restriction, on the basis that the employee has already been excluded from the market and the employer's interests have been partially protected during the garden leave period. This interaction means that the combined period of garden leave plus non-compete must be assessed for overall reasonableness.",
+      "review_guidance": "Calculate the total restrictive period (garden leave plus post-termination non-compete). If the combined period is excessive (e.g., 6 months garden leave plus 12 months non-compete = 18 months total restriction), the court may reduce the non-compete or find it unenforceable. Consider whether the employment agreement addresses the interaction between garden leave and non-compete duration explicitly.",
+      "risk_if_misaligned": "An overly long combined restriction period may render the non-compete clause unenforceable. Alternatively, failing to address the credit issue may result in the court applying a garden leave credit that leaves the employer with a shorter post-termination non-compete than intended."
+    },
+    {
+      "id": "emp-clawback-requires-bonus-deferral",
+      "clause_a": "emp-clawback",
+      "clause_b": "emp-bonus-deferral",
+      "relationship": "requires",
+      "description": "Clawback provisions for vested and paid compensation are practically more difficult to enforce than malus provisions applied to unvested deferred awards. Effective recovery of variable remuneration therefore requires both mechanisms: malus to reduce or cancel unvested deferred awards, and clawback to recover vested amounts. Without a deferral mechanism, the employer has no unvested awards to apply malus to, reducing its remediation options to after-the-fact clawback recovery.",
+      "review_guidance": "Verify that the compensation structure includes a deferral period (typically 3-5 years for a meaningful proportion of variable remuneration) during which malus can be applied. Ensure both malus and clawback triggers are consistently defined. For regulated financial services firms, verify compliance with PRA/FCA Remuneration Code deferral requirements (40-60% of variable remuneration deferred for 4-7 years).",
+      "risk_if_misaligned": "Without a deferral mechanism, the employer's only recourse is after-the-fact clawback of amounts already paid, which is practically more difficult to enforce and may require litigation to recover. The compensation structure fails to meet regulatory expectations for risk alignment."
+    },
+    {
+      "id": "emp-severance-conflicts-with-clawback",
+      "clause_a": "emp-severance",
+      "clause_b": "emp-clawback",
+      "relationship": "conflicts-with",
+      "description": "Severance provisions and clawback provisions may conflict where the circumstances triggering a severance payment also trigger a clawback right. For example, if an executive is terminated for poor performance and is entitled to severance, but the poor performance is later found to be connected to misconduct that would trigger clawback, the employer faces the difficulty of having paid severance that it now seeks to recover. The interaction between these provisions must be expressly addressed to avoid ambiguity.",
+      "review_guidance": "Verify that the employment agreement addresses the interaction between severance and clawback. Check whether severance payments are subject to clawback in the event of subsequent discovery of trigger events. Ensure that settlement agreements do not inadvertently waive the employer's clawback rights. Specify that clawback may be applied by set-off against severance payments where both provisions are triggered simultaneously.",
+      "risk_if_misaligned": "The employer may pay a severance package and subsequently discover misconduct that would have justified dismissal for cause (with no severance), but be unable to recover the severance payment because the clawback provision does not expressly cover severance or the settlement agreement waived clawback rights."
+    },
+    {
+      "id": "emp-disciplinary-supplements-grievance",
+      "clause_a": "emp-disciplinary",
+      "clause_b": "emp-grievance",
+      "relationship": "supplements",
+      "description": "Disciplinary and grievance procedures are complementary mechanisms that must operate coherently. The disciplinary procedure addresses employer-initiated action against the employee, while the grievance procedure addresses employee-initiated complaints. The interaction between the two is critical when a grievance is raised during or in response to a disciplinary process: the ACAS Code of Practice recommends that where a grievance is related to the disciplinary matter, the employer should consider dealing with both issues concurrently rather than pausing the disciplinary to resolve the grievance.",
+      "review_guidance": "Verify that the employment agreement or handbook addresses the interaction between disciplinary and grievance procedures. Check for guidance on the sequencing when a grievance is raised during a disciplinary process. Ensure both procedures provide the right to be accompanied. Verify that both procedures are ACAS Code-compliant to minimise the risk of a 25% uplift on tribunal awards for procedural failures.",
+      "risk_if_misaligned": "If the interaction between disciplinary and grievance procedures is not addressed, an employee may use a grievance to delay or derail a legitimate disciplinary process. Conversely, if the employer fails to address a legitimate grievance raised during disciplinary proceedings, the dismissal may be found to be procedurally unfair."
+    }
+  ]
+}

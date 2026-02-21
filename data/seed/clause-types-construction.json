@@ -1,0 +1,926 @@
+{
+  "clause_types": [
+    {
+      "id": "con-retention",
+      "clause_category": "construction",
+      "name": "Retention",
+      "description": "Provides for the employer to withhold a percentage (typically 3-5%) of each interim payment as security for the contractor's due performance of the works and rectification of defects. Half of the retention is typically released upon practical completion and the remainder upon expiry of the defects liability period or issuance of the final certificate.",
+      "drafting_guidance": "Specify the retention percentage (3% or 5% is standard under JCT and NEC4 contracts). Define the two-stage release mechanism: first moiety at practical completion and second moiety at expiry of the rectification period. Address whether retention is held in a separate trust account (as required under JCT Standard Building Contract clause 4.18). Consider the impact of the Housing Grants, Construction and Regeneration Act 1996 on retention provisions. Specify whether the contractor may substitute a retention bond for cash retention. Address the interaction between retention and insolvency events. Consider the Pye Tait Consulting report recommendations on retention reform. Specify the notice requirements for withholding or releasing retention under s.111 of the Construction Act.",
+      "variations": {
+        "cash-retention": "Employer retains cash percentage from each interim payment",
+        "retention-bond": "Contractor provides a retention bond in lieu of cash retention",
+        "trust-account": "Retention monies held in a designated trust account"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-subcontract", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-interim-payment", "con-defects-liability"],
+      "compliance_refs": ["Housing Grants, Construction and Regeneration Act 1996 s.110-111"]
+    },
+    {
+      "id": "con-variation-orders",
+      "clause_category": "construction",
+      "name": "Variation Orders",
+      "description": "Establishes the mechanism by which the employer or contract administrator may instruct changes to the scope, design, quality, or sequence of the works. Variations are a fundamental feature of construction contracts, reflecting the reality that building projects inevitably require modifications as they progress from design through to completion.",
+      "drafting_guidance": "Define what constitutes a variation (additions, omissions, changes to design, materials, access routes, or working hours). Specify who has authority to instruct variations (architect, contract administrator, project manager, or employer directly). Address the valuation methodology: use of contract rates where applicable, fair valuation for new work, daywork rates for unquantifiable work. Specify the process for contractor-proposed variations. Address the impact of variations on the programme and completion date (link to extension of time provisions). Require written instructions before work commences (or confirmation within a specified period for oral instructions). Under NEC4, use the compensation event mechanism. Under FIDIC, follow the Variation and Adjustment provisions of Clause 13. Specify maximum cumulative variation thresholds beyond which the contractor may object.",
+      "variations": {
+        "architect-instructed": "Variations instructed by the contract administrator or architect",
+        "compensation-event": "NEC4 compensation event mechanism for scope changes",
+        "fidic-variation": "FIDIC Clause 13 variation procedure with engineer determination"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-subcontract", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-interim-payment", "con-extension-of-time"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-delay-damages",
+      "clause_category": "construction",
+      "name": "Delay Damages (Liquidated Damages for Delay)",
+      "description": "Pre-agreed damages payable by the contractor to the employer for each day or week that the works remain incomplete beyond the contractual completion date, as adjusted by any extensions of time. Liquidated damages for delay must represent a genuine pre-estimate of the employer's likely loss and must not be penal in nature to be enforceable under English law.",
+      "drafting_guidance": "Specify the rate of liquidated damages per day or per week (must be a genuine pre-estimate of loss, not a penalty). Document the basis for the calculation at the time of drafting (e.g., additional supervision costs, lost rental income, financing costs, third-party liabilities). Consider the Cavendish Square Holding BV v Makdessi [2015] UKSC 67 test for enforceability. Specify the maximum aggregate cap on delay damages (typically 5-10% of the contract sum). Address the relationship between delay damages and extensions of time (damages only accrue from the adjusted completion date). Specify sectional completion dates with separate delay damage rates if applicable. Under NEC4, delay damages are set out in the Contract Data Part 1. Address whether delay damages are the employer's sole remedy for delay or are in addition to general damages.",
+      "variations": {
+        "single-date": "Single completion date with one delay damage rate",
+        "sectional": "Multiple sectional completion dates with individual delay damage rates",
+        "capped-aggregate": "Delay damages subject to an aggregate percentage cap of the contract sum"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-practical-completion", "con-extension-of-time"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-defects-liability",
+      "clause_category": "construction",
+      "name": "Defects Liability Period",
+      "description": "Defines the period (typically 12-24 months from practical completion) during which the contractor is obligated to return to site and rectify any defects, shrinkages, or other faults that appear in the works. Under JCT contracts this is termed the 'Rectification Period' and under NEC4 it is the 'Defects Correction Period'. The contractor's obligation to remedy defects during this period does not limit any rights the employer may have at common law.",
+      "drafting_guidance": "Specify the duration of the defects liability period (12 months is standard for building works; 24 months for engineering works or M&E installations). Define the commencement date (from practical completion, sectional completion, or taking over). Specify the contractor's obligations upon notification of defects: attend site, investigate, and remedy within a reasonable time. Address the employer's right to engage third parties if the contractor fails to rectify within the specified period, and to recover costs from the contractor or deduct from retention. Under FIDIC, address the Defects Notification Period under Clause 11 and the Performance Certificate. Specify the interaction with the final certificate and final payment. Address latent defects (which may manifest after the defects liability period) and the limitation period under the Limitation Act 1980 (6 years for simple contracts, 12 years for deeds).",
+      "variations": {
+        "12-month": "Standard 12-month rectification period from practical completion",
+        "24-month": "Extended 24-month period for complex building services or engineering works",
+        "sectional": "Separate defects liability periods for each section of the works"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey", "con-maintenance"],
+      "depends_on": ["con-practical-completion"],
+      "compliance_refs": ["Limitation Act 1980 s.5, s.8"]
+    },
+    {
+      "id": "con-practical-completion",
+      "clause_category": "construction",
+      "name": "Practical Completion",
+      "description": "Defines the point at which the works are considered sufficiently complete for the employer to take possession and use them for their intended purpose, notwithstanding minor outstanding items (snagging). Practical completion is a critical milestone under JCT contracts as it triggers the release of the first moiety of retention, commences the defects liability period, and terminates the contractor's liability for liquidated damages.",
+      "drafting_guidance": "Specify the criteria for practical completion (completion of the works in accordance with the contract, free from patent defects other than de minimis items). Address the role of the contract administrator or architect in certifying practical completion. Define the snagging process: preparation of a snagging list, contractor's obligation to remedy items, and the effect of outstanding snagging items on the certificate. Under JCT, practical completion is not defined in the contract but is a question of fact (see Jarvis & Sons Ltd v Westminster Corporation [1970]). Under NEC4, the term used is 'Completion' as defined in clause 11.2(2). Specify the consequences of practical completion: release of first retention moiety, commencement of rectification period, cessation of delay damages, transfer of responsibility for insurance. Address partial possession and its implications.",
+      "variations": {
+        "architect-certified": "Practical completion certified by the architect or contract administrator",
+        "nec-completion": "NEC4 Completion as defined in Contract Data and clause 11.2(2)",
+        "fidic-taking-over": "FIDIC Taking-Over Certificate under Clause 10"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-substantial-completion",
+      "clause_category": "construction",
+      "name": "Substantial Completion",
+      "description": "Used primarily in US and international construction contracts, substantial completion marks the stage when the works are sufficiently complete that the owner can occupy or use them for their intended purpose. Under FIDIC and many international forms, this concept is implemented through the Taking-Over Certificate procedure. Substantial completion typically requires that only minor finishing works and punch-list items remain outstanding.",
+      "drafting_guidance": "Define the criteria for substantial completion (works usable for intended purpose, all life safety systems operational, regulatory approvals obtained, only punch-list items outstanding). Distinguish from practical completion under JCT (English law) and final completion. Specify the process for requesting and issuing a certificate of substantial completion. Define the punch-list process: preparation, contractor remedy period, and re-inspection. Address the consequences of substantial completion: transfer of care and custody, commencement of warranty period, cessation of delay damages, release of retention. Under FIDIC, cross-reference clause 10.1 (Taking Over of the Works and Sections). Specify the maximum value or scope of outstanding work permitted at substantial completion. Address the distinction between substantial completion and beneficial occupation.",
+      "variations": {
+        "percentage-based": "Substantial completion when works are 97-98% physically complete",
+        "functional-based": "Substantial completion when works are functionally usable for intended purpose",
+        "fidic-taking-over": "FIDIC Taking-Over Certificate procedure under Clause 10.1"
+      },
+      "contract_types": ["con-nec-fidic", "con-epc-turnkey", "con-design-build"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-performance-bond",
+      "clause_category": "construction",
+      "name": "Performance Bond",
+      "description": "Requires the contractor to procure a performance bond (typically 10% of the contract sum) from a bank or surety company, guaranteeing the contractor's performance of its obligations under the construction contract. The employer may call on the bond if the contractor defaults, providing financial security to fund the cost of completing the works by an alternative contractor.",
+      "drafting_guidance": "Specify the bond amount (typically 10% of the contract sum; may be higher for large or complex projects). Identify the form of bond: conditional (default) or on-demand. For conditional bonds, specify the conditions for calling the bond (contractor default and employer loss). For on-demand bonds, understand the risk that the employer can call without proving default (common in international projects). Specify the acceptable surety providers (minimum credit rating, authorised by PRA/FCA). Define the bond duration (from contract execution until expiry of the defects liability period plus a tail period). Address the reduction or release of the bond upon practical completion. Specify the process for making a claim under the bond. Consider the ABI Model Form of Guarantee Bond. Address the cost of the bond (typically borne by the contractor and factored into the contract sum).",
+      "variations": {
+        "conditional": "Bond payable only upon proof of contractor default and employer loss (ABI form)",
+        "on-demand": "Bond payable on first written demand without proof of default",
+        "reducing": "Bond amount reduces upon achievement of milestones or practical completion"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-advance-payment-guarantee",
+      "clause_category": "construction",
+      "name": "Advance Payment Guarantee",
+      "description": "Where the employer provides an advance payment to the contractor (to fund mobilisation, material procurement, or plant acquisition), the contractor must procure a guarantee from a bank or surety for the amount of the advance payment. The guarantee protects the employer's advance payment in the event of contractor default or insolvency, and the guaranteed amount reduces as the advance is repaid through deductions from interim payments.",
+      "drafting_guidance": "Specify the advance payment amount (typically 10-20% of the contract sum). Define the repayment mechanism (deductions from interim payments, typically commencing when the value of certified work reaches a specified percentage). Specify the form of guarantee (on-demand bank guarantee is standard for advance payments). Require the guarantee to be in place before the advance payment is released. Define the reducing balance mechanism as repayments are made. Specify the guarantee duration (until the advance is fully repaid plus a tail period). Address the interaction with insolvency provisions (advance payment becomes immediately repayable upon insolvency). Under FIDIC, cross-reference clause 14.2 (Advance Payment). Specify the acceptable guarantee providers (minimum credit rating requirements).",
+      "variations": {
+        "on-demand": "On-demand bank guarantee reducing as advance is repaid",
+        "conditional": "Conditional guarantee requiring proof of contractor default",
+        "parent-company": "Parent company guarantee in lieu of bank guarantee for advance payment"
+      },
+      "contract_types": ["con-nec-fidic", "con-epc-turnkey", "con-design-build", "con-jct-contract"],
+      "depends_on": ["con-interim-payment"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-design-liability",
+      "clause_category": "construction",
+      "name": "Design Liability",
+      "description": "Defines the standard of care applicable to the contractor's design obligations where the contractor has design responsibility (whether full design-and-build or a contractor's design portion). The standard of liability is a critical distinction: fitness for purpose imposes strict liability, while reasonable skill and care mirrors a professional negligence standard and is insurable under professional indemnity policies.",
+      "drafting_guidance": "Specify the standard of design liability: fitness for purpose (absolute obligation that the design will achieve the stated purpose) or reasonable skill and care (obligation to exercise the skill and care of a competent professional). Consider that fitness for purpose is generally uninsurable and is excluded from standard PI insurance policies. Under JCT Design and Build (DB) 2016, clause 2.17.1 imposes a reasonable skill and care standard unless the Employer's Requirements specify fitness for purpose. Under NEC4, the obligation depends on the chosen main option. Reference the Supreme Court decision in MT Hojgaard A/S v E.ON Climate & Renewables UK Robin Rigg East Ltd [2017] UKSC 59 on the interaction between fitness for purpose and compliance with specifications. Address the limitation of design liability to the level of PI insurance available. Specify carve-outs for specialist design elements.",
+      "variations": {
+        "fitness-for-purpose": "Strict fitness for purpose standard for all contractor design",
+        "reasonable-skill-care": "Reasonable skill and care standard consistent with a competent professional",
+        "hybrid": "Fitness for purpose for performance specifications; reasonable skill and care for detailed design"
+      },
+      "contract_types": ["con-design-build", "con-epc-turnkey", "con-jct-contract", "con-professional-services"],
+      "depends_on": ["con-professional-indemnity"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-professional-indemnity",
+      "clause_category": "construction",
+      "name": "Professional Indemnity Insurance",
+      "description": "Requires the contractor, consultant, or design professional to maintain professional indemnity (PI) insurance to cover claims arising from negligent design, advice, or professional services. PI insurance is essential where design liability is on a reasonable skill and care basis, as it provides the financial backing for claims. Coverage must be maintained for a specified period after completion, reflecting the latent defects exposure under the Limitation Act 1980.",
+      "drafting_guidance": "Specify the minimum PI insurance coverage amount (proportionate to the contract value and risk profile; typically the greater of a specified sum or the contract value). Specify whether insurance should be on an each-and-every-claim or aggregate basis. Define the maintenance period (for the duration of the project and typically 6-12 years post-completion, aligned with limitation periods). Address the obligation to maintain insurance only to the extent it remains available in the market at commercially reasonable rates. Specify the acceptable insurers (minimum credit rating). Require evidence of insurance upon request. Address the notification obligation if coverage lapses or is materially reduced. Specify the interaction with design liability provisions (PI insurance typically does not cover fitness for purpose obligations). Consider requiring a project-specific PI policy for high-value projects.",
+      "variations": {
+        "each-and-every": "Coverage on an each-and-every-claim basis with no aggregate limit",
+        "aggregate": "Coverage on an aggregate basis per policy year",
+        "project-specific": "Dedicated project-specific PI policy for the duration of the project and run-off period"
+      },
+      "contract_types": ["con-professional-services", "con-design-build", "con-epc-turnkey", "con-jct-contract"],
+      "depends_on": [],
+      "compliance_refs": ["Limitation Act 1980"]
+    },
+    {
+      "id": "con-cdm-regulations",
+      "clause_category": "construction",
+      "name": "CDM Regulations 2015 Compliance",
+      "description": "Addresses compliance with the Construction (Design and Management) Regulations 2015, which impose statutory duties on clients, principal designers, principal contractors, designers, and contractors in relation to health and safety during construction projects. CDM 2015 applies to all construction work in Great Britain and requires duty holders to plan, manage, and coordinate health and safety throughout the project lifecycle.",
+      "drafting_guidance": "Identify the CDM duty holders: Client (must make suitable arrangements for managing the project), Principal Designer (must plan, manage, and coordinate the pre-construction phase), Principal Contractor (must plan, manage, and coordinate the construction phase). Specify each party's CDM duties expressly in the contract. Address the client's duty to appoint a principal designer and principal contractor (Regulation 5). Require the principal contractor to prepare and maintain the construction phase plan (Regulation 12). Address the requirement for a health and safety file to be prepared and handed over (Regulation 12(5)). Specify the notification requirements for notifiable projects (Regulation 6: lasting more than 30 working days with more than 20 workers, or exceeding 500 person-days). Address designer duties under Regulation 9 (eliminate, reduce, or control foreseeable risks). Consider including CDM compliance as a condition precedent to payments.",
+      "variations": {
+        "client-led": "Client retains CDM duties and appoints principal designer directly",
+        "contractor-led": "Principal contractor also assumes principal designer role",
+        "consultant-led": "Independent principal designer appointed under separate professional services agreement"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey", "con-subcontract", "con-professional-services"],
+      "depends_on": [],
+      "compliance_refs": ["Construction (Design and Management) Regulations 2015"]
+    },
+    {
+      "id": "con-interim-payment",
+      "clause_category": "construction",
+      "name": "Interim Payment",
+      "description": "Establishes the contractor's right to receive periodic payments during the course of the works, typically on a monthly basis. Under the Housing Grants, Construction and Regeneration Act 1996 (as amended), every construction contract lasting longer than 45 days must provide for stage or periodic payments. The Act also requires an adequate mechanism for determining what payments become due and when, and provides for a final date for payment.",
+      "drafting_guidance": "Specify the payment cycle (monthly is standard). Define the valuation date and the process for submitting applications for payment. Address the role of the contract administrator or quantity surveyor in certifying payments. Specify the due date for payment and the final date for payment (in compliance with Part II of the Housing Grants, Construction and Regeneration Act 1996). Include the requirements for payment notices under s.110A and pay less notices under s.111. Specify what the interim valuation includes: work properly executed, materials on site, materials off-site (with vesting provisions), and deductions for retention, previously certified amounts, and contra-charges. Under NEC4, cross-reference the payment provisions in clause 50 (Assessing the Amount Due). Address the treatment of unfixed materials and goods (title and insurance requirements). Specify the consequences of late payment (statutory interest under the Late Payment of Commercial Debts (Interest) Act 1998).",
+      "variations": {
+        "monthly-valuation": "Monthly interim valuations certified by the contract administrator",
+        "milestone-payment": "Payments linked to achievement of defined project milestones",
+        "nec-assessment": "NEC4 assessment of the amount due at each assessment date"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey", "con-subcontract"],
+      "depends_on": [],
+      "compliance_refs": ["Housing Grants, Construction and Regeneration Act 1996 s.109-110A"]
+    },
+    {
+      "id": "con-final-account",
+      "clause_category": "construction",
+      "name": "Final Account",
+      "description": "Provides for the preparation and agreement of the final account, which represents the total amount due to the contractor under the contract following completion of the works. The final account incorporates the original contract sum as adjusted for variations, loss and expense claims, fluctuations, provisional sum expenditure, dayworks, and any other financial adjustments. Agreement of the final account and issuance of the final certificate typically concludes the financial relationship between the parties.",
+      "drafting_guidance": "Specify the timeline for submission of the contractor's final account documentation (typically within 6 months of practical completion). Define the employer's or quantity surveyor's period for review and response. Specify the documents required to support the final account (measured quantities, variation accounts, daywork sheets, loss and expense documentation, quotations for provisional sums). Address the process for resolving disputed items. Specify the effect of the final certificate: under JCT, the final certificate is conclusive evidence that the works have been properly carried out (subject to proceedings commenced before or within 28 days after the final certificate). Under FIDIC, address the Final Payment Certificate under Clause 14.13. Address the interaction between the final account and the release of the second moiety of retention. Specify the final date for payment of the final account balance.",
+      "variations": {
+        "jct-final-certificate": "Final certificate issued by the architect following agreement of the final account",
+        "nec-final-assessment": "NEC4 final assessment of the amount due following defects certificate",
+        "fidic-final-payment": "FIDIC Final Payment Certificate under Clause 14.13"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-interim-payment", "con-variation-orders", "con-loss-expense"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-extension-of-time",
+      "clause_category": "construction",
+      "name": "Extension of Time",
+      "description": "Provides a mechanism for the contractor to claim additional time for completion of the works where delay is caused by specified events beyond the contractor's control. Extension of time clauses are essential to preserve the employer's right to levy liquidated damages; without a valid extension of time mechanism, the employer's right to delay damages may be lost entirely under the prevention principle (see Peak Construction (Liverpool) Ltd v McKinney Foundations Ltd [1970]).",
+      "drafting_guidance": "Define the Relevant Events or delay events that entitle the contractor to an extension (e.g., variations, exceptionally adverse weather, civil commotion, statutory undertaker delays, employer-caused delays, force majeure). Specify the notice requirements: written notice within a defined period (typically 28 days) of the delay event becoming apparent. Require the contractor to submit particulars of the expected delay and to use best endeavours to prevent or reduce delay. Specify the process for the contract administrator's assessment and grant of extension. Address concurrent delay (where contractor delay runs concurrently with an employer risk event). Under JCT 2016, cross-reference clause 2.27 (Relevant Events). Under NEC4, extensions are addressed through compensation events (clause 60). Under FIDIC, reference clause 8.5 (Extension of Time for Completion). Address prospective and retrospective grants of extension.",
+      "variations": {
+        "jct-relevant-events": "Extension for JCT Relevant Events under clause 2.27",
+        "nec-compensation-event": "NEC4 time extension through compensation event assessment",
+        "fidic-eot": "FIDIC extension under clause 8.5 determined by the Engineer"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey", "con-subcontract"],
+      "depends_on": ["con-delay-damages"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-loss-expense",
+      "clause_category": "construction",
+      "name": "Loss and Expense / Compensation Events",
+      "description": "Provides the contractor with a contractual entitlement to recover direct loss and expense caused by specified matters (Relevant Matters under JCT) that are the employer's risk, including late information, variations, employer-caused disruption, and opening up for inspection where work is found to be in accordance with the contract. Under NEC4, the equivalent mechanism is the compensation event assessment under clause 63.",
+      "drafting_guidance": "Define the Relevant Matters or compensation events that give rise to the claim (under JCT 2016, see clause 4.24). Specify the notice requirements: written application within a defined period with supporting information. Require the contractor to provide detailed particulars including the causal link between the matter and the loss, and quantification of the claim. Address the ascertainment process: contract administrator's assessment or, under NEC4, the Project Manager's assessment of the defined cost impact. Specify the categories of recoverable loss and expense (prolongation costs, disruption costs, increased preliminaries, loss of productivity). Exclude loss of profit on other contracts and consequential losses unless expressly included. Address the interaction with extension of time provisions (time and money claims often arise from the same events). Specify the timing for payment of ascertained amounts.",
+      "variations": {
+        "jct-relevant-matters": "Loss and expense for JCT Relevant Matters under clause 4.24",
+        "nec-compensation-events": "NEC4 defined cost assessment for compensation events under clause 63",
+        "fidic-claims": "FIDIC contractor's claims procedure under Clause 20.1"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-extension-of-time"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-collateral-warranty",
+      "clause_category": "construction",
+      "name": "Collateral Warranty",
+      "description": "A separate agreement under which the contractor, subcontractor, or consultant warrants to a third party (such as a funder, purchaser, or tenant) that it has complied and will comply with its obligations under the underlying building contract or appointment. Collateral warranties create a direct contractual relationship between the warrantor and the beneficiary, overcoming the doctrine of privity of contract and providing the beneficiary with a direct cause of action for defective work or design.",
+      "drafting_guidance": "Specify the parties: warrantor (contractor, subcontractor, or consultant), beneficiary (funder, purchaser, tenant, or future owner). Define the scope of the warranty (the warrantor has performed and will continue to perform its obligations under the underlying contract with reasonable skill and care). Include a duty not to specify deleterious materials (typically by reference to a prohibited materials list). Address the standard of care (match the underlying contract). Include step-in rights for funders. Specify assignment provisions (typically one or two assignments without consent). Address the limitation of liability (typically capped at the level of PI insurance). Specify professional indemnity insurance maintenance obligations. Cross-reference the underlying contract. Address the Contracts (Rights of Third Parties) Act 1999 and whether it is excluded. Use the JCT CWa or CWa/F forms as a starting point.",
+      "variations": {
+        "funder-form": "Collateral warranty in favour of a project funder with step-in rights",
+        "purchaser-tenant": "Collateral warranty in favour of purchaser or tenant with assignment rights",
+        "subcontractor-warranty": "Warranty from subcontractor to employer or funder"
+      },
+      "contract_types": ["con-jct-contract", "con-design-build", "con-professional-services", "con-subcontract"],
+      "depends_on": ["con-design-liability"],
+      "compliance_refs": ["Contracts (Rights of Third Parties) Act 1999"]
+    },
+    {
+      "id": "con-step-in-rights",
+      "clause_category": "construction",
+      "name": "Step-In Rights",
+      "description": "Grants a third party (typically a funder or purchaser) the right to step into the employer's position under the building contract in circumstances where the employer defaults on its obligations or becomes insolvent. Step-in rights are essential for project finance transactions, as they enable the funder to preserve the building contract and protect its security interest in the project rather than allowing the contract to be terminated.",
+      "drafting_guidance": "Define the trigger events for step-in (employer default, employer insolvency, funder exercising its security). Specify the notice requirements (funder must give written notice to the contractor of its intention to step in within a defined period). Address the funder's obligations upon stepping in (assume the employer's obligations, cure any employer defaults, maintain payment obligations). Specify the contractor's obligations (continue performance, cooperate with the funder, not terminate for employer default during the step-in notice period). Address the duration of the step-in period. Specify the funder's right to novate the contract to a new employer or its nominee. Include in collateral warranties and direct agreements. Address the interaction with insolvency law (step-in rights may be affected by administration or liquidation). Consider the requirements of the Insolvency Act 1986.",
+      "variations": {
+        "funder-step-in": "Funder steps into employer's position under the building contract",
+        "purchaser-step-in": "Purchaser assumes employer's role upon acquisition of the development",
+        "novation-right": "Right to novate the contract to a new employer or nominee"
+      },
+      "contract_types": ["con-jct-contract", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-collateral-warranty"],
+      "compliance_refs": ["Insolvency Act 1986"]
+    },
+    {
+      "id": "con-novation",
+      "clause_category": "construction",
+      "name": "Novation",
+      "description": "A tripartite agreement by which the rights and obligations of one party under an existing contract are transferred to a new party, with the consent of all three parties. In construction, novation is most commonly used in design-and-build procurement where the employer's design team is novated from the employer to the contractor after the contract is awarded, making the contractor responsible for the design team's appointments and outputs.",
+      "drafting_guidance": "Identify the parties to the novation: the outgoing party, the incoming party, and the remaining party. Specify the effective date of novation. Confirm that the incoming party assumes all rights and obligations of the outgoing party under the underlying contract from the effective date. Address the treatment of pre-novation liabilities (whether the incoming party assumes historical liability or only future obligations). Include a release of the outgoing party from future obligations. Address intellectual property rights (designs, drawings, specifications) and their transfer or licensing. Specify representations and warranties from each party. Address the practical consequences of novation (changing lines of reporting, instruction, and certification). Consider the 'novation chill' effect where novated consultants may feel conflicted between loyalty to their original client and their new obligations to the contractor.",
+      "variations": {
+        "ab-initio": "Novation effective as if the incoming party was always the original party (ab initio)",
+        "from-date": "Novation effective from a specific date with pre-novation liabilities remaining with outgoing party",
+        "conditional": "Novation conditional upon satisfaction of specified conditions precedent"
+      },
+      "contract_types": ["con-design-build", "con-professional-services", "con-epc-turnkey"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-back-to-back",
+      "clause_category": "construction",
+      "name": "Back-to-Back Subcontract Provisions",
+      "description": "Incorporates the terms of the main contract into the subcontract on a 'back-to-back' basis, so that the subcontractor's obligations and liabilities mirror those of the main contractor under the head contract. Back-to-back provisions are essential for main contractors to avoid gaps in liability between the subcontract and the main contract, ensuring that risks flow down proportionately through the contractual chain.",
+      "drafting_guidance": "Specify the mechanism for incorporation: full incorporation by reference (all main contract terms apply mutatis mutandis) or selective incorporation of specific clauses. Address the practical difficulties of full back-to-back incorporation (the subcontractor may not have seen the main contract). Specify which obligations are passed down: scope, programme, quality standards, health and safety, insurance, indemnities, and limitation of liability. Address payment terms (whether subcontract payments are conditional on main contract certification, subject to pay-when-paid prohibition). Preserve the contractor's extensions of time and loss and expense entitlements for subcontractor-relevant events. Address the dispute resolution mechanism (adjudication rights are statutory and cannot be excluded). Specify the flow-down of collateral warranty obligations. Address the subcontractor's right to see relevant extracts of the main contract.",
+      "variations": {
+        "full-incorporation": "All main contract terms incorporated by reference mutatis mutandis",
+        "selective-incorporation": "Only specified main contract clauses incorporated into the subcontract",
+        "schedule-based": "Back-to-back obligations set out in a detailed schedule to the subcontract"
+      },
+      "contract_types": ["con-subcontract"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-adjudication",
+      "clause_category": "construction",
+      "name": "Adjudication",
+      "description": "Provides for the statutory right to refer any dispute arising under the construction contract to adjudication, as mandated by Part II of the Housing Grants, Construction and Regeneration Act 1996. Adjudication is a rapid interim dispute resolution mechanism: the adjudicator must be appointed within 7 days of the notice of adjudication and must reach a decision within 28 days (extendable by 14 days with the referring party's consent). The adjudicator's decision is binding until the dispute is finally determined by arbitration, litigation, or agreement.",
+      "drafting_guidance": "Include an adjudication clause compliant with Part II of the Housing Grants, Construction and Regeneration Act 1996 (as amended by the Local Democracy, Economic Development and Construction Act 2009). Specify the Adjudicator Nominating Body (ANB): RICS, CIArb, ICE, RIBA, or TeCSA. Address the timetable: 7 days for appointment, 28 days for decision (extendable by 14 days with consent or longer by agreement). Specify the adjudicator's powers (to take the initiative in ascertaining the facts and the law, to open up and revise certificates, to order interim payments). Address the treatment of adjudicator's fees and costs. Specify that the decision is binding on an interim basis and enforceable through summary judgment (see Macob Civil Engineering Ltd v Morrison Construction Ltd [1999]). Address the right to refer to final determination by arbitration or litigation. Include the Scheme for Construction Contracts as a fall-back.",
+      "variations": {
+        "contractual": "Detailed adjudication procedure set out in the contract",
+        "scheme-default": "Contract relies on the Scheme for Construction Contracts 1998",
+        "enhanced": "Contractual procedure with additional provisions for multi-party disputes and joinder"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-subcontract", "con-design-build", "con-epc-turnkey", "con-professional-services"],
+      "depends_on": [],
+      "compliance_refs": ["Housing Grants, Construction and Regeneration Act 1996 Part II", "Scheme for Construction Contracts 1998", "Local Democracy, Economic Development and Construction Act 2009"]
+    },
+    {
+      "id": "con-sectional-completion",
+      "clause_category": "construction",
+      "name": "Sectional Completion",
+      "description": "Divides the works into defined sections, each with its own completion date, defects liability period, and (where applicable) liquidated damages rate. Sectional completion is used where the employer requires early access to parts of the works before the whole project is complete, such as phased handovers of building floors, separate completion of shell and core versus fit-out, or handover of infrastructure ahead of building works.",
+      "drafting_guidance": "Define each section precisely (description, scope, drawings, specifications). Specify the completion date for each section in the contract particulars. Define separate delay damage rates for each section (each must be a genuine pre-estimate of loss for that section). Address the release of retention for each section upon sectional completion. Specify separate defects liability periods commencing from each sectional completion date. Address the interaction between sections (access requirements, shared facilities, interface management). Under JCT 2016, use the Sectional Completion Supplement. Under NEC4, define Sections in Contract Data Part 1. Specify the consequences of delay to one section on other sections. Address the certification process for each section.",
+      "variations": {
+        "phased-handover": "Sections corresponding to phased handover of building areas or floors",
+        "shell-and-fitout": "Separate sections for shell and core works and fit-out works",
+        "infrastructure-first": "Early completion of infrastructure and external works before building completion"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-practical-completion", "con-delay-damages", "con-defects-liability"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-parent-company-guarantee",
+      "clause_category": "construction",
+      "name": "Parent Company Guarantee",
+      "description": "Requires the contractor's parent company or a financially stronger group entity to guarantee the contractor's performance of its obligations under the building contract. The parent company guarantee (PCG) provides the employer with recourse to a more creditworthy entity if the contractor defaults or becomes insolvent, and is commonly required alongside or as an alternative to a performance bond.",
+      "drafting_guidance": "Specify the guarantor (parent company or identified group entity). Define the scope of guarantee: 'see to it' obligation (guarantor ensures the contractor performs) or indemnity (guarantor pays the employer's losses on contractor default). Specify that the guarantee covers all of the contractor's obligations under the building contract, including obligations to rectify defects. Address the duration of the guarantee (until expiry of the defects liability period and final settlement of all claims). Include representations about the guarantor's financial standing. Address the consequences if the guarantor's financial position deteriorates (right to require a replacement guarantee). Specify that the guarantee is not discharged by variations, extensions of time, or forbearance. Address the interaction with performance bonds and retention. Use the JCT standard form of parent company guarantee as a starting point.",
+      "variations": {
+        "see-to-it": "Guarantor undertakes to ensure the contractor performs its obligations",
+        "indemnity": "Guarantor indemnifies the employer against loss from contractor default",
+        "performance-and-payment": "Guarantee covers both performance obligations and payment of damages"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-insurance-car",
+      "clause_category": "construction",
+      "name": "Contractor's All Risks Insurance",
+      "description": "Requires the procurement of Contractor's All Risks (CAR) insurance, also known as construction all risks or builder's risk insurance, covering physical loss of or damage to the works, temporary works, materials, and plant during the construction period. CAR insurance is typically arranged by the contractor (under JCT Option A) or by the employer (under JCT Option B/C), and covers the full reinstatement value of the works.",
+      "drafting_guidance": "Specify which party procures the CAR insurance (contractor under JCT Insurance Option A, employer under Option B for new buildings or Option C for existing structures). Define the scope of cover: the works, temporary works, materials and goods on site and in transit, contractor's plant and equipment. Specify the insured sum (full reinstatement value of the works including professional fees). Define the insured period (from commencement to practical completion or date of possession). Require joint names insurance (employer and contractor as co-insured). Address the excess or deductible. Specify extensions of cover: terrorism, subsidence, testing and commissioning, professional fees. Address the obligation to maintain insurance and consequences of failure. Specify the claims process and application of insurance proceeds to reinstatement. Under JCT 2016, cross-reference Schedule 3 (Insurance) and the relevant Insurance Option.",
+      "variations": {
+        "contractor-arranged": "CAR insurance arranged and paid for by the contractor (JCT Option A)",
+        "employer-arranged": "CAR insurance arranged by the employer with contractor as co-insured (JCT Option B)",
+        "existing-structures": "Insurance of existing structures plus works (JCT Option C)"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-insurance-pi",
+      "clause_category": "construction",
+      "name": "Construction Professional Indemnity Insurance",
+      "description": "Addresses the professional indemnity insurance requirements specific to construction projects, covering claims arising from negligent design, engineering advice, project management, and other professional services. Construction PI insurance differs from general PI insurance in its treatment of construction-specific risks including design coordination, specification errors, and supervision failures.",
+      "drafting_guidance": "Cross-reference the general professional indemnity insurance provisions (con-professional-indemnity) and add construction-specific requirements. Specify coverage for design coordination failures, specification errors, inadequate supervision, and certification negligence. Address the aggregation of claims arising from the same project. Specify the trigger for claims-made policies and the importance of notification. Address the interaction with CAR insurance (which covers physical damage but not design deficiency). Require coverage for the full design team where a design-and-build contractor engages subconsultants. Specify the run-off period requirements (6 or 12 years post-completion). Address the availability and cost of PI insurance in the construction market (which has experienced significant hardening). Include best endeavours obligations for maintaining cover if it becomes unavailable at commercially reasonable rates.",
+      "variations": {
+        "design-and-build": "PI insurance covering the full design-and-build scope including subconsultant design",
+        "consultant-only": "Standard PI insurance for professional consultancy services only",
+        "project-specific": "Project-specific PI policy with dedicated limits for the project"
+      },
+      "contract_types": ["con-professional-services", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-professional-indemnity", "con-design-liability"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-site-access",
+      "clause_category": "construction",
+      "name": "Site Access and Possession",
+      "description": "Addresses the employer's obligation to give the contractor possession of or access to the site on the agreed date, and the consequences of failure to do so. Possession of site is a condition precedent to the contractor's obligation to commence the works. Failure to give possession may entitle the contractor to an extension of time and loss and expense, and in serious cases may constitute a repudiatory breach of contract.",
+      "drafting_guidance": "Specify the date for possession of site (a fixed date or a date to be confirmed by notice). Define the extent of the site to which the contractor is given possession (the whole site or identified areas). Address phased possession where the contractor receives access to different parts of the site at different times. Specify the condition of the site upon handover (cleared, decontaminated, with utilities connected). Address the employer's obligations regarding access routes, permits, and licences. Specify the consequences of late possession (extension of time, loss and expense, and potentially delay damages becoming unenforceable). Under JCT 2016, cross-reference clause 2.4 (Possession) and the option for deferment of possession (clause 2.5). Under NEC4, address the access date in Contract Data Part 1. Address shared site access where multiple contractors are working concurrently.",
+      "variations": {
+        "full-possession": "Contractor given exclusive possession of the entire site on the possession date",
+        "phased-access": "Possession given in phases corresponding to programme requirements",
+        "deferred-possession": "Employer has the right to defer possession by a specified period under JCT clause 2.5"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey", "con-subcontract"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-contractor-design-portion",
+      "clause_category": "construction",
+      "name": "Contractor's Design Portion",
+      "description": "Defines the scope of design responsibility allocated to the contractor within a traditional or management contract where the employer retains the lead design team. The Contractor's Design Portion (CDP) is used where specific elements of the works (such as building services, specialist cladding, or piling) are designed by the contractor or its specialist subcontractors, while the overall design remains with the employer's architect or engineer.",
+      "drafting_guidance": "Define the scope of the CDP precisely in the Employer's Requirements (the design elements for which the contractor assumes design responsibility). Specify the design submission and approval process (contractor submits design proposals, architect or contract administrator reviews for compliance with Employer's Requirements). Address the standard of care for the CDP design (typically reasonable skill and care under JCT 2016 clause 2.17.1). Specify the interface between the CDP design and the employer's design (responsibility for design coordination). Address the contractor's obligation to provide as-built drawings and design information. Specify PI insurance requirements for the CDP. Address intellectual property in the CDP design. Under JCT 2016, use the Contractor's Design Portion provisions (clauses 2.13-2.17). Address the risk allocation for discrepancies between the Employer's Requirements and the CDP design.",
+      "variations": {
+        "limited-cdp": "CDP limited to specialist elements such as M&E, piling, or cladding",
+        "extensive-cdp": "Substantial CDP covering multiple building elements with detailed Employer's Requirements",
+        "performance-specified": "CDP defined by performance specifications rather than detailed design"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic"],
+      "depends_on": ["con-design-liability", "con-professional-indemnity"],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-building-safety",
+      "clause_category": "construction",
+      "name": "Building Safety Act 2022 Compliance",
+      "description": "Addresses compliance with the Building Safety Act 2022, which introduced a new regulatory framework for higher-risk buildings in England (residential buildings at least 18 metres in height or having at least 7 storeys with at least 2 residential units). The Act establishes the Building Safety Regulator, imposes new gateway requirements for design and construction, creates duties on dutyholders throughout the building lifecycle, and extends limitation periods for claims relating to defective cladding and building products.",
+      "drafting_guidance": "Identify whether the project falls within the scope of higher-risk buildings (at least 18m or 7+ storeys with 2+ residential units). Address the three gateway stages: Gateway 1 (planning), Gateway 2 (before construction begins), and Gateway 3 (before occupation). Specify the dutyholder requirements: Client, Principal Designer, and Principal Contractor duties under the Act. Address the golden thread of building information that must be maintained throughout the lifecycle. Specify the contractor's obligations regarding the competence requirements and mandatory occurrence reporting. Address the extended limitation period for claims related to building products (30 years under s.149 for retrospective claims relating to dwelling safety). Cross-reference CDM 2015 duties which continue to apply alongside BSA requirements. Address the new cause of action under s.148 (liability for defective construction products). Consider the implications for collateral warranties and latent defects insurance.",
+      "variations": {
+        "higher-risk": "Full Building Safety Act compliance for higher-risk residential buildings",
+        "below-threshold": "Partial BSA requirements for buildings below the higher-risk threshold",
+        "mixed-use": "BSA provisions for mixed-use developments containing residential elements"
+      },
+      "contract_types": ["con-jct-contract", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-cdm-regulations"],
+      "compliance_refs": ["Building Safety Act 2022", "Building Regulations 2010 (as amended)"]
+    },
+    {
+      "id": "con-sustainability-requirements",
+      "clause_category": "construction",
+      "name": "Sustainability and Environmental Requirements",
+      "description": "Imposes obligations on the contractor to meet specified sustainability targets and environmental standards during construction and in the completed works. This includes compliance with BREEAM, LEED, or equivalent environmental assessment methods, carbon reduction targets, waste management requirements, sustainable material sourcing, and reporting obligations on environmental performance.",
+      "drafting_guidance": "Specify the target sustainability certification (BREEAM Excellent, LEED Gold, or equivalent). Define specific sustainability obligations: waste management and recycling targets, carbon emissions reporting, sustainable materials sourcing (FSC timber, recycled content), energy performance targets. Address the interaction with planning conditions relating to sustainability. Specify the contractor's obligation to prepare and implement a Site Waste Management Plan (SWMP). Address the Environmental Product Declarations (EPDs) and whole-life carbon assessment requirements. Specify reporting obligations (monthly sustainability reports, carbon accounting). Define the consequences of failure to achieve sustainability targets (rectification, liquidated damages, or deduction). Address the cost implications of sustainability requirements and the treatment of cost savings from sustainable practices. Reference the Environment Act 2021 requirements including biodiversity net gain.",
+      "variations": {
+        "breeam-targeted": "Contractor must achieve specified BREEAM rating for the completed works",
+        "net-zero-construction": "Net zero carbon targets for the construction phase with carbon offsetting",
+        "whole-life-carbon": "Whole-life carbon assessment and reduction targets for embodied and operational carbon"
+      },
+      "contract_types": ["con-jct-contract", "con-design-build", "con-epc-turnkey", "con-nec-fidic"],
+      "depends_on": [],
+      "compliance_refs": ["Environment Act 2021", "Building Regulations Part L"]
+    },
+    {
+      "id": "con-modern-slavery-construction",
+      "clause_category": "construction",
+      "name": "Modern Slavery in Construction Supply Chains",
+      "description": "Addresses the contractor's obligations to prevent modern slavery and human trafficking within its supply chain, as required by the Modern Slavery Act 2015. Construction is identified as a high-risk sector for modern slavery due to complex subcontracting chains, use of agency labour, and the prevalence of temporary and migrant workers. This clause goes beyond generic anti-slavery provisions to address construction-specific risks.",
+      "drafting_guidance": "Require the contractor to maintain a Modern Slavery Act 2015 transparency statement (for organisations with turnover exceeding GBP 36 million). Specify due diligence requirements for the contractor's supply chain: pre-qualification checks on subcontractors, audit of labour agency practices, verification of worker documentation, and monitoring of working conditions. Address the right to audit the contractor's and subcontractors' labour practices. Require the contractor to implement a whistleblowing mechanism for workers to report concerns. Specify the training requirements for site management on identifying indicators of modern slavery. Define the consequences of identified modern slavery (immediate remediation, reporting to authorities, potential termination). Address the flow-down of modern slavery obligations to all subcontractors in the supply chain. Consider the Construction Leadership Council guidance and the Gangmasters and Labour Abuse Authority requirements.",
+      "variations": {
+        "standard-compliance": "Basic Modern Slavery Act 2015 compliance obligations",
+        "enhanced-due-diligence": "Proactive supply chain due diligence with auditing and monitoring",
+        "industry-led": "Compliance with industry-specific standards such as the Supply Chain Sustainability School"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey", "con-subcontract"],
+      "depends_on": [],
+      "compliance_refs": ["Modern Slavery Act 2015"]
+    },
+    {
+      "id": "con-prompt-payment",
+      "clause_category": "construction",
+      "name": "Prompt Payment Obligations",
+      "description": "Imposes obligations on the main contractor to make prompt payment to subcontractors and suppliers in the supply chain, in line with statutory requirements and industry best practice. The Housing Grants, Construction and Regeneration Act 1996 establishes minimum payment requirements, and government procurement increasingly requires compliance with the Prompt Payment Code and payment of at least 95% of invoices within 60 days.",
+      "drafting_guidance": "Specify payment terms that comply with Part II of the Housing Grants, Construction and Regeneration Act 1996. Include a payment cycle for subcontractor payments that allows the subcontractor to receive payment within 30 days of the valuation date. Require the main contractor to comply with the Prompt Payment Code. Specify reporting obligations on payment practices (in line with the Reporting on Payment Practices and Performance Regulations 2017). Address the flow-down of payment obligations through the supply chain. Include provisions for project bank accounts where required (particularly for public sector projects). Specify the consequences of late payment to subcontractors (statutory interest under the Late Payment of Commercial Debts (Interest) Act 1998, suspension rights under s.112 of the Construction Act). Address the interaction with retention provisions.",
+      "variations": {
+        "30-day-payment": "All subcontractor payments within 30 days of application",
+        "project-bank-account": "Payments made through a project bank account for direct payment to supply chain",
+        "prompt-payment-code": "Compliance with Prompt Payment Code and quarterly reporting"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-subcontract", "con-framework-construction"],
+      "depends_on": ["con-interim-payment"],
+      "compliance_refs": ["Housing Grants, Construction and Regeneration Act 1996 Part II", "Late Payment of Commercial Debts (Interest) Act 1998", "Reporting on Payment Practices and Performance Regulations 2017"]
+    },
+    {
+      "id": "con-pay-when-paid-prohibition",
+      "clause_category": "construction",
+      "name": "Pay-When-Paid / Pay-When-Certified Prohibition",
+      "description": "Addresses the statutory prohibition on pay-when-paid and pay-when-certified clauses in construction contracts, as enacted by s.113 of the Housing Grants, Construction and Regeneration Act 1996. A clause in a construction contract that makes payment to the contractor or subcontractor conditional upon the payer receiving payment from a third party is ineffective, with the sole exception being where the third party is insolvent.",
+      "drafting_guidance": "Ensure that no provision in the construction contract makes payment conditional upon the paying party receiving payment from a third party (this would be rendered ineffective by s.113). Address the narrow exception: pay-when-paid is permitted only where the third party from whom the payer would have received payment is insolvent (as defined in the Act). Ensure that interim payment provisions establish a payment mechanism that is independent of upstream payment. Address the interaction between the prohibition and back-to-back subcontract provisions (the subcontractor's payment entitlement cannot be made conditional on main contract certification). Consider the distinction between pay-when-paid (prohibited) and pay-if-certified provisions following the Henia Investments Inc v Beck Interiors Ltd [2015] decision. Ensure compliance with the Scheme for Construction Contracts where the contract does not comply.",
+      "variations": {
+        "compliant": "Payment terms fully independent of upstream payment receipts",
+        "insolvency-exception": "Pay-when-paid permitted only where upstream payer is insolvent",
+        "certified-basis": "Payment linked to certification but not conditional on upstream receipt of funds"
+      },
+      "contract_types": ["con-subcontract", "con-jct-contract", "con-nec-fidic"],
+      "depends_on": ["con-interim-payment"],
+      "compliance_refs": ["Housing Grants, Construction and Regeneration Act 1996 s.113"]
+    },
+    {
+      "id": "con-right-to-suspend",
+      "clause_category": "construction",
+      "name": "Right to Suspend Performance",
+      "description": "Provides the contractor with the statutory right to suspend performance of its obligations under the construction contract where the employer fails to pay an amount due by the final date for payment and has not given an effective pay less notice. This right is conferred by s.112 of the Housing Grants, Construction and Regeneration Act 1996 (as amended) and cannot be excluded or restricted by the contract.",
+      "drafting_guidance": "Confirm the statutory right to suspend under s.112 of the Housing Grants, Construction and Regeneration Act 1996 (as amended by the Local Democracy, Economic Development and Construction Act 2009). Specify the notice requirements: at least 7 days' written notice to the party in default stating the ground for suspension. Address the consequences of suspension: the contractor is entitled to an extension of time for any delay caused by the suspension (s.112(3A)). Address the contractor's entitlement to recover reasonable costs of suspension. Specify that the right to suspend does not affect any other right or remedy (including the right to refer the dispute to adjudication). Address partial suspension where only part of the work is affected by the non-payment. Consider the practical implications of suspension (demobilisation, programme impact, subcontractor notification). Address the resumption of work following payment.",
+      "variations": {
+        "statutory-default": "Right to suspend as provided by s.112 without contractual enhancement",
+        "enhanced-contractual": "Contractual right to suspend with additional grounds beyond non-payment",
+        "partial-suspension": "Right to suspend only the portion of works affected by the non-payment"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-subcontract", "con-design-build", "con-epc-turnkey"],
+      "depends_on": ["con-interim-payment"],
+      "compliance_refs": ["Housing Grants, Construction and Regeneration Act 1996 s.112", "Local Democracy, Economic Development and Construction Act 2009"]
+    },
+    {
+      "id": "con-termination-at-will",
+      "clause_category": "construction",
+      "name": "Termination at Will / Termination for Convenience",
+      "description": "Grants the employer the right to terminate the contractor's employment under the building contract at any time without cause, subject to paying the contractor for work properly executed, materials ordered, and loss of profit on the uncompleted portion of the works. Termination at will provisions are common in construction contracts and are distinct from termination for contractor default.",
+      "drafting_guidance": "Specify the notice period for termination at will (typically a reasonable period, often 28 days). Define the financial consequences: payment for work properly executed and materials properly ordered to the date of termination, removal costs, subcontractor termination costs, and a reasonable amount for loss of profit on the uncompleted portion of the works. Address the treatment of retention (release of all retained monies). Specify the contractor's obligations upon termination: secure the site, protect completed work, deliver up materials and plant, assign subcontracts and supply contracts at the employer's request. Address the ownership of materials and plant on site. Specify the process for valuing the work done and materials ordered. Address the contractor's right to remove temporary buildings and plant. Consider the interaction with subcontract termination provisions. Under NEC4, cross-reference termination reason R22.",
+      "variations": {
+        "immediate-notice": "Termination effective upon written notice with immediate payment obligations",
+        "28-day-notice": "28-day notice period before termination becomes effective",
+        "phased-withdrawal": "Phased demobilisation period following notice of termination"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "con-assignment-novation",
+      "clause_category": "construction",
+      "name": "Assignment and Novation Restrictions",
+      "description": "Restricts the ability of either party to assign or novate its rights and obligations under the building contract without the other party's consent. In construction, assignment restrictions are particularly important because the identity and capability of the contractor are fundamental to the contract. Most standard form construction contracts prohibit assignment without consent, though some forms permit the employer to assign without consent in certain circumstances.",
+      "drafting_guidance": "Specify whether assignment is prohibited entirely or permitted with consent (and whether consent may be unreasonably withheld). Distinguish between assignment of rights (benefits) and assignment of obligations (burdens), noting that obligations cannot be assigned without a novation. Under JCT 2016, cross-reference clause 7.1 (neither party may assign without consent). Address whether the employer may assign to a funder or purchaser of the development without consent. Specify the number of permitted assignments (collateral warranties typically permit one or two assignments). Address the requirement for notice of assignment. Distinguish between legal assignment (under the Law of Property Act 1925 s.136) and equitable assignment. Address the implications of assignment for the contractual chain (assigned rights are subject to equities). Consider the interaction with collateral warranty and step-in provisions.",
+      "variations": {
+        "consent-required": "Assignment prohibited without the other party's prior written consent",
+        "employer-excepted": "Employer may assign to funder or purchaser without contractor consent",
+        "limited-assignments": "One or two assignments permitted without consent; further assignments require consent"
+      },
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey", "con-subcontract"],
+      "depends_on": [],
+      "compliance_refs": ["Law of Property Act 1925 s.136"]
+    },
+    {
+      "id": "con-dispute-adjudication-board",
+      "clause_category": "construction",
+      "name": "Dispute Adjudication Board (DAB)",
+      "description": "Establishes a standing or ad hoc dispute board comprising one or three independent experts who are appointed at the outset of the project to provide ongoing dispute avoidance and resolution services. Dispute Adjudication Boards are a feature of FIDIC contracts and are increasingly used on large international construction and infrastructure projects. The DAB provides decisions that are binding on an interim basis, with the right of either party to refer the dispute to arbitration for final determination.",
+      "drafting_guidance": "Specify whether the DAB is standing (appointed at commencement and maintained throughout the project) or ad hoc (appointed when a dispute arises). For standing DABs, specify the number of members (one or three), the appointment process (each party nominates one member, the two nominees agree on the chair), and the qualifications required. Define the DAB's mandate: dispute avoidance (regular site visits, informal assistance) and dispute resolution (formal referral and binding decision). Specify the referral process and timetable (FIDIC 2017 provides 84 days for a decision). Address the binding nature of DAB decisions and the right to refer to arbitration. Specify the payment of DAB members (typically shared equally). Under FIDIC 2017, cross-reference clause 21 (Disputes and Arbitration). Address the enforcement of DAB decisions pending arbitration (see Persero and other ICC cases). Specify the governing procedural rules for the DAB.",
+      "variations": {
+        "standing-three-member": "Three-member standing DAB with regular site visits and dispute avoidance mandate",
+        "standing-sole-member": "Sole member standing DAB for smaller projects",
+        "ad-hoc": "Ad hoc DAB appointed only when a dispute arises"
+      },
+      "contract_types": ["con-nec-fidic", "con-epc-turnkey"],
+      "depends_on": [],
+      "compliance_refs": ["FIDIC Conditions of Contract 2017 Clause 21"]
+    }
+  ],
+  "contract_types": [
+    {
+      "id": "con-jct-contract",
+      "name": "JCT Standard Building Contract",
+      "category": "construction",
+      "description": "The Joint Contracts Tribunal (JCT) Standard Building Contract is the most widely used standard form construction contract in England and Wales. Published in various editions (currently JCT 2016, with the 2024 edition forthcoming), it provides a comprehensive framework for traditional procurement where the employer engages an architect and design team, and the contractor builds to the employer's design. The JCT suite includes the Standard Building Contract (SBC), Intermediate Building Contract (IC), Minor Works Contract (MW), and Design and Build Contract (DB).",
+      "required_clauses": ["con-interim-payment", "con-retention", "con-practical-completion", "con-defects-liability", "con-extension-of-time", "con-delay-damages", "con-variation-orders", "con-loss-expense", "con-adjudication", "con-insurance-car", "con-cdm-regulations"],
+      "recommended_clauses": ["con-performance-bond", "con-parent-company-guarantee", "con-collateral-warranty", "con-sectional-completion", "con-final-account", "con-building-safety", "con-prompt-payment", "con-sustainability-requirements", "con-modern-slavery-construction"],
+      "typical_parties": "Employer <-> Contractor (with Architect/Contract Administrator)",
+      "regulatory_drivers": ["Housing Grants, Construction and Regeneration Act 1996", "Building Safety Act 2022", "CDM Regulations 2015"],
+      "related_agreements": ["con-subcontract", "con-professional-services"]
+    },
+    {
+      "id": "con-nec-fidic",
+      "name": "NEC4 / FIDIC Engineering and Construction Contract",
+      "category": "construction",
+      "description": "The NEC4 Engineering and Construction Contract (ECC) and FIDIC Conditions of Contract for Construction are internationally recognised standard form contracts for engineering and construction works. NEC4 is mandated for UK government projects and is characterised by its collaborative ethos, compensation event mechanism, and plain language drafting. FIDIC is the dominant standard form for international construction, particularly for projects funded by multilateral development banks. Both forms provide comprehensive risk allocation frameworks suited to complex engineering projects.",
+      "required_clauses": ["con-interim-payment", "con-retention", "con-practical-completion", "con-defects-liability", "con-extension-of-time", "con-delay-damages", "con-variation-orders", "con-loss-expense", "con-adjudication", "con-insurance-car", "con-cdm-regulations"],
+      "recommended_clauses": ["con-performance-bond", "con-advance-payment-guarantee", "con-dispute-adjudication-board", "con-parent-company-guarantee", "con-sustainability-requirements", "con-sectional-completion", "con-final-account", "con-modern-slavery-construction"],
+      "typical_parties": "Employer/Client <-> Contractor (with Project Manager/Engineer)",
+      "regulatory_drivers": ["Housing Grants, Construction and Regeneration Act 1996", "CDM Regulations 2015", "FIDIC Conditions of Contract 2017"],
+      "related_agreements": ["con-subcontract", "con-professional-services"]
+    },
+    {
+      "id": "con-subcontract",
+      "name": "Construction Subcontract",
+      "category": "construction",
+      "description": "A subcontract agreement between the main contractor and a specialist subcontractor for the execution of a defined portion of the works. Construction subcontracts must comply with the Housing Grants, Construction and Regeneration Act 1996, including the right to adjudication, periodic payment requirements, and the prohibition on pay-when-paid clauses. Standard forms include the JCT Standard Building Sub-Contract (SBCSub), JCT Design and Build Sub-Contract (DBSub), and NEC4 Engineering and Construction Subcontract (ECS).",
+      "required_clauses": ["con-interim-payment", "con-retention", "con-defects-liability", "con-adjudication", "con-back-to-back", "con-pay-when-paid-prohibition", "con-right-to-suspend", "con-cdm-regulations"],
+      "recommended_clauses": ["con-variation-orders", "con-extension-of-time", "con-delay-damages", "con-collateral-warranty", "con-performance-bond", "con-prompt-payment", "con-site-access", "con-modern-slavery-construction", "con-assignment-novation"],
+      "typical_parties": "Main Contractor <-> Subcontractor",
+      "regulatory_drivers": ["Housing Grants, Construction and Regeneration Act 1996", "CDM Regulations 2015"],
+      "related_agreements": ["con-jct-contract", "con-nec-fidic"]
+    },
+    {
+      "id": "con-professional-services",
+      "name": "Construction Professional Services Appointment",
+      "category": "construction",
+      "description": "An appointment of a construction professional (architect, structural engineer, M&E engineer, quantity surveyor, project manager, or principal designer) to provide design, advisory, or management services for a construction project. Standard forms include the RIBA Professional Services Contract, ACE Agreement, and NEC4 Professional Service Contract (PSC). The appointment must address the professional's duty of care, design liability standard, collateral warranty obligations, PI insurance requirements, and CDM duty holder role.",
+      "required_clauses": ["con-design-liability", "con-professional-indemnity", "con-cdm-regulations", "con-adjudication", "con-collateral-warranty"],
+      "recommended_clauses": ["con-insurance-pi", "con-novation", "con-building-safety", "con-sustainability-requirements", "con-assignment-novation"],
+      "typical_parties": "Employer/Client <-> Architect/Engineer/Consultant",
+      "regulatory_drivers": ["CDM Regulations 2015", "Building Safety Act 2022", "Architects Act 1997"],
+      "related_agreements": ["con-jct-contract", "con-design-build"]
+    },
+    {
+      "id": "con-design-build",
+      "name": "Design and Build Contract",
+      "category": "construction",
+      "description": "A construction contract under which the contractor assumes responsibility for both the design and construction of the works, based on the employer's requirements. The contractor develops the design, procures materials, and builds the works as a single point of responsibility. The JCT Design and Build Contract (DB) 2016 is the most commonly used form in England and Wales. Design-and-build procurement transfers design risk to the contractor but requires careful attention to the design liability standard and the interface between the Employer's Requirements and the Contractor's Proposals.",
+      "required_clauses": ["con-design-liability", "con-professional-indemnity", "con-interim-payment", "con-retention", "con-practical-completion", "con-defects-liability", "con-extension-of-time", "con-delay-damages", "con-variation-orders", "con-adjudication", "con-insurance-car", "con-cdm-regulations"],
+      "recommended_clauses": ["con-performance-bond", "con-parent-company-guarantee", "con-collateral-warranty", "con-novation", "con-contractor-design-portion", "con-insurance-pi", "con-building-safety", "con-sustainability-requirements", "con-sectional-completion", "con-final-account"],
+      "typical_parties": "Employer <-> Design and Build Contractor",
+      "regulatory_drivers": ["Housing Grants, Construction and Regeneration Act 1996", "CDM Regulations 2015", "Building Safety Act 2022"],
+      "related_agreements": ["con-subcontract", "con-professional-services"]
+    },
+    {
+      "id": "con-epc-turnkey",
+      "name": "EPC / Turnkey Contract",
+      "category": "construction",
+      "description": "An Engineering, Procurement, and Construction (EPC) or turnkey contract under which the contractor assumes single-point responsibility for the engineering design, procurement of materials and equipment, and construction of the facility, delivering a completed and operational asset to the employer. EPC contracts are common for industrial, energy, and infrastructure projects. The FIDIC Silver Book (Conditions of Contract for EPC/Turnkey Projects) is the most widely used international standard form for EPC procurement. EPC contracts allocate the majority of risk to the contractor in exchange for a fixed lump sum price.",
+      "required_clauses": ["con-design-liability", "con-professional-indemnity", "con-interim-payment", "con-retention", "con-substantial-completion", "con-defects-liability", "con-delay-damages", "con-variation-orders", "con-performance-bond", "con-advance-payment-guarantee", "con-insurance-car", "con-adjudication", "con-cdm-regulations"],
+      "recommended_clauses": ["con-parent-company-guarantee", "con-dispute-adjudication-board", "con-collateral-warranty", "con-step-in-rights", "con-insurance-pi", "con-sectional-completion", "con-final-account", "con-building-safety", "con-sustainability-requirements", "con-termination-at-will"],
+      "typical_parties": "Employer/Owner <-> EPC Contractor",
+      "regulatory_drivers": ["FIDIC Silver Book 2017", "CDM Regulations 2015"],
+      "related_agreements": ["con-subcontract", "con-professional-services"]
+    },
+    {
+      "id": "con-framework-construction",
+      "name": "Construction Framework Agreement",
+      "category": "construction",
+      "description": "A framework agreement establishing the terms upon which one or more contractors may be engaged for construction works over a defined period, typically 3-5 years. Framework agreements are widely used in public sector procurement and by large corporate clients with ongoing construction programmes. Individual projects are called off under the framework using mini-competitions or direct award procedures. Standard forms include the JCT Framework Agreement (FA) and NEC4 Framework Contract (FC).",
+      "required_clauses": ["con-prompt-payment", "con-adjudication", "con-cdm-regulations", "con-modern-slavery-construction"],
+      "recommended_clauses": ["con-sustainability-requirements", "con-building-safety", "con-performance-bond", "con-parent-company-guarantee"],
+      "typical_parties": "Employer/Procuring Authority <-> Framework Contractor(s)",
+      "regulatory_drivers": ["Public Contracts Regulations 2015", "Procurement Act 2023", "Housing Grants, Construction and Regeneration Act 1996"],
+      "related_agreements": ["con-jct-contract", "con-nec-fidic", "con-design-build"]
+    },
+    {
+      "id": "con-maintenance",
+      "name": "Building Maintenance and Facilities Management Contract",
+      "category": "construction",
+      "description": "A contract for the ongoing maintenance, repair, and management of a building or group of buildings after completion of the initial construction. Covers planned preventive maintenance, reactive repairs, lifecycle replacement, building services maintenance, and compliance with statutory requirements. May be procured as a standalone contract or as part of a wider facilities management agreement. The NEC4 Term Service Contract (TSC) is commonly used for this purpose.",
+      "required_clauses": ["con-defects-liability", "con-interim-payment", "con-adjudication", "con-cdm-regulations"],
+      "recommended_clauses": ["con-prompt-payment", "con-building-safety", "con-sustainability-requirements", "con-modern-slavery-construction", "con-performance-bond", "con-right-to-suspend"],
+      "typical_parties": "Building Owner/Occupier <-> Maintenance Contractor/FM Provider",
+      "regulatory_drivers": ["Housing Grants, Construction and Regeneration Act 1996", "Building Safety Act 2022", "CDM Regulations 2015"],
+      "related_agreements": ["con-framework-construction", "con-professional-services"]
+    }
+  ],
+  "risk_patterns": [
+    {
+      "id": "con-risk-retention-no-trust",
+      "name": "Retention Not Held in Trust",
+      "risk_category": "financial",
+      "clause_type": "construction",
+      "trigger": "Retention monies not required to be held in a designated trust account or retention bond not available as alternative",
+      "description": "Where retention monies are not held in trust, they form part of the employer's general assets and are at risk of being lost in the event of employer insolvency. The contractor may lose both the retention fund and any recourse for its recovery.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Loss of 3-5% of contract value if the employer becomes insolvent before retention is released.",
+      "detection_guidance": "Check whether the retention clause requires monies to be held in a designated trust account. Verify whether a retention bond is offered as an alternative. Flag contracts where retention is held by the employer without trust protection.",
+      "remediation": "Require retention to be held in a designated trust account, or negotiate a retention bond in lieu of cash retention. Under JCT clause 4.18, the contractor can request that retention is held in trust.",
+      "real_world_impact": "The Carillion collapse in 2018 resulted in widespread loss of retention monies by subcontractors, estimated at hundreds of millions of pounds across the supply chain."
+    },
+    {
+      "id": "con-risk-fitness-for-purpose",
+      "name": "Uninsurable Fitness for Purpose Obligation",
+      "risk_category": "contractual",
+      "clause_type": "construction",
+      "trigger": "Design liability clause imposes a fitness for purpose standard without limiting liability to the level of professional indemnity insurance available",
+      "description": "A fitness for purpose obligation imposes strict liability on the contractor or designer, regardless of whether they exercised reasonable skill and care. Standard PI insurance policies exclude fitness for purpose liability, leaving the contractor or designer personally exposed to claims that cannot be passed to their insurers.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Uninsured liability for the full cost of redesign and reconstruction where the design does not achieve the required purpose, potentially exceeding the contract value.",
+      "detection_guidance": "Search for 'fit for purpose', 'fitness for purpose', 'suitable for its intended purpose', or 'achieve the performance requirements' language in design liability clauses. Cross-reference with PI insurance requirements.",
+      "remediation": "Replace fitness for purpose with a reasonable skill and care standard, or limit fitness for purpose liability to the level of PI insurance available. Reference JCT DB 2016 clause 2.17.1 approach.",
+      "real_world_impact": "MT Hojgaard A/S v E.ON Climate & Renewables UK Robin Rigg East Ltd [2017] UKSC 59 established that fitness for purpose obligations can survive even where the contractor complied with the employer's specification."
+    },
+    {
+      "id": "con-risk-no-eot-mechanism",
+      "name": "Missing Extension of Time Mechanism",
+      "risk_category": "contractual",
+      "clause_type": "construction",
+      "trigger": "Contract contains liquidated damages for delay but lacks a valid extension of time mechanism for employer-caused delays",
+      "description": "Without a valid extension of time mechanism, the prevention principle may render the liquidated damages clause unenforceable where the employer causes or contributes to delay. Time becomes 'at large' and the employer loses the right to levy liquidated damages, being limited to proving actual loss.",
+      "severity": "critical",
+      "likelihood": "rare",
+      "impact": "Complete loss of liquidated damages entitlement, potentially worth millions on large projects. Employer must prove actual loss, which is significantly more difficult and expensive.",
+      "detection_guidance": "Check for the presence of both liquidated damages and extension of time clauses. Verify that the extension of time clause covers all employer risk events. Flag any gaps where employer-caused delay is not addressed.",
+      "remediation": "Include a comprehensive extension of time clause covering all Relevant Events (JCT) or compensation events (NEC4) including employer-caused delays. Ensure the mechanism is fair and workable.",
+      "real_world_impact": "Peak Construction (Liverpool) Ltd v McKinney Foundations Ltd [1970] established that an employer cannot hold a contractor to a completion date that the employer has prevented the contractor from meeting."
+    },
+    {
+      "id": "con-risk-pay-when-paid",
+      "name": "Ineffective Pay-When-Paid Clause",
+      "risk_category": "compliance",
+      "clause_type": "construction",
+      "trigger": "Subcontract contains a clause making payment conditional upon the main contractor receiving payment from the employer",
+      "description": "Pay-when-paid clauses are rendered ineffective by s.113 of the Housing Grants, Construction and Regeneration Act 1996 (except where the third party is insolvent). Including such clauses creates a false sense of security for the main contractor and may expose it to claims from subcontractors.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "The pay-when-paid clause will be struck down, and the subcontractor will be entitled to payment based on the default provisions of the Scheme for Construction Contracts.",
+      "detection_guidance": "Search for language making payment conditional on upstream payment, certification, or receipt of funds. Look for 'pay when paid', 'pay when certified', 'conditional upon receipt', or similar formulations.",
+      "remediation": "Remove pay-when-paid provisions and establish an independent payment mechanism compliant with the Construction Act. Ensure payment terms, due dates, and final dates for payment are clearly specified.",
+      "real_world_impact": "Henia Investments Inc v Beck Interiors Ltd [2015] examined the distinction between pay-when-paid and pay-if-certified provisions under the Construction Act."
+    },
+    {
+      "id": "con-risk-inadequate-performance-bond",
+      "name": "Inadequate Performance Bond Coverage",
+      "risk_category": "financial",
+      "clause_type": "construction",
+      "trigger": "Performance bond absent, below 10% of contract value, or in on-demand form without understanding of the risk profile",
+      "description": "An inadequate performance bond leaves the employer without sufficient financial security to fund completion of the works by an alternative contractor in the event of the original contractor's default. The cost of completing works following contractor default typically exceeds the original contract sum by 20-40%.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Insufficient funds to engage an alternative contractor, resulting in the employer bearing the excess completion costs directly.",
+      "detection_guidance": "Verify the performance bond amount (should be at least 10% of contract value). Check the bond form (conditional or on-demand). Verify the surety's credit rating. Confirm the bond duration covers the defects liability period.",
+      "remediation": "Require a performance bond at 10% of contract value in conditional (ABI) form. Ensure the surety has a minimum A- credit rating. Require the bond to remain in force until expiry of the defects liability period.",
+      "real_world_impact": null
+    },
+    {
+      "id": "con-risk-no-adjudication-compliance",
+      "name": "Non-Compliant Adjudication Provisions",
+      "risk_category": "compliance",
+      "clause_type": "construction",
+      "trigger": "Adjudication clause absent, or present but non-compliant with the Housing Grants, Construction and Regeneration Act 1996",
+      "description": "The right to adjudication is a statutory entitlement under Part II of the Construction Act. Where the contract does not include a compliant adjudication clause, the Scheme for Construction Contracts 1998 will be implied, potentially producing a less favourable procedure than one tailored to the project.",
+      "severity": "medium",
+      "likelihood": "occasional",
+      "impact": "The Scheme for Construction Contracts will be implied by operation of law. While adjudication rights are preserved, the parties lose the ability to tailor the procedure to the project.",
+      "detection_guidance": "Check for an adjudication clause. Verify compliance with Part II of the Construction Act: right to refer disputes at any time, adjudicator appointment within 7 days, decision within 28 days (extendable by 14 days). Flag any attempts to restrict the right to adjudicate.",
+      "remediation": "Include a fully compliant adjudication clause specifying the nominating body, timetable, and adjudicator's powers. Use the JCT or NEC4 adjudication provisions as a compliant starting point.",
+      "real_world_impact": "Macob Civil Engineering Ltd v Morrison Construction Ltd [1999] established that adjudicator's decisions are enforceable by summary judgment, making compliance essential."
+    },
+    {
+      "id": "con-risk-cdm-non-compliance",
+      "name": "CDM 2015 Duty Holder Non-Compliance",
+      "risk_category": "regulatory",
+      "clause_type": "construction",
+      "trigger": "Construction contract does not identify CDM duty holders or allocate CDM responsibilities, or fails to appoint a principal designer or principal contractor",
+      "description": "Failure to comply with the Construction (Design and Management) Regulations 2015 is a criminal offence. Where the contract does not identify CDM duty holders, the statutory duties default to the client, creating potential criminal liability for the employer and exposing all parties to HSE enforcement action.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Criminal prosecution, HSE enforcement notices, stop-work orders, and personal liability for directors and officers.",
+      "detection_guidance": "Check for CDM duty holder appointments (principal designer, principal contractor). Verify that CDM responsibilities are allocated in the contract. Check for a construction phase plan requirement. Verify notification requirements for notifiable projects.",
+      "remediation": "Include explicit CDM duty holder appointments. Require the principal contractor to prepare and maintain the construction phase plan. Include the health and safety file requirement. Verify notification for projects exceeding CDM thresholds.",
+      "real_world_impact": "HSE regularly prosecutes for CDM non-compliance, with fines up to unlimited amounts for corporate offenders and potential imprisonment for individuals."
+    },
+    {
+      "id": "con-risk-no-payment-notice",
+      "name": "Missing Payment and Pay Less Notice Requirements",
+      "risk_category": "compliance",
+      "clause_type": "construction",
+      "trigger": "Construction contract does not include adequate payment notice and pay less notice provisions as required by the Construction Act",
+      "description": "The Housing Grants, Construction and Regeneration Act 1996 (as amended) requires construction contracts to provide for payment notices under s.110A and pay less notices under s.111. Where the contract does not comply, the employer may be unable to withhold or reduce payment from the notified sum, even where there are legitimate grounds for deduction.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Employer must pay the full notified sum regardless of contra-charges, defective work, or set-off claims. The failure to serve a valid pay less notice has been the basis for numerous adjudication referrals.",
+      "detection_guidance": "Check for payment notice provisions (specifying the sum considered due and the basis of calculation). Check for pay less notice provisions (with the required content and timing). Verify compliance with s.110A and s.111 of the Construction Act.",
+      "remediation": "Include compliant payment notice provisions (s.110A) specifying the payer's obligation to serve a payment notice by the prescribed date. Include pay less notice provisions (s.111) allowing the payer to give notice of its intention to pay less than the notified sum. Specify the required content and timing for each notice.",
+      "real_world_impact": "ISG Construction Ltd v Seevic College [2014] demonstrated that failure to serve a valid pay less notice results in the employer being obliged to pay the contractor's application sum in full."
+    },
+    {
+      "id": "con-risk-inadequate-delay-damages",
+      "name": "Delay Damages Not a Genuine Pre-Estimate",
+      "risk_category": "contractual",
+      "clause_type": "construction",
+      "trigger": "Liquidated damages rate set at an arbitrary figure without documented basis for calculation, or set at a punitive level disproportionate to likely loss",
+      "description": "Liquidated damages that do not represent a genuine pre-estimate of the employer's likely loss may be challenged as penal and potentially unenforceable. Following the Supreme Court's decision in Cavendish Square v Makdessi [2015], the test is whether the clause imposes a detriment out of all proportion to any legitimate interest of the employer in enforcing performance.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "If delay damages are struck down as penal, the employer loses the certainty of liquidated damages and must prove actual loss, which is significantly more difficult and expensive.",
+      "detection_guidance": "Request the basis for the delay damages calculation. Compare the rate against typical employer losses (financing costs, lost rental income, additional supervision, third-party liabilities). Flag rates that appear disproportionate to likely loss or are expressed as a round number without justification.",
+      "remediation": "Document the basis for the delay damages calculation at the time of contract drafting. Include financing costs, lost rental income, additional professional fees, and third-party liabilities. Apply a reasonable cap (typically 5-10% of contract sum).",
+      "real_world_impact": null
+    },
+    {
+      "id": "con-risk-building-safety-non-compliance",
+      "name": "Building Safety Act Non-Compliance for Higher-Risk Buildings",
+      "risk_category": "regulatory",
+      "clause_type": "construction",
+      "trigger": "Higher-risk building project without Building Safety Act 2022 gateway compliance, golden thread requirements, or dutyholder appointments",
+      "description": "The Building Safety Act 2022 imposes stringent requirements on higher-risk buildings (at least 18m or 7+ storeys with 2+ residential units). Non-compliance can result in the Building Safety Regulator refusing to grant a completion certificate, prohibiting occupation, and taking enforcement action against dutyholders.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Inability to obtain completion certificate, prohibition on occupation, enforcement action by the Building Safety Regulator, extended liability periods of up to 30 years for defective products, and reputational damage.",
+      "detection_guidance": "Determine whether the project is a higher-risk building. Check for gateway compliance provisions (Gateways 1, 2, and 3). Verify dutyholder appointments (Client, Principal Designer, Principal Contractor). Check for golden thread of building information requirements. Verify mandatory occurrence reporting provisions.",
+      "remediation": "Include comprehensive Building Safety Act compliance provisions covering all three gateways, dutyholder responsibilities, golden thread requirements, and mandatory occurrence reporting. Ensure collateral warranties and limitation provisions reflect the extended liability periods.",
+      "real_world_impact": "The Grenfell Tower tragedy and subsequent inquiry were key drivers behind the Building Safety Act 2022, which fundamentally reformed building safety regulation for higher-risk buildings."
+    },
+    {
+      "id": "con-risk-no-collateral-warranties",
+      "name": "Missing Collateral Warranty Requirements",
+      "risk_category": "contractual",
+      "clause_type": "construction",
+      "trigger": "Construction contract does not require the contractor to provide collateral warranties to funders, purchasers, or tenants",
+      "description": "Without collateral warranties, third parties (funders, purchasers, and tenants) have no direct contractual relationship with the contractor and cannot bring claims for defective work or design. This can affect the marketability and fundability of the development, and may breach the employer's obligations to its funder.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Development may be unfundable or unsellable without collateral warranties in place. Third parties have no direct recourse against the contractor for defective work.",
+      "detection_guidance": "Check for collateral warranty obligations in the main contract. Verify that warranties are required in favour of funders, purchasers, and tenants. Check the required warranty form. Verify that subcontractor warranties are also required.",
+      "remediation": "Include a contractual obligation to provide collateral warranties in approved form to funders, purchasers, and tenants. Append the agreed warranty forms as schedules to the building contract. Require flow-down to subcontractors and consultants.",
+      "real_world_impact": null
+    },
+    {
+      "id": "con-risk-suspension-without-notice",
+      "name": "Contractor Suspension Without Proper Notice",
+      "risk_category": "operational",
+      "clause_type": "construction",
+      "trigger": "Contractor purports to suspend works without giving the required 7 days' written notice under s.112 of the Construction Act",
+      "description": "A contractor who suspends performance without complying with the statutory notice requirements under s.112 of the Housing Grants, Construction and Regeneration Act 1996 may lose the statutory protection against termination and delay damages. Improper suspension may itself constitute a breach of contract.",
+      "severity": "medium",
+      "likelihood": "occasional",
+      "impact": "Contractor loses statutory protection and may be liable for delay damages. Employer may treat improper suspension as a repudiatory breach and terminate the contract.",
+      "detection_guidance": "Monitor for suspension threats or actual suspension of works. Verify that the required 7-day written notice has been served. Check that the ground for suspension (non-payment after final date) is valid. Verify that no effective pay less notice was served.",
+      "remediation": "Ensure the contract clearly sets out the suspension procedure including the 7-day notice requirement. Train project managers to recognise and respond to suspension notices promptly. Establish internal procedures for serving timely pay less notices.",
+      "real_world_impact": null
+    }
+  ],
+  "negotiation_intelligence": [
+    {
+      "id": "neg-con-retention-percentage",
+      "clause_type": "construction",
+      "flag_level": "amber",
+      "condition": "Retention percentage exceeds 5% of interim payment valuations",
+      "explanation": "Retention above 5% is above market standard and places disproportionate cash flow pressure on the contractor. Industry standard is 3-5%, with an increasing trend toward 3% or retention bonds in lieu of cash retention.",
+      "market_standard": "3-5% retention is market standard under JCT and NEC4 contracts. Public sector increasingly moving to 0% retention or retention bonds.",
+      "suggested_response": "Counter with 3% retention or offer a retention bond from a reputable surety in lieu of cash retention. If 5% is insisted upon, require retention to be held in a designated trust account.",
+      "perspective": "seller",
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-subcontract", "con-design-build", "con-epc-turnkey"]
+    },
+    {
+      "id": "neg-con-fitness-for-purpose",
+      "clause_type": "construction",
+      "flag_level": "red",
+      "condition": "Design liability clause imposes a fitness for purpose obligation on the contractor or designer",
+      "explanation": "Fitness for purpose is a strict liability standard that is generally uninsurable under professional indemnity insurance policies. Accepting fitness for purpose creates a gap between the contractor's contractual liability and its insurance cover, exposing the contractor to uninsured claims.",
+      "market_standard": "Reasonable skill and care is the standard design liability obligation under JCT DB 2016 clause 2.17.1 and most standard form construction contracts. Fitness for purpose is the exception, not the norm.",
+      "suggested_response": "Reject fitness for purpose and counter with reasonable skill and care consistent with a competent professional of the relevant discipline. If the employer insists, limit fitness for purpose liability to the level of available PI insurance and require the employer to accept the insurance market position.",
+      "perspective": "seller",
+      "contract_types": ["con-design-build", "con-epc-turnkey", "con-professional-services"]
+    },
+    {
+      "id": "neg-con-delay-damages-rate",
+      "clause_type": "construction",
+      "flag_level": "amber",
+      "condition": "Liquidated damages rate exceeds 0.5% of contract sum per week or aggregate cap exceeds 10% of contract sum",
+      "explanation": "Delay damages above 0.5% per week or with an aggregate cap above 10% of the contract sum may be disproportionate to the employer's likely loss and could be challenged as penal under the Cavendish Square v Makdessi [2015] test.",
+      "market_standard": "Typical delay damages range from 0.1% to 0.5% of contract sum per week, with an aggregate cap of 5-10% of contract sum. The rate should reflect the employer's genuine pre-estimate of loss.",
+      "suggested_response": "Request the employer's calculation basis for the delay damages rate. Counter with a rate that reflects documented likely losses (financing costs, lost rental income, additional professional fees). Insist on a reasonable aggregate cap of 5% of contract sum.",
+      "perspective": "seller",
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"]
+    },
+    {
+      "id": "neg-con-no-eot-employer-delay",
+      "clause_type": "construction",
+      "flag_level": "red",
+      "condition": "Extension of time clause does not cover employer-caused delays or neutral events such as exceptionally adverse weather",
+      "explanation": "An extension of time clause that does not cover employer-caused delays may trigger the prevention principle, rendering the liquidated damages clause unenforceable. This paradoxically disadvantages the employer by placing time at large.",
+      "market_standard": "All standard form construction contracts (JCT, NEC4, FIDIC) include comprehensive extension of time provisions covering both employer risk events and neutral events.",
+      "suggested_response": "Require the extension of time clause to cover all employer risk events (late information, variations, employer-caused access delays) and neutral events (exceptionally adverse weather, force majeure). Reference the JCT Relevant Events list as a benchmark.",
+      "perspective": "both",
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"]
+    },
+    {
+      "id": "neg-con-no-performance-bond",
+      "clause_type": "construction",
+      "flag_level": "amber",
+      "condition": "No performance bond required for a contract exceeding GBP 1 million in value",
+      "explanation": "For contracts above GBP 1 million, the absence of a performance bond leaves the employer without financial security to fund completion by an alternative contractor if the original contractor defaults. The cost of completing works following default typically exceeds the original contract sum by 20-40%.",
+      "market_standard": "Performance bonds at 10% of contract value are standard for contracts above GBP 500,000-1,000,000. The ABI Model Form of Guarantee Bond is the industry standard conditional form.",
+      "suggested_response": "Require a performance bond at 10% of contract value in conditional (ABI) form from a surety with a minimum A- credit rating. The bond should remain in force until expiry of the defects liability period.",
+      "perspective": "buyer",
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"]
+    },
+    {
+      "id": "neg-con-unlimited-variation",
+      "clause_type": "construction",
+      "flag_level": "amber",
+      "condition": "Variation clause allows unlimited scope changes without a cap on cumulative variations or a right for the contractor to object",
+      "explanation": "An unlimited variation power allows the employer to fundamentally change the scope of the works without the contractor's agreement, potentially transforming the project beyond what was priced. The contractor should have the right to object to variations that exceed a reasonable threshold.",
+      "market_standard": "Standard forms permit variations within reasonable limits. Some bespoke contracts cap cumulative variations at 15-25% of contract sum, beyond which the contractor's consent is required.",
+      "suggested_response": "Include a threshold (15-20% of contract sum) beyond which the contractor may object to further variations. Require all variations to be instructed in writing before work commences. Ensure the valuation mechanism is fair and includes profit.",
+      "perspective": "seller",
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"]
+    },
+    {
+      "id": "neg-con-balanced-risk-allocation",
+      "clause_type": "construction",
+      "flag_level": "green",
+      "condition": "Contract uses a standard form (JCT, NEC4, or FIDIC) without heavily amended risk allocation, with fair extension of time provisions, reasonable delay damages, and standard retention at 3-5%",
+      "explanation": "Unamended or lightly amended standard form construction contracts represent decades of industry consensus on fair risk allocation. They provide tried and tested provisions that are well understood by the market and have established case law.",
+      "market_standard": "Standard form contracts (JCT 2016, NEC4, FIDIC 2017) with only project-specific amendments represent best practice in risk allocation for construction projects.",
+      "suggested_response": "Accept. Verify that any bespoke amendments are reasonable and do not undermine the balanced risk allocation of the standard form. Focus negotiation on genuinely project-specific matters rather than seeking to shift standard form risk positions.",
+      "perspective": "both",
+      "contract_types": ["con-jct-contract", "con-nec-fidic", "con-design-build", "con-epc-turnkey"]
+    },
+    {
+      "id": "neg-con-subcontract-payment-terms",
+      "clause_type": "construction",
+      "flag_level": "red",
+      "condition": "Subcontract payment terms exceed 45 days from application or include pay-when-paid provisions",
+      "explanation": "Payment terms exceeding 45 days in a subcontract create severe cash flow pressure on smaller subcontractors and may breach the Prompt Payment Code. Pay-when-paid clauses are ineffective under s.113 of the Construction Act but their inclusion signals an attempt to transfer payment risk unlawfully.",
+      "market_standard": "Subcontractor payment within 30 days of application is industry best practice. The Prompt Payment Code requires 95% of invoices to be paid within 60 days, with a target of 30 days.",
+      "suggested_response": "Insist on payment within 30 days of application. Remove any pay-when-paid provisions as they are ineffective under the Construction Act and create legal risk. Reference the Prompt Payment Code and government procurement requirements.",
+      "perspective": "seller",
+      "contract_types": ["con-subcontract"]
+    }
+  ],
+  "clause_interactions": [
+    {
+      "id": "con-retention-limits-interim-payment",
+      "clause_a": "con-retention",
+      "clause_b": "con-interim-payment",
+      "relationship": "limits",
+      "description": "Retention deductions reduce the amounts actually received by the contractor under interim payment certificates, creating a cash flow impact that accumulates over the project duration.",
+      "review_guidance": "Verify that the retention percentage is market standard (3-5%). Check whether a retention bond alternative is available. Ensure retention release dates align with practical completion and defects liability period expiry.",
+      "risk_if_misaligned": "Excessive retention combined with standard payment terms creates disproportionate cash flow pressure on the contractor, potentially affecting the contractor's ability to fund the works."
+    },
+    {
+      "id": "con-eot-requires-delay-damages",
+      "clause_a": "con-extension-of-time",
+      "clause_b": "con-delay-damages",
+      "relationship": "requires",
+      "description": "A valid extension of time mechanism is a prerequisite for enforceable liquidated damages. Without it, the prevention principle may render delay damages unenforceable where the employer causes any delay.",
+      "review_guidance": "Verify that the extension of time clause covers all employer risk events and neutral events. Cross-reference the delay events against the JCT Relevant Events or NEC4 compensation events as a completeness check.",
+      "risk_if_misaligned": "If the extension of time clause does not cover employer-caused delays, time becomes at large and the employer loses the right to levy liquidated damages entirely."
+    },
+    {
+      "id": "con-design-liability-requires-pi",
+      "clause_a": "con-design-liability",
+      "clause_b": "con-professional-indemnity",
+      "relationship": "requires",
+      "description": "Design liability obligations are only meaningful if backed by professional indemnity insurance sufficient to fund claims. The design liability standard must be consistent with what PI insurers will cover.",
+      "review_guidance": "Verify that the design liability standard (reasonable skill and care vs fitness for purpose) is insurable under the required PI policy. Confirm PI insurance coverage amounts are proportionate to the design risk. Check that the PI maintenance period aligns with the limitation period.",
+      "risk_if_misaligned": "A fitness for purpose design liability with a reasonable skill and care PI policy creates an insurance gap, leaving the designer personally exposed to the difference between the two standards."
+    },
+    {
+      "id": "con-back-to-back-conflicts-pay-when-paid",
+      "clause_a": "con-back-to-back",
+      "clause_b": "con-pay-when-paid-prohibition",
+      "relationship": "conflicts-with",
+      "description": "Back-to-back subcontract provisions that make subcontractor payment conditional upon main contract certification or payment may conflict with the statutory prohibition on pay-when-paid clauses under s.113 of the Construction Act.",
+      "review_guidance": "Review back-to-back payment provisions carefully. Ensure that subcontractor payment is not conditional upon the main contractor receiving payment from the employer. Verify that the subcontract has an independent payment mechanism compliant with the Construction Act.",
+      "risk_if_misaligned": "Pay-when-paid provisions within back-to-back arrangements will be struck down by operation of law, and the Scheme for Construction Contracts will be implied to fill the gap, potentially on less favourable terms."
+    },
+    {
+      "id": "con-collateral-warranty-supplements-step-in",
+      "clause_a": "con-collateral-warranty",
+      "clause_b": "con-step-in-rights",
+      "relationship": "supplements",
+      "description": "Collateral warranties and step-in rights work together to protect third-party interests. The collateral warranty provides a direct cause of action for defective work, while step-in rights provide the mechanism for a funder to preserve the building contract upon employer default.",
+      "review_guidance": "Ensure that step-in rights are included in funder collateral warranties. Verify that the step-in notice period aligns with the funder's security enforcement timeline. Check that the contractor's obligations upon step-in are clearly defined.",
+      "risk_if_misaligned": "A collateral warranty without step-in rights leaves the funder unable to preserve the building contract upon employer default, potentially losing the value of work completed and creating project abandonment risk."
+    }
+  ]
+}

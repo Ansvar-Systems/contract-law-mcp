@@ -1,0 +1,667 @@
+{
+  "clause_types": [
+    {
+      "id": "gov-public-procurement",
+      "clause_category": "government",
+      "name": "Public Procurement Compliance",
+      "description": "Requires all procurement activities to comply with applicable public procurement law, including EU Directive 2014/24/EU (public sector) and 2014/25/EU (utilities), or equivalent national transpositions. The contracting authority must follow prescribed procedures (open, restricted, competitive dialogue, innovation partnership) based on contract value thresholds and subject matter. Non-compliance may render the contract voidable or subject to challenge before national review bodies.",
+      "drafting_guidance": "Specify the applicable procurement regime (EU Directives 2014/24/EU or 2014/25/EU, national transposition, or sub-threshold domestic rules such as the UK Procurement Act 2023 or US FAR). Identify the procurement procedure used (open, restricted, competitive procedure with negotiation, competitive dialogue, innovation partnership) and reference the OJEU/FTS contract notice number. Include representations that the procurement process was conducted lawfully and that all mandatory standstill periods were observed. Address the consequences of a successful procurement challenge (automatic ineffectiveness under the EU Remedies Directive 2007/66/EC, shortened contract, civil penalties). Specify record retention requirements for procurement documentation. Address the treatment of modifications and variations under Art 72 of Directive 2014/24/EU (permissible modifications without re-procurement). Include provisions for ensuring sub-threshold procurements comply with Treaty principles of transparency, equal treatment, and non-discrimination.",
+      "variations": {
+        "eu-above-threshold": "Full compliance with EU Public Procurement Directive 2014/24/EU for above-threshold contracts",
+        "sub-threshold": "Domestic procurement rules apply with Treaty principle compliance",
+        "utilities": "EU Utilities Directive 2014/25/EU applies with sector-specific flexibilities"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi", "gov-defence-contract"],
+      "depends_on": [],
+      "compliance_refs": ["EU Directive 2014/24/EU", "EU Directive 2014/25/EU", "EU Remedies Directive 2007/66/EC", "UK Procurement Act 2023", "FAR Part 6"]
+    },
+    {
+      "id": "gov-transparency-obligations",
+      "clause_category": "government",
+      "name": "Transparency and Disclosure Obligations",
+      "description": "Imposes affirmative obligations on the contractor to maintain transparency in all dealings with the contracting authority, including disclosure of financial arrangements, beneficial ownership, subcontracting chains, and potential conflicts of interest. Government contracts carry heightened transparency expectations reflecting the public interest in accountable expenditure of taxpayer funds. Failure to comply may constitute grounds for contract termination and debarment from future procurements.",
+      "drafting_guidance": "Require disclosure of beneficial ownership structures and any changes during the contract term. Mandate transparency regarding subcontracting arrangements including identity, scope, and value of subcontracts. Address the UK government's Transparency Principles requiring publication of contracts above specified thresholds on Contracts Finder or equivalent platforms. Specify ongoing disclosure obligations for material changes in the contractor's corporate structure, financial standing, or key personnel. Include provisions for disclosure of political donations, lobbying activities, and revolving-door employment of former public officials. Require the contractor to cooperate with any parliamentary, congressional, or legislative committee inquiries. Address the interaction with commercially sensitive information and the mechanisms for protecting genuine trade secrets while maintaining public accountability. Specify the format and frequency of transparency reporting.",
+      "variations": {
+        "uk-model": "Aligned with Crown Commercial Service transparency requirements and Contracts Finder publication",
+        "eu-model": "Compliance with EU procurement transparency rules including TED publication and e-Certis",
+        "us-model": "Aligned with FAR disclosure requirements including SAM.gov registration and FPDS-NG reporting"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi", "gov-defence-contract", "gov-grant-agreement"],
+      "depends_on": ["gov-public-procurement"],
+      "compliance_refs": ["EU Directive 2014/24/EU Art 50-55", "UK Procurement Act 2023 Part 5", "FAR 4.6"]
+    },
+    {
+      "id": "gov-audit-rights-public",
+      "clause_category": "government",
+      "name": "Government Audit and Inspection Rights",
+      "description": "Grants the contracting authority, the national audit office (e.g., NAO, GAO, European Court of Auditors), and other authorised public bodies unrestricted rights to audit, inspect, and access the contractor's records, premises, personnel, and systems related to the contract. Government audit rights are typically broader and more intrusive than commercial audit rights, reflecting the public accountability imperative and the expenditure of public funds.",
+      "drafting_guidance": "Grant audit rights to the contracting authority, the Comptroller and Auditor General (or equivalent national audit institution), the European Court of Auditors (for EU-funded contracts), and any other statutory auditor or inspector. Specify that audit rights extend to all records, books, accounts, documents, systems, and premises relevant to the contract. Require the contractor to retain all records for a minimum of six years (or longer where required by applicable regulation). Address the right to conduct unannounced inspections. Require the contractor to flow down equivalent audit rights to all subcontractors. Specify that the contractor must cooperate fully and at its own cost. Address the treatment of audit findings (remediation timelines, right to recover overpayments with interest). Include the right to access electronically stored information and to copy records. Address data protection considerations arising from audit access to personal data.",
+      "variations": {
+        "standard": "Annual audit rights with 30-day notice for the contracting authority and statutory auditors",
+        "enhanced": "Unrestricted access including unannounced inspections and real-time system access",
+        "eu-funded": "Extended audit rights including European Court of Auditors and OLAF for EU-funded contracts"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi", "gov-defence-contract", "gov-grant-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["National Audit Act 1983 (UK)", "31 USC 7501-7507 (US Single Audit Act)", "EU Financial Regulation 2018/1046 Art 129"]
+    },
+    {
+      "id": "gov-freedom-of-information",
+      "clause_category": "government",
+      "name": "Freedom of Information Compliance",
+      "description": "Acknowledges that the contracting authority is subject to freedom of information legislation (e.g., UK FOIA 2000, US FOIA 5 USC 552, EU Regulation 1049/2001) and that information provided by the contractor under the contract may be disclosed in response to information requests. The contractor must cooperate with the authority in processing requests and may not impose blanket confidentiality restrictions that would obstruct the authority's compliance with its statutory obligations.",
+      "drafting_guidance": "Acknowledge that the contracting authority is subject to FOIA or equivalent legislation and that it must comply with its statutory obligations regardless of any contractual confidentiality provisions. Require the contractor to identify genuinely commercially sensitive information at the time of submission, with a reasoned justification for each item (not blanket marking). Specify that the contracting authority retains the sole discretion to determine whether an exemption applies and to make disclosure decisions. Require the contractor to respond promptly (within 5 business days) to consultation requests from the authority regarding potential disclosures. Address the interaction between FOIA and contractual confidentiality clauses (FOIA overrides contractual confidentiality). Include an obligation on the contractor not to seek injunctive relief to prevent disclosure required by statute. Specify the process for pre-disclosure notification to the contractor where practicable. Address the Environmental Information Regulations (EIR) where applicable.",
+      "variations": {
+        "uk-foia": "Full compliance with Freedom of Information Act 2000 and Environmental Information Regulations 2004",
+        "us-foia": "Aligned with Freedom of Information Act 5 USC 552 and Exemption 4 for trade secrets",
+        "eu-regulation": "Compliance with Regulation 1049/2001 on public access to European Parliament, Council and Commission documents"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi", "gov-grant-agreement"],
+      "depends_on": ["gov-transparency-obligations"],
+      "compliance_refs": ["Freedom of Information Act 2000 (UK)", "5 USC 552 (US FOIA)", "EU Regulation 1049/2001", "Environmental Information Regulations 2004 (UK)"]
+    },
+    {
+      "id": "gov-data-sovereignty",
+      "clause_category": "government",
+      "name": "Data Sovereignty and Residency Requirements",
+      "description": "Requires that all government data, including personal data, classified information, and operationally sensitive information, is stored, processed, and transmitted only within approved jurisdictions. Government data sovereignty requirements are typically more restrictive than commercial data localisation provisions, often mandating domestic-only processing and prohibiting any offshore access, even for maintenance or support purposes. Non-compliance may trigger national security or criminal law sanctions.",
+      "drafting_guidance": "Specify the approved jurisdictions for data storage and processing (typically domestic only for classified or sensitive government data). Prohibit any transfer, access, or processing of government data outside the approved jurisdiction, including remote access by support or maintenance personnel. Address cloud computing requirements (FedRAMP authorisation in the US, G-Cloud or UK Cloud Security Principles in the UK, C5 in Germany, SecNumCloud in France). Require the contractor to ensure that no foreign government has legal authority to compel disclosure of the data (addressing concerns about the US CLOUD Act, FISA Section 702, and equivalent extraterritorial laws). Specify that all encryption keys must be held within the approved jurisdiction. Require the contractor to notify the contracting authority immediately of any foreign government access request. Address the security classification level of the data and the corresponding handling requirements. Specify the consequences of breach (immediate termination, indemnification, potential criminal liability).",
+      "variations": {
+        "domestic-only": "All data must remain within national borders at all times, including backups and disaster recovery",
+        "allied-nations": "Processing permitted within a defined group of allied nations (e.g., Five Eyes, EU/EEA)",
+        "cloud-certified": "Processing in certified cloud environments (FedRAMP, SecNumCloud, C5) regardless of physical location"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-defence-contract"],
+      "depends_on": ["gov-security-clearance"],
+      "compliance_refs": ["FedRAMP Authorization Act 2022", "UK Cloud Security Principles (NCSC)", "BSI C5 (Germany)", "SecNumCloud (France)"]
+    },
+    {
+      "id": "gov-security-clearance",
+      "clause_category": "government",
+      "name": "Security Clearance and Vetting Requirements",
+      "description": "Requires contractor personnel to hold and maintain appropriate security clearances or vetting status as a condition of performing work under the contract. The level of clearance required depends on the classification of information accessed and the sensitivity of the work. The contracting authority retains absolute discretion to refuse or revoke clearance, and the contractor must immediately remove any personnel who fail vetting or whose clearance is revoked.",
+      "drafting_guidance": "Specify the security clearance level required for each role category (e.g., Baseline Personnel Security Standard (BPSS), Security Check (SC), Developed Vetting (DV) in the UK; Confidential, Secret, Top Secret in the US; EU Confidential, EU Secret under Council Decision 2013/488/EU). Require clearances to be in place before personnel commence work. Address the contractor's obligation to sponsor personnel for clearance through the contracting authority's vetting process. Specify the contractor's obligation to notify the contracting authority immediately of any change in circumstances that may affect a person's clearance eligibility. Address the consequences of clearance refusal or revocation (removal from project, replacement personnel). Require the contractor to maintain a Facility Security Clearance (FSC) where required. Address the handling and storage requirements for classified information (secure facilities, TEMPEST requirements). Specify the contractor's obligations under the Official Secrets Act (UK) or equivalent legislation.",
+      "variations": {
+        "standard-vetting": "Baseline personnel security standard (BPSS) or equivalent for non-classified work",
+        "security-check": "Security Check (SC) or Secret clearance for access to classified information up to Secret level",
+        "developed-vetting": "Developed Vetting (DV) or Top Secret clearance for access to the most sensitive information"
+      },
+      "contract_types": ["gov-defence-contract", "gov-framework-agreement", "gov-call-off-contract"],
+      "depends_on": [],
+      "compliance_refs": ["HMG Security Policy Framework (UK)", "NISPOM 32 CFR Part 117 (US)", "Council Decision 2013/488/EU"]
+    },
+    {
+      "id": "gov-social-value",
+      "clause_category": "government",
+      "name": "Social Value Commitments",
+      "description": "Requires the contractor to deliver measurable social value outcomes as part of the contract, in accordance with the Public Services (Social Value) Act 2012 or equivalent policy frameworks. Social value encompasses economic, social, and environmental well-being improvements beyond the direct delivery of the contracted services. Social value commitments are typically evaluated as part of the procurement scoring and become binding contractual obligations.",
+      "drafting_guidance": "Specify the social value themes and outcomes committed to during the procurement (aligned with the Social Value Model or equivalent national framework). Define measurable KPIs for each social value commitment (e.g., number of apprenticeships created, percentage of spend with SMEs, carbon reduction targets, employment of disadvantaged groups). Require periodic reporting against social value KPIs (typically quarterly). Address the consequences of failure to deliver committed social value outcomes (remediation plan, service credits, adjustment of future evaluation scores). Specify the social value weighting used in the procurement evaluation (minimum 10% in UK central government). Include provisions for continuous improvement in social value delivery. Address the interaction between social value commitments and the contractor's corporate social responsibility programme. Require flow-down of social value requirements to subcontractors. Specify the monitoring and verification methodology.",
+      "variations": {
+        "uk-social-value-model": "Aligned with UK government Social Value Model themes: COVID-19 recovery, tackling economic inequality, fighting climate change, equal opportunity, wellbeing",
+        "community-benefit": "Focused on local community benefits including employment, training, and supply chain opportunities",
+        "environmental-focused": "Primary focus on environmental and sustainability outcomes"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi"],
+      "depends_on": [],
+      "compliance_refs": ["Public Services (Social Value) Act 2012 (UK)", "PPN 06/20 (UK)", "EU Directive 2014/24/EU Art 67(2)"]
+    },
+    {
+      "id": "gov-environmental-requirements",
+      "clause_category": "government",
+      "name": "Environmental and Sustainability Requirements",
+      "description": "Imposes mandatory environmental and sustainability obligations on the contractor, including carbon reduction targets, circular economy principles, waste minimisation, and compliance with government environmental policies. Government contracts increasingly require contractors to demonstrate progress toward net-zero emissions and to report on environmental performance throughout the contract term. These requirements reflect governmental commitments under the Paris Agreement and national climate legislation.",
+      "drafting_guidance": "Specify the environmental standards the contractor must meet (ISO 14001, EMAS, or equivalent environmental management system). Require the contractor to report Scope 1, 2, and 3 greenhouse gas emissions associated with the contract. Set carbon reduction targets aligned with the contracting authority's net-zero commitments. Require the submission and implementation of a Carbon Reduction Plan (as mandated by PPN 06/21 for UK central government contracts above the threshold). Address single-use plastics prohibition and circular economy requirements. Specify waste management and recycling obligations. Require the use of sustainable materials and sustainable supply chain practices. Address biodiversity net gain requirements where applicable. Specify reporting frequency and format. Include the right to audit environmental compliance. Address the consequences of non-compliance (remediation plan, performance deductions, termination for persistent failure). Flow down environmental requirements to subcontractors.",
+      "variations": {
+        "net-zero-aligned": "Comprehensive net-zero pathway with annual carbon reduction targets and Scope 1-3 reporting",
+        "carbon-reduction-plan": "Contractor must publish and implement a Carbon Reduction Plan per PPN 06/21",
+        "circular-economy": "Focus on waste reduction, recycling, reuse, and elimination of single-use materials"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi"],
+      "depends_on": [],
+      "compliance_refs": ["PPN 06/21 (UK Carbon Reduction Plan)", "Climate Change Act 2008 (UK)", "EU Green Deal", "FAR 23.1 (US Environmental Requirements)"]
+    },
+    {
+      "id": "gov-sme-subcontracting",
+      "clause_category": "government",
+      "name": "SME and Subcontracting Obligations",
+      "description": "Requires the prime contractor to ensure that small and medium-sized enterprises (SMEs), voluntary and community sector organisations (VCSEs), and diverse businesses have meaningful access to subcontracting opportunities under the contract. Government policy in many jurisdictions targets a specific percentage of procurement spend to flow to SMEs, and prime contractors are expected to actively facilitate this through their supply chain management practices.",
+      "drafting_guidance": "Specify the target percentage of contract value to be subcontracted to SMEs (e.g., UK government targets 33% of procurement spend with SMEs; US SBA targets vary by industry NAICS code). Require the contractor to publish subcontracting opportunities and to use the Supply Chain Event Management tool or equivalent platform. Mandate prompt payment to subcontractors (within 30 days as required by PPN 01/16 and the Public Contracts Regulations 2015 Reg 113). Require the contractor to report on SME subcontracting spend quarterly. Address the definition of SME (EU Recommendation 2003/361/EC: fewer than 250 employees, turnover not exceeding EUR 50 million). Specify the prohibition on unfair contract terms with subcontractors. Require the contractor to have a subcontracting plan approved by the contracting authority. Address the use of set-aside or reserved contracts for supported workshops under Art 20 of Directive 2014/24/EU. Specify the consequences of failure to meet SME subcontracting targets.",
+      "variations": {
+        "uk-model": "33% SME spend target with Contracts Finder advertising and 30-day payment flow-down",
+        "us-small-business": "SBA subcontracting plan with goals for small business, SDB, WOSB, HUBZone, and SDVOSB",
+        "eu-model": "Compliance with Directive 2014/24/EU Art 63 (reliance on subcontractor capacity) and Art 71 (subcontracting)"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-ppp-pfi"],
+      "depends_on": ["gov-public-procurement"],
+      "compliance_refs": ["EU Directive 2014/24/EU Art 71", "PPN 01/16 (UK)", "FAR 19.7 (US Small Business Subcontracting)", "EU Recommendation 2003/361/EC"]
+    },
+    {
+      "id": "gov-tupe-public",
+      "clause_category": "government",
+      "name": "TUPE and Employee Transfer Provisions",
+      "description": "Addresses the transfer of employees from the contracting authority to the contractor (on contract commencement) and from the contractor to a successor (on contract expiry or re-tender) under the Transfer of Undertakings (Protection of Employment) Regulations 2006 (TUPE) or equivalent legislation. Government outsourcing contracts must comply with the Cabinet Office Statement of Practice on Staff Transfers in the Public Sector and the Fair Deal for Staff Pensions guidance.",
+      "drafting_guidance": "Identify whether TUPE applies (relevant transfer or service provision change under TUPE Regulations 2006). Require the outgoing employer to provide Employee Liability Information (ELI) at least 28 days before the transfer date (Regulation 11). Specify the obligations regarding pension provision under the Fair Deal for Staff Pensions (broadly comparable pension scheme or admitted body status in the LGPS). Address the information and consultation obligations under Regulation 13. Specify the allocation of pre-transfer and post-transfer employment liabilities. Address the treatment of collective agreements. Specify the prohibition on dismissals connected with the transfer (unfair dismissal under Regulation 7). Address variations to terms and conditions (Regulation 4(4) and (5)). Require the contractor to provide equivalent terms and conditions. Specify indemnities for employment claims. Address the requirement for pension protection under the Pensions Act 2004 and Fair Deal guidance. Specify obligations at contract exit (second-generation outsourcing or insourcing).",
+      "variations": {
+        "standard-tupe": "Full TUPE compliance with ELI provision and indemnity allocation",
+        "fair-deal-pensions": "TUPE plus Fair Deal pension protection including admitted body status or broadly comparable scheme",
+        "second-generation": "Provisions for subsequent transfers on re-tender or insourcing"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi"],
+      "depends_on": [],
+      "compliance_refs": ["TUPE Regulations 2006 (UK)", "Cabinet Office Statement of Practice on Staff Transfers", "Fair Deal for Staff Pensions (UK)", "EU Directive 2001/23/EC (Acquired Rights)"]
+    },
+    {
+      "id": "gov-service-credits",
+      "clause_category": "government",
+      "name": "Government Service Credits Regime",
+      "description": "Defines the service credit mechanism applicable to government contracts, typically following the Crown Commercial Service model service credit regime. Government service credits are calculated as a percentage of the applicable charges and credited against future invoices when service levels are not met. The regime includes escalation thresholds that trigger additional remedies including termination rights for persistent underperformance.",
+      "drafting_guidance": "Align with the Crown Commercial Service model service credit framework or equivalent government standard. Define the service levels and corresponding service credit rates for each service level failure (typically 1-5% of monthly charges per SLA missed). Specify the maximum aggregate service credit cap per measurement period (typically 15-25% of monthly charges). Address whether service credits are the sole and exclusive remedy for SLA failures or available in addition to other remedies (in government contracts, credits often supplement rather than replace other remedies). Define the chronic failure threshold (e.g., service credits exceed 10% for 3 consecutive months) that triggers a remediation plan requirement. Specify the escalation to a formal Service Improvement Plan (SIP) and the contracting authority's termination right if the SIP fails to achieve the required improvement within the agreed timeframe. Address the reporting and certification process. Specify whether credits are automatic or claim-based.",
+      "variations": {
+        "ccs-model": "Crown Commercial Service standard service credit model with tiered credits and chronic failure escalation",
+        "performance-regime": "Integrated within a broader performance management regime with earned and deducted elements",
+        "milestone-linked": "Service credits linked to project milestones and deliverable acceptance rather than ongoing SLAs"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-ppp-pfi"],
+      "depends_on": ["gov-performance-regime"],
+      "compliance_refs": ["CCS Model Services Contract (UK)", "FAR 52.246 (US Inspection Clauses)"]
+    },
+    {
+      "id": "gov-benchmarking",
+      "clause_category": "government",
+      "name": "Government Benchmarking Rights",
+      "description": "Grants the contracting authority the right to benchmark the contractor's pricing, service quality, and performance against market comparators at defined intervals during the contract term. Government benchmarking provisions are typically more prescriptive than commercial equivalents and may include mandatory price reductions if benchmarking reveals the contractor's prices exceed market norms by more than a defined tolerance.",
+      "drafting_guidance": "Specify the frequency of benchmarking exercises (typically every 2-3 years, with the first benchmarking no earlier than 18 months after commencement). Define the benchmarking scope (pricing, service quality, technology currency, staffing levels). Specify the selection and appointment of the independent benchmarker (from an approved panel, or jointly appointed). Define the benchmarking methodology and the peer group criteria (comparable government contracts, comparable commercial contracts, or both). Specify the tolerance threshold above which price adjustments are mandatory (typically 5-10% above market median). Define the adjustment mechanism and implementation timeline (typically within 90 days of benchmarking report). Address cost allocation (typically shared equally between the parties). Specify the contractor's obligation to provide all information reasonably required by the benchmarker. Address the interaction with CPI escalation and most-favoured-customer provisions. Include a dispute resolution mechanism for contested benchmarking results.",
+      "variations": {
+        "mandatory-adjustment": "Prices must be reduced to within tolerance of market median if benchmarking reveals premium",
+        "inform-only": "Benchmarking results inform future pricing negotiations but do not trigger automatic adjustments",
+        "with-termination": "Contracting authority may terminate if contractor refuses to adjust to benchmarked levels"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-ppp-pfi"],
+      "depends_on": [],
+      "compliance_refs": ["CCS Model Services Contract (UK)", "NAO Best Practice Guidance on Benchmarking"]
+    },
+    {
+      "id": "gov-most-favoured-customer",
+      "clause_category": "government",
+      "name": "Most Favoured Customer (Government)",
+      "description": "Requires the contractor to warrant that the pricing and terms offered to the contracting authority are no less favourable than those offered to any other customer for comparable services, volumes, and contract duration. If the contractor offers more favourable terms to another customer, the contracting authority is entitled to receive the same terms. This provision is particularly important in framework agreements where pricing must remain competitive throughout the framework term.",
+      "drafting_guidance": "Define the comparison criteria precisely (comparable scope, volume, duration, risk profile). Specify whether the MFC obligation is retrospective (the authority receives any better terms already in market) or prospective only. Require the contractor to certify compliance with the MFC obligation annually. Grant the contracting authority audit rights to verify MFC compliance. Specify the adjustment mechanism (automatic or upon notification). Address the exclusion of genuinely one-off promotional pricing, distressed sales, or strategic loss-leader pricing with appropriate safeguards against abuse of exclusions. Address the interaction with the contracting authority's own benchmarking rights. Specify the consequences of breach (retrospective price adjustment, damages, termination right). Consider the interaction with the US Price Reductions clause (FAR 52.216-21) for federal supply schedule contracts.",
+      "variations": {
+        "full-retroactive": "Authority receives the benefit of any better pricing offered to any comparable customer, retroactively",
+        "prospective-only": "MFC pricing applies only from the date the better pricing is identified",
+        "framework-specific": "MFC obligation limited to pricing within the same government framework agreement"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract"],
+      "depends_on": [],
+      "compliance_refs": ["CCS Model Services Contract (UK)", "FAR 52.216-21 (US Price Reductions)"]
+    },
+    {
+      "id": "gov-open-book-accounting",
+      "clause_category": "government",
+      "name": "Open Book Accounting (Government)",
+      "description": "Mandates full financial transparency requiring the contractor to maintain and provide the contracting authority with unrestricted access to all cost data, pricing calculations, profit margins, subcontractor costs, and overhead allocations related to the contract. Government open book accounting requirements are typically more extensive than commercial equivalents, reflecting the public accountability obligation and the need to demonstrate value for money in the expenditure of public funds.",
+      "drafting_guidance": "Require the contractor to maintain detailed financial records in a format prescribed by the contracting authority. Specify the cost breakdown structure (direct labour, materials, subcontractor costs, overheads, management fee, profit margin). Require monthly or quarterly financial reporting against the agreed cost model. Grant the contracting authority and its auditors (including the NAO/GAO) full access to underlying financial records. Address the treatment of cost overruns (notification obligation, shared responsibility under open book model). Specify the interaction with the gainshare/painshare mechanism. Address the contractor's obligation to demonstrate that all costs are reasonable, actually incurred, and properly allocated. Specify the treatment of overhead allocation methodologies. Address the verification of subcontractor costs. Include provisions for recovery of any overcharges identified through open book review plus interest. Specify record retention requirements (minimum 6 years). Address the confidentiality of financial information disclosed under open book.",
+      "variations": {
+        "full-transparency": "Complete access to all cost data including profit margin and overhead allocation methodology",
+        "summary-with-audit": "Monthly summary reports with the right to detailed open book audit on request or cause",
+        "cost-plus-model": "Open book accounting as the primary pricing mechanism with agreed margin"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-ppp-pfi", "gov-defence-contract"],
+      "depends_on": ["gov-audit-rights-public"],
+      "compliance_refs": ["HM Treasury Managing Public Money (UK)", "FAR 52.215-2 (US Audit and Records)", "CCS Model Services Contract (UK)"]
+    },
+    {
+      "id": "gov-gainshare-painshare",
+      "clause_category": "government",
+      "name": "Gainshare / Painshare Mechanism",
+      "description": "Establishes a risk and reward sharing mechanism between the contracting authority and the contractor for cost savings (gainshare) and cost overruns (painshare). Gainshare incentivises the contractor to achieve efficiencies and cost reductions by sharing a portion of the savings with the contractor. Painshare requires the contractor to absorb a portion of cost overruns, creating a financial incentive to manage costs within budget. This mechanism is standard in UK government outsourcing and PFI/PPP contracts.",
+      "drafting_guidance": "Define the baseline cost model against which gains and pains are measured. Specify the gainshare ratio (typically 50:50 or 60:40 in favour of the authority for the first tranche of savings). Specify the painshare ratio (typically the contractor bears the first portion of overruns up to a cap, with the authority absorbing overruns beyond the cap). Define the measurement period and reporting methodology. Require the gainshare/painshare calculation to be subject to open book accounting verification. Address the types of savings that qualify for gainshare (efficiency improvements, innovation, volume reductions) and those that do not (scope reductions, changes in the contracting authority's requirements). Specify the cap on painshare exposure (typically 10-20% of annual charges). Address the interaction with the performance regime and service credits. Include a dispute resolution mechanism for contested calculations. Specify the payment mechanism and timing for gainshare distributions.",
+      "variations": {
+        "symmetric": "Equal sharing ratio for both gains and pains (e.g., 50:50)",
+        "asymmetric": "Different ratios for gains (e.g., 60:40 to authority) and pains (e.g., contractor bears first 10%)",
+        "tiered": "Sharing ratio changes at different levels of savings or overruns (e.g., first 5% savings at 50:50, thereafter 70:30)"
+      },
+      "contract_types": ["gov-ppp-pfi", "gov-framework-agreement", "gov-call-off-contract"],
+      "depends_on": ["gov-open-book-accounting"],
+      "compliance_refs": ["HM Treasury Green Book (UK)", "PFI Standardisation of Contracts (SoPC4)", "NAO Value for Money Guidance"]
+    },
+    {
+      "id": "gov-break-clause",
+      "clause_category": "government",
+      "name": "Government Break Clause",
+      "description": "Provides the contracting authority with the right to terminate the contract at defined break points or on a rolling basis without cause, subject to a defined notice period and, in some cases, payment of a break fee covering the contractor's unamortised investment and demobilisation costs. Government break clauses reflect the policy principle that the public sector should not be locked into long-term contracts without exit options, and that government priorities and funding may change.",
+      "drafting_guidance": "Specify the break dates (fixed dates, anniversary dates, or rolling termination with defined notice period). Define the notice period for exercising the break clause (typically 6-12 months for complex contracts). Specify the break fee calculation methodology: unamortised capital expenditure, stranded costs, redundancy costs for dedicated staff, and demobilisation costs. Require the contractor to mitigate break fee costs (redeploy assets and personnel where possible). Address the interaction with TUPE and employee transfer obligations on break. Specify the transition assistance obligations following break notice. Address the treatment of ongoing subcontracts and third-party commitments. Ensure the break fee does not include lost profits (government policy generally does not compensate for lost profits on termination for convenience). Specify the maximum break fee payable (declining over the contract term). Address the interaction with any government spending controls or funding conditions.",
+      "variations": {
+        "no-fault-rolling": "Authority may terminate at any time with 6-12 months notice and payment of reasonable break costs",
+        "fixed-break-points": "Break rights exercisable only at specified dates (e.g., every 3 years in a 10-year contract)",
+        "funded-break": "Break fee covers unamortised investment; no compensation for lost profits"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-ppp-pfi", "gov-call-off-contract"],
+      "depends_on": [],
+      "compliance_refs": ["CCS Model Services Contract (UK)", "PFI Standardisation of Contracts (SoPC4)", "FAR 52.249 (US Termination Clauses)"]
+    },
+    {
+      "id": "gov-sovereign-immunity",
+      "clause_category": "government",
+      "name": "Sovereign Immunity and Crown Proceedings",
+      "description": "Addresses the legal doctrines of sovereign immunity and Crown immunity that may affect the enforceability of contractual obligations against government entities. In many jurisdictions, the state cannot be sued without its consent, and certain remedies (such as specific performance or injunctive relief) may not be available against the Crown or government agencies. The contractor must understand the limitations on enforcement and negotiate appropriate alternative protections.",
+      "drafting_guidance": "Identify whether the contracting authority benefits from sovereign immunity, Crown immunity, or other governmental privileges. Specify whether the authority has waived immunity for the purposes of the contract (and the scope of any waiver). Address the applicability of the Crown Proceedings Act 1947 (UK), the Federal Tort Claims Act (US), or equivalent legislation. Specify the available remedies against the government entity (damages typically available; specific performance and injunctions typically not available against the Crown). Address the Anti-Deficiency Act (US) and equivalent fiscal constraints that may limit the government's ability to commit to multi-year obligations. Specify the disputes forum (specialised government contracts tribunal, such as the UK TCC or US Court of Federal Claims). Address the applicable statute of limitations. Address the interaction between sovereign immunity and international arbitration. Specify that the government entity's obligations are subject to the availability of appropriated funds where applicable.",
+      "variations": {
+        "full-waiver": "Government entity waives sovereign immunity for all contractual claims",
+        "limited-waiver": "Waiver limited to claims arising under the contract, excluding tort claims and punitive damages",
+        "no-waiver": "Sovereign immunity preserved; contractor's remedies limited to administrative procedures"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-concession", "gov-ppp-pfi", "gov-defence-contract"],
+      "depends_on": [],
+      "compliance_refs": ["Crown Proceedings Act 1947 (UK)", "Federal Tort Claims Act 28 USC 2671 (US)", "UN Convention on Jurisdictional Immunities of States 2004"]
+    },
+    {
+      "id": "gov-state-aid",
+      "clause_category": "government",
+      "name": "State Aid and Subsidy Control Compliance",
+      "description": "Requires the contract to comply with state aid rules under EU Article 107 TFEU (for EU Member States), the UK Subsidy Control Act 2022 (post-Brexit UK), or equivalent regimes. Government contracts that confer an economic advantage on the contractor beyond market terms may constitute unlawful state aid, rendering the contract voidable and requiring recovery of the aid with interest. This is particularly relevant for concessions, PPP/PFI arrangements, and grant agreements where the government provides financial support.",
+      "drafting_guidance": "Require the contracting authority to confirm that the contract has been assessed for state aid compliance before execution. Specify the applicable state aid regime (EU Article 107-109 TFEU and implementing regulations, or UK Subsidy Control Act 2022). Address the Market Economy Investor Principle (MEIP) or Market Economy Operator Test to demonstrate that the contract is on market terms. Include representations from the contractor regarding any other state aid received (cumulation rules). Address the de minimis exemption (EU Regulation 2023/2831: EUR 300,000 over three years). Specify the consequences if the contract is subsequently determined to constitute unlawful state aid (recovery obligation, repricing, or termination). Require the contractor to cooperate with any European Commission investigation or UK Competition and Markets Authority review. Address the notification requirements for aid above the threshold. Include clawback provisions enabling recovery of any aid subsequently declared unlawful.",
+      "variations": {
+        "eu-state-aid": "Full compliance with EU Article 107-109 TFEU and Commission notification requirements",
+        "uk-subsidy-control": "Compliance with UK Subsidy Control Act 2022 and subsidy control principles",
+        "de-minimis": "Contract value within de minimis threshold with contractor cumulation certification"
+      },
+      "contract_types": ["gov-concession", "gov-ppp-pfi", "gov-grant-agreement"],
+      "depends_on": ["gov-public-procurement"],
+      "compliance_refs": ["EU TFEU Article 107-109", "UK Subsidy Control Act 2022", "EU Regulation 2023/2831 (De Minimis)", "Commission Regulation 651/2014 (GBER)"]
+    },
+    {
+      "id": "gov-conflict-of-interest",
+      "clause_category": "government",
+      "name": "Conflict of Interest Declaration and Management",
+      "description": "Requires the contractor and its personnel to declare and manage any actual, potential, or perceived conflicts of interest that may arise in connection with the contract. Government contracts carry heightened conflict of interest requirements reflecting the public trust obligation and the need to prevent corruption, favouritism, and misuse of public funds. Failure to declare a conflict may constitute grounds for contract termination and debarment from future procurements.",
+      "drafting_guidance": "Define conflicts of interest broadly to include financial interests, personal relationships with government officials, concurrent engagements with competing interests, and prior involvement in the procurement process. Require initial disclosure of all conflicts at contract commencement and ongoing disclosure of new conflicts within 5 business days. Specify the conflicts management process (mitigation plan, Chinese walls, recusal, or withdrawal). Address the prohibition on the contractor participating in advisory work that could create a conflict with subsequent procurements (Art 24 of Directive 2014/24/EU, the 'Fabricom' principle). Include representations that no prohibited inducements have been offered to government officials. Address the revolving door restrictions (restrictions on hiring former government officials involved in the procurement). Specify the consequences of undisclosed conflicts (contract termination, damages, debarment). Require the contractor to maintain a conflicts register accessible to the contracting authority.",
+      "variations": {
+        "standard": "Declaration and management with contracting authority oversight and approval of mitigation measures",
+        "enhanced": "Declaration plus mandatory Chinese walls, independent compliance officer, and regular audits",
+        "procurement-specific": "Focused on conflicts arising from prior involvement in procurement specification or evaluation"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi", "gov-defence-contract", "gov-grant-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["EU Directive 2014/24/EU Art 24", "FAR 3.104 (US Procurement Integrity)", "Bribery Act 2010 (UK)", "18 USC 207 (US Revolving Door)"]
+    },
+    {
+      "id": "gov-ethical-walls",
+      "clause_category": "government",
+      "name": "Ethical Walls and Information Barriers",
+      "description": "Requires the contractor to implement and maintain ethical walls (also known as Chinese walls or information barriers) to prevent the flow of confidential or commercially sensitive information between different teams or engagements within the contractor's organisation. This is particularly important where the contractor provides services to multiple government departments or is involved in both advisory and delivery roles that could create conflicts of interest.",
+      "drafting_guidance": "Define the scope of the information barrier (which teams, projects, or engagements must be separated). Specify the physical and logical separation measures (separate offices, separate IT systems, separate email domains, restricted access controls). Require the appointment of an ethical walls compliance officer responsible for monitoring and enforcement. Specify the prohibited information flows and the exceptions (if any). Require regular training for all personnel subject to the information barrier. Specify the monitoring and audit mechanisms (access logs, communication monitoring). Address the consequences of a breach of the information barrier (notification to the contracting authority, remediation measures, potential termination). Require the contractor to maintain documentation evidencing compliance with the ethical walls regime. Specify the duration of the information barrier (typically for the duration of the conflicting engagements plus a tail period). Address the interaction with the broader conflict of interest provisions.",
+      "variations": {
+        "full-separation": "Complete physical and logical separation of teams with no information sharing permitted",
+        "managed-barrier": "Logical separation with controlled information sharing through an ethics committee",
+        "project-specific": "Information barrier limited to specific confidential information related to a defined project"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-defence-contract"],
+      "depends_on": ["gov-conflict-of-interest"],
+      "compliance_refs": ["EU Directive 2014/24/EU Art 24", "FAR 9.505 (US Organisational Conflicts of Interest)", "CCS Guidance on Conflicts of Interest"]
+    },
+    {
+      "id": "gov-key-personnel",
+      "clause_category": "government",
+      "name": "Key Personnel and Named Resources",
+      "description": "Identifies specific individuals whose skills, experience, and security clearances are critical to the successful delivery of the contract, and imposes restrictions on the contractor's ability to remove, replace, or reassign those individuals without the contracting authority's prior consent. Government contracts frequently require named key personnel where the individuals were identified and evaluated as part of the procurement process.",
+      "drafting_guidance": "Name the key personnel in a contract schedule, specifying their role, required qualifications, security clearance level, and minimum time commitment (expressed as a percentage of full-time equivalent). Require prior written consent from the contracting authority before any key personnel are removed, replaced, or have their time commitment reduced. Specify the circumstances in which the contractor may propose a replacement (resignation, long-term illness, promotion that benefits the contract). Require replacement personnel to be of equivalent or superior calibre (qualifications, experience, security clearance). Specify the approval process for replacement personnel (CV submission, interview, security clearance verification). Address the consequences of unauthorised removal of key personnel (service credit deductions, damages, termination right in egregious cases). Include a retention incentive or liquidated damages for departure of key personnel during the first 12-24 months. Address the interaction with TUPE provisions for transferred employees who are named as key personnel.",
+      "variations": {
+        "named-with-consent": "Specific named individuals with prior written consent required for any change",
+        "role-based": "Key roles defined with minimum qualification requirements rather than named individuals",
+        "with-retention-bond": "Named personnel with financial retention incentives or liquidated damages for early departure"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-defence-contract", "gov-ppp-pfi"],
+      "depends_on": ["gov-security-clearance"],
+      "compliance_refs": ["CCS Model Services Contract (UK)", "FAR 52.237-3 (US Key Personnel)"]
+    },
+    {
+      "id": "gov-step-in-rights-public",
+      "clause_category": "government",
+      "name": "Government Step-In Rights",
+      "description": "Grants the contracting authority the right to step into the contractor's operations and assume temporary direct control of service delivery in specified emergency circumstances, including contractor default, insolvency, national security events, civil emergencies, or persistent service failure. Government step-in rights are broader than commercial equivalents and reflect the public interest in continuity of essential services. The authority may exercise step-in rights directly or through a nominated third party.",
+      "drafting_guidance": "Define the trigger events for step-in (contractor insolvency or financial distress, persistent material breach, failure to maintain required security clearances, national security event, civil emergency, pandemic, force majeure affecting the contractor). Specify the step-in notice requirements (may be shortened or dispensed with in emergency situations). Define the scope of step-in (full takeover of service delivery, partial step-in for specific functions, management oversight only). Require the contractor to cooperate fully with the step-in, including providing access to premises, systems, personnel, documentation, and intellectual property. Address the cost allocation during step-in (typically at the contractor's expense for step-in caused by contractor default; at the authority's expense for national emergency). Specify the duration of step-in and the exit criteria (step-in ceases when the contractor can resume or a replacement contractor is appointed). Address the relationship between step-in and termination (step-in does not waive the right to terminate). Require the contractor to grant necessary licences, access rights, and authorisations to enable step-in. Address the protection of the contractor's proprietary information during step-in.",
+      "variations": {
+        "direct-step-in": "Contracting authority assumes direct control of service delivery",
+        "third-party-step-in": "Authority appoints a third-party contractor to step in and deliver services",
+        "emergency-step-in": "Expedited step-in for national security or civil emergency situations with immediate effect"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-ppp-pfi", "gov-defence-contract"],
+      "depends_on": [],
+      "compliance_refs": ["CCS Model Services Contract (UK)", "PFI Standardisation of Contracts (SoPC4)", "Civil Contingencies Act 2004 (UK)"]
+    },
+    {
+      "id": "gov-performance-regime",
+      "clause_category": "government",
+      "name": "Performance Management Regime",
+      "description": "Establishes a comprehensive performance management framework incorporating key performance indicators (KPIs), service levels, performance reporting, earned value management, service improvement plans, and escalation procedures. Government performance regimes are typically more structured and prescriptive than commercial equivalents, with formal governance mechanisms and defined escalation paths leading to remediation requirements and ultimately termination rights.",
+      "drafting_guidance": "Define the KPIs and service levels in a performance schedule, distinguishing between critical KPIs (failure triggers immediate escalation), important KPIs (subject to service credit deductions), and informational KPIs (reported for monitoring). Specify the measurement methodology, data sources, and reporting frequency for each KPI (typically monthly reporting with quarterly review meetings). Establish a performance scoring methodology that aggregates individual KPI performance into an overall contract performance score. Define the performance improvement plan (PIP) or service improvement plan (SIP) process triggered by sustained underperformance. Specify the escalation path (operational review, service delivery manager, senior governance board, authority termination right). Address the interaction between the performance regime and the service credit and gainshare/painshare mechanisms. Include provisions for annual KPI review and recalibration to reflect changing priorities. Require the contractor to invest in performance monitoring tools and provide the authority with dashboard access. Address earned value management for project-based elements.",
+      "variations": {
+        "balanced-scorecard": "Multi-dimensional performance regime covering service delivery, customer satisfaction, innovation, and social value",
+        "kpi-only": "Simplified regime based on a defined set of KPIs with monthly reporting and quarterly review",
+        "earned-value": "Includes earned value management for project and transformation elements"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-ppp-pfi"],
+      "depends_on": [],
+      "compliance_refs": ["CCS Model Services Contract (UK)", "NAO Framework for Performance Management", "OMB Circular A-11 (US)"]
+    },
+    {
+      "id": "gov-innovation-clause",
+      "clause_category": "government",
+      "name": "Innovation and Technology Refresh",
+      "description": "Requires the contractor to proactively identify and propose innovative solutions, technological improvements, and service enhancements throughout the contract term. Government innovation clauses reflect the policy objective of leveraging the private sector's expertise to drive modernisation and efficiency in public services. The contractor is expected to invest in research and development and to share the benefits of innovation with the contracting authority through improved service quality, reduced costs, or enhanced capabilities.",
+      "drafting_guidance": "Require the contractor to submit an annual innovation plan identifying opportunities for service improvement, technology refresh, and cost reduction. Specify the evaluation and approval process for innovation proposals (joint innovation board or equivalent governance mechanism). Address the intellectual property ownership of innovations developed under the contract (typically shared IP or authority-owned with contractor licence-back). Specify the funding mechanism for innovation (contractor-funded with gainshare on savings achieved, authority-funded for major transformations, or a dedicated innovation fund). Address the risk allocation for failed innovations (typically the proposing party bears the risk). Include provisions for pilot testing and staged rollout of innovations. Require the contractor to maintain technology currency (no more than N-1 version of any platform). Specify the interaction between innovation and the change control process. Address the use of the Innovation Partnership procedure under Art 31 of Directive 2014/24/EU for procuring innovative solutions.",
+      "variations": {
+        "mandatory-annual-plan": "Contractor must submit annual innovation plan with minimum investment commitment",
+        "innovation-fund": "Dedicated fund (e.g., 1-2% of contract value annually) for jointly approved innovation projects",
+        "technology-refresh": "Mandatory technology currency with defined refresh cycles and obsolescence management"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-ppp-pfi"],
+      "depends_on": [],
+      "compliance_refs": ["EU Directive 2014/24/EU Art 31 (Innovation Partnership)", "GovTech Catalyst (UK)", "FAR Part 35 (US R&D Contracting)"]
+    },
+    {
+      "id": "gov-continuous-improvement",
+      "clause_category": "government",
+      "name": "Continuous Improvement Obligations",
+      "description": "Imposes a binding obligation on the contractor to deliver measurable year-on-year improvements in service quality, efficiency, cost-effectiveness, and customer satisfaction. Unlike innovation clauses that focus on transformational change, continuous improvement clauses address incremental operational improvements. The contractor must demonstrate regular improvement through defined metrics, and failure to achieve continuous improvement targets may trigger performance remedies.",
+      "drafting_guidance": "Define the continuous improvement targets as annual percentage improvements against defined baselines (e.g., 3-5% annual efficiency improvement, 2% annual cost reduction, measurable improvement in user satisfaction scores). Specify the improvement areas (service quality, response times, first-time fix rates, user satisfaction, process efficiency, environmental impact). Require the contractor to submit a continuous improvement plan within 90 days of contract commencement and to update it annually. Specify the reporting and verification methodology for improvement claims. Address the baseline against which improvements are measured (and the process for resetting baselines after significant scope changes). Specify the consequences of failure to achieve improvement targets (remediation plan, service credit deductions, termination right for persistent failure). Address the interaction with the gainshare mechanism (contractor may retain a share of savings achieved through continuous improvement). Include provisions for sharing best practices across government contracts.",
+      "variations": {
+        "efficiency-target": "Annual percentage efficiency improvement target (e.g., 3% per annum) measured against agreed baseline",
+        "quality-driven": "Continuous improvement focused on service quality and customer satisfaction metrics",
+        "lean-six-sigma": "Structured continuous improvement programme using Lean or Six Sigma methodologies"
+      },
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-ppp-pfi"],
+      "depends_on": ["gov-performance-regime"],
+      "compliance_refs": ["CCS Model Services Contract (UK)", "NAO Continuous Improvement Guidance", "Cabinet Office Efficiency and Reform Group"]
+    }
+  ],
+  "contract_types": [
+    {
+      "id": "gov-framework-agreement",
+      "name": "Government Framework Agreement",
+      "category": "government",
+      "description": "An agreement between one or more contracting authorities and one or more economic operators establishing the terms governing contracts to be awarded during the framework period (maximum four years under EU Directive 2014/24/EU Art 33, with limited exceptions). Framework agreements do not themselves commit expenditure but establish pre-agreed terms, pricing, and a shortlist of qualified suppliers from which individual call-off contracts are awarded through mini-competition or direct award. Widely used in government procurement to reduce procurement timescales, aggregate demand, and achieve economies of scale.",
+      "required_clauses": ["gov-public-procurement", "gov-transparency-obligations", "gov-audit-rights-public", "gov-freedom-of-information", "gov-conflict-of-interest", "gov-most-favoured-customer", "gov-performance-regime"],
+      "recommended_clauses": ["gov-social-value", "gov-environmental-requirements", "gov-sme-subcontracting", "gov-benchmarking", "gov-innovation-clause", "gov-continuous-improvement", "gov-break-clause", "gov-key-personnel"],
+      "typical_parties": "Contracting Authority <-> Framework Supplier(s)",
+      "regulatory_drivers": ["EU Directive 2014/24/EU Art 33", "UK Procurement Act 2023", "FAR Part 16.5"],
+      "related_agreements": ["gov-call-off-contract"]
+    },
+    {
+      "id": "gov-call-off-contract",
+      "name": "Government Call-Off Contract",
+      "category": "government",
+      "description": "An individual contract awarded under a framework agreement for a specific requirement, scope, and value. Call-off contracts incorporate the framework terms and add requirement-specific provisions such as detailed specifications, delivery schedules, named personnel, and tailored service levels. Call-offs may be awarded through direct award (where the framework permits and conditions are sufficiently precise) or through mini-competition among framework suppliers.",
+      "required_clauses": ["gov-public-procurement", "gov-transparency-obligations", "gov-audit-rights-public", "gov-freedom-of-information", "gov-service-credits", "gov-performance-regime", "gov-conflict-of-interest"],
+      "recommended_clauses": ["gov-key-personnel", "gov-data-sovereignty", "gov-security-clearance", "gov-tupe-public", "gov-social-value", "gov-environmental-requirements", "gov-sme-subcontracting", "gov-open-book-accounting", "gov-step-in-rights-public"],
+      "typical_parties": "Contracting Authority <-> Call-Off Supplier",
+      "regulatory_drivers": ["EU Directive 2014/24/EU Art 33(4)", "UK Procurement Act 2023"],
+      "related_agreements": ["gov-framework-agreement"]
+    },
+    {
+      "id": "gov-concession",
+      "name": "Concession Contract",
+      "category": "government",
+      "description": "A contract under which a contracting authority grants a private party the right to exploit works or services for a defined period, with the concessionaire assuming significant operating risk. Unlike standard procurement where the authority pays for services, in a concession the concessionaire derives revenue primarily from third-party users or through a combination of user charges and authority payments. Governed by EU Directive 2014/23/EU on the award of concession contracts, with lighter-touch procedural requirements than the Public Procurement Directive.",
+      "required_clauses": ["gov-public-procurement", "gov-transparency-obligations", "gov-audit-rights-public", "gov-state-aid", "gov-performance-regime", "gov-break-clause", "gov-conflict-of-interest"],
+      "recommended_clauses": ["gov-freedom-of-information", "gov-social-value", "gov-environmental-requirements", "gov-gainshare-painshare", "gov-sovereign-immunity", "gov-step-in-rights-public", "gov-continuous-improvement"],
+      "typical_parties": "Contracting Authority (Grantor) <-> Concessionaire",
+      "regulatory_drivers": ["EU Directive 2014/23/EU", "UK Procurement Act 2023"],
+      "related_agreements": ["gov-ppp-pfi"]
+    },
+    {
+      "id": "gov-ppp-pfi",
+      "name": "Public-Private Partnership / PFI Contract",
+      "category": "government",
+      "description": "A long-term contract (typically 20-30 years) between a public authority and a private sector consortium for the design, build, finance, and operation (DBFO) of public infrastructure or services. The private partner typically creates a Special Purpose Vehicle (SPV) that raises project finance, delivers the capital works, and operates the facility for the contract term before transferring it back to the public sector. Governed by the PFI Standardisation of Contracts (SoPC4) in the UK and equivalent frameworks in other jurisdictions.",
+      "required_clauses": ["gov-public-procurement", "gov-transparency-obligations", "gov-audit-rights-public", "gov-open-book-accounting", "gov-gainshare-painshare", "gov-performance-regime", "gov-break-clause", "gov-step-in-rights-public", "gov-state-aid"],
+      "recommended_clauses": ["gov-benchmarking", "gov-innovation-clause", "gov-continuous-improvement", "gov-tupe-public", "gov-social-value", "gov-environmental-requirements", "gov-key-personnel", "gov-sovereign-immunity", "gov-freedom-of-information"],
+      "typical_parties": "Contracting Authority <-> SPV (Private Partner Consortium)",
+      "regulatory_drivers": ["PFI Standardisation of Contracts (SoPC4)", "HM Treasury Green Book", "EU Directive 2014/23/EU"],
+      "related_agreements": ["gov-concession", "gov-framework-agreement"]
+    },
+    {
+      "id": "gov-defence-contract",
+      "name": "Defence and Security Contract",
+      "category": "government",
+      "description": "A contract for the supply of military equipment, sensitive security equipment, works, or services that fall within the scope of EU Directive 2009/81/EC on defence and security procurement, or equivalent national defence procurement regulations (such as DFARS in the US). Defence contracts are subject to modified procurement rules that permit restricted procedures, exemptions for national security under TFEU Article 346, and enhanced security requirements including personnel vetting, facility security clearances, and classified information handling.",
+      "required_clauses": ["gov-public-procurement", "gov-security-clearance", "gov-data-sovereignty", "gov-audit-rights-public", "gov-conflict-of-interest", "gov-ethical-walls", "gov-key-personnel"],
+      "recommended_clauses": ["gov-transparency-obligations", "gov-open-book-accounting", "gov-step-in-rights-public", "gov-break-clause", "gov-sovereign-immunity", "gov-performance-regime", "gov-innovation-clause"],
+      "typical_parties": "Ministry of Defence / Defence Agency <-> Defence Contractor (Prime)",
+      "regulatory_drivers": ["EU Directive 2009/81/EC", "TFEU Article 346", "DFARS (US)", "Defence Reform Act 2014 (UK)"],
+      "related_agreements": ["gov-framework-agreement"]
+    },
+    {
+      "id": "gov-grant-agreement",
+      "name": "Government Grant Agreement",
+      "category": "government",
+      "description": "An agreement under which a government body provides financial assistance (a grant) to a recipient organisation for a specified purpose, subject to conditions on how the funds are used, reporting requirements, and clawback provisions if conditions are not met. Unlike procurement contracts, grant agreements do not involve the purchase of goods or services for the authority's direct use but rather fund activities that serve a public policy objective. Grant agreements must comply with state aid rules and are subject to enhanced audit and transparency requirements.",
+      "required_clauses": ["gov-state-aid", "gov-audit-rights-public", "gov-transparency-obligations", "gov-freedom-of-information", "gov-conflict-of-interest"],
+      "recommended_clauses": ["gov-social-value", "gov-environmental-requirements", "gov-open-book-accounting"],
+      "typical_parties": "Government Grant-Making Body <-> Grant Recipient",
+      "regulatory_drivers": ["HM Treasury Managing Public Money (UK)", "2 CFR Part 200 (US Uniform Guidance)", "EU Financial Regulation 2018/1046"],
+      "related_agreements": ["gov-framework-agreement"]
+    }
+  ],
+  "risk_patterns": [
+    {
+      "id": "gov-risk-procurement-challenge",
+      "name": "Procurement Challenge Risk",
+      "risk_category": "regulatory",
+      "clause_type": "government",
+      "trigger": "Non-compliance with procurement procedures, failure to observe standstill period, or discriminatory specification",
+      "description": "A failed or non-compliant procurement process exposes the contracting authority to legal challenge by unsuccessful bidders, potentially resulting in automatic ineffectiveness of the contract, damages, or a requirement to re-run the procurement. Under the EU Remedies Directive 2007/66/EC, contracts concluded in breach of mandatory standstill periods or direct award rules may be declared ineffective by national review bodies.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Contract declared void or ineffective; authority liable for damages to aggrieved bidders; service disruption from re-procurement; reputational damage to the contracting authority.",
+      "detection_guidance": "Verify that the correct procurement procedure was followed for the contract value and subject matter. Check for evidence of OJEU/FTS notice publication, standstill period compliance (minimum 10 calendar days), and debriefing of unsuccessful bidders. Review evaluation methodology for transparency and non-discrimination.",
+      "remediation": "Ensure full compliance with applicable procurement regulations. Implement a procurement compliance checklist. Obtain legal sign-off on procurement strategy before commencing the procedure. Maintain a comprehensive procurement audit trail.",
+      "real_world_impact": "In Counted4 CIC v Sunderland City Council [2015], the court imposed a declaration of ineffectiveness on a contract awarded without proper competition, requiring the authority to re-procure the services."
+    },
+    {
+      "id": "gov-risk-state-aid-clawback",
+      "name": "State Aid Clawback Risk",
+      "risk_category": "financial",
+      "clause_type": "government",
+      "trigger": "Contract terms that confer an economic advantage beyond market rates, or grant funding that distorts competition",
+      "description": "If a government contract or grant is subsequently determined to constitute unlawful state aid under EU Article 107 TFEU or the UK Subsidy Control Act 2022, the beneficiary may be required to repay the aid with compound interest, and the contract may need to be restructured or terminated. The European Commission has the power to order recovery of unlawful state aid going back ten years.",
+      "severity": "critical",
+      "likelihood": "rare",
+      "impact": "Mandatory recovery of aid with compound interest; potential contract restructuring or termination; reputational damage; debarment risk for future procurements.",
+      "detection_guidance": "Assess whether contract pricing is at market rates using the Market Economy Operator Test. Check for grant elements, below-market-rate financing, or preferential terms not available to other economic operators. Verify cumulation with other state aid or subsidies received by the contractor.",
+      "remediation": "Conduct a state aid assessment before contract execution. Ensure pricing reflects market rates. For grants, ensure compliance with GBER exemptions or obtain Commission approval. Include contractual clawback provisions enabling recovery of any aid subsequently declared unlawful.",
+      "real_world_impact": "The European Commission ordered recovery of EUR 13 billion in unlawful state aid from Apple in the Ireland tax ruling case (2016), demonstrating the scale of potential recovery obligations."
+    },
+    {
+      "id": "gov-risk-foia-disclosure",
+      "name": "Unintended Information Disclosure via FOIA",
+      "risk_category": "reputational",
+      "clause_type": "government",
+      "trigger": "Contractor fails to properly identify commercially sensitive information, or blanket confidentiality markings are applied",
+      "description": "Government contracts are subject to freedom of information legislation, and information provided by the contractor may be disclosed in response to public requests. If the contractor fails to identify genuinely commercially sensitive information at the time of submission, or applies blanket confidentiality markings that the authority cannot sustain, sensitive commercial information (pricing, margins, technical approaches) may be disclosed to competitors and the public.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Disclosure of commercially sensitive information to competitors; loss of competitive advantage; reputational damage if pricing or margins are publicly revealed; potential impact on share price for listed companies.",
+      "detection_guidance": "Check whether the contract includes a FOIA clause acknowledging the authority's statutory obligations. Verify that the contractor has identified specific commercially sensitive information with reasoned justifications rather than blanket markings. Check for pre-disclosure consultation provisions.",
+      "remediation": "Include a robust FOIA clause with pre-disclosure consultation rights. Require the contractor to identify genuinely sensitive information with reasoned justifications at the time of submission. Avoid blanket confidentiality markings. Specify a rapid consultation process (5 business days) for FOIA requests affecting contractor information.",
+      "real_world_impact": "In Department of Health v Information Commissioner [2011], the ICO ordered disclosure of risk registers that the department argued were commercially sensitive, establishing that FOIA obligations override contractual confidentiality."
+    },
+    {
+      "id": "gov-risk-tupe-liability",
+      "name": "TUPE Employment Liability Transfer Risk",
+      "risk_category": "financial",
+      "clause_type": "government",
+      "trigger": "Inadequate employee liability information provided before transfer, or undisclosed employment claims or liabilities",
+      "description": "TUPE transfers in government outsourcing contracts may expose the incoming contractor to undisclosed employment liabilities, including historic pay claims, discrimination proceedings, and unfunded pension obligations. If the Employee Liability Information (ELI) provided by the transferor is incomplete or inaccurate, the incoming contractor assumes liabilities it did not price into the contract.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Unforeseen employment costs potentially amounting to millions in back-pay claims, pension funding gaps, or settlement of pre-transfer employment proceedings. Disruption to service delivery during employee consultation periods.",
+      "detection_guidance": "Verify that full Employee Liability Information has been provided at least 28 days before the transfer date. Check for pending or threatened employment claims. Assess the pension arrangements (defined benefit liabilities are particularly high-risk). Verify that the Fair Deal pension protection has been properly addressed.",
+      "remediation": "Require comprehensive ELI at least 90 days before transfer (exceeding the statutory 28-day minimum). Include detailed indemnities from the transferor for pre-transfer liabilities and inaccurate ELI. Conduct due diligence on pension arrangements. Include a specific pension risk-sharing mechanism. Allocate clear liability boundaries at the transfer date.",
+      "real_world_impact": "In multiple NHS outsourcing contracts, incoming contractors have faced multi-million-pound equal pay claims transferred under TUPE that were not disclosed in the ELI."
+    },
+    {
+      "id": "gov-risk-sovereign-immunity-enforcement",
+      "name": "Sovereign Immunity Enforcement Gap",
+      "risk_category": "contractual",
+      "clause_type": "government",
+      "trigger": "Contract with a government entity that has not waived sovereign immunity, or contract governed by a jurisdiction where remedies against the state are limited",
+      "description": "Contractors may face significant difficulties enforcing contractual obligations against government entities that benefit from sovereign immunity or Crown privilege. Certain remedies (injunctions, specific performance) may not be available against the Crown, and government entities may invoke the Anti-Deficiency Act or equivalent fiscal constraints to avoid payment obligations. This creates an asymmetric enforcement environment.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Inability to enforce contractual rights; delayed or reduced recoveries; limited remedies restricted to damages (no specific performance or injunctive relief); extended litigation timelines in specialist government contracts tribunals.",
+      "detection_guidance": "Identify the contracting government entity and determine whether it benefits from sovereign immunity. Check for an immunity waiver clause. Verify the available dispute resolution forum and remedies. Assess the jurisdiction's framework for claims against the state (Crown Proceedings Act, Federal Tort Claims Act).",
+      "remediation": "Negotiate an express waiver of sovereign immunity for contractual claims. Specify the dispute resolution forum (Technology and Construction Court, Court of Federal Claims). Include adequate termination for convenience protections. Negotiate front-loaded payment terms to reduce credit exposure. Consider requiring a letter of comfort or guarantee from the relevant treasury department.",
+      "real_world_impact": null
+    },
+    {
+      "id": "gov-risk-missing-break-clause",
+      "name": "Long-Term Lock-In Without Break Clause",
+      "risk_category": "operational",
+      "clause_type": "government",
+      "trigger": "Government contract exceeding 5 years without break clauses or exit options at reasonable intervals",
+      "description": "Long-term government contracts without adequate break clauses lock the contracting authority into arrangements that may become uncompetitive, technologically obsolete, or misaligned with changing policy priorities. Government policy in most jurisdictions discourages contracts longer than 5 years without break options. The absence of break clauses also weakens the authority's negotiating position for continuous improvement and pricing reviews.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Authority locked into above-market pricing for the remainder of the term; inability to respond to changing policy priorities or technology evolution; weakened negotiating leverage for performance improvement; adverse NAO or PAC findings on value for money.",
+      "detection_guidance": "Check the contract term and identify whether break clauses exist at reasonable intervals (maximum every 3-5 years). Verify that break clauses are exercisable without punitive break fees. Check alignment with government policy on contract duration.",
+      "remediation": "Include break clauses at no more than 3-year intervals in contracts exceeding 5 years. Ensure break fees are limited to genuine unamortised costs (not lost profits). Include benchmarking and MFC provisions as complementary protections. Ensure continuous improvement and innovation obligations provide ongoing value.",
+      "real_world_impact": "The NAO report on Capita's contract with the Army (2019) criticised the lack of adequate break clauses in a 10-year contract that became significantly over budget."
+    },
+    {
+      "id": "gov-risk-inadequate-social-value",
+      "name": "Failure to Deliver Social Value Commitments",
+      "risk_category": "compliance",
+      "clause_type": "government",
+      "trigger": "Contractor social value commitments are vague, unmeasurable, or lack contractual enforcement mechanisms",
+      "description": "Social value commitments made during procurement that are not translated into binding, measurable contractual obligations are unlikely to be delivered. Without defined KPIs, reporting requirements, and consequences for non-delivery, social value becomes an empty procurement exercise. This exposes the contracting authority to political criticism and undermines the objectives of the Social Value Act.",
+      "severity": "medium",
+      "likelihood": "common",
+      "impact": "Non-delivery of promised social value outcomes (apprenticeships, SME spend, carbon reduction). Political and reputational risk for the contracting authority. Undermining of the Social Value Act objectives. Potential for legal challenge from bidders who offered genuine social value at higher cost.",
+      "detection_guidance": "Review whether procurement social value commitments have been incorporated as binding contractual obligations. Check for defined KPIs, measurement methodology, reporting requirements, and consequences for non-delivery. Verify that social value is integrated into the performance management regime.",
+      "remediation": "Translate all procurement social value commitments into binding contractual KPIs with defined targets, measurement methodology, and reporting frequency. Integrate social value delivery into the performance management regime with service credit deductions for non-delivery. Require quarterly social value reporting. Include the right to publicise social value achievements and failures.",
+      "real_world_impact": "A 2023 NAO review found that fewer than 40% of central government contracts had effective mechanisms for monitoring and enforcing social value commitments made during procurement."
+    },
+    {
+      "id": "gov-risk-data-sovereignty-breach",
+      "name": "Government Data Sovereignty Violation",
+      "risk_category": "data-protection",
+      "clause_type": "government",
+      "trigger": "Government data processed or accessed outside approved jurisdictions, or stored in cloud environments without required certification",
+      "description": "Processing government data outside approved jurisdictions or in non-certified cloud environments may violate data sovereignty requirements, national security policies, and classification handling rules. This is particularly critical for classified information subject to handling requirements under the Official Secrets Act or equivalent legislation. A data sovereignty breach may also trigger GDPR violations and national security investigations.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "National security incident; potential criminal prosecution under Official Secrets Act or equivalent; contract termination; debarment from future government contracts; GDPR enforcement action; loss of security clearances for contractor personnel.",
+      "detection_guidance": "Verify that all data processing locations are within approved jurisdictions. Check cloud hosting arrangements for required certifications (FedRAMP, G-Cloud, C5, SecNumCloud). Verify that no offshore access is possible for classified data. Check for CLOUD Act or equivalent extraterritorial access risks.",
+      "remediation": "Specify approved processing locations contractually. Require certified cloud environments only. Implement technical controls preventing offshore access (geo-fencing, IP restrictions). Require contractor certification of data residency compliance. Include immediate notification obligations for any data sovereignty breach. Specify termination rights and indemnities for breach.",
+      "real_world_impact": "In 2020, the Dutch government discovered that Microsoft Office 365 telemetry data from government systems was being transferred to the US, triggering a DPIA and requiring significant contractual renegotiation."
+    }
+  ],
+  "negotiation_intelligence": [
+    {
+      "id": "neg-gov-no-break-clause",
+      "clause_type": "government",
+      "flag_level": "red",
+      "condition": "Government contract exceeding 5 years with no break clause or exit option",
+      "explanation": "Government policy in most jurisdictions discourages long-term lock-in without break options. Contracts exceeding 5 years without break clauses represent poor value for money and restrict the authority's ability to respond to changing requirements or market conditions.",
+      "market_standard": "UK central government: break clauses at maximum 3-year intervals for contracts exceeding 5 years. US federal: options years rather than firm fixed terms. EU: framework agreements limited to 4 years (Art 33 Directive 2014/24/EU).",
+      "suggested_response": "Require break clauses at no more than 3-year intervals. Break fees should be limited to genuine unamortised costs with no compensation for lost profits. Complement with benchmarking and MFC provisions.",
+      "perspective": "buyer",
+      "contract_types": ["gov-framework-agreement", "gov-ppp-pfi", "gov-call-off-contract"]
+    },
+    {
+      "id": "neg-gov-uncapped-painshare",
+      "clause_type": "government",
+      "flag_level": "red",
+      "condition": "Painshare mechanism with no cap on contractor's cost overrun exposure",
+      "explanation": "An uncapped painshare mechanism exposes the contractor to unlimited cost overrun liability, which is disproportionate and commercially unreasonable. Without a cap, the contractor bears the risk of scope creep, requirement changes, and external factors beyond its control.",
+      "market_standard": "UK PFI/PPP: painshare typically capped at 10-20% of annual contract value. Gainshare ratios typically 50:50 to 60:40 in favour of the authority. Painshare should be asymmetric with the contractor bearing the first tranche up to a defined cap.",
+      "suggested_response": "Cap painshare exposure at 15% of annual charges. Require clear baseline cost definition against which overruns are measured. Exclude scope changes and authority-caused delays from the painshare calculation. Include an independent verification mechanism for cost overrun calculations.",
+      "perspective": "seller",
+      "contract_types": ["gov-ppp-pfi", "gov-framework-agreement", "gov-call-off-contract"]
+    },
+    {
+      "id": "neg-gov-unrestricted-audit",
+      "clause_type": "government",
+      "flag_level": "amber",
+      "condition": "Government audit rights that are unlimited in frequency, scope, and cost allocation",
+      "explanation": "While government audit rights are necessarily broader than commercial equivalents, completely unrestricted audit rights with no frequency limits or cost allocation provisions can impose an unreasonable administrative burden on the contractor. The contractor needs reasonable predictability regarding audit obligations.",
+      "market_standard": "Government contracts: annual routine audit with additional audits on cause. NAO/GAO access unrestricted by statute. Cost typically borne by each party unless audit reveals material overcharging (threshold: 5%). Reasonable notice of 30 days for routine audits; shorter for cause-based audits.",
+      "suggested_response": "Accept broad audit rights for the contracting authority and statutory auditors (NAO/GAO). Negotiate reasonable limits: annual routine audit plus audits on cause, 30-day notice for routine audits, cost borne by authority unless audit reveals overcharging exceeding 5%. Ensure audit rights extend to records only and do not disrupt service delivery.",
+      "perspective": "seller",
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-ppp-pfi", "gov-defence-contract"]
+    },
+    {
+      "id": "neg-gov-balanced-gainshare",
+      "clause_type": "government",
+      "flag_level": "green",
+      "condition": "Gainshare at 50:50 or 60:40 (authority) with painshare capped at 15% of annual charges and tiered sharing ratios",
+      "explanation": "A balanced gainshare/painshare mechanism with defined sharing ratios, a capped painshare, and clear baseline cost definitions creates appropriate incentives for efficiency while fairly allocating risk between the parties.",
+      "market_standard": "Consistent with UK PFI/PPP standardisation and Crown Commercial Service model terms. Standard practice for government outsourcing contracts exceeding GBP 10 million.",
+      "suggested_response": "Accept. Verify: baseline cost model is clearly defined and subject to open book accounting verification, painshare cap is applied, scope changes are excluded from gainshare/painshare calculation, and there is an independent dispute resolution mechanism for contested calculations.",
+      "perspective": "both",
+      "contract_types": ["gov-ppp-pfi", "gov-framework-agreement", "gov-call-off-contract"]
+    },
+    {
+      "id": "neg-gov-blanket-foia-exemption",
+      "clause_type": "government",
+      "flag_level": "red",
+      "condition": "Contractor demands blanket FOIA exemption or confidentiality override for all contract information",
+      "explanation": "Contractors cannot contract out of the contracting authority's statutory FOIA obligations. Blanket confidentiality claims are legally unsustainable and create significant compliance risk for the authority. The Information Commissioner has consistently held that FOIA overrides contractual confidentiality provisions.",
+      "market_standard": "Government contracts: FOIA clause acknowledging statutory obligations, with contractor right to identify genuinely commercially sensitive information with reasoned justification. Pre-disclosure consultation (5 business days) where practicable. Authority retains sole discretion on disclosure decisions.",
+      "suggested_response": "Reject blanket exemption. Require the contractor to identify specific information as commercially sensitive at the time of submission with a reasoned justification for each item. Include pre-disclosure consultation rights (5 business days). Accept that the authority has the final decision on disclosure in compliance with its statutory obligations.",
+      "perspective": "buyer",
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi", "gov-grant-agreement"]
+    },
+    {
+      "id": "neg-gov-strong-social-value",
+      "clause_type": "government",
+      "flag_level": "green",
+      "condition": "Social value commitments translated into binding KPIs with quarterly reporting and integrated into the performance management regime",
+      "explanation": "Social value commitments backed by measurable KPIs, regular reporting, and performance management integration demonstrate genuine commitment and are enforceable. This approach aligns with the Social Value Act 2012 and current government policy (PPN 06/20).",
+      "market_standard": "UK central government: minimum 10% weighting for social value in procurement evaluation. Social value commitments must be measurable and binding. Quarterly reporting is standard for major contracts. Integration with the performance management regime ensures accountability.",
+      "suggested_response": "Accept. Verify: KPIs are specific, measurable, achievable, relevant, and time-bound (SMART). Reporting frequency is quarterly. Consequences for non-delivery are proportionate (remediation plan first, then service credits). Social value requirements flow down to subcontractors.",
+      "perspective": "both",
+      "contract_types": ["gov-framework-agreement", "gov-call-off-contract", "gov-concession", "gov-ppp-pfi"]
+    }
+  ],
+  "clause_interactions": [
+    {
+      "id": "gov-gainshare-requires-open-book",
+      "clause_a": "gov-gainshare-painshare",
+      "clause_b": "gov-open-book-accounting",
+      "relationship": "requires",
+      "description": "The gainshare/painshare mechanism requires open book accounting to function effectively, as savings and overruns must be verified against transparent cost data.",
+      "review_guidance": "Verify that the open book accounting scope covers all cost categories included in the gainshare/painshare baseline. Ensure the authority has sufficient audit rights to verify gainshare calculations independently.",
+      "risk_if_misaligned": "Without open book accounting, gainshare/painshare calculations cannot be independently verified, creating opportunities for the contractor to understate savings or overstate costs."
+    },
+    {
+      "id": "gov-service-credits-supplements-performance",
+      "clause_a": "gov-service-credits",
+      "clause_b": "gov-performance-regime",
+      "relationship": "supplements",
+      "description": "The service credit mechanism provides the financial enforcement component of the broader performance management regime, converting KPI failures into financial consequences.",
+      "review_guidance": "Ensure service credit rates are aligned with KPI severity classifications in the performance regime. Verify that chronic failure thresholds in the service credit mechanism trigger the escalation procedures defined in the performance regime.",
+      "risk_if_misaligned": "Performance regime without service credits lacks financial teeth. Service credits without a structured performance regime lack the governance framework for meaningful performance management."
+    },
+    {
+      "id": "gov-foia-limits-confidentiality",
+      "clause_a": "gov-freedom-of-information",
+      "clause_b": "gov-transparency-obligations",
+      "relationship": "limits",
+      "description": "Freedom of information obligations limit the confidentiality protections available for contractor information in government contracts. FOIA overrides contractual confidentiality where a public interest in disclosure outweighs the commercial interest in non-disclosure.",
+      "review_guidance": "Verify that confidentiality provisions acknowledge FOIA obligations and do not purport to create absolute confidentiality. Check that the contractor has identified genuinely commercially sensitive information with reasoned justifications rather than blanket markings.",
+      "risk_if_misaligned": "Overly broad confidentiality provisions create a false sense of protection and may obstruct the authority's compliance with its statutory FOIA obligations, exposing it to ICO enforcement action."
+    },
+    {
+      "id": "gov-ethical-walls-supplements-conflict",
+      "clause_a": "gov-ethical-walls",
+      "clause_b": "gov-conflict-of-interest",
+      "relationship": "supplements",
+      "description": "Ethical walls provide the practical implementation mechanism for managing conflicts of interest identified through the conflict of interest declaration and management process.",
+      "review_guidance": "Verify that the scope of ethical walls aligns with the conflicts identified in the conflict of interest assessment. Ensure monitoring and audit provisions for ethical walls are consistent with the conflict management process.",
+      "risk_if_misaligned": "Conflict of interest declarations without ethical wall implementation are merely declarations of intent. Ethical walls without a robust conflict identification process may fail to address the relevant information flows."
+    }
+  ]
+}

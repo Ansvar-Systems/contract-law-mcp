@@ -1,0 +1,948 @@
+{
+  "clause_types": [
+    {
+      "id": "ma-representations-warranties",
+      "clause_category": "m-and-a",
+      "name": "Representations and Warranties (M&A)",
+      "description": "Comprehensive statements of fact made by the seller (and sometimes the buyer) regarding the target company, its business, assets, liabilities, and legal standing at the date of the agreement and at completion. Representations and warranties serve a dual purpose: they allocate risk between the parties by establishing the factual baseline upon which the buyer relies, and they form the basis for post-completion warranty claims if any statement proves to be inaccurate or misleading. The scope and specificity of these representations are typically the most heavily negotiated aspect of any M&A transaction.",
+      "drafting_guidance": "Structure warranties thematically (corporate status, accounts, tax, IP, employment, contracts, compliance, litigation, assets, environment). Each warranty should be precise and verifiable. Address the knowledge qualifier carefully (define 'awareness' and specify named individuals whose knowledge is attributed to the seller). Include materiality qualifiers where appropriate but resist blanket materiality scraping. Cross-reference to the disclosure letter which qualifies each warranty. Specify the applicable date (signing date, completion date, or both). Address the repetition of warranties at completion. Consider the interaction with W&I insurance requirements, as insurers will scrutinise warranty language closely. Include a warranty that the disclosure letter is accurate and not misleading by omission.",
+      "variations": {
+        "full-title-guarantee": "Seller gives warranties on a full indemnity basis without knowledge qualifiers",
+        "knowledge-qualified": "Warranties qualified by seller's knowledge (actual or constructive)",
+        "fundamental-only": "Limited to fundamental warranties (title, capacity, authority) with other protections via W&I insurance"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-disclosure-letter", "ma-limitation-periods"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-mac-clause",
+      "clause_category": "m-and-a",
+      "name": "Material Adverse Change (MAC) Clause",
+      "description": "A condition precedent or termination right triggered by a material adverse change in the target company's business, financial condition, results of operations, or prospects between signing and completion. MAC clauses allocate the risk of deterioration in the target's value during the interim period. They are heavily negotiated because the buyer seeks broad protection against value erosion while the seller seeks deal certainty. The definition of what constitutes a 'material adverse change' is critical and typically subject to extensive carve-outs.",
+      "drafting_guidance": "Define 'material adverse change' or 'material adverse effect' with precision, specifying whether it applies to the target alone or the target and its subsidiaries taken as a whole. Include standard carve-outs for changes affecting the industry generally, macroeconomic conditions, changes in law or accounting standards, acts of war or terrorism, pandemics, and changes resulting from the announcement of the transaction itself. Address whether the MAC must be measured quantitatively (e.g., decline in EBITDA exceeding a specified percentage) or qualitatively. Specify the reference period for comparison. Address the burden of proof (typically on the party seeking to invoke the MAC). Consider whether the MAC clause operates as a condition precedent to completion, a warranty, or a termination trigger. Under Delaware law, courts have historically set a very high bar for MAC claims (see Akorn v. Fresenius, 2018).",
+      "variations": {
+        "condition-precedent": "MAC operates as a condition to completion; if triggered, buyer is not obliged to complete",
+        "termination-right": "MAC gives buyer a right to terminate (walk away) but does not automatically prevent completion",
+        "warranty-based": "MAC is embedded as a warranty that is repeated at completion"
+      },
+      "contract_types": ["ma-spa", "ma-merger-agreement"],
+      "depends_on": ["ma-conditions-precedent"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-earn-out",
+      "clause_category": "m-and-a",
+      "name": "Earn-Out Provision",
+      "description": "A deferred consideration mechanism under which a portion of the purchase price is contingent on the target business achieving specified financial or operational performance targets after completion. Earn-outs bridge valuation gaps between buyer and seller by linking part of the price to the actual post-completion performance of the business. They are particularly common in acquisitions of founder-led businesses, technology companies, and businesses with volatile or uncertain earnings trajectories.",
+      "drafting_guidance": "Define the earn-out metrics precisely (revenue, EBITDA, gross profit, customer retention, product milestones). Specify the measurement period (typically 1-3 years post-completion, divided into annual or semi-annual periods). Address the accounting methodology and principles to be applied in calculating the earn-out (consistent with historical practices, or GAAP/IFRS). Include detailed provisions governing the buyer's conduct of the business during the earn-out period: specify whether the buyer must operate the business in the ordinary course, maintain key employees and customer relationships, refrain from actions that would artificially reduce the earn-out (e.g., loading costs, diverting revenue, integrating prematurely). Include dispute resolution mechanisms specific to earn-out calculations (expert determination is standard). Specify payment timing after determination. Address the interaction with working capital adjustments. Include anti-embarrassment provisions if the buyer on-sells the business during the earn-out period.",
+      "variations": {
+        "revenue-based": "Earn-out calculated on revenue targets, reducing manipulation risk but ignoring profitability",
+        "ebitda-based": "Earn-out calculated on EBITDA, aligning with value creation but vulnerable to cost allocation disputes",
+        "milestone-based": "Earn-out triggered by achieving specific operational milestones (product launch, regulatory approval, customer wins)"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-completion-accounts"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-escrow",
+      "clause_category": "m-and-a",
+      "name": "Escrow Arrangement",
+      "description": "A mechanism under which a portion of the purchase price (typically 5-15%) is deposited with an independent escrow agent and held for a specified period to satisfy any warranty or indemnity claims by the buyer post-completion. The escrow provides the buyer with a readily accessible source of recovery without needing to pursue the seller personally for damages. Escrow arrangements are standard in mid-market M&A transactions and provide security for both parties: the buyer has assurance of recovery, and the seller has certainty that claims are limited to the escrowed amount.",
+      "drafting_guidance": "Specify the escrow amount (percentage of purchase price or fixed sum). Define the escrow period (typically aligned with the warranty limitation period, commonly 18-24 months). Identify the escrow agent and the terms of the escrow agreement (tripartite agreement between buyer, seller, and escrow agent). Specify the release mechanism: automatic release at the end of the escrow period unless claims are outstanding, with retention of amounts equal to notified but unresolved claims. Address partial releases (e.g., 50% released at 12 months if no claims notified). Define the claims process: notification requirements, response periods, and dispute resolution. Specify the interest treatment on escrowed funds. Address the tax treatment of escrowed consideration. Consider whether the escrow is the buyer's sole recourse or whether the buyer retains the right to claim against the seller personally for amounts exceeding the escrow.",
+      "variations": {
+        "sole-recourse": "Escrow is buyer's exclusive source of recovery for warranty claims",
+        "supplementary": "Escrow supplements but does not replace buyer's right to claim against seller directly",
+        "staged-release": "Escrow released in tranches (e.g., 50% at 12 months, balance at 24 months)"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties", "ma-limitation-periods"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-completion-accounts",
+      "clause_category": "m-and-a",
+      "name": "Completion Accounts Mechanism",
+      "description": "A post-completion price adjustment mechanism under which the final purchase price is determined by reference to the actual financial position of the target at the completion date. Completion accounts are prepared after closing (typically within 60-90 days) and compared to agreed reference accounts or targets. Adjustments are made for working capital deviations, net debt, and cash balances. This mechanism contrasts with the locked box approach and is preferred when the target's financial position is volatile or where there is a long gap between signing and completion.",
+      "drafting_guidance": "Specify the accounting policies to be applied (target's historical accounting policies, GAAP, or IFRS). Define the components of the completion accounts (balance sheet, working capital statement, net debt calculation, cash position). Include detailed definitions of 'working capital', 'net debt', 'cash and cash equivalents', and 'normalised working capital target'. Specify the timeline: buyer prepares draft completion accounts within 60-90 days of completion, seller has 30 days to review and object, disputes referred to independent accountant. Address the independent accountant's role (expert, not arbitrator; decision binding absent manifest error). Specify cost allocation for the independent accountant. Include provisions governing the buyer's access to records and cooperation obligations. Address the interaction with the earn-out mechanism if applicable. Specify the payment mechanism for any adjustment (direction and timing).",
+      "variations": {
+        "working-capital-only": "Adjustment limited to working capital deviations from target",
+        "full-balance-sheet": "Adjustment covers working capital, net debt, cash, and capex",
+        "dollar-for-dollar": "Every unit of deviation adjusts the price on a 1:1 basis without a collar or threshold"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": ["IFRS 3 Business Combinations"]
+    },
+    {
+      "id": "ma-locked-box",
+      "clause_category": "m-and-a",
+      "name": "Locked Box Mechanism",
+      "description": "A price certainty mechanism under which the purchase price is fixed by reference to a set of accounts prepared as at an agreed date prior to signing (the 'locked box date'). No post-completion price adjustment is made. Instead, the seller covenants that no value has leaked from the target between the locked box date and completion, except for permitted leakage items expressly agreed between the parties. The locked box approach provides price certainty for both parties and is increasingly popular in European M&A transactions and competitive auction processes.",
+      "drafting_guidance": "Define the locked box date and the locked box accounts precisely (audited or management accounts as at a specific date). Include a comprehensive definition of 'leakage' covering all forms of value extraction: dividends, distributions, management fees, intercompany payments, bonuses, transfers of assets at undervalue, assumption of liabilities, and any other payments to or for the benefit of the seller or connected persons. Define 'permitted leakage' narrowly: ordinary course salary payments, pre-agreed transaction bonuses, specified intercompany trading. Include a seller covenant that no leakage has occurred since the locked box date. Specify the remedy for breach of the no-leakage covenant (typically a pound-for-pound indemnity). Consider including a daily interest or 'ticker' mechanism to compensate the seller for the time value of money between the locked box date and completion. Address the buyer's right to audit and verify the absence of leakage post-completion.",
+      "variations": {
+        "with-ticker": "Includes a per-diem amount accruing from locked box date to completion to compensate seller for effective economic ownership period",
+        "without-ticker": "No time value compensation; locked box price is final",
+        "hybrid": "Locked box with limited post-completion true-up for specified items (e.g., tax refunds)"
+      },
+      "contract_types": ["ma-spa"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-wi-insurance",
+      "clause_category": "m-and-a",
+      "name": "Warranty & Indemnity (W&I) Insurance",
+      "description": "An insurance policy that covers losses arising from breaches of the seller's representations and warranties in the acquisition agreement. W&I insurance has become standard in European mid-market and upper-market M&A transactions, enabling sellers to achieve a clean exit with minimal contingent liabilities while providing buyers with a creditworthy source of recovery. Buy-side policies (where the buyer is the insured) are now the market standard, as they allow the buyer to claim directly against the insurer without needing to pursue the seller.",
+      "drafting_guidance": "Address the interaction between the W&I policy and the SPA warranty package: ensure warranties are insurable (insurers will not cover known issues, fraud, or forward-looking statements). Specify whether the policy is buy-side or sell-side (buy-side is market standard). Address the de minimis and basket thresholds in the SPA and their interaction with the policy retention (excess). Define the policy limits (typically aligned with the overall warranty cap in the SPA). Address the subrogation position: buy-side policies typically waive subrogation against the seller except in cases of fraud. Specify the policy period (typically aligned with the warranty limitation period plus a tail). Address the treatment of the disclosure letter and the insurer's access to the data room. Include provisions requiring the buyer to maintain the policy and not amend it without the seller's consent if it affects the seller's position. Address the premium allocation (buyer typically pays on a buy-side policy).",
+      "variations": {
+        "buy-side": "Buyer is insured and claims directly against insurer; subrogation waived against seller except for fraud",
+        "sell-side": "Seller is insured; buyer claims against seller who recovers from insurer",
+        "synthetic-warranty": "Insurer covers warranties broader than those in the SPA, providing additional protection"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-representations-warranties", "ma-disclosure-letter"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-non-compete-ma",
+      "clause_category": "m-and-a",
+      "name": "Non-Compete Covenant (M&A)",
+      "description": "A restrictive covenant preventing the seller (and typically its affiliates and key principals) from competing with the target business for a specified period following completion. Non-compete covenants protect the goodwill acquired by the buyer and are generally enforceable in M&A transactions provided they are reasonable in scope, duration, and geographic reach. Courts in most jurisdictions are more willing to enforce non-competes in the context of a business sale than in an employment context, as the seller receives consideration for the restriction.",
+      "drafting_guidance": "Define the restricted activities precisely (carrying on, being engaged in, or being interested in a business that competes with the target business as conducted at completion). Specify the restricted territory (geographic markets where the target operates). Set a reasonable duration (typically 2-3 years post-completion; longer periods may be challenged). Define the restricted persons (seller, seller's affiliates, key principals by name). Include carve-outs for passive minority investments (typically up to 5% of a listed company), existing business interests disclosed prior to signing, and activities conducted in a genuinely non-competing capacity. Address non-solicitation of customers and suppliers separately. Address non-solicitation and non-poaching of employees. Consider the enforceability under applicable competition law (EU block exemption regulations treat ancillary restraints as permissible if proportionate). Specify the remedy for breach (injunctive relief, liquidated damages, or both).",
+      "variations": {
+        "broad-covenant": "Comprehensive restriction covering competition, solicitation, and poaching with worldwide scope",
+        "narrow-covenant": "Limited to specific product lines or geographic markets where the target operates",
+        "tiered-duration": "Full restriction for 2 years, partial restriction (non-solicitation only) for additional year"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["EU Merger Regulation ancillary restraints notice"]
+    },
+    {
+      "id": "ma-drag-along",
+      "clause_category": "m-and-a",
+      "name": "Drag-Along Rights",
+      "description": "A mechanism enabling the majority shareholder(s) to compel minority shareholders to sell their shares on the same terms and conditions in a sale of the company to a third-party buyer. Drag-along rights are essential for ensuring that a majority shareholder can deliver 100% of the share capital to a buyer without minority holdouts frustrating the transaction. They are standard in shareholders' agreements and venture capital investment documents.",
+      "drafting_guidance": "Specify the triggering threshold (typically 75% or more of shareholders agree to the sale). Define the conditions under which drag-along can be exercised: minimum price threshold, arm's length transaction, bona fide third-party buyer. Require that minority shareholders receive the same price per share and on the same terms as the majority (tag-along equivalent protections). Address the process: notice requirements, timeline for completion, power of attorney granted by minority shareholders to execute transfer documents. Specify the consideration form (cash, shares in acquirer, or mixed consideration). Address the treatment of different share classes (pro rata distribution of proceeds or waterfall). Include protections for minorities: floor price, no less favourable terms, right to receive the same form of consideration. Address the interaction with pre-emption rights (drag-along typically overrides pre-emption). Consider whether the drag-along is exercisable by a single majority holder or requires a specified majority.",
+      "variations": {
+        "simple-majority": "Exercisable when holders of more than 50% agree to the sale",
+        "supermajority": "Exercisable when holders of 75% or more agree to the sale",
+        "founder-drag": "Only exercisable by specified founder shareholders, not just any majority"
+      },
+      "contract_types": ["ma-sha", "ma-subscription-agreement"],
+      "depends_on": ["ma-tag-along"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-tag-along",
+      "clause_category": "m-and-a",
+      "name": "Tag-Along Rights",
+      "description": "A mechanism granting minority shareholders the right to participate in a sale of shares by a majority shareholder on the same terms and conditions. Tag-along rights protect minority shareholders from being stranded in a company with a new majority owner they did not choose, and ensure they can exit alongside the majority at the same price per share. They are the counterpart to drag-along rights and together form the core exit mechanics in shareholders' agreements.",
+      "drafting_guidance": "Specify the triggering event (any proposed transfer by a majority shareholder or any shareholder holding more than a specified percentage). Define 'transfer' broadly to capture direct sales, indirect transfers, changes of control of the selling shareholder entity, and economic dispositions. Require the selling shareholder to notify tag-along holders of the proposed sale terms (price, consideration form, conditions, buyer identity). Specify the election period for tag-along holders (typically 15-30 days from notification). Address proportional participation: if the buyer will not acquire all shares, tag-along holders participate pro rata. Specify the same price, same terms, and same conditions requirement. Address the treatment of different share classes. Include provisions for the selling shareholder to procure the buyer's acceptance of tag-along shares. Specify the consequences if the seller fails to honour tag-along rights (sale is void or seller must purchase the tag-along shares itself).",
+      "variations": {
+        "full-tag": "Minority can tag along on 100% of their holding",
+        "proportional-tag": "Minority tags along pro rata to selling shareholder's proportion",
+        "conditional-tag": "Tag-along only triggered if sale exceeds a specified percentage threshold (e.g., 50%)"
+      },
+      "contract_types": ["ma-sha", "ma-subscription-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-pre-emption",
+      "clause_category": "m-and-a",
+      "name": "Pre-Emption Rights (Right of First Refusal)",
+      "description": "A right granted to existing shareholders to acquire shares proposed to be transferred by another shareholder before those shares can be offered to a third party. Pre-emption rights maintain the existing ownership balance and prevent unwanted third parties from entering the shareholder group. They are a fundamental provision in shareholders' agreements and are also enshrined in statute in many jurisdictions for new share issuances under company law.",
+      "drafting_guidance": "Define the scope: all transfers or only specified transfers (exclude intra-group transfers, permitted transferees, and transfers resulting from death or incapacity). Specify the notification process: selling shareholder must serve a transfer notice specifying the number of shares, proposed price, and terms. Define the acceptance period (typically 28-60 days). Address the pricing mechanism: offered at the same price as the third-party offer, or at fair value determined by an independent valuer. Specify pro rata allocation among pre-emption holders, with a secondary round for unaccepted shares. Address the consequences of non-exercise: selling shareholder may sell to the third party at the notified price (or higher) within a specified window (typically 90-120 days). Address the interaction with drag-along and tag-along rights. Include anti-avoidance provisions preventing the seller from structuring around the pre-emption right. Consider whether the pre-emption right applies to new issuances as well as secondary transfers.",
+      "variations": {
+        "right-of-first-refusal": "Existing shareholders can match a bona fide third-party offer",
+        "right-of-first-offer": "Selling shareholder must offer to existing shareholders first before seeking third-party offers",
+        "fair-value": "Shares offered at independent fair value rather than matching a third-party price"
+      },
+      "contract_types": ["ma-sha", "ma-subscription-agreement", "ma-jv-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["UK Companies Act 2006 s561"]
+    },
+    {
+      "id": "ma-put-call-option",
+      "clause_category": "m-and-a",
+      "name": "Put and Call Options",
+      "description": "Contractual options granting one party the right (but not the obligation) to sell (put option) or purchase (call option) shares at a predetermined price or a price determined by a specified formula. Put and call options are used in joint ventures, minority investments, and shareholder deadlock resolution to provide structured exit mechanisms. They can be exercisable at specified dates, upon the occurrence of trigger events, or at will after a specified period.",
+      "drafting_guidance": "Specify the option holder (who has the right to exercise). Define the exercise conditions: at will after a lock-up period, upon trigger events (breach, deadlock, change of control), or at specified dates. Determine the exercise price mechanism: fixed price, formula-based (e.g., multiple of EBITDA), fair market value by independent valuation, or the higher/lower of multiple methods. Specify the exercise process: notice requirements, exercise period, and completion timeline. Address the valuation methodology if applicable (DCF, comparable transactions, agreed multiple). Include provisions for the appointment and instruction of the independent valuer. Address the funding of the purchase (the buying party's ability to pay). Specify the consequences of failure to complete (specific performance, break fee). Address the interaction with pre-emption rights (options typically override pre-emption). Consider tax implications and ensure the option structure does not create adverse tax consequences for either party.",
+      "variations": {
+        "put-option-only": "One party has the right to require the other to purchase its shares",
+        "call-option-only": "One party has the right to acquire the other party's shares",
+        "mutual-put-call": "Both parties have reciprocal put and call rights, typically at different valuations to incentivise agreement"
+      },
+      "contract_types": ["ma-sha", "ma-jv-agreement", "ma-subscription-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-sha-protections",
+      "clause_category": "m-and-a",
+      "name": "Minority Shareholder Protections",
+      "description": "A suite of governance provisions designed to protect minority shareholders from being prejudiced by majority decision-making. These protections typically include reserved matters requiring minority consent, board representation rights, information rights, anti-dilution protections, and tag-along rights. Together they ensure that minority shareholders have a meaningful voice in key decisions affecting the company and their investment, while allowing the majority to manage the day-to-day business without undue interference.",
+      "drafting_guidance": "Draft a comprehensive reserved matters list requiring minority consent for specified decisions (see ma-reserved-matters). Include board appointment rights proportional to shareholding or granting the minority at least one board seat. Specify quorum requirements that include minority-appointed directors. Include information rights (monthly management accounts, annual audited accounts, board packs, budget). Address anti-dilution protections for future share issuances. Include tag-along rights on any majority share sale. Specify dividend policy or minimum distribution requirements. Include deadlock resolution mechanisms if the minority effectively has a veto on reserved matters. Address the minority's right to appoint observers to board meetings. Include exit mechanisms (put options, listing rights) to ensure the minority is not locked in indefinitely. Address the interaction with the company's articles of association (ensure SHA provisions are reflected or have priority).",
+      "variations": {
+        "investor-protections": "Standard VC/PE investor protections including board seat, reserved matters, and information rights",
+        "jv-partner-protections": "Equal partner protections in a 50/50 or near-equal joint venture",
+        "founder-protections": "Protections for founders who have become minority after fundraising rounds"
+      },
+      "contract_types": ["ma-sha", "ma-subscription-agreement", "ma-jv-agreement"],
+      "depends_on": ["ma-reserved-matters", "ma-information-rights", "ma-tag-along"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-anti-dilution",
+      "clause_category": "m-and-a",
+      "name": "Anti-Dilution Protection",
+      "description": "Provisions protecting an investor's percentage ownership or economic value from being diluted by subsequent share issuances at a lower valuation (down rounds). Anti-dilution mechanisms adjust the investor's conversion price or grant additional shares to compensate for the reduction in value. These provisions are standard in venture capital and private equity investment documents and are essential for protecting early-stage investors against value erosion from future fundraising at lower valuations.",
+      "drafting_guidance": "Specify the anti-dilution mechanism: full ratchet (conversion price adjusted to the new lower price, regardless of the number of shares issued) or weighted average (conversion price adjusted based on the number of new shares issued and the price differential, producing a less severe adjustment). Broad-based weighted average is the market standard as it is more equitable than full ratchet. Define 'dilutive issuance' and include standard exclusions: employee option pool issuances, shares issued on conversion of existing convertible instruments, shares issued in connection with approved acquisitions, and shares issued to strategic partners with board approval. Specify the calculation formula precisely, including the treatment of options, warrants, and convertible securities. Address pay-to-play provisions (investors who do not participate in the down round may lose their anti-dilution protection). Include worked examples as a schedule to avoid ambiguity in the calculation.",
+      "variations": {
+        "full-ratchet": "Conversion price reduced to the price of the new lower-priced issuance, regardless of amount raised",
+        "broad-based-weighted-average": "Conversion price adjusted using a weighted average formula considering all outstanding shares",
+        "narrow-based-weighted-average": "Weighted average calculated on a narrow base (preferred shares only, excluding common and options)"
+      },
+      "contract_types": ["ma-subscription-agreement", "ma-convertible-note", "ma-safe-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-information-rights",
+      "clause_category": "m-and-a",
+      "name": "Information Rights",
+      "description": "Rights granted to shareholders (typically minority investors) to receive regular financial and operational information about the company. Information rights ensure transparency and enable shareholders to monitor their investment, exercise their governance rights on an informed basis, and comply with their own reporting obligations. They are a fundamental component of minority shareholder protections in shareholders' agreements and investment documents.",
+      "drafting_guidance": "Specify the information to be provided and the frequency: monthly unaudited management accounts (within 15-20 business days of month end), quarterly board packs, annual audited financial statements (within 90 days of year end), annual budget and business plan (before the start of each financial year). Include the right to receive notice of and materials for board meetings and shareholder meetings. Address the right to inspect books and records (subject to reasonable notice). Include the right to meet with management periodically. Specify the format and level of detail required. Address confidentiality obligations attaching to the information received. Include the right to receive prompt notification of material events (litigation, regulatory action, key employee departures, material contract terminations). Address the interaction with listing rules if the company is or may become publicly traded. Specify the duration of information rights (until the shareholder ceases to hold a minimum percentage).",
+      "variations": {
+        "full-access": "Comprehensive information rights including monthly accounts, board packs, and management meetings",
+        "quarterly-reporting": "Quarterly financial statements and annual audited accounts only",
+        "threshold-based": "Information rights available only to shareholders holding above a specified percentage (e.g., 10%)"
+      },
+      "contract_types": ["ma-sha", "ma-subscription-agreement", "ma-jv-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-reserved-matters",
+      "clause_category": "m-and-a",
+      "name": "Reserved Matters (Consent Rights)",
+      "description": "A schedule of significant corporate decisions that require the prior written consent of specified shareholders (typically minority investors or JV partners) in addition to or instead of ordinary board or shareholder majority approval. Reserved matters give minority shareholders an effective veto over decisions that could materially affect the value of their investment or fundamentally change the nature of the company's business. The scope and number of reserved matters is a key negotiation point between majority and minority shareholders.",
+      "drafting_guidance": "Categorise reserved matters into tiers: (1) shareholder-level matters requiring investor consent (changes to share capital, new share issuances, changes to articles, winding up, mergers, acquisitions, disposals above threshold); (2) board-level matters requiring investor director consent (annual budget approval, capex above threshold, borrowing above threshold, related party transactions, key employee hiring/termination, entry into new business lines, changes to accounting policies). Set appropriate financial thresholds that are proportionate to the company's size (review and adjust periodically). Address the process for requesting consent (written notice with supporting information, response period of 10-20 business days, deemed refusal if no response). Include provisions for emergency decisions. Address the interaction with deadlock resolution mechanisms if consent is withheld. Consider sunset provisions (reserved matters may fall away if the investor's shareholding drops below a specified percentage).",
+      "variations": {
+        "comprehensive": "Extensive list of 30+ reserved matters covering all significant corporate actions",
+        "streamlined": "Limited to 10-15 fundamental matters (share capital changes, disposals, related party transactions, winding up)",
+        "tiered-consent": "Different matters require different levels of consent (investor director, investor majority, unanimous)"
+      },
+      "contract_types": ["ma-sha", "ma-subscription-agreement", "ma-jv-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-deadlock-resolution",
+      "clause_category": "m-and-a",
+      "name": "Deadlock Resolution Mechanism",
+      "description": "Provisions addressing the situation where shareholders or joint venture partners are unable to agree on a matter requiring their joint consent, creating a deadlock that prevents the company from taking action. Deadlock resolution mechanisms are critical in 50/50 joint ventures and in companies where minority shareholders have veto rights over reserved matters. Without effective deadlock resolution, the company may be unable to function, potentially leading to dissolution or value destruction.",
+      "drafting_guidance": "Define 'deadlock' precisely (e.g., the relevant decision has been considered at two consecutive board meetings at least 14 days apart and the directors remain unable to agree, or a reserved matter has been refused consent twice). Establish a tiered resolution process: (1) escalation to senior executives of each shareholder for good faith negotiation within a specified period (typically 30 days); (2) mediation by an agreed or appointed mediator (30-60 days); (3) final resolution mechanism. Final resolution options include: Russian roulette (one party names a price and the other must either buy or sell at that price), Texas shoot-out (sealed bids, highest bidder buys), put/call options at fair market value, referral to an independent expert, or winding up. Address the funding implications (party exercising a buy-out must have access to funds). Specify the valuation methodology for buy-out mechanisms. Address continuing obligations during the deadlock resolution process (business continues in the ordinary course). Consider whether certain critical matters have an automatic resolution (e.g., chairman's casting vote for operational matters only).",
+      "variations": {
+        "russian-roulette": "One party names a price; the other must buy or sell at that price within a specified period",
+        "texas-shoot-out": "Both parties submit sealed bids; highest bidder acquires the other's shares",
+        "escalation-and-mediation": "Multi-step process of escalation, negotiation, and mediation before any forced exit"
+      },
+      "contract_types": ["ma-sha", "ma-jv-agreement"],
+      "depends_on": ["ma-reserved-matters"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-good-bad-leaver",
+      "clause_category": "m-and-a",
+      "name": "Good Leaver / Bad Leaver Provisions",
+      "description": "Provisions governing the terms on which a shareholder who is also an employee or director (typically a founder or key manager) must transfer their shares upon leaving the company. Good leaver provisions apply where the departure is without fault (retirement, death, disability, redundancy, unfair dismissal) and typically require transfer at fair market value. Bad leaver provisions apply where departure is with fault (resignation within a specified period, termination for cause, breach of restrictive covenants) and typically require transfer at the lower of cost and fair market value, or at nominal value.",
+      "drafting_guidance": "Define 'good leaver' events precisely: death, permanent incapacity, retirement at normal retirement age, redundancy, termination without cause, termination by the leaver for good reason (constructive dismissal). Define 'bad leaver' events: voluntary resignation (particularly within a vesting period), termination for cause (gross misconduct, material breach of employment contract, fraud, dishonesty), breach of restrictive covenants, material breach of the shareholders' agreement. Consider an intermediate category ('early leaver') for resignation after a minimum period but before full vesting, with a sliding scale between cost and fair value. Specify the valuation methodology for each category: good leaver at fair market value (independent valuation), bad leaver at cost or nominal value. Address the vesting schedule for shares (e.g., shares vest over 4 years with 1-year cliff). Specify the transfer mechanics (compulsory transfer notice, completion timeline). Address the purchaser identity (company, other shareholders pro rata, or investor). Include provisions for leaver's shares to remain subject to drag-along but not benefit from tag-along until transferred.",
+      "variations": {
+        "binary": "Simple good/bad classification with no intermediate categories",
+        "tiered": "Good leaver, intermediate leaver, and bad leaver with different valuations for each",
+        "vesting-based": "Leaver classification interacts with vesting schedule; unvested shares always at cost, vested shares per leaver category"
+      },
+      "contract_types": ["ma-sha", "ma-subscription-agreement"],
+      "depends_on": [],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-management-warranties",
+      "clause_category": "m-and-a",
+      "name": "Management Warranties",
+      "description": "Separate warranties given by the management team of the target company (as distinct from the seller's warranties) covering operational matters within their direct knowledge. Management warranties are used in private equity transactions where the seller (PE fund) has limited operational knowledge of the target and the buyer looks to the management team for comfort on day-to-day matters. They also serve to align management's interests with the buyer by creating personal exposure for inaccurate disclosures.",
+      "drafting_guidance": "Limit management warranties to matters within management's direct knowledge and operational responsibility (accuracy of management accounts, completeness of customer and supplier lists, employee matters, key contracts, IT systems, operational compliance). Distinguish from seller warranties which cover title, capacity, and corporate matters. Address the cap on management warranty liability (typically a multiple of the manager's salary, e.g., 1-2x annual base salary, to ensure the exposure is meaningful but not disproportionate). Include a separate disclosure letter process for management warranties. Address the interaction with the management's reinvestment in the post-acquisition entity (warranty exposure should not exceed the value of their rolled-over investment). Consider whether W&I insurance covers management warranties (typically it does not, unless specifically endorsed). Address the timing and repetition of management warranties (signing and/or completion). Include provisions for management to update disclosures between signing and completion.",
+      "variations": {
+        "operational-focus": "Limited to operational matters: accounts, employees, contracts, compliance",
+        "comprehensive": "Covers the full range of target warranties but given by management rather than seller",
+        "capped-exposure": "Liability capped at a fixed amount or multiple of salary with carve-out for fraud"
+      },
+      "contract_types": ["ma-spa"],
+      "depends_on": ["ma-representations-warranties", "ma-disclosure-letter"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-disclosure-letter",
+      "clause_category": "m-and-a",
+      "name": "Disclosure Letter",
+      "description": "A formal letter from the seller to the buyer, delivered at or prior to signing, disclosing facts, matters, and circumstances that qualify the representations and warranties given by the seller in the acquisition agreement. The disclosure letter ensures that the buyer cannot bring a warranty claim in respect of matters that were disclosed to it prior to completion. It typically consists of general disclosures (matters deemed disclosed by reference to publicly available information) and specific disclosures against each individual warranty.",
+      "drafting_guidance": "Structure the disclosure letter with: (1) general disclosures (matters in the public domain, filings at Companies House, statutory registers, data room contents); (2) specific disclosures against each numbered warranty in the SPA. Each specific disclosure should identify the warranty it qualifies, describe the matter fully and fairly, and attach or reference supporting documentation. Address the standard of disclosure: fair disclosure means sufficient detail for the buyer to identify the nature and scope of the matter disclosed. Resist vague or blanket disclosures (e.g., 'all matters in the data room'). Address deemed disclosure from the data room (the buyer may resist this; if accepted, include a data room index as an annex). Specify the timing of delivery (at or before signing). Address supplemental disclosures between signing and completion (buyer typically resists any right to supplement). Consider the interaction with W&I insurance (the insurer will review the disclosure letter carefully and may exclude specific disclosed items from coverage).",
+      "variations": {
+        "specific-only": "Only specific, itemised disclosures against individual warranties are effective",
+        "general-and-specific": "General disclosures (public information, data room) plus specific disclosures",
+        "data-room-deemed": "All documents in the data room are deemed disclosed (buyer-unfriendly but common in auctions)"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-limitation-periods",
+      "clause_category": "m-and-a",
+      "name": "Warranty Limitation Periods",
+      "description": "Contractual time limits within which the buyer must notify and bring warranty claims against the seller. Limitation periods are a critical seller protection, providing certainty as to when warranty exposure ends. They are typically shorter than statutory limitation periods and vary by warranty category. Fundamental warranties (title, capacity) and tax warranties attract longer limitation periods, while general business warranties have shorter periods.",
+      "drafting_guidance": "Specify different limitation periods for different warranty categories: fundamental warranties (title, capacity, authority) typically 6-7 years; tax warranties and tax covenant claims typically 7 years (or the relevant statutory limitation period plus a buffer); general business warranties typically 18-24 months from completion. Address the notice requirements for preserving a claim: the buyer must notify the seller in writing within the limitation period, specifying the warranty breached, the nature of the claim, and the amount claimed (to the extent known). Specify whether notification alone is sufficient to preserve the claim or whether proceedings must be commenced within a further period (typically 6-9 months from notification). Address the interaction with the escrow release schedule. Address the impact of W&I insurance policy periods (align SPA limitation periods with policy coverage). Specify that the limitation periods apply notwithstanding any statutory limitation period that might otherwise apply.",
+      "variations": {
+        "standard": "General warranties: 18 months; fundamental warranties: 7 years; tax: statutory period plus 3 months",
+        "short-form": "All warranties: 12 months from completion (seller-friendly, often paired with W&I insurance)",
+        "extended": "General warranties: 24 months; fundamental warranties: 7 years; environmental: 5 years"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-de-minimis-basket",
+      "clause_category": "m-and-a",
+      "name": "De Minimis and Basket Thresholds",
+      "description": "Financial thresholds that must be exceeded before the buyer can bring warranty claims against the seller. The de minimis threshold sets a minimum amount below which individual claims are disregarded entirely, preventing trivial claims. The basket (or aggregate threshold) sets a minimum total amount that qualifying claims must exceed before the buyer can recover, preventing the buyer from bringing claims that are collectively immaterial. Together with the liability cap, these thresholds form the core financial limitation framework for M&A warranty claims.",
+      "drafting_guidance": "Set the de minimis threshold as a proportion of the enterprise value (typically 0.1% to 0.5% of the purchase price). Set the basket threshold as a higher proportion (typically 0.5% to 2% of the purchase price). Specify whether the basket operates as a 'tipping basket' (once exceeded, the buyer can recover from the first pound/dollar/euro) or a 'true deductible' (the buyer can only recover amounts in excess of the basket). Tipping baskets are buyer-friendly; true deductibles are seller-friendly. Address whether claims below the de minimis are excluded from the basket calculation. Define how claims are aggregated for basket purposes (series of related claims may be treated as a single claim). Address the interaction with the overall liability cap. Specify separate thresholds for tax warranty claims (which may have different de minimis and basket levels). Address the interaction with W&I insurance policy retention (often the insurer's retention acts as the effective basket).",
+      "variations": {
+        "tipping-basket": "Once aggregate claims exceed the basket, buyer recovers from the first unit of currency",
+        "true-deductible": "Buyer recovers only amounts exceeding the basket (excess-only)",
+        "combined-with-cap": "De minimis at 0.1% of price, basket at 1%, cap at 25-50% of price"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties", "ma-limitation-periods"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-warranty-tax",
+      "clause_category": "m-and-a",
+      "name": "Tax Warranties and Tax Covenant",
+      "description": "Specific warranties relating to the target company's tax affairs and a separate tax covenant (indemnity) providing pound-for-pound protection against pre-completion tax liabilities. Tax warranties cover the accuracy of tax returns, absence of disputes with tax authorities, adequacy of tax provisions, and compliance with tax obligations. The tax covenant provides broader protection than warranties by covering actual tax liabilities arising from pre-completion events on a full indemnity basis without the need to prove loss.",
+      "drafting_guidance": "Draft comprehensive tax warranties covering: all tax returns have been filed accurately and on time; no outstanding disputes or enquiries with tax authorities; adequate provision for tax in the completion accounts; compliance with PAYE, VAT, corporation tax, stamp duty, and withholding obligations; no arrangements that might be challenged as tax avoidance; transfer pricing arrangements are arm's length; no tax clearances have been breached. Draft a separate tax covenant providing indemnity coverage for: tax liabilities arising from pre-completion events; tax arising from non-ordinary course transactions between signing and completion; loss of tax reliefs carried forward as a result of the transaction; secondary tax liabilities. Address the overprovision and savings mechanism (reduce the tax covenant liability by any overprovisions or savings identified). Specify the conduct of tax affairs post-completion and the buyer's obligation to consult with the seller on pre-completion tax matters. Address the interaction with completion accounts (no double recovery). Specify a longer limitation period than general warranties (typically 7 years or the statutory assessment period).",
+      "variations": {
+        "warranty-and-covenant": "Comprehensive tax warranties supplemented by a separate tax deed of covenant",
+        "warranty-only": "Tax warranties without a separate covenant (seller-friendly, less protection for buyer)",
+        "locked-box-tax": "Tax provisions adapted for locked box mechanics with specific leakage carve-outs for tax payments"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-warranty-accounts",
+      "clause_category": "m-and-a",
+      "name": "Accounts Warranties",
+      "description": "Warranties that the target company's financial statements have been prepared in accordance with applicable accounting standards, give a true and fair view of the company's financial position, and are not misleading. Accounts warranties are fundamental to the buyer's assessment of value and cover the statutory accounts, management accounts, and any other financial information provided during due diligence. They address both the preparation methodology and the substantive accuracy of the financial information.",
+      "drafting_guidance": "Specify which accounts are covered: the most recent audited statutory accounts, management accounts for the current period, and any other financial information provided in the data room or information memorandum. Warrant that the accounts have been prepared in accordance with applicable accounting standards (IFRS, UK GAAP, local GAAP) consistently applied. Warrant that the accounts give a true and fair view of the state of affairs and profit/loss for the relevant period. Address specific accounting matters: adequacy of provisions and reserves, absence of material off-balance sheet liabilities, proper accrual of income and expenses, fair valuation of assets, proper disclosure of related party transactions. Warrant that there has been no material adverse change since the accounts date. Address the consistency of accounting policies between periods. Warrant that management accounts have been prepared on a basis consistent with the statutory accounts. Qualify awareness-based warranties appropriately (the seller's finance director or CFO should be named as the relevant person).",
+      "variations": {
+        "full-warranty": "Comprehensive warranty covering statutory accounts, management accounts, and projections",
+        "statutory-only": "Warranty limited to the most recent audited statutory accounts",
+        "knowledge-qualified": "Accounts warranties qualified to the knowledge of the CFO"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": ["IFRS", "UK GAAP FRS 102"]
+    },
+    {
+      "id": "ma-warranty-ip",
+      "clause_category": "m-and-a",
+      "name": "Intellectual Property Warranties",
+      "description": "Warranties that the target company owns or has valid licences to use all intellectual property necessary for its business, that such IP is not subject to any encumbrances or disputes, and that the target's business does not infringe the IP rights of any third party. IP warranties are critical in technology and knowledge-intensive acquisitions where intellectual property constitutes a significant portion of the enterprise value.",
+      "drafting_guidance": "Require a comprehensive IP schedule listing all registered IP (patents, trademarks, designs, domain names) and material unregistered IP (copyright, trade secrets, know-how). Warrant ownership: target owns all IP listed in the schedule free from encumbrances, licences to third parties (except as disclosed), and security interests. Warrant validity: all registrations are valid, subsisting, and not subject to cancellation proceedings. Warrant non-infringement: the target's business does not infringe third-party IP rights; no claims or threats of infringement have been received. Warrant protection: the target has taken reasonable steps to protect its IP (confidentiality agreements, registration, enforcement). Warrant licences: all inbound licences are valid, in force, and not subject to termination as a result of the transaction. Address open source software: warrant compliance with open source licence terms and disclose any copyleft obligations. Address employee and contractor IP assignments: warrant that all employees and contractors have assigned their IP to the target. Consider whether IP warranties should be given on a knowledge-qualified or absolute basis.",
+      "variations": {
+        "comprehensive": "Full IP warranties covering ownership, validity, non-infringement, protection, and licences",
+        "technology-focused": "Enhanced focus on software IP, source code, open source, and technology stack",
+        "knowledge-qualified": "IP warranties qualified by seller's actual knowledge, reducing exposure for unknown infringement"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-warranty-employment",
+      "clause_category": "m-and-a",
+      "name": "Employment Warranties",
+      "description": "Warranties covering the target company's employment arrangements, including the accuracy of employee information, compliance with employment legislation, absence of disputes or claims, and the status of pension and benefit arrangements. Employment warranties are critical because the buyer assumes all employment liabilities on an asset or share acquisition and may face significant exposure from undisclosed liabilities such as equal pay claims, unfunded pension obligations, or ongoing tribunal proceedings.",
+      "drafting_guidance": "Require a comprehensive employee schedule listing all employees (name, start date, role, salary, benefits, notice period, restrictive covenants). Warrant accuracy of the employee schedule. Warrant compliance with all employment legislation (working time, minimum wage, discrimination, health and safety, immigration). Warrant absence of current or threatened employment claims or tribunal proceedings. Warrant that all employment contracts are in writing and on terms disclosed. Address TUPE implications (Transfer of Undertakings - Protection of Employment) if the transaction involves a business transfer. Warrant the status and funding of pension arrangements (defined benefit liabilities, auto-enrolment compliance). Address share option and incentive plan arrangements (treatment on change of control). Warrant compliance with consultation obligations (collective redundancy, TUPE information and consultation). Address key employee retention (identify key employees and their contractual position). Warrant that no offers of employment, promotions, or salary increases have been made outside the ordinary course.",
+      "variations": {
+        "full-schedule": "Complete employee details with individual warranties on each key term",
+        "summary-level": "Warranty that employee information provided in due diligence is accurate and complete",
+        "tupe-focused": "Enhanced warranties for business transfers addressing TUPE compliance and liability allocation"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": ["TUPE Regulations 2006", "Employment Rights Act 1996"]
+    },
+    {
+      "id": "ma-warranty-compliance",
+      "clause_category": "m-and-a",
+      "name": "Compliance Warranties",
+      "description": "Warranties that the target company has conducted its business in compliance with all applicable laws, regulations, licences, permits, and authorisations, and that no compliance breaches or regulatory investigations are outstanding or threatened. Compliance warranties cover anti-bribery and corruption, sanctions, data protection, health and safety, environmental regulations, and sector-specific regulatory requirements. They are essential for identifying regulatory risk that could result in fines, penalties, or operational restrictions post-completion.",
+      "drafting_guidance": "Warrant general compliance with all applicable laws and regulations. Include specific warranties for high-risk compliance areas: anti-bribery and corruption (UK Bribery Act 2010, FCPA, local anti-corruption laws), sanctions (OFAC, EU sanctions, UN sanctions), data protection (GDPR, local data protection laws), health and safety, environmental, and industry-specific regulations. Warrant that the target holds all licences, permits, and authorisations required for its business and that none are subject to revocation, suspension, or modification. Warrant absence of regulatory investigations, enforcement actions, or regulatory correspondence. Address compliance programmes: warrant that the target has adequate policies and procedures (anti-bribery policy, data protection policies, whistleblowing procedures). Warrant that no facilitation payments or questionable payments have been made. Address the agent and intermediary network (high-risk for bribery). Qualify appropriately by materiality and knowledge where reasonable.",
+      "variations": {
+        "comprehensive": "Full compliance warranties covering all regulatory areas with named statutes",
+        "materiality-qualified": "Compliance warranties qualified by materiality thresholds to exclude trivial non-compliance",
+        "sector-specific": "Enhanced warranties for regulated sectors (financial services, healthcare, defence)"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": ["UK Bribery Act 2010", "FCPA", "GDPR"]
+    },
+    {
+      "id": "ma-warranty-litigation",
+      "clause_category": "m-and-a",
+      "name": "Litigation Warranties",
+      "description": "Warranties that no litigation, arbitration, administrative proceedings, or regulatory actions are current, pending, or threatened against the target company, its directors, or its assets, and that there are no circumstances likely to give rise to such proceedings. Litigation warranties are important because unresolved or threatened legal proceedings represent contingent liabilities that may materially affect the target's value and the buyer's risk profile.",
+      "drafting_guidance": "Warrant that no litigation, arbitration, mediation, or administrative proceedings are current, pending, or threatened against the target, its subsidiaries, or their directors in their capacity as directors. Warrant that no regulatory investigations or enforcement actions are ongoing or threatened. Include a warranty that there are no facts or circumstances known to the seller that are likely to give rise to any such proceedings. Address the definition of 'threatened' (actual written threat, or any reasonable basis for a claim). Set a financial threshold below which proceedings need not be disclosed (e.g., claims below a specified value). Require disclosure of all proceedings above the threshold in a litigation schedule. Address insurance coverage for disclosed proceedings. Warrant that no judgments, orders, or decrees are outstanding against the target. Address contingent liabilities in the accounts relating to litigation provisions. Consider whether the litigation warranty extends to claims against the target's products or services.",
+      "variations": {
+        "absolute": "Unqualified warranty that no proceedings exist, are pending, or are threatened",
+        "knowledge-qualified": "Warranty qualified by seller's knowledge as to threatened proceedings",
+        "threshold-based": "Warranty applies only to proceedings above a specified financial threshold"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-warranty-contracts",
+      "clause_category": "m-and-a",
+      "name": "Material Contracts Warranties",
+      "description": "Warranties concerning the target company's material contracts, including their validity, enforceability, status, and absence of breaches or termination rights. Material contracts warranties enable the buyer to assess the target's contractual relationships and identify risks such as change of control provisions that could trigger termination rights, onerous commitments, or contracts that are critical to the business but expiring without renewal assurance.",
+      "drafting_guidance": "Define 'material contracts' by reference to value thresholds and strategic importance (e.g., contracts with annual value exceeding a specified amount, contracts with the target's top 10 customers or suppliers, contracts that cannot be replaced without material adverse effect). Require a schedule of all material contracts. Warrant that all material contracts are valid, binding, and in full force and effect. Warrant that neither the target nor any counterparty is in material breach. Warrant that no notice of termination has been given or received. Address change of control provisions: warrant that the transaction will not trigger termination rights or consent requirements under any material contract (or identify those that do). Warrant that no material contract contains onerous or unusual terms not disclosed. Warrant that the target has performed all material obligations under each contract. Address key customer and supplier concentration risk. Address government contracts (which may have specific assignment and novation requirements).",
+      "variations": {
+        "full-disclosure": "Complete schedule of all material contracts with individual warranty on each",
+        "threshold-based": "Material contracts defined by value threshold with general warranty on compliance",
+        "change-of-control-focused": "Primary focus on identifying contracts with change of control triggers"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-indemnity-specific",
+      "clause_category": "m-and-a",
+      "name": "Specific Indemnities",
+      "description": "Pound-for-pound indemnification obligations covering identified risks or known issues that are too significant to be covered by general warranties alone. Unlike warranty claims (which require proof of breach, reliance, loss, and are subject to de minimis, basket, and cap limitations), specific indemnities provide full recovery for the identified matter without the need to prove breach of warranty and are typically not subject to the general warranty limitations framework. They are used to cover known risks identified during due diligence.",
+      "drafting_guidance": "Draft each specific indemnity to cover a precisely defined risk or issue identified during due diligence. Common areas include: known regulatory investigations, identified environmental contamination, pending or threatened litigation, known tax exposures, underfunded pension obligations, product liability risks, and identified contractual disputes. Specify whether the indemnity is on a pound-for-pound basis (full recovery) or subject to a separate cap. Address the conduct of claims: specify whether the buyer or seller has conduct of third-party claims covered by the indemnity, including the right to settle or compromise. Include mitigation obligations on the buyer. Specify the limitation period (typically aligned with the specific risk, e.g., until resolution of the identified matter). Address the interaction with the general warranty cap (specific indemnities are typically carved out from the general cap). Address the tax treatment of indemnity payments (gross-up for tax if the payment is taxable in the buyer's hands). Include a mechanism for claiming under the indemnity (notice, cooperation, access to records).",
+      "variations": {
+        "full-indemnity": "Complete pound-for-pound recovery without cap for the specific risk",
+        "capped-indemnity": "Indemnity subject to a separate cap specific to the identified risk",
+        "time-limited": "Indemnity expires upon resolution of the identified matter or after a specified period"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-representations-warranties"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-restrictive-covenant-ma",
+      "clause_category": "m-and-a",
+      "name": "Restrictive Covenants (Post-Completion)",
+      "description": "A package of post-completion restrictions imposed on the seller covering non-competition, non-solicitation of customers and suppliers, non-dealing with customers, and non-poaching of employees. These covenants protect the goodwill acquired by the buyer and are broader in scope than employment non-competes because they are supported by the purchase price consideration. Courts consistently enforce reasonable restrictive covenants in a business sale context more readily than in employment contexts.",
+      "drafting_guidance": "Draft each covenant separately: non-compete (prohibit competing in the same business), non-solicitation of customers (prohibit actively soliciting the target's customers), non-dealing (prohibit doing business with the target's customers even if they approach the seller), non-solicitation of suppliers (prohibit interfering with supplier relationships), non-poaching of employees (prohibit soliciting or hiring the target's employees). Specify the restricted territory precisely. Set reasonable durations: non-compete typically 2-3 years, non-solicitation typically 2-3 years, non-poaching typically 12-24 months. Define the restricted persons (seller entity, affiliates, named individuals, and persons acting on their behalf). Include carve-outs for passive investments below 5% of listed entities. Address the enforceability jurisdiction by jurisdiction (some jurisdictions require covenants to be severable). Include injunctive relief provisions and liquidated damages. Address the application to seller's portfolio companies if the seller is a PE fund. Specify that each covenant is independent and severable.",
+      "variations": {
+        "comprehensive-package": "Full package of non-compete, non-solicitation, non-dealing, and non-poaching covenants",
+        "non-compete-only": "Restriction limited to direct competition without non-solicitation or non-dealing",
+        "garden-leave-equivalent": "Short but absolute restriction followed by longer non-solicitation period"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["EU Merger Regulation ancillary restraints notice"]
+    },
+    {
+      "id": "ma-key-person",
+      "clause_category": "m-and-a",
+      "name": "Key Person Provisions",
+      "description": "Provisions addressing the retention and involvement of key individuals (founders, senior management, key technical staff) following completion of the acquisition. Key person clauses may operate as conditions precedent (requiring key persons to enter into new employment contracts before completion), post-completion retention mechanisms (golden handcuffs through earn-outs, equity rollovers, or retention bonuses), or termination triggers (giving the buyer the right to terminate if key persons depart within a specified period). They are critical in founder-led and people-dependent businesses where the departure of key individuals would materially diminish the value of the acquisition.",
+      "drafting_guidance": "Identify key persons by name in a schedule. As a condition precedent, require each key person to execute a new employment or service agreement with terms agreed between the parties prior to signing. Specify the minimum commitment period (typically 12-24 months). Address compensation: retention bonuses (typically paid in instalments over the commitment period, subject to clawback if the person leaves early), equity rollover (key persons reinvest a portion of their proceeds in the acquiring entity), and earn-out participation (key persons are beneficiaries of the earn-out). Link key person provisions to good/bad leaver mechanics for any equity they hold. Address the consequences of departure during the commitment period: clawback of retention bonuses, forfeiture of unvested equity, acceleration or reduction of earn-out payments. Include restrictive covenants binding on key persons (non-compete, non-solicitation). Address gardening leave provisions. Consider the interaction with the buyer's right to terminate the key person's employment and the earn-out implications.",
+      "variations": {
+        "condition-precedent": "Key persons must sign new employment contracts as a condition to completion",
+        "retention-incentive": "Key persons incentivised through retention bonuses and equity rollover rather than contractual lock-in",
+        "earn-out-linked": "Key person retention tied to earn-out period and performance targets"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": ["ma-earn-out", "ma-good-bad-leaver"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-conditions-precedent",
+      "clause_category": "m-and-a",
+      "name": "Conditions Precedent to Completion",
+      "description": "A set of conditions that must be satisfied (or waived) before the buyer is obliged to complete the acquisition. Conditions precedent allocate pre-completion risk and include regulatory approvals (competition/antitrust clearances, foreign investment approvals, sector-specific regulatory consents), third-party consents (change of control consents under material contracts, landlord consents), shareholder approvals, and substantive conditions (no MAC, accuracy of warranties at completion). The conditions framework determines deal certainty and the risk allocation between signing and completion.",
+      "drafting_guidance": "Categorise conditions by type: (1) regulatory conditions (merger control clearance, foreign investment screening, sector-specific approvals); (2) third-party consent conditions (material contract consents, landlord consents); (3) shareholder approval conditions; (4) substantive conditions (no MAC, bring-down of warranties). Specify which conditions are for the buyer's benefit, seller's benefit, or mutual. Address the obligation to use reasonable/best efforts to satisfy conditions (particularly regulatory filings). Specify the timeline: longstop date by which all conditions must be satisfied, with automatic termination if conditions are not met. Address the ability to waive conditions (typically only the benefiting party can waive). Address the consequences of non-satisfaction: termination rights, break fees, reverse break fees. Specify the notification obligations for progress toward condition satisfaction. Address regulatory filings: who files, who pays filing fees, cooperation obligations, information provision. Address the EU Merger Regulation and national filing thresholds. Address the interaction with interim operating covenants (restrictions on the target's conduct between signing and completion).",
+      "variations": {
+        "regulatory-only": "Conditions limited to regulatory approvals (common in auction processes for deal certainty)",
+        "comprehensive": "Full range of regulatory, consent, substantive, and diligence conditions",
+        "hell-or-high-water": "Buyer commits to taking all steps necessary to obtain regulatory clearance, including divestitures"
+      },
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"],
+      "depends_on": [],
+      "compliance_refs": ["EU Merger Regulation 139/2004", "Hart-Scott-Rodino Act"]
+    },
+    {
+      "id": "ma-material-contracts",
+      "clause_category": "m-and-a",
+      "name": "Material Contracts Schedule",
+      "description": "A comprehensive schedule identifying all contracts that are material to the target business, typically defined by reference to value thresholds, strategic importance, or the impact their loss would have on the business. The material contracts schedule serves as the basis for the material contracts warranty, change of control analysis, and third-party consent requirements. It is a critical due diligence deliverable that enables the buyer to assess the quality and durability of the target's revenue streams and key commercial relationships.",
+      "drafting_guidance": "Define materiality criteria: value-based (contracts with annual value exceeding a threshold, e.g., 5% of revenue), relationship-based (contracts with top 10 customers and suppliers), strategic (contracts essential to the business regardless of value, including IP licences, exclusive distribution agreements, and framework agreements). Include the following information for each listed contract: parties, date, term, value, renewal/termination provisions, change of control provisions, assignment restrictions, and any unusual or onerous terms. Cross-reference each material contract to the relevant warranty. Identify contracts requiring consent or notification upon change of control. Identify contracts that are terminable on short notice or approaching expiry. Address the completeness obligation (seller warrants the schedule is complete and no material contract has been omitted). Address the ongoing obligation to update the schedule between signing and completion if new material contracts are entered into.",
+      "variations": {
+        "revenue-focused": "Emphasis on contracts generating material revenue or constituting key customer relationships",
+        "risk-focused": "Emphasis on contracts with onerous terms, change of control triggers, or termination risk",
+        "comprehensive": "All contracts above a low value threshold with detailed analysis of each"
+      },
+      "contract_types": ["ma-spa", "ma-apa"],
+      "depends_on": ["ma-representations-warranties", "ma-warranty-contracts"],
+      "compliance_refs": []
+    },
+    {
+      "id": "ma-change-of-control",
+      "clause_category": "m-and-a",
+      "name": "Change of Control Provisions",
+      "description": "Provisions addressing the consequences of a change in the ownership or control of a party to a contract. Change of control clauses in third-party contracts may give the counterparty the right to terminate, renegotiate, or withhold consent upon a change in ownership of the target. In the acquisition agreement itself, change of control provisions protect against the buyer subsequently disposing of or restructuring the acquired business in a manner that undermines the seller's ongoing interests (earn-out, deferred consideration, restrictive covenant period).",
+      "drafting_guidance": "In the SPA context, address both inbound and outbound change of control. Inbound: identify all third-party contracts containing change of control provisions and determine whether the transaction will trigger them. Include a warranty that the seller has disclosed all such provisions. Address whether obtaining consent under change of control provisions is a condition precedent to completion or a post-completion covenant. Outbound: consider whether to include restrictions on the buyer's ability to undergo a change of control during the earn-out period or deferred consideration period. Define 'change of control' precisely (acquisition of more than 50% of voting rights, ability to appoint majority of board, ability to direct affairs). Address indirect change of control (change of control of the buyer's parent). Address the remedies: termination right, price adjustment, acceleration of deferred consideration. Consider anti-embarrassment provisions if the buyer sells the target within a specified period at a higher price.",
+      "variations": {
+        "consent-required": "Change of control requires prior written consent of the non-transferring party",
+        "notification-only": "Change of control requires notification but not consent",
+        "termination-trigger": "Change of control gives the non-transferring party an automatic right to terminate"
+      },
+      "contract_types": ["ma-spa", "ma-sha", "ma-jv-agreement"],
+      "depends_on": ["ma-conditions-precedent"],
+      "compliance_refs": []
+    }
+  ],
+  "contract_types": [
+    {
+      "id": "ma-spa",
+      "name": "Share Purchase Agreement (SPA)",
+      "category": "m-and-a",
+      "description": "The principal agreement governing the acquisition of a company through the purchase of its entire issued share capital (or a controlling stake). An SPA transfers ownership of the target company as a going concern, with the buyer assuming all assets, liabilities, contracts, employees, and obligations of the target through the corporate vehicle. It covers purchase price and price adjustment mechanisms, representations and warranties, indemnities, conditions precedent, pre-completion covenants, completion mechanics, and post-completion obligations including restrictive covenants.",
+      "required_clauses": ["ma-representations-warranties", "ma-disclosure-letter", "ma-limitation-periods", "ma-de-minimis-basket", "ma-conditions-precedent", "ma-non-compete-ma", "ma-warranty-tax", "ma-warranty-accounts"],
+      "recommended_clauses": ["ma-mac-clause", "ma-earn-out", "ma-escrow", "ma-completion-accounts", "ma-locked-box", "ma-wi-insurance", "ma-management-warranties", "ma-warranty-ip", "ma-warranty-employment", "ma-warranty-compliance", "ma-warranty-litigation", "ma-warranty-contracts", "ma-indemnity-specific", "ma-restrictive-covenant-ma", "ma-key-person", "ma-material-contracts", "ma-change-of-control"],
+      "typical_parties": "Seller (Shareholders) <-> Buyer (Acquirer)",
+      "regulatory_drivers": ["EU Merger Regulation 139/2004", "Hart-Scott-Rodino Act", "UK National Security and Investment Act 2021"],
+      "related_agreements": ["ma-sha", "ma-jv-agreement"]
+    },
+    {
+      "id": "ma-apa",
+      "name": "Asset Purchase Agreement (APA)",
+      "category": "m-and-a",
+      "description": "An agreement governing the acquisition of specified assets and liabilities of a business rather than the corporate entity itself. Unlike a share purchase, the buyer selects which assets to acquire and which liabilities to assume, enabling the buyer to leave behind unwanted liabilities and obtain a cleaner acquisition. However, APAs are more complex operationally because each asset, contract, and employee must be individually transferred, assigned, or novated. APAs are common in carve-out transactions, distressed acquisitions, and where the target entity has unwanted contingent liabilities.",
+      "required_clauses": ["ma-representations-warranties", "ma-disclosure-letter", "ma-limitation-periods", "ma-de-minimis-basket", "ma-conditions-precedent", "ma-non-compete-ma", "ma-warranty-accounts"],
+      "recommended_clauses": ["ma-escrow", "ma-completion-accounts", "ma-earn-out", "ma-warranty-ip", "ma-warranty-employment", "ma-warranty-compliance", "ma-warranty-litigation", "ma-warranty-contracts", "ma-indemnity-specific", "ma-restrictive-covenant-ma", "ma-key-person", "ma-material-contracts"],
+      "typical_parties": "Seller (Business Owner) <-> Buyer (Acquirer)",
+      "regulatory_drivers": ["TUPE Regulations 2006", "EU Merger Regulation 139/2004"],
+      "related_agreements": ["ma-spa"]
+    },
+    {
+      "id": "ma-sha",
+      "name": "Shareholders' Agreement (SHA)",
+      "category": "m-and-a",
+      "description": "A private agreement between the shareholders of a company governing their relationship, rights, and obligations in relation to the company and their shareholdings. SHAs supplement the company's articles of association and typically cover governance arrangements, reserved matters, transfer restrictions (pre-emption, tag-along, drag-along), exit mechanisms, dividend policy, and deadlock resolution. They are essential in joint ventures, private equity-backed companies, and any company with multiple shareholders who need to regulate their relationship beyond the statutory framework.",
+      "required_clauses": ["ma-pre-emption", "ma-tag-along", "ma-drag-along", "ma-reserved-matters", "ma-information-rights", "ma-deadlock-resolution"],
+      "recommended_clauses": ["ma-sha-protections", "ma-good-bad-leaver", "ma-anti-dilution", "ma-put-call-option", "ma-change-of-control", "ma-non-compete-ma", "ma-key-person"],
+      "typical_parties": "Shareholder A <-> Shareholder B <-> Company",
+      "regulatory_drivers": ["UK Companies Act 2006"],
+      "related_agreements": ["ma-spa", "ma-subscription-agreement", "ma-jv-agreement"]
+    },
+    {
+      "id": "ma-subscription-agreement",
+      "name": "Subscription Agreement (Investment Round)",
+      "category": "m-and-a",
+      "description": "An agreement under which an investor subscribes for newly issued shares in a company as part of a fundraising round. Subscription agreements govern the terms of the investment including the subscription price, conditions to completion, investor protections, representations and warranties, and the terms of the shares being issued. They are standard in venture capital and growth equity transactions and are typically accompanied by an amended shareholders' agreement or a new shareholders' agreement that incorporates the investor's governance and protection rights.",
+      "required_clauses": ["ma-representations-warranties", "ma-conditions-precedent", "ma-anti-dilution", "ma-information-rights", "ma-tag-along", "ma-drag-along", "ma-pre-emption"],
+      "recommended_clauses": ["ma-reserved-matters", "ma-sha-protections", "ma-good-bad-leaver", "ma-key-person"],
+      "typical_parties": "Investor(s) <-> Company <-> Existing Shareholders",
+      "regulatory_drivers": ["UK Companies Act 2006 s561", "Financial Services and Markets Act 2000"],
+      "related_agreements": ["ma-sha", "ma-convertible-note", "ma-safe-agreement"]
+    },
+    {
+      "id": "ma-convertible-note",
+      "name": "Convertible Loan Note",
+      "category": "m-and-a",
+      "description": "A debt instrument that converts into equity shares of the issuing company upon the occurrence of specified trigger events, typically a qualifying equity financing round, a sale of the company, or maturity of the note. Convertible notes are commonly used in early-stage financing as a bridge between funding rounds, allowing investors to defer the valuation question until a priced round occurs. They carry an interest rate and include a conversion discount and/or a valuation cap to compensate the noteholder for the additional risk of investing before a priced round.",
+      "required_clauses": ["ma-anti-dilution", "ma-conditions-precedent"],
+      "recommended_clauses": ["ma-information-rights", "ma-reserved-matters", "ma-representations-warranties"],
+      "typical_parties": "Noteholder (Investor) <-> Company (Issuer)",
+      "regulatory_drivers": ["Financial Services and Markets Act 2000", "UK Companies Act 2006"],
+      "related_agreements": ["ma-subscription-agreement", "ma-safe-agreement", "ma-sha"]
+    },
+    {
+      "id": "ma-safe-agreement",
+      "name": "Simple Agreement for Future Equity (SAFE)",
+      "category": "m-and-a",
+      "description": "A financing instrument that provides the investor with the right to receive equity in the company upon specified future events, without being structured as debt (no maturity date, no interest accrual). SAFEs were developed by Y Combinator and have become standard in US early-stage financing. They convert into shares upon a qualifying equity financing, a liquidity event, or a dissolution of the company, with the conversion price determined by reference to a valuation cap and/or a discount to the price paid by investors in the qualifying round.",
+      "required_clauses": ["ma-anti-dilution"],
+      "recommended_clauses": ["ma-information-rights", "ma-representations-warranties", "ma-reserved-matters"],
+      "typical_parties": "Investor <-> Company (Issuer)",
+      "regulatory_drivers": [],
+      "related_agreements": ["ma-convertible-note", "ma-subscription-agreement"]
+    },
+    {
+      "id": "ma-merger-agreement",
+      "name": "Merger Agreement",
+      "category": "m-and-a",
+      "description": "An agreement governing the combination of two companies into a single entity through a statutory merger process. The merger agreement sets out the terms of the combination including the exchange ratio for shares, the governance of the combined entity, conditions precedent (including shareholder and regulatory approvals), representations and warranties of both parties, interim operating covenants, termination rights and break fees, and non-solicitation provisions. Merger agreements are used in public and private mergers where both companies' shareholders must approve the transaction.",
+      "required_clauses": ["ma-representations-warranties", "ma-conditions-precedent", "ma-mac-clause", "ma-warranty-accounts", "ma-warranty-compliance"],
+      "recommended_clauses": ["ma-non-compete-ma", "ma-warranty-ip", "ma-warranty-employment", "ma-warranty-litigation", "ma-warranty-contracts", "ma-warranty-tax", "ma-indemnity-specific", "ma-key-person", "ma-change-of-control", "ma-restrictive-covenant-ma"],
+      "typical_parties": "Company A <-> Company B (merging entities)",
+      "regulatory_drivers": ["EU Merger Regulation 139/2004", "Hart-Scott-Rodino Act", "UK Companies Act 2006 Part 26/26A"],
+      "related_agreements": ["ma-spa", "ma-sha"]
+    },
+    {
+      "id": "ma-jv-agreement",
+      "name": "Joint Venture Agreement",
+      "category": "m-and-a",
+      "description": "An agreement establishing a jointly-owned corporate vehicle or contractual arrangement through which two or more parties collaborate on a specific business project, market entry, or operational activity. JV agreements address the formation, capitalisation, governance, management, profit-sharing, exit, and dissolution of the joint venture. They must balance the interests of parties who are often competitors outside the JV scope and address the complex intersection of corporate governance, competition law, and commercial objectives.",
+      "required_clauses": ["ma-reserved-matters", "ma-deadlock-resolution", "ma-information-rights", "ma-pre-emption", "ma-put-call-option"],
+      "recommended_clauses": ["ma-tag-along", "ma-drag-along", "ma-non-compete-ma", "ma-sha-protections", "ma-change-of-control", "ma-conditions-precedent", "ma-key-person"],
+      "typical_parties": "JV Partner A <-> JV Partner B <-> JV Company",
+      "regulatory_drivers": ["EU Merger Regulation 139/2004 (full-function JVs)", "TFEU Art 101 (non-full-function JVs)"],
+      "related_agreements": ["ma-sha", "ma-spa"]
+    }
+  ],
+  "risk_patterns": [
+    {
+      "id": "ma-risk-inadequate-warranty-package",
+      "name": "Inadequate Warranty Package",
+      "risk_category": "contractual",
+      "clause_type": "m-and-a",
+      "trigger": "Seller provides only fundamental warranties (title, capacity) without comprehensive business warranties covering tax, IP, employment, contracts, and compliance",
+      "description": "An inadequate warranty package leaves the buyer without contractual recourse for undisclosed liabilities or misrepresentations about the target business. This is particularly dangerous where the buyer has relied on information provided during due diligence that is not substantiated by formal warranties.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Buyer inherits unknown liabilities with no contractual remedy, potentially resulting in losses exceeding the purchase price. Common areas of exposure include undisclosed tax liabilities, IP infringement claims, employment tribunal proceedings, and regulatory non-compliance.",
+      "detection_guidance": "Review the warranty schedule for coverage gaps. Check for key warranty categories: corporate, accounts, tax, IP, employment, contracts, compliance, litigation, assets, environment. Compare against market-standard warranty packages for transactions of similar size and complexity.",
+      "remediation": "Negotiate a comprehensive warranty package covering all material aspects of the target business. Where the seller resists extensive warranties, consider W&I insurance to provide independent coverage. Ensure each warranty is sufficiently specific and not undermined by excessive qualifications or blanket materiality scrapers.",
+      "real_world_impact": "In HP's acquisition of Autonomy (2011), inadequate investigation of accounting representations contributed to an $8.8 billion write-down. Comprehensive warranties with robust disclosure processes are essential to price protection."
+    },
+    {
+      "id": "ma-risk-mac-clause-too-narrow",
+      "name": "MAC Clause with Excessive Carve-Outs",
+      "risk_category": "financial",
+      "clause_type": "m-and-a",
+      "trigger": "MAC clause contains broad carve-outs for industry-wide changes, macroeconomic conditions, and changes in law that effectively render the protection meaningless",
+      "description": "A MAC clause with excessive carve-outs provides illusory protection. If substantially all foreseeable adverse events are carved out, the buyer has no practical exit route between signing and completion even if the target's value deteriorates materially.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Buyer is locked into completing the acquisition despite material deterioration in the target's value, potentially overpaying by 20-40% if the target's business is significantly impacted by events falling within the carve-outs.",
+      "detection_guidance": "Review the MAC definition and each carve-out. Assess whether company-specific impacts of industry-wide events are excluded from the carve-outs (disproportionate impact exception). Check whether the MAC is quantified or purely qualitative. Verify whether the burden of proof is allocated.",
+      "remediation": "Negotiate a 'disproportionate impact' exception to each carve-out, so that industry-wide events that disproportionately affect the target relative to its peers still constitute a MAC. Include quantitative thresholds (e.g., decline in EBITDA exceeding 20%). Ensure the MAC operates as a condition precedent, not merely a warranty.",
+      "real_world_impact": "In Akorn v. Fresenius Kabi (2018, Delaware), the court found a MAC for the first time in a major public acquisition case, but noted the very high threshold typically required to prove material adverse change."
+    },
+    {
+      "id": "ma-risk-earn-out-manipulation",
+      "name": "Earn-Out Manipulation Risk",
+      "risk_category": "financial",
+      "clause_type": "m-and-a",
+      "trigger": "Earn-out provisions lack sufficient protections against buyer conduct that could artificially reduce earn-out payments, such as cost loading, revenue diversion, or premature integration",
+      "description": "Without adequate protections, the buyer can manage the target business in ways that legitimately reduce earn-out metrics while extracting value through other means. This creates a fundamental conflict of interest and is a frequent source of post-acquisition disputes.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Seller receives materially reduced earn-out payments due to buyer actions rather than genuine business performance, resulting in a purchase price significantly below the seller's expectation and potentially triggering disputes and litigation that consume management time and legal costs.",
+      "detection_guidance": "Review earn-out provisions for: obligation to operate the business in the ordinary course, restrictions on integration during the earn-out period, consistent application of accounting policies, prohibition on revenue diversion or cost loading, anti-embarrassment clause. Check whether the buyer has unfettered discretion to make business decisions affecting earn-out metrics.",
+      "remediation": "Include express covenants requiring the buyer to: operate the business in the ordinary course during the earn-out period, maintain consistent accounting policies, refrain from actions specifically intended to reduce earn-out payments, maintain separate financial reporting for the target business. Include an independent accountant determination mechanism for disputes. Consider revenue-based metrics which are harder to manipulate than EBITDA.",
+      "real_world_impact": "Earn-out disputes are among the most litigated issues in M&A. In Airborne Health v. Squid Soap LP (2010, Delaware), the court emphasised the importance of implied covenants of good faith in earn-out provisions."
+    },
+    {
+      "id": "ma-risk-locked-box-leakage",
+      "name": "Undisclosed Leakage in Locked Box",
+      "risk_category": "financial",
+      "clause_type": "m-and-a",
+      "trigger": "Locked box mechanism with inadequate leakage definitions or insufficient buyer audit rights to verify compliance with the no-leakage covenant",
+      "description": "In a locked box structure, the buyer pays a price based on a historical balance sheet and relies on the seller's covenant that no value has leaked from the target between the locked box date and completion. If leakage is inadequately defined or the buyer cannot verify compliance, the seller can extract value from the target during this period, effectively reducing what the buyer receives.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Value extraction between locked box date and completion through management fees, intercompany charges, excessive bonuses, or other distributions, resulting in the buyer overpaying for the target by the amount of the undisclosed leakage.",
+      "detection_guidance": "Review the definition of 'leakage' for comprehensiveness. Check that it covers: dividends, distributions, management fees, intercompany payments above arm's length, bonuses (except ordinary course), transfer of assets at undervalue, assumption of non-business liabilities, and any payment to or for the benefit of the seller or connected persons. Verify buyer's post-completion audit rights.",
+      "remediation": "Draft a comprehensive leakage definition covering all forms of value extraction. Define 'permitted leakage' narrowly and list specific permitted items. Include a pound-for-pound indemnity for any leakage. Grant the buyer post-completion access to records to verify compliance. Include a specific warranty that no leakage has occurred since the locked box date.",
+      "real_world_impact": null
+    },
+    {
+      "id": "ma-risk-no-antitrust-clearance-strategy",
+      "name": "Regulatory Clearance Failure Risk",
+      "risk_category": "regulatory",
+      "clause_type": "m-and-a",
+      "trigger": "Transaction meets merger control filing thresholds but the agreement lacks clear obligations regarding filing strategy, cooperation, and remedies if clearance is refused or conditional",
+      "description": "Failure to obtain required antitrust or regulatory clearances can prevent completion of the transaction entirely, or result in clearance subject to conditions (divestitures, behavioural remedies) that materially reduce the value of the acquisition for the buyer. Without clear provisions governing the filing process and responsibility for obtaining clearance, the parties may face delays, unexpected costs, and deal failure.",
+      "severity": "critical",
+      "likelihood": "occasional",
+      "impact": "Transaction blocked or delayed by competition authorities, resulting in deal failure, significant advisory costs, reputational damage, and potential break fee liability. Conditional clearance may require divestitures that significantly reduce the strategic value of the acquisition.",
+      "detection_guidance": "Check whether the transaction triggers filing obligations under EU Merger Regulation, Hart-Scott-Rodino Act, UK CMA, or other jurisdictions. Review the conditions precedent for regulatory approval requirements. Assess the allocation of filing obligations, costs, and cooperation duties. Check for 'hell or high water' commitments or their absence.",
+      "remediation": "Include detailed regulatory conditions precedent with clear filing obligations and timelines. Specify cooperation duties and information provision requirements. Address the allocation of filing fees. Consider reverse break fees payable by the buyer if the transaction fails due to regulatory issues. Include provisions addressing remedies (divestitures, behavioural commitments) and the buyer's obligations to accept or propose remedies. Set appropriate longstop dates with regulatory extensions.",
+      "real_world_impact": "The European Commission blocked the Siemens/Alstom merger in 2019 despite the parties' efforts to offer remedies, demonstrating the importance of realistic regulatory risk assessment and appropriate conditionality provisions."
+    },
+    {
+      "id": "ma-risk-change-of-control-termination",
+      "name": "Material Contract Termination on Change of Control",
+      "risk_category": "operational",
+      "clause_type": "m-and-a",
+      "trigger": "Target's material contracts contain change of control provisions that could trigger termination or renegotiation rights upon completion of the acquisition",
+      "description": "Many commercial contracts contain change of control provisions granting the counterparty a right to terminate, withhold consent, or renegotiate terms upon a change in ownership of the target. If material contracts are terminated or renegotiated post-completion, the value of the acquisition can be significantly impaired.",
+      "severity": "high",
+      "likelihood": "common",
+      "impact": "Loss of material customer contracts, supplier agreements, or licences that are fundamental to the target's business. Revenue concentration risk is amplified when key customers exercise termination rights, potentially destroying 20-50% of the target's revenue base.",
+      "detection_guidance": "Review all material contracts for change of control provisions. Cross-reference against the material contracts warranty and schedule. Identify contracts requiring consent, notification, or providing termination rights. Assess the revenue and strategic importance of affected contracts. Check whether obtaining consents is a condition precedent to completion.",
+      "remediation": "Require the seller to warrant all change of control provisions and provide a comprehensive schedule. Make obtaining consent under critical contracts a condition precedent to completion. For less critical contracts, include a post-completion covenant requiring the seller to use reasonable efforts to obtain consents. Include indemnity protection for losses arising from the exercise of change of control termination rights. Consider approaching key counterparties pre-signing (with confidentiality protections) to secure comfort.",
+      "real_world_impact": "In numerous technology acquisitions, key customer contracts with change of control provisions have been exercised post-completion, requiring the buyer to renegotiate on less favourable terms or lose the customer relationship entirely."
+    },
+    {
+      "id": "ma-risk-wi-insurance-gaps",
+      "name": "W&I Insurance Coverage Gaps",
+      "risk_category": "financial",
+      "clause_type": "m-and-a",
+      "trigger": "W&I insurance policy obtained but with material exclusions, high retention, or coverage limit below the SPA warranty cap, creating a false sense of security",
+      "description": "W&I insurance policies contain exclusions for known issues, matters disclosed in the disclosure letter, specific risk areas (pensions, environmental, product liability), and forward-looking warranties. If the buyer relies on W&I insurance as the primary source of recovery but the policy does not cover the specific risk that materialises, the buyer is left without effective recourse.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Buyer suffers warranty losses that fall within policy exclusions or below the retention, resulting in unrecoverable losses. The buyer's expectation of W&I coverage creates complacency in negotiating the underlying warranty package and limitations.",
+      "detection_guidance": "Review the W&I insurance policy exclusion schedule against the SPA warranty package. Compare the policy retention (excess) with the SPA de minimis and basket thresholds. Verify the policy limit against the SPA warranty cap. Check whether the policy covers management warranties, synthetic warranties, and specific indemnities. Assess the subrogation position.",
+      "remediation": "Engage the W&I insurer early in the transaction process to ensure policy terms are aligned with the SPA. Negotiate to minimise exclusions. Ensure the SPA warranty package remains robust even with W&I insurance in place (do not weaken warranties because insurance is available). Maintain the seller's liability for fraud and deliberate concealment regardless of insurance. Consider excess layers or top-up policies for specific high-risk areas.",
+      "real_world_impact": null
+    },
+    {
+      "id": "ma-risk-insufficient-escrow",
+      "name": "Insufficient Escrow or Security for Claims",
+      "risk_category": "financial",
+      "clause_type": "m-and-a",
+      "trigger": "No escrow arrangement or escrow amount set too low relative to the warranty cap, with the seller being an individual, SPV, or entity with limited assets post-completion",
+      "description": "Without adequate security for warranty claims, the buyer's right to recover damages for warranty breaches is only as valuable as the seller's ability to pay. If the seller distributes the sale proceeds, dissolves its entity, or is otherwise unable to meet a claim, the buyer has an empty judgment.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Buyer is unable to recover on valid warranty claims due to seller's lack of assets or creditworthiness post-completion. This is particularly acute in PE exits where the selling fund may distribute proceeds to LPs shortly after completion.",
+      "detection_guidance": "Assess the seller's post-completion creditworthiness and asset base. Review escrow provisions for adequacy (percentage of purchase price, escrow period, release mechanism). Check whether the buyer has recourse beyond the escrow (direct claims against the seller). Assess whether W&I insurance provides an alternative recovery source.",
+      "remediation": "Negotiate an escrow of 10-20% of the purchase price held for 18-24 months. Alternatively, obtain W&I insurance as a creditworthy alternative to seller recourse. For PE sellers, consider parent company guarantees or require the fund to maintain a claims reserve. Align the escrow release schedule with the warranty limitation period. Include provisions for retaining escrow amounts equal to notified but unresolved claims.",
+      "real_world_impact": null
+    },
+    {
+      "id": "ma-risk-drag-along-abuse",
+      "name": "Drag-Along Rights Abuse",
+      "risk_category": "contractual",
+      "clause_type": "m-and-a",
+      "trigger": "Drag-along rights exercisable at a low threshold without adequate price protections or same-terms guarantees for minority shareholders",
+      "description": "Drag-along rights that are exercisable at a simple majority threshold without requiring a minimum price or ensuring minorities receive the same terms can be used by the majority to force minorities out at an unfairly low price or on disadvantageous terms, particularly in distressed or related-party transactions.",
+      "severity": "high",
+      "likelihood": "occasional",
+      "impact": "Minority shareholders are compelled to sell their shares below fair value or on terms that disproportionately benefit the majority, resulting in significant financial loss and potential breach of fiduciary duties.",
+      "detection_guidance": "Review the drag-along threshold (is it 50% or 75%+?). Check for minimum price protections (floor price, fair value requirement). Verify that minorities receive the same price per share and the same form of consideration. Check for arm's length transaction requirement. Assess whether related-party sales are excluded or require higher thresholds.",
+      "remediation": "Set the drag-along threshold at 75% or higher. Require that the sale is to a bona fide arm's length third-party buyer. Include minimum price protections (floor price or independent valuation). Require that all shareholders receive the same price per share and the same terms. Exclude related-party transactions from drag-along or require a higher threshold. Include an independent valuation mechanism for disputed valuations.",
+      "real_world_impact": null
+    },
+    {
+      "id": "ma-risk-completion-accounts-dispute",
+      "name": "Completion Accounts Dispute Risk",
+      "risk_category": "financial",
+      "clause_type": "m-and-a",
+      "trigger": "Completion accounts mechanism with vague accounting policy definitions, inadequate dispute resolution, or no cap on the potential price adjustment",
+      "description": "Completion accounts adjustments are a frequent source of post-acquisition disputes because they involve subjective judgments about accounting treatment, working capital normalisation, and the classification of items as net debt versus working capital. Without clear rules and robust dispute resolution, these disputes can be protracted and expensive.",
+      "severity": "medium",
+      "likelihood": "common",
+      "impact": "Protracted post-completion disputes over the purchase price adjustment, consuming management attention, incurring advisory costs, and damaging the working relationship between buyer and seller during the critical integration period.",
+      "detection_guidance": "Review the accounting policies schedule for specificity and consistency with the target's historical practices. Check the dispute resolution mechanism (independent accountant as expert, not arbitrator). Verify that all key definitions (working capital, net debt, cash, normalised items) are precisely defined. Assess whether a collar or cap on adjustments is included.",
+      "remediation": "Include a detailed accounting policies schedule specifying the treatment of every material line item. Define normalised working capital target based on trailing 12-month average. Include worked examples for complex calculations. Appoint the independent accountant and agree the scope of reference in advance. Consider including a collar (no adjustment for deviations within a specified range) to reduce the incentive for marginal disputes. Specify that the independent accountant's determination is final and binding absent manifest error.",
+      "real_world_impact": "Completion accounts disputes represent a significant proportion of post-acquisition litigation and arbitration. Expert determination mechanisms significantly reduce the cost and duration of resolution compared to litigation."
+    },
+    {
+      "id": "ma-risk-good-leaver-ambiguity",
+      "name": "Good/Bad Leaver Classification Ambiguity",
+      "risk_category": "contractual",
+      "clause_type": "m-and-a",
+      "trigger": "Good leaver and bad leaver categories are vaguely defined, creating uncertainty about whether a specific departure scenario results in fair value or cost/nominal value transfer",
+      "description": "Ambiguous leaver provisions create significant uncertainty for key managers whose equity is subject to compulsory transfer on departure. If the boundary between good leaver and bad leaver is unclear, disputes will arise about classification, potentially resulting in litigation and delay in share transfers that can affect the company's governance and shareholder structure.",
+      "severity": "medium",
+      "likelihood": "common",
+      "impact": "Disputes over leaver classification consume management time, incur legal costs, and create uncertainty about the shareholder register. Managers may be deterred from investing or committing to the business if they perceive the leaver provisions as unfair or arbitrary.",
+      "detection_guidance": "Review good leaver and bad leaver definitions for precision. Check whether common scenarios are explicitly addressed: constructive dismissal, mutual agreement, change of role, part-time transition, secondment. Verify that the valuation methodology for each category is clearly specified. Check for intermediate categories.",
+      "remediation": "Define each leaver category exhaustively with named scenarios. Include an intermediate category (early leaver) for departures that are not fault-based but occur before full vesting. Specify the valuation methodology for each category with reference to an independent valuer. Include a dispute resolution mechanism (expert determination) specific to leaver classification disputes. Address edge cases: medical leave, sabbatical, secondment, and change of role.",
+      "real_world_impact": null
+    },
+    {
+      "id": "ma-risk-no-pre-emption-enforcement",
+      "name": "Pre-Emption Right Circumvention",
+      "risk_category": "contractual",
+      "clause_type": "m-and-a",
+      "trigger": "Pre-emption rights without anti-avoidance provisions, allowing shareholders to transfer economic interests or control without triggering the pre-emption process",
+      "description": "Pre-emption rights can be circumvented through various structuring techniques: transferring shares to a holding company and then selling the holding company, granting options or economic interests without transferring legal title, or entering into arrangements that achieve a de facto transfer without a direct share sale. Without anti-avoidance provisions, the pre-emption right becomes a paper protection.",
+      "severity": "medium",
+      "likelihood": "occasional",
+      "impact": "Unwanted third parties acquire effective control of or economic interests in shares without existing shareholders having the opportunity to exercise their pre-emption rights, undermining the purpose of the provision and the stability of the shareholder group.",
+      "detection_guidance": "Review the definition of 'transfer' in the pre-emption clause. Check whether it covers: direct transfers, indirect transfers (change of control of a shareholder entity), creation of encumbrances, grant of options, transfer of economic interests, and entry into agreements to do any of the foregoing. Check for anti-avoidance language.",
+      "remediation": "Define 'transfer' broadly to capture direct and indirect dispositions, changes of control of shareholder entities, creation of encumbrances and security interests, grant of options and economic interests, and any agreement or arrangement to do any of the foregoing. Include a specific anti-avoidance provision deeming any arrangement designed to circumvent the pre-emption right as a transfer subject to the pre-emption process. Require shareholders to notify other shareholders of any change of control of their holding vehicle.",
+      "real_world_impact": null
+    }
+  ],
+  "negotiation_intelligence": [
+    {
+      "id": "neg-ma-no-mac-clause",
+      "clause_type": "m-and-a",
+      "flag_level": "red",
+      "condition": "No MAC clause included in the acquisition agreement despite a significant gap between signing and completion",
+      "explanation": "Without a MAC clause, the buyer is committed to completing the transaction regardless of any deterioration in the target's business between signing and completion. This exposes the buyer to significant value erosion risk, particularly in volatile market conditions or where regulatory approvals may take several months.",
+      "market_standard": "MAC clauses are standard in virtually all M&A transactions with a gap between signing and completion. The scope and carve-outs are negotiated but the absence of any MAC protection is unusual and buyer-unfriendly.",
+      "suggested_response": "Insist on a MAC clause with market-standard carve-outs. As a minimum, the MAC should cover a material adverse change in the target's financial condition, results of operations, or business prospects, with a disproportionate impact exception to the standard carve-outs.",
+      "perspective": "buyer",
+      "contract_types": ["ma-spa", "ma-merger-agreement"]
+    },
+    {
+      "id": "neg-ma-blanket-materiality-scraper",
+      "clause_type": "m-and-a",
+      "flag_level": "red",
+      "condition": "Warranty limitation clause includes a blanket materiality scraper that removes all materiality qualifiers from the warranties for the purpose of calculating loss",
+      "explanation": "While materiality scrapers are common for the purpose of determining whether a warranty has been breached (so that de minimis qualifiers do not prevent claims), removing materiality qualifiers for loss calculation purposes significantly increases the seller's exposure by converting every minor inaccuracy into a full-value claim.",
+      "market_standard": "Single materiality scrapers (for determining breach only) are market standard. Double materiality scrapers (for both breach and loss calculation) are increasingly resisted by sellers and may not be acceptable to W&I insurers.",
+      "suggested_response": "Accept a single materiality scraper for determining whether a warranty has been breached, but resist a double scraper that also removes materiality from loss calculation. The loss should be calculated including the materiality qualifier to ensure proportionality.",
+      "perspective": "seller",
+      "contract_types": ["ma-spa", "ma-apa"]
+    },
+    {
+      "id": "neg-ma-earn-out-no-ordinary-course",
+      "clause_type": "m-and-a",
+      "flag_level": "red",
+      "condition": "Earn-out provisions do not include an obligation on the buyer to operate the target business in the ordinary course during the earn-out period",
+      "explanation": "Without an ordinary course covenant, the buyer has unfettered discretion to restructure, integrate, or otherwise manage the target business in ways that could artificially reduce the earn-out metrics. This creates a fundamental conflict of interest and is the most common source of earn-out disputes.",
+      "market_standard": "Market standard earn-out provisions include, at minimum, an obligation to operate the business in good faith and in the ordinary course consistent with past practice during the earn-out period, with specific prohibitions on actions designed to reduce earn-out payments.",
+      "suggested_response": "Insist on express covenants: operate in the ordinary course consistent with past practice, maintain separate financial reporting, apply consistent accounting policies, refrain from actions specifically intended to reduce earn-out payments. Include an expert determination mechanism for disputes.",
+      "perspective": "seller",
+      "contract_types": ["ma-spa", "ma-apa", "ma-merger-agreement"]
+    },
+    {
+      "id": "neg-ma-locked-box-no-ticker",
+      "clause_type": "m-and-a",
+      "flag_level": "amber",
+      "condition": "Locked box mechanism without a per-diem ticker or interest mechanism to compensate the seller for the period between the locked box date and completion",
+      "explanation": "In a locked box structure, the seller bears the economic risk and reward of the target from the locked box date but does not receive the purchase price until completion. Without a ticker mechanism, the seller is effectively providing interest-free financing to the buyer for the period between the locked box date and completion, which can be several months.",
+      "market_standard": "A per-diem ticker or interest mechanism is standard in locked box transactions, particularly where the gap between the locked box date and expected completion exceeds 3 months. The ticker compensates the seller for the time value of money.",
+      "suggested_response": "If acting for the seller, negotiate a per-diem ticker accruing from the locked box date to the completion date, calculated at an agreed rate (typically base rate plus 2-3% or a fixed daily amount reflecting the target's cash generation). If acting for the buyer, resist the ticker or negotiate a cap.",
+      "perspective": "both",
+      "contract_types": ["ma-spa"]
+    },
+    {
+      "id": "neg-ma-de-minimis-too-high",
+      "clause_type": "m-and-a",
+      "flag_level": "amber",
+      "condition": "De minimis threshold set above 0.5% of the purchase price, effectively excluding all but the most significant warranty claims",
+      "explanation": "An excessively high de minimis threshold prevents the buyer from bringing claims for individually significant warranty breaches. While the de minimis is intended to filter trivial claims, setting it too high can exclude claims that are commercially meaningful in the context of the transaction.",
+      "market_standard": "De minimis thresholds typically range from 0.1% to 0.5% of the enterprise value for mid-market transactions. The basket (aggregate threshold) typically ranges from 0.5% to 2%. Higher thresholds may be appropriate for very large transactions where administrative convenience justifies a higher filter.",
+      "suggested_response": "Counter with a de minimis at 0.1-0.25% of the purchase price and a basket at 0.75-1.5%. Ensure the basket operates as a tipping basket (not a true deductible) so that once the aggregate threshold is exceeded, the buyer recovers from the first unit of currency.",
+      "perspective": "buyer",
+      "contract_types": ["ma-spa", "ma-apa"]
+    },
+    {
+      "id": "neg-ma-warranty-cap-below-enterprise-value",
+      "clause_type": "m-and-a",
+      "flag_level": "amber",
+      "condition": "Overall warranty liability cap set at less than 25% of the enterprise value",
+      "explanation": "A warranty cap below 25% of the enterprise value provides limited protection relative to the total investment and may indicate the seller is attempting to limit exposure below market levels. The cap should reflect the level of risk the buyer is assuming and the adequacy of the due diligence process.",
+      "market_standard": "For transactions without W&I insurance, the warranty cap typically ranges from 25% to 100% of the purchase price, with separate carve-outs for fundamental warranties (100% of price) and tax (100% of price). With W&I insurance, seller liability is often limited to 10-25% with the policy covering the gap.",
+      "suggested_response": "Negotiate a cap at a minimum of 25-50% of the purchase price for general warranties, with fundamental warranties and tax warranty capped at 100% of the purchase price. If W&I insurance is in place, the combined coverage (seller liability plus policy limit) should equal at least 50-100% of the purchase price.",
+      "perspective": "buyer",
+      "contract_types": ["ma-spa", "ma-apa"]
+    },
+    {
+      "id": "neg-ma-drag-along-simple-majority",
+      "clause_type": "m-and-a",
+      "flag_level": "red",
+      "condition": "Drag-along rights exercisable by a simple majority (50%+1) without minimum price protections or arm's length requirement",
+      "explanation": "A simple majority drag-along threshold allows a single majority shareholder to compel all other shareholders to sell their shares, potentially at below fair value or to a related party. This provides inadequate protection for significant minorities and creates abuse risk.",
+      "market_standard": "Market standard drag-along threshold is 75% or higher. Protections typically include: arm's length third-party buyer requirement, same price per share for all shareholders, same form of consideration, and no less favourable terms for dragged shareholders.",
+      "suggested_response": "Insist on a minimum drag-along threshold of 75%. Require that the buyer is a bona fide arm's length third party. Include minimum price protections (floor at fair market value or independent valuation). Require identical terms for all shareholders. Exclude related-party transactions or require a higher threshold for such sales.",
+      "perspective": "buyer",
+      "contract_types": ["ma-sha", "ma-subscription-agreement"]
+    },
+    {
+      "id": "neg-ma-full-ratchet-anti-dilution",
+      "clause_type": "m-and-a",
+      "flag_level": "red",
+      "condition": "Full ratchet anti-dilution protection granted to investor without pay-to-play provisions",
+      "explanation": "Full ratchet anti-dilution adjusts the investor's conversion price to the price of any subsequent lower-priced issuance, regardless of the number of shares issued. This is extremely punitive for founders and common shareholders in a down round, as it massively increases the investor's share of the company without requiring additional investment.",
+      "market_standard": "Broad-based weighted average anti-dilution is the market standard for venture capital transactions. Full ratchet is generally considered investor-unfriendly to founders and is resisted in most market-standard transactions.",
+      "suggested_response": "Counter with broad-based weighted average anti-dilution, which provides proportionate protection by considering both the price and volume of the dilutive issuance. If the investor insists on full ratchet, include pay-to-play provisions requiring the investor to participate pro rata in the down round to maintain their anti-dilution protection.",
+      "perspective": "seller",
+      "contract_types": ["ma-subscription-agreement", "ma-convertible-note", "ma-safe-agreement"]
+    },
+    {
+      "id": "neg-ma-bad-leaver-all-shares-nominal",
+      "clause_type": "m-and-a",
+      "flag_level": "amber",
+      "condition": "Bad leaver provisions require transfer of all shares (including vested shares) at nominal value regardless of the reason for termination",
+      "explanation": "Requiring transfer of all shares at nominal value, including shares that have fully vested, is punitive and may be challenged as an unreasonable restraint of trade or a penalty clause. It also fails to distinguish between different levels of culpability in departure.",
+      "market_standard": "Market standard: bad leaver transfer of unvested shares at cost/nominal value, with vested shares transferred at the lower of cost and fair market value. A tiered approach distinguishing between bad leaver (fraud, gross misconduct) and early leaver (voluntary resignation within lock-up) is increasingly common.",
+      "suggested_response": "Propose a tiered structure: bad leaver (fraud, criminal conduct, gross misconduct) transfers all shares at nominal value; early leaver (voluntary resignation) transfers unvested shares at cost and vested shares at fair market value; good leaver transfers all shares at fair market value. Include a vesting schedule aligned with the management's retention commitments.",
+      "perspective": "seller",
+      "contract_types": ["ma-sha", "ma-subscription-agreement"]
+    },
+    {
+      "id": "neg-ma-comprehensive-protections-adequate",
+      "clause_type": "m-and-a",
+      "flag_level": "green",
+      "condition": "SPA includes comprehensive warranty package, 18-24 month limitation period for general warranties, de minimis at 0.1-0.25% and basket at 0.75-1.5%, warranty cap at 25-50%, W&I insurance, and escrow or retention mechanism",
+      "explanation": "This warranty and limitations framework represents a well-balanced allocation of risk between buyer and seller, consistent with current market practice for mid-market M&A transactions. The combination of contractual protections and insurance provides the buyer with meaningful recovery rights while giving the seller reasonable certainty on maximum exposure.",
+      "market_standard": "Consistent with current market standard for mid-market private M&A transactions in the UK and European markets. The use of W&I insurance to supplement contractual protections is now standard in transactions above approximately GBP 10 million enterprise value.",
+      "suggested_response": "Accept. Verify the specific details: W&I policy limits and exclusions align with the SPA warranty package, escrow release schedule aligns with the limitation period, de minimis and basket operate as tipping baskets, and fundamental warranties and tax warranty have longer limitation periods and higher caps.",
+      "perspective": "both",
+      "contract_types": ["ma-spa", "ma-apa"]
+    }
+  ],
+  "clause_interactions": [
+    {
+      "id": "ma-completion-accounts-conflicts-locked-box",
+      "clause_a": "ma-completion-accounts",
+      "clause_b": "ma-locked-box",
+      "relationship": "conflicts-with",
+      "description": "Completion accounts and locked box mechanisms are mutually exclusive price adjustment approaches. Completion accounts provide a post-completion true-up based on the actual financial position at closing, while a locked box fixes the price by reference to a pre-signing balance sheet with no post-completion adjustment.",
+      "review_guidance": "Ensure the SPA adopts one mechanism or the other, not both. The choice depends on deal dynamics: locked box provides price certainty (preferred in competitive auctions and by sellers); completion accounts provide accuracy (preferred by buyers in bilateral negotiations or where the target's financial position is volatile).",
+      "risk_if_misaligned": "Including elements of both mechanisms creates confusion about which price adjustment applies, potentially resulting in double-counting or disputes about the interaction between the two approaches."
+    },
+    {
+      "id": "ma-wi-insurance-supplements-warranties",
+      "clause_a": "ma-wi-insurance",
+      "clause_b": "ma-representations-warranties",
+      "relationship": "supplements",
+      "description": "W&I insurance supplements the seller's warranty obligations by providing the buyer with an independent, creditworthy source of recovery for warranty breaches. The insurance policy responds to breaches of the warranties as drafted in the SPA.",
+      "review_guidance": "Ensure the SPA warranty language is insurable (the W&I insurer will review and may request amendments). Verify that the policy coverage aligns with the SPA warranty package in terms of scope, limitations, and exclusions. Ensure the warranty package is not weakened simply because insurance is in place.",
+      "risk_if_misaligned": "If the SPA warranties are drafted in a form that is uninsurable, or if the policy exclusions are broader than the warranty limitations, the buyer may have a false sense of security and gaps in coverage."
+    },
+    {
+      "id": "ma-escrow-limits-de-minimis-basket",
+      "clause_a": "ma-escrow",
+      "clause_b": "ma-de-minimis-basket",
+      "relationship": "limits",
+      "description": "The escrow amount effectively sets an upper limit on readily recoverable warranty claims, and the de minimis and basket thresholds determine the minimum claim value that can be pursued against the escrow. If the basket exceeds the escrow amount, the buyer cannot access the escrow until losses are extremely significant.",
+      "review_guidance": "Verify that the escrow amount significantly exceeds the basket threshold so that the buyer has meaningful recourse once the basket is crossed. Confirm whether the buyer has additional recourse beyond the escrow (direct claims against the seller) for claims exceeding the escrow amount.",
+      "risk_if_misaligned": "If the basket threshold is set too close to the escrow amount, or if the escrow is the buyer's sole recourse, the buyer has very limited practical ability to recover warranty losses."
+    },
+    {
+      "id": "ma-earn-out-requires-completion-accounts",
+      "clause_a": "ma-earn-out",
+      "clause_b": "ma-completion-accounts",
+      "relationship": "requires",
+      "description": "When an earn-out is based on financial metrics (EBITDA, revenue), a clear completion accounts mechanism is needed to establish the baseline from which earn-out performance is measured. Without agreed completion accounts, there is no authoritative starting point for the earn-out calculation.",
+      "review_guidance": "Verify that the accounting policies for the completion accounts are consistent with those to be applied in measuring earn-out performance. Ensure the earn-out measurement methodology references the same accounting standards, definitions, and treatment of exceptional items used in the completion accounts.",
+      "risk_if_misaligned": "Inconsistent accounting treatment between completion accounts and earn-out calculations can result in disputes about the baseline, double-counting of adjustments, or manipulation of earn-out metrics through changes in accounting policy."
+    },
+    {
+      "id": "ma-drag-along-carves-out-pre-emption",
+      "clause_a": "ma-drag-along",
+      "clause_b": "ma-pre-emption",
+      "relationship": "carves-out",
+      "description": "Drag-along rights override pre-emption rights when the majority exercises its right to compel a sale. Without this carve-out, minority shareholders could use their pre-emption rights to block a drag-along sale by insisting on the right to acquire the shares themselves, defeating the purpose of the drag-along.",
+      "review_guidance": "Verify that the SHA explicitly provides that the exercise of drag-along rights is not subject to the pre-emption process. Check that the drag-along provisions include appropriate protections for minorities (same price, same terms) to compensate for the override of their pre-emption rights.",
+      "risk_if_misaligned": "If drag-along does not expressly override pre-emption, minority shareholders may exercise pre-emption rights to block the drag-along sale, creating a deadlock that prevents the transaction from completing and potentially destroying value for all shareholders."
+    }
+  ]
+}
