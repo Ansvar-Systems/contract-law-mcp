@@ -1,0 +1,146 @@
+/**
+ * list_sources — Return the data sources backing this MCP server.
+ */
+
+import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
+
+export interface DataSource {
+  name: string;
+  url: string;
+  type: string;
+  licence: string;
+  update_frequency: string;
+}
+
+const DATA_SOURCES: DataSource[] = [
+  {
+    name: 'GDPR (EUR-Lex)',
+    url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
+    type: 'api',
+    licence: 'EU Legal Acts (reuse permitted)',
+    update_frequency: 'monthly',
+  },
+  {
+    name: 'EDPB Guidelines',
+    url: 'https://edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en',
+    type: 'html',
+    licence: 'EDPB Terms of Use',
+    update_frequency: 'monthly',
+  },
+  {
+    name: 'EU Standard Contractual Clauses (2021/914)',
+    url: 'https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj',
+    type: 'structured',
+    licence: 'EU Legal Acts (reuse permitted)',
+    update_frequency: 'quarterly',
+  },
+  {
+    name: 'NIS2 Directive',
+    url: 'https://eur-lex.europa.eu/eli/dir/2022/2555/oj',
+    type: 'html',
+    licence: 'EU Legal Acts (reuse permitted)',
+    update_frequency: 'monthly',
+  },
+  {
+    name: 'DORA Regulation',
+    url: 'https://eur-lex.europa.eu/eli/reg/2022/2554/oj',
+    type: 'html',
+    licence: 'EU Legal Acts (reuse permitted)',
+    update_frequency: 'monthly',
+  },
+  {
+    name: 'PCI DSS v4.0',
+    url: 'https://www.pcisecuritystandards.org/document_library/',
+    type: 'pdf',
+    licence: 'PCI SSC Terms of Use',
+    update_frequency: 'quarterly',
+  },
+  {
+    name: 'NIST SP 800-161r1',
+    url: 'https://csrc.nist.gov/pubs/sp/800/161/r1/final',
+    type: 'html',
+    licence: 'Public Domain (US Government)',
+    update_frequency: 'quarterly',
+  },
+  {
+    name: 'ISO 27036',
+    url: 'https://www.iso.org/standard/82905.html',
+    type: 'manual',
+    licence: 'Ansvar-authored summaries (ISO text is paywalled)',
+    update_frequency: 'annually',
+  },
+  {
+    name: 'ISO 27701',
+    url: 'https://www.iso.org/standard/71670.html',
+    type: 'manual',
+    licence: 'Ansvar-authored summaries (ISO text is paywalled)',
+    update_frequency: 'annually',
+  },
+  {
+    name: 'UNCITRAL',
+    url: 'https://uncitral.un.org/en/texts',
+    type: 'html',
+    licence: 'United Nations Terms of Use',
+    update_frequency: 'annually',
+  },
+  {
+    name: 'ICC Model Contracts',
+    url: 'https://iccwbo.org/business-solutions/model-contracts-clauses/',
+    type: 'manual',
+    licence: 'Manual curation (ICC publications)',
+    update_frequency: 'annually',
+  },
+  {
+    name: 'HIPAA (45 CFR 164.504)',
+    url: 'https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html',
+    type: 'html',
+    licence: 'Public Domain (US Government)',
+    update_frequency: 'quarterly',
+  },
+  {
+    name: 'SOC 2 TSC',
+    url: 'https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservicescriteria.html',
+    type: 'manual',
+    licence: 'Ansvar-authored summaries (AICPA text is paywalled)',
+    update_frequency: 'annually',
+  },
+  {
+    name: 'UK IDTA',
+    url: 'https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-data-transfer-agreement-and-guidance/',
+    type: 'html',
+    licence: 'UK Open Government Licence',
+    update_frequency: 'quarterly',
+  },
+  {
+    name: 'US FAR',
+    url: 'https://www.acquisition.gov/far',
+    type: 'html',
+    licence: 'Public Domain (US Government)',
+    update_frequency: 'monthly',
+  },
+  {
+    name: 'CISA Secure by Design',
+    url: 'https://www.cisa.gov/securebydesign',
+    type: 'html',
+    licence: 'Public Domain (US Government)',
+    update_frequency: 'quarterly',
+  },
+  {
+    name: 'CWE (MITRE) - Trust Management Family',
+    url: 'https://cwe.mitre.org/data/downloads.html',
+    type: 'xml',
+    licence: 'MITRE CWE Terms of Use',
+    update_frequency: 'weekly',
+  },
+  {
+    name: 'Ansvar Curated Seed Data',
+    url: 'https://github.com/Ansvar-Systems/Contract-law-mcp',
+    type: 'manual',
+    licence: 'Apache-2.0',
+    update_frequency: 'quarterly',
+  },
+];
+
+export function listSources(): ToolResponse<DataSource[]> {
+  return wrapResponse(DATA_SOURCES);
+}
