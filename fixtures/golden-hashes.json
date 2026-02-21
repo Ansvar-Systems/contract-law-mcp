@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "mcp_name": "Contract Law MCP",
+  "domain": "contract-law",
+  "description": "Drift detection anchors for upstream regulatory sources. Stable provisions and articles that rarely change.",
+  "computed_at": "2026-02-21T00:00:00Z",
+  "sources": [
+    {
+      "id": "eurlex-gdpr-art28",
+      "description": "GDPR Article 28 — Processor requirements",
+      "upstream_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "selector_hint": "Article 28",
+      "expected_snippet": "processor shall not engage another processor"
+    },
+    {
+      "id": "eurlex-nis2-art21",
+      "description": "NIS2 Directive Article 21 — Cybersecurity risk-management measures",
+      "upstream_url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+      "selector_hint": "Article 21",
+      "expected_snippet": "supply chain security"
+    },
+    {
+      "id": "eurlex-dora-art28",
+      "description": "DORA Article 28 — ICT third-party service providers",
+      "upstream_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+      "selector_hint": "Article 28",
+      "expected_snippet": "ICT third-party service provider"
+    },
+    {
+      "id": "eurlex-scc-2021",
+      "description": "EU Standard Contractual Clauses (2021/914)",
+      "upstream_url": "https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj",
+      "selector_hint": "Module 2",
+      "expected_snippet": "controller to processor"
+    },
+    {
+      "id": "nist-sp800-161",
+      "description": "NIST SP 800-161r1 — Cybersecurity Supply Chain Risk Management",
+      "upstream_url": "https://csrc.nist.gov/pubs/sp/800/161/r1/final",
+      "selector_hint": "Section 3",
+      "expected_snippet": "supply chain risk"
+    }
+  ]
+}
