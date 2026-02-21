@@ -62,12 +62,12 @@ export function extractAll(
 }
 
 /**
- * Extract numbered articles from EUR-Lex HTML.
- * Returns an array of { articleNumber, title, text } objects.
+ * Extract numbered articles from EUR-Lex Akoma Ntoso XML.
+ * Parses `<article>` elements with eId attributes, extracting the article
+ * number from `<num>`, heading from `<heading>`, and paragraph text from
+ * `<paragraph>/<content>` elements.
  *
- * TODO: Implement actual parsing against live EUR-Lex HTML structure.
- * The EUR-Lex format uses specific class names and structure that need
- * to be tested against real responses.
+ * Returns an array of { articleNumber, title, text } objects.
  */
 export interface ArticleExtract {
   articleNumber: string;
@@ -76,29 +76,48 @@ export interface ArticleExtract {
 }
 
 export function extractEurLexArticles(
-  _html: string,
-  _articlePrefix: string = 'Article',
+  xml: string,
+  articlePrefix: string = 'Article',
 ): ArticleExtract[] {
-  // TODO: Implement EUR-Lex article extraction
-  // EUR-Lex uses class="eli-subdivision" for articles
-  // Each article has a title and numbered paragraphs
-  //
-  // Example structure:
-  //   <div class="eli-subdivision" id="art_28">
-  //     <p class="sti-art">Article 28</p>
-  //     <p class="stitle-art-norm">Processor</p>
-  //     <p>1. Where processing is to be carried out...</p>
-  //   </div>
-  //
-  // This needs testing against live EUR-Lex HTML to be reliable.
-  console.warn('extractEurLexArticles: Not yet implemented — requires live testing');
-  return [];
+  const results: ArticleExtract[] = [];
+
+  const articlePattern = /<article[^>]*eId="([^"]*)"[^>]*>([\s\S]*?)<\/article>/g;
+  let match: RegExpExecArray | null;
+
+  while ((match = articlePattern.exec(xml)) !== null) {
+    const articleBody = match[2];
+
+    const numMatch = articleBody.match(/<num>(.*?)<\/num>/);
+    const articleNumber = numMatch ? stripHtml(numMatch[1]).trim() : '';
+
+    const headingMatch = articleBody.match(/<heading>(.*?)<\/heading>/);
+    const title = headingMatch ? stripHtml(headingMatch[1]).trim() : '';
+
+    const paragraphs: string[] = [];
+    const paraPattern = /<paragraph[^>]*>[\s\S]*?<content>([\s\S]*?)<\/content>[\s\S]*?<\/paragraph>/g;
+    let paraMatch: RegExpExecArray | null;
+    while ((paraMatch = paraPattern.exec(articleBody)) !== null) {
+      paragraphs.push(stripHtml(paraMatch[1]).trim());
+    }
+
+    if (articleNumber.startsWith(articlePrefix)) {
+      results.push({
+        articleNumber,
+        title,
+        text: paragraphs.join('\n\n'),
+      });
+    }
+  }
+
+  return results;
 }
 
 /**
- * Extract sections from NIST SP publication HTML.
+ * Extract control sections from NIST SP publication HTML.
+ * Parses `<h3>` headings with id attributes followed by `<div class="control-content">`
+ * blocks. Splits the heading into section number and title.
  *
- * TODO: Implement actual parsing against live NIST HTML structure.
+ * Returns an array of { sectionNumber, title, text } objects.
  */
 export interface SectionExtract {
   sectionNumber: string;
@@ -107,13 +126,29 @@ export interface SectionExtract {
 }
 
 export function extractNistSections(
-  _html: string,
+  html: string,
 ): SectionExtract[] {
-  // TODO: Implement NIST section extraction
-  // NIST publications use a specific HTML structure with section headings
-  // and paragraph content that needs live testing.
-  console.warn('extractNistSections: Not yet implemented — requires live testing');
-  return [];
+  const results: SectionExtract[] = [];
+
+  const sectionPattern = /<h3[^>]*id="([^"]*)"[^>]*>\s*([^<]*)<\/h3>\s*<div[^>]*class="control-content"[^>]*>([\s\S]*?)<\/div>/g;
+  let match: RegExpExecArray | null;
+
+  while ((match = sectionPattern.exec(html)) !== null) {
+    const sectionNumber = match[1].trim();
+    const fullTitle = match[2].trim();
+    const content = match[3];
+
+    const titleMatch = fullTitle.match(/^[A-Z]+-\d+\s+(.*)/);
+    const title = titleMatch ? titleMatch[1].trim() : fullTitle;
+
+    results.push({
+      sectionNumber,
+      title,
+      text: stripHtml(content).trim(),
+    });
+  }
+
+  return results;
 }
 
 /**
