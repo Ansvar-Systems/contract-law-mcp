@@ -1,0 +1,389 @@
+[
+  {
+    "id": "meta-001",
+    "category": "meta",
+    "description": "About returns server info with table counts",
+    "tool": "about",
+    "input": {},
+    "assertions": ["result_not_empty", "fields_present:results.server,results.version,results.tables"]
+  },
+  {
+    "id": "meta-002",
+    "category": "meta",
+    "description": "List sources returns data provenance",
+    "tool": "list_sources",
+    "input": {},
+    "assertions": ["result_not_empty", "any_result_contains:EUR-Lex"]
+  },
+
+  {
+    "id": "clause-001",
+    "category": "clause_intelligence",
+    "description": "Get indemnification-mutual clause details",
+    "tool": "get_clause_type",
+    "input": { "id": "indemnification-mutual" },
+    "assertions": ["result_not_empty", "fields_present:results.id,results.clause_category,results.drafting_guidance"]
+  },
+  {
+    "id": "clause-002",
+    "category": "clause_intelligence",
+    "description": "Get data-protection-breach-notification clause",
+    "tool": "get_clause_type",
+    "input": { "id": "data-protection-breach-notification" },
+    "assertions": ["result_not_empty", "fields_present:results.id,results.clause_category,results.name"]
+  },
+  {
+    "id": "clause-003",
+    "category": "clause_intelligence",
+    "description": "Unknown clause returns null result",
+    "tool": "get_clause_type",
+    "input": { "id": "nonexistent-clause-xyz" },
+    "assertions": ["field_equals:results,null"]
+  },
+  {
+    "id": "clause-004",
+    "category": "clause_intelligence",
+    "description": "Search clauses by category indemnification",
+    "tool": "search_clauses",
+    "input": { "clause_category": "indemnification" },
+    "assertions": ["result_not_empty", "min_results:2"]
+  },
+  {
+    "id": "clause-005",
+    "category": "clause_intelligence",
+    "description": "Search clauses by text 'data breach'",
+    "tool": "search_clauses",
+    "input": { "query": "data breach" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "clause-006",
+    "category": "clause_intelligence",
+    "description": "Get required clauses for MSA contract type",
+    "tool": "get_required_clauses",
+    "input": { "contract_type": "msa" },
+    "assertions": ["result_not_empty", "fields_present:results.required,results.recommended"]
+  },
+  {
+    "id": "clause-007",
+    "category": "clause_intelligence",
+    "description": "Get required clauses for unknown type returns null",
+    "tool": "get_required_clauses",
+    "input": { "contract_type": "nonexistent-xyz" },
+    "assertions": ["field_equals:results,null"]
+  },
+  {
+    "id": "clause-008",
+    "category": "clause_intelligence",
+    "description": "Get clause interactions between liability-cap-direct and indemnification-mutual",
+    "tool": "get_clause_interactions",
+    "input": { "clauses": ["liability-cap-direct", "indemnification-mutual"] },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "clause-009",
+    "category": "clause_intelligence",
+    "description": "Empty clauses returns empty interactions",
+    "tool": "get_clause_interactions",
+    "input": { "clauses": [] },
+    "assertions": ["field_equals:results,[]"]
+  },
+
+  {
+    "id": "review-001",
+    "category": "contract_review",
+    "description": "Get contract type details for SaaS subscription",
+    "tool": "get_contract_type",
+    "input": { "id": "saas-subscription" },
+    "assertions": ["result_not_empty", "fields_present:results.id,results.name,results.required_clauses"]
+  },
+  {
+    "id": "review-002",
+    "category": "contract_review",
+    "description": "Get contract type for DPA-GDPR",
+    "tool": "get_contract_type",
+    "input": { "id": "dpa-gdpr" },
+    "assertions": ["result_not_empty", "any_result_contains:GDPR"]
+  },
+  {
+    "id": "review-003",
+    "category": "contract_review",
+    "description": "Review contract checklist for MSA",
+    "tool": "review_contract_checklist",
+    "input": { "contract_type": "msa" },
+    "assertions": ["result_not_empty", "fields_present:results.required_clauses,results.compliance_requirements"]
+  },
+  {
+    "id": "review-004",
+    "category": "contract_review",
+    "description": "Identify gaps in SaaS contract",
+    "tool": "identify_gaps",
+    "input": {
+      "contract_type": "saas-subscription",
+      "clauses_present": ["confidentiality-mutual", "termination-cause"]
+    },
+    "assertions": ["result_not_empty", "fields_present:results.missing_required"]
+  },
+  {
+    "id": "review-005",
+    "category": "contract_review",
+    "description": "Assess contract posture for MSA",
+    "tool": "assess_contract_posture",
+    "input": {
+      "contract_type": "msa",
+      "clauses_present": ["confidentiality-mutual", "liability-cap-direct", "termination-cause"]
+    },
+    "assertions": ["result_not_empty"]
+  },
+
+  {
+    "id": "compliance-001",
+    "category": "compliance_mapping",
+    "description": "Get GDPR contract requirements",
+    "tool": "get_contract_requirements",
+    "input": { "regulation": "GDPR" },
+    "assertions": ["result_not_empty", "min_results:5", "any_result_contains:Article 28"]
+  },
+  {
+    "id": "compliance-002",
+    "category": "compliance_mapping",
+    "description": "Get NIS2 contract requirements",
+    "tool": "get_contract_requirements",
+    "input": { "regulation": "NIS2 Directive" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "compliance-003",
+    "category": "compliance_mapping",
+    "description": "Check GDPR compliance with present clauses",
+    "tool": "check_contract_compliance",
+    "input": {
+      "regulation": "GDPR",
+      "clauses_present": ["dpa-processing-instructions", "dpa-security-measures", "dpa-breach-notification", "dpa-sub-processor"]
+    },
+    "assertions": ["result_not_empty", "fields_present:results.total_requirements,results.met,results.gaps"]
+  },
+  {
+    "id": "compliance-004",
+    "category": "compliance_mapping",
+    "description": "Map GDPR to required clauses",
+    "tool": "map_regulation_to_clauses",
+    "input": { "regulation": "GDPR" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "compliance-005",
+    "category": "compliance_mapping",
+    "description": "Search regulations for 'data transfer'",
+    "tool": "search_regulations",
+    "input": { "query": "data transfer" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "compliance-006",
+    "category": "compliance_mapping",
+    "description": "Get DORA contract requirements",
+    "tool": "get_contract_requirements",
+    "input": { "regulation": "DORA" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+
+  {
+    "id": "risk-001",
+    "category": "risk_negotiation",
+    "description": "Assess contract risk for SaaS subscription",
+    "tool": "assess_contract_risk",
+    "input": { "contract_type": "saas-subscription" },
+    "assertions": ["result_not_empty"]
+  },
+  {
+    "id": "risk-002",
+    "category": "risk_negotiation",
+    "description": "Assess contract risk for SaaS with clauses present",
+    "tool": "assess_contract_risk",
+    "input": {
+      "contract_type": "saas-subscription",
+      "clauses_present": ["confidentiality-mutual", "sla-uptime"]
+    },
+    "assertions": ["result_not_empty"]
+  },
+  {
+    "id": "risk-003",
+    "category": "risk_negotiation",
+    "description": "Get risk patterns for liability clause type",
+    "tool": "get_risk_patterns",
+    "input": { "clause_type": "liability" },
+    "assertions": ["result_not_empty", "min_results:1", "any_result_contains:liability"]
+  },
+  {
+    "id": "risk-004",
+    "category": "risk_negotiation",
+    "description": "Get critical risk patterns",
+    "tool": "get_risk_patterns",
+    "input": { "severity": "critical" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "risk-005",
+    "category": "risk_negotiation",
+    "description": "Get negotiation flags for liability clauses",
+    "tool": "get_negotiation_flags",
+    "input": { "clause_type": "liability" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "risk-006",
+    "category": "risk_negotiation",
+    "description": "Get buyer-perspective negotiation flags for indemnification",
+    "tool": "get_negotiation_flags",
+    "input": { "clause_type": "indemnification", "perspective": "buyer" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "risk-007",
+    "category": "risk_negotiation",
+    "description": "Get risk patterns by financial category",
+    "tool": "get_risk_patterns",
+    "input": { "risk_category": "financial" },
+    "assertions": ["result_not_empty", "min_results:3"]
+  },
+
+  {
+    "id": "threat-001",
+    "category": "threat_patterns",
+    "description": "Get all contract threat patterns",
+    "tool": "get_contract_threats",
+    "input": {},
+    "assertions": ["result_not_empty", "min_results:10"]
+  },
+  {
+    "id": "threat-002",
+    "category": "threat_patterns",
+    "description": "Get critical threat patterns",
+    "tool": "get_contract_threats",
+    "input": { "severity": "critical" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "threat-003",
+    "category": "threat_patterns",
+    "description": "Get threats by integrity category",
+    "tool": "get_contract_threats",
+    "input": { "threat_category": "integrity" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "threat-004",
+    "category": "threat_patterns",
+    "description": "Get threats by context for SaaS vendor with high data sensitivity",
+    "tool": "get_contract_threats_by_context",
+    "input": {
+      "contract_type": "saas-subscription",
+      "relationship": "vendor",
+      "data_sensitivity": "high"
+    },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "threat-005",
+    "category": "threat_patterns",
+    "description": "Get threats by context for DPA subprocessor",
+    "tool": "get_contract_threats_by_context",
+    "input": {
+      "contract_type": "dpa-gdpr",
+      "relationship": "subprocessor",
+      "data_sensitivity": "high"
+    },
+    "assertions": ["result_not_empty"]
+  },
+
+  {
+    "id": "ip-001",
+    "category": "ip_licensing",
+    "description": "Get full IP assignment provision details",
+    "tool": "get_ip_provision",
+    "input": { "id": "ip-assignment-full" },
+    "assertions": ["result_not_empty", "fields_present:results.id,results.provision_type,results.drafting_checklist"]
+  },
+  {
+    "id": "ip-002",
+    "category": "ip_licensing",
+    "description": "Get IP provision for work-for-hire",
+    "tool": "get_ip_provision",
+    "input": { "id": "ip-work-for-hire-employee" },
+    "assertions": ["result_not_empty", "fields_present:results.id,results.name"]
+  },
+  {
+    "id": "ip-003",
+    "category": "ip_licensing",
+    "description": "Unknown IP provision returns null",
+    "tool": "get_ip_provision",
+    "input": { "id": "nonexistent-ip-xyz" },
+    "assertions": ["field_equals:results,null"]
+  },
+  {
+    "id": "ip-004",
+    "category": "ip_licensing",
+    "description": "Search IP provisions for 'open source'",
+    "tool": "search_ip_provisions",
+    "input": { "query": "open source" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "ip-005",
+    "category": "ip_licensing",
+    "description": "Search IP provisions by assignment type",
+    "tool": "search_ip_provisions",
+    "input": { "provision_type": "assignment" },
+    "assertions": ["result_not_empty", "min_results:3"]
+  },
+  {
+    "id": "ip-006",
+    "category": "ip_licensing",
+    "description": "Assess IP risk with assignment provisions",
+    "tool": "assess_ip_risk",
+    "input": { "provisions": ["ip-assignment-full"], "jurisdiction": "EU" },
+    "assertions": ["result_not_empty"]
+  },
+
+  {
+    "id": "fw-001",
+    "category": "standard_frameworks",
+    "description": "Get EU SCC 2021 framework details",
+    "tool": "get_standard_framework",
+    "input": { "id": "eu-scc-2021" },
+    "assertions": ["result_not_empty", "fields_present:results.id,results.source,results.name"]
+  },
+  {
+    "id": "fw-002",
+    "category": "standard_frameworks",
+    "description": "Unknown framework returns null",
+    "tool": "get_standard_framework",
+    "input": { "id": "nonexistent-framework-xyz" },
+    "assertions": ["field_equals:results,null"]
+  },
+  {
+    "id": "fw-003",
+    "category": "standard_frameworks",
+    "description": "Search for mandatory frameworks",
+    "tool": "search_frameworks",
+    "input": { "mandatory": true },
+    "assertions": ["result_not_empty", "min_results:3"]
+  },
+  {
+    "id": "fw-004",
+    "category": "standard_frameworks",
+    "description": "Search frameworks by source EU Commission",
+    "tool": "search_frameworks",
+    "input": { "source": "EU Commission" },
+    "assertions": ["result_not_empty", "min_results:1"]
+  },
+  {
+    "id": "fw-005",
+    "category": "standard_frameworks",
+    "description": "Search all frameworks with no filters",
+    "tool": "search_frameworks",
+    "input": {},
+    "assertions": ["result_not_empty", "min_results:10"]
+  }
+]
