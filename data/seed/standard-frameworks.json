@@ -1,0 +1,558 @@
+{
+  "standard_frameworks": [
+    {
+      "id": "eu-scc-2021",
+      "source": "EU Commission",
+      "name": "EU Standard Contractual Clauses (2021/914)",
+      "description": "Mandatory framework for transferring personal data from EU/EEA to third countries without an adequacy decision, replacing the 2010 SCCs.",
+      "contract_type": "scc-module-2-c2p",
+      "clauses_addressed": [
+        "scc-module-1-c2c",
+        "scc-module-2-c2p",
+        "scc-module-3-p2p",
+        "scc-module-4-p2c",
+        "scc-toms-annex",
+        "scc-sub-processor-annex",
+        "scc-transfer-impact-assessment",
+        "scc-supplementary-measures"
+      ],
+      "authority": "European Commission",
+      "url": "https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj",
+      "mandatory": true
+    },
+    {
+      "id": "uk-idta-2022",
+      "source": "UK ICO",
+      "name": "UK International Data Transfer Agreement (IDTA)",
+      "description": "UK replacement for EU SCCs following Brexit, providing a standalone framework for international personal data transfers from the UK.",
+      "contract_type": "uk-idta",
+      "clauses_addressed": [
+        "uk-idta",
+        "dpa-international-transfers",
+        "dpa-security-measures",
+        "dpa-sub-processor"
+      ],
+      "authority": "UK Information Commissioner's Office",
+      "url": "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-data-transfer-agreement-and-guidance/",
+      "mandatory": true
+    },
+    {
+      "id": "uk-addendum-eu-scc",
+      "source": "UK ICO",
+      "name": "UK International Data Transfer Addendum to EU SCCs",
+      "description": "UK addendum that can be appended to EU SCCs to make them valid for UK data transfers, providing an alternative to the standalone IDTA.",
+      "contract_type": "uk-idta",
+      "clauses_addressed": [
+        "uk-idta",
+        "scc-module-2-c2p",
+        "scc-module-1-c2c",
+        "scc-module-3-p2p"
+      ],
+      "authority": "UK Information Commissioner's Office",
+      "url": "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/international-data-transfer-agreement-and-guidance/",
+      "mandatory": true
+    },
+    {
+      "id": "edpb-guidelines-processor",
+      "source": "EDPB",
+      "name": "EDPB Guidelines on Processor Agreements (07/2020)",
+      "description": "Guidelines on concepts of controller and processor under GDPR, providing practical guidance on structuring data processing agreements.",
+      "contract_type": "dpa-gdpr",
+      "clauses_addressed": [
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dpa-sub-processor",
+        "dpa-deletion-return",
+        "dpa-audit-rights"
+      ],
+      "authority": "European Data Protection Board",
+      "url": "https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-072020-concepts-controller-and-processor-gdpr_en",
+      "mandatory": false
+    },
+    {
+      "id": "edpb-guidelines-transfers",
+      "source": "EDPB",
+      "name": "EDPB Recommendations on Supplementary Measures (01/2020)",
+      "description": "Recommendations on supplementary measures to supplement transfer tools to ensure compliance with EU personal data protection standards following Schrems II.",
+      "contract_type": "scc-module-2-c2p",
+      "clauses_addressed": [
+        "scc-supplementary-measures",
+        "scc-transfer-impact-assessment",
+        "dpa-security-measures"
+      ],
+      "authority": "European Data Protection Board",
+      "url": "https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en",
+      "mandatory": false
+    },
+    {
+      "id": "eu-ai-act-contractual",
+      "source": "EU Parliament & Council",
+      "name": "EU AI Act Contractual Requirements (2024/1689)",
+      "description": "Contractual obligations arising from the EU AI Act for providers, deployers, importers, and distributors of AI systems across risk categories.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "compliance-ai-act",
+        "warranty-compliance-laws"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "mandatory": true
+    },
+    {
+      "id": "eu-cra-supply-chain",
+      "source": "EU Parliament & Council",
+      "name": "EU Cyber Resilience Act Supply Chain Requirements",
+      "description": "Contractual requirements for products with digital elements regarding cybersecurity, vulnerability handling, SBOM provision, and security update obligations.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "nis2-supply-chain-transparency",
+        "warranty-compliance-laws"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj",
+      "mandatory": true
+    },
+    {
+      "id": "eu-dora-outsourcing",
+      "source": "EU Parliament & Council",
+      "name": "DORA ICT Third-Party Risk Management Framework",
+      "description": "Mandatory contractual provisions for financial entities outsourcing ICT services under the Digital Operational Resilience Act, including critical provider requirements.",
+      "contract_type": "outsourcing-agreement",
+      "clauses_addressed": [
+        "dora-service-description",
+        "dora-data-location",
+        "dora-audit-rights",
+        "dora-subcontracting",
+        "dora-exit-strategy",
+        "dora-continuity-arrangements",
+        "dora-incident-reporting",
+        "dora-security-testing"
+      ],
+      "authority": "European Union",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+      "mandatory": true
+    },
+    {
+      "id": "icc-incoterms-2020",
+      "source": "ICC",
+      "name": "ICC Incoterms 2020",
+      "description": "International Commercial Terms defining the responsibilities of sellers and buyers for the delivery of goods under sales contracts, covering 11 trade terms.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "payment-terms",
+        "warranty-title",
+        "force-majeure-standard"
+      ],
+      "authority": "International Chamber of Commerce",
+      "url": "https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/",
+      "mandatory": false
+    },
+    {
+      "id": "uncitral-cisg",
+      "source": "UNCITRAL",
+      "name": "UN Convention on Contracts for the International Sale of Goods (CISG)",
+      "description": "International treaty governing contracts for the international sale of goods between parties in different contracting states. Applies by default unless expressly excluded.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "warranty-fitness",
+        "warranty-title",
+        "force-majeure-standard",
+        "termination-cause",
+        "payment-net-30"
+      ],
+      "authority": "United Nations Commission on International Trade Law",
+      "url": "https://uncitral.un.org/en/texts/salegoods/conventions/sale_of_goods/cisg",
+      "mandatory": false
+    },
+    {
+      "id": "unidroit-principles-2016",
+      "source": "UNIDROIT",
+      "name": "UNIDROIT Principles of International Commercial Contracts (2016)",
+      "description": "Non-binding restatement of general principles for international commercial contracts, widely used as a guide for contract interpretation and gap-filling.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "governing-law-choice",
+        "force-majeure-standard",
+        "termination-cause",
+        "payment-late-interest"
+      ],
+      "authority": "International Institute for the Unification of Private Law",
+      "url": "https://www.unidroit.org/instruments/commercial-contracts/unidroit-principles-2016/",
+      "mandatory": false
+    },
+    {
+      "id": "icc-model-international-sale",
+      "source": "ICC",
+      "name": "ICC Model Contract for International Sale of Goods",
+      "description": "Model contract providing standard terms for international sale of manufactured goods, incorporating Incoterms and international trade best practices.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "warranty-fitness",
+        "warranty-title",
+        "force-majeure-standard",
+        "dispute-resolution-arbitration",
+        "payment-net-30"
+      ],
+      "authority": "International Chamber of Commerce",
+      "url": "https://iccwbo.org/business-solutions/model-contracts-and-clauses/",
+      "mandatory": false
+    },
+    {
+      "id": "icc-force-majeure-2020",
+      "source": "ICC",
+      "name": "ICC Force Majeure and Hardship Clauses 2020",
+      "description": "Updated model force majeure and hardship clauses that can be incorporated into any contract, addressing pandemic and cyber-attack scenarios.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "force-majeure-standard",
+        "force-majeure-pandemic",
+        "force-majeure-termination-right"
+      ],
+      "authority": "International Chamber of Commerce",
+      "url": "https://iccwbo.org/business-solutions/model-contracts-and-clauses/icc-force-majeure-and-hardship-clauses/",
+      "mandatory": false
+    },
+    {
+      "id": "uncitral-model-law-arbitration",
+      "source": "UNCITRAL",
+      "name": "UNCITRAL Model Law on International Commercial Arbitration",
+      "description": "Model law adopted by many jurisdictions providing a framework for international commercial arbitration, including arbitral procedure, awards, and enforcement.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "dispute-resolution-arbitration",
+        "governing-law-choice",
+        "governing-law-venue"
+      ],
+      "authority": "United Nations Commission on International Trade Law",
+      "url": "https://uncitral.un.org/en/texts/arbitration/modellaw/commercial_arbitration",
+      "mandatory": false
+    },
+    {
+      "id": "hague-choice-of-court-2005",
+      "source": "HCCH",
+      "name": "Hague Convention on Choice of Court Agreements (2005)",
+      "description": "International convention providing rules for the enforcement of exclusive choice of court agreements in international civil and commercial matters.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "governing-law-venue",
+        "dispute-resolution-litigation",
+        "governing-law-choice"
+      ],
+      "authority": "Hague Conference on Private International Law",
+      "url": "https://www.hcch.net/en/instruments/conventions/full-text/?cid=98",
+      "mandatory": false
+    },
+    {
+      "id": "isda-master-2002",
+      "source": "ISDA",
+      "name": "ISDA Master Agreement (2002)",
+      "description": "Standard master agreement for over-the-counter derivatives transactions, providing the contractual framework for bilateral trading relationships.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "termination-cause",
+        "termination-insolvency",
+        "force-majeure-standard",
+        "governing-law-choice",
+        "payment-net-30"
+      ],
+      "authority": "International Swaps and Derivatives Association",
+      "url": "https://www.isda.org/book/2002-isda-master-agreement/",
+      "mandatory": false
+    },
+    {
+      "id": "isda-credit-support-annex",
+      "source": "ISDA",
+      "name": "ISDA Credit Support Annex (CSA)",
+      "description": "Standardized collateral agreement for OTC derivatives, specifying credit support obligations, eligible collateral, and margin requirements.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "fin-performance-bond",
+        "fin-escrow-arrangement",
+        "payment-net-30"
+      ],
+      "authority": "International Swaps and Derivatives Association",
+      "url": "https://www.isda.org/",
+      "mandatory": false
+    },
+    {
+      "id": "lma-facility-agreement",
+      "source": "LMA",
+      "name": "LMA Facility Agreement",
+      "description": "Standard form facility agreement for syndicated lending published by the Loan Market Association, widely used in European leveraged and investment grade lending.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "payment-net-30",
+        "representations-authority",
+        "representations-compliance-laws",
+        "termination-cause",
+        "governing-law-choice"
+      ],
+      "authority": "Loan Market Association",
+      "url": "https://www.lma.eu.com/",
+      "mandatory": false
+    },
+    {
+      "id": "baft-master-participation",
+      "source": "BAFT",
+      "name": "BAFT Master Participation Agreement",
+      "description": "Standard master agreement for trade finance risk distribution, enabling banks to participate in trade finance assets through funded and unfunded sub-participations.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "payment-terms",
+        "representations-authority",
+        "indemnification-mutual",
+        "governing-law-choice"
+      ],
+      "authority": "Bankers Association for Finance and Trade",
+      "url": "https://www.baft.org/",
+      "mandatory": false
+    },
+    {
+      "id": "nist-sp-800-161r1",
+      "source": "NIST",
+      "name": "NIST SP 800-161r1 Cybersecurity Supply Chain Risk Management",
+      "description": "Guidance for identifying, assessing, and mitigating cybersecurity supply chain risks, including contractual requirements for ICT/OT suppliers.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-supply-chain-transparency",
+        "audit-rights-security",
+        "warranty-compliance-laws",
+        "nis2-security-requirements"
+      ],
+      "authority": "National Institute of Standards and Technology",
+      "url": "https://csrc.nist.gov/publications/detail/sp/800-161/rev-1/final",
+      "mandatory": false
+    },
+    {
+      "id": "nist-csf-2-0",
+      "source": "NIST",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "description": "Voluntary framework consisting of standards, guidelines, and best practices for managing cybersecurity risk, including supply chain risk management category.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "audit-rights-security",
+        "warranty-compliance-laws"
+      ],
+      "authority": "National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/cyberframework",
+      "mandatory": false
+    },
+    {
+      "id": "cisa-secure-by-design",
+      "source": "CISA",
+      "name": "CISA Secure by Design Principles",
+      "description": "Principles for technology manufacturers to build security into products from the design phase, with contractual implications for procurement.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "warranty-non-infringement",
+        "warranty-compliance-laws"
+      ],
+      "authority": "Cybersecurity and Infrastructure Security Agency",
+      "url": "https://www.cisa.gov/securebydesign",
+      "mandatory": false
+    },
+    {
+      "id": "iso-27001-contractual",
+      "source": "ISO",
+      "name": "ISO/IEC 27001:2022 Supplier Relationship Controls",
+      "description": "Information security management system standard including Annex A controls A.5.19-A.5.23 for supplier relationships and cloud service security.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "audit-rights-security",
+        "nis2-security-requirements",
+        "dpa-security-measures",
+        "nis2-supply-chain-transparency"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/27001",
+      "mandatory": false
+    },
+    {
+      "id": "iso-27701-privacy",
+      "source": "ISO",
+      "name": "ISO/IEC 27701:2019 Privacy Information Management",
+      "description": "Extension to ISO 27001/27002 for privacy information management, providing guidance for PII controllers and processors with contractual requirements.",
+      "contract_type": "dpa-gdpr",
+      "clauses_addressed": [
+        "dpa-processing-instructions",
+        "dpa-security-measures",
+        "dpa-sub-processor",
+        "dpa-data-subject-rights",
+        "dpa-deletion-return"
+      ],
+      "authority": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/71670.html",
+      "mandatory": false
+    },
+    {
+      "id": "soc2-trust-criteria",
+      "source": "AICPA",
+      "name": "SOC 2 Trust Services Criteria",
+      "description": "Trust services criteria for evaluating controls relevant to security, availability, processing integrity, confidentiality, and privacy in service organizations.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "audit-rights-security",
+        "sla-uptime",
+        "dpa-security-measures",
+        "confidentiality-mutual"
+      ],
+      "authority": "American Institute of Certified Public Accountants",
+      "url": "https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/socforserviceorganizations",
+      "mandatory": false
+    },
+    {
+      "id": "csa-star",
+      "source": "CSA",
+      "name": "CSA STAR (Security, Trust, Assurance, and Risk)",
+      "description": "Cloud security assurance program providing multiple levels of assurance through self-assessment, third-party audit, and continuous monitoring.",
+      "contract_type": "saas-subscription",
+      "clauses_addressed": [
+        "audit-rights-security",
+        "sla-uptime",
+        "dpa-security-measures",
+        "nis2-security-requirements"
+      ],
+      "authority": "Cloud Security Alliance",
+      "url": "https://cloudsecurityalliance.org/star",
+      "mandatory": false
+    },
+    {
+      "id": "owasp-samm",
+      "source": "OWASP",
+      "name": "OWASP Software Assurance Maturity Model (SAMM)",
+      "description": "Framework for formulating and implementing a software security strategy, with contractual implications for secure development lifecycle requirements.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "warranty-compliance-laws",
+        "audit-rights-security"
+      ],
+      "authority": "Open Worldwide Application Security Project",
+      "url": "https://owaspsamm.org/",
+      "mandatory": false
+    },
+    {
+      "id": "far-part-27",
+      "source": "US Government",
+      "name": "FAR Part 27 - Patents, Data, and Copyrights",
+      "description": "Federal Acquisition Regulation provisions governing intellectual property rights in government contracts, including data rights, patent rights, and copyright allocation.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ip-work-product-ownership",
+        "ip-background-reservation",
+        "ip-license-back"
+      ],
+      "authority": "US Federal Acquisition Regulatory Council",
+      "url": "https://www.acquisition.gov/far/part-27",
+      "mandatory": true
+    },
+    {
+      "id": "far-52-227-14",
+      "source": "US Government",
+      "name": "FAR 52.227-14 Rights in Data - General",
+      "description": "Standard FAR clause defining government rights in technical data and computer software delivered under government contracts, with limited rights and restricted rights categories.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ip-work-product-ownership",
+        "ip-background-reservation",
+        "ip-license-back",
+        "ip-non-assertion"
+      ],
+      "authority": "US Federal Acquisition Regulatory Council",
+      "url": "https://www.acquisition.gov/far/52.227-14",
+      "mandatory": true
+    },
+    {
+      "id": "dfars-252-227-7013",
+      "source": "US DoD",
+      "name": "DFARS 252.227-7013 Rights in Technical Data - Noncommercial",
+      "description": "Defense-specific clause defining government rights in noncommercial technical data, with unlimited rights, government purpose rights, and limited rights categories.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ip-work-product-ownership",
+        "ip-background-reservation"
+      ],
+      "authority": "US Department of Defense",
+      "url": "https://www.acquisition.gov/dfars/252.227-7013",
+      "mandatory": true
+    },
+    {
+      "id": "dfars-252-227-7014",
+      "source": "US DoD",
+      "name": "DFARS 252.227-7014 Rights in Noncommercial Computer Software",
+      "description": "Defense-specific clause defining government rights in noncommercial computer software and documentation, with restricted rights protections for contractor-developed software.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ip-work-product-ownership",
+        "ip-background-reservation",
+        "ip-license-back"
+      ],
+      "authority": "US Department of Defense",
+      "url": "https://www.acquisition.gov/dfars/252.227-7014",
+      "mandatory": true
+    },
+    {
+      "id": "cmmc-2-0",
+      "source": "US DoD",
+      "name": "Cybersecurity Maturity Model Certification (CMMC) 2.0",
+      "description": "DoD program requiring defense contractors to achieve and maintain cybersecurity certification at levels commensurate with the sensitivity of controlled unclassified information.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "nis2-security-requirements",
+        "audit-rights-security",
+        "compliance-export-controls"
+      ],
+      "authority": "US Department of Defense",
+      "url": "https://dodcio.defense.gov/CMMC/",
+      "mandatory": true
+    },
+    {
+      "id": "far-part-12",
+      "source": "US Government",
+      "name": "FAR Part 12 - Acquisition of Commercial Products and Services",
+      "description": "FAR provisions for acquiring commercial products and services with streamlined procedures and commercial item IP protections.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "warranty-fitness",
+        "warranty-non-infringement",
+        "ip-work-product-ownership"
+      ],
+      "authority": "US Federal Acquisition Regulatory Council",
+      "url": "https://www.acquisition.gov/far/part-12",
+      "mandatory": true
+    },
+    {
+      "id": "sbir-data-rights",
+      "source": "US Government",
+      "name": "SBIR/STTR Data Rights Protection",
+      "description": "Data rights protections for Small Business Innovation Research and Small Business Technology Transfer programs, providing extended protection periods for developed technologies.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ip-work-product-ownership",
+        "ip-background-reservation",
+        "ip-improvements"
+      ],
+      "authority": "US Small Business Administration",
+      "url": "https://www.sbir.gov/",
+      "mandatory": true
+    },
+    {
+      "id": "far-52-227-11",
+      "source": "US Government",
+      "name": "FAR 52.227-11 Patent Rights - Ownership by Contractor",
+      "description": "Standard patent rights clause implementing Bayh-Dole Act, allowing contractors to retain title to inventions made under government contracts with government license rights.",
+      "contract_type": null,
+      "clauses_addressed": [
+        "ip-work-product-ownership",
+        "ip-background-reservation",
+        "ip-non-assertion"
+      ],
+      "authority": "US Federal Acquisition Regulatory Council",
+      "url": "https://www.acquisition.gov/far/52.227-11",
+      "mandatory": true
+    }
+  ]
+}
