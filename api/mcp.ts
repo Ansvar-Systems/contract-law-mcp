@@ -94,7 +94,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       { capabilities: { tools: {} } },
     );
 
-    registerTools(server, database, builtAt);
+    // @ansvar/mcp-sqlite is API-compatible with better-sqlite3 at runtime
+    registerTools(server, database as unknown as import('better-sqlite3').Database, builtAt);
 
     const transport = new StreamableHTTPServerTransport({
       sessionIdGenerator: undefined,
