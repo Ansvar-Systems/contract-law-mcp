@@ -7,3 +7,5 @@ coverage/
 .vercel/
 .DS_Store
 *.tgz
+.claude/
+.serena/
