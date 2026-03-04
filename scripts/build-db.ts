@@ -197,6 +197,66 @@ CREATE TRIGGER ip_provisions_ai AFTER INSERT ON ip_provisions BEGIN
   VALUES (new.rowid, new.name, new.description);
 END;
 
+-- Clause template library (model language for contract clauses)
+CREATE TABLE clause_templates (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  clause_type_id TEXT NOT NULL,
+  template_name TEXT NOT NULL,
+  jurisdiction_family TEXT NOT NULL DEFAULT 'common_law',
+  agreement_type TEXT NOT NULL,
+  template_text TEXT NOT NULL,
+  guidance_notes TEXT,
+  cra_relevant INTEGER NOT NULL DEFAULT 0,
+  keywords TEXT NOT NULL DEFAULT ''
+);
+
+-- FTS5 for clause_templates
+CREATE VIRTUAL TABLE clause_templates_fts USING fts5(
+  template_name, template_text, guidance_notes, keywords,
+  content='clause_templates',
+  content_rowid='rowid',
+  tokenize='unicode61'
+);
+CREATE TRIGGER clause_templates_ai AFTER INSERT ON clause_templates BEGIN
+  INSERT INTO clause_templates_fts(rowid, template_name, template_text, guidance_notes, keywords)
+  VALUES (new.rowid, new.template_name, new.template_text, new.guidance_notes, new.keywords);
+END;
+
+-- Agreement structure scaffolds
+CREATE TABLE agreement_structures (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  agreement_type TEXT NOT NULL,
+  section_order INTEGER NOT NULL,
+  section_name TEXT NOT NULL,
+  section_description TEXT NOT NULL,
+  required INTEGER NOT NULL DEFAULT 1,
+  cra_mandated INTEGER NOT NULL DEFAULT 0,
+  keywords TEXT NOT NULL DEFAULT ''
+);
+
+-- CRA contract obligations mapped to clause requirements
+CREATE TABLE cra_contract_obligations (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  cra_article TEXT NOT NULL,
+  obligation TEXT NOT NULL,
+  clause_type TEXT NOT NULL,
+  contract_language TEXT NOT NULL,
+  compliance_notes TEXT,
+  keywords TEXT NOT NULL DEFAULT ''
+);
+
+-- FTS5 for cra_contract_obligations
+CREATE VIRTUAL TABLE cra_contract_obligations_fts USING fts5(
+  cra_article, obligation, contract_language, keywords,
+  content='cra_contract_obligations',
+  content_rowid='rowid',
+  tokenize='unicode61'
+);
+CREATE TRIGGER cra_contract_obligations_ai AFTER INSERT ON cra_contract_obligations BEGIN
+  INSERT INTO cra_contract_obligations_fts(rowid, cra_article, obligation, contract_language, keywords)
+  VALUES (new.rowid, new.cra_article, new.obligation, new.contract_language, new.keywords);
+END;
+
 -- Metadata key-value store
 CREATE TABLE db_metadata (key TEXT PRIMARY KEY, value TEXT NOT NULL);
 `;
@@ -373,6 +433,45 @@ const TABLE_DEFS: TableDef[] = [
       { name: 'authority' },
       { name: 'url', transform: 'nullable' },
       { name: 'mandatory', transform: 'boolean' },
+    ],
+  },
+  {
+    table: 'clause_templates',
+    seedKey: 'clause_templates',
+    columns: [
+      { name: 'clause_type_id' },
+      { name: 'template_name' },
+      { name: 'jurisdiction_family' },
+      { name: 'agreement_type' },
+      { name: 'template_text' },
+      { name: 'guidance_notes', transform: 'nullable' },
+      { name: 'cra_relevant', transform: 'boolean' },
+      { name: 'keywords' },
+    ],
+  },
+  {
+    table: 'agreement_structures',
+    seedKey: 'agreement_structures',
+    columns: [
+      { name: 'agreement_type' },
+      { name: 'section_order' },
+      { name: 'section_name' },
+      { name: 'section_description' },
+      { name: 'required', transform: 'boolean' },
+      { name: 'cra_mandated', transform: 'boolean' },
+      { name: 'keywords' },
+    ],
+  },
+  {
+    table: 'cra_contract_obligations',
+    seedKey: 'cra_contract_obligations',
+    columns: [
+      { name: 'cra_article' },
+      { name: 'obligation' },
+      { name: 'clause_type' },
+      { name: 'contract_language' },
+      { name: 'compliance_notes', transform: 'nullable' },
+      { name: 'keywords' },
     ],
   },
 ];
