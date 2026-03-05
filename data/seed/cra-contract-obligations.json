@@ -1,0 +1,76 @@
+{
+  "cra_contract_obligations": [
+    {
+      "id": 1,
+      "cra_article": "Article 13(1)(f)",
+      "obligation": "Manufacturers must identify and document vulnerabilities and components contained in the product, including by drawing up a software bill of materials in a commonly used and machine-readable format covering at minimum the top-level dependencies of the product.",
+      "clause_type": "supply-chain-transparency",
+      "contract_language": "The Supplier shall deliver to the Customer a Software Bill of Materials (SBOM) for each Product release in CycloneDX or SPDX format. The SBOM shall identify, at minimum, all top-level dependencies including component name, version, supplier, and applicable license. The SBOM shall be delivered within [X] business days of each release and updated with each subsequent release. The Supplier warrants the accuracy and completeness of each SBOM as of its delivery date.",
+      "compliance_notes": "CRA Article 13(1)(f) sets a minimum standard of top-level dependencies. Customers may contractually require deeper dependency trees (transitive dependencies). Machine-readable format is mandatory. CycloneDX and SPDX are the recognized standards. The SBOM must be kept current throughout the support period.",
+      "keywords": "SBOM software bill of materials CRA article 13 dependencies CycloneDX SPDX"
+    },
+    {
+      "id": 2,
+      "cra_article": "Article 13(6)",
+      "obligation": "When placing a product with digital elements on the market, the manufacturer shall ensure that vulnerabilities are handled effectively, including by providing security updates. Where available patches or updates exist, they shall be made available without delay.",
+      "clause_type": "vulnerability-management",
+      "contract_language": "The Supplier shall maintain a vulnerability handling process for the Product throughout the support period. Upon identifying a vulnerability in the Product, the Supplier shall: (a) assess the severity and potential impact; (b) develop and test a remediation (patch, update, or mitigation); (c) make the remediation available to the Customer without undue delay; and (d) provide the Customer with sufficient information to assess the urgency of applying the remediation, including affected versions, severity rating (using CVSS or equivalent), and whether the vulnerability is known to be actively exploited.",
+      "compliance_notes": "CRA Article 13(6) requires effective vulnerability handling throughout the expected product lifetime. The obligation extends beyond simply fixing vulnerabilities to include timely disclosure and remediation delivery. Consider contractual SLAs for patch delivery timelines based on severity (e.g., critical: 48 hours, high: 7 days).",
+      "keywords": "vulnerability handling patches security updates CRA article 13 remediation"
+    },
+    {
+      "id": 3,
+      "cra_article": "Article 13(8)",
+      "obligation": "Manufacturers shall ensure that products with digital elements are accompanied by security updates for a period of at least five years or the expected product lifetime, whichever is longer. Security updates shall be provided free of charge.",
+      "clause_type": "security-update-commitment",
+      "contract_language": "The Supplier commits to providing security updates for the Product for a minimum period of five (5) years from the date the Product is first placed on the market, or for the expected product lifetime as determined in accordance with Regulation (EU) 2024/2847, whichever period is longer (the \"Security Support Period\"). During the Security Support Period: (a) all security updates shall be provided free of charge; (b) security updates shall be delivered through a secure, authenticated distribution mechanism; (c) the Supplier shall not require the Customer to accept non-security functionality changes as a condition of receiving security updates; and (d) the Supplier shall provide at least [X] months' advance notice before the end of the Security Support Period.",
+      "compliance_notes": "The 5-year minimum in CRA Article 13(8) is a floor, not a ceiling. For products with longer expected lifetimes (e.g., industrial control systems, medical devices), the support period must match the expected lifetime. The free-of-charge requirement applies specifically to security updates. End-of-support notification enables customers to plan migration. The prohibition on bundling non-security changes with security updates prevents lock-in.",
+      "keywords": "security update five years support period CRA article 13 free of charge"
+    },
+    {
+      "id": 4,
+      "cra_article": "Article 14",
+      "obligation": "Manufacturers shall notify ENISA and the designated CSIRT of any actively exploited vulnerability (within 24 hours early warning, 72 hours detailed notification, 14 days final report) and notify users without undue delay, including corrective measures.",
+      "clause_type": "vulnerability-notification",
+      "contract_language": "The Supplier shall notify the Customer of any actively exploited vulnerability in the Product without undue delay, and in any event within twenty-four (24) hours of becoming aware of the vulnerability. Such notification shall include: (a) description of the vulnerability and affected Product versions; (b) severity assessment; (c) available mitigation measures; and (d) expected timeline for a permanent fix. The Supplier confirms that it will simultaneously comply with its obligations under CRA Article 14 to notify ENISA and the designated CSIRT through the single reporting platform. The Supplier shall provide the Customer with follow-up notifications as material new information becomes available, including when a security update is released.",
+      "compliance_notes": "CRA Article 14 establishes a three-stage notification timeline: early warning within 24 hours, detailed vulnerability notification within 72 hours, and final report within 14 days. The contractual obligation should mirror or exceed these timelines. The notification to users (customers) is separate from the regulatory notification to ENISA/CSIRT. Ensure the clause covers the content requirements specified in Article 14(2).",
+      "keywords": "vulnerability notification CRA article 14 ENISA CSIRT 24 hours actively exploited reporting"
+    },
+    {
+      "id": 5,
+      "cra_article": "Article 19",
+      "obligation": "Importers shall place on the market only products with digital elements that comply with the essential requirements in Annex I. Before placing a product on the market, the importer shall ensure the manufacturer has carried out the conformity assessment, drawn up technical documentation, and the product bears the CE marking.",
+      "clause_type": "importer-verification",
+      "contract_language": "The Importer warrants that, before placing each Product on the EU market, it has verified that the Manufacturer has: (a) carried out the applicable conformity assessment procedure under Regulation (EU) 2024/2847; (b) drawn up the technical documentation required by Article 31; (c) affixed the CE marking in accordance with Article 30; (d) included the EU declaration of conformity or simplified declaration with the product; and (e) provided its name, registered trade name, and contact details on the product or its packaging. The Importer shall maintain a copy of the EU declaration of conformity and the technical documentation for a period of ten (10) years after the Product is placed on the market and shall make these available to market surveillance authorities upon request.",
+      "compliance_notes": "CRA Article 19 imposes due diligence obligations on importers. The importer does not need to conduct its own conformity assessment but must verify the manufacturer has done so. The 10-year document retention period aligns with Article 19(8). If the importer has reason to believe the Product does not conform, it must not place the product on the market until conformity is established.",
+      "keywords": "importer verification CRA article 19 conformity CE marking technical documentation"
+    },
+    {
+      "id": 6,
+      "cra_article": "Article 20",
+      "obligation": "Distributors shall verify, before making a product available on the market, that the product bears the CE marking, the manufacturer and importer have complied with their obligations, and the product is accompanied by the required documentation.",
+      "clause_type": "distributor-verification",
+      "contract_language": "The Distributor warrants that, before making each Product available on the EU market, it has verified that: (a) the Product bears the CE marking; (b) the Product is accompanied by the required instructions and safety information in a language easily understood by users in the Member State(s) where the Product is made available; (c) the Manufacturer has provided its name, registered trade name or trademark, and contact address on the Product or its packaging; and (d) the Importer (if applicable) has provided its name and contact address on the Product or its packaging. Where the Distributor has reason to believe that a Product does not comply with the essential requirements of Regulation (EU) 2024/2847, it shall not make the Product available until conformity has been ensured.",
+      "compliance_notes": "CRA Article 20 imposes lighter obligations on distributors compared to importers, focused on verification rather than documentation. The distributor's core obligation is a visual and documentary check. If the distributor modifies the product or markets it under its own name, it is treated as a manufacturer under Article 21. The Distributor must cooperate with market surveillance authorities and inform them of identified risks.",
+      "keywords": "distributor verification CRA article 20 CE marking market availability"
+    },
+    {
+      "id": 7,
+      "cra_article": "Annex I, Part I",
+      "obligation": "Products with digital elements shall be designed, developed, and produced to ensure an appropriate level of cybersecurity based on the risks, including protection against unauthorized access, data confidentiality and integrity, availability, and minimization of attack surfaces.",
+      "clause_type": "essential-cybersecurity-requirements",
+      "contract_language": "The Supplier warrants and undertakes that the Product meets the essential cybersecurity requirements set out in Annex I, Part I of Regulation (EU) 2024/2847, and in particular: (a) the Product is designed to protect the confidentiality, integrity, and availability of data, including personal data; (b) the Product is delivered with a secure-by-default configuration, without known exploitable vulnerabilities; (c) the Product provides protection against unauthorised access through appropriate authentication and identity management mechanisms; (d) the Product minimises its attack surface and reduces the impact of successful exploitation; (e) the Product supports data-at-rest and data-in-transit encryption using state-of-the-art cryptographic standards; and (f) the Product records security-relevant events to support incident detection and forensic analysis. These requirements shall be treated as service level obligations, with any failure to meet them constituting a material breach of this Agreement.",
+      "compliance_notes": "Annex I, Part I lists the essential cybersecurity requirements that all products with digital elements must meet. Incorporating these as SLA obligations creates a contractual enforcement mechanism alongside the regulatory one. The secure-by-default requirement (Annex I, Part I, point 2) means the product must ship in a hardened configuration. The material breach classification gives the Customer termination rights if these requirements are not met.",
+      "keywords": "essential cybersecurity requirements Annex I CRA secure by default encryption access control SLA"
+    },
+    {
+      "id": 8,
+      "cra_article": "Annex I, Part II",
+      "obligation": "Manufacturers shall identify and document vulnerabilities, apply effective and regular tests and reviews of security, address vulnerabilities without delay through security updates, disclose and publish information about fixed vulnerabilities, and have a coordinated vulnerability disclosure policy.",
+      "clause_type": "vulnerability-handling-requirements",
+      "contract_language": "The Supplier shall maintain vulnerability handling processes in compliance with Annex I, Part II of Regulation (EU) 2024/2847, and shall contractually commit to: (a) conduct regular security testing, including automated vulnerability scanning and, where appropriate, penetration testing, with results shared with the Customer on request; (b) address identified vulnerabilities without undue delay through security updates, providing severity-based remediation timelines: Critical within [X] hours, High within [Y] days, Medium within [Z] days; (c) publish information about fixed vulnerabilities in a timely manner, including advisory notices and CVE identifiers where applicable; (d) operate a coordinated vulnerability disclosure policy that enables third-party security researchers to report vulnerabilities; and (e) share the results of due diligence on third-party components integrated in the Product.",
+      "compliance_notes": "Annex I, Part II addresses the vulnerability handling obligations that run throughout the product lifecycle. The contractual SLA approach (severity-based remediation timelines) goes beyond the CRA's requirement to address vulnerabilities 'without delay' by setting measurable targets. The coordinated vulnerability disclosure policy is required by CRA Annex I, Part II, point 5. Third-party component due diligence aligns with the SBOM obligation in Article 13(1)(f).",
+      "keywords": "vulnerability handling Annex I Part II testing disclosure coordinated policy remediation timeline"
+    }
+  ]
+}

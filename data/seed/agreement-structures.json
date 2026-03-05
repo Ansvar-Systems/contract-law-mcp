@@ -1,0 +1,504 @@
+{
+  "agreement_structures": [
+    {
+      "id": 1,
+      "agreement_type": "nda-mutual",
+      "section_order": 1,
+      "section_name": "Definitions",
+      "section_description": "Define key terms including Confidential Information, Disclosing Party, Receiving Party, Representatives, and Purpose. The definition of Confidential Information is the most heavily negotiated provision.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "definitions confidential information purpose"
+    },
+    {
+      "id": 2,
+      "agreement_type": "nda-mutual",
+      "section_order": 2,
+      "section_name": "Obligations of Confidentiality",
+      "section_description": "Core duty to maintain confidentiality, standard of care (at least same care as for own confidential information, and in any event reasonable care), and restrictions on use (solely for the Purpose).",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "obligations duty care restrictions use"
+    },
+    {
+      "id": 3,
+      "agreement_type": "nda-mutual",
+      "section_order": 3,
+      "section_name": "Exclusions from Confidentiality",
+      "section_description": "Standard carve-outs: publicly available information, prior possession, independent development, third-party receipt without restriction. Burden of proof rests on the Receiving Party.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "exclusions carve-outs public domain"
+    },
+    {
+      "id": 4,
+      "agreement_type": "nda-mutual",
+      "section_order": 4,
+      "section_name": "Permitted Disclosures",
+      "section_description": "Circumstances in which disclosure is allowed: to Representatives on a need-to-know basis, compelled by law or court order (with notice obligation), and to professional advisors.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "permitted disclosures representatives compelled"
+    },
+    {
+      "id": 5,
+      "agreement_type": "nda-mutual",
+      "section_order": 5,
+      "section_name": "Return and Destruction",
+      "section_description": "Obligation to return or destroy Confidential Information upon request or termination. Include certification requirement and archival copy exception for regulatory compliance.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "return destruction certification archival"
+    },
+    {
+      "id": 6,
+      "agreement_type": "nda-mutual",
+      "section_order": 6,
+      "section_name": "Term and Survival",
+      "section_description": "Duration of the agreement (during which new disclosures may occur) and survival period for confidentiality obligations after termination. Trade secret obligations survive indefinitely.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "term survival duration expiration"
+    },
+    {
+      "id": 7,
+      "agreement_type": "nda-mutual",
+      "section_order": 7,
+      "section_name": "Remedies",
+      "section_description": "Acknowledgment that breach may cause irreparable harm. Right to seek equitable relief (injunction, specific performance) in addition to damages. Cumulative remedies.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "remedies injunction equitable relief damages"
+    },
+    {
+      "id": 8,
+      "agreement_type": "nda-mutual",
+      "section_order": 8,
+      "section_name": "No Obligation to Disclose or Deal",
+      "section_description": "Reservation that neither party is obligated to disclose any particular information or to enter into any further agreement or transaction.",
+      "required": 0,
+      "cra_mandated": 0,
+      "keywords": "no obligation reservation"
+    },
+    {
+      "id": 9,
+      "agreement_type": "nda-mutual",
+      "section_order": 9,
+      "section_name": "Governing Law and Jurisdiction",
+      "section_description": "Choice of governing law and submission to jurisdiction. Consider carve-out allowing equitable relief in any competent court.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "governing law jurisdiction venue"
+    },
+    {
+      "id": 10,
+      "agreement_type": "nda-mutual",
+      "section_order": 10,
+      "section_name": "General Provisions",
+      "section_description": "Boilerplate: entire agreement, amendment (in writing only), waiver, severability, notices, assignment restrictions, counterparts.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "boilerplate general provisions entire agreement"
+    },
+    {
+      "id": 11,
+      "agreement_type": "nda-one-way",
+      "section_order": 1,
+      "section_name": "Definitions",
+      "section_description": "Define Disclosing Party, Receiving Party, Confidential Information (broadly drafted to protect the Disclosing Party), and Purpose. In a unilateral NDA, only one party discloses.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "definitions unilateral one-way"
+    },
+    {
+      "id": 12,
+      "agreement_type": "nda-one-way",
+      "section_order": 2,
+      "section_name": "Obligations of the Receiving Party",
+      "section_description": "Core confidentiality duty, standard of care, use restrictions, and non-disclosure obligations. More detailed than mutual NDA because only one party bears obligations.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "obligations receiving party duty"
+    },
+    {
+      "id": 13,
+      "agreement_type": "nda-one-way",
+      "section_order": 3,
+      "section_name": "Exclusions",
+      "section_description": "Standard exclusions: publicly available, prior possession, independent development, third-party receipt. Same as mutual NDA.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "exclusions carve-outs"
+    },
+    {
+      "id": 14,
+      "agreement_type": "nda-one-way",
+      "section_order": 4,
+      "section_name": "Permitted Disclosures",
+      "section_description": "Limited circumstances for authorized disclosure. Typically narrower than mutual NDA.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "permitted disclosures"
+    },
+    {
+      "id": 15,
+      "agreement_type": "nda-one-way",
+      "section_order": 5,
+      "section_name": "Return and Destruction",
+      "section_description": "Receiving Party's obligation to return or destroy all Confidential Information upon request or termination.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "return destruction"
+    },
+    {
+      "id": 16,
+      "agreement_type": "nda-one-way",
+      "section_order": 6,
+      "section_name": "Non-Compete and Non-Solicitation",
+      "section_description": "Optional restrictions on the Receiving Party competing with the Disclosing Party or soliciting its employees or customers using Confidential Information.",
+      "required": 0,
+      "cra_mandated": 0,
+      "keywords": "non-compete non-solicitation"
+    },
+    {
+      "id": 17,
+      "agreement_type": "nda-one-way",
+      "section_order": 7,
+      "section_name": "Remedies",
+      "section_description": "Equitable relief provision and damages. Typically more favourable to the Disclosing Party than in a mutual NDA.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "remedies injunction"
+    },
+    {
+      "id": 18,
+      "agreement_type": "nda-one-way",
+      "section_order": 8,
+      "section_name": "Term, Survival, and General Provisions",
+      "section_description": "Duration, survival period, governing law, jurisdiction, and standard boilerplate provisions.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "term survival governing law general"
+    },
+    {
+      "id": 19,
+      "agreement_type": "maintenance-support",
+      "section_order": 1,
+      "section_name": "Definitions and Interpretation",
+      "section_description": "Define Service, Software, Product, Support Hours, Severity Levels, Service Levels, and other key terms used throughout the agreement.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "definitions interpretation service software"
+    },
+    {
+      "id": 20,
+      "agreement_type": "maintenance-support",
+      "section_order": 2,
+      "section_name": "Service Description and Scope",
+      "section_description": "Detailed description of what is included (maintenance, patches, updates, support) and what is excluded (custom development, training, unsupported versions).",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "service description scope inclusions exclusions"
+    },
+    {
+      "id": 21,
+      "agreement_type": "maintenance-support",
+      "section_order": 3,
+      "section_name": "Service Levels",
+      "section_description": "Uptime commitments, response time targets by severity, resolution time targets, and measurement methodology. Reference to SLA schedule.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "service levels SLA uptime response"
+    },
+    {
+      "id": 22,
+      "agreement_type": "maintenance-support",
+      "section_order": 4,
+      "section_name": "Service Credits and Remedies",
+      "section_description": "Credit mechanism for SLA failures, credit calculation methodology, maximum credit cap, claim procedure, and whether credits are sole remedy.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "service credits penalty remedy"
+    },
+    {
+      "id": 23,
+      "agreement_type": "maintenance-support",
+      "section_order": 5,
+      "section_name": "Security Obligations",
+      "section_description": "Provider's security commitments: encryption, access control, vulnerability management, incident response, secure development practices. CRA-mandated for products with digital elements.",
+      "required": 1,
+      "cra_mandated": 1,
+      "keywords": "security obligations CRA cyber resilience"
+    },
+    {
+      "id": 24,
+      "agreement_type": "maintenance-support",
+      "section_order": 6,
+      "section_name": "Vulnerability Notification",
+      "section_description": "Obligation to notify of vulnerabilities, notification timeline (24h for actively exploited), content of notification, ENISA/CSIRT reporting. CRA Article 14 mandated.",
+      "required": 1,
+      "cra_mandated": 1,
+      "keywords": "vulnerability notification CRA article 14"
+    },
+    {
+      "id": 25,
+      "agreement_type": "maintenance-support",
+      "section_order": 7,
+      "section_name": "Security Update Commitment",
+      "section_description": "Duration of security update support (minimum 5 years per CRA Article 13(8)), update delivery mechanism, free-of-charge requirement, backward compatibility.",
+      "required": 1,
+      "cra_mandated": 1,
+      "keywords": "security update duration CRA article 13"
+    },
+    {
+      "id": 26,
+      "agreement_type": "maintenance-support",
+      "section_order": 8,
+      "section_name": "SBOM Delivery",
+      "section_description": "Software Bill of Materials delivery obligation, format requirements (CycloneDX/SPDX), update frequency, accuracy warranty. CRA Article 13(1)(f) mandated.",
+      "required": 1,
+      "cra_mandated": 1,
+      "keywords": "SBOM CRA article 13 software bill of materials"
+    },
+    {
+      "id": 27,
+      "agreement_type": "maintenance-support",
+      "section_order": 9,
+      "section_name": "Fees and Payment",
+      "section_description": "Fee structure (fixed, usage-based, or tiered), payment terms, price adjustment mechanism, invoice requirements.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "fees payment price invoicing"
+    },
+    {
+      "id": 28,
+      "agreement_type": "maintenance-support",
+      "section_order": 10,
+      "section_name": "Limitation of Liability",
+      "section_description": "Aggregate liability cap, exclusion of consequential damages, uncapped carve-outs (IP indemnity, confidentiality breach, wilful misconduct, death/personal injury).",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "limitation liability cap exclusion"
+    },
+    {
+      "id": 29,
+      "agreement_type": "maintenance-support",
+      "section_order": 11,
+      "section_name": "Indemnification",
+      "section_description": "Mutual indemnification for third-party claims. Provider indemnifies for IP infringement and security breach. Customer indemnifies for misuse.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "indemnification indemnity third-party claims"
+    },
+    {
+      "id": 30,
+      "agreement_type": "maintenance-support",
+      "section_order": 12,
+      "section_name": "Term and Termination",
+      "section_description": "Initial term, renewal mechanism, termination for cause (with cure period), termination for convenience, insolvency termination, effects of termination.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "term termination renewal cure"
+    },
+    {
+      "id": 31,
+      "agreement_type": "maintenance-support",
+      "section_order": 13,
+      "section_name": "Transition and Exit",
+      "section_description": "Provider's obligations upon termination: data return/migration, transition assistance period, knowledge transfer, and continued service during transition.",
+      "required": 0,
+      "cra_mandated": 0,
+      "keywords": "transition exit migration data return"
+    },
+    {
+      "id": 32,
+      "agreement_type": "maintenance-support",
+      "section_order": 14,
+      "section_name": "Escrow",
+      "section_description": "Source code escrow for business continuity. Deposit requirements, update schedule, release conditions (insolvency, material breach, discontinuation).",
+      "required": 0,
+      "cra_mandated": 0,
+      "keywords": "escrow source code deposit"
+    },
+    {
+      "id": 33,
+      "agreement_type": "maintenance-support",
+      "section_order": 15,
+      "section_name": "Governing Law, Dispute Resolution, and General Provisions",
+      "section_description": "Choice of law, jurisdiction or arbitration, confidentiality, force majeure, notices, assignment, entire agreement, and boilerplate.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "governing law disputes general boilerplate"
+    },
+    {
+      "id": 34,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 1,
+      "section_name": "Definitions",
+      "section_description": "Define Software, Documentation, Licensee, Licensor, License Key, Updates, Upgrades, and Permitted Use.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "definitions software license"
+    },
+    {
+      "id": 35,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 2,
+      "section_name": "License Grant",
+      "section_description": "Scope of license: exclusive/non-exclusive, transferable/non-transferable, sublicensable/non-sublicensable, territory, field of use, number of seats/users/installations.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "license grant scope restrictions"
+    },
+    {
+      "id": 36,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 3,
+      "section_name": "License Restrictions",
+      "section_description": "Prohibited activities: reverse engineering, decompilation, modification, sublicensing, service bureau use, benchmarking. Subject to statutory exceptions.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "restrictions reverse engineering prohibited"
+    },
+    {
+      "id": 37,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 4,
+      "section_name": "Intellectual Property Ownership",
+      "section_description": "Licensor retains all IP rights. License does not transfer ownership. Feedback assignment. Trade secret acknowledgment.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "intellectual property ownership IP retention"
+    },
+    {
+      "id": 38,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 5,
+      "section_name": "Open-Source Component Disclosure",
+      "section_description": "List of open-source components, applicable licenses, copyleft warranty, compliance obligations.",
+      "required": 0,
+      "cra_mandated": 0,
+      "keywords": "open source disclosure copyleft"
+    },
+    {
+      "id": 39,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 6,
+      "section_name": "Warranty",
+      "section_description": "Performance warranty (material conformance with documentation), defect warranty, warranty period, remedy (repair, replace, refund), disclaimer of implied warranties.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "warranty fitness defects disclaimer"
+    },
+    {
+      "id": 40,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 7,
+      "section_name": "Limitation of Liability",
+      "section_description": "Aggregate cap, exclusion of consequential damages, carve-outs. Conspicuous formatting in common law jurisdictions.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "limitation liability cap"
+    },
+    {
+      "id": 41,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 8,
+      "section_name": "Term and Termination",
+      "section_description": "License duration (perpetual or subscription), termination triggers, post-termination obligations (cease use, destroy copies).",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "term termination perpetual subscription"
+    },
+    {
+      "id": 42,
+      "agreement_type": "software-license-proprietary",
+      "section_order": 9,
+      "section_name": "General Provisions",
+      "section_description": "Governing law, jurisdiction, export compliance, assignment, notices, entire agreement, severability.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "general governing law boilerplate"
+    },
+    {
+      "id": 43,
+      "agreement_type": "sla",
+      "section_order": 1,
+      "section_name": "Scope and Relationship to Principal Agreement",
+      "section_description": "Identify the principal agreement this SLA supplements. Define precedence in case of conflict. Specify which services are covered.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "scope relationship principal agreement"
+    },
+    {
+      "id": 44,
+      "agreement_type": "sla",
+      "section_order": 2,
+      "section_name": "Definitions and Measurement",
+      "section_description": "Define Availability, Downtime, Scheduled Maintenance, Measurement Period, and methodology (synthetic monitoring, probe locations, measurement frequency).",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "definitions measurement availability downtime"
+    },
+    {
+      "id": 45,
+      "agreement_type": "sla",
+      "section_order": 3,
+      "section_name": "Availability Targets",
+      "section_description": "Uptime percentages by environment (production, staging). Separate targets for different service components if applicable.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "availability targets uptime percentage"
+    },
+    {
+      "id": 46,
+      "agreement_type": "sla",
+      "section_order": 4,
+      "section_name": "Support and Response Times",
+      "section_description": "Severity classification scheme, response time targets per severity, escalation paths, support hours, and communication channels.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "support response times severity escalation"
+    },
+    {
+      "id": 47,
+      "agreement_type": "sla",
+      "section_order": 5,
+      "section_name": "Exclusions",
+      "section_description": "Events not counted as Downtime: scheduled maintenance, customer-caused issues, force majeure, third-party dependencies outside Provider's control.",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "exclusions scheduled maintenance force majeure"
+    },
+    {
+      "id": 48,
+      "agreement_type": "sla",
+      "section_order": 6,
+      "section_name": "Service Credits",
+      "section_description": "Credit tiers based on availability percentage shortfall, maximum monthly credit cap, claim procedure, credit application method (offset against future invoices).",
+      "required": 1,
+      "cra_mandated": 0,
+      "keywords": "service credits penalty remedy tiers"
+    },
+    {
+      "id": 49,
+      "agreement_type": "sla",
+      "section_order": 7,
+      "section_name": "Reporting and Governance",
+      "section_description": "Monthly service reports, availability dashboards, regular review meetings, continuous improvement obligations, and escalation procedures.",
+      "required": 0,
+      "cra_mandated": 0,
+      "keywords": "reporting governance review meetings"
+    },
+    {
+      "id": 50,
+      "agreement_type": "sla",
+      "section_order": 8,
+      "section_name": "Termination for Persistent SLA Failure",
+      "section_description": "Right to terminate the principal agreement if service levels are missed for a specified number of consecutive months or total months in a rolling period.",
+      "required": 0,
+      "cra_mandated": 0,
+      "keywords": "termination persistent failure"
+    }
+  ]
+}

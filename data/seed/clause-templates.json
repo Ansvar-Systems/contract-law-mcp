@@ -1,0 +1,312 @@
+{
+  "clause_templates": [
+    {
+      "id": 1,
+      "clause_type_id": "confidentiality-mutual",
+      "template_name": "Mutual NDA — Confidential Information Definition",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "\"Confidential Information\" means any information disclosed by one party (the \"Disclosing Party\") to the other party (the \"Receiving Party\"), whether orally, in writing, or by inspection, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information includes, without limitation, business plans, product designs, financial data, customer lists, software source code, trade secrets, technical specifications, and any analysis, compilations, or derivative works that contain or reflect such information.",
+      "guidance_notes": "Ensure the definition covers both marked and unmarked information. Oral disclosures should be confirmed in writing within a reasonable period (typically 10-30 days). Consider whether to include a schedule of specific categories.",
+      "cra_relevant": 0,
+      "keywords": "confidential information definition scope nda"
+    },
+    {
+      "id": 2,
+      "clause_type_id": "confidentiality-exceptions",
+      "template_name": "NDA — Exclusions from Confidentiality",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "Confidential Information does not include information that: (a) is or becomes publicly available through no fault or action of the Receiving Party; (b) was in the Receiving Party's lawful possession before receipt from the Disclosing Party, as evidenced by the Receiving Party's written records; (c) is lawfully received by the Receiving Party from a third party without restriction on disclosure and without breach of any obligation of confidentiality; or (d) is independently developed by the Receiving Party without use of or reference to the Disclosing Party's Confidential Information, as demonstrated by documentary evidence.",
+      "guidance_notes": "These four standard exclusions are recognized in most common law jurisdictions. The burden of proving an exclusion applies rests with the Receiving Party. Consider adding a fifth exclusion for information required to be disclosed by law or court order, or address that separately in a permitted disclosures clause.",
+      "cra_relevant": 0,
+      "keywords": "exclusions exceptions carve-out public domain independent development"
+    },
+    {
+      "id": 3,
+      "clause_type_id": "confidentiality-mutual",
+      "template_name": "NDA — Permitted Disclosures",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "The Receiving Party may disclose Confidential Information: (a) to its employees, directors, officers, advisors, and contractors (\"Representatives\") who have a need to know such information for the Purpose and who are bound by confidentiality obligations no less restrictive than those set out in this Agreement; (b) to the extent required by applicable law, regulation, or order of a court or governmental authority, provided that the Receiving Party, to the extent legally permitted, gives the Disclosing Party prompt written notice of such requirement and cooperates with any effort to obtain protective treatment of the information; and (c) to its professional advisors (legal, accounting, tax) in connection with advice relating to this Agreement. The Receiving Party shall be responsible for any breach of this Agreement by its Representatives.",
+      "guidance_notes": "The Receiving Party should maintain a record of which Representatives receive Confidential Information. The notice obligation for compelled disclosures is standard but may be prohibited in certain regulatory or law enforcement contexts. Consider whether affiliate access is needed.",
+      "cra_relevant": 0,
+      "keywords": "permitted disclosures representatives need to know compelled disclosure"
+    },
+    {
+      "id": 4,
+      "clause_type_id": "confidentiality-survival",
+      "template_name": "NDA — Term and Survival",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "This Agreement shall commence on the Effective Date and continue for a period of [TERM] years, unless terminated earlier by either party upon [NOTICE_PERIOD] days' written notice. The obligations of confidentiality set out in this Agreement shall survive termination or expiration for a period of [SURVIVAL_PERIOD] years from the date of disclosure of the relevant Confidential Information. Notwithstanding the foregoing, obligations with respect to trade secrets shall continue for as long as such information qualifies as a trade secret under applicable law.",
+      "guidance_notes": "Typical survival periods range from 2 to 5 years. Trade secrets require indefinite protection. In some civil law jurisdictions, courts may limit the enforceability of very long survival periods. The term of the agreement (during which new disclosures may occur) is distinct from the survival period (how long existing disclosures remain protected).",
+      "cra_relevant": 0,
+      "keywords": "term duration survival expiration trade secret"
+    },
+    {
+      "id": 5,
+      "clause_type_id": "confidentiality-mutual",
+      "template_name": "NDA — Return and Destruction of Information",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "Upon the earlier of (a) termination or expiration of this Agreement, or (b) written request by the Disclosing Party, the Receiving Party shall promptly: (i) return to the Disclosing Party all tangible materials containing Confidential Information; and (ii) destroy all copies, notes, summaries, and derivative works containing Confidential Information in the Receiving Party's possession or control, including electronic copies stored on any medium. The Receiving Party shall provide written certification of such destruction within [CERTIFICATION_PERIOD] days of the request. Notwithstanding the foregoing, the Receiving Party may retain one archival copy of Confidential Information solely for compliance and legal hold purposes, subject to the continuing confidentiality obligations of this Agreement.",
+      "guidance_notes": "The archival copy carve-out is increasingly standard given regulatory retention requirements and litigation hold obligations. Consider whether automatic backup systems make full destruction impractical and whether the clause should address that reality. Electronic destruction should follow recognized standards (e.g., NIST SP 800-88).",
+      "cra_relevant": 0,
+      "keywords": "return destruction archival copy certification"
+    },
+    {
+      "id": 6,
+      "clause_type_id": "indemnification-mutual",
+      "template_name": "NDA — Remedies for Breach",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "Each party acknowledges that a breach of this Agreement may cause irreparable harm to the Disclosing Party for which monetary damages would be an inadequate remedy. Accordingly, the Disclosing Party shall be entitled to seek equitable relief, including injunction and specific performance, in addition to all other remedies available at law or in equity, without the requirement of posting a bond or proving actual damages. The rights and remedies set out in this clause are cumulative and not exclusive of any other rights or remedies available under this Agreement or at law.",
+      "guidance_notes": "The acknowledgment of irreparable harm strengthens the case for interim injunctive relief. Some jurisdictions require a party to demonstrate irreparable harm regardless of contractual acknowledgment. The waiver of bond requirements may not be enforceable in all jurisdictions. Consider whether to include liquidated damages for specific breach scenarios.",
+      "cra_relevant": 0,
+      "keywords": "remedies injunction equitable relief irreparable harm"
+    },
+    {
+      "id": 7,
+      "clause_type_id": "governing-law-choice",
+      "template_name": "NDA — Governing Law and Jurisdiction",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "This Agreement shall be governed by and construed in accordance with the laws of [GOVERNING_LAW_JURISDICTION], without regard to its conflict of laws principles. Each party irrevocably submits to the exclusive jurisdiction of the courts of [COURT_JURISDICTION] for the purpose of any proceedings arising out of or in connection with this Agreement, except that a party may seek injunctive or other equitable relief in any court of competent jurisdiction.",
+      "guidance_notes": "The exclusion of conflict of laws rules prevents renvoi (referral to another jurisdiction's laws). The carve-out for equitable relief in any competent court is important because injunctions must often be obtained where the breach is occurring or where the breaching party's assets are located. For cross-border NDAs, consider whether arbitration would be more appropriate than court litigation.",
+      "cra_relevant": 0,
+      "keywords": "governing law jurisdiction choice of law venue"
+    },
+    {
+      "id": 8,
+      "clause_type_id": "confidentiality-one-way",
+      "template_name": "Unilateral NDA — Confidential Information Definition",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "nda-one-way",
+      "template_text": "\"Confidential Information\" means all information disclosed by the Disclosing Party to the Receiving Party in connection with the Purpose, whether before or after the date of this Agreement, including but not limited to: (a) trade secrets, inventions, designs, and technical data; (b) business plans, strategies, and financial information; (c) customer and supplier information; (d) marketing plans and pricing; and (e) any other information marked as confidential or which would reasonably be regarded as confidential. Confidential Information includes the existence and terms of this Agreement.",
+      "guidance_notes": "In a unilateral NDA, only one party discloses confidential information. The definition should be drafted broadly to protect the disclosing party's interests. Including the existence and terms of the NDA itself as confidential is common in M&A and investment contexts.",
+      "cra_relevant": 0,
+      "keywords": "unilateral one-way confidential information definition"
+    },
+    {
+      "id": 9,
+      "clause_type_id": "sla-uptime",
+      "template_name": "Service Agreement — Service Level: Uptime",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall ensure that the Service is available for use by the Customer for not less than [UPTIME_PERCENTAGE]% of each calendar month, measured on a 24x7 basis (\"Uptime Commitment\"). Availability shall be calculated as: ((Total Minutes in Month - Downtime Minutes) / Total Minutes in Month) x 100. \"Downtime\" means any period during which the Service is materially unavailable for the Customer's normal use, but excludes: (a) scheduled maintenance windows notified at least [MAINTENANCE_NOTICE] hours in advance; (b) downtime caused by the Customer's systems, networks, or acts; (c) force majeure events; and (d) third-party service failures outside the Provider's reasonable control.",
+      "guidance_notes": "Typical SaaS uptime commitments range from 99.5% to 99.99%. Ensure the measurement methodology is objective and auditable. Consider whether the Customer should have access to a real-time status dashboard. The exclusions list should be negotiated carefully as each exclusion reduces the effective guarantee.",
+      "cra_relevant": 0,
+      "keywords": "uptime availability SLA service level"
+    },
+    {
+      "id": 10,
+      "clause_type_id": "sla-response-time",
+      "template_name": "Service Agreement — Service Level: Response Time",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall respond to support requests within the following timeframes based on severity classification: (a) Severity 1 (Critical — service unavailable or major function inoperable): initial response within [SEV1_RESPONSE] hours, workaround or resolution within [SEV1_RESOLVE] hours; (b) Severity 2 (High — significant function impaired): initial response within [SEV2_RESPONSE] hours, resolution within [SEV2_RESOLVE] business days; (c) Severity 3 (Medium — minor function impaired, workaround available): initial response within [SEV3_RESPONSE] business hours, resolution within [SEV3_RESOLVE] business days; (d) Severity 4 (Low — cosmetic or enhancement request): initial response within [SEV4_RESPONSE] business days. Support hours are [SUPPORT_HOURS] unless the Customer has purchased extended support coverage.",
+      "guidance_notes": "Define \"initial response\" clearly (automated acknowledgment is not sufficient). Response time SLAs should distinguish between acknowledgment, investigation start, workaround, and permanent resolution. Consider escalation paths if response times are consistently missed.",
+      "cra_relevant": 0,
+      "keywords": "response time SLA severity classification support"
+    },
+    {
+      "id": 11,
+      "clause_type_id": "fin-service-credit-mechanism",
+      "template_name": "Service Agreement — Service Credits / Penalty Mechanism",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "If the Provider fails to meet the Uptime Commitment or Response Time targets in any calendar month, the Customer shall be entitled to service credits as follows: (a) Uptime between [THRESHOLD_1]% and [UPTIME_PERCENTAGE]%: credit equal to [CREDIT_1]% of the monthly fee; (b) Uptime between [THRESHOLD_2]% and [THRESHOLD_1]%: credit equal to [CREDIT_2]% of the monthly fee; (c) Uptime below [THRESHOLD_2]%: credit equal to [CREDIT_3]% of the monthly fee. The maximum aggregate service credits in any calendar month shall not exceed [MAX_CREDIT]% of the monthly fee for that month. Service credits shall be applied to the next invoice and constitute the Customer's sole and exclusive remedy for the Provider's failure to meet the applicable service levels, except where the failure constitutes a material breach giving rise to termination rights under this Agreement. The Customer must request service credits within [CLAIM_PERIOD] days of the end of the relevant month.",
+      "guidance_notes": "Service credits that are the sole remedy may undervalue the actual business impact. Consider whether repeated failures should trigger termination rights beyond the credit mechanism. The claim period should be reasonable. Ensure the cap on credits does not create a de facto \"pay to breach\" arrangement where the cost of credits is lower than the cost of maintaining the service level.",
+      "cra_relevant": 0,
+      "keywords": "service credits penalty SLA breach remedy"
+    },
+    {
+      "id": 12,
+      "clause_type_id": "audit-rights-security",
+      "template_name": "Service Agreement — Security Obligations (CRA-Mandated)",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall implement and maintain technical and organisational security measures appropriate to the risk, in accordance with the state of the art, including: (a) encryption of data in transit and at rest using industry-standard algorithms; (b) access controls, authentication, and authorisation mechanisms; (c) regular vulnerability assessments and penetration testing; (d) incident detection, response, and recovery procedures; (e) secure software development practices, including secure-by-design and secure-by-default principles in accordance with Regulation (EU) 2024/2847 (Cyber Resilience Act); and (f) maintenance of security certifications as specified in Schedule [X]. The Provider shall notify the Customer without undue delay of any material change to its security measures that could adversely affect the security of the Service.",
+      "guidance_notes": "For products with digital elements falling within scope of the EU Cyber Resilience Act, security obligations must reflect the essential cybersecurity requirements in Annex I of the CRA. The reference to secure-by-design and secure-by-default aligns with CRA Article 13. Consider requiring the Provider to demonstrate compliance through independent security audits or recognized certifications.",
+      "cra_relevant": 1,
+      "keywords": "security obligations CRA cyber resilience act measures"
+    },
+    {
+      "id": 13,
+      "clause_type_id": "dp-breach-notification-general",
+      "template_name": "Service Agreement — Vulnerability Notification (CRA Art. 14)",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall notify the Customer of any actively exploited vulnerability in the Product without undue delay, and in any event within 24 hours of becoming aware of such vulnerability. The notification shall include: (a) a description of the vulnerability and the affected Product versions; (b) an assessment of the severity and potential impact; (c) any immediate mitigating measures available to the Customer; and (d) the Provider's planned timeline for issuing a security update. In accordance with Regulation (EU) 2024/2847, Article 14, the Provider shall simultaneously notify the designated CSIRT and ENISA through the single reporting platform. The Provider shall keep the Customer informed of progress toward remediation until a permanent fix has been deployed.",
+      "guidance_notes": "CRA Article 14 requires manufacturers to notify ENISA and the designated CSIRT of actively exploited vulnerabilities within 24 hours (early warning), with a detailed follow-up within 72 hours. This clause extends that obligation to the contractual relationship with the Customer. Consider whether the Customer needs notification of all vulnerabilities or only those that are actively exploited.",
+      "cra_relevant": 1,
+      "keywords": "vulnerability notification CRA article 14 ENISA CSIRT 24 hours"
+    },
+    {
+      "id": 14,
+      "clause_type_id": "warranty-services",
+      "template_name": "Service Agreement — Security Update Duration (CRA Art. 13(8))",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall provide security updates for the Product for a period of not less than [SUPPORT_PERIOD] years from the date of placing the Product on the market, and in any event for the expected product lifetime, in accordance with Regulation (EU) 2024/2847, Article 13(8). Security updates shall be: (a) provided free of charge to the Customer; (b) made available without undue delay after the vulnerability is identified; (c) delivered through a secure distribution mechanism; (d) accompanied by release notes describing the vulnerability addressed and any action required by the Customer; and (e) designed to minimise disruption to the Customer's operations, with backward compatibility maintained where technically feasible. The Provider shall not require the Customer to update unrelated components as a condition of receiving security updates.",
+      "guidance_notes": "CRA Article 13(8) sets a minimum of 5 years for security update support, unless the product's expected lifetime is shorter. For long-lifecycle products (industrial equipment, medical devices), the support period should be longer. The free-of-charge requirement applies to security updates specifically. Consider whether the clause should address end-of-support notification and migration assistance.",
+      "cra_relevant": 1,
+      "keywords": "security update duration CRA article 13 five years support period"
+    },
+    {
+      "id": 15,
+      "clause_type_id": "nis2-supply-chain-transparency",
+      "template_name": "Service Agreement — SBOM Delivery (CRA Art. 13(1)(f))",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall deliver to the Customer a Software Bill of Materials (SBOM) for the Product in a commonly used and machine-readable format (CycloneDX or SPDX), in accordance with Regulation (EU) 2024/2847, Article 13(1)(f). The SBOM shall: (a) identify all third-party components included in the Product, including open-source libraries, at a minimum listing the component name, version, supplier, and license; (b) be updated and re-delivered with each new release of the Product; (c) be provided within [SBOM_DELIVERY] days of each release; and (d) include a top-level inventory of dependencies sufficient to enable the Customer to perform its own vulnerability management. The Provider warrants that the SBOM is accurate and complete as of the date of delivery.",
+      "guidance_notes": "CRA Article 13(1)(f) requires a software bill of materials documenting at minimum the top-level dependencies of the product. SPDX and CycloneDX are the two leading SBOM standards. The warranty of accuracy is important because an incomplete SBOM defeats its purpose. Consider whether the Customer needs access to the full dependency tree (transitive dependencies) or only direct dependencies.",
+      "cra_relevant": 1,
+      "keywords": "SBOM software bill of materials CRA article 13 CycloneDX SPDX"
+    },
+    {
+      "id": 16,
+      "clause_type_id": "liability-cap-direct",
+      "template_name": "Service Agreement — Limitation of Liability",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "Subject to the exclusions below, the total aggregate liability of each party arising out of or in connection with this Agreement, whether in contract, tort (including negligence), breach of statutory duty, or otherwise, shall not exceed [LIABILITY_CAP]. The following are excluded from the limitation in the preceding sentence: (a) liability for death or personal injury caused by negligence; (b) liability for fraud or fraudulent misrepresentation; (c) the Provider's indemnification obligations under Section [INDEMNITY_SECTION]; (d) the Customer's payment obligations; and (e) either party's breach of its confidentiality obligations. Neither party shall be liable for any indirect, consequential, special, or punitive damages, or for loss of profits, revenue, data, or goodwill, whether foreseeable or not, except in the case of wilful misconduct or gross negligence.",
+      "guidance_notes": "The liability cap is typically expressed as a multiple of fees paid or payable (e.g., 12 months' fees). Uncapped carve-outs should be limited to truly fundamental obligations. Some jurisdictions (particularly civil law) restrict the ability to exclude liability for gross negligence. The data loss exclusion should be considered carefully if the Provider processes or stores the Customer's data.",
+      "cra_relevant": 0,
+      "keywords": "limitation of liability cap consequential damages exclusions"
+    },
+    {
+      "id": 17,
+      "clause_type_id": "indemnification-mutual",
+      "template_name": "Service Agreement — Indemnification",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall defend, indemnify, and hold harmless the Customer and its officers, directors, and employees from and against any third-party claims, damages, losses, costs, and expenses (including reasonable legal fees) arising from: (a) the Provider's breach of its security obligations under this Agreement; (b) infringement of any third-party intellectual property right by the Service as provided under this Agreement; or (c) the Provider's gross negligence or wilful misconduct. The Customer shall defend, indemnify, and hold harmless the Provider from and against any third-party claims arising from: (a) the Customer's misuse of the Service in breach of this Agreement; or (b) the Customer's breach of applicable law in connection with its use of the Service. The indemnifying party's obligations are subject to the indemnified party: (i) providing prompt written notice of the claim; (ii) granting sole control of the defence and settlement to the indemnifying party; and (iii) providing reasonable cooperation at the indemnifying party's expense.",
+      "guidance_notes": "Indemnification shifts the economic burden of third-party claims. The procedural requirements (notice, control, cooperation) are essential for enforceability. Consider whether the indemnifying party should be permitted to settle without the indemnified party's consent. IP indemnification should include the Provider's option to modify, replace, or procure continued rights as an alternative to monetary indemnity.",
+      "cra_relevant": 0,
+      "keywords": "indemnification indemnity third-party claims defence"
+    },
+    {
+      "id": 18,
+      "clause_type_id": "termination-cause",
+      "template_name": "Service Agreement — Term and Termination",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "This Agreement shall commence on the Effective Date and continue for an initial term of [INITIAL_TERM] (the \"Initial Term\"), after which it shall automatically renew for successive periods of [RENEWAL_TERM] (each a \"Renewal Term\") unless either party provides written notice of non-renewal at least [NON_RENEWAL_NOTICE] days before the end of the then-current term. Either party may terminate this Agreement immediately by written notice if: (a) the other party commits a material breach that is not remedied within [CURE_PERIOD] days of written notice specifying the breach; (b) the other party becomes insolvent, enters administration, liquidation, or any analogous proceeding; or (c) the other party ceases to carry on business. The Customer may terminate this Agreement for convenience upon [CONVENIENCE_NOTICE] days' written notice, subject to payment of fees for the remainder of the then-current term or an early termination fee as set out in Schedule [X].",
+      "guidance_notes": "The cure period should be proportionate to the nature of likely breaches. Some breaches (e.g., data breach, security failure) may warrant shorter cure periods or immediate termination rights. Auto-renewal terms must comply with consumer protection laws where applicable. The early termination fee should be a genuine pre-estimate of loss, not a penalty.",
+      "cra_relevant": 0,
+      "keywords": "term termination renewal cure period insolvency"
+    },
+    {
+      "id": 19,
+      "clause_type_id": "ai-technology-escrow",
+      "template_name": "Service Agreement — Escrow Provisions",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall deposit with an independent escrow agent mutually agreed by the parties a copy of: (a) the source code of the Service software; (b) build scripts and deployment instructions sufficient to compile and deploy the software; (c) all documentation necessary for a competent developer to maintain the software; and (d) any encryption keys or credentials necessary to access the deposited materials. The deposited materials shall be updated within [UPDATE_PERIOD] days of each major release. The escrow agent shall release the deposited materials to the Customer upon the occurrence of any of the following release conditions: (i) the Provider's insolvency or cessation of business; (ii) the Provider's material breach of its maintenance obligations that remains uncured for [ESCROW_CURE] days; or (iii) the Provider's discontinuation of the Product without providing a reasonable migration path.",
+      "guidance_notes": "Escrow is most valuable for business-critical software where the Customer cannot easily switch providers. Verify that the escrow agent will test the deposited materials for completeness. The release conditions should be objectively verifiable. Consider whether the Customer should have the right to periodic verification that the escrow deposit is current and complete.",
+      "cra_relevant": 0,
+      "keywords": "escrow source code deposit release conditions"
+    },
+    {
+      "id": 20,
+      "clause_type_id": "ip-license-back",
+      "template_name": "Software License — License Grant",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "software-license-proprietary",
+      "template_text": "Subject to the terms and conditions of this Agreement and payment of the applicable fees, the Licensor grants to the Licensee a non-exclusive, non-transferable, non-sublicensable license to: (a) install the Software on up to [SEATS] designated devices or for up to [USERS] named users within the Licensee's organisation; (b) use the Software solely for the Licensee's internal business purposes; and (c) make one copy of the Software for backup and disaster recovery purposes. The Licensee shall not: (i) sublicense, sell, lease, or distribute the Software to any third party; (ii) modify, adapt, translate, or create derivative works of the Software; (iii) reverse engineer, decompile, or disassemble the Software, except to the extent expressly permitted by applicable law; (iv) remove or alter any proprietary notices on the Software; or (v) use the Software to provide services to third parties (including SaaS, ASP, or managed service offerings) without the Licensor's prior written consent.",
+      "guidance_notes": "The scope of the license grant defines the boundaries of permitted use. Ensure the seat/user count or metric aligns with the commercial terms. The reverse engineering restriction is subject to statutory exceptions in many jurisdictions (e.g., EU Software Directive for interoperability). Consider whether the Licensee needs the right to modify the Software for integration purposes.",
+      "cra_relevant": 0,
+      "keywords": "license grant non-exclusive restrictions reverse engineering"
+    },
+    {
+      "id": 21,
+      "clause_type_id": "ip-work-product-ownership",
+      "template_name": "Software License — IP Ownership",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "software-license-proprietary",
+      "template_text": "The Licensor retains all right, title, and interest in and to the Software, including all intellectual property rights therein. This Agreement does not transfer any ownership of the Software or any intellectual property rights to the Licensee. The Licensee acknowledges that the Software, its structure, organisation, and source code constitute valuable trade secrets of the Licensor. Any feedback, suggestions, or improvement requests provided by the Licensee to the Licensor regarding the Software (\"Feedback\") shall be the property of the Licensor, and the Licensee hereby assigns all right, title, and interest in such Feedback to the Licensor without additional consideration.",
+      "guidance_notes": "The Feedback assignment clause is common but should be reviewed carefully by the Licensee. In some jurisdictions, a blanket assignment of future IP created by employees may require specific formalities. Consider whether the Licensee should receive a license back to use any incorporated Feedback. For custom development, the ownership terms will differ significantly.",
+      "cra_relevant": 0,
+      "keywords": "IP ownership intellectual property retention feedback assignment"
+    },
+    {
+      "id": 22,
+      "clause_type_id": "ai-training-data-rights",
+      "template_name": "Software License — Open-Source Component Disclosure",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "software-license-proprietary",
+      "template_text": "The Licensor shall provide to the Licensee, upon request, a list of all open-source software components incorporated in or distributed with the Software, including for each component: (a) the component name and version; (b) the applicable open-source license; (c) a URL for the license text; and (d) any modifications made by the Licensor to the open-source component. The Licensor represents and warrants that: (i) the use of open-source components in the Software does not impose obligations on the Licensee beyond those stated in this Agreement; (ii) no open-source component subject to a copyleft license (e.g., GPL, AGPL) has been incorporated in a manner that would require the Licensee to disclose its proprietary source code; and (iii) the Licensor's use of each open-source component complies with the applicable license terms.",
+      "guidance_notes": "Open-source disclosure is important for license compliance and vulnerability management. Copyleft license contamination is a significant risk for proprietary software. The warranty against copyleft contamination should be backed by an IP indemnity. Consider requiring the Licensor to maintain a current SBOM (Software Bill of Materials) as a living document.",
+      "cra_relevant": 0,
+      "keywords": "open source disclosure copyleft GPL license compliance SBOM"
+    },
+    {
+      "id": 23,
+      "clause_type_id": "warranty-fitness",
+      "template_name": "Software License — Warranty",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "software-license-proprietary",
+      "template_text": "The Licensor warrants that for a period of [WARRANTY_PERIOD] days from the date of delivery: (a) the Software will perform materially in accordance with the accompanying documentation; (b) the Software will be free from material defects that prevent its intended use; and (c) the media on which the Software is delivered (if applicable) will be free from defects in materials and workmanship. The Licensor's sole obligation and the Licensee's exclusive remedy for breach of this warranty shall be, at the Licensor's option: (i) repair or replacement of the defective Software; or (ii) refund of the license fees paid for the defective Software, upon which this Agreement shall terminate with respect to such Software. EXCEPT AS EXPRESSLY SET OUT IN THIS AGREEMENT, THE LICENSOR MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
+      "guidance_notes": "The warranty period for software typically ranges from 30 to 90 days. The limitation to material conformance with documentation means the documentation itself becomes important. Implied warranty disclaimers may not be effective in all jurisdictions, particularly in consumer transactions or where mandatory statutory warranties apply. In the EU, the Sale of Goods Directive and Digital Content Directive impose minimum warranty periods that cannot be contracted out of for consumer sales.",
+      "cra_relevant": 0,
+      "keywords": "warranty fitness defects remedy disclaimer implied"
+    },
+    {
+      "id": 24,
+      "clause_type_id": "liability-cap-direct",
+      "template_name": "Software License — Limitation of Liability",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "software-license-proprietary",
+      "template_text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE LICENSOR'S TOTAL LIABILITY TO THE LICENSEE FOR ALL CLAIMS ARISING UNDER OR IN CONNECTION WITH THIS AGREEMENT EXCEED THE TOTAL FEES PAID BY THE LICENSEE TO THE LICENSOR IN THE [LOOKBACK_PERIOD] MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM. IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR DAMAGES FOR LOSS OF PROFITS, REVENUE, GOODWILL, OR DATA, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY. The foregoing limitations shall not apply to: (a) the Licensor's indemnification obligations under Section [INDEMNITY_SECTION]; (b) liability arising from the Licensor's wilful misconduct or gross negligence; or (c) liability that cannot be excluded by applicable law.",
+      "guidance_notes": "The lookback period is typically 12 months. All-caps formatting for limitation and exclusion clauses is a convention in common law jurisdictions to satisfy conspicuousness requirements under the UCC and similar statutes. The carve-outs for wilful misconduct and statutory minimum liability are important for enforceability.",
+      "cra_relevant": 0,
+      "keywords": "limitation of liability cap exclusion consequential damages software"
+    },
+    {
+      "id": 25,
+      "clause_type_id": "confidentiality-mutual",
+      "template_name": "Mutual NDA — Confidential Information Definition (Civil Law)",
+      "jurisdiction_family": "civil_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "\"Confidential Information\" means all information and data, in any form or medium, that a party (the \"Disclosing Party\") communicates to the other party (the \"Receiving Party\") in connection with the Purpose contemplated by this Agreement, including without limitation technical, commercial, financial, strategic, and organisational information, as well as the existence and content of this Agreement and the negotiations between the parties. Information disclosed orally shall be treated as Confidential Information if it is identified as confidential at the time of disclosure and confirmed in writing within [CONFIRMATION_PERIOD] days thereafter.",
+      "guidance_notes": "Civil law jurisdictions often have statutory protections for trade secrets (e.g., EU Trade Secrets Directive 2016/943) that supplement contractual provisions. The written confirmation requirement for oral disclosures is important for evidentiary purposes in civil law proceedings. French courts, for example, have enforced confidentiality obligations more strictly where the scope of protected information is precisely defined.",
+      "cra_relevant": 0,
+      "keywords": "civil law confidential information definition NDA continental"
+    },
+    {
+      "id": 26,
+      "clause_type_id": "sla-uptime",
+      "template_name": "SLA Addendum — Uptime Commitment",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "sla",
+      "template_text": "This Service Level Addendum supplements and forms part of the Agreement between the parties dated [AGREEMENT_DATE] (the \"Principal Agreement\"). In the event of conflict between this Addendum and the Principal Agreement, this Addendum shall prevail with respect to service level matters. The Provider commits to the following availability targets: (a) Production Environment: [PROD_UPTIME]% monthly availability; (b) Staging/Test Environment: [STAGING_UPTIME]% monthly availability. Availability is measured using the Provider's monitoring system, with the Customer having access to real-time and historical availability data through the Provider's status page at [STATUS_URL]. Measurement is based on synthetic monitoring probes executing at [PROBE_INTERVAL]-minute intervals from at least [PROBE_LOCATIONS] geographically distributed locations.",
+      "guidance_notes": "An SLA Addendum is used when the service levels are negotiated separately from the main agreement or when different customers receive different SLA tiers. The measurement methodology should be objective and independently verifiable. Synthetic monitoring is preferred over passive monitoring because it detects issues proactively. Ensure the status page provides sufficient granularity for the Customer to verify compliance.",
+      "cra_relevant": 0,
+      "keywords": "SLA addendum uptime commitment availability monitoring"
+    },
+    {
+      "id": 27,
+      "clause_type_id": "sla-uptime",
+      "template_name": "Service Agreement — Service Description and Scope",
+      "jurisdiction_family": "common_law",
+      "agreement_type": "maintenance-support",
+      "template_text": "The Provider shall provide the services described in Schedule [X] (the \"Services\") in accordance with this Agreement. The Services include: (a) ongoing maintenance of the Software, including bug fixes, patches, and minor updates; (b) technical support during the Support Hours as defined in Schedule [Y]; (c) security updates and vulnerability remediation; and (d) access to new versions and major releases of the Software during the term of this Agreement. The Services do not include: (i) customisation or bespoke development (available under a separate Statement of Work); (ii) training beyond the initial onboarding; (iii) support for third-party integrations not documented in the Software specifications; or (iv) support for versions of the Software that have reached end-of-life as published by the Provider.",
+      "guidance_notes": "Clearly defined scope prevents disputes about what is included. The exclusions list manages customer expectations. Version support policies should be published and referenced. Consider whether major releases should be included at no additional cost or whether they constitute an upgrade requiring additional payment.",
+      "cra_relevant": 0,
+      "keywords": "service description scope maintenance support inclusions exclusions"
+    },
+    {
+      "id": 28,
+      "clause_type_id": "confidentiality-mutual",
+      "template_name": "Confidential Information Definition (Civil Law — EU Trade Secrets)",
+      "jurisdiction_family": "civil_law",
+      "agreement_type": "nda-mutual",
+      "template_text": "\"Confidential Information\" means information that: (a) is not generally known among or readily accessible to persons within the circles that normally deal with the kind of information in question; (b) has commercial value because it is secret; and (c) has been subject to reasonable steps under the circumstances by the Disclosing Party to keep it secret, within the meaning of Article 2(1) of Directive (EU) 2016/943. Without limitation to the foregoing, Confidential Information includes all trade secrets, business information, technical data, and know-how disclosed by the Disclosing Party in connection with the Purpose.",
+      "guidance_notes": "This definition aligns with the EU Trade Secrets Directive (2016/943), which has been transposed into national law across EU Member States. Using the Directive's three-part test as the definitional framework strengthens the legal basis for protection and ensures consistency with national implementations. The \"reasonable steps\" requirement means the Disclosing Party must have actual security measures in place.",
+      "cra_relevant": 0,
+      "keywords": "civil law EU trade secrets directive confidential information"
+    }
+  ]
+}

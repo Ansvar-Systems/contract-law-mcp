@@ -1,5 +1,5 @@
 /**
- * Tool Registry — registers all 24 tools (22 domain + about + list_sources)
+ * Tool Registry — registers all 30 tools (28 domain + about + list_sources)
  * with the MCP server. Central wiring file.
  */
 
@@ -35,6 +35,12 @@ import { searchFrameworks } from './search-frameworks.js';
 import { getIpProvision } from './get-ip-provision.js';
 import { searchIpProvisions } from './search-ip-provisions.js';
 import { assessIpRisk } from './assess-ip-risk.js';
+import { getClauseTemplate } from './get-clause-template.js';
+import { searchClauseTemplates } from './search-clause-templates.js';
+import { getCraClauses } from './get-cra-clauses.js';
+import { getAgreementStructure } from './get-agreement-structure.js';
+import { getMaintenanceObligations } from './get-maintenance-obligations.js';
+import { checkClauseCompatibility } from './check-clause-compatibility.js';
 
 // ---------------------------------------------------------------------------
 // Tool definitions — descriptions are written for LLM agents (when/why to
@@ -517,6 +523,119 @@ const TOOL_DEFINITIONS = [
       required: [],
     },
   },
+
+  // --- Clause Library (6) ---
+  {
+    name: 'get_clause_template',
+    description:
+      'Use this tool to retrieve model clause language (template text) for a specific clause type. Returns professionally drafted template text with guidance notes. Filter by jurisdiction family (common_law or civil_law) and agreement type. Call this when you need actual clause wording to review, compare, or use as a starting point for drafting.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        clause_type: {
+          type: 'string',
+          description: 'The clause type ID to get templates for (e.g., "confidentiality-mutual", "sla-uptime", "liability-cap-direct").',
+        },
+        jurisdiction_family: {
+          type: 'string',
+          description: 'Filter by jurisdiction family: "common_law" or "civil_law".',
+        },
+        agreement_type: {
+          type: 'string',
+          description: 'Filter by agreement type (e.g., "nda-mutual", "maintenance-support", "software-license-proprietary").',
+        },
+      },
+      required: ['clause_type'],
+    },
+  },
+  {
+    name: 'search_clause_templates',
+    description:
+      'Use this tool to search clause templates by keyword across template names, text, and guidance notes. Supports full-text search. Call this when you need to find model language for a topic (e.g., "SBOM delivery", "vulnerability notification") or when you do not know the exact clause type ID.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        query: {
+          type: 'string',
+          description: 'Free-text search query (e.g., "vulnerability notification", "confidential information definition", "service credits").',
+        },
+        agreement_type: {
+          type: 'string',
+          description: 'Filter by agreement type (e.g., "nda-mutual", "maintenance-support").',
+        },
+        limit: {
+          type: 'number',
+          description: 'Maximum results to return (default: 20).',
+        },
+      },
+      required: ['query'],
+    },
+  },
+  {
+    name: 'get_cra_clauses',
+    description:
+      'Use this tool to retrieve EU Cyber Resilience Act (Regulation (EU) 2024/2847) contract obligations with model contract language. Returns CRA article references, obligation descriptions, and ready-to-use clause text. Call this when drafting or reviewing contracts for CRA compliance, or when mapping CRA requirements to contract clauses.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        cra_article: {
+          type: 'string',
+          description: 'Filter by CRA article reference (e.g., "Article 13", "Article 14", "Annex I"). Supports partial match.',
+        },
+        clause_type: {
+          type: 'string',
+          description: 'Filter by clause type (e.g., "vulnerability-notification", "security-update-commitment").',
+        },
+      },
+      required: [],
+    },
+  },
+  {
+    name: 'get_agreement_structure',
+    description:
+      'Use this tool to get the section-by-section scaffold for an agreement type. Returns an ordered list of sections with descriptions, required/optional status, and CRA mandate indicators. Call this when planning the structure of a new agreement or reviewing whether an existing agreement covers all expected sections.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        agreement_type: {
+          type: 'string',
+          description: 'The agreement type to get the structure for (e.g., "nda-mutual", "nda-one-way", "maintenance-support", "software-license-proprietary", "sla").',
+        },
+      },
+      required: ['agreement_type'],
+    },
+  },
+  {
+    name: 'get_maintenance_obligations',
+    description:
+      'Use this tool to get all maintenance and support-specific clause templates in one call. Optionally includes CRA-mandated obligations (SBOM delivery, vulnerability notification, security update commitment). Call this when reviewing or drafting a maintenance agreement, service agreement, or SLA with cybersecurity requirements.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        include_cra: {
+          type: 'boolean',
+          description: 'Include CRA (Cyber Resilience Act) mandated obligations in the response. Default: true.',
+        },
+      },
+      required: [],
+    },
+  },
+  {
+    name: 'check_clause_compatibility',
+    description:
+      'Use this tool to check whether a set of clause types have known conflicts. Queries the clause interaction database for conflict relationships between the given clauses. Returns any conflicts found with descriptions, review guidance, and risk warnings. Call this before combining clauses in a contract to identify incompatible combinations (e.g., unlimited indemnification with a low liability cap).',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        clause_types: {
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Array of clause type IDs to check for conflicts (e.g., ["liability-cap-direct", "indemnification-mutual", "warranty-fitness"]).',
+        },
+      },
+      required: ['clause_types'],
+    },
+  },
 ] as const;
 
 // ---------------------------------------------------------------------------
@@ -677,6 +796,37 @@ function dispatch(
         contract_type: args.contract_type as string | undefined,
         source: args.source as string | undefined,
         mandatory: args.mandatory as boolean | undefined,
+      });
+
+    // Clause Library
+    case 'get_clause_template':
+      return getClauseTemplate(db, {
+        clause_type: args.clause_type as string,
+        jurisdiction_family: args.jurisdiction_family as string | undefined,
+        agreement_type: args.agreement_type as string | undefined,
+      });
+    case 'search_clause_templates':
+      return searchClauseTemplates(db, {
+        query: args.query as string,
+        agreement_type: args.agreement_type as string | undefined,
+        limit: args.limit as number | undefined,
+      });
+    case 'get_cra_clauses':
+      return getCraClauses(db, {
+        cra_article: args.cra_article as string | undefined,
+        clause_type: args.clause_type as string | undefined,
+      });
+    case 'get_agreement_structure':
+      return getAgreementStructure(db, {
+        agreement_type: args.agreement_type as string,
+      });
+    case 'get_maintenance_obligations':
+      return getMaintenanceObligations(db, {
+        include_cra: args.include_cra as boolean | undefined,
+      });
+    case 'check_clause_compatibility':
+      return checkClauseCompatibility(db, {
+        clause_types: args.clause_types as string[],
       });
 
     default:
