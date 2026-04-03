@@ -59,6 +59,27 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ansvar-Systems/contract-law-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/Ansvar-Systems/contract-law-mcp/issues"
+  },
+  "homepage": "https://github.com/Ansvar-Systems/contract-law-mcp#readme",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "claude",
+    "compliance",
+    "legal",
+    "ansvar",
+    "contract-law",
+    "cisg",
+    "commercial-law",
+    "incoterms"
+  ],
   "overrides": {
     "path-to-regexp": "^8.0.0",
     "undici": "^7.0.0"
