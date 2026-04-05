@@ -1,0 +1,46 @@
+{
+  "tool_count": 31,
+  "table_row_counts": {
+    "clause_types": "~200-300",
+    "contract_types": "~30-40",
+    "clause_interactions": "~80-120",
+    "risk_patterns": "~150-200",
+    "compliance_requirements": "~200-300",
+    "ip_provisions": "~80-120",
+    "negotiation_intelligence": "~100-150",
+    "contract_threat_patterns": "~40-60",
+    "standard_frameworks": "~30-40"
+  },
+  "regulations": [
+    "GDPR (EU) 2016/679",
+    "NIS2 Directive 2022/2555",
+    "DORA Regulation 2022/2554",
+    "PCI DSS v4.0",
+    "HIPAA 45 CFR 164.504",
+    "EU Cyber Resilience Act (CRA) 2024/2847",
+    "EU Standard Contractual Clauses (2021/914)",
+    "UK IDTA",
+    "US FAR",
+    "NIST SP 800-161r1",
+    "ISO 27036",
+    "ISO 27701",
+    "SOC 2 TSC",
+    "UNCITRAL Model Law",
+    "ICC Model Contracts",
+    "CISA Secure by Design",
+    "CWE/MITRE Trust Management Family"
+  ],
+  "not_covered": [
+    "CCPA / California Privacy Rights Act (CPRA)",
+    "Brazil LGPD",
+    "India DPDP Act 2023",
+    "China PIPL",
+    "Singapore PDPA",
+    "Australia Privacy Act 1988",
+    "Canada PIPEDA / Law 25",
+    "UAE PDPL",
+    "ISO 27001:2022 (full standard — paywalled)",
+    "SOC 2 Type II audit reports",
+    "Financial sector-specific regulations outside DORA (e.g., MiFID II, Basel III capital clauses)"
+  ]
+}
