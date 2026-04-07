@@ -11,12 +11,25 @@ import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
 import { buildFtsQueryVariants } from '../utils/fts-query.js';
 import { type ComplianceRequirement, parseComplianceRow } from './get-contract-requirements.js';
+import { buildCitation } from '../citation.js';
 
 export interface SearchRegulationsParams {
   query?: string;
   contract_type?: string;
   jurisdiction?: string;
   limit?: number;
+}
+
+function addCitations(rows: Record<string, unknown>[]): any[] {
+  return rows.map(parseComplianceRow).map((r) => ({
+    ...r,
+    _citation: buildCitation(
+      `${r.regulation} ${r.article || ''}`.trim(),
+      r.requirement_summary.substring(0, 80),
+      'get_contract_requirements',
+      { regulation: r.regulation },
+    ),
+  }));
 }
 
 export function searchRegulations(
@@ -60,7 +73,7 @@ export function searchRegulations(
       try {
         const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
         if (rows.length > 0) {
-          return wrapResponse(rows.map(parseComplianceRow), builtAt);
+          return wrapResponse(addCitations(rows), builtAt);
         }
       } catch {
         continue;
@@ -91,5 +104,5 @@ export function searchRegulations(
   bindValues.push(limit);
 
   const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
-  return wrapResponse(rows.map(parseComplianceRow), builtAt);
+  return wrapResponse(addCitations(rows), builtAt);
 }

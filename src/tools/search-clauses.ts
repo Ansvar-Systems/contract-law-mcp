@@ -10,12 +10,20 @@ import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
 import { buildFtsQueryVariants } from '../utils/fts-query.js';
 import { type ClauseType, parseClauseRow } from './get-clause-type.js';
+import { buildCitation } from '../citation.js';
 
 export interface SearchClausesParams {
   query?: string;
   clause_category?: string;
   contract_type?: string;
   limit?: number;
+}
+
+function addCitations(rows: Record<string, unknown>[]): any[] {
+  return rows.map(parseClauseRow).map((c) => ({
+    ...c,
+    _citation: buildCitation(c.id, c.name, 'get_clause_type', { id: c.id }),
+  }));
 }
 
 export function searchClauses(
@@ -61,7 +69,7 @@ export function searchClauses(
       try {
         const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
         if (rows.length > 0) {
-          return wrapResponse(rows.map(parseClauseRow), builtAt);
+          return wrapResponse(addCitations(rows), builtAt);
         }
       } catch {
         // FTS match expression may fail for some variants; continue to next
@@ -94,5 +102,5 @@ export function searchClauses(
   bindValues.push(limit);
 
   const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
-  return wrapResponse(rows.map(parseClauseRow), builtAt);
+  return wrapResponse(addCitations(rows), builtAt);
 }

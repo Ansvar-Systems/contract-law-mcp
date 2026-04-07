@@ -7,6 +7,7 @@ import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
 import { type StandardFramework, parseFrameworkRow } from './get-standard-framework.js';
+import { buildCitation } from '../citation.js';
 
 export interface SearchFrameworksParams {
   contract_type?: string;
@@ -43,5 +44,15 @@ export function searchFrameworks(
   sql += ' ORDER BY source, name';
 
   const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
-  return wrapResponse(rows.map(parseFrameworkRow), builtAt);
+  const results = rows.map(parseFrameworkRow).map((f) => ({
+    ...f,
+    _citation: buildCitation(
+      f.id,
+      `${f.name} (${f.source})`,
+      'get_standard_framework',
+      { id: f.id },
+      f.url,
+    ),
+  }));
+  return wrapResponse(results, builtAt);
 }

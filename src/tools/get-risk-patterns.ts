@@ -7,6 +7,7 @@ import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
 import { buildFtsQueryVariants } from '../utils/fts-query.js';
+import { buildCitation } from '../citation.js';
 
 export interface RiskPattern {
   id: string;
@@ -58,6 +59,13 @@ function getClauseTypesForContract(db: Database.Database, contractType: string):
     .all(...clauseIds) as Array<{ clause_category: string }>;
 
   return categories.map((c) => c.clause_category);
+}
+
+function addCitations(rows: RiskPattern[]): any[] {
+  return rows.map((r) => ({
+    ...r,
+    _citation: buildCitation(r.id, r.name, 'get_risk_patterns', { clause_type: r.clause_type }),
+  }));
 }
 
 export function getRiskPatterns(
@@ -113,7 +121,7 @@ export function getRiskPatterns(
       try {
         const rows = db.prepare(sql).all(...bindValues) as RiskPattern[];
         if (rows.length > 0) {
-          return wrapResponse(rows, builtAt);
+          return wrapResponse(addCitations(rows), builtAt);
         }
       } catch {
         continue;
@@ -157,5 +165,5 @@ export function getRiskPatterns(
   bindValues.push(limit);
 
   const rows = db.prepare(sql).all(...bindValues) as RiskPattern[];
-  return wrapResponse(rows, builtAt);
+  return wrapResponse(addCitations(rows), builtAt);
 }

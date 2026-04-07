@@ -6,6 +6,7 @@
 import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
+import { buildCitation } from '../citation.js';
 
 export interface ContractThreat {
   id: string;
@@ -61,5 +62,9 @@ export function getContractThreats(
   sql += ` ORDER BY CASE severity WHEN 'critical' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END`;
 
   const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
-  return wrapResponse(rows.map(parseThreatRow), builtAt);
+  const results = rows.map(parseThreatRow).map((t) => ({
+    ...t,
+    _citation: buildCitation(t.id, t.name, 'get_contract_threats', { threat_category: t.threat_category }),
+  }));
+  return wrapResponse(results, builtAt);
 }

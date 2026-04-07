@@ -9,6 +9,7 @@ import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
 import { buildFtsQueryVariants, sanitizeFtsInput, buildLikePattern } from '../utils/fts-query.js';
+import { buildCitation } from '../citation.js';
 
 export interface ClauseTemplateResult {
   id: number;
@@ -33,6 +34,18 @@ export interface SearchClauseTemplatesParams {
   query: string;
   agreement_type?: string;
   limit?: number;
+}
+
+function addCitations(rows: Record<string, unknown>[]): any[] {
+  return rows.map(parseRow).map((t) => ({
+    ...t,
+    _citation: buildCitation(
+      `${t.clause_type_id}/${t.template_name}`,
+      `${t.template_name} (${t.jurisdiction_family})`,
+      'get_clause_template',
+      { clause_type: t.clause_type_id },
+    ),
+  }));
 }
 
 export function searchClauseTemplates(
@@ -66,7 +79,7 @@ export function searchClauseTemplates(
     try {
       const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
       if (rows.length > 0) {
-        return wrapResponse(rows.map(parseRow), builtAt);
+        return wrapResponse(addCitations(rows), builtAt);
       }
     } catch {
       // FTS match expression may fail for some variants; continue to next
@@ -89,5 +102,5 @@ export function searchClauseTemplates(
   likeBind.push(limit);
 
   const rows = db.prepare(likeSql).all(...likeBind) as Record<string, unknown>[];
-  return wrapResponse(rows.map(parseRow), builtAt);
+  return wrapResponse(addCitations(rows), builtAt);
 }
