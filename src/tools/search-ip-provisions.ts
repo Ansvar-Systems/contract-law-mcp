@@ -11,12 +11,25 @@ import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
 import { buildFtsQueryVariants } from '../utils/fts-query.js';
 import { type IpProvision, parseIpProvisionRow } from './get-ip-provision.js';
+import { buildCitation } from '../citation.js';
 
 export interface SearchIpProvisionsParams {
   query?: string;
   provision_type?: string;
   contract_type?: string;
   limit?: number;
+}
+
+function addCitations(rows: Record<string, unknown>[]): any[] {
+  return rows.map(parseIpProvisionRow).map((p) => ({
+    ...p,
+    _citation: buildCitation(
+      p.id,
+      `${p.name} (${p.provision_type})`,
+      'get_ip_provision',
+      { id: p.id },
+    ),
+  }));
 }
 
 export function searchIpProvisions(
@@ -60,7 +73,7 @@ export function searchIpProvisions(
       try {
         const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
         if (rows.length > 0) {
-          return wrapResponse(rows.map(parseIpProvisionRow), builtAt);
+          return wrapResponse(addCitations(rows), builtAt);
         }
       } catch {
         continue;
@@ -91,5 +104,5 @@ export function searchIpProvisions(
   bindValues.push(limit);
 
   const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
-  return wrapResponse(rows.map(parseIpProvisionRow), builtAt);
+  return wrapResponse(addCitations(rows), builtAt);
 }

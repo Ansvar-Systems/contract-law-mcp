@@ -6,6 +6,7 @@
 import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
+import { buildCitation } from '../citation.js';
 
 export interface ClauseTemplate {
   id: number;
@@ -54,5 +55,15 @@ export function getClauseTemplate(
   const sql = `SELECT * FROM clause_templates WHERE ${whereParts.join(' AND ')} ORDER BY id`;
   const rows = db.prepare(sql).all(...bindValues) as Record<string, unknown>[];
 
-  return wrapResponse(rows.map(parseRow), builtAt);
+  const results = rows.map(parseRow).map((t) => ({
+    ...t,
+    _citation: buildCitation(
+      `${t.clause_type_id}/${t.template_name}`,
+      `${t.template_name} (${t.jurisdiction_family})`,
+      'get_clause_template',
+      { clause_type: params.clause_type },
+    ),
+  }));
+
+  return wrapResponse(results, builtAt);
 }

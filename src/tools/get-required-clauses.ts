@@ -7,6 +7,7 @@ import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
 import { type ClauseType, parseClauseRow } from './get-clause-type.js';
+import { buildCitation } from '../citation.js';
 
 export interface RequiredClausesResult {
   required: ClauseType[];
@@ -50,8 +51,13 @@ export function getRequiredClauses(
     try { return JSON.parse(contractType.recommended_clauses as string); } catch { return []; }
   })();
 
-  const required = fetchClausesByIds(db, requiredIds);
-  const recommended = fetchClausesByIds(db, recommendedIds);
+  const addCite = (c: ClauseType) => ({
+    ...c,
+    _citation: buildCitation(c.id, c.name, 'get_clause_type', { id: c.id }),
+  });
+
+  const required = fetchClausesByIds(db, requiredIds).map(addCite);
+  const recommended = fetchClausesByIds(db, recommendedIds).map(addCite);
 
   return wrapResponse({ required, recommended }, builtAt);
 }

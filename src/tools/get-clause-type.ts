@@ -5,6 +5,7 @@
 import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
+import { buildCitation } from '../citation.js';
 
 export interface ClauseType {
   id: string;
@@ -48,5 +49,14 @@ export function getClauseType(
     return wrapResponse(null, getBuiltAt(db));
   }
 
-  return wrapResponse(parseClauseRow(row), getBuiltAt(db));
+  const parsed = parseClauseRow(row);
+  return wrapResponse({
+    ...parsed,
+    _citation: buildCitation(
+      parsed.id,
+      parsed.name,
+      'get_clause_type',
+      { id: params.id },
+    ),
+  }, getBuiltAt(db));
 }

@@ -6,6 +6,7 @@
 import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
+import { buildCitation } from '../citation.js';
 
 export interface ComplianceRequirement {
   id: string;
@@ -46,5 +47,15 @@ export function getContractRequirements(
     .prepare('SELECT * FROM compliance_requirements WHERE regulation LIKE ?')
     .all(params.regulation) as Record<string, unknown>[];
 
-  return wrapResponse(rows.map(parseComplianceRow), builtAt);
+  const results = rows.map(parseComplianceRow).map((r) => ({
+    ...r,
+    _citation: buildCitation(
+      `${r.regulation} ${r.article || ''}`.trim(),
+      r.requirement_summary.substring(0, 80),
+      'get_contract_requirements',
+      { regulation: params.regulation },
+    ),
+  }));
+
+  return wrapResponse(results, builtAt);
 }

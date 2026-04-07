@@ -6,6 +6,7 @@
 import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
+import { buildCitation } from '../citation.js';
 
 export interface CraContractObligation {
   id: number;
@@ -49,5 +50,15 @@ export function getCraClauses(
 
   const rows = db.prepare(sql).all(...bindValues) as CraContractObligation[];
 
-  return wrapResponse(rows, builtAt);
+  const results = rows.map((r) => ({
+    ...r,
+    _citation: buildCitation(
+      `CRA ${r.cra_article}`,
+      `CRA ${r.cra_article}: ${r.obligation.substring(0, 60)}`,
+      'get_cra_clauses',
+      { ...(params.cra_article ? { cra_article: params.cra_article } : {}) },
+    ),
+  }));
+
+  return wrapResponse(results, builtAt);
 }

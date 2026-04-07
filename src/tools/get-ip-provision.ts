@@ -5,6 +5,7 @@
 import type Database from 'better-sqlite3';
 import { type ToolResponse, wrapResponse } from '../utils/metadata.js';
 import { getBuiltAt } from '../utils/db.js';
+import { buildCitation } from '../citation.js';
 
 export interface IpProvision {
   id: string;
@@ -56,5 +57,14 @@ export function getIpProvision(
     return wrapResponse(null, getBuiltAt(db));
   }
 
-  return wrapResponse(parseIpProvisionRow(row), getBuiltAt(db));
+  const parsed = parseIpProvisionRow(row);
+  return wrapResponse({
+    ...parsed,
+    _citation: buildCitation(
+      parsed.id,
+      `${parsed.name} (${parsed.provision_type})`,
+      'get_ip_provision',
+      { id: params.id },
+    ),
+  }, getBuiltAt(db));
 }
