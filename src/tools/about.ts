@@ -59,7 +59,7 @@ export function about(db: Database.Database): ToolResponse<AboutInfo> {
       server: SERVER_NAME,
       version: SERVER_VERSION,
       domain: 'contract-law',
-      tool_count: 24,
+      tool_count: 31,
       data_source_summary:
         'EUR-Lex (GDPR, NIS2, DORA, SCCs), EDPB, NIST SP 800-161, PCI DSS, ISO 27036/27701, UNCITRAL, ICC, HIPAA, SOC 2 TSC, UK IDTA, US FAR, CISA, CWE/MITRE, Ansvar curated',
       built_at: builtAt,
