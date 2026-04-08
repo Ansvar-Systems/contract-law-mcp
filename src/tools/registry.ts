@@ -41,6 +41,7 @@ import { getCraClauses } from './get-cra-clauses.js';
 import { getAgreementStructure } from './get-agreement-structure.js';
 import { getMaintenanceObligations } from './get-maintenance-obligations.js';
 import { checkClauseCompatibility } from './check-clause-compatibility.js';
+import { checkDataFreshness } from './check-data-freshness.js';
 
 // ---------------------------------------------------------------------------
 // Tool definitions — descriptions are written for LLM agents (when/why to
@@ -59,6 +60,12 @@ const TOOL_DEFINITIONS = [
     name: 'list_sources',
     description:
       'Use this tool to discover the authoritative data sources backing this server (GDPR, NIS2, DORA, NIST, PCI DSS, etc.). Returns name, URL, data type, licence, and update frequency for each source. Call this when a user asks where the data comes from or when you need to cite sources in a report.',
+    inputSchema: { type: 'object' as const, properties: {}, required: [] },
+  },
+  {
+    name: 'check_data_freshness',
+    description:
+      'Use this tool to verify the freshness of the database and its underlying data sources. Returns the database build timestamp (db_built_at from db_metadata) and the update schedule for each data source. Call this before relying on regulatory or compliance data in time-sensitive contexts, or when a user asks whether the data is up to date.',
     inputSchema: { type: 'object' as const, properties: {}, required: [] },
   },
 
@@ -683,6 +690,8 @@ function dispatch(
       return about(db);
     case 'list_sources':
       return listSources();
+    case 'check_data_freshness':
+      return checkDataFreshness(db);
 
     // Clause Intelligence
     case 'get_clause_type':
